@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Environment on Nono Blogs</title><link>https://blog.techfetch.dev/tags/environment/</link><description>Recent content in Environment on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 16:38:40 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/tags/environment/index.xml" rel="self" type="application/rss+xml"/><item><title>虚拟内存磁盘配置</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%A3%81%E7%9B%98%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 28 Jun 2024 16:38:40 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%A3%81%E7%9B%98%E9%85%8D%E7%BD%AE/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 虚拟内存磁盘配置&lt;/li>
+&lt;/ul>
+&lt;h1 id="虚拟内存磁盘配置">虚拟内存磁盘配置&lt;/h1>
+&lt;h2 id="浏览器缓存到虚拟磁盘">浏览器缓存到虚拟磁盘&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bat" data-lang="bat">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>!-- imdisk --&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">rd&lt;/span> /q /s &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Cache&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">rd&lt;/span> /q /s &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Code Cache&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">md&lt;/span> M:\Edge_Cache\
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">md&lt;/span> M:\Edge_CodeCache\
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">mklink&lt;/span> /D &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Cache&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;M:\Edge_Cache\&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">mklink&lt;/span> /D &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Code Cache&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;M:\Edge_CodeCache\&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>wsl</title><link>https://blog.techfetch.dev/blog/2024/06/28/wsl/</link><pubDate>Fri, 28 Jun 2024 16:37:30 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/wsl/</guid><description>&lt;h1 id="配置-wsl">配置 wsl&lt;/h1>
+&lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+&lt;!-- code_chunk_output -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/wsl/#配置-wsl">配置 wsl&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/wsl/#远程访问-ssh">远程访问 ssh&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/wsl/#配置-wsl-1">配置 wsl&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;!-- /code_chunk_output -->
+&lt;h2 id="远程访问-ssh">远程访问 ssh&lt;/h2>
+&lt;p>&lt;strong>wsl&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo apt install openssh-server
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo nano /etc/ssh/sshd_config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/etc/ssh/sshd_config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">...STUFF ABOVE THIS...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Port &lt;span class="m">2222&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#AddressFamily any&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ListenAddress 0.0.0.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#ListenAddress ::&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">...STUFF BELOW THIS...
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>windows&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="n">service&lt;/span> &lt;span class="n">ssh&lt;/span> &lt;span class="nb">start
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">&lt;/span>&lt;span class="n">netsh&lt;/span> &lt;span class="n">interface&lt;/span> &lt;span class="n">portproxy&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="n">v4tov4&lt;/span> &lt;span class="n">listenaddress&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="mf">0.0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span> &lt;span class="n">listenport&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="mf">2222&lt;/span> &lt;span class="n">connectaddress&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="mf">172.23&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">129&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">80&lt;/span> &lt;span class="n">connectport&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="mf">2222&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">advfirewall&lt;/span> &lt;span class="n">firewall&lt;/span> &lt;span class="n">add&lt;/span> &lt;span class="n">rule&lt;/span> &lt;span class="n">name&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s2">&amp;#34;Open Port 2222 for WSL2&amp;#34;&lt;/span> &lt;span class="n">dir&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="k">in&lt;/span> &lt;span class="n">action&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="n">allow&lt;/span> &lt;span class="n">protocol&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="n">TCP&lt;/span> &lt;span class="n">localport&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="mf">2222&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">interface&lt;/span> &lt;span class="n">portproxy&lt;/span> &lt;span class="n">show&lt;/span> &lt;span class="n">v4tov4&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">int&lt;/span> &lt;span class="n">portproxy&lt;/span> &lt;span class="n">reset&lt;/span> &lt;span class="n">all&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="配置-wsl-1">配置 wsl&lt;/h2>
+&lt;p>&lt;a href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config#configuration-setting-for-wslconfig">https://docs.microsoft.com/en-us/windows/wsl/wsl-config#configuration-setting-for-wslconfig&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-Content&lt;/span> &lt;span class="n">-Path&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$env:userprofile&lt;/span>&lt;span class="s2">\\.wslconfig&amp;#34;&lt;/span> &lt;span class="n">-Value&lt;/span> &lt;span class="s2">&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Settings apply across all Linux distros running on WSL 2
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">[wsl2]
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Limits VM memory to use no more than 4 GB, this can be set as whole numbers using GB or MB
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">memory=2GB
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Sets the VM to use two virtual processors
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">processors=2
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Specify a custom Linux kernel to use with your installed distros. The default kernel used can be found at https://github.com/microsoft/WSL2-Linux-Kernel
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># kernel=C:\\temp\\myCustomKernel
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Sets additional kernel parameters, in this case enabling older Linux base images such as Centos 6
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># kernelCommandLine = vsyscall=emulate
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Sets amount of swap storage space to 8GB, default is 25% of available RAM
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">swap=1GB
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Sets swapfile path location, default is %USERPROFILE%\AppData\Local\Temp\swap.vhdx
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">swapfile=C:\\temp\\wsl-swap.vhdx
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Disable page reporting so WSL retains all allocated memory claimed from Windows and releases none back when free
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">pageReporting=false
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Turn off default connection to bind WSL 2 localhost to Windows localhost
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">localhostforwarding=true
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Disables nested virtualization
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">nestedVirtualization=false
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Turns on output console showing contents of dmesg when opening a WSL 2 distro for debugging
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">debugConsole=true
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>vs-remote-debug</title><link>https://blog.techfetch.dev/blog/2022/11/13/vs-remote-debug/</link><pubDate>Sun, 13 Nov 2022 14:17:28 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2022/11/13/vs-remote-debug/</guid><description>&lt;h1 id="remote-debug-with-visual-studio">remote debug with visual studio&lt;/h1>
+&lt;p>远程调试 C++:
+&lt;a href="https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-cpp?view=vs-2019">https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-cpp?view=vs-2019&lt;/a>&lt;/p>
+&lt;p>Attach 调试:
+&lt;a href="https://docs.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2019">https://docs.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2019&lt;/a>&lt;/p>
+&lt;p>配置联调程序为 service:
+&lt;a href="https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging?view=vs-2019#bkmk_configureService">https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging?view=vs-2019#bkmk_configureService&lt;/a>&lt;/p>
+&lt;p>如何配置启动参数:
+&lt;a href="https://stackoverflow.com/questions/6740422/visual-studio-remote-debugging-a-service">https://stackoverflow.com/questions/6740422/visual-studio-remote-debugging-a-service&lt;/a>&lt;/p>
+&lt;p>可用参数:
+&lt;a href="https://social.msdn.microsoft.com/Forums/vstudio/en-US/174c2039-b316-455a-800e-18c0d93b74bc/visual-studio-2010-remote-debugger-settings-dont-persist?forum=vsdebug">https://social.msdn.microsoft.com/Forums/vstudio/en-US/174c2039-b316-455a-800e-18c0d93b74bc/visual-studio-2010-remote-debugger-settings-dont-persist?forum=vsdebug&lt;/a>&lt;/p>
+&lt;p>自己添加任务&lt;/p>
+&lt;p>&lt;code>&amp;quot;C:\Program Files\Microsoft Visual Studio 16.0\Common7\IDE\Remote Debugger\x64\msvsmon.exe&amp;quot;&lt;/code>&lt;/p>
+&lt;p>启动参数&lt;/p>
+&lt;p>&lt;code>/noauth /anyuser /port:4045 /nosecuritywarn /timeout 360000&lt;/code>&lt;/p>
+&lt;p>开发机连接: &lt;code>test0.example.com:4045&lt;/code>&lt;/p>
+&lt;p>远程访问(需提前开启开发者模式): &lt;code>http://test0.example.com:50080/&lt;/code>&lt;/p></description></item></channel></rss>

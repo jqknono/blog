@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>测试工具 on Nono Blogs</title><link>https://blog.techfetch.dev/blog/%E5%B7%A5%E5%85%B7/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</link><description>Recent content in 测试工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 16:07:13 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/blog/%E5%B7%A5%E5%85%B7/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>简易server-client代码</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E7%AE%80%E6%98%93server-client%E4%BB%A3%E7%A0%81/</link><pubDate>Fri, 28 Jun 2024 16:07:13 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E7%AE%80%E6%98%93server-client%E4%BB%A3%E7%A0%81/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 简易server-client代码&lt;/li>
+&lt;/ul>
+&lt;h1 id="简易-server-client-代码-windows">简易 server-client 代码 windows&lt;/h1>
+&lt;h2 id="windows">Windows&lt;/h2>
+&lt;p>&lt;a href="https://docs.microsoft.com/en-us/windows/win32/winsock/complete-client-code">Complete Winsock Client Code&lt;/a>
+&lt;a href="https://docs.microsoft.com/en-us/windows/win32/winsock/complete-server-code">Complete Winsock Server Code&lt;/a>&lt;/p>
+&lt;h2 id="linux">Linux&lt;/h2>
+&lt;p>&lt;a href="https://www.geeksforgeeks.org/socket-programming-cc/">Linux Socket Programming&lt;/a>
+&lt;a href="https://www.geeksforgeeks.org/simple-client-server-application-in-c/">Simple client/server application in C&lt;/a>&lt;/p></description></item></channel></rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>评测 on Nono Blogs</title><link>https://blog.techfetch.dev/tags/%E8%AF%84%E6%B5%8B/</link><description>Recent content in 评测 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 13 Nov 2024 14:41:23 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/tags/%E8%AF%84%E6%B5%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>社区规则分析</title><link>https://blog.techfetch.dev/blog/%E8%B0%83%E7%A0%94/%E7%A4%BE%E5%8C%BA%E8%A7%84%E5%88%99%E5%88%86%E6%9E%90/</link><pubDate>Wed, 13 Nov 2024 14:41:23 +0800</pubDate><guid>https://blog.techfetch.dev/blog/%E8%B0%83%E7%A0%94/%E7%A4%BE%E5%8C%BA%E8%A7%84%E5%88%99%E5%88%86%E6%9E%90/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 社区规则分析&lt;/li>
+&lt;/ul></description></item><item><title>多平台内容发布工具--蚁小二体验</title><link>https://blog.techfetch.dev/blog/2024/05/09/%E5%A4%9A%E5%B9%B3%E5%8F%B0%E5%86%85%E5%AE%B9%E5%8F%91%E5%B8%83%E5%B7%A5%E5%85%B7--%E8%9A%81%E5%B0%8F%E4%BA%8C%E4%BD%93%E9%AA%8C/</link><pubDate>Thu, 09 May 2024 20:47:38 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/05/09/%E5%A4%9A%E5%B9%B3%E5%8F%B0%E5%86%85%E5%AE%B9%E5%8F%91%E5%B8%83%E5%B7%A5%E5%85%B7--%E8%9A%81%E5%B0%8F%E4%BA%8C%E4%BD%93%E9%AA%8C/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>最近想写点东西扩展下收入类别, 四处调研了下创作者平台, 看看是否能靠文字赚点钱, 实在不行赚点金币也是好的.&lt;/p>
+&lt;p>先不论具体的平台, 写东西多少是要费点脑子的, 文章生产不易, 自然不会只投一个平台, 如果需要发布多个平台, 则会涉及一件比较令人厌烦的事, 那就是同一件事需要重复做多次.&lt;/p>
+&lt;p>如果各平台都支持外链, 支持 markdown 格式, 简单的复制粘贴倒也不会太令人苦恼. 但实际情况是, 很多平台都不支持 markdown 文件导入, 但好消息是它们都支持 word 导入. 可以 md 转 docx, 再 docx 导入.&lt;/p>
+&lt;p>另外在多个平台发文, 还需要在各自的发布页面操作, 我希望的是可以批量操作. 搜索的时候找到了&lt;code>蚁小二&lt;/code>这样一个工具, 请放心这不是带货, 如果这东西确实能给我带来很多价值的话, 我自然会审慎而吝啬的决定是否要分享. 既然我分享出来了, 就代表我对它带来的价值存疑.&lt;/p>
+&lt;h2 id="支持的平台">支持的平台&lt;/h2>
+&lt;p>&lt;img src="https://s2.loli.net/2024/06/20/NGdJbYPmKFsu6MX.png">&lt;/p>
+&lt;p>可以一键发布内容到多个平台, 我所使用的免费版支持添加五个账号, 由于我是文字创作, 五个账号已经足够了. 如果是视频创作者, 这个工具或许可以帮上许多忙.&lt;/p>
+&lt;h2 id="文字自媒体体验">文字自媒体体验&lt;/h2>
+&lt;p>视频部分由于我完全不会做视频, 就暂且不分享体验了, 下面仅就自媒体平台体验做一些分享.&lt;/p>
+&lt;p>&lt;img src="https://s2.loli.net/2024/06/20/unKh5tRUSXyCDsx.png">&lt;/p>
+&lt;ul>
+&lt;li>创作界面可以参考常见的 word 编辑器, 包含段落, 加粗, 引用, 下划线, 删除线, 斜体, 分割线, 缩进, 图片&lt;/li>
+&lt;li>不支持超链接&lt;/li>
+&lt;li>不支持表格&lt;/li>
+&lt;li>没有 markdown, 可以通过在 vscode 的 mardown 预览中拷贝粘贴实现了一些格式的保留&lt;/li>
+&lt;li>抽象支持多个平台&lt;/li>
+&lt;li>抽象支持平台多个账号&lt;/li>
+&lt;/ul>
+&lt;p>&lt;em>一键发布&lt;/em>, 不得不说体验还可以, 但是我想看到文章反馈还是得去各平台查看.&lt;/p></description></item><item><title>简书的创作体验</title><link>https://blog.techfetch.dev/blog/2024/05/09/%E7%AE%80%E4%B9%A6%E7%9A%84%E5%88%9B%E4%BD%9C%E4%BD%93%E9%AA%8C/</link><pubDate>Thu, 09 May 2024 12:28:43 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/05/09/%E7%AE%80%E4%B9%A6%E7%9A%84%E5%88%9B%E4%BD%9C%E4%BD%93%E9%AA%8C/</guid><description>&lt;p>简书的写文章体验仅强于记事本.&lt;/p>
+&lt;h2 id="笔记管理简洁">笔记管理简洁&lt;/h2>
+&lt;p>这是文章编辑页面, 仅两层抽象,&lt;/p>
+&lt;ul>
+&lt;li>笔记本列表&lt;/li>
+&lt;li>笔记列表&lt;/li>
+&lt;li>编辑器&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://s2.loli.net/2024/05/09/QaCNwOghDi6b7xu.png">&lt;/p>
+&lt;p>层级少有好处也有坏处, 简单的操作可以减低理解成本. 但会在将来增加作者的文章管理成本.&lt;/p>
+&lt;h2 id="图片上传困难">图片上传困难&lt;/h2>
+&lt;p>&lt;strong>简书在长达 8 年的时间里仍然没有处理好外链图片上传问题&lt;/strong>&lt;/p>
+&lt;p>&lt;img alt="https://www.jianshu.com/p/acb660ddc619" src="https://s2.loli.net/2024/05/09/nxkTBGpo3KDjtsh.png">&lt;/p>
+&lt;p>外链只是有时会失败, 许多图床是允许空 reffer 或任意 reffer 获取的, 简书试都不试下, 还称本地上传是&amp;quot;正确&amp;quot;的图片上传方式, 不知道运营者有没有试过别的平台的创作体验.&lt;/p>
+&lt;p>很难相信会有作者只深耕一个平台, 平台如果不能让创作者方便的复制粘贴, 只能一直走小众路线.&lt;/p>
+&lt;h2 id="没有审核">没有审核&lt;/h2>
+&lt;p>简书似乎不怎么审核, 从未看到过审核状态, 文章发出即可阅. 如果一个平台不怎么审核的话, 或许我们可以这样那样&amp;hellip;&lt;/p>
+&lt;h2 id="随机-ip-属地">随机 IP 属地&lt;/h2>
+&lt;p>简书实际没有实现 IP 属地, IP 地址刷新即随机更新.&lt;/p></description></item></channel></rss>
