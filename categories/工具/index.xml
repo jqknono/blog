@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on Nono Blogs</title><link>https://blog.techfetch.dev/categories/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 19:03:59 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>snort</title><link>https://blog.techfetch.dev/blog/2024/06/28/snort/</link><pubDate>Fri, 28 Jun 2024 19:03:59 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/snort/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> snort&lt;/li>
+&lt;/ul>
+&lt;h1 id="snort">Snort&lt;/h1>
+&lt;p>&lt;a href="https://www.snort.org/">https://www.snort.org/&lt;/a>&lt;/p>
+&lt;p>Protect your network with the world&amp;rsquo;s most powerful Open Source detection software.&lt;/p>
+&lt;p>&lt;strong>What is Snort?&lt;/strong>
+Snort is the foremost Open Source Intrusion Prevention System (IPS) in the world.
+Snort IPS uses a series of rules that help define malicious network activity and
+uses those rules to find packets that match against them and generates alerts for users.&lt;/p>
+&lt;p>Snort can be deployed inline to stop these packets, as well.
+Snort has three primary uses: As a packet sniffer like tcpdump, as a packet logger —
+which is useful for network traffic debugging, or it can be used as a full-blown network intrusion prevention system.
+Snort can be downloaded and configured for personal and business use alike.&lt;/p></description></item><item><title>adguard</title><link>https://blog.techfetch.dev/blog/%E7%81%B5%E6%84%9F/adguard/</link><pubDate>Fri, 28 Jun 2024 18:47:00 +0800</pubDate><guid>https://blog.techfetch.dev/blog/%E7%81%B5%E6%84%9F/adguard/</guid><description/></item><item><title>命令行手册中括号的含义</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</link><pubDate>Fri, 28 Jun 2024 17:31:00 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 命令行手册中括号的含义&lt;/li>
+&lt;/ul>
+&lt;h1 id="命令行手册中括号的含义">命令行手册中括号的含义&lt;/h1>
+&lt;p>在命令行帮助中，不同种类的括号通常有以下含义：&lt;/p>
+&lt;ol>
+&lt;li>尖括号 &lt;code>&amp;lt;&amp;gt;&lt;/code>：
+&lt;ul>
+&lt;li>尖括号用于表示必需参数，即在运行命令时必须提供的值。通常用于表示命令的基本语法和参数。&lt;/li>
+&lt;li>例如：&lt;code>command &amp;lt;filename&amp;gt;&lt;/code> 表示你需要提供一个文件名作为必需参数，如 &lt;code>command file.txt&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>方括号 &lt;code>[]&lt;/code>：
+&lt;ul>
+&lt;li>方括号用于表示可选参数，即在运行命令时可以选择是否提供的值。它们通常用于标记命令的可选参数和选项。&lt;/li>
+&lt;li>例如：&lt;code>command [option]&lt;/code> 表示你可以选择性地提供一个选项，如 &lt;code>command -v&lt;/code> 或 &lt;code>command&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>大括号 &lt;code>{}&lt;/code>：
+&lt;ul>
+&lt;li>大括号通常用于表示一组选项或值，表示你需要从中选择一个。它们也被称为&amp;quot;选择性参数组&amp;quot;。&lt;/li>
+&lt;li>例如：&lt;code>command {option1 | option2 | option3}&lt;/code> 表示你必须从给定的选项中选择一个，如 &lt;code>command option2&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>圆括号 &lt;code>()&lt;/code>：
+&lt;ul>
+&lt;li>圆括号在命令行帮助中通常用于表示参数的分组，以明确参数的结构和优先级。&lt;/li>
+&lt;li>例如：&lt;code>command (option1 | option2) filename&lt;/code> 表示你需要选择 &lt;code>option1&lt;/code> 或 &lt;code>option2&lt;/code>，并提供一个文件名作为参数，如 &lt;code>command option1 file.txt&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>这些括号的使用旨在帮助用户理解命令的语法和参数选择，从而正确地使用命令行工具。在阅读命令行帮助时，仔细注意括号的含义和作用是很重要的，这样可以避免错误的命令输入并获得所需的结果。&lt;/p></description></item><item><title>wireguard配置</title><link>https://blog.techfetch.dev/blog/2024/06/28/wireguard%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 28 Jun 2024 17:11:32 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/wireguard%E9%85%8D%E7%BD%AE/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> wireguard配置&lt;/li>
+&lt;/ul>
+&lt;h1 id="wireguard-配置">wireguard 配置&lt;/h1>
+&lt;h2 id="防火墙配置">防火墙配置&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">wireguard&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">installtunnelservice&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">wg_conf_path&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">wg&lt;/span> &lt;span class="n">show&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Get-NetConnectionProfile&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Get-NetAdapter&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Get-NetFirewallProfile&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallProfile&lt;/span> &lt;span class="n">-Profile&lt;/span> &lt;span class="n">domain&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">public&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">private&lt;/span> &lt;span class="n">-DisabledInterfaceAliases&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">wg_config_name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPInterface&lt;/span> &lt;span class="n">-ifindex&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">interface&lt;/span> &lt;span class="n">index&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">-Forwarding&lt;/span> &lt;span class="n">Enabled&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@wg1&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Inbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.66&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">66&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@wg1&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Outbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.66&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">66&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 定位拦截原因&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">auditpol&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">set &lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="n">subcategory&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="s2">&amp;#34;{0CCE9225-69AE-11D9-BED3-505054503030}&amp;#34;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">success&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">disable&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">failure&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">enable&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">wevtutil&lt;/span> &lt;span class="n">qe&lt;/span> &lt;span class="n">Security&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">q:&lt;/span>&lt;span class="s2">&amp;#34;*[System/EventID=5152]&amp;#34;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">c:&lt;/span>&lt;span class="mf">5&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">rd&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">true&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">f:text&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">auditpol&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">set &lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="n">subcategory&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="s2">&amp;#34;{0CCE9225-69AE-11D9-BED3-505054503030}&amp;#34;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">success&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">disable&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">failure&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">disable&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Win-to-go</title><link>https://blog.techfetch.dev/blog/2024/06/28/win-to-go/</link><pubDate>Fri, 28 Jun 2024 17:07:10 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/win-to-go/</guid><description>&lt;p>===&lt;/p>
+&lt;p>Windows To Go 的优点在于移动便携性, 缺点在于经典 Windows系统的数个功能受到限制.&lt;/p>
+&lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+&lt;!-- code_chunk_output -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#前言">前言&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#windows-to-go-overview">Windows To Go Overview&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#windows-to-go-和传统-windows-安装方式的区别">Windows To Go 和传统 Windows 安装方式的区别&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#使用-windows-to-go-来移动工作">使用 Windows To Go 来移动工作&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#准备安装-windows-to-go">准备安装 Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#硬件要求">硬件要求&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#usb-硬盘或-u盘">USB 硬盘或 U盘&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#载体机器host-computer">载体机器(Host computer)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#检查载体-pc-和-windows-to-go-盘的架构兼容性">检查载体 PC 和 Windows To Go 盘的架构兼容性&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#windows-to-go-的常见问题">Windows To Go 的常见问题&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /code_chunk_output -->
+&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>Windows To Go出现很多年了, 可是百度到的中文文档却如此少, 不禁为国内IT技术的发展而担忧.作者J参加工作时间不长, 能力有限, 但工作中接触大量英文开发文档, 因此仍希望能做一点基础的铺路工作, 方便后来者查阅, 有不当之处也请读者不吝指出. Windows To Go有详尽的官方文档, 有英文阅读能力的可以直接跳转到微软官方文档. 链接如下:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/windows-to-go-overview">Windows To Go Overview&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/best-practice-recommendations-for-windows-to-go">Best practice recommendations for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/deployment-considerations-for-windows-to-go">Deployment considerations for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/prepare-your-organization-for-windows-to-go">Prepare your organization for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/security-and-data-protection-considerations-for-windows-to-go">Security and data protection considerations for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/windows-to-go-frequently-asked-questions">Windows To Go: frequently asked questions&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>本文主要会介绍 Overview, 和一些常见问题, 大部分内容为翻译, 少量作者的提醒以[J]来标注直至句号结束, 以确保不误导读者.&lt;/p></description></item><item><title>工具</title><link>https://blog.techfetch.dev/blog/%E5%B7%A5%E5%85%B7/</link><pubDate>Fri, 28 Jun 2024 16:11:32 +0800</pubDate><guid>https://blog.techfetch.dev/blog/%E5%B7%A5%E5%85%B7/</guid><description/></item><item><title>简易server-client代码</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E7%AE%80%E6%98%93server-client%E4%BB%A3%E7%A0%81/</link><pubDate>Fri, 28 Jun 2024 16:07:13 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E7%AE%80%E6%98%93server-client%E4%BB%A3%E7%A0%81/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 简易server-client代码&lt;/li>
+&lt;/ul>
+&lt;h1 id="简易-server-client-代码-windows">简易 server-client 代码 windows&lt;/h1>
+&lt;h2 id="windows">Windows&lt;/h2>
+&lt;p>&lt;a href="https://docs.microsoft.com/en-us/windows/win32/winsock/complete-client-code">Complete Winsock Client Code&lt;/a>
+&lt;a href="https://docs.microsoft.com/en-us/windows/win32/winsock/complete-server-code">Complete Winsock Server Code&lt;/a>&lt;/p>
+&lt;h2 id="linux">Linux&lt;/h2>
+&lt;p>&lt;a href="https://www.geeksforgeeks.org/socket-programming-cc/">Linux Socket Programming&lt;/a>
+&lt;a href="https://www.geeksforgeeks.org/simple-client-server-application-in-c/">Simple client/server application in C&lt;/a>&lt;/p></description></item><item><title>测试工具</title><link>https://blog.techfetch.dev/blog/%E5%B7%A5%E5%85%B7/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</link><pubDate>Fri, 28 Jun 2024 16:06:37 +0800</pubDate><guid>https://blog.techfetch.dev/blog/%E5%B7%A5%E5%85%B7/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 测试工具&lt;/li>
+&lt;/ul>
+&lt;h1 id="测试工具">测试工具&lt;/h1>
+&lt;ul>
+&lt;li>[&lt;a href="%E7%B2%BE%E7%A1%AE%E5%8F%91%E5%8C%85-hping3" title="精确发包-hping3">精确发包-hping3&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/%E7%AE%80%E6%98%93server-client%E4%BB%A3%E7%A0%81/" title="简易server-client代码">简易server-client代码&lt;/a>]&lt;/li>
+&lt;/ul></description></item><item><title>设备的分类</title><link>https://blog.techfetch.dev/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/%E8%AE%BE%E5%A4%87/%E8%AE%BE%E5%A4%87%E7%9A%84%E5%88%86%E7%B1%BB/</link><pubDate>Tue, 04 Jun 2024 12:26:28 +0800</pubDate><guid>https://blog.techfetch.dev/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/%E8%AE%BE%E5%A4%87/%E8%AE%BE%E5%A4%87%E7%9A%84%E5%88%86%E7%B1%BB/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 设备的分类&lt;/li>
+&lt;/ul>
+&lt;p>网络流行的 NAS, 软路由, Mac mini, 路由器等统一抽象为设备, 不需要关注其命名和形态, 主要应关注&lt;strong>处理器&lt;/strong>, &lt;strong>存储&lt;/strong>, &lt;strong>网络&lt;/strong>, &lt;strong>应用生态&lt;/strong>这四个方面.&lt;/p>
+&lt;p>处理器首要关注的是架构, 一般使用的是&lt;strong>x86&lt;/strong>, &lt;strong>ARM&lt;/strong>, 其它架构不建议非专业人士购买, 较贫乏的生态会增加学习和使用的难度.&lt;/p>
+&lt;p>你会看到有些人评价&lt;strong>ARM&lt;/strong>通常用于低功耗设备, 适合家用, &lt;strong>x86&lt;/strong>通常用于高性能设备, 适合企业. 但本文写作的 2024 年的时间点, 这种论调早已过时, 我们还是要基于生态去考虑, 目前&lt;strong>ARM&lt;/strong>生态已非常丰富, 并且具有更好的性价比, 值得大家考虑. 建议非专业人士可以直接选择&lt;strong>ARM&lt;/strong>架构的设备, 以阿里云为例&lt;strong>ARM&lt;/strong>设备的价格仅为&lt;strong>x86&lt;/strong>设备的一半, 性能也足够应付家用需求. 专业人士可以根据自己的需求选择&lt;strong>x86&lt;/strong>架构的设备.&lt;/p></description></item></channel></rss>

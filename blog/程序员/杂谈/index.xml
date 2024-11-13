@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>杂谈 on Nono Blogs</title><link>https://blog.techfetch.dev/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%9D%82%E8%B0%88/</link><description>Recent content in 杂谈 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 17:35:19 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml"/><item><title>第三方库的陷阱</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E9%99%B7%E9%98%B1/</link><pubDate>Fri, 28 Jun 2024 17:35:19 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E9%99%B7%E9%98%B1/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 第三方库的陷阱&lt;/li>
+&lt;/ul>
+&lt;p>今天聊到最近出的第三方日志库的一个漏洞, 可以很低门槛的利用以执行远程命令. 一个日志库和远程命令看着毫不相干, 但是画蛇添足的第三方库遍地都是.&lt;/p>
+&lt;p>读的代码越多越感受到很多开源代码的水平非常差, 无论它有多少 k 的 star, star 代表了需求, 不代表开发水平.&lt;/p>
+&lt;p>开源的好处是有更多的人来开发, 好处是特性迅速增加, bug 有人来解, 代码有人来审核, 但是水平参差不齐.&lt;/p>
+&lt;p>如果没有一个强有力的提交约束, 代码的质量很难保证.&lt;/p>
+&lt;p>代码越多增加的攻击面越多&lt;/p>
+&lt;p>虽说重复造轮子不好, 但是产品需求就是婴儿车轮子, 一个塑料轮子怎么都用不坏, 装了个飞机轮胎, 徒增攻击面和维护成本. 因此如果只需要婴儿车的轮子, 不需要大材小用.&lt;/p>
+&lt;p>维护成本高, 第三方库需要专门的流程和人员去维护. 华为一个魔改的测试框架, 直接导致升级编译器就用例失败, 升级测试框架和升级编译器产生冲突, 维护时要花大量时间继续魔改这条路. 作为参与者深刻体会到魔改三方库的困难. 如果魔改的是特性可以合回开源库还好说, 为了自己的需求去侵入式的定制开发, 会导致很难维护.&lt;/p>
+&lt;p>对待第三方库华为创建了一系列流程, 可以说阻力重重.&lt;/p>
+&lt;p>门槛收的极紧, 增加的第三方库需要 18 级专家和 20 级部长评审, 基本只有久负盛名的三方库能被使用.&lt;/p>
+&lt;p>所有第三方库都放在 thirdparty 文件夹下, 全量编译时 CI 和源库对比, 严格禁止侵入式修改.&lt;/p>
+&lt;p>专门的工具追踪所有第三方库的版本, 这部分请了外包人员来管理, 如果开发申请升级版本需要提申请, 部长审核.&lt;/p>
+&lt;p>很难找部长去处理这样的事, 当一个流程非常繁琐的时候, 它实际上是在劝你不要这样做.&lt;/p>
+&lt;p>对待第三方库应该保持不轻信的态度, 相信自己人的开发.&lt;/p></description></item><item><title>方案设计模板</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</link><pubDate>Fri, 28 Jun 2024 17:35:07 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 方案设计模板&lt;/li>
+&lt;/ul>
+&lt;h1 id="xxx系统子系统详细设计">XXX系统/子系统详细设计&lt;/h1>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>系统名称&lt;/th>
+ &lt;th>XXX系统&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>作者&lt;/td>
+ &lt;td>XXX&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>提交日期&lt;/td>
+ &lt;td>2021-6-30&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="修改记录">修改记录&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>修改后版本号&lt;/th>
+ &lt;th>修改内容&lt;/th>
+ &lt;th>修改日期&lt;/th>
+ &lt;th>修改人&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>v1.0&lt;/td>
+ &lt;td>XXXXXXX&lt;/td>
+ &lt;td>2021-6-30&lt;/td>
+ &lt;td>XXX&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="技术评审意见">技术评审意见&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>No.&lt;/th>
+ &lt;th>评审人&lt;/th>
+ &lt;th>评审意见（通过/不通过/待定，可附上评论）&lt;/th>
+ &lt;th>评审时间&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>1&lt;/td>
+ &lt;td>XXX&lt;/td>
+ &lt;td>通过&lt;/td>
+ &lt;td>2022.1.1&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="设计背景">设计背景&lt;/h2>
+&lt;h2 id="名词解释">名词解释&lt;/h2>
+&lt;!-- 对文档中出现新的或不常见的名词、概念或简略语给出定义和解释。 -->
+&lt;ul>
+&lt;li>SIP: 会话初始协议 (Session Initiation Protocol)&lt;/li>
+&lt;li>RTP: 实时传输协议（Real-time Transpo&lt;em>rt P&lt;/em>rotocol）&lt;/li>
+&lt;/ul>
+&lt;h2 id="设计目标">设计目标&lt;/h2>
+&lt;h3 id="功能需求">功能需求&lt;/h3>
+&lt;!-- 概要描述系统本身的功能性需求，不需描述外部的其他系统。如果项目已有MRD/PRD，可在此分层次分条目列出功能点及子功能点。如果没有MRD/PRD，需在此列出要实现的功能点及子功能点。 -->
+&lt;h3 id="非功能需求不可省略">非功能需求（不可省略）&lt;/h3>
+&lt;!-- 在此描述系统本身的非功能需求（包括性能需求）。建议分条列出量化的性能指标，比如响应时间、超时率、资源占用、运行周期等。不能模糊、有岐义、想当然。 -->
+&lt;h2 id="系统环境">系统环境&lt;/h2>
+&lt;h3 id="相关软件及硬件可选">相关软件及硬件（可选）&lt;/h3>
+&lt;!--在这里加入系统所需的软, 硬件, 包括操作系统, 机器型号及配置要求。建议采用表格形式列出，最好还能规划出服务器和软件构件的部署图。该部分也可以单独编写部署设计文档，并在此引用。-->
+&lt;h3 id="系统限制">系统限制&lt;/h3>
+&lt;!--在这里加入系统的已知, 或可预知的限制。-->
+&lt;h3 id="数据规模估计不可省略">数据规模估计（不可省略）&lt;/h3>
+&lt;!--通过调研或经验，对数据规模进行估计，包括用户量、数据量、带宽消耗及增长速度等方面。分类分条列出。-->
+&lt;h2 id="遍历已有">遍历已有&lt;/h2>
+&lt;!--列举针对这个设计目标有哪些已知的解决方案，特别是**要遍历青藤内部已有方案**，如果已有方案不满足要求，要想办法在它之上做加法。直接分叉是最差的选择，除非需求完全不同。-->
+&lt;h2 id="设计思路及折衷">设计思路及折衷&lt;/h2>
+&lt;!--描述系统设计中需要解决或考虑的关键问题或难点问题，解决这些问题可能有不同方案, 在这里加入方案设计的选择, 折衷及解释，并在后面的系统设计中对选中的方案给出进一步阐述。建议分类列出，比如性能、可扩展性、安全性、服务稳定性、反作弊、复用等方面。建议使用调研数据支持设计方案的选择。-->
+&lt;h3 id="假设及与其它系统的依赖联系">假设及与其它系统的依赖/联系&lt;/h3>
+&lt;!-- 在这里加入系统成功的前提条件及与外界其它系统/模块的联系。采用文字分条列出或采用系统结构图描述均可。 -->
+&lt;h2 id="系统设计">系统设计&lt;/h2>
+&lt;h3 id="基本介绍">基本介绍&lt;/h3>
+&lt;!--对系统整体的简要说明。-->
+&lt;h3 id="系统架构图及说明">系统架构图及说明&lt;/h3>
+&lt;!--把系统分解为若干子系统或模块，给出系统架构图，同时简单阐述每个模块完成的主要功能（必要时，给出模块划分的解释，即说明为什么把某些功能设计在某个模块中）。如果各个模块设计运行于不同环境（如操作系统、服务器）下，请在相关软件及硬件（可选）章节输出物理架构图。-->
+&lt;h3 id="系统流程图及说明可选">系统流程图及说明（可选）&lt;/h3>
+&lt;!--通过流程图说明系统之间的模块是怎么交互来实现系统功能的。-->
+&lt;h3 id="与外部系统的接口">与外部系统的接口&lt;/h3>
+&lt;!--在这里对该系统与外部系统的接口进行详细定义，若接口较多且复杂，可编写单独的接口设计文档，并在此引用。若外部系统已定义并提供接口文档，在此引用即可。这里的接口包括结构体、函数调用、接口文件、数据库、URL参数和lib库等。若需要使用外部提供的lib库，需要在设计阶段协调好将使用的版本，并在此进行说明。-->
+&lt;h3 id="全局性数据结构说明">全局性数据结构说明&lt;/h3>
+&lt;!--对各模块公用的全局性的数据结构进行说明（包括数据库Schema）。若该部分在接口设计中体现，则直接引用接口文档。-->
+&lt;h3 id="xxx1模块简要说明">XXX1模块简要说明&lt;/h3>
+&lt;h4 id="xxx1模块的功能">XXX1模块的功能&lt;/h4>
+&lt;!--描述该模块要实现的功能，可以先简要描述，再分条列出。对于模块相关的关键功能和关键技术，也在此说明，供详细设计人员参考。-->
+&lt;h4 id="与其它模块的接口">与其它模块的接口&lt;/h4>
+&lt;!--在此描述该模块与系统内其它模块的接口，不包括模块内部的接口。模块内部的接口在详细设计中进行说明。如果接口复杂或描述篇幅较多，可编写单独的接口设计文档，并在此引用。也可以增加二级标题"各模块之间的接口"，对模块之间的接口进行系统、全面的定义。-->
+&lt;h3 id="xxx2模块简要说明">XXX2模块简要说明&lt;/h3>
+&lt;h4 id="xxx2模块的功能">XXX2模块的功能&lt;/h4>
+&lt;h4 id="与其它模块的接口-1">与其它模块的接口&lt;/h4>
+&lt;h2 id="威胁建模">威胁建模&lt;/h2>
+&lt;!-- 通过结构化的方法，系统的识别、评估产品的安全风险和威胁，并针对这些风险、威胁制定消减措施 -->
+&lt;h2 id="升级影响不可省略">升级影响（不可省略）&lt;/h2>
+&lt;!-- 该方案如果需要在系统原有版本基础上进行升级，是否有 breaking change？升级是否可平滑进行？升级可能带来的影响是什么？如何规避？ -->
+&lt;h2 id="风险评估及对其它系统影响可选">风险评估及对其它系统影响（可选）&lt;/h2>
+&lt;h3 id="已知的或可预知的风险">已知的或可预知的风险&lt;/h3>
+&lt;!--在这里加上已经知道的或可能会发生的风险，包括技术、业务等方面。最好针对每个风险，列出相应的应对措施。-->
+&lt;h3 id="与其它系统模块可能的影响">与其它系统/模块可能的影响&lt;/h3>
+&lt;!--在"假设及与其它系统联系"中描述了该系统与其它系统的依赖关系。在这里描述这些依赖关系可能带来的影响。包括本系统对其它系统可能造成的影响以及其它系统可能给本系统造成的影响两个方面。挖掘可能存在的创新点，申请专利。-->
+&lt;h2 id="创新点挖掘可选">创新点挖掘（可选）&lt;/h2>
+&lt;!--挖掘可能存在的创新点，申请专利。-->
+&lt;h2 id="附件及参考资料">附件及参考资料&lt;/h2>
+&lt;!--填写文档相关的附件或参考资料。若是不常变更的文档（比如调研报告），建议以对象方式插入到该文档中。如是经常变更的文档（比如接口文档），建议在此列出文件名即可。--></description></item><item><title>命令行语法约定</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AF%AD%E6%B3%95%E7%BA%A6%E5%AE%9A/</link><pubDate>Fri, 28 Jun 2024 17:32:54 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AF%AD%E6%B3%95%E7%BA%A6%E5%AE%9A/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 命令行语法约定&lt;/li>
+&lt;/ul>
+&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.ibm.com/docs/en/iotdm/11.3?topic=interface-command-line-syntax">https://www.ibm.com/docs/en/iotdm/11.3?topic=interface-command-line-syntax&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key">https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developers.google.com/style/code-syntax">https://developers.google.com/style/code-syntax&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_01">https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_01&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://ftpdocs.broadcom.com/cadocs/0/CA%20ARCserve%20%20Backup%20r16-CHS/Bookshelf_Files/HTML/cmndline/cl_cmd_line_syntax_char.htm">https://ftpdocs.broadcom.com/cadocs/0/CA%20ARCserve%20%20Backup%20r16-CHS/Bookshelf_Files/HTML/cmndline/cl_cmd_line_syntax_char.htm&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>e.g.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Notation&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Text without brackets or braces&lt;/td>
+ &lt;td>Items you must type as shown.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;lt;&lt;/code>Text inside angle brackets&lt;code>&amp;gt;&lt;/code>&lt;/td>
+ &lt;td>Placeholder for which you must supply a value.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>[&lt;/code>Text inside square brackets&lt;code>]&lt;/code>&lt;/td>
+ &lt;td>Optional items.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>{&lt;/code>Text inside braces&lt;code>}&lt;/code>&lt;/td>
+ &lt;td>Set of required items. You must choose one.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Vertical bar ( &lt;code>|&lt;/code> )&lt;/td>
+ &lt;td>Separator for mutually exclusive items. You must choose one.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Ellipsis (&lt;code>…&lt;/code>)&lt;/td>
+ &lt;td>Items that can be repeated and used multiple times.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>命令行手册中括号的含义</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</link><pubDate>Fri, 28 Jun 2024 17:31:00 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 命令行手册中括号的含义&lt;/li>
+&lt;/ul>
+&lt;h1 id="命令行手册中括号的含义">命令行手册中括号的含义&lt;/h1>
+&lt;p>在命令行帮助中，不同种类的括号通常有以下含义：&lt;/p>
+&lt;ol>
+&lt;li>尖括号 &lt;code>&amp;lt;&amp;gt;&lt;/code>：
+&lt;ul>
+&lt;li>尖括号用于表示必需参数，即在运行命令时必须提供的值。通常用于表示命令的基本语法和参数。&lt;/li>
+&lt;li>例如：&lt;code>command &amp;lt;filename&amp;gt;&lt;/code> 表示你需要提供一个文件名作为必需参数，如 &lt;code>command file.txt&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>方括号 &lt;code>[]&lt;/code>：
+&lt;ul>
+&lt;li>方括号用于表示可选参数，即在运行命令时可以选择是否提供的值。它们通常用于标记命令的可选参数和选项。&lt;/li>
+&lt;li>例如：&lt;code>command [option]&lt;/code> 表示你可以选择性地提供一个选项，如 &lt;code>command -v&lt;/code> 或 &lt;code>command&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>大括号 &lt;code>{}&lt;/code>：
+&lt;ul>
+&lt;li>大括号通常用于表示一组选项或值，表示你需要从中选择一个。它们也被称为&amp;quot;选择性参数组&amp;quot;。&lt;/li>
+&lt;li>例如：&lt;code>command {option1 | option2 | option3}&lt;/code> 表示你必须从给定的选项中选择一个，如 &lt;code>command option2&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>圆括号 &lt;code>()&lt;/code>：
+&lt;ul>
+&lt;li>圆括号在命令行帮助中通常用于表示参数的分组，以明确参数的结构和优先级。&lt;/li>
+&lt;li>例如：&lt;code>command (option1 | option2) filename&lt;/code> 表示你需要选择 &lt;code>option1&lt;/code> 或 &lt;code>option2&lt;/code>，并提供一个文件名作为参数，如 &lt;code>command option1 file.txt&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>这些括号的使用旨在帮助用户理解命令的语法和参数选择，从而正确地使用命令行工具。在阅读命令行帮助时，仔细注意括号的含义和作用是很重要的，这样可以避免错误的命令输入并获得所需的结果。&lt;/p></description></item><item><title>华为C++编程规范</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BAc-%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</link><pubDate>Fri, 28 Jun 2024 17:30:10 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BAc-%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 华为C++编程规范&lt;/li>
+&lt;/ul>
+&lt;h1 id="c语言编程规范">C++语言编程规范&lt;/h1>
+&lt;h2 id="a-namec0-1a目的">&lt;a name="c0-1">&lt;/a>目的&lt;/h2>
+&lt;p>规则并不是完美的，通过禁止在特定情况下有用的特性，可能会对代码实现造成影响。但是我们制定规则的目的“为了大多数程序员可以得到更多的好处”， 如果在团队运作中认为某个规则无法遵循，希望可以共同改进该规则。
+参考该规范之前，希望您具有相应的C++语言基础能力，而不是通过该文档来学习C++语言。&lt;/p>
+&lt;ol>
+&lt;li>了解C++语言的ISO标准；&lt;/li>
+&lt;li>熟知C++语言的基本语言特性，包括C++ 03/11/14/17相关特性；&lt;/li>
+&lt;li>了解C++语言的标准库；&lt;/li>
+&lt;/ol>
+&lt;h2 id="a-namec0-2a总体原则">&lt;a name="c0-2">&lt;/a>总体原则&lt;/h2>
+&lt;p>代码需要在保证功能正确的前提下，满足&lt;strong>可读、可维护、安全、可靠、可测试、高效、可移植&lt;/strong>的特征要求。&lt;/p>
+&lt;h2 id="a-namec0-2a-重点关注">&lt;a name="c0-2">&lt;/a> 重点关注&lt;/h2>
+&lt;ol>
+&lt;li>约定C++语言的编程风格，比如命名，排版等。&lt;/li>
+&lt;li>C++语言的模块化设计，如何设计头文件，类，接口和函数。&lt;/li>
+&lt;li>C++语言相关特性的优秀实践，比如常量，类型转换，资源管理，模板等。&lt;/li>
+&lt;li>现代C++语言的优秀实践，包括C++11/14/17中可以提高代码可维护性，提高代码可靠性的相关约定。&lt;/li>
+&lt;li>本规范优先适于用C++17版本。&lt;/li>
+&lt;/ol>
+&lt;h2 id="a-namec0-3a-约定">&lt;a name="c0-3">&lt;/a> 约定&lt;/h2>
+&lt;p>&lt;strong>规则&lt;/strong>：编程时必须遵守的约定(must)&lt;/p>
+&lt;p>&lt;strong>建议&lt;/strong>：编程时应该遵守的约定(should)&lt;/p>
+&lt;p>本规范适用通用C++标准, 如果没有特定的标准版本，适用所有的版本(C++03/11/14/17)。&lt;/p>
+&lt;h2 id="a-namec0-4a-例外">&lt;a name="c0-4">&lt;/a> 例外&lt;/h2>
+&lt;p>无论是&amp;rsquo;规则&amp;rsquo;还是&amp;rsquo;建议&amp;rsquo;，都必须理解该条目这么规定的原因，并努力遵守。
+但是，有些规则和建议可能会有例外。&lt;/p>
+&lt;p>在不违背总体原则，经过充分考虑，有充足的理由的前提下，可以适当违背规范中约定。
+例外破坏了代码的一致性，请尽量避免。&amp;lsquo;规则&amp;rsquo;的例外应该是极少的。&lt;/p>
+&lt;p>下列情况，应风格一致性原则优先：
+&lt;strong>修改外部开源代码、第三方代码时，应该遵守开源代码、第三方代码已有规范，保持风格统一。&lt;/strong>&lt;/p>
+&lt;h1 id="a-namec2a2-命名">&lt;a name="c2">&lt;/a>2 命名&lt;/h1>
+&lt;h2 id="a-namec2-1a通用命名">&lt;a name="c2-1">&lt;/a>通用命名&lt;/h2>
+&lt;p>&lt;strong>驼峰风格(CamelCase)&lt;/strong>
+大小写字母混用，单词连在一起，不同单词间通过单词首字母大写来分开。
+按连接后的首字母是否大写，又分: 大驼峰(UpperCamelCase)和小驼峰(lowerCamelCase)&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>类型&lt;/th>
+ &lt;th>命名风格&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>类类型，结构体类型，枚举类型，联合体类型等类型定义， 作用域名称&lt;/td>
+ &lt;td>大驼峰&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>函数(包括全局函数，作用域函数，成员函数)&lt;/td>
+ &lt;td>大驼峰&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>全局变量(包括全局和命名空间域下的变量，类静态变量)，局部变量，函数参数，类、结构体和联合体中的成员变量&lt;/td>
+ &lt;td>小驼峰&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>宏，常量(const)，枚举值，goto 标签&lt;/td>
+ &lt;td>全大写，下划线分割&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>注意：
+上表中__常量__是指全局作用域、namespace域、类的静态成员域下，以 const或constexpr 修饰的基本数据类型、枚举、字符串类型的变量，不包括数组和其他类型变量。
+上表中__变量__是指除常量定义以外的其他变量，均使用小驼峰风格。&lt;/p>
+&lt;h2 id="a-namec2-2a-文件命名">&lt;a name="c2-2">&lt;/a> 文件命名&lt;/h2>
+&lt;h3 id="a-namer2-2-1a规则221-c文件以cpp结尾头文件以h结尾">&lt;a name="r2-2-1">&lt;/a>规则2.2.1 C++文件以.cpp结尾，头文件以.h结尾&lt;/h3>
+&lt;p>我们推荐使用.h作为头文件的后缀，这样头文件可以直接兼容C和C++。
+我们推荐使用.cpp作为实现文件的后缀，这样可以直接区分C++代码，而不是C代码。&lt;/p>
+&lt;p>目前业界还有一些其他的后缀的表示方法：&lt;/p>
+&lt;ul>
+&lt;li>头文件： .hh, .hpp, .hxx&lt;/li>
+&lt;li>cpp文件：.cc, .cxx, .c&lt;/li>
+&lt;/ul>
+&lt;p>如果当前项目组使用了某种特定的后缀，那么可以继续使用，但是请保持风格统一。
+但是对于本文档，我们默认使用.h和.cpp作为后缀。&lt;/p></description></item></channel></rss>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全 on Nono Blogs</title><link>https://blog.techfetch.dev/categories/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 15:49:18 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/categories/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>可信设计</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%8F%AF%E4%BF%A1%E8%AE%BE%E8%AE%A1/</link><pubDate>Fri, 28 Jun 2024 15:49:18 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%8F%AF%E4%BF%A1%E8%AE%BE%E8%AE%A1/</guid><description>&lt;h1 id="安全架构与设计原则">安全架构与设计原则&lt;/h1>
+&lt;h2 id="安全三要素与安全设计原则">安全三要素与安全设计原则&lt;/h2>
+&lt;ul>
+&lt;li>完整性 Integrity&lt;/li>
+&lt;li>可用性 Availability&lt;/li>
+&lt;li>机密性 Confidentiality&lt;/li>
+&lt;/ul>
+&lt;h2 id="开放设计原则">开放设计原则&lt;/h2>
+&lt;p>Open Design&lt;/p>
+&lt;ul>
+&lt;li>设计不应该是秘密, 开放设计更安全.&lt;/li>
+&lt;li>安全不依赖保密.&lt;/li>
+&lt;/ul>
+&lt;h2 id="失败-默认安全原则">失败-默认安全原则&lt;/h2>
+&lt;p>Fail-safe defaults&lt;/p>
+&lt;ul>
+&lt;li>访问决策基于&amp;quot;允许&amp;quot;, 而不是&amp;quot;拒绝&amp;quot;.&lt;/li>
+&lt;li>默认情况下不允许访问, 保护机制仅用来识别允许访问的情况.&lt;/li>
+&lt;li>失败安全: 任何一个复杂系统应该有功能失效后的应急安全机制, 另外对错误消息和日志要小心, 防止信息泄露.&lt;/li>
+&lt;li>默认安全: 系统在初始状态下, 默认配置是安全的, 通过使用最少的系统和服务来提供最大的安全性.&lt;/li>
+&lt;/ul>
+&lt;h2 id="权限分离原则">权限分离原则&lt;/h2>
+&lt;p>Separation of Privilege&lt;/p>
+&lt;ul>
+&lt;li>一种保护机制需要使用两把钥匙来解锁, 比使用一把钥匙要更健壮和更灵活.&lt;/li>
+&lt;li>权限分离的目的&lt;/li>
+&lt;li>防止利益冲突, 个别权力滥用&lt;/li>
+&lt;li>对某一重要权限分解为多个权限, 让需要保护的对象更难被非法获取, 从而也更安全.&lt;/li>
+&lt;li>分离不同进程的权责&lt;/li>
+&lt;/ul>
+&lt;p>系统可以默认设置 3 个角色, 角色间系统账号权限相互独立, 权责分离:&lt;/p>
+&lt;ul>
+&lt;li>系统管理员: 负责系统的日常用户管理, 配置管理.&lt;/li>
+&lt;li>安全管理员: 负责对用户状态, 安全配置的激活, 去激活管理.&lt;/li>
+&lt;li>安全审计员: 负责对前面二者的操作做日志审计, 并拥有日志导出权限, 保证系统用户所有操作的可追溯性.&lt;/li>
+&lt;/ul>
+&lt;h2 id="最小权限原则">最小权限原则&lt;/h2>
+&lt;p>Least Privilege&lt;/p>
+&lt;ul>
+&lt;li>系统的每一个用户, 每一个程序, 都应该使用最小且必须的权限集来完成工作.&lt;/li>
+&lt;li>确保应用程序使用最低的权限运行.&lt;/li>
+&lt;li>对系统中各用户运行各类程序, 如数据库, WEB 服务器登, 要注意最小权限的账户运行或连接, 不能是系统最高权限的账号.&lt;/li>
+&lt;li>新建账号时, 默认赋给最小权限的角色.&lt;/li>
+&lt;/ul>
+&lt;h2 id="经济使用原则">经济使用原则&lt;/h2>
+&lt;p>Economy of Mechanism&lt;/p></description></item></channel></rss>
