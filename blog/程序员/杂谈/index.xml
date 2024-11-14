@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>杂谈 on Nono Blogs</title><link>https://blog.techfetch.dev/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%9D%82%E8%B0%88/</link><description>Recent content in 杂谈 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 17:35:19 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml"/><item><title>第三方库的陷阱</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E9%99%B7%E9%98%B1/</link><pubDate>Fri, 28 Jun 2024 17:35:19 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E9%99%B7%E9%98%B1/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>杂谈 on Nono Blogs</title><link>https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%9D%82%E8%B0%88/</link><description>Recent content in 杂谈 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 17:35:19 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml"/><item><title>第三方库的陷阱</title><link>https://blog.jqknono.com/blog/2024/06/28/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E9%99%B7%E9%98%B1/</link><pubDate>Fri, 28 Jun 2024 17:35:19 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E9%99%B7%E9%98%B1/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 第三方库的陷阱&lt;/li>
 &lt;/ul>
 &lt;p>今天聊到最近出的第三方日志库的一个漏洞, 可以很低门槛的利用以执行远程命令. 一个日志库和远程命令看着毫不相干, 但是画蛇添足的第三方库遍地都是.&lt;/p>
@@ -13,7 +13,7 @@
 &lt;p>所有第三方库都放在 thirdparty 文件夹下, 全量编译时 CI 和源库对比, 严格禁止侵入式修改.&lt;/p>
 &lt;p>专门的工具追踪所有第三方库的版本, 这部分请了外包人员来管理, 如果开发申请升级版本需要提申请, 部长审核.&lt;/p>
 &lt;p>很难找部长去处理这样的事, 当一个流程非常繁琐的时候, 它实际上是在劝你不要这样做.&lt;/p>
-&lt;p>对待第三方库应该保持不轻信的态度, 相信自己人的开发.&lt;/p></description></item><item><title>方案设计模板</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</link><pubDate>Fri, 28 Jun 2024 17:35:07 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</guid><description>&lt;ul>
+&lt;p>对待第三方库应该保持不轻信的态度, 相信自己人的开发.&lt;/p></description></item><item><title>方案设计模板</title><link>https://blog.jqknono.com/blog/2024/06/28/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</link><pubDate>Fri, 28 Jun 2024 17:35:07 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 方案设计模板&lt;/li>
 &lt;/ul>
 &lt;h1 id="xxx系统子系统详细设计">XXX系统/子系统详细设计&lt;/h1>
@@ -139,7 +139,7 @@
 &lt;h2 id="创新点挖掘可选">创新点挖掘（可选）&lt;/h2>
 &lt;!--挖掘可能存在的创新点，申请专利。-->
 &lt;h2 id="附件及参考资料">附件及参考资料&lt;/h2>
-&lt;!--填写文档相关的附件或参考资料。若是不常变更的文档（比如调研报告），建议以对象方式插入到该文档中。如是经常变更的文档（比如接口文档），建议在此列出文件名即可。--></description></item><item><title>命令行语法约定</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AF%AD%E6%B3%95%E7%BA%A6%E5%AE%9A/</link><pubDate>Fri, 28 Jun 2024 17:32:54 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AF%AD%E6%B3%95%E7%BA%A6%E5%AE%9A/</guid><description>&lt;ul>
+&lt;!--填写文档相关的附件或参考资料。若是不常变更的文档（比如调研报告），建议以对象方式插入到该文档中。如是经常变更的文档（比如接口文档），建议在此列出文件名即可。--></description></item><item><title>命令行语法约定</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AF%AD%E6%B3%95%E7%BA%A6%E5%AE%9A/</link><pubDate>Fri, 28 Jun 2024 17:32:54 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AF%AD%E6%B3%95%E7%BA%A6%E5%AE%9A/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 命令行语法约定&lt;/li>
 &lt;/ul>
 &lt;h2 id="参考">参考&lt;/h2>
@@ -184,7 +184,7 @@
  &lt;td>Items that can be repeated and used multiple times.&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>命令行手册中括号的含义</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</link><pubDate>Fri, 28 Jun 2024 17:31:00 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</guid><description>&lt;ul>
+&lt;/table></description></item><item><title>命令行手册中括号的含义</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</link><pubDate>Fri, 28 Jun 2024 17:31:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 命令行手册中括号的含义&lt;/li>
 &lt;/ul>
 &lt;h1 id="命令行手册中括号的含义">命令行手册中括号的含义&lt;/h1>
@@ -215,7 +215,7 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ol>
-&lt;p>这些括号的使用旨在帮助用户理解命令的语法和参数选择，从而正确地使用命令行工具。在阅读命令行帮助时，仔细注意括号的含义和作用是很重要的，这样可以避免错误的命令输入并获得所需的结果。&lt;/p></description></item><item><title>华为C++编程规范</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BAc-%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</link><pubDate>Fri, 28 Jun 2024 17:30:10 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BAc-%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</guid><description>&lt;ul>
+&lt;p>这些括号的使用旨在帮助用户理解命令的语法和参数选择，从而正确地使用命令行工具。在阅读命令行帮助时，仔细注意括号的含义和作用是很重要的，这样可以避免错误的命令输入并获得所需的结果。&lt;/p></description></item><item><title>华为C++编程规范</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BAc-%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</link><pubDate>Fri, 28 Jun 2024 17:30:10 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BAc-%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 华为C++编程规范&lt;/li>
 &lt;/ul>
 &lt;h1 id="c语言编程规范">C++语言编程规范&lt;/h1>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全 on Nono Blogs</title><link>https://blog.techfetch.dev/blog/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 19:03:59 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/blog/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>snort</title><link>https://blog.techfetch.dev/blog/2024/06/28/snort/</link><pubDate>Fri, 28 Jun 2024 19:03:59 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/snort/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全 on Nono Blogs</title><link>https://blog.jqknono.com/blog/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 19:03:59 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>snort</title><link>https://blog.jqknono.com/blog/2024/06/28/snort/</link><pubDate>Fri, 28 Jun 2024 19:03:59 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/snort/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> snort&lt;/li>
 &lt;/ul>
 &lt;h1 id="snort">Snort&lt;/h1>
@@ -11,7 +11,7 @@ uses those rules to find packets that match against them and generates alerts fo
 &lt;p>Snort can be deployed inline to stop these packets, as well.
 Snort has three primary uses: As a packet sniffer like tcpdump, as a packet logger —
 which is useful for network traffic debugging, or it can be used as a full-blown network intrusion prevention system.
-Snort can be downloaded and configured for personal and business use alike.&lt;/p></description></item><item><title>可信设计</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%8F%AF%E4%BF%A1%E8%AE%BE%E8%AE%A1/</link><pubDate>Fri, 28 Jun 2024 15:49:18 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%8F%AF%E4%BF%A1%E8%AE%BE%E8%AE%A1/</guid><description>&lt;h1 id="安全架构与设计原则">安全架构与设计原则&lt;/h1>
+Snort can be downloaded and configured for personal and business use alike.&lt;/p></description></item><item><title>可信设计</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%8F%AF%E4%BF%A1%E8%AE%BE%E8%AE%A1/</link><pubDate>Fri, 28 Jun 2024 15:49:18 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%8F%AF%E4%BF%A1%E8%AE%BE%E8%AE%A1/</guid><description>&lt;h1 id="安全架构与设计原则">安全架构与设计原则&lt;/h1>
 &lt;h2 id="安全三要素与安全设计原则">安全三要素与安全设计原则&lt;/h2>
 &lt;ul>
 &lt;li>完整性 Integrity&lt;/li>
@@ -56,7 +56,7 @@ Snort can be downloaded and configured for personal and business use alike.&lt;/
 &lt;li>新建账号时, 默认赋给最小权限的角色.&lt;/li>
 &lt;/ul>
 &lt;h2 id="经济使用原则">经济使用原则&lt;/h2>
-&lt;p>Economy of Mechanism&lt;/p></description></item><item><title>华为可信概念</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%8F%AF%E4%BF%A1%E6%A6%82%E5%BF%B5/</link><pubDate>Fri, 28 Jun 2024 15:49:02 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%8F%AF%E4%BF%A1%E6%A6%82%E5%BF%B5/</guid><description>&lt;ul>
+&lt;p>Economy of Mechanism&lt;/p></description></item><item><title>华为可信概念</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%8F%AF%E4%BF%A1%E6%A6%82%E5%BF%B5/</link><pubDate>Fri, 28 Jun 2024 15:49:02 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%8F%AF%E4%BF%A1%E6%A6%82%E5%BF%B5/</guid><description>&lt;ul>
 &lt;li>
 &lt;p>&lt;input disabled="" type="checkbox"> 华为可信概念&lt;/p>
 &lt;/li>
@@ -77,7 +77,7 @@ Snort can be downloaded and configured for personal and business use alike.&lt;/
 &lt;/li>
 &lt;/ul>
 &lt;p>ref:&lt;/p>
-&lt;p>&lt;a href="https://www.huawei.com/cn/trust-center/trustworthy#we-offer">华为.我们提供什么&lt;/a>&lt;/p></description></item><item><title>华为内网网络安全分析</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%86%85%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/</link><pubDate>Fri, 28 Jun 2024 15:48:48 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%86%85%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/</guid><description>&lt;ul>
+&lt;p>&lt;a href="https://www.huawei.com/cn/trust-center/trustworthy#we-offer">华为.我们提供什么&lt;/a>&lt;/p></description></item><item><title>华为内网网络安全分析</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%86%85%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/</link><pubDate>Fri, 28 Jun 2024 15:48:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%86%85%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 华为内网网络安全分析&lt;/li>
 &lt;/ul>
 &lt;p>华为公司内部有很多不错的学习资料，自己也总结了很多知识经验，一直想着如何导入到自己的知识库。我清楚的明白这些通用化的知识是不涉密不敏感的，但信息安全警钟长鸣，让人心痒又不敢越雷池一步。经过一些测试，我发现公司的网络安全保护比较难突破。本文将对研发区黄区作一点粗略解析。绿区属于自由区域，默认无重要信息，一般为外围工作人员的网络。红区为超高级别的网络防护，目前尚未有长时间深入接触，简单接触到的红区位于网络设备实验室，存放各种大型交换机框架，是公司内网的枢纽，攻破红区的话就相当于攻破了区域网络，至少一栋楼的网络是可以瘫痪一段时间的。&lt;/p>
@@ -88,7 +88,7 @@ Snort can be downloaded and configured for personal and business use alike.&lt;/
 &lt;p>&lt;strong>如何破解&lt;/strong>：由于黄区只有特定端口可以走代理服务器进出公网，对其它端口默认全封，那么严格来说网络流量就没有漏洞。我们可以手动生成密钥，在内网手动加密，再在外网手动解密，这样至少中间人看到的信息无法真正解析。加密器如何发送至内网，邮件/welink/网页都可以，但都会留下痕迹，其中通过网页直接秘密发送影响最小，痕迹最不明显。或者直接把密钥抄纸上，公司电脑保存起来，完全无法察觉，除了公司内遍布的摄像头。github 上的 ssh 贴心的支持 ssh over 443，经过测试发现也行不通，毕竟代理作为防火墙可以轻易识别这样的高风险网站。根据自身体验，公司的防火墙是基于白名单，而非黑名单，也就是即便是自建 ssh 服务器，也会被代理拦住。在浏览器中访问未知网站会有跳转页面提示“后果自负”，在终端窗口中直接就显示链接被关了。&lt;/p>
 &lt;p>华为毕竟是搞网络起家，搞网络的能人异士众多，技术上几乎无法突破，恐怕唯有社会工程能突破了。&lt;/p>
 &lt;h2 id="本地防火墙方式">本地防火墙方式&lt;/h2>
-&lt;p>Windows 系统会安装安全应用，用户无法随意更改配置，配置由管理员统一下发。应用的网络访问权限可能是黑白名单方式，部分应用无法访问网络。vscode 的新版无法走代理通道。&lt;/p></description></item><item><title>DoS防范</title><link>https://blog.techfetch.dev/blog/2024/06/28/dos%E9%98%B2%E8%8C%83/</link><pubDate>Fri, 28 Jun 2024 15:47:44 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/dos%E9%98%B2%E8%8C%83/</guid><description>&lt;h1 id="ddos-防范">DDoS 防范&lt;/h1>
+&lt;p>Windows 系统会安装安全应用，用户无法随意更改配置，配置由管理员统一下发。应用的网络访问权限可能是黑白名单方式，部分应用无法访问网络。vscode 的新版无法走代理通道。&lt;/p></description></item><item><title>DoS防范</title><link>https://blog.jqknono.com/blog/2024/06/28/dos%E9%98%B2%E8%8C%83/</link><pubDate>Fri, 28 Jun 2024 15:47:44 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/dos%E9%98%B2%E8%8C%83/</guid><description>&lt;h1 id="ddos-防范">DDoS 防范&lt;/h1>
 &lt;p>&lt;a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">DDoS 定义&lt;/a>&lt;/p>
 &lt;p>两种 DoS 攻击方式:&lt;/p>
 &lt;ul>

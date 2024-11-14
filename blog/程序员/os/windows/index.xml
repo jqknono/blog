@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>windows on Nono Blogs</title><link>https://blog.techfetch.dev/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/os/windows/</link><description>Recent content in windows on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 17:16:15 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/os/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>理解Windows网络_WFP</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E7%BD%91%E7%BB%9C_wfp/</link><pubDate>Fri, 28 Jun 2024 17:16:15 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E7%BD%91%E7%BB%9C_wfp/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>windows on Nono Blogs</title><link>https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/os/windows/</link><description>Recent content in windows on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 17:16:15 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/os/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>理解Windows网络_WFP</title><link>https://blog.jqknono.com/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E7%BD%91%E7%BB%9C_wfp/</link><pubDate>Fri, 28 Jun 2024 17:16:15 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E7%BD%91%E7%BB%9C_wfp/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 理解Windows网络_WFP&lt;/li>
 &lt;/ul>
 &lt;h1 id="理解-windows-网络">理解 Windows 网络&lt;/h1>
@@ -15,7 +15,7 @@
 &lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/callout-function">callout function&lt;/a>: A callout function is a function that is called by the Windows Filtering Platform to perform a specific task. A callout function is associated with a callout.
 &lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/filter">filter&lt;/a>: A filter is a set of functions that are called by the Windows Filtering Platform to perform filtering operations. A filter consists of a set of filter functions and a GUID key that uniquely identifies the filter.
 &lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/filter-engine">filter engine&lt;/a>: The filter engine is the component of the Windows Filtering Platform that performs filtering operations. The filter engine is responsible for calling the filter functions that are registered with the Windows Filtering Platform.
-&lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/filter-layer">filter layer&lt;/a>: A filter layer is a set of functions that are called by the Windows Filtering Platform to perform filtering operations. A filter layer consists of a set of filter layer functions and a GUID key that uniquely identifies the filter layer.&lt;/p></description></item><item><title>理解Windows事件跟踪_ETW</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E4%BA%8B%E4%BB%B6%E8%B7%9F%E8%B8%AA_etw/</link><pubDate>Fri, 28 Jun 2024 17:12:21 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E4%BA%8B%E4%BB%B6%E8%B7%9F%E8%B8%AA_etw/</guid><description>&lt;ul>
+&lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/filter-layer">filter layer&lt;/a>: A filter layer is a set of functions that are called by the Windows Filtering Platform to perform filtering operations. A filter layer consists of a set of filter layer functions and a GUID key that uniquely identifies the filter layer.&lt;/p></description></item><item><title>理解Windows事件跟踪_ETW</title><link>https://blog.jqknono.com/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E4%BA%8B%E4%BB%B6%E8%B7%9F%E8%B8%AA_etw/</link><pubDate>Fri, 28 Jun 2024 17:12:21 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E4%BA%8B%E4%BB%B6%E8%B7%9F%E8%B8%AA_etw/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 理解Windows事件跟踪_ETW&lt;/li>
 &lt;/ul>
 &lt;h1 id="理解-etw">理解 ETW&lt;/h1>
@@ -76,7 +76,7 @@
 &lt;/li>
 &lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/wes/message-compiler--mc-exe-">mc&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/repnz/etw-providers-docs">etw-providers-docs&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>wireguard配置</title><link>https://blog.techfetch.dev/blog/2024/06/28/wireguard%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 28 Jun 2024 17:11:32 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/wireguard%E9%85%8D%E7%BD%AE/</guid><description>&lt;ul>
+&lt;/ul></description></item><item><title>wireguard配置</title><link>https://blog.jqknono.com/blog/2024/06/28/wireguard%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 28 Jun 2024 17:11:32 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/wireguard%E9%85%8D%E7%BD%AE/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> wireguard配置&lt;/li>
 &lt;/ul>
 &lt;h1 id="wireguard-配置">wireguard 配置&lt;/h1>
@@ -94,32 +94,32 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">auditpol&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">set &lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="n">subcategory&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="s2">&amp;#34;{0CCE9225-69AE-11D9-BED3-505054503030}&amp;#34;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">success&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">disable&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">failure&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">enable&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">wevtutil&lt;/span> &lt;span class="n">qe&lt;/span> &lt;span class="n">Security&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">q:&lt;/span>&lt;span class="s2">&amp;#34;*[System/EventID=5152]&amp;#34;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">c:&lt;/span>&lt;span class="mf">5&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">rd&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">true&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">f:text&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">auditpol&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">set &lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="n">subcategory&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="s2">&amp;#34;{0CCE9225-69AE-11D9-BED3-505054503030}&amp;#34;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">success&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">disable&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">failure&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">disable&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Windows阻断网络流量获取</title><link>https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/</link><pubDate>Fri, 28 Jun 2024 17:10:46 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/</guid><description>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Windows阻断网络流量获取</title><link>https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/</link><pubDate>Fri, 28 Jun 2024 17:10:46 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> Windows阻断网络流量获取&lt;/li>
 &lt;/ul>
 &lt;h1 id="windows-阻断网络流量获取">Windows 阻断网络流量获取&lt;/h1>
 &lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 &lt;!-- code_chunk_output -->
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-windows-阻断网络流量获取-">Windows 阻断网络流量获取&lt;/a>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-windows-阻断网络流量获取-">Windows 阻断网络流量获取&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-搭建测试工程-">搭建测试工程&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-通过审计获取-block-事件-">通过审计获取 block 事件&lt;/a>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-搭建测试工程-">搭建测试工程&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-通过审计获取-block-事件-">通过审计获取 block 事件&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-获取-provider-信息-">获取 provider 信息&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-构造-block-事件-">构造 block 事件&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-获取-provider-信息-">获取 provider 信息&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-构造-block-事件-">构造 block 事件&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-监控网络事件net_event-">监控网络事件(NET_EVENT)&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-监控网络链接netconnection-">监控网络链接(NetConnection)&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-application-layer-enforcementale介绍-">Application Layer Enforcement(ALE)介绍&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-编码-">编码&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-结论-">结论&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-附录-">附录&lt;/a>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-监控网络事件net_event-">监控网络事件(NET_EVENT)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-监控网络链接netconnection-">监控网络链接(NetConnection)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-application-layer-enforcementale介绍-">Application Layer Enforcement(ALE)介绍&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-编码-">编码&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-结论-">结论&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-附录-">附录&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-wfp-体系结构-">WFP 体系结构&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-数据流-">数据流&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-参考链接-">参考链接&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-wfp-体系结构-">WFP 体系结构&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-数据流-">数据流&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/#-参考链接-">参考链接&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
@@ -133,7 +133,7 @@
 &lt;/ul>
 &lt;h2 id="搭建测试工程">搭建测试工程&lt;/h2>
 &lt;p>WFP 主要工作在 usermode, 另一部分在 kernalmode, 能力以驱动形式体现, 搭建测试环境的方法比较复杂. 推荐的方法是测试机使用另一台物理机, 开发机编译好后, 发送至测试机远程调试.
-受条件限制, 我们也可以直接在本地进行调试.&lt;/p></description></item><item><title>Windows防火墙管理-netsh</title><link>https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%B2%E7%81%AB%E5%A2%99%E7%AE%A1%E7%90%86-netsh/</link><pubDate>Fri, 28 Jun 2024 17:10:36 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%B2%E7%81%AB%E5%A2%99%E7%AE%A1%E7%90%86-netsh/</guid><description>&lt;ul>
+受条件限制, 我们也可以直接在本地进行调试.&lt;/p></description></item><item><title>Windows防火墙管理-netsh</title><link>https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%B2%E7%81%AB%E5%A2%99%E7%AE%A1%E7%90%86-netsh/</link><pubDate>Fri, 28 Jun 2024 17:10:36 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%B2%E7%81%AB%E5%A2%99%E7%AE%A1%E7%90%86-netsh/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> Windows防火墙管理-netsh&lt;/li>
 &lt;/ul>
 &lt;h1 id="windows-防火墙管理-netsh">Windows 防火墙管理-netsh&lt;/h1>
@@ -177,38 +177,38 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 查看防火墙规则&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">wfp&lt;/span> &lt;span class="n">show&lt;/span> &lt;span class="kd">filter&lt;/span>&lt;span class="nb">s&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Windows相关资源</title><link>https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/</link><pubDate>Fri, 28 Jun 2024 17:10:07 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/</guid><description>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Windows相关资源</title><link>https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/</link><pubDate>Fri, 28 Jun 2024 17:10:07 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> Windows相关资源&lt;/li>
 &lt;/ul>
 &lt;h1 id="windows-资源整理">Windows 资源整理&lt;/h1>
 &lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 &lt;!-- code_chunk_output -->
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#windows-资源整理">Windows 资源整理&lt;/a>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#windows-资源整理">Windows 资源整理&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#工具篇">工具篇&lt;/a>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#工具篇">工具篇&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#监控分析">监控&amp;amp;分析&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#antirootkit-工具">AntiRootkit 工具&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#pe-工具">PE 工具&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#逆向调试">逆向&amp;amp;调试&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#注入工具">注入工具&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#网络">网络&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#压测工具">压测工具&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#其他">其他&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#监控分析">监控&amp;amp;分析&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#antirootkit-工具">AntiRootkit 工具&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#pe-工具">PE 工具&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#逆向调试">逆向&amp;amp;调试&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#注入工具">注入工具&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#网络">网络&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#压测工具">压测工具&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#其他">其他&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#代码篇">代码篇&lt;/a>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#代码篇">代码篇&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#操作系统">操作系统&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#内核封装">内核封装&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#vt-技术">VT 技术&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#其他-1">其他&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#操作系统">操作系统&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#内核封装">内核封装&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#vt-技术">VT 技术&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#其他-1">其他&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#ctf-资源">CTF 资源&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#渗透相关">渗透相关&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#专利免费查询">专利免费查询&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#ctf-资源">CTF 资源&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#渗透相关">渗透相关&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/#专利免费查询">专利免费查询&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
@@ -944,25 +944,25 @@
  &lt;td style="text-align: left">&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>Windows导览</title><link>https://blog.techfetch.dev/blog/2024/06/28/windows%E5%AF%BC%E8%A7%88/</link><pubDate>Fri, 28 Jun 2024 17:09:22 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/windows%E5%AF%BC%E8%A7%88/</guid><description>&lt;ul>
+&lt;/table></description></item><item><title>Windows导览</title><link>https://blog.jqknono.com/blog/2024/06/28/windows%E5%AF%BC%E8%A7%88/</link><pubDate>Fri, 28 Jun 2024 17:09:22 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/windows%E5%AF%BC%E8%A7%88/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> Windows 导览&lt;/li>
 &lt;/ul>
 &lt;h1 id="windows">Windows&lt;/h1>
 &lt;ul>
-&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/" title="Win-to-go">Win-to-go&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/" title="Win-to-go">Win-to-go&lt;/a>]&lt;/li>
 &lt;li>[&lt;a href="%E7%90%86%E8%A7%A3Windows%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F" title="理解Windows文件系统">理解Windows文件系统&lt;/a>]&lt;/li>
 &lt;li>[&lt;a href="%E7%90%86%E8%A7%A3Windows%E8%BF%9B%E7%A8%8B" title="理解Windows进程">理解Windows进程&lt;/a>]&lt;/li>
-&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/" title="Windows相关资源">Windows相关资源&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/" title="Windows相关资源">Windows相关资源&lt;/a>]&lt;/li>
 &lt;li>[&lt;a href="Windows%E7%AE%A1%E7%90%86%E8%BF%9B%E9%98%B6" title="Windows管理进阶">Windows管理进阶&lt;/a>]&lt;/li>
-&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%B2%E7%81%AB%E5%A2%99%E7%AE%A1%E7%90%86-netsh/" title="Windows防火墙管理-netsh">Windows防火墙管理-netsh&lt;/a>]&lt;/li>
-&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/" title="Windows阻断网络流量获取">Windows阻断网络流量获取&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%B2%E7%81%AB%E5%A2%99%E7%AE%A1%E7%90%86-netsh/" title="Windows防火墙管理-netsh">Windows防火墙管理-netsh&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96/" title="Windows阻断网络流量获取">Windows阻断网络流量获取&lt;/a>]&lt;/li>
 &lt;li>[&lt;a href="../../../%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/Windows%E9%BA%BB%E7%83%A6%E9%97%AE%E9%A2%98" title="Windows麻烦问题">Windows麻烦问题&lt;/a>]&lt;/li>
-&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E4%BA%8B%E4%BB%B6%E8%B7%9F%E8%B8%AA_etw/" title="理解Windows事件跟踪_ETW">理解Windows事件跟踪_ETW&lt;/a>]&lt;/li>
-&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E7%BD%91%E7%BB%9C_wfp/" title="理解Windows网络_WFP">理解Windows网络_WFP&lt;/a>]&lt;/li>
-&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/windows-ipv6%E7%AE%A1%E7%90%86/" title="windows-ipv6管理">windows-ipv6管理&lt;/a>]&lt;/li>
-&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/" title="Windows桥接时的IPv6问题">Windows桥接时的IPv6问题&lt;/a>]&lt;/li>
-&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/wireguard%E9%85%8D%E7%BD%AE/" title="wireguard配置">wireguard配置&lt;/a>]&lt;/li>
-&lt;/ul></description></item><item><title>windows-ipv6管理</title><link>https://blog.techfetch.dev/blog/2024/06/28/windows-ipv6%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 28 Jun 2024 17:08:36 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/windows-ipv6%E7%AE%A1%E7%90%86/</guid><description>&lt;ul>
+&lt;li>[&lt;a href="https://blog.jqknono.com/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E4%BA%8B%E4%BB%B6%E8%B7%9F%E8%B8%AA_etw/" title="理解Windows事件跟踪_ETW">理解Windows事件跟踪_ETW&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.jqknono.com/blog/2024/06/28/%E7%90%86%E8%A7%A3windows%E7%BD%91%E7%BB%9C_wfp/" title="理解Windows网络_WFP">理解Windows网络_WFP&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.jqknono.com/blog/2024/06/28/windows-ipv6%E7%AE%A1%E7%90%86/" title="windows-ipv6管理">windows-ipv6管理&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.jqknono.com/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/" title="Windows桥接时的IPv6问题">Windows桥接时的IPv6问题&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.jqknono.com/blog/2024/06/28/wireguard%E9%85%8D%E7%BD%AE/" title="wireguard配置">wireguard配置&lt;/a>]&lt;/li>
+&lt;/ul></description></item><item><title>windows-ipv6管理</title><link>https://blog.jqknono.com/blog/2024/06/28/windows-ipv6%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 28 Jun 2024 17:08:36 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/windows-ipv6%E7%AE%A1%E7%90%86/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> windows-ipv6管理&lt;/li>
 &lt;/ul>
 &lt;h1 id="windows-ipv6-管理">windows-ipv6 管理&lt;/h1>
@@ -1000,7 +1000,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPv6Protocol&lt;/span> &lt;span class="n">-MaxTemporaryPreferredLifetime&lt;/span> &lt;span class="mf">0&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">10&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">0&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPv6Protocol&lt;/span> &lt;span class="n">-MaxTemporaryValidLifetime&lt;/span> &lt;span class="mf">0&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">30&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">0&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPv6Protocol&lt;/span> &lt;span class="n">-TemporaryRegenerateTime&lt;/span> &lt;span class="mf">0&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">0&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">30&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>window-message</title><link>https://blog.techfetch.dev/blog/2024/06/28/window-message/</link><pubDate>Fri, 28 Jun 2024 17:07:51 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/window-message/</guid><description>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>window-message</title><link>https://blog.jqknono.com/blog/2024/06/28/window-message/</link><pubDate>Fri, 28 Jun 2024 17:07:51 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/window-message/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> window-message&lt;/li>
 &lt;/ul>
 &lt;h1 id="windows-message">windows-message&lt;/h1>
@@ -1010,21 +1010,21 @@
 &lt;li>&lt;a href="http://www.pinvoke.net/default.aspx/Constants/WM.html">pinvoke.net: WM (Constants)&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://pinvoke.net/default.aspx/Enums.WindowsMessages">pinvoke.net: WindowsMessages (Enums)&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/winmsg/window-notifications">Window Notifications&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Win-to-go</title><link>https://blog.techfetch.dev/blog/2024/06/28/win-to-go/</link><pubDate>Fri, 28 Jun 2024 17:07:10 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/win-to-go/</guid><description>&lt;p>===&lt;/p>
+&lt;/ul></description></item><item><title>Win-to-go</title><link>https://blog.jqknono.com/blog/2024/06/28/win-to-go/</link><pubDate>Fri, 28 Jun 2024 17:07:10 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/win-to-go/</guid><description>&lt;p>===&lt;/p>
 &lt;p>Windows To Go 的优点在于移动便携性, 缺点在于经典 Windows系统的数个功能受到限制.&lt;/p>
 &lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 &lt;!-- code_chunk_output -->
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#前言">前言&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#windows-to-go-overview">Windows To Go Overview&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#windows-to-go-和传统-windows-安装方式的区别">Windows To Go 和传统 Windows 安装方式的区别&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#使用-windows-to-go-来移动工作">使用 Windows To Go 来移动工作&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#准备安装-windows-to-go">准备安装 Windows To Go&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#硬件要求">硬件要求&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#usb-硬盘或-u盘">USB 硬盘或 U盘&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#载体机器host-computer">载体机器(Host computer)&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#检查载体-pc-和-windows-to-go-盘的架构兼容性">检查载体 PC 和 Windows To Go 盘的架构兼容性&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/win-to-go/#windows-to-go-的常见问题">Windows To Go 的常见问题&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/#前言">前言&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/#windows-to-go-overview">Windows To Go Overview&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/#windows-to-go-和传统-windows-安装方式的区别">Windows To Go 和传统 Windows 安装方式的区别&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/#使用-windows-to-go-来移动工作">使用 Windows To Go 来移动工作&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/#准备安装-windows-to-go">准备安装 Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/#硬件要求">硬件要求&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/#usb-硬盘或-u盘">USB 硬盘或 U盘&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/#载体机器host-computer">载体机器(Host computer)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/#检查载体-pc-和-windows-to-go-盘的架构兼容性">检查载体 PC 和 Windows To Go 盘的架构兼容性&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/win-to-go/#windows-to-go-的常见问题">Windows To Go 的常见问题&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;!-- /code_chunk_output -->
 &lt;h2 id="前言">前言&lt;/h2>

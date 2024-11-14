@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on Nono Blogs</title><link>https://blog.techfetch.dev/tags/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 18:42:21 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>疑难杂症</title><link>https://blog.techfetch.dev/blog/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</link><pubDate>Fri, 28 Jun 2024 18:42:21 +0800</pubDate><guid>https://blog.techfetch.dev/blog/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</guid><description/></item><item><title>程序员</title><link>https://blog.techfetch.dev/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/</link><pubDate>Fri, 28 Jun 2024 18:29:45 +0800</pubDate><guid>https://blog.techfetch.dev/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/</guid><description/></item><item><title>方案设计模板</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</link><pubDate>Fri, 28 Jun 2024 17:35:07 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 18:42:21 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>疑难杂症</title><link>https://blog.jqknono.com/blog/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</link><pubDate>Fri, 28 Jun 2024 18:42:21 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</guid><description/></item><item><title>程序员</title><link>https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/</link><pubDate>Fri, 28 Jun 2024 18:29:45 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/</guid><description/></item><item><title>方案设计模板</title><link>https://blog.jqknono.com/blog/2024/06/28/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</link><pubDate>Fri, 28 Jun 2024 17:35:07 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E6%A8%A1%E6%9D%BF/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 方案设计模板&lt;/li>
 &lt;/ul>
 &lt;h1 id="xxx系统子系统详细设计">XXX系统/子系统详细设计&lt;/h1>
@@ -124,7 +124,7 @@
 &lt;h2 id="创新点挖掘可选">创新点挖掘（可选）&lt;/h2>
 &lt;!--挖掘可能存在的创新点，申请专利。-->
 &lt;h2 id="附件及参考资料">附件及参考资料&lt;/h2>
-&lt;!--填写文档相关的附件或参考资料。若是不常变更的文档（比如调研报告），建议以对象方式插入到该文档中。如是经常变更的文档（比如接口文档），建议在此列出文件名即可。--></description></item><item><title>命令行语法约定</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AF%AD%E6%B3%95%E7%BA%A6%E5%AE%9A/</link><pubDate>Fri, 28 Jun 2024 17:32:54 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AF%AD%E6%B3%95%E7%BA%A6%E5%AE%9A/</guid><description>&lt;ul>
+&lt;!--填写文档相关的附件或参考资料。若是不常变更的文档（比如调研报告），建议以对象方式插入到该文档中。如是经常变更的文档（比如接口文档），建议在此列出文件名即可。--></description></item><item><title>命令行语法约定</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AF%AD%E6%B3%95%E7%BA%A6%E5%AE%9A/</link><pubDate>Fri, 28 Jun 2024 17:32:54 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%AF%AD%E6%B3%95%E7%BA%A6%E5%AE%9A/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 命令行语法约定&lt;/li>
 &lt;/ul>
 &lt;h2 id="参考">参考&lt;/h2>
@@ -169,7 +169,7 @@
  &lt;td>Items that can be repeated and used multiple times.&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>华为C++编程规范</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BAc-%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</link><pubDate>Fri, 28 Jun 2024 17:30:10 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BAc-%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</guid><description>&lt;ul>
+&lt;/table></description></item><item><title>华为C++编程规范</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BAc-%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</link><pubDate>Fri, 28 Jun 2024 17:30:10 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BAc-%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 华为C++编程规范&lt;/li>
 &lt;/ul>
 &lt;h1 id="c语言编程规范">C++语言编程规范&lt;/h1>
@@ -246,7 +246,7 @@
 &lt;li>cpp文件：.cc, .cxx, .c&lt;/li>
 &lt;/ul>
 &lt;p>如果当前项目组使用了某种特定的后缀，那么可以继续使用，但是请保持风格统一。
-但是对于本文档，我们默认使用.h和.cpp作为后缀。&lt;/p></description></item><item><title>openvpn网络不通</title><link>https://blog.techfetch.dev/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</link><pubDate>Fri, 28 Jun 2024 17:18:48 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</guid><description>&lt;ul>
+但是对于本文档，我们默认使用.h和.cpp作为后缀。&lt;/p></description></item><item><title>openvpn网络不通</title><link>https://blog.jqknono.com/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</link><pubDate>Fri, 28 Jun 2024 17:18:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> openvpn配置&lt;/li>
 &lt;/ul>
 &lt;h1 id="openvpn配置">openvpn配置&lt;/h1>
@@ -255,7 +255,7 @@
 &lt;h2 id="windows防火墙配置">Windows防火墙配置&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Inbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Outbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>windows-ipv6管理</title><link>https://blog.techfetch.dev/blog/2024/06/28/windows-ipv6%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 28 Jun 2024 17:08:36 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/windows-ipv6%E7%AE%A1%E7%90%86/</guid><description>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>windows-ipv6管理</title><link>https://blog.jqknono.com/blog/2024/06/28/windows-ipv6%E7%AE%A1%E7%90%86/</link><pubDate>Fri, 28 Jun 2024 17:08:36 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/windows-ipv6%E7%AE%A1%E7%90%86/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> windows-ipv6管理&lt;/li>
 &lt;/ul>
 &lt;h1 id="windows-ipv6-管理">windows-ipv6 管理&lt;/h1>
@@ -293,7 +293,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPv6Protocol&lt;/span> &lt;span class="n">-MaxTemporaryPreferredLifetime&lt;/span> &lt;span class="mf">0&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">10&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">0&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPv6Protocol&lt;/span> &lt;span class="n">-MaxTemporaryValidLifetime&lt;/span> &lt;span class="mf">0&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">30&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">0&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPv6Protocol&lt;/span> &lt;span class="n">-TemporaryRegenerateTime&lt;/span> &lt;span class="mf">0&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">0&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="mf">30&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>window-message</title><link>https://blog.techfetch.dev/blog/2024/06/28/window-message/</link><pubDate>Fri, 28 Jun 2024 17:07:51 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/window-message/</guid><description>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>window-message</title><link>https://blog.jqknono.com/blog/2024/06/28/window-message/</link><pubDate>Fri, 28 Jun 2024 17:07:51 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/window-message/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> window-message&lt;/li>
 &lt;/ul>
 &lt;h1 id="windows-message">windows-message&lt;/h1>
@@ -303,7 +303,7 @@
 &lt;li>&lt;a href="http://www.pinvoke.net/default.aspx/Constants/WM.html">pinvoke.net: WM (Constants)&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://pinvoke.net/default.aspx/Enums.WindowsMessages">pinvoke.net: WindowsMessages (Enums)&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/winmsg/window-notifications">Window Notifications&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>虚拟内存磁盘配置</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%A3%81%E7%9B%98%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 28 Jun 2024 16:38:40 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%A3%81%E7%9B%98%E9%85%8D%E7%BD%AE/</guid><description>&lt;ul>
+&lt;/ul></description></item><item><title>虚拟内存磁盘配置</title><link>https://blog.jqknono.com/blog/2024/06/28/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%A3%81%E7%9B%98%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 28 Jun 2024 16:38:40 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%A3%81%E7%9B%98%E9%85%8D%E7%BD%AE/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 虚拟内存磁盘配置&lt;/li>
 &lt;/ul>
 &lt;h1 id="虚拟内存磁盘配置">虚拟内存磁盘配置&lt;/h1>
@@ -315,14 +315,14 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">md&lt;/span> M:\Edge_CodeCache\
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">mklink&lt;/span> /D &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Cache&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;M:\Edge_Cache\&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">mklink&lt;/span> /D &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Code Cache&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;M:\Edge_CodeCache\&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>wsl</title><link>https://blog.techfetch.dev/blog/2024/06/28/wsl/</link><pubDate>Fri, 28 Jun 2024 16:37:30 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/wsl/</guid><description>&lt;h1 id="配置-wsl">配置 wsl&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>wsl</title><link>https://blog.jqknono.com/blog/2024/06/28/wsl/</link><pubDate>Fri, 28 Jun 2024 16:37:30 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/wsl/</guid><description>&lt;h1 id="配置-wsl">配置 wsl&lt;/h1>
 &lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 &lt;!-- code_chunk_output -->
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/wsl/#配置-wsl">配置 wsl&lt;/a>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/wsl/#配置-wsl">配置 wsl&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/wsl/#远程访问-ssh">远程访问 ssh&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/wsl/#配置-wsl-1">配置 wsl&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/wsl/#远程访问-ssh">远程访问 ssh&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/wsl/#配置-wsl-1">配置 wsl&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
@@ -382,7 +382,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Turns on output console showing contents of dmesg when opening a WSL 2 distro for debugging
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">debugConsole=true
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>docker介绍</title><link>https://blog.techfetch.dev/blog/2024/06/28/docker%E4%BB%8B%E7%BB%8D/</link><pubDate>Fri, 28 Jun 2024 16:00:31 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/docker%E4%BB%8B%E7%BB%8D/</guid><description>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>docker介绍</title><link>https://blog.jqknono.com/blog/2024/06/28/docker%E4%BB%8B%E7%BB%8D/</link><pubDate>Fri, 28 Jun 2024 16:00:31 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/docker%E4%BB%8B%E7%BB%8D/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> docker介绍&lt;/li>
 &lt;/ul>
 &lt;h1 id="docker-介绍">docker 介绍&lt;/h1>
@@ -414,9 +414,9 @@
 &lt;h2 id="docker-的基本架构">docker 的基本架构&lt;/h2>
 &lt;ul>
 &lt;li>[&lt;a href="docker%E7%BD%91%E7%BB%9C" title="docker网络">docker网络&lt;/a>]&lt;/li>
-&lt;/ul></description></item><item><title>Copilot系列</title><link>https://blog.techfetch.dev/blog/%E5%B7%A5%E5%85%B7/ai/copilot%E7%B3%BB%E5%88%97/</link><pubDate>Fri, 28 Jun 2024 15:58:17 +0800</pubDate><guid>https://blog.techfetch.dev/blog/%E5%B7%A5%E5%85%B7/ai/copilot%E7%B3%BB%E5%88%97/</guid><description>&lt;ul>
+&lt;/ul></description></item><item><title>Copilot系列</title><link>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/ai/copilot%E7%B3%BB%E5%88%97/</link><pubDate>Fri, 28 Jun 2024 15:58:17 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/ai/copilot%E7%B3%BB%E5%88%97/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> Copilot系列&lt;/li>
-&lt;/ul></description></item><item><title>Windows桥接时的IPv6问题</title><link>https://blog.techfetch.dev/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/</link><pubDate>Sat, 06 May 2023 11:47:48 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/</guid><description>&lt;ul>
+&lt;/ul></description></item><item><title>Windows桥接时的IPv6问题</title><link>https://blog.jqknono.com/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/</link><pubDate>Sat, 06 May 2023 11:47:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/</guid><description>&lt;ul>
 &lt;li>
 &lt;p>&lt;input disabled="" type="checkbox"> Windows桥接时的IPv6问题&lt;/p>
 &lt;/li>
@@ -432,7 +432,7 @@
 &lt;li>&lt;a href="https://forums.tomshardware.com/threads/network-bridge-for-ipv6.3118590/">Network Bridge for ipv6&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;blockquote>
-&lt;p>Generally, bridging is purely layer 2 so no IP address is required, so just like an unmanaged switch should be iPv6 capable.&lt;/p></description></item><item><title>vs-remote-debug</title><link>https://blog.techfetch.dev/blog/2022/11/13/vs-remote-debug/</link><pubDate>Sun, 13 Nov 2022 14:17:28 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2022/11/13/vs-remote-debug/</guid><description>&lt;h1 id="remote-debug-with-visual-studio">remote debug with visual studio&lt;/h1>
+&lt;p>Generally, bridging is purely layer 2 so no IP address is required, so just like an unmanaged switch should be iPv6 capable.&lt;/p></description></item><item><title>vs-remote-debug</title><link>https://blog.jqknono.com/blog/2022/11/13/vs-remote-debug/</link><pubDate>Sun, 13 Nov 2022 14:17:28 +0800</pubDate><guid>https://blog.jqknono.com/blog/2022/11/13/vs-remote-debug/</guid><description>&lt;h1 id="remote-debug-with-visual-studio">remote debug with visual studio&lt;/h1>
 &lt;p>远程调试 C++:
 &lt;a href="https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-cpp?view=vs-2019">https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-cpp?view=vs-2019&lt;/a>&lt;/p>
 &lt;p>Attach 调试:

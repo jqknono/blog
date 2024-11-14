@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网络 on Nono Blogs</title><link>https://blog.techfetch.dev/tags/%E7%BD%91%E7%BB%9C/</link><description>Recent content in 网络 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 13 Nov 2024 13:05:00 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/tags/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>网络</title><link>https://blog.techfetch.dev/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E7%BD%91%E7%BB%9C/</link><pubDate>Wed, 13 Nov 2024 13:05:00 +0800</pubDate><guid>https://blog.techfetch.dev/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E7%BD%91%E7%BB%9C/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网络 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E7%BD%91%E7%BB%9C/</link><description>Recent content in 网络 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 13 Nov 2024 13:05:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>网络</title><link>https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E7%BD%91%E7%BB%9C/</link><pubDate>Wed, 13 Nov 2024 13:05:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E7%BD%91%E7%BB%9C/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 网络&lt;/li>
 &lt;/ul>
 &lt;h1 id="网络">网络&lt;/h1>
@@ -10,11 +10,11 @@
 &lt;/li>
 &lt;li>网络问题定位
 &lt;ul>
-&lt;li>[&lt;a href="https://blog.techfetch.dev/blog/2024/05/28/linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D/" title="linux网络问题定位">linux网络问题定位&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.jqknono.com/blog/2024/05/28/linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D/" title="linux网络问题定位">linux网络问题定位&lt;/a>]&lt;/li>
 &lt;li>[&lt;a href="windows%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D" title="windows网络问题定位">windows网络问题定位&lt;/a>]&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>DoT vs DoT vs DoQ</title><link>https://blog.techfetch.dev/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/dot-vs-dot-vs-doq/</link><pubDate>Wed, 13 Nov 2024 11:35:36 +0800</pubDate><guid>https://blog.techfetch.dev/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/dot-vs-dot-vs-doq/</guid><description>&lt;h2 id="dot">DoT&lt;/h2>
+&lt;/ul></description></item><item><title>DoT vs DoT vs DoQ</title><link>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/dot-vs-dot-vs-doq/</link><pubDate>Wed, 13 Nov 2024 11:35:36 +0800</pubDate><guid>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/dot-vs-dot-vs-doq/</guid><description>&lt;h2 id="dot">DoT&lt;/h2>
 &lt;p>DNS over TLS（DoT）是一种基于 TLS 的 DNS 加密协议。TLS 1.2 至少需要四次往返，TLS 1.3 则至少需要三次往返，而 DNS 请求仅需一次往返。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">时间轴
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ↓
@@ -61,7 +61,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器响应 DNS 查询 │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └───────────────────────────────────────────────────────────────────────┘
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>TLS 1.2 的握手过程需要至少两个往返（RTT），即客户端发送 ClientHello，服务器回复 ServerHello 和证书，然后客户端发送 ClientKeyExchange 和 ChangeCipherSpec，最后服务器发送 Finished。TLS 1.3 将握手过程简化为一个往返（1-RTT）。客户端在发送 ClientHello 时可以包含密钥共享信息（ClientKeyShare），服务器在回复 ServerHello 时也包含密钥共享信息，从而在第一个往返内完成密钥协商和握手。&lt;/p></description></item><item><title>最快的DNS</title><link>https://blog.techfetch.dev/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/%E6%9C%80%E5%BF%AB%E7%9A%84dns/</link><pubDate>Sun, 10 Nov 2024 19:12:42 +0800</pubDate><guid>https://blog.techfetch.dev/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/%E6%9C%80%E5%BF%AB%E7%9A%84dns/</guid><description>&lt;p>普通用户通常测量的是明文 DNS 的 IP 的 ping 相应速度，但这很难保证是否是真正到达对应服务器的速度。现代 DNS 至少需要使用加密 DNS 才能确保服务未被劫持。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>TLS 1.2 的握手过程需要至少两个往返（RTT），即客户端发送 ClientHello，服务器回复 ServerHello 和证书，然后客户端发送 ClientKeyExchange 和 ChangeCipherSpec，最后服务器发送 Finished。TLS 1.3 将握手过程简化为一个往返（1-RTT）。客户端在发送 ClientHello 时可以包含密钥共享信息（ClientKeyShare），服务器在回复 ServerHello 时也包含密钥共享信息，从而在第一个往返内完成密钥协商和握手。&lt;/p></description></item><item><title>最快的DNS</title><link>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/%E6%9C%80%E5%BF%AB%E7%9A%84dns/</link><pubDate>Sun, 10 Nov 2024 19:12:42 +0800</pubDate><guid>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/%E6%9C%80%E5%BF%AB%E7%9A%84dns/</guid><description>&lt;p>普通用户通常测量的是明文 DNS 的 IP 的 ping 相应速度，但这很难保证是否是真正到达对应服务器的速度。现代 DNS 至少需要使用加密 DNS 才能确保服务未被劫持。&lt;/p>
 &lt;p>从客户端到终端通常会经过 5 到 8 个网络设备，在其中任意一个设备上都可以劫持 UDP:53 请求，这种劫持命令非常简单。因此，不要对明文 DNS 抱有任何侥幸的期待，特别是企业用户，基本上都会遭遇劫持。&lt;/p>
 &lt;p>以下是劫持命令示例：
 &lt;code>sudo iptables -t nat -A PREROUTING -p udp --dport 53 -j DNAT --to-destination 1.1.1.1:53&lt;/code>&lt;/p>
@@ -74,13 +74,13 @@
 &lt;li>DoH 基于 HTTPS，建立连接需要至少四次往返, 由于 HTTP 协议较重, 导致服务会略慢于 DoT。&lt;/li>
 &lt;li>传统的 UDP:53 不需要建立连接，只有一次往返。&lt;/li>
 &lt;/ul>
-&lt;p>也就是说，从零开始的 DNS 请求，加密 DNS 的耗时是未加密 DNS 的 2~4 倍左右，但在建立连接后，耗时与未加密 DNS 相同（未考虑连接强制关闭的情况）。&lt;/p></description></item><item><title>Windows Server 2019长时间运行ipv6断连问题</title><link>https://blog.techfetch.dev/blog/2024/11/06/windows-server-2019%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%90%E8%A1%8Cipv6%E6%96%AD%E8%BF%9E%E9%97%AE%E9%A2%98/</link><pubDate>Wed, 06 Nov 2024 10:56:27 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/11/06/windows-server-2019%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%90%E8%A1%8Cipv6%E6%96%AD%E8%BF%9E%E9%97%AE%E9%A2%98/</guid><description>&lt;p>我的Windows Server 2019不怎么关机, 在电信/红米路由下, ipv6每次更新时, 本地ipv6连接都会显示无Internet访问权限, 重启设备或者开闭IPv6功能可以解决, Linux下不会出现这样问题.&lt;/p>
+&lt;p>也就是说，从零开始的 DNS 请求，加密 DNS 的耗时是未加密 DNS 的 2~4 倍左右，但在建立连接后，耗时与未加密 DNS 相同（未考虑连接强制关闭的情况）。&lt;/p></description></item><item><title>Windows Server 2019长时间运行ipv6断连问题</title><link>https://blog.jqknono.com/blog/2024/11/06/windows-server-2019%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%90%E8%A1%8Cipv6%E6%96%AD%E8%BF%9E%E9%97%AE%E9%A2%98/</link><pubDate>Wed, 06 Nov 2024 10:56:27 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/06/windows-server-2019%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%90%E8%A1%8Cipv6%E6%96%AD%E8%BF%9E%E9%97%AE%E9%A2%98/</guid><description>&lt;p>我的Windows Server 2019不怎么关机, 在电信/红米路由下, ipv6每次更新时, 本地ipv6连接都会显示无Internet访问权限, 重启设备或者开闭IPv6功能可以解决, Linux下不会出现这样问题.&lt;/p>
 &lt;p>&lt;img src="https://img1.techfetch.dev/blog/20241106115547.png">&lt;/p>
 &lt;p>考虑自动化操作，用这两条命令解决:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPInterface&lt;/span> &lt;span class="n">-AddressFamily&lt;/span> &lt;span class="n">IPv6&lt;/span> &lt;span class="n">-ifAlias&lt;/span> &lt;span class="n">Ethernet&lt;/span> &lt;span class="n">-RouterDiscovery&lt;/span> &lt;span class="n">Disabled&lt;/span>&lt;span class="p">;&lt;/span> 
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPInterface&lt;/span> &lt;span class="n">-AddressFamily&lt;/span> &lt;span class="n">IPv6&lt;/span> &lt;span class="n">-ifAlias&lt;/span> &lt;span class="n">Ethernet&lt;/span> &lt;span class="n">-RouterDiscovery&lt;/span> &lt;span class="n">Enabled&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>你可以看到命令只是让Windows更新了路由, 不知道为什么Windows没有自动更新路由.&lt;/p>
-&lt;p>如果有人碰到相同问题可以参考, 如果有更好的解决办法, 也欢迎讨论.&lt;/p></description></item><item><title>电信IPv6的一些特征</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E7%94%B5%E4%BF%A1ipv6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81/</link><pubDate>Fri, 28 Jun 2024 17:21:06 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E7%94%B5%E4%BF%A1ipv6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81/</guid><description>&lt;ul>
+&lt;p>如果有人碰到相同问题可以参考, 如果有更好的解决办法, 也欢迎讨论.&lt;/p></description></item><item><title>电信IPv6的一些特征</title><link>https://blog.jqknono.com/blog/2024/06/28/%E7%94%B5%E4%BF%A1ipv6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81/</link><pubDate>Fri, 28 Jun 2024 17:21:06 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E7%94%B5%E4%BF%A1ipv6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81/</guid><description>&lt;ul>
 &lt;li>
 &lt;p>&lt;input disabled="" type="checkbox"> 电信IPv6的一些特征&lt;/p>
 &lt;/li>
@@ -97,7 +97,7 @@
 湖北电信使用的是 SLAAC, 也就是说电信的 ipv6 地址是由设备自动分配的, 由于电信的 ipv6 地址池足够大, 所以不会出现地址冲突的问题.&lt;/p>
 &lt;p>电信 ipv6 地址是随机分配的, 24 小时后重新分配. 如果要从外部访问, 必须使用 DDNS 服务.&lt;/p>
 &lt;h2 id="防火墙">防火墙&lt;/h2>
-&lt;p>目前可以发现常见的&lt;code>80&lt;/code>, &lt;code>139&lt;/code>, &lt;code>445&lt;/code>等端口已对齐 ipv4 防火前已经都封了, 这非常容易理解, 运营商级的防火墙确实能保护到缺乏网络安全意识的普通用户. 2020 年时电信 ipv6 都是开放的, 现在已经封了一些常用端口.&lt;/p></description></item><item><title>为什么不应该把TCP思维套在UDP上</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BA%94%E8%AF%A5%E6%8A%8Atcp%E6%80%9D%E7%BB%B4%E5%A5%97%E5%9C%A8udp%E4%B8%8A/</link><pubDate>Fri, 28 Jun 2024 17:20:09 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BA%94%E8%AF%A5%E6%8A%8Atcp%E6%80%9D%E7%BB%B4%E5%A5%97%E5%9C%A8udp%E4%B8%8A/</guid><description>&lt;ul>
+&lt;p>目前可以发现常见的&lt;code>80&lt;/code>, &lt;code>139&lt;/code>, &lt;code>445&lt;/code>等端口已对齐 ipv4 防火前已经都封了, 这非常容易理解, 运营商级的防火墙确实能保护到缺乏网络安全意识的普通用户. 2020 年时电信 ipv6 都是开放的, 现在已经封了一些常用端口.&lt;/p></description></item><item><title>为什么不应该把TCP思维套在UDP上</title><link>https://blog.jqknono.com/blog/2024/06/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BA%94%E8%AF%A5%E6%8A%8Atcp%E6%80%9D%E7%BB%B4%E5%A5%97%E5%9C%A8udp%E4%B8%8A/</link><pubDate>Fri, 28 Jun 2024 17:20:09 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BA%94%E8%AF%A5%E6%8A%8Atcp%E6%80%9D%E7%BB%B4%E5%A5%97%E5%9C%A8udp%E4%B8%8A/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 为什么不应该把TCP思维套在UDP上&lt;/li>
 &lt;/ul>
 &lt;h1 id="为什么不应该把-tcp-思维套在-udp-上">为什么不应该把 TCP 思维套在 UDP 上?&lt;/h1>
@@ -113,7 +113,7 @@
 &lt;/blockquote>
 &lt;p>通常介绍 UDP 适合应用在游戏/语音/视频等场景, 少量的错包不影响业务.
 为什么 UDP 适合这些场景? 它能用在这些场景, 不代表它是这些场景的最优方案, 必然是存在 TCP 无法解决的问题, 才让这些服务选择了功能简陋的 UDP 协议. 错包不影响业务扩展开来讲是指 TCP 协议在乎错包, UDP 不在乎错包, 更在乎实时性/连续性. UDP 的特点就是它不在乎 TCP 在乎的因素, 这些因素影响了实时性.&lt;/p>
-&lt;p>在代码实现上, UDP 只需要创建一个 socket, 绑定到一个端口上, 即可以开始收发. 通常 socket 用完时, 端口也用完了.&lt;/p></description></item><item><title>openvpn网络不通</title><link>https://blog.techfetch.dev/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</link><pubDate>Fri, 28 Jun 2024 17:18:48 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</guid><description>&lt;ul>
+&lt;p>在代码实现上, UDP 只需要创建一个 socket, 绑定到一个端口上, 即可以开始收发. 通常 socket 用完时, 端口也用完了.&lt;/p></description></item><item><title>openvpn网络不通</title><link>https://blog.jqknono.com/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</link><pubDate>Fri, 28 Jun 2024 17:18:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> openvpn配置&lt;/li>
 &lt;/ul>
 &lt;h1 id="openvpn配置">openvpn配置&lt;/h1>
@@ -122,7 +122,7 @@
 &lt;h2 id="windows防火墙配置">Windows防火墙配置&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Inbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Outbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>华为可信概念</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%8F%AF%E4%BF%A1%E6%A6%82%E5%BF%B5/</link><pubDate>Fri, 28 Jun 2024 15:49:02 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%8F%AF%E4%BF%A1%E6%A6%82%E5%BF%B5/</guid><description>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>华为可信概念</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%8F%AF%E4%BF%A1%E6%A6%82%E5%BF%B5/</link><pubDate>Fri, 28 Jun 2024 15:49:02 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%8F%AF%E4%BF%A1%E6%A6%82%E5%BF%B5/</guid><description>&lt;ul>
 &lt;li>
 &lt;p>&lt;input disabled="" type="checkbox"> 华为可信概念&lt;/p>
 &lt;/li>
@@ -143,7 +143,7 @@
 &lt;/li>
 &lt;/ul>
 &lt;p>ref:&lt;/p>
-&lt;p>&lt;a href="https://www.huawei.com/cn/trust-center/trustworthy#we-offer">华为.我们提供什么&lt;/a>&lt;/p></description></item><item><title>华为内网网络安全分析</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%86%85%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/</link><pubDate>Fri, 28 Jun 2024 15:48:48 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%86%85%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/</guid><description>&lt;ul>
+&lt;p>&lt;a href="https://www.huawei.com/cn/trust-center/trustworthy#we-offer">华为.我们提供什么&lt;/a>&lt;/p></description></item><item><title>华为内网网络安全分析</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%86%85%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/</link><pubDate>Fri, 28 Jun 2024 15:48:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%86%85%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 华为内网网络安全分析&lt;/li>
 &lt;/ul>
 &lt;p>华为公司内部有很多不错的学习资料，自己也总结了很多知识经验，一直想着如何导入到自己的知识库。我清楚的明白这些通用化的知识是不涉密不敏感的，但信息安全警钟长鸣，让人心痒又不敢越雷池一步。经过一些测试，我发现公司的网络安全保护比较难突破。本文将对研发区黄区作一点粗略解析。绿区属于自由区域，默认无重要信息，一般为外围工作人员的网络。红区为超高级别的网络防护，目前尚未有长时间深入接触，简单接触到的红区位于网络设备实验室，存放各种大型交换机框架，是公司内网的枢纽，攻破红区的话就相当于攻破了区域网络，至少一栋楼的网络是可以瘫痪一段时间的。&lt;/p>
@@ -154,7 +154,7 @@
 &lt;p>&lt;strong>如何破解&lt;/strong>：由于黄区只有特定端口可以走代理服务器进出公网，对其它端口默认全封，那么严格来说网络流量就没有漏洞。我们可以手动生成密钥，在内网手动加密，再在外网手动解密，这样至少中间人看到的信息无法真正解析。加密器如何发送至内网，邮件/welink/网页都可以，但都会留下痕迹，其中通过网页直接秘密发送影响最小，痕迹最不明显。或者直接把密钥抄纸上，公司电脑保存起来，完全无法察觉，除了公司内遍布的摄像头。github 上的 ssh 贴心的支持 ssh over 443，经过测试发现也行不通，毕竟代理作为防火墙可以轻易识别这样的高风险网站。根据自身体验，公司的防火墙是基于白名单，而非黑名单，也就是即便是自建 ssh 服务器，也会被代理拦住。在浏览器中访问未知网站会有跳转页面提示“后果自负”，在终端窗口中直接就显示链接被关了。&lt;/p>
 &lt;p>华为毕竟是搞网络起家，搞网络的能人异士众多，技术上几乎无法突破，恐怕唯有社会工程能突破了。&lt;/p>
 &lt;h2 id="本地防火墙方式">本地防火墙方式&lt;/h2>
-&lt;p>Windows 系统会安装安全应用，用户无法随意更改配置，配置由管理员统一下发。应用的网络访问权限可能是黑白名单方式，部分应用无法访问网络。vscode 的新版无法走代理通道。&lt;/p></description></item><item><title>DoS防范</title><link>https://blog.techfetch.dev/blog/2024/06/28/dos%E9%98%B2%E8%8C%83/</link><pubDate>Fri, 28 Jun 2024 15:47:44 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/dos%E9%98%B2%E8%8C%83/</guid><description>&lt;h1 id="ddos-防范">DDoS 防范&lt;/h1>
+&lt;p>Windows 系统会安装安全应用，用户无法随意更改配置，配置由管理员统一下发。应用的网络访问权限可能是黑白名单方式，部分应用无法访问网络。vscode 的新版无法走代理通道。&lt;/p></description></item><item><title>DoS防范</title><link>https://blog.jqknono.com/blog/2024/06/28/dos%E9%98%B2%E8%8C%83/</link><pubDate>Fri, 28 Jun 2024 15:47:44 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/dos%E9%98%B2%E8%8C%83/</guid><description>&lt;h1 id="ddos-防范">DDoS 防范&lt;/h1>
 &lt;p>&lt;a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">DDoS 定义&lt;/a>&lt;/p>
 &lt;p>两种 DoS 攻击方式:&lt;/p>
 &lt;ul>
@@ -409,7 +409,7 @@
 &lt;li>IPTraf-ng is a console-based network monitoring program for Linux that displays information about IP traffic.&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>利用DNS服务平滑切换网络服务</title><link>https://blog.techfetch.dev/blog/2024/06/12/%E5%88%A9%E7%94%A8dns%E6%9C%8D%E5%8A%A1%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</link><pubDate>Wed, 12 Jun 2024 19:00:34 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/12/%E5%88%A9%E7%94%A8dns%E6%9C%8D%E5%8A%A1%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</guid><description>&lt;p>假设服务域名为&lt;code>example.domain&lt;/code>, 原服务器 IP 地址为&lt;code>A&lt;/code>, 由于服务器迁移或 IP 更换, 新服务器 IP 地址为&lt;code>B&lt;/code>, 为了保证用户无感知, 可以通过 DNS 服务平滑切换网络服务.&lt;/p>
+&lt;/ul></description></item><item><title>利用DNS服务平滑切换网络服务</title><link>https://blog.jqknono.com/blog/2024/06/12/%E5%88%A9%E7%94%A8dns%E6%9C%8D%E5%8A%A1%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</link><pubDate>Wed, 12 Jun 2024 19:00:34 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/12/%E5%88%A9%E7%94%A8dns%E6%9C%8D%E5%8A%A1%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</guid><description>&lt;p>假设服务域名为&lt;code>example.domain&lt;/code>, 原服务器 IP 地址为&lt;code>A&lt;/code>, 由于服务器迁移或 IP 更换, 新服务器 IP 地址为&lt;code>B&lt;/code>, 为了保证用户无感知, 可以通过 DNS 服务平滑切换网络服务.&lt;/p>
 &lt;ol>
 &lt;li>原服务状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>A&lt;/code>&lt;/li>
 &lt;li>过渡状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>A&lt;/code> 和&lt;code>B&lt;/code>&lt;/li>
@@ -430,7 +430,7 @@
 &lt;/ol>
 &lt;p>当用户仍在使用&lt;code>dns A&lt;/code>服务时, 可以获得两个地址, 有一半的概率会选择&lt;code>dns A&lt;/code>服务.&lt;br>
 另外一半的概率会切换到&lt;code>dns B&lt;/code>服务, &lt;code>dns B&lt;/code>服务故障时切换回&lt;code>dns A&lt;/code>. &lt;code>dns B&lt;/code>服务未故障时, 将只会获得一个地址, 因而用户会停留在&lt;code>dns B&lt;/code>服务中.&lt;br>
-这样我们可以逐步的减少&lt;code>dns A&lt;/code>服务的资源消耗, 而不是直接停止, 实现更平滑的迁移.&lt;/p></description></item><item><title>linux网络问题定位</title><link>https://blog.techfetch.dev/blog/2024/05/28/linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D/</link><pubDate>Tue, 28 May 2024 16:39:14 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/05/28/linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D/</guid><description>&lt;h2 id="排障工具">排障工具&lt;/h2>
+这样我们可以逐步的减少&lt;code>dns A&lt;/code>服务的资源消耗, 而不是直接停止, 实现更平滑的迁移.&lt;/p></description></item><item><title>linux网络问题定位</title><link>https://blog.jqknono.com/blog/2024/05/28/linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D/</link><pubDate>Tue, 28 May 2024 16:39:14 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/28/linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D/</guid><description>&lt;h2 id="排障工具">排障工具&lt;/h2>
 &lt;table>
  &lt;thead>
  &lt;tr>
@@ -772,7 +772,7 @@
  &lt;td>&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>如何在集群的负载均衡过程保留请求源IP</title><link>https://blog.techfetch.dev/blog/2024/05/27/%E5%A6%82%E4%BD%95%E5%9C%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BF%87%E7%A8%8B%E4%BF%9D%E7%95%99%E8%AF%B7%E6%B1%82%E6%BA%90ip/</link><pubDate>Mon, 27 May 2024 11:52:22 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/05/27/%E5%A6%82%E4%BD%95%E5%9C%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BF%87%E7%A8%8B%E4%BF%9D%E7%95%99%E8%AF%B7%E6%B1%82%E6%BA%90ip/</guid><description>&lt;h2 id="引言">引言&lt;/h2>
+&lt;/table></description></item><item><title>如何在集群的负载均衡过程保留请求源IP</title><link>https://blog.jqknono.com/blog/2024/05/27/%E5%A6%82%E4%BD%95%E5%9C%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BF%87%E7%A8%8B%E4%BF%9D%E7%95%99%E8%AF%B7%E6%B1%82%E6%BA%90ip/</link><pubDate>Mon, 27 May 2024 11:52:22 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/27/%E5%A6%82%E4%BD%95%E5%9C%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BF%87%E7%A8%8B%E4%BF%9D%E7%95%99%E8%AF%B7%E6%B1%82%E6%BA%90ip/</guid><description>&lt;h2 id="引言">引言&lt;/h2>
 &lt;p>&lt;strong>应用部署&lt;/strong>不一定总是简单的&lt;strong>安装&lt;/strong>和&lt;strong>运行&lt;/strong>, 有时候还需要考虑&lt;strong>网络&lt;/strong>的问题. 本文将介绍如何在&lt;strong>k8s集群&lt;/strong>中使服务能获取到请求的&lt;strong>源IP&lt;/strong>.&lt;/p>
 &lt;p>应用提供服务一般依赖输入信息, 输入信息如果不依赖&lt;strong>五元组&lt;/strong>(源 IP, 源端口, 目的 IP, 目的端口, 协议), 那么该服务和&lt;strong>网络耦合性低&lt;/strong>, 不需要关心网络细节.&lt;/p>
 &lt;p>因此, 对多数人来说都没有阅读本文的必要, 如果你对网络感兴趣, 或者希望拓宽一点视野, 可以继续阅读下文, 了解更多的服务场景.&lt;/p>
@@ -789,7 +789,7 @@
 &lt;li>NAT 简单来说是&lt;strong>以端口空间换IP空间&lt;/strong>, IPv4 地址有限, 一个 IP 地址可以映射 65535 个端口, 绝大多数时候这些端口没有用完, 因而可以多个子网 IP 共用一个公网 IP, 在端口上区分不同的服务. 其使用形式是: &lt;code>public IP:public port -&amp;gt; private IP_1:private port&lt;/code>, 更多内容请自行参阅&lt;a href="https://www.google.com/search?q=%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2">网络地址转换&lt;/a>&lt;/li>
 &lt;li>代理服务是为了&lt;strong>隐藏或暴露&lt;/strong>, 代理服务会将请求转发给后端服务, 同时将源 IP 替换为自己的 IP, 以此来隐藏后端服务的真实 IP, 保护后端服务的安全. 代理服务的使用形式是: &lt;code>client IP -&amp;gt; proxy IP -&amp;gt; server IP&lt;/code>, 更多内容请自行参阅&lt;a href="https://www.google.com/search?q=%E4%BB%A3%E7%90%86">代理&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>NAT&lt;/strong>和&lt;strong>代理服务器&lt;/strong>都非常常见, 多数服务都无法获得请求的源 IP.&lt;/p></description></item><item><title>如何提升自建DNS服务下的网络体验</title><link>https://blog.techfetch.dev/blog/2024/05/18/%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87%E8%87%AA%E5%BB%BAdns%E6%9C%8D%E5%8A%A1%E4%B8%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BD%93%E9%AA%8C/</link><pubDate>Sat, 18 May 2024 10:46:44 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/05/18/%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87%E8%87%AA%E5%BB%BAdns%E6%9C%8D%E5%8A%A1%E4%B8%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BD%93%E9%AA%8C/</guid><description>&lt;h2 id="网络质量和网络体验">网络质量和网络体验&lt;/h2>
+&lt;p>&lt;strong>NAT&lt;/strong>和&lt;strong>代理服务器&lt;/strong>都非常常见, 多数服务都无法获得请求的源 IP.&lt;/p></description></item><item><title>如何提升自建DNS服务下的网络体验</title><link>https://blog.jqknono.com/blog/2024/05/18/%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87%E8%87%AA%E5%BB%BAdns%E6%9C%8D%E5%8A%A1%E4%B8%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BD%93%E9%AA%8C/</link><pubDate>Sat, 18 May 2024 10:46:44 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/18/%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87%E8%87%AA%E5%BB%BAdns%E6%9C%8D%E5%8A%A1%E4%B8%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BD%93%E9%AA%8C/</guid><description>&lt;h2 id="网络质量和网络体验">网络质量和网络体验&lt;/h2>
 &lt;blockquote>
 &lt;p>什么都不做, 即可以获得最好的网络体验&lt;/p>
 &lt;/blockquote>
@@ -816,7 +816,7 @@
 &lt;/ul>
 &lt;p>其次是 DNS 解析结果的 IP 所能提供服务的&lt;code>网络质量&lt;/code>.&lt;/p>
 &lt;p>互联网服务所能提供的&lt;code>网络质量&lt;/code>, 通常&lt;strong>强依赖地域&lt;/strong>, 服务器和客户端在地域上越接近, 则服务质量越好.&lt;/p>
-&lt;p>许多付费 DNS 解析服务商都支持按地域解析不同 IP, 例如这是阿里云能提供的一部分服务:&lt;/p></description></item><item><title>ChatGPT VPN识别绕过方法</title><link>https://blog.techfetch.dev/blog/2024/05/09/chatgpt-vpn%E8%AF%86%E5%88%AB%E7%BB%95%E8%BF%87%E6%96%B9%E6%B3%95/</link><pubDate>Thu, 09 May 2024 10:30:29 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/05/09/chatgpt-vpn%E8%AF%86%E5%88%AB%E7%BB%95%E8%BF%87%E6%96%B9%E6%B3%95/</guid><description>&lt;p>如何处理 ChatGPT 报错&lt;br>
+&lt;p>许多付费 DNS 解析服务商都支持按地域解析不同 IP, 例如这是阿里云能提供的一部分服务:&lt;/p></description></item><item><title>ChatGPT VPN识别绕过方法</title><link>https://blog.jqknono.com/blog/2024/05/09/chatgpt-vpn%E8%AF%86%E5%88%AB%E7%BB%95%E8%BF%87%E6%96%B9%E6%B3%95/</link><pubDate>Thu, 09 May 2024 10:30:29 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/09/chatgpt-vpn%E8%AF%86%E5%88%AB%E7%BB%95%E8%BF%87%E6%96%B9%E6%B3%95/</guid><description>&lt;p>如何处理 ChatGPT 报错&lt;br>
 &amp;ldquo;Unable to load site&amp;rdquo;&lt;br>
 &amp;ldquo;Please try again later, if you are using a VPN, try turning it off.&amp;rdquo;&lt;br>
 &amp;ldquo;Check the status page for information on outages.&amp;rdquo;&lt;/p>
