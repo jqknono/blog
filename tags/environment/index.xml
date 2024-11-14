@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Environment on Nono Blogs</title><link>https://blog.techfetch.dev/tags/environment/</link><description>Recent content in Environment on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 16:38:40 +0800</lastBuildDate><atom:link href="https://blog.techfetch.dev/tags/environment/index.xml" rel="self" type="application/rss+xml"/><item><title>虚拟内存磁盘配置</title><link>https://blog.techfetch.dev/blog/2024/06/28/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%A3%81%E7%9B%98%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 28 Jun 2024 16:38:40 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%A3%81%E7%9B%98%E9%85%8D%E7%BD%AE/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Environment on Nono Blogs</title><link>https://blog.jqknono.com/tags/environment/</link><description>Recent content in Environment on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 16:38:40 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/environment/index.xml" rel="self" type="application/rss+xml"/><item><title>虚拟内存磁盘配置</title><link>https://blog.jqknono.com/blog/2024/06/28/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%A3%81%E7%9B%98%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 28 Jun 2024 16:38:40 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%A3%81%E7%9B%98%E9%85%8D%E7%BD%AE/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 虚拟内存磁盘配置&lt;/li>
 &lt;/ul>
 &lt;h1 id="虚拟内存磁盘配置">虚拟内存磁盘配置&lt;/h1>
@@ -10,14 +10,14 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">md&lt;/span> M:\Edge_CodeCache\
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">mklink&lt;/span> /D &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Cache&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;M:\Edge_Cache\&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">mklink&lt;/span> /D &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Code Cache&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;M:\Edge_CodeCache\&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>wsl</title><link>https://blog.techfetch.dev/blog/2024/06/28/wsl/</link><pubDate>Fri, 28 Jun 2024 16:37:30 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2024/06/28/wsl/</guid><description>&lt;h1 id="配置-wsl">配置 wsl&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>wsl</title><link>https://blog.jqknono.com/blog/2024/06/28/wsl/</link><pubDate>Fri, 28 Jun 2024 16:37:30 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/wsl/</guid><description>&lt;h1 id="配置-wsl">配置 wsl&lt;/h1>
 &lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 &lt;!-- code_chunk_output -->
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/wsl/#配置-wsl">配置 wsl&lt;/a>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/wsl/#配置-wsl">配置 wsl&lt;/a>
 &lt;ul>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/wsl/#远程访问-ssh">远程访问 ssh&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://blog.techfetch.dev/blog/2024/06/28/wsl/#配置-wsl-1">配置 wsl&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/wsl/#远程访问-ssh">远程访问 ssh&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/wsl/#配置-wsl-1">配置 wsl&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
@@ -77,7 +77,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2"># Turns on output console showing contents of dmesg when opening a WSL 2 distro for debugging
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">debugConsole=true
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>vs-remote-debug</title><link>https://blog.techfetch.dev/blog/2022/11/13/vs-remote-debug/</link><pubDate>Sun, 13 Nov 2022 14:17:28 +0800</pubDate><guid>https://blog.techfetch.dev/blog/2022/11/13/vs-remote-debug/</guid><description>&lt;h1 id="remote-debug-with-visual-studio">remote debug with visual studio&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>vs-remote-debug</title><link>https://blog.jqknono.com/blog/2022/11/13/vs-remote-debug/</link><pubDate>Sun, 13 Nov 2022 14:17:28 +0800</pubDate><guid>https://blog.jqknono.com/blog/2022/11/13/vs-remote-debug/</guid><description>&lt;h1 id="remote-debug-with-visual-studio">remote debug with visual studio&lt;/h1>
 &lt;p>远程调试 C++:
 &lt;a href="https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-cpp?view=vs-2019">https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-cpp?view=vs-2019&lt;/a>&lt;/p>
 &lt;p>Attach 调试:
