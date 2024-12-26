@@ -1,4 +1,106 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on Nono Blogs</title><link>https://blog.jqknono.com/categories/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 19:03:59 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>snort</title><link>https://blog.jqknono.com/blog/2024/06/28/snort/</link><pubDate>Fri, 28 Jun 2024 19:03:59 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/snort/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on Nono Blogs</title><link>https://blog.jqknono.com/categories/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 24 Dec 2024 15:01:40 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>微信读书体验分享</title><link>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link><pubDate>Tue, 24 Dec 2024 15:01:40 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid><description>&lt;p>免费读书方案有很多, 但是微信读书的确是体验做的较好的一个. 希望免费读书的可以看 zlibrary.&lt;/p>
+&lt;p>这里主要分享微信读书的使用体验, 以及一些辅助工具, 如有任何侵权, 请联系我删除: &lt;code>weread-challenge@techfetch.dev&lt;/code>&lt;/p></description></item><item><title>微信读书自动打卡刷时长</title><link>https://blog.jqknono.com/blog/2024/12/05/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1%E5%88%B7%E6%97%B6%E9%95%BF/</link><pubDate>Thu, 05 Dec 2024 12:36:38 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/12/05/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1%E5%88%B7%E6%97%B6%E9%95%BF/</guid><description>&lt;p>只为便宜一点买微信读书会员.&lt;/p>
+&lt;p>&lt;img alt="只为便宜一点买微信读书会员" src="https://img1.techfetch.dev/blog/202412261741639.gif">&lt;/p>
+&lt;h2 id="微信读书规则">微信读书规则&lt;/h2>
+&lt;ul>
+&lt;li>离线阅读计入总时长, 但需要联网上报&lt;/li>
+&lt;li>网页版, 墨水屏, 小程序, 听书, 有声书收听&lt;strong>都计入总时长&lt;/strong>&lt;/li>
+&lt;li>对单次自动阅读或收听时长过长的行为, 平台将结合用户行为特征判断, &lt;strong>过长部分不计入总时长&lt;/strong>&lt;/li>
+&lt;li>当日阅读超过&lt;strong>5 分钟&lt;/strong>才算作有效阅读天数&lt;/li>
+&lt;li>付费 5 元立即获得 2 天会员, 后续 30 日内打卡 29 天, 读书时长超过 30 小时, 可获得 30 天会员和 30 书币&lt;/li>
+&lt;li>付费 50 元立即获得 30 天会员, 后续 365 日内打卡 360 天, 读书时长超过 300 小时, 可获得 365 天会员和 500 书币&lt;/li>
+&lt;/ul>
+&lt;p>根据实际操作, 还有如下未明确说明的特点:&lt;/p>
+&lt;ul>
+&lt;li>第 29 日打卡后立即获得读书会员奖励, 并可立即开始下一轮挑战会员打卡, 无需等待第 31 日开始下一轮挑战, 第 29 日的打卡既算上一轮的打卡, 也算下一轮的打卡.&lt;/li>
+&lt;li>除第一轮需 29 日外, 后续每 28 日即可获得 32 日会员, 1+28*13=365, 一年可完成 13 轮, 花费 65 元, 获得 32*13=416 天会员和 390 书币.&lt;/li>
+&lt;li>更划算的仍然是年卡挑战会员, 但周期更长, 风险更大.&lt;/li>
+&lt;/ul>
+&lt;h2 id="工具特性">工具特性&lt;/h2>
+&lt;ul>
+&lt;li>使用有头浏览器&lt;/li>
+&lt;li>支持本地浏览器和远程浏览器&lt;/li>
+&lt;li>随机浏览器宽度和高度&lt;/li>
+&lt;li>支持等待登录&lt;/li>
+&lt;li>支持登录二维码刷新&lt;/li>
+&lt;li>支持保存 cookies&lt;/li>
+&lt;li>支持加载 cookies&lt;/li>
+&lt;li>支持选择最近阅读的第 X 本书开始阅读&lt;/li>
+&lt;li>默认随机选择一本书开始阅读&lt;/li>
+&lt;li>支持自动阅读&lt;/li>
+&lt;li>支持跳到下一章&lt;/li>
+&lt;li>支持读完跳回第一章继续阅读&lt;/li>
+&lt;li>随机单页阅读时间&lt;/li>
+&lt;li>随机翻页时间&lt;/li>
+&lt;li>每分钟截图当前界面&lt;/li>
+&lt;li>支持日志&lt;/li>
+&lt;li>支持定时任务&lt;/li>
+&lt;li>支持设置阅读时间&lt;/li>
+&lt;li>支持邮件通知&lt;/li>
+&lt;li>多平台支持: &lt;code>linux | windows | macos&lt;/code>&lt;/li>
+&lt;li>多架构支持: &lt;code>amd64 | arm64&lt;/code>&lt;/li>
+&lt;li>支持浏览器: &lt;code>chrome | MicrosoftEdge | firefox | safari&lt;/code>&lt;/li>
+&lt;li>支持多用户&lt;/li>
+&lt;li>异常时强制刷新&lt;/li>
+&lt;li>使用统计&lt;/li>
+&lt;/ul>
+&lt;h2 id="linux">Linux&lt;/h2>
+&lt;h3 id="直接运行">直接运行&lt;/h3>
+&lt;p>下载链接: &lt;a href="https://storage1.techfetch.dev/weread-challenge/weread-challenge.js">weread-challenge.js&lt;/a>&lt;/p></description></item><item><title>关闭独显以省电</title><link>https://blog.jqknono.com/blog/2024/11/18/%E5%85%B3%E9%97%AD%E7%8B%AC%E6%98%BE%E4%BB%A5%E7%9C%81%E7%94%B5/</link><pubDate>Mon, 18 Nov 2024 10:22:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/18/%E5%85%B3%E9%97%AD%E7%8B%AC%E6%98%BE%E4%BB%A5%E7%9C%81%E7%94%B5/</guid><description>&lt;p>这篇文分享给台式机很少关机, 经常远程回家中的台式机上工作的朋友.&lt;/p>
+&lt;p>我的主力工作机和游戏机是同一台机器, 显示屏是 4K 144Hz, 日常都是开着独显, 普通操作显示都会更顺滑一些, 但是功耗也是明显更大.&lt;/p>
+&lt;p>&lt;em>以下截图里的功率同时带着一个 J4125 小主机, 日常功耗在 18w 上下, 因此结论可能有不准确的地方&lt;/em>&lt;/p>
+&lt;p>不开游戏, 在桌面快速滑动鼠标的峰值功率可以到&lt;em>192w&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411181057492.jpg">&lt;/p>
+&lt;p>关闭独显后, 刷新率降到 60Hz, 峰值功率降到&lt;em>120w&lt;/em>上下.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411181103084.jpg">&lt;/p>
+&lt;p>在外隧道回家工作是使用的腾讯的一个入门主机, 带宽较小, 远端刷新率只有 30hz, 这种情况用独显是没有意义, 可以考虑切换到集显.&lt;/p>
+&lt;p>多数时候, 我不直接使用远程桌面, 而是使用 vscode 的远程开发, 优势是隐蔽, 占用带宽小, 几乎是本地开发的体验.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411181116237.png">&lt;/p>
+&lt;p>普通代码编辑时, 约 72w, 与关闭独显前的 120w 相比, 有一定的节能效果.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411221112020.jpg">&lt;/p>
+&lt;p>使用&lt;code>remote ssh&lt;/code>进行远程开发时, 可以用使用脚本关闭独显.&lt;/p>
+&lt;p>脚本保存为&lt;code>switch_dedicate_graphic_cards.ps1&lt;/code>, 使用方法为&lt;code>switch_dedicate_graphic_cards.ps1 off&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Usage: switch_dedicate_graphic_cards.ps1 on|off&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Get parameters&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$switch&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mf">0&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># exit if no parameter is passed&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$switch&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="vm">$null&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Usage: switch_dedicate_graphic_cards.ps1 on|off&amp;#34;&lt;/span> &lt;span class="n">-ForegroundColor&lt;/span> &lt;span class="n">Yellow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Get display devices&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$displayDevices&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Get-CimInstance&lt;/span> &lt;span class="n">-Namespace&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">cimv2&lt;/span> &lt;span class="n">-ClassName&lt;/span> &lt;span class="n">Win32_VideoController&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># If there is no display device or only one display device, exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$displayDevices&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Count&lt;/span> &lt;span class="o">-le&lt;/span> &lt;span class="mf">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;No display device found.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Get dedicated graphic cards&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$dedicatedGraphicCards&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$displayDevices&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">Where-Object&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nv">$_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Description&lt;/span> &lt;span class="o">-like&lt;/span> &lt;span class="s2">&amp;#34;*NVIDIA*&amp;#34;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># If there is no dedicated graphic card, exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$dedicatedGraphicCards&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Count&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="mf">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;No dedicated graphic card found.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># turn dedicated graphic cards on or off&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$switch&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="s2">&amp;#34;on&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$dedicatedGraphicCards&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">ForEach-Object&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="n">pnputil&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">enable-device&lt;/span> &lt;span class="nv">$_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">PNPDeviceID&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Dedicated graphic cards are turned on.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">elseif&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$switch&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="s2">&amp;#34;off&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$dedicatedGraphicCards&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">ForEach-Object&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="n">pnputil&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">disable-device&lt;/span> &lt;span class="nv">$_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">PNPDeviceID&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Dedicated graphic cards are turned off.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Invalid parameter.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Usage: switch_dedicate_graphic_cards.ps1 on|off&amp;#34;&lt;/span> &lt;span class="n">-ForegroundColor&lt;/span> &lt;span class="n">Yellow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>snort</title><link>https://blog.jqknono.com/blog/2024/06/28/snort/</link><pubDate>Fri, 28 Jun 2024 19:03:59 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/snort/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> snort&lt;/li>
 &lt;/ul>
 &lt;h1 id="snort">Snort&lt;/h1>
@@ -11,7 +113,7 @@ uses those rules to find packets that match against them and generates alerts fo
 &lt;p>Snort can be deployed inline to stop these packets, as well.
 Snort has three primary uses: As a packet sniffer like tcpdump, as a packet logger —
 which is useful for network traffic debugging, or it can be used as a full-blown network intrusion prevention system.
-Snort can be downloaded and configured for personal and business use alike.&lt;/p></description></item><item><title>adguard</title><link>https://blog.jqknono.com/blog/%E7%81%B5%E6%84%9F/adguard/</link><pubDate>Fri, 28 Jun 2024 18:47:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E7%81%B5%E6%84%9F/adguard/</guid><description/></item><item><title>命令行手册中括号的含义</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</link><pubDate>Fri, 28 Jun 2024 17:31:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</guid><description>&lt;ul>
+Snort can be downloaded and configured for personal and business use alike.&lt;/p></description></item><item><title>adguard</title><link>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/adguard/</link><pubDate>Fri, 28 Jun 2024 18:47:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/adguard/</guid><description/></item><item><title>命令行手册中括号的含义</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</link><pubDate>Fri, 28 Jun 2024 17:31:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 命令行手册中括号的含义&lt;/li>
 &lt;/ul>
 &lt;h1 id="命令行手册中括号的含义">命令行手册中括号的含义&lt;/h1>

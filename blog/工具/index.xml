@@ -1,1 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on Nono Blogs</title><link>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate/><atom:link href="https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on Nono Blogs</title><link>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 Nov 2024 10:22:16 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>关闭独显以省电</title><link>https://blog.jqknono.com/blog/2024/11/18/%E5%85%B3%E9%97%AD%E7%8B%AC%E6%98%BE%E4%BB%A5%E7%9C%81%E7%94%B5/</link><pubDate>Mon, 18 Nov 2024 10:22:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/18/%E5%85%B3%E9%97%AD%E7%8B%AC%E6%98%BE%E4%BB%A5%E7%9C%81%E7%94%B5/</guid><description>&lt;p>这篇文分享给台式机很少关机, 经常远程回家中的台式机上工作的朋友.&lt;/p>
+&lt;p>我的主力工作机和游戏机是同一台机器, 显示屏是 4K 144Hz, 日常都是开着独显, 普通操作显示都会更顺滑一些, 但是功耗也是明显更大.&lt;/p>
+&lt;p>&lt;em>以下截图里的功率同时带着一个 J4125 小主机, 日常功耗在 18w 上下, 因此结论可能有不准确的地方&lt;/em>&lt;/p>
+&lt;p>不开游戏, 在桌面快速滑动鼠标的峰值功率可以到&lt;em>192w&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411181057492.jpg">&lt;/p>
+&lt;p>关闭独显后, 刷新率降到 60Hz, 峰值功率降到&lt;em>120w&lt;/em>上下.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411181103084.jpg">&lt;/p>
+&lt;p>在外隧道回家工作是使用的腾讯的一个入门主机, 带宽较小, 远端刷新率只有 30hz, 这种情况用独显是没有意义, 可以考虑切换到集显.&lt;/p>
+&lt;p>多数时候, 我不直接使用远程桌面, 而是使用 vscode 的远程开发, 优势是隐蔽, 占用带宽小, 几乎是本地开发的体验.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411181116237.png">&lt;/p>
+&lt;p>普通代码编辑时, 约 72w, 与关闭独显前的 120w 相比, 有一定的节能效果.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411221112020.jpg">&lt;/p>
+&lt;p>使用&lt;code>remote ssh&lt;/code>进行远程开发时, 可以用使用脚本关闭独显.&lt;/p>
+&lt;p>脚本保存为&lt;code>switch_dedicate_graphic_cards.ps1&lt;/code>, 使用方法为&lt;code>switch_dedicate_graphic_cards.ps1 off&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Usage: switch_dedicate_graphic_cards.ps1 on|off&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Get parameters&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$switch&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mf">0&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># exit if no parameter is passed&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$switch&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="vm">$null&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Usage: switch_dedicate_graphic_cards.ps1 on|off&amp;#34;&lt;/span> &lt;span class="n">-ForegroundColor&lt;/span> &lt;span class="n">Yellow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Get display devices&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$displayDevices&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Get-CimInstance&lt;/span> &lt;span class="n">-Namespace&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">cimv2&lt;/span> &lt;span class="n">-ClassName&lt;/span> &lt;span class="n">Win32_VideoController&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># If there is no display device or only one display device, exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$displayDevices&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Count&lt;/span> &lt;span class="o">-le&lt;/span> &lt;span class="mf">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;No display device found.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Get dedicated graphic cards&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$dedicatedGraphicCards&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$displayDevices&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">Where-Object&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nv">$_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Description&lt;/span> &lt;span class="o">-like&lt;/span> &lt;span class="s2">&amp;#34;*NVIDIA*&amp;#34;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># If there is no dedicated graphic card, exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$dedicatedGraphicCards&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Count&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="mf">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;No dedicated graphic card found.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># turn dedicated graphic cards on or off&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$switch&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="s2">&amp;#34;on&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$dedicatedGraphicCards&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">ForEach-Object&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="n">pnputil&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">enable-device&lt;/span> &lt;span class="nv">$_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">PNPDeviceID&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Dedicated graphic cards are turned on.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">elseif&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$switch&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="s2">&amp;#34;off&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$dedicatedGraphicCards&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">ForEach-Object&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="n">pnputil&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">disable-device&lt;/span> &lt;span class="nv">$_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">PNPDeviceID&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Dedicated graphic cards are turned off.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Invalid parameter.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Usage: switch_dedicate_graphic_cards.ps1 on|off&amp;#34;&lt;/span> &lt;span class="n">-ForegroundColor&lt;/span> &lt;span class="n">Yellow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
