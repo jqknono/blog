@@ -340,7 +340,7 @@
  &lt;td>&lt;/td>
  &lt;/tr>
  &lt;/tbody>
-&lt;/table></description></item><item><title>如何在集群的负载均衡过程保留请求源IP</title><link>https://blog.jqknono.com/blog/2024/05/27/%E5%A6%82%E4%BD%95%E5%9C%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BF%87%E7%A8%8B%E4%BF%9D%E7%95%99%E8%AF%B7%E6%B1%82%E6%BA%90ip/</link><pubDate>Mon, 27 May 2024 11:52:22 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/27/%E5%A6%82%E4%BD%95%E5%9C%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BF%87%E7%A8%8B%E4%BF%9D%E7%95%99%E8%AF%B7%E6%B1%82%E6%BA%90ip/</guid><description>&lt;h2 id="引言">引言&lt;/h2>
+&lt;/table></description></item><item><title>K8s集群中如何保留负载均衡后的请求源IP</title><link>https://blog.jqknono.com/blog/2024/05/27/k8s%E9%9B%86%E7%BE%A4%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%9D%E7%95%99%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%90%8E%E7%9A%84%E8%AF%B7%E6%B1%82%E6%BA%90ip/</link><pubDate>Mon, 27 May 2024 11:52:22 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/27/k8s%E9%9B%86%E7%BE%A4%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%9D%E7%95%99%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%90%8E%E7%9A%84%E8%AF%B7%E6%B1%82%E6%BA%90ip/</guid><description>&lt;h2 id="引言">引言&lt;/h2>
 &lt;p>&lt;strong>应用部署&lt;/strong>不一定总是简单的&lt;strong>安装&lt;/strong>和&lt;strong>运行&lt;/strong>, 有时候还需要考虑&lt;strong>网络&lt;/strong>的问题. 本文将介绍如何在&lt;strong>k8s集群&lt;/strong>中使服务能获取到请求的&lt;strong>源IP&lt;/strong>.&lt;/p>
 &lt;p>应用提供服务一般依赖输入信息, 输入信息如果不依赖&lt;strong>五元组&lt;/strong>(源 IP, 源端口, 目的 IP, 目的端口, 协议), 那么该服务和&lt;strong>网络耦合性低&lt;/strong>, 不需要关心网络细节.&lt;/p>
 &lt;p>因此, 对多数人来说都没有阅读本文的必要, 如果你对网络感兴趣, 或者希望拓宽一点视野, 可以继续阅读下文, 了解更多的服务场景.&lt;/p>

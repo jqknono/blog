@@ -1,41 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Nov 2024 16:35:29 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>避免博客泄露个人信息</title><link>https://blog.jqknono.com/blog/2024/11/12/%E9%81%BF%E5%85%8D%E5%8D%9A%E5%AE%A2%E6%B3%84%E9%9C%B2%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/</link><pubDate>Tue, 12 Nov 2024 16:35:29 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/12/%E9%81%BF%E5%85%8D%E5%8D%9A%E5%AE%A2%E6%B3%84%E9%9C%B2%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/</guid><description>&lt;p>常用的开源平台 GitHub Pages 比较受欢迎，许多博客使用 GitHub Pages 进行发布。&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Nov 2024 16:35:29 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>避免博客泄露个人信息</title><link>https://blog.jqknono.com/blog/2024/11/12/%E9%81%BF%E5%85%8D%E5%8D%9A%E5%AE%A2%E6%B3%84%E9%9C%B2%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/</link><pubDate>Tue, 12 Nov 2024 16:35:29 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/12/%E9%81%BF%E5%85%8D%E5%8D%9A%E5%AE%A2%E6%B3%84%E9%9C%B2%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/</guid><description>&lt;p>常用的免费开源平台 &lt;strong>GitHub Pages&lt;/strong> 比较受欢迎，许多博客使用 &lt;strong>GitHub Pages&lt;/strong> 进行发布。&lt;br>
 但其免费版要求公开仓库才允许公开访问。而仓库公开后，一些标记为草稿的文章也可以从 Git 仓库访问到。
-尽管公开的文章较少包含敏感信息, 但开源博客的源库可能会泄露个人信息，以下是一些常见的信息泄露关键词，欢迎评论补充。&lt;/p>
+尽管公开的文章较少包含敏感信息, 但开源博客的&lt;strong>源库&lt;/strong>可能会泄露个人信息，以下是一些常见的信息泄露关键词，欢迎评论补充。&lt;/p>
 &lt;h2 id="敏感词">敏感词&lt;/h2>
-&lt;p>中文敏感词：&lt;/p>
-&lt;ul>
-&lt;li>密码&lt;/li>
-&lt;li>账号&lt;/li>
-&lt;li>身份证&lt;/li>
-&lt;li>银行卡&lt;/li>
-&lt;li>支付宝&lt;/li>
-&lt;li>微信&lt;/li>
-&lt;li>手机号&lt;/li>
-&lt;li>家庭住址&lt;/li>
-&lt;li>工作单位&lt;/li>
-&lt;li>社保卡&lt;/li>
-&lt;li>驾驶证&lt;/li>
-&lt;li>护照&lt;/li>
-&lt;li>信用卡&lt;/li>
-&lt;/ul>
-&lt;p>英文关键词：&lt;/p>
-&lt;ul>
-&lt;li>username&lt;/li>
-&lt;li>password&lt;/li>
-&lt;li>account&lt;/li>
-&lt;li>key&lt;/li>
-&lt;li>ini&lt;/li>
-&lt;li>credential&lt;/li>
-&lt;li>card&lt;/li>
-&lt;li>bank&lt;/li>
-&lt;li>alipay&lt;/li>
-&lt;li>wechat&lt;/li>
-&lt;li>passport&lt;/li>
-&lt;li>id&lt;/li>
-&lt;li>phone&lt;/li>
-&lt;li>address&lt;/li>
-&lt;li>company&lt;/li>
-&lt;/ul>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>中文关键词&lt;/th>
+ &lt;th>英文关键词&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>密码&lt;/td>
+ &lt;td>password&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>账号&lt;/td>
+ &lt;td>account&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>身份证&lt;/td>
+ &lt;td>id&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>银行卡&lt;/td>
+ &lt;td>card&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>支付宝&lt;/td>
+ &lt;td>alipay&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>微信&lt;/td>
+ &lt;td>wechat&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>手机号&lt;/td>
+ &lt;td>phone&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>家庭住址&lt;/td>
+ &lt;td>address&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>工作单位&lt;/td>
+ &lt;td>company&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>社保卡&lt;/td>
+ &lt;td>card&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>驾驶证&lt;/td>
+ &lt;td>driver&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>护照&lt;/td>
+ &lt;td>passport&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>信用卡&lt;/td>
+ &lt;td>credit&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>密钥&lt;/td>
+ &lt;td>key&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>配置文件&lt;/td>
+ &lt;td>ini&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>凭证&lt;/td>
+ &lt;td>credential&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>用户名&lt;/td>
+ &lt;td>username&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
 &lt;p>正则搜索：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="o">(&lt;/span>密码&lt;span class="p">|&lt;/span>账号&lt;span class="p">|&lt;/span>身份证&lt;span class="p">|&lt;/span>银行卡&lt;span class="p">|&lt;/span>支付宝&lt;span class="p">|&lt;/span>微信&lt;span class="p">|&lt;/span>手机号&lt;span class="p">|&lt;/span>家庭住址&lt;span class="p">|&lt;/span>工作单位&lt;span class="p">|&lt;/span>社保卡&lt;span class="p">|&lt;/span>驾驶证&lt;span class="p">|&lt;/span>护照&lt;span class="p">|&lt;/span>信用卡&lt;span class="p">|&lt;/span>username&lt;span class="p">|&lt;/span>password&lt;span class="p">|&lt;/span>passwd&lt;span class="p">|&lt;/span>account&lt;span class="p">|&lt;/span>key&lt;span class="se">\s&lt;/span>*:&lt;span class="p">|&lt;/span>&lt;span class="se">\.&lt;/span>ini&lt;span class="p">|&lt;/span>credential&lt;span class="p">|&lt;/span>card&lt;span class="p">|&lt;/span>bank&lt;span class="p">|&lt;/span>alipay&lt;span class="p">|&lt;/span>wechat&lt;span class="p">|&lt;/span>passport&lt;span class="p">|&lt;/span>id&lt;span class="se">\s&lt;/span>*:&lt;span class="p">|&lt;/span>phone&lt;span class="p">|&lt;/span>address&lt;span class="p">|&lt;/span>company&lt;span class="o">)&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果使用 &lt;strong>VSCode&lt;/strong> 作为博客编辑器，可以使用正则搜索快速进行全站搜索，检查可能泄露信息的位置。&lt;/p>
@@ -43,17 +87,11 @@
 &lt;h2 id="git-历史">Git 历史&lt;/h2>
 &lt;p>Git 历史可能包含信息泄露，通过简单的脚本即可扫描开源博客的历史提交信息。&lt;/p>
 &lt;p>如果是自己的仓库，可以通过以下方式清除历史。如果需要保留历史信息，则不要清除。&lt;/p>
-&lt;p>请务必确认理解命令含义，谨慎操作，操作前请备份重要数据。&lt;/p>
+&lt;p>请务必确认理解命令含义，它会清理历史, 请谨慎操作，操作前请备份重要数据。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">git reset --soft &lt;span class="si">${&lt;/span>&lt;span class="nv">first&lt;/span>&lt;span class="p">-commit&lt;/span>&lt;span class="si">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push -f
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push --force
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="其它扫描仓库方式">其它扫描仓库方式&lt;/h2>
-&lt;p>&lt;a href="https://github.com/trufflesecurity/trufflehog">https://github.com/trufflesecurity/trufflehog&lt;/a>&lt;/p>
-&lt;ul>
-&lt;li>Find, verify, and analyze leaked credentials&lt;/li>
-&lt;li>&lt;code>17.2k&lt;/code> stars&lt;/li>
-&lt;li>&lt;code>1.7k&lt;/code> forks&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img alt="img" src="https://camo.githubusercontent.com/69fd1cfe00ae854ddc7a638f1a42be3f563549f252971f3307ff45e2d1f1e164/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f74727566666c652d64656d6f732f6e6f6e2d696e7465726163746976652e737667">&lt;/p></description></item><item><title>snort</title><link>https://blog.jqknono.com/blog/2024/06/28/snort/</link><pubDate>Fri, 28 Jun 2024 19:03:59 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/snort/</guid><description>&lt;ul>
+&lt;p>&lt;a href="https://github.com/trufflesecurity/trufflehog">https://github.com/trufflesecurity/trufflehog&lt;/a>&lt;/p></description></item><item><title>snort</title><link>https://blog.jqknono.com/blog/2024/06/28/snort/</link><pubDate>Fri, 28 Jun 2024 19:03:59 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/snort/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> snort&lt;/li>
 &lt;/ul>
 &lt;h1 id="snort">Snort&lt;/h1>
