@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>评测 on Nono Blogs</title><link>https://blog.jqknono.com/categories/%E8%AF%84%E6%B5%8B/</link><description>Recent content in 评测 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 13 Nov 2024 14:41:23 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/categories/%E8%AF%84%E6%B5%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>社区规则分析</title><link>https://blog.jqknono.com/blog/%E8%B0%83%E7%A0%94/%E7%A4%BE%E5%8C%BA%E8%A7%84%E5%88%99%E5%88%86%E6%9E%90/</link><pubDate>Wed, 13 Nov 2024 14:41:23 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E8%B0%83%E7%A0%94/%E7%A4%BE%E5%8C%BA%E8%A7%84%E5%88%99%E5%88%86%E6%9E%90/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>评测 on Nono Blogs</title><link>https://blog.jqknono.com/categories/%E8%AF%84%E6%B5%8B/</link><description>Recent content in 评测 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 04 Mar 2025 11:22:40 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/categories/%E8%AF%84%E6%B5%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Copilot付费模型对比</title><link>https://blog.jqknono.com/blog/2025/03/04/github-copilot%E4%BB%98%E8%B4%B9%E6%A8%A1%E5%9E%8B%E5%AF%B9%E6%AF%94/</link><pubDate>Tue, 04 Mar 2025 11:22:40 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/03/04/github-copilot%E4%BB%98%E8%B4%B9%E6%A8%A1%E5%9E%8B%E5%AF%B9%E6%AF%94/</guid><description>&lt;p>&lt;img alt="7种模型" src="https://img1.techfetch.dev/blog/202503041205012.png">&lt;/p>
+&lt;p>Github Copilot 目前提供了 7 种模型,&lt;/p>
+&lt;ul>
+&lt;li>Claude 3.5 Sonnet&lt;/li>
+&lt;li>Claude 3.7 Sonnet&lt;/li>
+&lt;li>Claude 3.7 Sonnet Thinking&lt;/li>
+&lt;li>Gemini 2.0 Flash&lt;/li>
+&lt;li>GPT-4o&lt;/li>
+&lt;li>o1&lt;/li>
+&lt;li>o3-mini&lt;/li>
+&lt;/ul>
+&lt;p>官方缺少对这 7 种模型的介绍, 本文简略的描述它们在各领域的评分, 以区分它们擅长的领域, 方便读者在处理特定问题时, 切换到更合适的模型.&lt;/p>
+&lt;h2 id="模型对比">模型对比&lt;/h2>
+&lt;p>基于公开评测数据（部分数据为估算与不同来源折算后得出）的多维度对比表，涵盖编码（SWE‑Bench Verified）、数学（AIME’24）和推理（GPQA Diamond）三个关键指标：&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>模型&lt;/th>
+ &lt;th>编码表现&lt;br>(SWE‑Bench Verified)&lt;/th>
+ &lt;th>数学表现&lt;br>(AIME'24)&lt;/th>
+ &lt;th>推理表现&lt;br>(GPQA Diamond)&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Claude 3.5 Sonnet&lt;/td>
+ &lt;td>70.3%&lt;/td>
+ &lt;td>49.0%&lt;/td>
+ &lt;td>77.0%&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Claude 3.7 Sonnet (标准模式)&lt;/td>
+ &lt;td>≈83.7%&lt;br>(提高 ≈19%)&lt;/td>
+ &lt;td>≈58.3%&lt;br>(提高 ≈19%)&lt;/td>
+ &lt;td>≈91.6%&lt;br>(提高 ≈19%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Claude 3.7 Sonnet Thinking&lt;/td>
+ &lt;td>≈83.7%&lt;br>(与标准相近)&lt;/td>
+ &lt;td>≈64.0%&lt;br>(思考模式进一步提升)&lt;/td>
+ &lt;td>≈95.0%&lt;br>(更强推理能力)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Gemini 2.0 Flash&lt;/td>
+ &lt;td>≈65.0%&lt;br>(估算)&lt;/td>
+ &lt;td>≈45.0%&lt;br>(估算)&lt;/td>
+ &lt;td>≈75.0%&lt;br>(估算)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>GPT‑4o&lt;/td>
+ &lt;td>38.0%&lt;/td>
+ &lt;td>36.7%&lt;/td>
+ &lt;td>71.4%&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>o1&lt;/td>
+ &lt;td>48.9%&lt;/td>
+ &lt;td>83.3%&lt;/td>
+ &lt;td>78.0%&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>o3‑mini&lt;/td>
+ &lt;td>49.3%&lt;/td>
+ &lt;td>87.3%&lt;/td>
+ &lt;td>79.7%&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>说明：&lt;/p></description></item><item><title>社区规则分析</title><link>https://blog.jqknono.com/blog/%E8%B0%83%E7%A0%94/%E7%A4%BE%E5%8C%BA%E8%A7%84%E5%88%99%E5%88%86%E6%9E%90/</link><pubDate>Wed, 13 Nov 2024 14:41:23 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E8%B0%83%E7%A0%94/%E7%A4%BE%E5%8C%BA%E8%A7%84%E5%88%99%E5%88%86%E6%9E%90/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 社区规则分析&lt;/li>
 &lt;/ul></description></item><item><title>多平台内容发布工具--蚁小二体验</title><link>https://blog.jqknono.com/blog/2024/05/09/%E5%A4%9A%E5%B9%B3%E5%8F%B0%E5%86%85%E5%AE%B9%E5%8F%91%E5%B8%83%E5%B7%A5%E5%85%B7--%E8%9A%81%E5%B0%8F%E4%BA%8C%E4%BD%93%E9%AA%8C/</link><pubDate>Thu, 09 May 2024 20:47:38 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/09/%E5%A4%9A%E5%B9%B3%E5%8F%B0%E5%86%85%E5%AE%B9%E5%8F%91%E5%B8%83%E5%B7%A5%E5%85%B7--%E8%9A%81%E5%B0%8F%E4%BA%8C%E4%BD%93%E9%AA%8C/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>最近想写点东西扩展下收入类别, 四处调研了下创作者平台, 看看是否能靠文字赚点钱, 实在不行赚点金币也是好的.&lt;/p>

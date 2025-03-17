@@ -1,4 +1,119 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网络 on Nono Blogs</title><link>https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E7%BD%91%E7%BB%9C/</link><description>Recent content in 网络 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 17:21:06 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>电信IPv6的一些特征</title><link>https://blog.jqknono.com/blog/2024/06/28/%E7%94%B5%E4%BF%A1ipv6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81/</link><pubDate>Fri, 28 Jun 2024 17:21:06 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E7%94%B5%E4%BF%A1ipv6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网络 on Nono Blogs</title><link>https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E7%BD%91%E7%BB%9C/</link><description>Recent content in 网络 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Feb 2025 12:45:22 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>几个更安全使用公网IPv6的方法</title><link>https://blog.jqknono.com/blog/2025/02/28/%E5%87%A0%E4%B8%AA%E6%9B%B4%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E5%85%AC%E7%BD%91ipv6%E7%9A%84%E6%96%B9%E6%B3%95/</link><pubDate>Fri, 28 Feb 2025 12:45:22 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/28/%E5%87%A0%E4%B8%AA%E6%9B%B4%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E5%85%AC%E7%BD%91ipv6%E7%9A%84%E6%96%B9%E6%B3%95/</guid><description>&lt;p>有些人会有使用公网 IPv6 回家的需求, 不同于 tailscale/zerotier 等 VPN 需要内网穿透打洞来建立直连的方式, IPv6 回家就是直连, 手机蜂窝网络大多数时候都是有 IPv6 的, 回家非常方便.&lt;/p>
+&lt;p>我之前分享过一篇文章&lt;a href="https://www.v2ex.com/t/1112630">家庭宽带使用常见 DDns 子域名可能会使电信宽带服务降级&lt;/a>, 描述使用 IPv6 时运营商挖的一个坑, 简短来说就是域名会被扫, 暴漏自己的域名等同于暴露 IPv6, 因此可能会被扫描, 扫到服务后入站连接一多就降级宽带服务.&lt;/p>
+&lt;p>那篇分享里只提到了域名扫描, 没有提到&lt;code>网络空间扫描&lt;/code>, 这种扫描不管什么暴露的信息, 直接遍历 IP 池开扫, 这种情况较难防.&lt;/p>
+&lt;p>&lt;code>网络空间扫描&lt;/code>通常包括以下几个方面：&lt;/p>
+&lt;ul>
+&lt;li>IP 存活性探测：利用 ARP、ICMP、TCP 等协议来识别在线主机。&lt;/li>
+&lt;li>端口/服务探测：通过端口扫描筛选出在线主机的开放端口，并获取目标主机的服务信息、版本信息以及操作系统信息。&lt;/li>
+&lt;li>操作系统探测：通过分析响应数据包来推断目标主机的操作系统类型和版本。&lt;/li>
+&lt;li>流量采集：监控网络流量以发现异常行为或攻击模式。&lt;/li>
+&lt;li>别名解析：针对拥有多个 IP 地址的路由器，建立 IP 地址与路由器之间的映射关系。&lt;/li>
+&lt;li>DNS 探测：通过 IP 地址反向解析建立 IP 地址与域名之间的对应关系。&lt;/li>
+&lt;/ul>
+&lt;p>这里分享几个避免被网络空间扫描扫到的方法:&lt;/p>
+&lt;ol>
+&lt;li>内网 DNS 服务器不返回 AAAA 记录&lt;/li>
+&lt;li>内网服务仅允许通过域名访问, 不允许直接通过 IP 访问&lt;/li>
+&lt;li>使用私有 DNS 服务&lt;a href="https://www.adguardprivate.com">AdGuardPrivate&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h2 id="内网-dns-服务器不返回-aaaa-记录">内网 DNS 服务器不返回 AAAA 记录&lt;/h2>
+&lt;p>上网时上到各式各样的网站, 这样自然的访问就可以暴露源 IPv6, 对方服务器可以获取源 IPv6, 用户侧如果没开防火墙的话, 这个 IPv6 就可以放到网络空间扫描的优先遍历池里.&lt;/p></description></item><item><title>使用常见DDns子域名可能导致电信宽带服务降级</title><link>https://blog.jqknono.com/blog/2025/02/19/%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%81ddns%E5%AD%90%E5%9F%9F%E5%90%8D%E5%8F%AF%E8%83%BD%E5%AF%BC%E8%87%B4%E7%94%B5%E4%BF%A1%E5%AE%BD%E5%B8%A6%E6%9C%8D%E5%8A%A1%E9%99%8D%E7%BA%A7/</link><pubDate>Wed, 19 Feb 2025 13:06:08 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/19/%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%81ddns%E5%AD%90%E5%9F%9F%E5%90%8D%E5%8F%AF%E8%83%BD%E5%AF%BC%E8%87%B4%E7%94%B5%E4%BF%A1%E5%AE%BD%E5%B8%A6%E6%9C%8D%E5%8A%A1%E9%99%8D%E7%BA%A7/</guid><description>&lt;p>IPv6 断连和打洞失败问题折腾了三个多月, 终于确认原因, 分享给大家.&lt;/p>
+&lt;h2 id="第一次发帖求助-ipv6-断连问题">第一次发帖求助 IPv6 断连问题&lt;/h2>
+&lt;!-- https://www.v2ex.com/t/1088217 -->
+&lt;p>IPv6 一直可以正常访问, 没有修改设置的情况下, 且设备均有独立 ipv6, 但连不通 ipv6 网络.&lt;/p>
+&lt;p>&lt;code>curl 6.ipw.cn&lt;/code> 拿不到返回, &lt;code>ping6&lt;/code> 和 &lt;code>traceroute6 2400:3200::1&lt;/code> 都中断.&lt;/p>
+&lt;p>光猫桥接路由, 可以拿到路由器的 ipv6 地址, 这是可以访问 ipv6 的地址.&lt;/p>
+&lt;p>可以拿到&lt;code>/56&lt;/code> 前缀, 路由器下设备都可以拿到分配的 ipv6 地址 &lt;code>240e:36f:15c3:3200::/56&lt;/code>, 但都无法连接到 ipv6 网站.&lt;/p>
+&lt;p>怀疑是运营商没有建好 &lt;code>240e:36f:15c3:3200::&lt;/code>的路由, 但无法确认.&lt;/p>
+&lt;p>网友说可能是 PCDN 上传流量过大导致, 但上传流量很小, 也没有开启 PCDN.&lt;/p>
+&lt;p>也可能是使用了 Cloudflare 和 Aliyun ESA 反代导致.&lt;/p>
+&lt;h2 id="第二次发帖确认直接原因">第二次发帖确认直接原因&lt;/h2>
+&lt;!-- https://www.v2ex.com/t/1111168 -->
+&lt;p>确认部分地区的电信运营商会因为 IPv6 入站 http/https 链接较多而降级服务, 表现为:&lt;/p>
+&lt;ul>
+&lt;li>假 IPv6, ipv6 可以获得 &lt;code>/56&lt;/code> 前缀, 各设备 IPv6 分配正常, 但 tracert 缺路由, 导致 ipv6 实际无法联网.&lt;/li>
+&lt;li>假穿墙, tailscale 测试连接显示是直连, 但延迟超高, 实际网速极慢.&lt;/li>
+&lt;/ul>
+&lt;p>关闭 Cloudflare/Aliyun ESA 的反代, 经过多次重启路由后, 可以恢复 IPv6 和真直连.&lt;/p></description></item><item><title>家庭网络反向代理的合规性探讨</title><link>https://blog.jqknono.com/blog/2025/02/17/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%9A%84%E5%90%88%E8%A7%84%E6%80%A7%E6%8E%A2%E8%AE%A8/</link><pubDate>Mon, 17 Feb 2025 15:04:23 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/17/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%9A%84%E5%90%88%E8%A7%84%E6%80%A7%E6%8E%A2%E8%AE%A8/</guid><description>&lt;h1 id="背景">背景&lt;/h1>
+&lt;p>约 90 天前，我遇到了湖北电信 IPv6 无法连接的问题。经过长期观察和分析，现总结出以下经验。&lt;/p>
+&lt;h1 id="问题分析">问题分析&lt;/h1>
+&lt;p>最初怀疑的两个可能原因：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>PCDN 使用检测&lt;/p>
+&lt;ul>
+&lt;li>虽未主动使用 PCDN&lt;/li>
+&lt;li>仅有少量 BT 下载行为&lt;/li>
+&lt;li>已实施上传限速，但问题仍然存在&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>家庭服务器作为博客源站&lt;/p>
+&lt;ul>
+&lt;li>通过 Cloudflare 回源规则指定端口&lt;/li>
+&lt;li>可能被运营商判定为&amp;quot;商用行为&amp;quot;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>经过三个月的验证，问题更可能源于向公网开放 HTTP/HTTPS 服务端口。&lt;/p>
+&lt;h1 id="具体表现">具体表现&lt;/h1>
+&lt;ol>
+&lt;li>
+&lt;p>IPv6 状态异常：&lt;/p>
+&lt;ul>
+&lt;li>可获得 /56 前缀&lt;/li>
+&lt;li>设备能获取全局 IPv6 地址&lt;/li>
+&lt;li>但无法访问外网&lt;/li>
+&lt;li>仅光猫桥接的路由器可正常使用 IPv6&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Tailscale 连接异常：&lt;/p>
+&lt;ul>
+&lt;li>源站服务器显示直连但延迟异常（约 400ms）&lt;/li>
+&lt;li>其他设备经中继连接，反而延迟更低（约 80ms）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="运营商策略分析">运营商策略分析&lt;/h1>
+&lt;p>部分地区电信运营商对频繁入站 HTTP/HTTPS 连接采取服务降级措施：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>IPv6 服务降级&lt;/p>
+&lt;ul>
+&lt;li>分配地址正常&lt;/li>
+&lt;li>路由表缺失&lt;/li>
+&lt;li>实际无法联网&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>P2P 连接限制&lt;/p>
+&lt;ul>
+&lt;li>Tailscale 显示直连&lt;/li>
+&lt;li>实际延迟高&lt;/li>
+&lt;li>带宽受限&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="解决方案">解决方案&lt;/h1>
+&lt;ol>
+&lt;li>
+&lt;p>关闭反向代理服务：&lt;/p>
+&lt;ul>
+&lt;li>停用 Cloudflare/阿里云 ESA 反代&lt;/li>
+&lt;li>多次重启路由器后可恢复正常&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>防范域名扫描：
+避免使用以下常见子域名：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">- home.example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- ddns.example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- dev.example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- test.example.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>最佳实践：&lt;/p></description></item><item><title>电信IPv6的一些特征</title><link>https://blog.jqknono.com/blog/2024/06/28/%E7%94%B5%E4%BF%A1ipv6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81/</link><pubDate>Fri, 28 Jun 2024 17:21:06 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E7%94%B5%E4%BF%A1ipv6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81/</guid><description>&lt;ul>
 &lt;li>
 &lt;p>&lt;input disabled="" type="checkbox"> 电信IPv6的一些特征&lt;/p>
 &lt;/li>

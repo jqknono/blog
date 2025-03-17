@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on Nono Blogs</title><link>https://blog.jqknono.com/categories/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Dec 2024 12:09:08 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>设备</title><link>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/%E8%AE%BE%E5%A4%87/</link><pubDate>Thu, 05 Dec 2024 12:09:08 +0800</pubDate><guid>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/%E8%AE%BE%E5%A4%87/</guid><description>&lt;p>这里讨论可以使用哪些设备承载家用服务.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on Nono Blogs</title><link>https://blog.jqknono.com/categories/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 17 Mar 2025 12:16:33 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>AI辅助编程</title><link>https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/ai%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B/</link><pubDate>Mon, 17 Mar 2025 12:16:33 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/ai%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B/</guid><description>&lt;p>拥抱变化.&lt;/p></description></item><item><title>_index</title><link>https://blog.jqknono.com/docs/%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1/</link><pubDate>Mon, 17 Feb 2025 18:13:08 +0800</pubDate><guid>https://blog.jqknono.com/docs/%E5%85%AC%E5%85%B1%E6%9C%8D%E5%8A%A1/</guid><description>&lt;p>需要首先说明, 中国大陆的家庭网络在签订服务时都有协议, 禁止商用. 实际执行中, 并不管是否商用, 入站 http/https 连接较多(有人说是 250 个)时, 即降级服务, 带来很多影响.&lt;/p>
+&lt;p>所以如果要提供公共服务, 需要视为商用服务, 最好租一个云服务商的 VPS, 用于提供公共服务.&lt;/p></description></item><item><title>设备</title><link>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/%E8%AE%BE%E5%A4%87/</link><pubDate>Thu, 05 Dec 2024 12:09:08 +0800</pubDate><guid>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/%E8%AE%BE%E5%A4%87/</guid><description>&lt;p>这里讨论可以使用哪些设备承载家用服务.&lt;/p>
 &lt;h2 id="硬件平台">硬件平台&lt;/h2>
 &lt;p>家庭用设备有很多选择, 可以找一台退役的笔记本电脑, 或者闲置的台式机, 或者在电商搜开发板, NAS, 软路由, Mac 等, 这些都可以承载服务.&lt;/p>
 &lt;p>硬件上的选择, 在 2024 年的今天不用再拘泥于&lt;strong>x86&lt;/strong>平台, &lt;strong>ARM&lt;/strong>平台已经成熟, 价格便宜, 性能足够, 能耗低, 且生态丰富, 适合家庭使用, 如果没有必须运行远古软件的需求, &lt;strong>ARM&lt;/strong>平台是个不错的选择.&lt;/p>
@@ -522,7 +523,234 @@ Windows 的安装参考&lt;a href="https://massgrave.dev">massgrave.dev&lt;/a>.&
 &lt;li>[&lt;a href="docker%E7%BD%91%E7%BB%9C" title="docker网络">docker网络&lt;/a>]&lt;/li>
 &lt;/ul></description></item><item><title>Copilot系列</title><link>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/ai/copilot%E7%B3%BB%E5%88%97/</link><pubDate>Fri, 28 Jun 2024 15:58:17 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/ai/copilot%E7%B3%BB%E5%88%97/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> Copilot系列&lt;/li>
-&lt;/ul></description></item><item><title>Windows桥接时的IPv6问题</title><link>https://blog.jqknono.com/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/</link><pubDate>Sat, 06 May 2023 11:47:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/</guid><description>&lt;ul>
+&lt;/ul></description></item><item><title>Copilot使用入门</title><link>https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</link><pubDate>Fri, 28 Jun 2024 15:56:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</guid><description>&lt;p>&lt;a href="https://qingteng.feishu.cn/minutes/obcnj9f86gvr3o863mb88p99">视频分享&lt;/a>&lt;/p>
+&lt;!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#copilot-labs-能力">Copilot Labs 能力&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#copilot-是什么">Copilot 是什么&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#理解">理解&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#建议">建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#调试">调试&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#检视">检视&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#重构">重构&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#文档">文档&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#使用-custom-扩展-copilot-边界">使用 Custom 扩展 Copilot 边界&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#获得更专业的建议">获得更专业的建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#纯文本的建议">纯文本的建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#设置项">设置项&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#数据安全">数据安全&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#常见问题">常见问题&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /TOC -->
+&lt;p>GitHub Copilot 是一款基于机器学习的代码补全工具，能帮助你更快速地编写代码并提升编码效率。&lt;/p>
+&lt;h2 id="copilot-labs-能力">Copilot Labs 能力&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>能力&lt;/th>
+ &lt;th>说明&lt;/th>
+ &lt;th>备注&lt;/th>
+ &lt;th>example&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>Explain&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的解释说明&lt;/td>
+ &lt;td>有高级选项定制提示词, 更清晰说明自己的需求&lt;/td>
+ &lt;td>&lt;img alt="picture 1" src="https://s2.loli.net/2023/05/06/BHCu27UmD19Nwit.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Show example code&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的示例代码&lt;/td>
+ &lt;td>有高级选项定制&lt;/td>
+ &lt;td>&lt;img alt="picture 2" src="https://s2.loli.net/2023/05/06/9cCew5yvSjrX2DF.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Language Translation&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的翻译&lt;/td>
+ &lt;td>此翻译是基于编程语言的翻译, 比如&lt;em>C++ -&amp;gt; Python&lt;/em>&lt;/td>
+ &lt;td>&lt;img alt="picture 3" src="https://s2.loli.net/2023/05/06/1SIolbdY3fCimPx.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Readable&lt;/code>&lt;/td>
+ &lt;td>提高一段代码的可读性&lt;/td>
+ &lt;td>不是简单的格式化, 是真正的可读性提升&lt;/td>
+ &lt;td>&lt;img alt="picture 4" src="https://s2.loli.net/2023/05/06/pYxH6isGqr7Sh14.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Add Types&lt;/code>&lt;/td>
+ &lt;td>类型推测&lt;/td>
+ &lt;td>将自动类型的变量改为明确的类型&lt;/td>
+ &lt;td>&lt;img alt="picture 5" src="https://s2.loli.net/2023/05/06/rDeh9dtjbPHl8yG.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Fix bug&lt;/code>&lt;/td>
+ &lt;td>修复 bug&lt;/td>
+ &lt;td>修复一些常见的 bug&lt;/td>
+ &lt;td>&lt;img alt="picture 6" src="https://s2.loli.net/2023/05/06/h8AfL65qSOn9BJ7.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Debug&lt;/code>&lt;/td>
+ &lt;td>使代码更容易调试&lt;/td>
+ &lt;td>增加打印日志, 或增加临时变量以用于断点&lt;/td>
+ &lt;td>&lt;img alt="picture 7" src="https://s2.loli.net/2023/05/06/adW8QO3yfTZpx5o.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Clean&lt;/code>&lt;/td>
+ &lt;td>清理代码&lt;/td>
+ &lt;td>清理代码的无用部分, 注释/打印/废弃代码等&lt;/td>
+ &lt;td>&lt;img alt="picture 8" src="https://s2.loli.net/2023/05/06/kGdpSLoOtJuBvmf.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>List steps&lt;/code>&lt;/td>
+ &lt;td>列出代码的步骤&lt;/td>
+ &lt;td>有的代码的执行严格依赖顺序, 需要明确注释其执行顺序&lt;/td>
+ &lt;td>&lt;img alt="picture 9" src="https://s2.loli.net/2023/05/06/gXM19C2NBVYpIKO.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Make robust&lt;/code>&lt;/td>
+ &lt;td>使代码更健壮&lt;/td>
+ &lt;td>考虑边界/多线程/重入等&lt;/td>
+ &lt;td>&lt;img alt="picture 10" src="https://s2.loli.net/2023/05/06/eMawki5IySGKf4U.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Chunk&lt;/code>&lt;/td>
+ &lt;td>将代码分块&lt;/td>
+ &lt;td>一般希望函数有效行数&amp;lt;=50, 嵌套&amp;lt;=4, 扇出&amp;lt;=7, 圈复杂度&amp;lt;=20&lt;/td>
+ &lt;td>&lt;img alt="picture 11" src="https://s2.loli.net/2023/05/06/x7LRskn52iTY8b1.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Document&lt;/code>&lt;/td>
+ &lt;td>生成代码的文档&lt;/td>
+ &lt;td>通过写注释生成代码, 还可以通过代码生成注释和文档&lt;/td>
+ &lt;td>&lt;img alt="picture 12" src="https://s2.loli.net/2023/05/06/HPJkC7zp518w3fI.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Custom&lt;/code>&lt;/td>
+ &lt;td>自定义操作&lt;/td>
+ &lt;td>告诉 copilot 如何操作你的代码&lt;/td>
+ &lt;td>&lt;img alt="picture 13" src="https://s2.loli.net/2023/05/06/ro3ziwAekLS7qyt.png">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="copilot-是什么">Copilot 是什么&lt;/h2>
+&lt;p>&lt;a href="https://github.com/features/copilot/">官网&lt;/a> 的介绍简单明了：&lt;strong>Your AI pair programmer&lt;/strong> —— 你的结对程序员&lt;/p></description></item><item><title>Copilot使用入门</title><link>https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</link><pubDate>Fri, 28 Jun 2024 15:56:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 文档已过期&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://qingteng.feishu.cn/minutes/obcnj9f86gvr3o863mb88p99">视频分享&lt;/a>&lt;/p>
+&lt;!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#copilot-labs-能力">Copilot Labs 能力&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#copilot-是什么">Copilot 是什么&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#理解">理解&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#建议">建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#调试">调试&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#检视">检视&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#重构">重构&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#文档">文档&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#使用-custom-扩展-copilot-边界">使用 Custom 扩展 Copilot 边界&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#获得更专业的建议">获得更专业的建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#纯文本的建议">纯文本的建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#设置项">设置项&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#数据安全">数据安全&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#常见问题">常见问题&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /TOC -->
+&lt;p>GitHub Copilot 是一款基于机器学习的代码补全工具，能帮助你更快速地编写代码并提升编码效率。&lt;/p>
+&lt;h2 id="copilot-labs-能力">Copilot Labs 能力&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>能力&lt;/th>
+ &lt;th>说明&lt;/th>
+ &lt;th>备注&lt;/th>
+ &lt;th>example&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>Explain&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的解释说明&lt;/td>
+ &lt;td>有高级选项定制提示词, 更清晰说明自己的需求&lt;/td>
+ &lt;td>&lt;img alt="picture 1" src="https://s2.loli.net/2023/05/06/BHCu27UmD19Nwit.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Show example code&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的示例代码&lt;/td>
+ &lt;td>有高级选项定制&lt;/td>
+ &lt;td>&lt;img alt="picture 2" src="https://s2.loli.net/2023/05/06/9cCew5yvSjrX2DF.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Language Translation&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的翻译&lt;/td>
+ &lt;td>此翻译是基于编程语言的翻译, 比如&lt;em>C++ -&amp;gt; Python&lt;/em>&lt;/td>
+ &lt;td>&lt;img alt="picture 3" src="https://s2.loli.net/2023/05/06/1SIolbdY3fCimPx.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Readable&lt;/code>&lt;/td>
+ &lt;td>提高一段代码的可读性&lt;/td>
+ &lt;td>不是简单的格式化, 是真正的可读性提升&lt;/td>
+ &lt;td>&lt;img alt="picture 4" src="https://s2.loli.net/2023/05/06/pYxH6isGqr7Sh14.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Add Types&lt;/code>&lt;/td>
+ &lt;td>类型推测&lt;/td>
+ &lt;td>将自动类型的变量改为明确的类型&lt;/td>
+ &lt;td>&lt;img alt="picture 5" src="https://s2.loli.net/2023/05/06/rDeh9dtjbPHl8yG.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Fix bug&lt;/code>&lt;/td>
+ &lt;td>修复 bug&lt;/td>
+ &lt;td>修复一些常见的 bug&lt;/td>
+ &lt;td>&lt;img alt="picture 6" src="https://s2.loli.net/2023/05/06/h8AfL65qSOn9BJ7.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Debug&lt;/code>&lt;/td>
+ &lt;td>使代码更容易调试&lt;/td>
+ &lt;td>增加打印日志, 或增加临时变量以用于断点&lt;/td>
+ &lt;td>&lt;img alt="picture 7" src="https://s2.loli.net/2023/05/06/adW8QO3yfTZpx5o.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Clean&lt;/code>&lt;/td>
+ &lt;td>清理代码&lt;/td>
+ &lt;td>清理代码的无用部分, 注释/打印/废弃代码等&lt;/td>
+ &lt;td>&lt;img alt="picture 8" src="https://s2.loli.net/2023/05/06/kGdpSLoOtJuBvmf.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>List steps&lt;/code>&lt;/td>
+ &lt;td>列出代码的步骤&lt;/td>
+ &lt;td>有的代码的执行严格依赖顺序, 需要明确注释其执行顺序&lt;/td>
+ &lt;td>&lt;img alt="picture 9" src="https://s2.loli.net/2023/05/06/gXM19C2NBVYpIKO.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Make robust&lt;/code>&lt;/td>
+ &lt;td>使代码更健壮&lt;/td>
+ &lt;td>考虑边界/多线程/重入等&lt;/td>
+ &lt;td>&lt;img alt="picture 10" src="https://s2.loli.net/2023/05/06/eMawki5IySGKf4U.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Chunk&lt;/code>&lt;/td>
+ &lt;td>将代码分块&lt;/td>
+ &lt;td>一般希望函数有效行数&amp;lt;=50, 嵌套&amp;lt;=4, 扇出&amp;lt;=7, 圈复杂度&amp;lt;=20&lt;/td>
+ &lt;td>&lt;img alt="picture 11" src="https://s2.loli.net/2023/05/06/x7LRskn52iTY8b1.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Document&lt;/code>&lt;/td>
+ &lt;td>生成代码的文档&lt;/td>
+ &lt;td>通过写注释生成代码, 还可以通过代码生成注释和文档&lt;/td>
+ &lt;td>&lt;img alt="picture 12" src="https://s2.loli.net/2023/05/06/HPJkC7zp518w3fI.png">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Custom&lt;/code>&lt;/td>
+ &lt;td>自定义操作&lt;/td>
+ &lt;td>告诉 copilot 如何操作你的代码&lt;/td>
+ &lt;td>&lt;img alt="picture 13" src="https://s2.loli.net/2023/05/06/ro3ziwAekLS7qyt.png">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="copilot-是什么">Copilot 是什么&lt;/h2>
+&lt;p>&lt;a href="https://github.com/features/copilot/">官网&lt;/a> 的介绍简单明了：&lt;strong>Your AI pair programmer&lt;/strong> —— 你的结对程序员&lt;/p></description></item><item><title>Windows桥接时的IPv6问题</title><link>https://blog.jqknono.com/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/</link><pubDate>Sat, 06 May 2023 11:47:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/</guid><description>&lt;ul>
 &lt;li>
 &lt;p>&lt;input disabled="" type="checkbox"> Windows桥接时的IPv6问题&lt;/p>
 &lt;/li>
