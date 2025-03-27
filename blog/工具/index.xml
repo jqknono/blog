@@ -1,4 +1,115 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on Nono Blogs</title><link>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 18 Nov 2024 10:22:16 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>关闭独显以省电</title><link>https://blog.jqknono.com/blog/2024/11/18/%E5%85%B3%E9%97%AD%E7%8B%AC%E6%98%BE%E4%BB%A5%E7%9C%81%E7%94%B5/</link><pubDate>Mon, 18 Nov 2024 10:22:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/18/%E5%85%B3%E9%97%AD%E7%8B%AC%E6%98%BE%E4%BB%A5%E7%9C%81%E7%94%B5/</guid><description>&lt;p>这篇文分享给台式机很少关机, 经常远程回家中的台式机上工作的朋友.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on Nono Blogs</title><link>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 27 Mar 2025 17:09:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>思维工具</title><link>https://blog.jqknono.com/blog/2025/03/27/%E6%80%9D%E7%BB%B4%E5%B7%A5%E5%85%B7/</link><pubDate>Thu, 27 Mar 2025 17:09:13 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/03/27/%E6%80%9D%E7%BB%B4%E5%B7%A5%E5%85%B7/</guid><description>&lt;h2 id="一基础逻辑思维方法">&lt;strong>一、基础逻辑思维方法&lt;/strong>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>归纳与演绎&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>归纳&lt;/strong>：从个别案例总结普遍规律（如从“黑马、白马”归纳出“马”的概念）。&lt;/li>
+&lt;li>&lt;strong>演绎&lt;/strong>：从普遍规律推导具体结论（如根据“马”的定义推导出“黑马”“白马”）。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：科学研究、数据分析、制定规则。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>分析与综合&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>分析&lt;/strong>：将整体拆解为部分研究（如分解光的波粒二象性）。&lt;/li>
+&lt;li>&lt;strong>综合&lt;/strong>：将部分整合为整体理解（如结合光的波动性和粒子性提出新理论）。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：复杂问题拆解、系统设计。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>因果推理&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>正推&lt;/strong>：从原因推断结果（如“下雨导致地面湿”）。&lt;/li>
+&lt;li>&lt;strong>逆推&lt;/strong>：从结果反推原因（如“地面湿”推断“可能下雨”）。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：故障排查、逻辑推理。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="二结构化思维工具">&lt;strong>二、结构化思维工具&lt;/strong>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>黄金圈法则（Why-How-What）&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Why&lt;/strong>：核心目标（为什么做）。&lt;/li>
+&lt;li>&lt;strong>How&lt;/strong>：实现路径（如何做）。&lt;/li>
+&lt;li>&lt;strong>What&lt;/strong>：具体行动（做什么）。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：战略规划、演讲表达（如苹果公司“我们坚信创新驱动世界”）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>SCQA 模型&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>S（Situation）&lt;/strong>：背景情景。&lt;/li>
+&lt;li>&lt;strong>C（Complication）&lt;/strong>：冲突或问题。&lt;/li>
+&lt;li>&lt;strong>Q（Question）&lt;/strong>：提出核心问题。&lt;/li>
+&lt;li>&lt;strong>A（Answer）&lt;/strong>：解决方案。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：演讲、报告、提案的结构化表达。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>金字塔原理&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>结构&lt;/strong>：中心论点 → 分论点 → 支持细节。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：写作、汇报、逻辑表达（如“数字化转型是趋势”→ 市场、客户、竞争三方面论证）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>5W1H 分析法&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>What&lt;/strong>：做什么？&lt;/li>
+&lt;li>&lt;strong>Why&lt;/strong>：为什么做？&lt;/li>
+&lt;li>&lt;strong>Who&lt;/strong>：谁来做？&lt;/li>
+&lt;li>&lt;strong>Where&lt;/strong>：在哪里做？&lt;/li>
+&lt;li>&lt;strong>When&lt;/strong>：何时做？&lt;/li>
+&lt;li>&lt;strong>How&lt;/strong>：如何做？&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：项目计划、任务分解（如自媒体运营的详细规划）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="三决策与问题解决工具">&lt;strong>三、决策与问题解决工具&lt;/strong>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>SWOT 分析&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>优势（Strengths）&lt;/strong>：内部强项。&lt;/li>
+&lt;li>&lt;strong>劣势（Weaknesses）&lt;/strong>：内部弱点。&lt;/li>
+&lt;li>&lt;strong>机会（Opportunities）&lt;/strong>：外部机会。&lt;/li>
+&lt;li>&lt;strong>威胁（Threats）&lt;/strong>：外部风险。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：商业战略、个人职业规划。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>10/10/10 法则&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>提问&lt;/strong>：从三个时间维度（10 分钟、10 个月、10 年后）评估决策的影响。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：短期与长期决策平衡（如是否换工作、投资）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>鱼骨图（因果图）&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>结构&lt;/strong>：将问题（鱼头）与可能原因（鱼骨分支）可视化。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：根因分析（如产品质量问题、工作低效原因）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>PDCA 循环（戴明环）&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Plan&lt;/strong>：计划。&lt;/li>
+&lt;li>&lt;strong>Do&lt;/strong>：执行。&lt;/li>
+&lt;li>&lt;strong>Check&lt;/strong>：检查结果。&lt;/li>
+&lt;li>&lt;strong>Act&lt;/strong>：改进并固化。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：流程优化、持续改进（如自媒体内容迭代）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="四学习与沟通工具">&lt;strong>四、学习与沟通工具&lt;/strong>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>费曼学习法&lt;/strong>&lt;/p></description></item><item><title>关闭独显以省电</title><link>https://blog.jqknono.com/blog/2024/11/18/%E5%85%B3%E9%97%AD%E7%8B%AC%E6%98%BE%E4%BB%A5%E7%9C%81%E7%94%B5/</link><pubDate>Mon, 18 Nov 2024 10:22:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/18/%E5%85%B3%E9%97%AD%E7%8B%AC%E6%98%BE%E4%BB%A5%E7%9C%81%E7%94%B5/</guid><description>&lt;p>这篇文分享给台式机很少关机, 经常远程回家中的台式机上工作的朋友.&lt;/p>
 &lt;p>我的主力工作机和游戏机是同一台机器, 显示屏是 4K 144Hz, 日常都是开着独显, 普通操作显示都会更顺滑一些, 但是功耗也是明显更大.&lt;/p>
 &lt;p>&lt;em>以下截图里的功率同时带着一个 J4125 小主机, 日常功耗在 18w 上下, 因此结论可能有不准确的地方&lt;/em>&lt;/p>
 &lt;p>不开游戏, 在桌面快速滑动鼠标的峰值功率可以到&lt;em>192w&lt;/em>&lt;/p>

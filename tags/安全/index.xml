@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 17 Jan 2025 12:49:43 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>攻防</title><link>https://blog.jqknono.com/blog/%E6%94%BB%E9%98%B2/</link><pubDate>Tue, 31 Dec 2024 15:57:34 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E6%94%BB%E9%98%B2/</guid><description/></item><item><title>避免博客泄露个人信息</title><link>https://blog.jqknono.com/blog/2024/11/12/%E9%81%BF%E5%85%8D%E5%8D%9A%E5%AE%A2%E6%B3%84%E9%9C%B2%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/</link><pubDate>Tue, 12 Nov 2024 16:35:29 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/12/%E9%81%BF%E5%85%8D%E5%8D%9A%E5%AE%A2%E6%B3%84%E9%9C%B2%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/</guid><description>&lt;p>常用的免费开源平台 &lt;strong>GitHub Pages&lt;/strong> 比较受欢迎，许多博客使用 &lt;strong>GitHub Pages&lt;/strong> 进行发布。&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 19 Mar 2025 16:54:44 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>如何避免被开盒</title><link>https://blog.jqknono.com/blog/2025/03/19/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E8%A2%AB%E5%BC%80%E7%9B%92/</link><pubDate>Wed, 19 Mar 2025 16:54:44 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/03/19/%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E8%A2%AB%E5%BC%80%E7%9B%92/</guid><description>&lt;h2 id="零散信息易被拼凑">零散信息易被拼凑&lt;/h2>
+&lt;p>个人信息分散且敏感，易被忽视。但网络并非安全港，许多人有能力通过搜索引擎等工具拼凑这些信息。&lt;/p>
+&lt;p>以 xhs 社区为例，用户网络安全意识相对薄弱，常分享密码含义和使用场景。&lt;/p>
+&lt;p>&lt;img alt="xhs搜索结果" src="https://img1.techfetch.dev/blog/202503191707446.png">&lt;/p>
+&lt;p>搜索“密码什么意思”可见大量用户公开展示密码及其含义。&lt;/p>
+&lt;p>社会工程学原理表明，有意义的字符串常被重复使用，导致信息泄露。&lt;/p>
+&lt;h2 id="降低账号关联">降低账号关联&lt;/h2>
+&lt;p>普通网民应使用随机生成的网名和密码，降低不同平台账号的关联性。&lt;/p>
+&lt;p>仅账号密码不同不足以完全隔离账号关联。发布相同或相似内容也会关联账号。&lt;/p>
+&lt;p>大陆实名制下，所有公开发表的评论或帖子都与手机号关联，这是强关联。手机号一致可被视作同一人。&lt;/p>
+&lt;p>部分企业曾大规模泄露个人信息，但未受处罚。&lt;/p>
+&lt;h2 id="常见的敏感信息">常见的敏感信息&lt;/h2>
+&lt;p>包括密码、网名、头像、生日、住址、手机号、邮箱、QQ 号、微信号、个人网站、地理位置、照片等。&lt;/p>
+&lt;p>社工库通过拼凑来自不同渠道的个人信息，即使网名和照片风格迥异，也能通过手机号等信息将它们关联起来。&lt;/p>
+&lt;p>这并非危言耸听，而是社工库的常见手段，门槛很低。&lt;/p>
+&lt;h2 id="提升网络安全意识">提升网络安全意识&lt;/h2>
+&lt;p>网络使人际距离缩短，但也加深了隔阂。社区使人们聚集在一起, 却使人们更加孤独.&lt;/p>
+&lt;p>我们在茫茫人海展示自己, 希望能找到共鸣, 却如同喝海水止渴.&lt;/p>
+&lt;p>对网络陌生人不必倾囊相告，谨言慎行，接受孤独，沉淀自我。&lt;/p>
+&lt;h2 id="结语">结语&lt;/h2>
+&lt;p>本文部分措辞有所保留，旨在避免不必要的麻烦。&lt;/p>
+&lt;p>请读者知悉，社工门槛低，保护自己应立足自身，不依赖他人。&lt;/p></description></item><item><title>攻防</title><link>https://blog.jqknono.com/blog/%E6%94%BB%E9%98%B2/</link><pubDate>Tue, 31 Dec 2024 15:57:34 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E6%94%BB%E9%98%B2/</guid><description/></item><item><title>避免博客泄露个人信息</title><link>https://blog.jqknono.com/blog/2024/11/12/%E9%81%BF%E5%85%8D%E5%8D%9A%E5%AE%A2%E6%B3%84%E9%9C%B2%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/</link><pubDate>Tue, 12 Nov 2024 16:35:29 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/12/%E9%81%BF%E5%85%8D%E5%8D%9A%E5%AE%A2%E6%B3%84%E9%9C%B2%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF/</guid><description>&lt;p>常用的免费开源平台 &lt;strong>GitHub Pages&lt;/strong> 比较受欢迎，许多博客使用 &lt;strong>GitHub Pages&lt;/strong> 进行发布。&lt;br>
 但其免费版要求公开仓库才允许公开访问。而仓库公开后，一些标记为草稿的文章也可以从 Git 仓库访问到。
 尽管公开的文章较少包含敏感信息, 但开源博客的&lt;strong>源库&lt;/strong>可能会泄露个人信息，以下是一些常见的信息泄露关键词，欢迎评论补充。&lt;/p>
 &lt;h2 id="敏感词">敏感词&lt;/h2>
