@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>域名安全 on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/tags/%E5%9F%9F%E5%90%8D%E5%AE%89%E5%85%A8/</link><description>Recent content in 域名安全 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 17 Jan 2025 12:49:43 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/tags/%E5%9F%9F%E5%90%8D%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>个人域名的安全实践</title><link>https://blog.jqknono.com/zh-cn/blog/2025/01/17/%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D%E7%9A%84%E5%AE%89%E5%85%A8%E5%AE%9E%E8%B7%B5/</link><pubDate>Fri, 17 Jan 2025 12:49:43 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/01/17/%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D%E7%9A%84%E5%AE%89%E5%85%A8%E5%AE%9E%E8%B7%B5/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>在互联网时代，网络攻击已成为常态。每天都有无数的自动化工具在扫描互联网上的每一个角落，寻找可能的漏洞。很多人认为只有大型企业才会成为攻击目标，但实际上，由于攻击成本的降低和工具的普及，任何暴露在互联网上的服务都可能成为攻击对象。&lt;/p>
+&lt;h2 id="真实案例分析">真实案例分析&lt;/h2>
+&lt;h3 id="扫描攻击实例">扫描攻击实例&lt;/h3>
+&lt;p>我部署在 Cloudflare 上的一个小型展示网站，虽然只有两个有效 URL：
+&lt;img src="https://img1.techfetch.dev/blog/202501171325208.png" alt="">&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://weread-challenge.techfetch.dev/">https://weread-challenge.techfetch.dev/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://weread-challenge.techfetch.dev/logs-collector">https://weread-challenge.techfetch.dev/logs-collector&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>但仍然持续遭受扫描攻击。&lt;/p>
+&lt;p>一开始其它的 URL 全部返回&lt;code>404&lt;/code>, 上线当天就有香港主机开始扫, 源 IP 天天换, 但大部分是香港的. 由于有些用户是香港 IP 访问, 也不能直接 ban 地区.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202501171251004.png" alt="">&lt;/p>
+&lt;p>以上这些 URL 全都是怀有各种目的的尝试, 我的 worker 只处理&lt;code>/&lt;/code>和&lt;code>/logs-collector&lt;/code>, 这些契而不舍的尝试基本上都是为了寻找漏洞.&lt;/p>
+&lt;p>但这样扫占用 CF 免费请求数, 污染我的日志, 也不是什么好事。&lt;/p>
+&lt;p>后边把所有其它请求都返回&lt;code>200&lt;/code>, 加上&lt;code>Host on Cloudflare Worker, don't waste your time&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202501171659369.png" alt="">&lt;/p>
+&lt;p>这样被扫的稍微少了点, 当然我不知道是否有因果关系。&lt;/p>
+&lt;p>如果是运行在自己主机上的服务, 天天被这样扫, 而服务一直不做安全更新, 迟早有被扫到漏洞的一天。&lt;/p>
+&lt;p>对攻击者来说, 就是每天定时不停的尝试, 能攻破一个是一个, 基本都是自动化的, 设备和时间成本都不高。&lt;/p>
+&lt;h2 id="安全威胁分析">安全威胁分析&lt;/h2>
+&lt;h3 id="攻击者特点">攻击者特点&lt;/h3>
+&lt;ul>
+&lt;li>跨境作案普遍，降低追责可能&lt;/li>
+&lt;li>自动化工具广泛使用，包括 Nmap、Masscan 等端口扫描工具&lt;/li>
+&lt;li>持续性攻击，成本低廉&lt;/li>
+&lt;li>肉鸡资源充足，IP 地址频繁变化&lt;/li>
+&lt;li>攻击时间通常选择在深夜或节假日&lt;/li>
+&lt;/ul>
+&lt;h3 id="常见攻击方式">常见攻击方式&lt;/h3>
+&lt;ol>
+&lt;li>端口扫描
+&lt;ul>
+&lt;li>批量扫描开放端口&lt;/li>
+&lt;li>识别常用服务（SSH、RDP、MySQL 等）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>漏洞扫描
+&lt;ul>
+&lt;li>扫描已知漏洞的老旧软件&lt;/li>
+&lt;li>通过路径特征和文件名特征识别&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>自行构造输入, 通过输入验证漏洞&lt;/li>
+&lt;/ol>
+&lt;h2 id="安全实践">安全实践&lt;/h2>
+&lt;h3 id="使用-vpn-而非反向代理">使用 VPN 而非反向代理&lt;/h3>
+&lt;p>大部分人都不会及时的升级软件, 最好是不要暴露自己的域名, 扫描既可以构造 postfix, 也可以构造 prefix, 各种子域名一顿试。&lt;/p></description></item></channel></rss>

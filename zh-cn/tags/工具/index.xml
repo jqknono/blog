@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/tags/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 24 May 2025 18:01:17 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>角色设计</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/ai/roles/</link><pubDate>Sat, 24 May 2025 18:01:17 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/ai/roles/</guid><description/></item><item><title>思维工具</title><link>https://blog.jqknono.com/zh-cn/blog/2025/03/27/%E6%80%9D%E7%BB%B4%E5%B7%A5%E5%85%B7/</link><pubDate>Thu, 27 Mar 2025 17:09:13 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/03/27/%E6%80%9D%E7%BB%B4%E5%B7%A5%E5%85%B7/</guid><description>&lt;h2 id="一基础逻辑思维方法">&lt;strong>一、基础逻辑思维方法&lt;/strong>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>归纳与演绎&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>归纳&lt;/strong>：从个别案例总结普遍规律（如从“黑马、白马”归纳出“马”的概念）。&lt;/li>
+&lt;li>&lt;strong>演绎&lt;/strong>：从普遍规律推导具体结论（如根据“马”的定义推导出“黑马”“白马”）。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：科学研究、数据分析、制定规则。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>分析与综合&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>分析&lt;/strong>：将整体拆解为部分研究（如分解光的波粒二象性）。&lt;/li>
+&lt;li>&lt;strong>综合&lt;/strong>：将部分整合为整体理解（如结合光的波动性和粒子性提出新理论）。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：复杂问题拆解、系统设计。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>因果推理&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>正推&lt;/strong>：从原因推断结果（如“下雨导致地面湿”）。&lt;/li>
+&lt;li>&lt;strong>逆推&lt;/strong>：从结果反推原因（如“地面湿”推断“可能下雨”）。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：故障排查、逻辑推理。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="二结构化思维工具">&lt;strong>二、结构化思维工具&lt;/strong>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>黄金圈法则（Why-How-What）&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Why&lt;/strong>：核心目标（为什么做）。&lt;/li>
+&lt;li>&lt;strong>How&lt;/strong>：实现路径（如何做）。&lt;/li>
+&lt;li>&lt;strong>What&lt;/strong>：具体行动（做什么）。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：战略规划、演讲表达（如苹果公司“我们坚信创新驱动世界”）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>SCQA 模型&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>S（Situation）&lt;/strong>：背景情景。&lt;/li>
+&lt;li>&lt;strong>C（Complication）&lt;/strong>：冲突或问题。&lt;/li>
+&lt;li>&lt;strong>Q（Question）&lt;/strong>：提出核心问题。&lt;/li>
+&lt;li>&lt;strong>A（Answer）&lt;/strong>：解决方案。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：演讲、报告、提案的结构化表达。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>金字塔原理&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>结构&lt;/strong>：中心论点 → 分论点 → 支持细节。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：写作、汇报、逻辑表达（如“数字化转型是趋势”→ 市场、客户、竞争三方面论证）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>5W1H 分析法&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>What&lt;/strong>：做什么？&lt;/li>
+&lt;li>&lt;strong>Why&lt;/strong>：为什么做？&lt;/li>
+&lt;li>&lt;strong>Who&lt;/strong>：谁来做？&lt;/li>
+&lt;li>&lt;strong>Where&lt;/strong>：在哪里做？&lt;/li>
+&lt;li>&lt;strong>When&lt;/strong>：何时做？&lt;/li>
+&lt;li>&lt;strong>How&lt;/strong>：如何做？&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：项目计划、任务分解（如自媒体运营的详细规划）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="三决策与问题解决工具">&lt;strong>三、决策与问题解决工具&lt;/strong>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>SWOT 分析&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>优势（Strengths）&lt;/strong>：内部强项。&lt;/li>
+&lt;li>&lt;strong>劣势（Weaknesses）&lt;/strong>：内部弱点。&lt;/li>
+&lt;li>&lt;strong>机会（Opportunities）&lt;/strong>：外部机会。&lt;/li>
+&lt;li>&lt;strong>威胁（Threats）&lt;/strong>：外部风险。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：商业战略、个人职业规划。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>10/10/10 法则&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>提问&lt;/strong>：从三个时间维度（10 分钟、10 个月、10 年后）评估决策的影响。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：短期与长期决策平衡（如是否换工作、投资）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>鱼骨图（因果图）&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>结构&lt;/strong>：将问题（鱼头）与可能原因（鱼骨分支）可视化。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：根因分析（如产品质量问题、工作低效原因）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>PDCA 循环（戴明环）&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Plan&lt;/strong>：计划。&lt;/li>
+&lt;li>&lt;strong>Do&lt;/strong>：执行。&lt;/li>
+&lt;li>&lt;strong>Check&lt;/strong>：检查结果。&lt;/li>
+&lt;li>&lt;strong>Act&lt;/strong>：改进并固化。&lt;/li>
+&lt;li>&lt;strong>应用场景&lt;/strong>：流程优化、持续改进（如自媒体内容迭代）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="四学习与沟通工具">&lt;strong>四、学习与沟通工具&lt;/strong>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>费曼学习法&lt;/strong>&lt;/p></description></item><item><title>AI助手比我聪明很多</title><link>https://blog.jqknono.com/zh-cn/blog/2025/03/17/ai%E5%8A%A9%E6%89%8B%E6%AF%94%E6%88%91%E8%81%AA%E6%98%8E%E5%BE%88%E5%A4%9A/</link><pubDate>Mon, 17 Mar 2025 12:17:24 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/03/17/ai%E5%8A%A9%E6%89%8B%E6%AF%94%E6%88%91%E8%81%AA%E6%98%8E%E5%BE%88%E5%A4%9A/</guid><description>&lt;p>对于一个从事编码工作 10 年, 有过镀金经历, 最终也看重面子的中年人, 承认 AI 比我厉害是一件很难为情的事.&lt;/p>
+&lt;p>所用的 AI 工具, 一个月总花费不超过 200 元人民币, 而老板给我的薪酬远高于此.&lt;/p>
+&lt;p>可以预期会引来众嘲,&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;那只是你&amp;rdquo;&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&amp;ldquo;初级程序员是这样的&amp;rdquo;&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&amp;ldquo;只能做简单的活&amp;rdquo;&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&amp;ldquo;做不了真正的工程&amp;rdquo;&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&amp;ldquo;幻觉严重&amp;rdquo;&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&amp;ldquo;不适合生产环境&amp;rdquo;&lt;/p>&lt;/blockquote>
+&lt;p>我的 AI 工具使用经验足以支持我无视这些嘲讽, 本文不会推荐任何工具, 主要只为思想上的共鸣, 每次都能从跟贴学习到很多.&lt;/p>
+&lt;p>我是 Github Copilot 的第一批用户, 从内测就开始使用, 内测完毫不犹豫订了年费, 使用至今. 现在我已不会因为靠自己解决了棘手问题而兴奋, 不会为&amp;quot;优雅的代码&amp;quot;而骄傲, 现在我只为一件事而兴奋, 那就是 AI 准确理解了我的表达, AI 助手完成我的需求, 并且超出了预期.&lt;/p>
+&lt;p>在过去十年积累的经验, 在 AI 工具上最有用的是:&lt;/p>
+&lt;ul>
+&lt;li>逻辑学&lt;/li>
+&lt;li>设计模式&lt;/li>
+&lt;li>正则表达式&lt;/li>
+&lt;li>markdown&lt;/li>
+&lt;li>mermaid&lt;/li>
+&lt;li>代码风格&lt;/li>
+&lt;li>数据结构和算法&lt;/li>
+&lt;/ul>
+&lt;p>更细化一点就是:&lt;/p>
+&lt;ul>
+&lt;li>大前提, 小前提, 合适的关联关系.&lt;/li>
+&lt;li>谨慎创建依赖关系, 严防循环依赖.&lt;/li>
+&lt;li>如无必要, 不增加关联关系, 如无必要, 不扩大关联范围.&lt;/li>
+&lt;li>严控逻辑块规模.&lt;/li>
+&lt;li>使用正则搜索, 并根据命名风格，生成便于正则搜索的代码.&lt;/li>
+&lt;li>生成 mermaid, 检视修改微调, 使用 mermaid 指导代码生成.&lt;/li>
+&lt;li>使用数据结构和算法的&lt;strong>名称&lt;/strong>, 指导代码生成.&lt;/li>
+&lt;/ul>
+&lt;p>我花了很多时间参与不同的开源项目, 有的是熟悉的领域, 有的是不熟悉的领域, 是经验使我能快速上手. 你会发现, 优秀的项目总是相似的, 挫的项目各有各的挫法.&lt;/p></description></item><item><title>Github Copilot Agent模式使用经验分享</title><link>https://blog.jqknono.com/zh-cn/blog/2025/02/28/github-copilot-agent%E6%A8%A1%E5%BC%8F%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</link><pubDate>Fri, 28 Feb 2025 17:46:31 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/02/28/github-copilot-agent%E6%A8%A1%E5%BC%8F%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</guid><description>&lt;p>本文总结了如何使用 GitHub Copilot Agent 模式，并分享实际操作经验。&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202503041211061.png" alt="">&lt;/p>
+&lt;h2 id="前置设置">前置设置&lt;/h2>
+&lt;ol>
+&lt;li>使用 VSCode Insider；&lt;/li>
+&lt;li>安装 GitHub Copilot（预览版）插件；&lt;/li>
+&lt;li>选择 Claude 3.7 Sonnet（预览版）模型，该模型在代码编写方面表现出色，同时其它模型在速度、多模态（如图像识别）及推理能力上具备优势；&lt;/li>
+&lt;li>工作模式选择 Agent。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://img1.techfetch.dev/qt/202502191622707.png" alt="前置设置">&lt;/p>
+&lt;h2 id="操作步骤">操作步骤&lt;/h2>
+&lt;ol>
+&lt;li>打开 “Copilot Edits” 选项卡；&lt;/li>
+&lt;li>添加附件，如 “Codebase”、“Get Errors”、“Terminal Last Commands” 等；&lt;/li>
+&lt;li>添加 “Working Set” 文件，默认包含当前打开的文件，也可手动选择其他文件（如 “Open Editors”）；&lt;/li>
+&lt;li>添加 “Instructions”，输入需要 Copilot Agent 特别注意的提示词；&lt;/li>
+&lt;li>点击 “Send” 按钮，开始对话，观察 Agent 的表现。&lt;/li>
+&lt;/ol>
+&lt;h2 id="其它说明">其它说明&lt;/h2>
+&lt;ul>
+&lt;li>VSCode 通过语言插件提供的 lint 功能可以产生 Error 或 Warning 提示，Agent 能自动根据这些提示修正代码。&lt;/li>
+&lt;li>随着对话的深入，Agent 生成的代码修改可能会偏离预期。建议每次会话都聚焦一个明确的主题，避免对话过长；达到短期目标后结束当前会话，再启动新任务。&lt;/li>
+&lt;li>“Working Set” 下的 “Add Files” 提供 “Related Files” 选项，可推荐相关文件。&lt;/li>
+&lt;li>注意控制单个代码文件的行数，以免 token 消耗过快。&lt;/li>
+&lt;li>建议先生成基础代码，再编写测试用例，便于 Agent 根据测试结果调试和自我校验。&lt;/li>
+&lt;li>为限制修改范围，可在 settings.json 中添加如下配置，只修改指定目录下的文件, 仅供参考：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;github.copilot.chat.codeGeneration.instructions&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;只需修改 ./script/ 目录下的文件，不修改其他目录下的文件.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;若目标代码文件行数超过 1000 行，建议将新增函数置于新文件中，通过引用调用；如产生的修改导致文件超长，可暂不严格遵守此规则.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;github.copilot.chat.testGeneration.instructions&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;在现有单元测试文件中生成测试用例.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;代码修改后务必运行测试用例验证.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="常见问题">常见问题&lt;/h2>
+&lt;h3 id="输入需求得不到想要的业务代码">输入需求得不到想要的业务代码&lt;/h3>
+&lt;p>需要将大任务拆分成较小的任务, 每次会话只处理一个小任务. 这是由于大模型的上下文太多会导致注意力分散.&lt;/p></description></item><item><title>广告拦截新选择--AdGuardPrivate</title><link>https://blog.jqknono.com/zh-cn/blog/2025/02/20/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%96%B0%E9%80%89%E6%8B%A9--adguardprivate/</link><pubDate>Thu, 20 Feb 2025 19:10:12 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/02/20/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%96%B0%E9%80%89%E6%8B%A9--adguardprivate/</guid><description>&lt;p>&lt;a href="https://www.adguardprivate.com">AdGuardPrivate&lt;/a> 是一款专注于网络隐私保护与广告拦截的 DNS 服务工具，基于开源项目 &lt;a href="https://github.com/AdguardTeam/AdGuardHome">AdGuard Home&lt;/a> 二次开发，通过智能流量分析和过滤技术，为用户提供安全、高效的上网环境。以下是其主要功能与特点：&lt;/p>
+&lt;h2 id="核心功能广告拦截与隐私保护">核心功能：广告拦截与隐私保护&lt;/h2>
+&lt;ul>
+&lt;li>广告拦截：通过 DNS 层面拦截网页广告（如横幅、弹窗、视频广告等）及移动应用内广告，提升浏览速度和设备性能。&lt;/li>
+&lt;li>隐私防护：阻止跟踪器、社交网络插件和隐私窃取请求，防止用户行为数据被收集，同时拦截恶意网站、钓鱼链接和恶意软件。&lt;/li>
+&lt;li>DNS 防污染：通过加密 DNS（支持 DoT、DoH、HTTP/3）防止流量劫持，确保域名解析的准确性和安全性。&lt;/li>
+&lt;/ul>
+&lt;h2 id="进阶特性定制化与优化">进阶特性：定制化与优化&lt;/h2>
+&lt;ul>
+&lt;li>自定义规则：支持用户添加第三方黑白名单或自定义过滤规则，灵活控制特定应用、网站或游戏的访问权限。&lt;/li>
+&lt;li>智能解析：可配置局域网设备的友好域名解析（如 NAS 或企业服务器），简化网络管理。&lt;/li>
+&lt;li>统计分析：提供详细的请求日志、拦截统计和 72 小时查询记录，帮助用户监控网络使用情况。&lt;/li>
+&lt;/ul>
+&lt;h2 id="家庭与企业场景支持">家庭与企业场景支持&lt;/h2>
+&lt;ul>
+&lt;li>家长控制：可屏蔽成人网站和游戏，管理家庭成员的上网时间，保护未成年人。&lt;/li>
+&lt;li>企业级部署：支持分布式服务器负载均衡，优化大陆地区的访问体验，并通过阿里云节点提供稳定服务。&lt;/li>
+&lt;/ul>
+&lt;h2 id="平台兼容性与服务模式">平台兼容性与服务模式&lt;/h2>
+&lt;ul>
+&lt;li>跨平台支持：兼容多种操作系统，无需额外软件，仅需配置加密 DNS 即可使用。&lt;/li>
+&lt;li>服务模式：&lt;/li>
+&lt;li>免费公共服务：提供基础广告拦截与安全规则，但可能存在误拦截问题。&lt;/li>
+&lt;li>付费私有服务：增强功能包括自定义解析、权威解析、设备分 ID 记录上网行为等，适合个性化需求。&lt;/li>
+&lt;/ul>
+&lt;h2 id="技术优势与局限性">技术优势与局限性&lt;/h2>
+&lt;ul>
+&lt;li>优势：全设备覆盖、零额外功耗，降低无效数据加载，适合移动设备续航优化。&lt;/li>
+&lt;li>局限性：拦截精度低于浏览器插件，无法实现 HTTPS 内容的深度过滤（如 MITM 方案）。&lt;/li>
+&lt;li>应用场景示例
+&lt;ul>
+&lt;li>个人用户：通过 AdGuardPrivate 阻止移动应用内广告，提升应用体验。&lt;/li>
+&lt;li>家庭用户：通过路由器部署 AdGuardPrivate，拦截全家设备的广告，并限制儿童访问不当内容。&lt;/li>
+&lt;li>企业网络：结合自定义规则屏蔽娱乐类网站，提升员工工作效率，同时保护内部数据安全。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>使用 curl 获取 DNS 结果</title><link>https://blog.jqknono.com/zh-cn/blog/2025/02/20/%E4%BD%BF%E7%94%A8-curl-%E8%8E%B7%E5%8F%96-dns-%E7%BB%93%E6%9E%9C/</link><pubDate>Thu, 20 Feb 2025 17:08:34 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/02/20/%E4%BD%BF%E7%94%A8-curl-%E8%8E%B7%E5%8F%96-dns-%E7%BB%93%E6%9E%9C/</guid><description>&lt;p>本文介绍两种利用 curl 获取 DNS 查询结果的方法：&lt;/p>
+&lt;ol>
+&lt;li>DNS JSON 格式&lt;/li>
+&lt;li>DNS Wire Format 格式&lt;/li>
+&lt;/ol>
+&lt;h2 id="1-dns-json-格式查询">1. DNS JSON 格式查询&lt;/h2>
+&lt;p>返回 JSON 格式的 DNS 响应，便于解析。&lt;/p>
+&lt;h3 id="google">Google&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-json&amp;#39;&lt;/span> &lt;span class="s2">&amp;#34;https://dns.google/resolve?name=baidu.com&amp;amp;type=A&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> jq .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="cloudflare">Cloudflare&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-json&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://cloudflare-dns.com/dns-query?name=baidu.com&amp;amp;type=A&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> jq .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="aliyun">Aliyun&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s2">&amp;#34;accept: application/dns-json&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;https://223.5.5.5/resolve?name=baidu.com&amp;amp;type=1&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> jq .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="dnspub">dns.pub&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-json&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://doh.dns.pub/dns-query?name=baidu.com&amp;amp;type=A&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> jq .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="adguard-private-dns">AdGuard Private DNS&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 暂不受支持&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="2-dns-wire-format-格式查询">2. DNS Wire Format 格式查询&lt;/h2>
+&lt;p>返回二进制格式的 DNS 响应，需要进一步解析。&lt;/p>
+&lt;h3 id="google-1">Google&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-message&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://dns.google/dns-query?dns=q80BAAABAAAAAAAAA3d3dwdleGFtcGxlA2NvbQAAAQAB&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> hexdump -c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="cloudflare-1">Cloudflare&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-message&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://cloudflare-dns.com/dns-query?dns=q80BAAABAAAAAAAAA3d3dwdleGFtcGxlA2NvbQAAAQAB&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> hexdump -c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="aliyun-1">Aliyun&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-message&amp;#39;&lt;/span> &lt;span class="s2">&amp;#34;https://dns.alidns.com/dns-query?dns=P8QBAAABAAAAAAAABWJhaWR1A2NvbQAAAQAB&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> hexdump -c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="dnspub-1">dns.pub&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-message&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://doh.dns.pub/dns-query?dns=q80BAAABAAAAAAAAA3d3dwdleGFtcGxlA2NvbQAAAQAB&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> hexdump -c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="adguard-private-dns-1">AdGuard Private DNS&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-message&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://public0.adguardprivate.com/dns-query?dns=q80BAAABAAAAAAAAA3d3dwdleGFtcGxlA2NvbQAAAQAB&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> hexdump -c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="使用-python-解析-dns-响应">使用 Python 解析 DNS 响应&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># pip install dnspython&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># pip install requests&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 解析 JSON 格式响应&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">json&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">requests&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">query_dns_json&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">domain&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;example.com&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;A&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;使用 JSON 格式查询 DNS&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://dns.google/resolve&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">domain&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">type&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">headers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;accept&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;application/dns-json&amp;#34;&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">requests&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">params&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">params&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">headers&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">headers&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">json&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dumps&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="n">indent&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 解析 Wire Format 响应&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">query_dns_wire&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">domain&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;example.com&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;使用 Wire Format 格式查询 DNS&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">import&lt;/span> &lt;span class="nn">dns.message&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">import&lt;/span> &lt;span class="nn">requests&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">import&lt;/span> &lt;span class="nn">base64&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 创建DNS查询消息&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">query&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dns&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">make_query&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">domain&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;A&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">wire_format&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">query&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">to_wire&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dns_query&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">base64&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">b64encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">wire_format&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">decode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;utf-8&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 发送请求&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://dns.google/dns-query&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;dns&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">dns_query&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">headers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;accept&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;application/dns-message&amp;#34;&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">requests&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">params&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">params&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">headers&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">headers&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dns_response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dns&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">from_wire&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">content&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dns_response&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="vm">__name__&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;__main__&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;JSON格式查询结果:&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">query_dns_json&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">Wire Format查询结果:&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">query_dns_wire&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="生成-dns-wire-format-base64-编码的数据">生成 DNS Wire Format Base64 编码的数据&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># pip install dnspython&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">base64&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">dns.message&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">dns.rdatatype&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 创建一个DNS查询消息&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">query&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dns&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">make_query&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;example.com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">dns&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">rdatatype&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 将消息转换为Wire Format&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">wire_format&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">query&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">to_wire&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 转为base64&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">wire_format_base64&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">base64&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">b64encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">wire_format&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">decode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;utf-8&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 打印&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">wire_format_base64&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>工具</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/dns/</link><pubDate>Thu, 20 Feb 2025 15:02:33 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/dns/</guid><description/></item><item><title>微信读书体验分享</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</link><pubDate>Tue, 24 Dec 2024 15:01:40 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6/</guid><description>&lt;p>免费读书方案有很多, 但是微信读书的确是体验做的较好的一个. 希望免费读书的可以看 zlibrary.&lt;/p>
+&lt;p>这里主要分享微信读书的使用体验, 以及一些辅助工具, 如有任何侵权, 请联系我删除: &lt;code>weread-challenge@techfetch.dev&lt;/code>&lt;/p></description></item><item><title>微信读书自动打卡刷时长</title><link>https://blog.jqknono.com/zh-cn/blog/2024/12/05/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1%E5%88%B7%E6%97%B6%E9%95%BF/</link><pubDate>Thu, 05 Dec 2024 12:36:38 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/12/05/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1%E5%88%B7%E6%97%B6%E9%95%BF/</guid><description>&lt;p>只为便宜一点买微信读书会员.&lt;/p>
+&lt;p>本文档可能已过时, 最新可以访问开源地址: &lt;a href="https://github.com/jqknono/weread-challenge-selenium">https://github.com/jqknono/weread-challenge-selenium&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202412261741639.gif" alt="只为便宜一点买微信读书会员">&lt;/p>
+&lt;h2 id="微信读书规则">微信读书规则&lt;/h2>
+&lt;ul>
+&lt;li>离线阅读计入总时长, 但需要联网上报&lt;/li>
+&lt;li>网页版, 墨水屏, 小程序, 听书, 有声书收听&lt;strong>都计入总时长&lt;/strong>&lt;/li>
+&lt;li>对单次自动阅读或收听时长过长的行为, 平台将结合用户行为特征判断, &lt;strong>过长部分不计入总时长&lt;/strong>&lt;/li>
+&lt;li>当日阅读超过&lt;strong>5 分钟&lt;/strong>才算作有效阅读天数&lt;/li>
+&lt;li>付费 5 元立即获得 2 天会员, 后续 30 日内打卡 29 天, 读书时长超过 30 小时, 可获得 30 天会员和 30 书币&lt;/li>
+&lt;li>付费 50 元立即获得 30 天会员, 后续 365 日内打卡 360 天, 读书时长超过 300 小时, 可获得 365 天会员和 500 书币&lt;/li>
+&lt;/ul>
+&lt;p>根据实际操作, 还有如下未明确说明的特点:&lt;/p>
+&lt;ul>
+&lt;li>第 29 日打卡后立即获得读书会员奖励, 并可立即开始下一轮挑战会员打卡, 无需等待第 31 日开始下一轮挑战, 第 29 日的打卡既算上一轮的打卡, 也算下一轮的打卡.&lt;/li>
+&lt;li>除第一轮需 29 日外, 后续每 28 日即可获得 32 日会员, 1+28*13=365, 一年可完成 13 轮, 花费 65 元, 获得 32*13=416 天会员和 390 书币.&lt;/li>
+&lt;li>更划算的仍然是年卡挑战会员, 但周期更长, 风险更大.&lt;/li>
+&lt;/ul>
+&lt;h2 id="工具特性">工具特性&lt;/h2>
+&lt;ul>
+&lt;li>使用有头浏览器&lt;/li>
+&lt;li>支持本地浏览器和远程浏览器&lt;/li>
+&lt;li>随机浏览器宽度和高度&lt;/li>
+&lt;li>支持等待登录&lt;/li>
+&lt;li>支持登录二维码刷新&lt;/li>
+&lt;li>支持保存 cookies&lt;/li>
+&lt;li>支持加载 cookies&lt;/li>
+&lt;li>支持选择最近阅读的第 X 本书开始阅读&lt;/li>
+&lt;li>默认随机选择一本书开始阅读&lt;/li>
+&lt;li>支持自动阅读&lt;/li>
+&lt;li>支持跳到下一章&lt;/li>
+&lt;li>支持读完跳回第一章继续阅读&lt;/li>
+&lt;li>支持选择阅读速度&lt;/li>
+&lt;li>随机单页阅读时间&lt;/li>
+&lt;li>随机翻页时间&lt;/li>
+&lt;li>每分钟截图当前界面&lt;/li>
+&lt;li>支持日志&lt;/li>
+&lt;li>支持定时任务&lt;/li>
+&lt;li>支持设置阅读时间&lt;/li>
+&lt;li>支持邮件通知&lt;/li>
+&lt;li>多平台支持: &lt;code>linux | windows | macos&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;!-- - 多架构支持: `amd64 | arm64` -->
+&lt;ul>
+&lt;li>支持浏览器: &lt;code>chrome | MicrosoftEdge | firefox&lt;/code>&lt;/li>
+&lt;li>支持多用户&lt;/li>
+&lt;li>异常时强制刷新&lt;/li>
+&lt;li>使用统计&lt;/li>
+&lt;/ul>
+&lt;h2 id="linux">Linux&lt;/h2>
+&lt;h3 id="直接运行">直接运行&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装nodejs&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install nodejs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 老旧版本的 nodejs 需要安装 npm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install npm
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 创建运行文件夹&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir -p &lt;span class="nv">$HOME&lt;/span>/Documents/weread-challenge
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> &lt;span class="nv">$HOME&lt;/span>/Documents/weread-challenge
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装依赖&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npm install selenium-webdriver
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 下载脚本&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://storage1.techfetch.dev/weread-challenge/weread-challenge.js -O weread-challenge.js
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 通过环境变量设置运行参数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">WEREAD_BROWSER&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;chrome&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 运行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">WEREAD_BROWSER&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;chrome&amp;#34;&lt;/span> node weread-challenge.js
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如需邮件通知, 需安装 &lt;em>nodemailer&lt;/em>:
+&lt;code>npm install nodemailer&lt;/code>&lt;/p></description></item><item><title>关闭独显以省电</title><link>https://blog.jqknono.com/zh-cn/blog/2024/11/18/%E5%85%B3%E9%97%AD%E7%8B%AC%E6%98%BE%E4%BB%A5%E7%9C%81%E7%94%B5/</link><pubDate>Mon, 18 Nov 2024 10:22:16 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/11/18/%E5%85%B3%E9%97%AD%E7%8B%AC%E6%98%BE%E4%BB%A5%E7%9C%81%E7%94%B5/</guid><description>&lt;p>这篇文分享给台式机很少关机, 经常远程回家中的台式机上工作的朋友.&lt;/p>
+&lt;p>我的主力工作机和游戏机是同一台机器, 显示屏是 4K 144Hz, 日常都是开着独显, 普通操作显示都会更顺滑一些, 但是功耗也是明显更大.&lt;/p>
+&lt;p>&lt;em>以下截图里的功率同时带着一个 J4125 小主机, 日常功耗在 18w 上下, 因此结论可能有不准确的地方&lt;/em>&lt;/p>
+&lt;p>不开游戏, 在桌面快速滑动鼠标的峰值功率可以到&lt;em>192w&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411181057492.jpg" alt="">&lt;/p>
+&lt;p>关闭独显后, 刷新率降到 60Hz, 峰值功率降到&lt;em>120w&lt;/em>上下.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411181103084.jpg" alt="">&lt;/p>
+&lt;p>在外隧道回家工作是使用的腾讯的一个入门主机, 带宽较小, 远端刷新率只有 30hz, 这种情况用独显是没有意义, 可以考虑切换到集显.&lt;/p>
+&lt;p>多数时候, 我不直接使用远程桌面, 而是使用 vscode 的远程开发, 优势是隐蔽, 占用带宽小, 几乎是本地开发的体验.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411181116237.png" alt="">&lt;/p>
+&lt;p>普通代码编辑时, 约 72w, 与关闭独显前的 120w 相比, 有一定的节能效果.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411221112020.jpg" alt="">&lt;/p>
+&lt;p>使用&lt;code>remote ssh&lt;/code>进行远程开发时, 可以用使用脚本关闭独显.&lt;/p>
+&lt;p>脚本保存为&lt;code>switch_dedicate_graphic_cards.ps1&lt;/code>, 使用方法为&lt;code>switch_dedicate_graphic_cards.ps1 off&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Usage: switch_dedicate_graphic_cards.ps1 on|off&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Get parameters&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$switch&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mf">0&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># exit if no parameter is passed&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$switch&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="vm">$null&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Usage: switch_dedicate_graphic_cards.ps1 on|off&amp;#34;&lt;/span> &lt;span class="n">-ForegroundColor&lt;/span> &lt;span class="n">Yellow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Get display devices&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$displayDevices&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nb">Get-CimInstance&lt;/span> &lt;span class="n">-Namespace&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">\&lt;/span>&lt;span class="n">cimv2&lt;/span> &lt;span class="n">-ClassName&lt;/span> &lt;span class="n">Win32_VideoController&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># If there is no display device or only one display device, exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$displayDevices&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Count&lt;/span> &lt;span class="o">-le&lt;/span> &lt;span class="mf">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;No display device found.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Get dedicated graphic cards&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$dedicatedGraphicCards&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$displayDevices&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">Where-Object&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nv">$_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Description&lt;/span> &lt;span class="o">-like&lt;/span> &lt;span class="s2">&amp;#34;*NVIDIA*&amp;#34;&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># If there is no dedicated graphic card, exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$dedicatedGraphicCards&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">Count&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="mf">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;No dedicated graphic card found.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># turn dedicated graphic cards on or off&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$switch&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="s2">&amp;#34;on&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$dedicatedGraphicCards&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">ForEach-Object&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="n">pnputil&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">enable-device&lt;/span> &lt;span class="nv">$_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">PNPDeviceID&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Dedicated graphic cards are turned on.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">elseif&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nv">$switch&lt;/span> &lt;span class="o">-eq&lt;/span> &lt;span class="s2">&amp;#34;off&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$dedicatedGraphicCards&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">ForEach-Object&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="n">pnputil&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">disable-device&lt;/span> &lt;span class="nv">$_&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">PNPDeviceID&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Dedicated graphic cards are turned off.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Invalid parameter.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Write-Host&lt;/span> &lt;span class="s2">&amp;#34;Usage: switch_dedicate_graphic_cards.ps1 on|off&amp;#34;&lt;/span> &lt;span class="n">-ForegroundColor&lt;/span> &lt;span class="n">Yellow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>snort</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/28/snort/</link><pubDate>Fri, 28 Jun 2024 19:03:59 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/28/snort/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> snort&lt;/li>
+&lt;/ul>
+&lt;h1 id="snort">Snort&lt;/h1>
+&lt;p>&lt;a href="https://www.snort.org/">https://www.snort.org/&lt;/a>&lt;/p>
+&lt;p>Protect your network with the world&amp;rsquo;s most powerful Open Source detection software.&lt;/p>
+&lt;p>&lt;strong>What is Snort?&lt;/strong>
+Snort is the foremost Open Source Intrusion Prevention System (IPS) in the world.
+Snort IPS uses a series of rules that help define malicious network activity and
+uses those rules to find packets that match against them and generates alerts for users.&lt;/p>
+&lt;p>Snort can be deployed inline to stop these packets, as well.
+Snort has three primary uses: As a packet sniffer like tcpdump, as a packet logger —
+which is useful for network traffic debugging, or it can be used as a full-blown network intrusion prevention system.
+Snort can be downloaded and configured for personal and business use alike.&lt;/p></description></item><item><title>adguard</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/adguard/</link><pubDate>Fri, 28 Jun 2024 18:47:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/adguard/</guid><description/></item><item><title>命令行手册中括号的含义</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</link><pubDate>Fri, 28 Jun 2024 17:31:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/28/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%8B%E5%86%8C%E4%B8%AD%E6%8B%AC%E5%8F%B7%E7%9A%84%E5%90%AB%E4%B9%89/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 命令行手册中括号的含义&lt;/li>
+&lt;/ul>
+&lt;h1 id="命令行手册中括号的含义">命令行手册中括号的含义&lt;/h1>
+&lt;p>在命令行帮助中，不同种类的括号通常有以下含义：&lt;/p>
+&lt;ol>
+&lt;li>尖括号 &lt;code>&amp;lt;&amp;gt;&lt;/code>：
+&lt;ul>
+&lt;li>尖括号用于表示必需参数，即在运行命令时必须提供的值。通常用于表示命令的基本语法和参数。&lt;/li>
+&lt;li>例如：&lt;code>command &amp;lt;filename&amp;gt;&lt;/code> 表示你需要提供一个文件名作为必需参数，如 &lt;code>command file.txt&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>方括号 &lt;code>[]&lt;/code>：
+&lt;ul>
+&lt;li>方括号用于表示可选参数，即在运行命令时可以选择是否提供的值。它们通常用于标记命令的可选参数和选项。&lt;/li>
+&lt;li>例如：&lt;code>command [option]&lt;/code> 表示你可以选择性地提供一个选项，如 &lt;code>command -v&lt;/code> 或 &lt;code>command&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>大括号 &lt;code>{}&lt;/code>：
+&lt;ul>
+&lt;li>大括号通常用于表示一组选项或值，表示你需要从中选择一个。它们也被称为&amp;quot;选择性参数组&amp;quot;。&lt;/li>
+&lt;li>例如：&lt;code>command {option1 | option2 | option3}&lt;/code> 表示你必须从给定的选项中选择一个，如 &lt;code>command option2&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>圆括号 &lt;code>()&lt;/code>：
+&lt;ul>
+&lt;li>圆括号在命令行帮助中通常用于表示参数的分组，以明确参数的结构和优先级。&lt;/li>
+&lt;li>例如：&lt;code>command (option1 | option2) filename&lt;/code> 表示你需要选择 &lt;code>option1&lt;/code> 或 &lt;code>option2&lt;/code>，并提供一个文件名作为参数，如 &lt;code>command option1 file.txt&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>这些括号的使用旨在帮助用户理解命令的语法和参数选择，从而正确地使用命令行工具。在阅读命令行帮助时，仔细注意括号的含义和作用是很重要的，这样可以避免错误的命令输入并获得所需的结果。&lt;/p></description></item><item><title>wireguard配置</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/28/wireguard%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 28 Jun 2024 17:11:32 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/28/wireguard%E9%85%8D%E7%BD%AE/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> wireguard配置&lt;/li>
+&lt;/ul>
+&lt;h1 id="wireguard-配置">wireguard 配置&lt;/h1>
+&lt;h2 id="防火墙配置">防火墙配置&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="n">wireguard&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">installtunnelservice&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">wg_conf_path&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">wg&lt;/span> &lt;span class="n">show&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Get-NetConnectionProfile&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Get-NetAdapter&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Get-NetFirewallProfile&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallProfile&lt;/span> &lt;span class="n">-Profile&lt;/span> &lt;span class="n">domain&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">public&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">private&lt;/span> &lt;span class="n">-DisabledInterfaceAliases&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">wg_config_name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPInterface&lt;/span> &lt;span class="n">-ifindex&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">interface&lt;/span> &lt;span class="n">index&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">-Forwarding&lt;/span> &lt;span class="n">Enabled&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@wg1&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Inbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.66&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">66&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@wg1&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Outbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.66&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">66&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 定位拦截原因&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">auditpol&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">set &lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="n">subcategory&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="s2">&amp;#34;{0CCE9225-69AE-11D9-BED3-505054503030}&amp;#34;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">success&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">disable&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">failure&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">enable&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">wevtutil&lt;/span> &lt;span class="n">qe&lt;/span> &lt;span class="n">Security&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">q:&lt;/span>&lt;span class="s2">&amp;#34;*[System/EventID=5152]&amp;#34;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">c:&lt;/span>&lt;span class="mf">5&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">rd&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">true&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">f:text&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">auditpol&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nb">set &lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="n">subcategory&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="s2">&amp;#34;{0CCE9225-69AE-11D9-BED3-505054503030}&amp;#34;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">success&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">disable&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="n">failure&lt;/span>&lt;span class="err">:&lt;/span>&lt;span class="n">disable&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Win-to-go</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/</link><pubDate>Fri, 28 Jun 2024 17:07:10 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/</guid><description>&lt;p>===&lt;/p>
+&lt;p>Windows To Go 的优点在于移动便携性, 缺点在于经典 Windows系统的数个功能受到限制.&lt;/p>
+&lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+&lt;!-- code_chunk_output -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/#%e5%89%8d%e8%a8%80">前言&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/#windows-to-go-overview">Windows To Go Overview&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/#windows-to-go-%e5%92%8c%e4%bc%a0%e7%bb%9f-windows-%e5%ae%89%e8%a3%85%e6%96%b9%e5%bc%8f%e7%9a%84%e5%8c%ba%e5%88%ab">Windows To Go 和传统 Windows 安装方式的区别&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/#%e4%bd%bf%e7%94%a8-windows-to-go-%e6%9d%a5%e7%a7%bb%e5%8a%a8%e5%b7%a5%e4%bd%9c">使用 Windows To Go 来移动工作&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/#%e5%87%86%e5%a4%87%e5%ae%89%e8%a3%85-windows-to-go">准备安装 Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/#%e7%a1%ac%e4%bb%b6%e8%a6%81%e6%b1%82">硬件要求&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/#usb-%e7%a1%ac%e7%9b%98%e6%88%96-u%e7%9b%98">USB 硬盘或 U盘&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/#%e8%bd%bd%e4%bd%93%e6%9c%ba%e5%99%a8host-computer">载体机器(Host computer)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/#%e6%a3%80%e6%9f%a5%e8%bd%bd%e4%bd%93-pc-%e5%92%8c-windows-to-go-%e7%9b%98%e7%9a%84%e6%9e%b6%e6%9e%84%e5%85%bc%e5%ae%b9%e6%80%a7">检查载体 PC 和 Windows To Go 盘的架构兼容性&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/win-to-go/#windows-to-go-%e7%9a%84%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98">Windows To Go 的常见问题&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /code_chunk_output -->
+&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>Windows To Go出现很多年了, 可是百度到的中文文档却如此少, 不禁为国内IT技术的发展而担忧.作者J参加工作时间不长, 能力有限, 但工作中接触大量英文开发文档, 因此仍希望能做一点基础的铺路工作, 方便后来者查阅, 有不当之处也请读者不吝指出. Windows To Go有详尽的官方文档, 有英文阅读能力的可以直接跳转到微软官方文档. 链接如下:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/windows-to-go-overview">Windows To Go Overview&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/best-practice-recommendations-for-windows-to-go">Best practice recommendations for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/deployment-considerations-for-windows-to-go">Deployment considerations for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/prepare-your-organization-for-windows-to-go">Prepare your organization for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/security-and-data-protection-considerations-for-windows-to-go">Security and data protection considerations for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/zh-cn/windows/deployment/planning/windows-to-go-frequently-asked-questions">Windows To Go: frequently asked questions&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>本文主要会介绍 Overview, 和一些常见问题, 大部分内容为翻译, 少量作者的提醒以[J]来标注直至句号结束, 以确保不误导读者.&lt;/p></description></item><item><title>letsencrypt的证书申请限制</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/28/letsencrypt%E7%9A%84%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E9%99%90%E5%88%B6/</link><pubDate>Fri, 28 Jun 2024 16:12:01 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/28/letsencrypt%E7%9A%84%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E9%99%90%E5%88%B6/</guid><description>&lt;h2 id="简洁总结">简洁总结&lt;/h2>
+&lt;ul>
+&lt;li>每个注册域名每周最多 50 个证书&lt;/li>
+&lt;li>每个账户每三小时最多 300 次请求&lt;/li>
+&lt;li>每份证书最多 100 个域名&lt;/li>
+&lt;li>每周最多 5 张重复证书&lt;/li>
+&lt;li>&lt;strong>续期证书不受限制&lt;/strong>&lt;/li>
+&lt;li>每个 IP 每三小时最多创建 10 个账户&lt;/li>
+&lt;li>每个 IPv6/48 每三小时最多创建 500 个账户&lt;/li>
+&lt;/ul>
+&lt;p>如果你需要给很多个子域名申请证书, 可以结合&lt;code>每个注册域名每周最多 50 个证书&lt;/code>和&lt;code>每份证书最多 100 个域名&lt;/code>, 实现每周最多 5000 个子域名的证书申请.&lt;/p>
+&lt;h2 id="参考">参考&lt;/h2>
+&lt;p>&lt;a href="https://letsencrypt.org/zh-cn/docs/rate-limits/">https://letsencrypt.org/zh-cn/docs/rate-limits/&lt;/a>&lt;/p></description></item><item><title>工具</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/</link><pubDate>Fri, 28 Jun 2024 16:11:32 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/</guid><description/></item><item><title>简易server-client代码</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/28/%E7%AE%80%E6%98%93server-client%E4%BB%A3%E7%A0%81/</link><pubDate>Fri, 28 Jun 2024 16:07:13 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/28/%E7%AE%80%E6%98%93server-client%E4%BB%A3%E7%A0%81/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 简易server-client代码&lt;/li>
+&lt;/ul>
+&lt;h1 id="简易-server-client-代码-windows">简易 server-client 代码 windows&lt;/h1>
+&lt;h2 id="windows">Windows&lt;/h2>
+&lt;p>&lt;a href="https://docs.microsoft.com/en-us/windows/win32/winsock/complete-client-code">Complete Winsock Client Code&lt;/a>
+&lt;a href="https://docs.microsoft.com/en-us/windows/win32/winsock/complete-server-code">Complete Winsock Server Code&lt;/a>&lt;/p>
+&lt;h2 id="linux">Linux&lt;/h2>
+&lt;p>&lt;a href="https://www.geeksforgeeks.org/socket-programming-cc/">Linux Socket Programming&lt;/a>
+&lt;a href="https://www.geeksforgeeks.org/simple-client-server-application-in-c/">Simple client/server application in C&lt;/a>&lt;/p></description></item><item><title>测试工具</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</link><pubDate>Fri, 28 Jun 2024 16:06:37 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 测试工具&lt;/li>
+&lt;/ul>
+&lt;h1 id="测试工具">测试工具&lt;/h1>
+&lt;ul>
+&lt;li>[&lt;a href="%E7%B2%BE%E7%A1%AE%E5%8F%91%E5%8C%85-hping3" title="精确发包-hping3">精确发包-hping3&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/%E7%AE%80%E6%98%93server-client%E4%BB%A3%E7%A0%81/" title="简易server-client代码">简易server-client代码&lt;/a>]&lt;/li>
+&lt;/ul></description></item><item><title>设备的分类</title><link>https://blog.jqknono.com/zh-cn/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/%E8%AE%BE%E5%A4%87/%E8%AE%BE%E5%A4%87%E7%9A%84%E5%88%86%E7%B1%BB/</link><pubDate>Tue, 04 Jun 2024 12:26:28 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/%E8%AE%BE%E5%A4%87/%E8%AE%BE%E5%A4%87%E7%9A%84%E5%88%86%E7%B1%BB/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 设备的分类&lt;/li>
+&lt;/ul>
+&lt;p>网络流行的 NAS, 软路由, Mac mini, 路由器等统一抽象为设备, 不需要关注其命名和形态, 主要应关注&lt;strong>处理器&lt;/strong>, &lt;strong>存储&lt;/strong>, &lt;strong>网络&lt;/strong>, &lt;strong>应用生态&lt;/strong>这四个方面.&lt;/p>
+&lt;p>处理器首要关注的是架构, 一般使用的是&lt;strong>x86&lt;/strong>, &lt;strong>ARM&lt;/strong>, 其它架构不建议非专业人士购买, 较贫乏的生态会增加学习和使用的难度.&lt;/p>
+&lt;p>你会看到有些人评价&lt;strong>ARM&lt;/strong>通常用于低功耗设备, 适合家用, &lt;strong>x86&lt;/strong>通常用于高性能设备, 适合企业. 但本文写作的 2024 年的时间点, 这种论调早已过时, 我们还是要基于生态去考虑, 目前&lt;strong>ARM&lt;/strong>生态已非常丰富, 并且具有更好的性价比, 值得大家考虑. 建议非专业人士可以直接选择&lt;strong>ARM&lt;/strong>架构的设备, 以阿里云为例&lt;strong>ARM&lt;/strong>设备的价格仅为&lt;strong>x86&lt;/strong>设备的一半, 性能也足够应付家用需求. 专业人士可以根据自己的需求选择&lt;strong>x86&lt;/strong>架构的设备.&lt;/p></description></item></channel></rss>

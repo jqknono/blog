@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/tags/docker/</link><description>Recent content in Docker on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 19:09:08 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>docker</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/docker/</link><pubDate>Fri, 28 Jun 2024 19:09:08 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/docker/</guid><description>&lt;h1 id="k8s-和-docker">k8s 和 docker&lt;/h1>
+&lt;ul>
+&lt;li>[&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/docker%E4%BB%8B%E7%BB%8D/" title="docker介绍">docker介绍&lt;/a>]
+&lt;ul>
+&lt;li>[&lt;a href="Windows%E5%AE%B9%E5%99%A8" title="Windows容器">Windows容器&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="docker%E7%BD%91%E7%BB%9C" title="docker网络">docker网络&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="docker%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90" title="docker网络分析">docker网络分析&lt;/a>]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>docker介绍</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/28/docker%E4%BB%8B%E7%BB%8D/</link><pubDate>Fri, 28 Jun 2024 16:00:31 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/28/docker%E4%BB%8B%E7%BB%8D/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> docker介绍&lt;/li>
+&lt;/ul>
+&lt;h1 id="docker-介绍">docker 介绍&lt;/h1>
+&lt;ul>
+&lt;li>docker 是一个应用容器引擎, 可以打包应用及其依赖包到一个可移植的容器中, 然后发布到任何流行的 Linux 或 Windows 机器上, 也可以实现虚拟化.&lt;/li>
+&lt;li>为什么会有 docker, 因为开发和运维经常遇到一类问题, 那就是应用在开发人员的环境上运行没有任何问题, 但在实际生产环境中却 bug 百出.
+&lt;ul>
+&lt;li>程序的运行从硬件架构到操作系统, 再到应用程序, 这些都是不同的层次, 但是开发人员往往只关注应用程序的开发, 而忽略了其他层次的问题.&lt;/li>
+&lt;li>docker 的出现就是为了解决这个问题, 它将应用程序及其依赖, 打包在一个容器中, 这样就不用担心环境的问题了.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>同步开发和生产环境, 使开发人员可以在本地开发, 测试, 部署应用程序, 而不用担心环境的问题. 显著提升了开发和运维的效率, 代价是一点点资源的浪费.&lt;/li>
+&lt;/ul>
+&lt;p>我极力建议所有开发者都学会使用容器进行开发和部署, 它以相对很低的代价, 为你的应用程序提供一个稳定的运行环境, 从而提高开发和运维的效率.&lt;/p>
+&lt;p>使用一些通俗的语言来描述使用 docker 的一种工作流:&lt;/p>
+&lt;ol>
+&lt;li>从零创建一个开发的环境, 包含了操作系统, 应用程序, 依赖包, 配置文件等等.
+&lt;ul>
+&lt;li>环境可以在任何地方运行, 也可以在任何地方创建.&lt;/li>
+&lt;li>环境对源码编译的结果稳定且可预测, 行为完全一致.&lt;/li>
+&lt;li>环境中程序的运行不会产生任何歧义.&lt;/li>
+&lt;li>最好是可以使用声明式的方式来创建环境(docker-compose), 进一步减少环境的隐藏差异, 环境的一切都已在声明里展示.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>创建一个 commit, 创建镜像, 这相当于一个快照, 保存当前的环境, 以便以后使用.&lt;/li>
+&lt;li>分享镜像给其它开发和运维, 大家基于相同语境同步展开工作.&lt;/li>
+&lt;li>随着业务的发展需求, 修改镜像, 重新创建 commit, 重新创建镜像, 重新分发.&lt;/li>
+&lt;/ol>
+&lt;h2 id="docker-的基本架构">docker 的基本架构&lt;/h2>
+&lt;ul>
+&lt;li>[&lt;a href="docker%E7%BD%91%E7%BB%9C" title="docker网络">docker网络&lt;/a>]&lt;/li>
+&lt;/ul></description></item></channel></rss>

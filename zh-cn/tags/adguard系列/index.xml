@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Adguard系列 on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/tags/adguard%E7%B3%BB%E5%88%97/</link><description>Recent content in Adguard系列 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 12 Jun 2024 19:00:34 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/tags/adguard%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml"/><item><title>利用DNS服务平滑切换网络服务</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/12/%E5%88%A9%E7%94%A8dns%E6%9C%8D%E5%8A%A1%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</link><pubDate>Wed, 12 Jun 2024 19:00:34 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/12/%E5%88%A9%E7%94%A8dns%E6%9C%8D%E5%8A%A1%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</guid><description>&lt;p>假设服务域名为&lt;code>example.domain&lt;/code>, 原服务器 IP 地址为&lt;code>A&lt;/code>, 由于服务器迁移或 IP 更换, 新服务器 IP 地址为&lt;code>B&lt;/code>, 为了保证用户无感知, 可以通过 DNS 服务平滑切换网络服务.&lt;/p>
+&lt;ol>
+&lt;li>原服务状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>A&lt;/code>&lt;/li>
+&lt;li>过渡状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>A&lt;/code> 和&lt;code>B&lt;/code>&lt;/li>
+&lt;li>新服务状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>B&lt;/code>, 移除 IP 地址&lt;code>A&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>说明: 当用户获得两个解析地址时, 客户端会选择其中一个地址进行连接, 当连接失败时, 会尝试其它地址, 以此保证服务的可用性.&lt;/p>
+&lt;p>由于 DNS 解析存在缓存, 为了保证平滑切换, 需要在过渡状态保持一段时间, 以确保所有缓存失效.&lt;/p>
+&lt;p>我这里需要迁移的是 dns 服务, 可以在过渡状态中设置&lt;code>DNS重写&lt;/code>, 加快迁移过程.&lt;/p>
+&lt;p>A 服务重写规则:&lt;/p>
+&lt;p>&lt;img src="https://s2.loli.net/2024/06/12/xRFMB1PTIcvUQHr.png" alt="A服务重写">&lt;/p>
+&lt;p>B 服务重写规则:&lt;/p>
+&lt;p>&lt;img src="https://s2.loli.net/2024/06/12/DILEi9jJoVYeuT2.png" alt="B服务重写">&lt;/p>
+&lt;p>原迁移过程拓展为:&lt;/p>
+&lt;ol>
+&lt;li>原服务状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>A&lt;/code>&lt;/li>
+&lt;li>过渡状态, &lt;code>example.domain&lt;/code> 在&lt;code>dns A&lt;/code>服务中重写到&lt;code>A&lt;/code>和&lt;code>B&lt;/code>, 在&lt;code>dns B&lt;/code>服务中重写到&lt;code>B&lt;/code>&lt;/li>
+&lt;li>新服务状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>B&lt;/code>, 移除 IP 地址&lt;code>A&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>当用户仍在使用&lt;code>dns A&lt;/code>服务时, 可以获得两个地址, 有一半的概率会选择&lt;code>dns A&lt;/code>服务.&lt;br>
+另外一半的概率会切换到&lt;code>dns B&lt;/code>服务, &lt;code>dns B&lt;/code>服务故障时切换回&lt;code>dns A&lt;/code>. &lt;code>dns B&lt;/code>服务未故障时, 将只会获得一个地址, 因而用户会停留在&lt;code>dns B&lt;/code>服务中.&lt;br>
+这样我们可以逐步的减少&lt;code>dns A&lt;/code>服务的资源消耗, 而不是直接停止, 实现更平滑的迁移.&lt;/p></description></item></channel></rss>

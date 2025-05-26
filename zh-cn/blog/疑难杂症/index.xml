@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>疑难杂症 on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/blog/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</link><description>Recent content in 疑难杂症 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 06 Nov 2024 10:56:27 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/blog/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows Server 2019长时间运行ipv6断连问题</title><link>https://blog.jqknono.com/zh-cn/blog/2024/11/06/windows-server-2019%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%90%E8%A1%8Cipv6%E6%96%AD%E8%BF%9E%E9%97%AE%E9%A2%98/</link><pubDate>Wed, 06 Nov 2024 10:56:27 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/11/06/windows-server-2019%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%90%E8%A1%8Cipv6%E6%96%AD%E8%BF%9E%E9%97%AE%E9%A2%98/</guid><description>&lt;p>我的Windows Server 2019不怎么关机, 在电信/红米路由下, ipv6每次更新时, 本地ipv6连接都会显示无Internet访问权限, 重启设备或者开闭IPv6功能可以解决, Linux下不会出现这样问题.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/20241106115547.png" alt="">&lt;/p>
+&lt;p>考虑自动化操作，用这两条命令解决:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPInterface&lt;/span> &lt;span class="n">-AddressFamily&lt;/span> &lt;span class="n">IPv6&lt;/span> &lt;span class="n">-ifAlias&lt;/span> &lt;span class="n">Ethernet&lt;/span> &lt;span class="n">-RouterDiscovery&lt;/span> &lt;span class="n">Disabled&lt;/span>&lt;span class="p">;&lt;/span> 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPInterface&lt;/span> &lt;span class="n">-AddressFamily&lt;/span> &lt;span class="n">IPv6&lt;/span> &lt;span class="n">-ifAlias&lt;/span> &lt;span class="n">Ethernet&lt;/span> &lt;span class="n">-RouterDiscovery&lt;/span> &lt;span class="n">Enabled&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>你可以看到命令只是让Windows更新了路由, 不知道为什么Windows没有自动更新路由.&lt;/p>
+&lt;p>如果有人碰到相同问题可以参考, 如果有更好的解决办法, 也欢迎讨论.&lt;/p></description></item><item><title>openvpn网络不通</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</link><pubDate>Fri, 28 Jun 2024 17:18:48 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> openvpn配置&lt;/li>
+&lt;/ul>
+&lt;h1 id="openvpn配置">openvpn配置&lt;/h1>
+&lt;h2 id="工具脚本">工具脚本&lt;/h2>
+&lt;p>&lt;a href="https://github.com/angristan/openvpn-install">openvpn-install&lt;/a>&lt;/p>
+&lt;h2 id="windows防火墙配置">Windows防火墙配置&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Inbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Outbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Windows桥接时的IPv6问题</title><link>https://blog.jqknono.com/zh-cn/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/</link><pubDate>Sat, 06 May 2023 11:47:48 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2023/05/06/windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84ipv6%E9%97%AE%E9%A2%98/</guid><description>&lt;ul>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> Windows桥接时的IPv6问题&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> WindowsServer 桥接时的 IPv6 问题&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>现在很多用作软路由的机器硬件配置较好, 仅安装一个 openwrt 大材小用, 基本都会自己折腾一下去榨干它的价值. Linux 的难点在于命令行, 其实命令行用的多的能感受到这也是 linux 的容易之处.&lt;/p>
+&lt;p>外网访问需求基本爱折腾的人都会遇到, 考虑到 linux 不太有专业的人维护, 安全补丁更新较慢, 衡量后会有部分人决定使用 Windows Server 系统. 原本 openwrt 上的软件则使用 wsl 加 docker 方式运行, 所有需求都可以同样满足.&lt;/p>
+&lt;p>在 Windows(Server)桥接多个网络时, 会出现 IPv6 地址无法更新的问题, 但是 IPv4 可以正常访问. 由于 IPv6 的地址是运营商自动分配的, 无法手动修改, 所以需要修改桥接的网络配置.&lt;/p>
+&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://forums.tomshardware.com/threads/network-bridge-for-ipv6.3118590/">Network Bridge for ipv6&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>Generally, bridging is purely layer 2 so no IP address is required, so just like an unmanaged switch should be iPv6 capable.&lt;/p></description></item><item><title>宝塔docker源加速</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/03/%E5%AE%9D%E5%A1%94docker%E6%BA%90%E5%8A%A0%E9%80%9F/</link><pubDate>Mon, 03 Jun 2024 18:31:48 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/03/%E5%AE%9D%E5%A1%94docker%E6%BA%90%E5%8A%A0%E9%80%9F/</guid><description>&lt;p>&lt;img src="https://s2.loli.net/2024/06/03/BT8s1ldrF7wyUYP.png" alt="">&lt;/p>
+&lt;p>宝塔 8.2 及以下版本设置 docker 源加速无效, 并且界面上手动设置配置文件内容无效.&lt;/p>
+&lt;p>这是由于 docker 配置文件位于&lt;code>/etc/docker/daemon.json&lt;/code>, 该文件及其文件夹默认不存在, 直接修改文件不会保存成功.&lt;/p>
+&lt;p>只需要执行&lt;code>mkdir /etc/docker&lt;/code>, 然后再在界面上修改加速配置即可生效.&lt;/p></description></item><item><title>Windows Edge浏览器卡顿的一种解决办法</title><link>https://blog.jqknono.com/zh-cn/blog/2024/05/07/windows-edge%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8D%A1%E9%A1%BF%E7%9A%84%E4%B8%80%E7%A7%8D%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link><pubDate>Tue, 07 May 2024 11:48:37 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/05/07/windows-edge%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8D%A1%E9%A1%BF%E7%9A%84%E4%B8%80%E7%A7%8D%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid><description>&lt;h2 id="浏览器版本">浏览器版本&lt;/h2>
+&lt;p>&lt;code>122.0.2365.80+&lt;/code>&lt;/p>
+&lt;h2 id="卡顿现象">卡顿现象&lt;/h2>
+&lt;ul>
+&lt;li>打开个人 profile 时卡顿&lt;/li>
+&lt;li>打开和搜索存储密码时卡顿&lt;/li>
+&lt;li>新建和关闭 tab 时卡顿&lt;/li>
+&lt;li>在新建的 tab 中输入字符时卡顿&lt;/li>
+&lt;/ul>
+&lt;p>目前发现仅中文版 Windows 系统会出现此类型的卡顿.&lt;/p>
+&lt;h2 id="解决办法">解决办法&lt;/h2>
+&lt;p>中文浏览器设置路径: &lt;code>隐私-搜索-服务 -&amp;gt; 地址栏和搜索 -&amp;gt; 搜索建议和筛选器 -&amp;gt; 搜索筛选器&lt;/code>, &lt;strong>关闭&lt;/strong>搜索筛选器.&lt;/p>
+&lt;p>英文浏览器设置路径: &lt;code>Privacy search and services -&amp;gt; Address bar and search -&amp;gt; Search sugesstion and filters -&amp;gt; Search filters&lt;/code>, &lt;strong>TURN OFF&lt;/strong> Search filters.&lt;/p>
+&lt;p>&lt;img src="https://s2.loli.net/2024/05/07/yhBqcLiaFAkdp3G.png" alt="设置指导">&lt;/p></description></item></channel></rss>
