@@ -1,4 +1,123 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/ai/</link><description>Recent content in AI on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 30 Mar 2025 22:24:30 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>来自cline的提示词指南</title><link>https://blog.jqknono.com/zh-cn/blog/2025/03/30/%E6%9D%A5%E8%87%AAcline%E7%9A%84%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8C%87%E5%8D%97/</link><pubDate>Sun, 30 Mar 2025 22:24:30 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/03/30/%E6%9D%A5%E8%87%AAcline%E7%9A%84%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8C%87%E5%8D%97/</guid><description>&lt;h1 id="cline-记忆库---自定义指令">Cline 记忆库 - 自定义指令&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/ai/</link><description>Recent content in AI on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Jun 2025 13:18:19 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>cursor自动化调试</title><link>https://blog.jqknono.com/zh-cn/blog/2025/06/27/cursor%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B0%83%E8%AF%95/</link><pubDate>Fri, 27 Jun 2025 13:18:19 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/06/27/cursor%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B0%83%E8%AF%95/</guid><description>&lt;p>以下是使用 Cursor 进行自动化开发测试的大纲：&lt;/p>
+&lt;h3 id="1-简介">1. 简介&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Cursor 概述&lt;/strong>：介绍 Cursor 是什么，它的主要功能和特点。&lt;/li>
+&lt;li>&lt;strong>自动化开发测试的背景&lt;/strong>：解释为什么需要自动化开发测试，以及它在现代软件开发中的重要性。&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-准备工作">2. 准备工作&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>安装与配置&lt;/strong>：
+&lt;ul>
+&lt;li>下载并安装 Cursor。&lt;/li>
+&lt;li>配置必要的插件和扩展。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>环境设置&lt;/strong>：
+&lt;ul>
+&lt;li>设置项目结构。&lt;/li>
+&lt;li>安装依赖项（如 Node.js、Python 等）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-自动化测试基础">3. 自动化测试基础&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>测试类型&lt;/strong>：
+&lt;ul>
+&lt;li>单元测试&lt;/li>
+&lt;li>集成测试&lt;/li>
+&lt;li>端到端测试&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>测试框架选择&lt;/strong>：
+&lt;ul>
+&lt;li>介绍常用的测试框架（如 Jest, Mocha, PyTest 等）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-使用-cursor-编写测试用例">4. 使用 Cursor 编写测试用例&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>创建测试文件&lt;/strong>：
+&lt;ul>
+&lt;li>在 Cursor 中创建新的测试文件。&lt;/li>
+&lt;li>使用模板生成基本的测试结构。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>编写测试逻辑&lt;/strong>：
+&lt;ul>
+&lt;li>编写单元测试用例。&lt;/li>
+&lt;li>使用断言库进行验证。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-运行和调试测试">5. 运行和调试测试&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>运行测试&lt;/strong>：
+&lt;ul>
+&lt;li>在 Cursor 中运行单个或多个测试用例。&lt;/li>
+&lt;li>查看测试结果和输出。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>调试测试&lt;/strong>：
+&lt;ul>
+&lt;li>设置断点。&lt;/li>
+&lt;li>步进执行以检查变量值和程序状态。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="6-测试报告与分析">6. 测试报告与分析&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>生成测试报告&lt;/strong>：
+&lt;ul>
+&lt;li>使用测试框架生成详细的测试报告。&lt;/li>
+&lt;li>导出报告为 HTML 或其他格式。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>分析测试结果&lt;/strong>：
+&lt;ul>
+&lt;li>识别失败的测试用例。&lt;/li>
+&lt;li>分析原因并进行修复。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="7-持续集成与持续交付-cicd">7. 持续集成与持续交付 (CI/CD)&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>集成 CI/CD 工具&lt;/strong>：
+&lt;ul>
+&lt;li>将 Cursor 与 GitHub Actions、Travis CI 等工具集成。&lt;/li>
+&lt;li>配置自动触发测试的流程。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>部署与监控&lt;/strong>：
+&lt;ul>
+&lt;li>自动化部署到测试环境。&lt;/li>
+&lt;li>监控测试覆盖率和质量指标。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="8-最佳实践与技巧">8. 最佳实践与技巧&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>代码重构与测试维护&lt;/strong>：
+&lt;ul>
+&lt;li>如何在代码重构时保持测试的有效性。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>性能优化&lt;/strong>：
+&lt;ul>
+&lt;li>提高测试执行速度的技巧。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>常见问题解决&lt;/strong>：
+&lt;ul>
+&lt;li>解决常见的测试失败问题。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="9-结论">9. 结论&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>总结&lt;/strong>：回顾使用 Cursor 进行自动化开发测试的优势和关键步骤。&lt;/li>
+&lt;li>&lt;strong>展望&lt;/strong>：未来可能的发展方向和改进点。&lt;/li>
+&lt;/ul>
+&lt;p>这个大纲旨在帮助开发者系统地了解如何利用 Cursor 进行自动化开发测试，从而提高开发效率和代码质量。&lt;/p></description></item><item><title>来自cline的提示词指南</title><link>https://blog.jqknono.com/zh-cn/blog/2025/03/30/%E6%9D%A5%E8%87%AAcline%E7%9A%84%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8C%87%E5%8D%97/</link><pubDate>Sun, 30 Mar 2025 22:24:30 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/03/30/%E6%9D%A5%E8%87%AAcline%E7%9A%84%E6%8F%90%E7%A4%BA%E8%AF%8D%E6%8C%87%E5%8D%97/</guid><description>&lt;h1 id="cline-记忆库---自定义指令">Cline 记忆库 - 自定义指令&lt;/h1>
 &lt;h3 id="1-目的和功能">1. 目的和功能&lt;/h3>
 &lt;ul>
 &lt;li>

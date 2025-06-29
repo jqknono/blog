@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网络 on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/categories/%E7%BD%91%E7%BB%9C/</link><description>Recent content in 网络 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 24 May 2025 20:04:34 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/categories/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS</title><link>https://blog.jqknono.com/zh-cn/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网络 on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/categories/%E7%BD%91%E7%BB%9C/</link><description>Recent content in 网络 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Jun 2025 19:09:29 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/categories/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL mirrored网络模式配置指南</title><link>https://blog.jqknono.com/zh-cn/blog/2025/06/25/wsl-mirrored%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><pubDate>Wed, 25 Jun 2025 19:09:29 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/06/25/wsl-mirrored%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><description>&lt;h2 id="版本要求">版本要求&lt;/h2>
+&lt;p>当前版本状态：&lt;/p>
+&lt;ul>
+&lt;li>最新稳定版：2.5.9（存在网络配置缺陷）&lt;/li>
+&lt;li>推荐版本：2.6.0 预览版（支持完整mirrored模式）&lt;/li>
+&lt;/ul>
+&lt;h2 id="模式对比分析">模式对比分析&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>特性&lt;/th>
+ &lt;th>bridge模式（已废弃）&lt;/th>
+ &lt;th>mirrored模式（推荐）&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>协议栈架构&lt;/td>
+ &lt;td>双协议栈&lt;/td>
+ &lt;td>共享协议栈&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>IP地址分配&lt;/td>
+ &lt;td>独立IP（Windows+WSL）&lt;/td>
+ &lt;td>共享主机IP&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>端口资源&lt;/td>
+ &lt;td>独立使用&lt;/td>
+ &lt;td>共享端口（需避免冲突）&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>网络性能&lt;/td>
+ &lt;td>相对较重&lt;/td>
+ &lt;td>轻量高效&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>配置复杂度&lt;/td>
+ &lt;td>简单&lt;/td>
+ &lt;td>需深度配置防火墙策略&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="标准配置步骤">标准配置步骤&lt;/h2>
+&lt;h3 id="1-网络模式设置">1. 网络模式设置&lt;/h3>
+&lt;p>通过 &lt;strong>WSL Settings&lt;/strong> 应用设置基础模式：&lt;/p>
+&lt;ol>
+&lt;li>打开设置应用&lt;/li>
+&lt;li>选择&amp;quot;Network&amp;quot;选项卡&lt;/li>
+&lt;li>设置网络模式为&amp;quot;Mirrored&amp;quot;&lt;/li>
+&lt;li>应用配置并重启WSL&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202506261151336.png" alt="">&lt;/p>
+&lt;h3 id="2-防火墙策略配置">2. 防火墙策略配置&lt;/h3>
+&lt;p>需通过PowerShell执行完整策略配置：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 定义WSL虚拟机GUID&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$wslGuid&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s1">&amp;#39;{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 配置防火墙策略（按顺序执行）&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span> &lt;span class="n">-Enabled&lt;/span> &lt;span class="n">True&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span> &lt;span class="n">-DefaultInboundAction&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span> &lt;span class="n">-DefaultOutboundAction&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span> &lt;span class="n">-LoopbackEnabled&lt;/span> &lt;span class="n">True&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span> &lt;span class="n">-AllowHostPolicyMerge&lt;/span> &lt;span class="n">True&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 验证配置结果&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Get-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="3-端口映射验证">3. 端口映射验证&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 示例：检查80端口占用情况&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Get-NetTCPConnection&lt;/span> &lt;span class="n">-LocalPort&lt;/span> &lt;span class="mf">80&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="常见问题处理">常见问题处理&lt;/h2>
+&lt;h3 id="问题1无法建立外部连接">问题1：无法建立外部连接&lt;/h3>
+&lt;ul>
+&lt;li>检查步骤：&lt;code>Get-NetFirewallHyperVVMSetting&lt;/code>输出中所有字段应为True/Allow&lt;/li>
+&lt;li>解决方案：按顺序重新执行防火墙策略配置&lt;/li>
+&lt;/ul>
+&lt;h3 id="问题2端口冲突">问题2：端口冲突&lt;/h3>
+&lt;ul>
+&lt;li>验证方法：&lt;code>netstat -ano&lt;/code>查看端口占用&lt;/li>
+&lt;li>处理建议：优先释放Windows端占用端口，或修改WSL服务监听端口&lt;/li>
+&lt;/ul>
+&lt;h2 id="验证方法">验证方法&lt;/h2>
+&lt;ol>
+&lt;li>启动WSL服务（如Nginx/Apache）&lt;/li>
+&lt;li>从Windows主机访问&lt;code>http://localhost:&amp;lt;port&amp;gt;&lt;/code>&lt;/li>
+&lt;li>从局域网设备访问&lt;code>http://&amp;lt;host-ip&amp;gt;:&amp;lt;port&amp;gt;&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="参考资料">参考资料&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows/wsl/networking">WSL官方网络文档&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/microsoft/WSL/releases/tag/2.6.0">WSL 2.6.0发布说明&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>DNS</title><link>https://blog.jqknono.com/zh-cn/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> _index&lt;/li>
 &lt;/ul></description></item><item><title>几个更安全使用公网IPv6的方法</title><link>https://blog.jqknono.com/zh-cn/blog/2025/02/28/%E5%87%A0%E4%B8%AA%E6%9B%B4%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E5%85%AC%E7%BD%91ipv6%E7%9A%84%E6%96%B9%E6%B3%95/</link><pubDate>Fri, 28 Feb 2025 12:45:22 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/02/28/%E5%87%A0%E4%B8%AA%E6%9B%B4%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E5%85%AC%E7%BD%91ipv6%E7%9A%84%E6%96%B9%E6%B3%95/</guid><description>&lt;p>有些人会有使用公网 IPv6 回家的需求, 不同于 tailscale/zerotier 等 VPN 需要内网穿透打洞来建立直连的方式, IPv6 回家就是直连, 手机蜂窝网络大多数时候都是有 IPv6 的, 回家非常方便.&lt;/p>
 &lt;p>我之前分享过一篇文章&lt;a href="https://www.v2ex.com/t/1112630">家庭宽带使用常见 DDns 子域名可能会使电信宽带服务降级&lt;/a>, 描述使用 IPv6 时运营商挖的一个坑, 简短来说就是域名会被扫, 暴漏自己的域名等同于暴露 IPv6, 因此可能会被扫描, 扫到服务后入站连接一多就降级宽带服务.&lt;/p>

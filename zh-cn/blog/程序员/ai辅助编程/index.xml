@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI辅助编程 on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/ai%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B/</link><description>Recent content in AI辅助编程 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 17 Mar 2025 12:17:24 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/ai%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>AI助手比我聪明很多</title><link>https://blog.jqknono.com/zh-cn/blog/2025/03/17/ai%E5%8A%A9%E6%89%8B%E6%AF%94%E6%88%91%E8%81%AA%E6%98%8E%E5%BE%88%E5%A4%9A/</link><pubDate>Mon, 17 Mar 2025 12:17:24 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/03/17/ai%E5%8A%A9%E6%89%8B%E6%AF%94%E6%88%91%E8%81%AA%E6%98%8E%E5%BE%88%E5%A4%9A/</guid><description>&lt;p>对于一个从事编码工作 10 年, 有过镀金经历, 最终也看重面子的中年人, 承认 AI 比我厉害是一件很难为情的事.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI辅助编程 on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/ai%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B/</link><description>Recent content in AI辅助编程 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 28 May 2025 19:01:45 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/ai%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Copilot为何逐渐愚蠢</title><link>https://blog.jqknono.com/zh-cn/blog/2025/05/28/github-copilot%E4%B8%BA%E4%BD%95%E9%80%90%E6%B8%90%E6%84%9A%E8%A0%A2/</link><pubDate>Wed, 28 May 2025 19:01:45 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/05/28/github-copilot%E4%B8%BA%E4%BD%95%E9%80%90%E6%B8%90%E6%84%9A%E8%A0%A2/</guid><description>&lt;style>
+.column-container {
+ display: flex;
+ gap: 2rem;
+ margin: 2rem 0;
+}
+
+.column {
+ flex: 1;
+ padding: 1rem;
+ background-color: #f8f9fa;
+ border-radius: 8px;
+ overflow-y: auto;
+ max-height: 80vh;
+}
+
+.column h2 {
+ color: #1a73e8;
+ border-bottom: 2px solid #e0e0e0;
+ padding-bottom: 0.5rem;
+ margin-top: 0;
+}
+&lt;/style>
+&lt;div class="column-container">
+ &lt;div class="column">
+ &lt;!-- 文章一内容开始 -->
+ &lt;h2>文章标题一&lt;/h2>
+ &lt;p>在此粘贴第一篇文章的完整内容...&lt;/p>
+ &lt;!-- 文章一内容结束 -->
+ &lt;/div>
+ &lt;div class="column">
+ &lt;!-- 文章二内容开始 -->
+ &lt;h2>文章标题二&lt;/h2>
+ &lt;p>在此粘贴第二篇文章的完整内容...&lt;/p>
+ &lt;!-- 文章二内容结束 -->
+ &lt;/div>
+&lt;/div></description></item><item><title>AI助手比我聪明很多</title><link>https://blog.jqknono.com/zh-cn/blog/2025/03/17/ai%E5%8A%A9%E6%89%8B%E6%AF%94%E6%88%91%E8%81%AA%E6%98%8E%E5%BE%88%E5%A4%9A/</link><pubDate>Mon, 17 Mar 2025 12:17:24 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/03/17/ai%E5%8A%A9%E6%89%8B%E6%AF%94%E6%88%91%E8%81%AA%E6%98%8E%E5%BE%88%E5%A4%9A/</guid><description>&lt;p>对于一个从事编码工作 10 年, 有过镀金经历, 最终也看重面子的中年人, 承认 AI 比我厉害是一件很难为情的事.&lt;/p>
 &lt;p>所用的 AI 工具, 一个月总花费不超过 200 元人民币, 而老板给我的薪酬远高于此.&lt;/p>
 &lt;p>可以预期会引来众嘲,&lt;/p>
 &lt;blockquote>
