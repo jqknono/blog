@@ -1,219 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DNS on Nono Blogs</title><link>https://blog.jqknono.com/tags/dns/</link><description>Recent content in DNS on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 20 Feb 2025 19:10:12 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>广告拦截新选择--AdGuardPrivate</title><link>https://blog.jqknono.com/blog/2025/02/20/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%96%B0%E9%80%89%E6%8B%A9--adguardprivate/</link><pubDate>Thu, 20 Feb 2025 19:10:12 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/20/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%96%B0%E9%80%89%E6%8B%A9--adguardprivate/</guid><description>&lt;p>&lt;a href="https://www.adguardprivate.com">AdGuardPrivate&lt;/a> 是一款专注于网络隐私保护与广告拦截的 DNS 服务工具，基于开源项目 &lt;a href="https://github.com/AdguardTeam/AdGuardHome">AdGuard Home&lt;/a> 二次开发，通过智能流量分析和过滤技术，为用户提供安全、高效的上网环境。以下是其主要功能与特点：&lt;/p>
-&lt;h2 id="核心功能广告拦截与隐私保护">核心功能：广告拦截与隐私保护&lt;/h2>
-&lt;ul>
-&lt;li>广告拦截：通过 DNS 层面拦截网页广告（如横幅、弹窗、视频广告等）及移动应用内广告，提升浏览速度和设备性能。&lt;/li>
-&lt;li>隐私防护：阻止跟踪器、社交网络插件和隐私窃取请求，防止用户行为数据被收集，同时拦截恶意网站、钓鱼链接和恶意软件。&lt;/li>
-&lt;li>DNS 防污染：通过加密 DNS（支持 DoT、DoH、HTTP/3）防止流量劫持，确保域名解析的准确性和安全性。&lt;/li>
-&lt;/ul>
-&lt;h2 id="进阶特性定制化与优化">进阶特性：定制化与优化&lt;/h2>
-&lt;ul>
-&lt;li>自定义规则：支持用户添加第三方黑白名单或自定义过滤规则，灵活控制特定应用、网站或游戏的访问权限。&lt;/li>
-&lt;li>智能解析：可配置局域网设备的友好域名解析（如 NAS 或企业服务器），简化网络管理。&lt;/li>
-&lt;li>统计分析：提供详细的请求日志、拦截统计和 72 小时查询记录，帮助用户监控网络使用情况。&lt;/li>
-&lt;/ul>
-&lt;h2 id="家庭与企业场景支持">家庭与企业场景支持&lt;/h2>
-&lt;ul>
-&lt;li>家长控制：可屏蔽成人网站和游戏，管理家庭成员的上网时间，保护未成年人。&lt;/li>
-&lt;li>企业级部署：支持分布式服务器负载均衡，优化大陆地区的访问体验，并通过阿里云节点提供稳定服务。&lt;/li>
-&lt;/ul>
-&lt;h2 id="平台兼容性与服务模式">平台兼容性与服务模式&lt;/h2>
-&lt;ul>
-&lt;li>跨平台支持：兼容多种操作系统，无需额外软件，仅需配置加密 DNS 即可使用。&lt;/li>
-&lt;li>服务模式：&lt;/li>
-&lt;li>免费公共服务：提供基础广告拦截与安全规则，但可能存在误拦截问题。&lt;/li>
-&lt;li>付费私有服务：增强功能包括自定义解析、权威解析、设备分 ID 记录上网行为等，适合个性化需求。&lt;/li>
-&lt;/ul>
-&lt;h2 id="技术优势与局限性">技术优势与局限性&lt;/h2>
-&lt;ul>
-&lt;li>优势：全设备覆盖、零额外功耗，降低无效数据加载，适合移动设备续航优化。&lt;/li>
-&lt;li>局限性：拦截精度低于浏览器插件，无法实现 HTTPS 内容的深度过滤（如 MITM 方案）。&lt;/li>
-&lt;li>应用场景示例
-&lt;ul>
-&lt;li>个人用户：通过 AdGuardPrivate 阻止移动应用内广告，提升应用体验。&lt;/li>
-&lt;li>家庭用户：通过路由器部署 AdGuardPrivate，拦截全家设备的广告，并限制儿童访问不当内容。&lt;/li>
-&lt;li>企业网络：结合自定义规则屏蔽娱乐类网站，提升员工工作效率，同时保护内部数据安全。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul></description></item><item><title>使用 curl 获取 DNS 结果</title><link>https://blog.jqknono.com/blog/2025/02/20/%E4%BD%BF%E7%94%A8-curl-%E8%8E%B7%E5%8F%96-dns-%E7%BB%93%E6%9E%9C/</link><pubDate>Thu, 20 Feb 2025 17:08:34 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/20/%E4%BD%BF%E7%94%A8-curl-%E8%8E%B7%E5%8F%96-dns-%E7%BB%93%E6%9E%9C/</guid><description>&lt;p>本文介绍两种利用 curl 获取 DNS 查询结果的方法：&lt;/p>
-&lt;ol>
-&lt;li>DNS JSON 格式&lt;/li>
-&lt;li>DNS Wire Format 格式&lt;/li>
-&lt;/ol>
-&lt;h2 id="1-dns-json-格式查询">1. DNS JSON 格式查询&lt;/h2>
-&lt;p>返回 JSON 格式的 DNS 响应，便于解析。&lt;/p>
-&lt;h3 id="google">Google&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-json&amp;#39;&lt;/span> &lt;span class="s2">&amp;#34;https://dns.google/resolve?name=baidu.com&amp;amp;type=A&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> jq .
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="cloudflare">Cloudflare&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-json&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://cloudflare-dns.com/dns-query?name=baidu.com&amp;amp;type=A&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> jq .
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="aliyun">Aliyun&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s2">&amp;#34;accept: application/dns-json&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;https://223.5.5.5/resolve?name=baidu.com&amp;amp;type=1&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> jq .
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="dnspub">dns.pub&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-json&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://doh.dns.pub/dns-query?name=baidu.com&amp;amp;type=A&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> jq .
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="adguard-private-dns">AdGuard Private DNS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 暂不受支持&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="2-dns-wire-format-格式查询">2. DNS Wire Format 格式查询&lt;/h2>
-&lt;p>返回二进制格式的 DNS 响应，需要进一步解析。&lt;/p>
-&lt;h3 id="google-1">Google&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-message&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://dns.google/dns-query?dns=q80BAAABAAAAAAAAA3d3dwdleGFtcGxlA2NvbQAAAQAB&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> hexdump -c
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="cloudflare-1">Cloudflare&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-message&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://cloudflare-dns.com/dns-query?dns=q80BAAABAAAAAAAAA3d3dwdleGFtcGxlA2NvbQAAAQAB&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> hexdump -c
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="aliyun-1">Aliyun&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-message&amp;#39;&lt;/span> &lt;span class="s2">&amp;#34;https://dns.alidns.com/dns-query?dns=P8QBAAABAAAAAAAABWJhaWR1A2NvbQAAAQAB&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> hexdump -c
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="dnspub-1">dns.pub&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-message&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://doh.dns.pub/dns-query?dns=q80BAAABAAAAAAAAA3d3dwdleGFtcGxlA2NvbQAAAQAB&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> hexdump -c
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="adguard-private-dns-1">AdGuard Private DNS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -H &lt;span class="s1">&amp;#39;accept: application/dns-message&amp;#39;&lt;/span> &lt;span class="s1">&amp;#39;https://public0.adguardprivate.com/dns-query?dns=q80BAAABAAAAAAAAA3d3dwdleGFtcGxlA2NvbQAAAQAB&amp;#39;&lt;/span> &lt;span class="p">|&lt;/span> hexdump -c
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="使用-python-解析-dns-响应">使用 Python 解析 DNS 响应&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># pip install dnspython&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># pip install requests&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 解析 JSON 格式响应&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">json&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">requests&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">query_dns_json&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">domain&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;example.com&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;A&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;使用 JSON 格式查询 DNS&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://dns.google/resolve&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;name&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">domain&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">type&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">headers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;accept&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;application/dns-json&amp;#34;&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">requests&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">params&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">params&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">headers&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">headers&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">json&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dumps&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">json&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="n">indent&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 解析 Wire Format 响应&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">query_dns_wire&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">domain&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;example.com&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;使用 Wire Format 格式查询 DNS&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">import&lt;/span> &lt;span class="nn">dns.message&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">import&lt;/span> &lt;span class="nn">requests&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">import&lt;/span> &lt;span class="nn">base64&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 创建DNS查询消息&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">query&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dns&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">make_query&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">domain&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s1">&amp;#39;A&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">wire_format&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">query&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">to_wire&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dns_query&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">base64&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">b64encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">wire_format&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">decode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;utf-8&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 发送请求&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;https://dns.google/dns-query&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">params&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;dns&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">dns_query&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">headers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s2">&amp;#34;accept&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;application/dns-message&amp;#34;&lt;/span>&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">requests&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">params&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">params&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">headers&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">headers&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dns_response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dns&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">from_wire&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">content&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">str&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dns_response&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="vm">__name__&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;__main__&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;JSON格式查询结果:&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">query_dns_json&lt;/span>&lt;span class="p">())&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">Wire Format查询结果:&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">query_dns_wire&lt;/span>&lt;span class="p">())&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="生成-dns-wire-format-base64-编码的数据">生成 DNS Wire Format Base64 编码的数据&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># pip install dnspython&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">base64&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">dns.message&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">dns.rdatatype&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 创建一个DNS查询消息&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">query&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dns&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">make_query&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;example.com&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">dns&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">rdatatype&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 将消息转换为Wire Format&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">wire_format&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">query&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">to_wire&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 转为base64&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">wire_format_base64&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">base64&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">b64encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">wire_format&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">decode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;utf-8&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 打印&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">wire_format_base64&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>如何使用必应国际版</title><link>https://blog.jqknono.com/blog/2025/02/20/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%BF%85%E5%BA%94%E5%9B%BD%E9%99%85%E7%89%88/</link><pubDate>Thu, 20 Feb 2025 15:03:04 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/20/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%BF%85%E5%BA%94%E5%9B%BD%E9%99%85%E7%89%88/</guid><description>&lt;p>有些搜索引擎不思进取，能搜到的有价值的内容越来越少，广告却越来越多。相信不少人都已逐渐放弃这类搜索引擎，转而使用必应（bing.com)。&lt;/p>
-&lt;p>但必应有多个版本：&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://cn.bing.com">cn.bing.com&lt;/a> 是中国版，搜索结果经过审查。
-&lt;ul>
-&lt;li>国内版：主要搜索中文内容。
-&lt;img src="https://img1.techfetch.dev/blog/202502201527190.png">&lt;/li>
-&lt;li>国际版：同时支持搜索中文和英文内容。
-&lt;img src="https://img1.techfetch.dev/blog/202502201530275.png">&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://www.bing.com">www.bing.com&lt;/a> 这是真正的国际版，搜索结果没有中国大陆的审查，可以搜索到更多“你懂的”内容。
-&lt;img src="https://img1.techfetch.dev/blog/202502201535693.png">&lt;/li>
-&lt;/ul>
-&lt;p>这三个版本的搜索结果会有所区别。对于具备英文阅读能力的用户，强烈推荐使用国际版，能获取到更有价值的资料。&lt;/p>
-&lt;p>我就不详细展开真国际版搜索内容的差异了，有兴趣的朋友可以自行尝试。&lt;/p>
-&lt;p>真国际版还提供 &lt;code>Microsoft Copilot&lt;/code> 的入口，类似于 &lt;code>ChatGPT&lt;/code> 的功能，可以帮你总结搜索结果。虽然有使用频次限制，但正常使用是足够的。&lt;/p>
-&lt;p>国内版和国际版的切换没有难度，这里主要介绍如何使用必应真正的国际版。&lt;/p>
-&lt;p>相信不少人在设置里折腾了很久，但还是无法使用国际版，这可能是方向错了。&lt;/p>
-&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202502201533833.png">&lt;/p>
-&lt;p>真正的限制在于 DNS。DNS 可以根据请求者的所在地域，给出不同的解析结果。例如，山东和河南请求 &lt;code>qq.com&lt;/code> 的 IP 地址可能不一样。通常，DNS 会返回在地理位置上更靠近的服务器 IP。&lt;/p>
-&lt;p>因此，如果你想使用国际版，可以尝试将 DNS 更换为 Google 的 &lt;code>tls://dns.google&lt;/code> 或者 Cloudflare 的 &lt;code>tls://one.one.one.one&lt;/code>。&lt;/p>
-&lt;p>这里只提供了两个 DNS 服务商的加密 DNS 地址，没有提供纯 IP 的 DNS，因为纯 IP 的海外 DNS 很容易被劫持，分享 &lt;code>8.8.8.8&lt;/code> 和 &lt;code>1.1.1.1&lt;/code> 毫无意义。&lt;/p>
-&lt;p>DNS 的设置方法可以参考 &lt;a href="https://www.adguardprivate.com/docs/startup/free/android/">如何配置 DNS 加密&lt;/a>。&lt;/p>
-&lt;p>注意，最简单的使用国际版必应的方法是使用加密 DNS，也有其他方法，本文不展开。&lt;/p>
-&lt;p>如果一个 DNS 不可用，可以依次尝试以下几个设置：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>tls://dns.google&lt;/code>&lt;/li>
-&lt;li>&lt;code>tls://one.one.one.one&lt;/code>&lt;/li>
-&lt;li>&lt;code>tls://8.8.8.8&lt;/code>&lt;/li>
-&lt;li>&lt;code>tls://8.8.4.4&lt;/code>&lt;/li>
-&lt;li>&lt;code>tls://1.1.1.1&lt;/code>&lt;/li>
-&lt;li>&lt;code>tls://1.0.0.1&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>通常会有两个能连接成功。如果全部无法连接，那只能寻找其他方法了。&lt;/p></description></item><item><title>工具</title><link>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/dns/</link><pubDate>Thu, 20 Feb 2025 15:02:33 +0800</pubDate><guid>https://blog.jqknono.com/blog/%E5%B7%A5%E5%85%B7/dns/</guid><description/></item><item><title>DoT vs DoH vs DoQ</title><link>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/dot-vs-doh-vs-doq/</link><pubDate>Wed, 13 Nov 2024 11:35:36 +0800</pubDate><guid>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/dot-vs-doh-vs-doq/</guid><description>&lt;h2 id="dot">DoT&lt;/h2>
-&lt;p>DNS over TLS（DoT）是一种基于 TLS 的 DNS 加密协议。TLS 1.2 至少需要四次往返，TLS 1.3 则至少需要三次往返，而 DNS 请求仅需一次往返。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">时间轴
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DNS on Nono Blogs</title><link>https://blog.jqknono.com/tags/dns/</link><description>Recent content in DNS on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 24 May 2025 20:04:34 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS</title><link>https://blog.jqknono.com/docs/private-service/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/docs/private-service/dns/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> _index&lt;/li>
+&lt;/ul></description></item><item><title>DoT vs DoH vs DoQ</title><link>https://blog.jqknono.com/docs/private-service/dns/dot-vs-doh-vs-doq/</link><pubDate>Wed, 13 Nov 2024 11:35:36 +0800</pubDate><guid>https://blog.jqknono.com/docs/private-service/dns/dot-vs-doh-vs-doq/</guid><description>&lt;h2 id="dot">DoT&lt;/h2>
+&lt;p>DNS over TLS (DoT) is a DNS encryption protocol based on TLS. TLS 1.2 requires at least four round-trips, TLS 1.3 requires at least three round-trips, while DNS requests only need one round-trip.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Timeline
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ↓
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ┌───────────────────────────────────────────────────────────────────────┐
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端 服务器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client Server
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送 SYN 段 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends SYN segment │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ SYN = 1, Seq = x │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器响应 SYN-ACK 段 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server responds with SYN-ACK segment │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ SYN = 1, ACK = 1, Seq = y, Ack = x + 1 │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送 ACK 段 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends ACK segment │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ACK = 1, Seq = x + 1, Ack = y + 1 │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ TCP 连接建立 │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送 ClientHello │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ TCP connection established │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends ClientHello │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器响应 ServerHello │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器发送证书链 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server responds with ServerHello │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server sends certificate chain │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送密钥交换消息 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends key exchange message │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器发送密钥交换消息 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server sends key exchange message │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送 Finished │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends Finished │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器发送 Finished │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server sends Finished │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ TLS 握手完成 │
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送 DNS 查询 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ TLS handshake completed │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends DNS query │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器响应 DNS 查询 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server responds with DNS query │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └───────────────────────────────────────────────────────────────────────┘
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>TLS 1.2 的握手过程需要至少两个往返（RTT），即客户端发送 ClientHello，服务器回复 ServerHello 和证书，然后客户端发送 ClientKeyExchange 和 ChangeCipherSpec，最后服务器发送 Finished。TLS 1.3 将握手过程简化为一个往返（1-RTT）。客户端在发送 ClientHello 时可以包含密钥共享信息（ClientKeyShare），服务器在回复 ServerHello 时也包含密钥共享信息，从而在第一个往返内完成密钥协商和握手。&lt;/p></description></item><item><title>最快的DNS</title><link>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/%E6%9C%80%E5%BF%AB%E7%9A%84dns/</link><pubDate>Sun, 10 Nov 2024 19:12:42 +0800</pubDate><guid>https://blog.jqknono.com/docs/%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1/dns/%E6%9C%80%E5%BF%AB%E7%9A%84dns/</guid><description>&lt;p>普通用户通常测量的是明文 DNS 的 IP 的 ping 相应速度，但这很难保证是否是真正到达对应服务器的速度。现代 DNS 至少需要使用加密 DNS 才能确保服务未被劫持。&lt;/p>
-&lt;p>从客户端到终端通常会经过 5 到 8 个网络设备，在其中任意一个设备上都可以劫持 UDP:53 请求，这种劫持命令非常简单。因此，不要对明文 DNS 抱有任何侥幸的期待，特别是企业用户，基本上都会遭遇劫持。&lt;/p>
-&lt;p>以下是劫持命令示例：
-&lt;code>sudo iptables -t nat -A PREROUTING -p udp --dport 53 -j DNAT --to-destination 1.1.1.1:53&lt;/code>&lt;/p>
-&lt;p>设置劫持非常简单，许多企业内网用户的 DNS 速度都在个位数毫秒范围内，而在家庭网络中通常小于 1 毫秒。无论配置什么明文 DNS，最终都是自建的 DNS 服务在响应。&lt;/p>
-&lt;p>接下来讨论加密 DNS 的速度。在讨论之前，先介绍三种常见的加密 DNS 协议：DNS over TLS (DoT)、DNS over HTTP (DoH) 和 DNS over QUIC (DoQ)。&lt;/p>
-&lt;p>理论上，三种加密协议和未加密 DNS 的简化实现方式:&lt;/p>
-&lt;ul>
-&lt;li>最快的是 DoQ。QUIC 基于 UDP，建立连接需要一次往返，DNS 请求只需一次往返。&lt;/li>
-&lt;li>DoT 建立连接, tls1.2 需要至少四次往返, tls1.3 需要三次往返，略慢于 DoQ，DNS 请求一次往返。&lt;/li>
-&lt;li>DoH 基于 HTTPS，建立连接需要至少四次往返, 由于 HTTP 协议较重, 导致服务会略慢于 DoT。&lt;/li>
-&lt;li>传统的 UDP:53 不需要建立连接，只有一次往返。&lt;/li>
-&lt;/ul>
-&lt;p>也就是说，从零开始的 DNS 请求，加密 DNS 的耗时是未加密 DNS 的 2~4 倍左右，但在建立连接后，耗时与未加密 DNS 相同（未考虑连接强制关闭的情况）。&lt;/p></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>TLS 1.2 handshake requires at least two round-trip times (RTT): client sends ClientHello, server replies with ServerHello and certificates, then client sends ClientKeyExchange and ChangeCipherSpec, finally server sends Finished. TLS 1.3 simplifies the handshake to one round-trip (1-RTT). When sending ClientHello, client can include key share information (ClientKeyShare), server also includes key share information in ServerHello response, completing key negotiation and handshake within the first round-trip.&lt;/p></description></item><item><title>Fastest DNS</title><link>https://blog.jqknono.com/docs/private-service/dns/fastest-dns/</link><pubDate>Sun, 10 Nov 2024 19:12:42 +0800</pubDate><guid>https://blog.jqknono.com/docs/private-service/dns/fastest-dns/</guid><description>&lt;p>Ordinary users typically measure ping response speed of plaintext DNS IP addresses, but this rarely reflects actual server connection performance. Modern DNS requires encrypted DNS protocols to ensure service integrity against hijacking.&lt;/p>
+&lt;p>From client to destination, traffic usually passes through 5-8 network devices. Any of these can hijack UDP:53 requests through simple commands. Never rely on plaintext DNS, especially in enterprise environments where hijacking is nearly inevitable.&lt;/p>
+&lt;p>Example hijacking command:
+&lt;code>sudo iptables -t nat -A PREROUTING -p udp --dport 53 -j DNAT --to-destination 1.1.1.1:53&lt;/code>&lt;/p></description></item></channel></rss>

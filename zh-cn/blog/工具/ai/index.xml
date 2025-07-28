@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/ai/</link><description>Recent content in AI on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 27 Jun 2025 13:18:19 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>cursor自动化调试</title><link>https://blog.jqknono.com/zh-cn/blog/2025/06/27/cursor%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B0%83%E8%AF%95/</link><pubDate>Fri, 27 Jun 2025 13:18:19 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/06/27/cursor%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B0%83%E8%AF%95/</guid><description>&lt;p>以下是使用 Cursor 进行自动化开发测试的大纲：&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/ai/</link><description>Recent content in AI on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 22 Jul 2025 10:03:40 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>trae使用的简单分享</title><link>https://blog.jqknono.com/zh-cn/blog/2025/07/22/trae%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AE%80%E5%8D%95%E5%88%86%E4%BA%AB/</link><pubDate>Tue, 22 Jul 2025 10:03:40 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/07/22/trae%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AE%80%E5%8D%95%E5%88%86%E4%BA%AB/</guid><description>&lt;p>这篇长文发布于 2025-07-22, 当前 trae 的功能完成度以及性能都较差, 后续 trae 可能会有改进, 大家可以自行体验, 以自己的体验为准.&lt;/p>
+&lt;p>常识上来说, 先到的员工会形成企业和产品文化, 属于较难改变的根基, 同时也是较虚的东西, 我的分享仅供参考.&lt;/p>
+&lt;h2 id="界面设计">界面设计&lt;/h2>
+&lt;p>trae 的界面具有不错的审美, 布局/配色/字体相较原版均有调整, 审美上很棒. 逻辑也较为清晰, 这方面我没有能力提出什么建议.&lt;/p>
+&lt;h2 id="功能">功能&lt;/h2>
+&lt;h3 id="功能缺失">功能缺失&lt;/h3>
+&lt;p>相较 vscode, 缺失较多 Microsoft 和 Github 提供的功能, 下边仅列出我知道的部分:&lt;/p>
+&lt;ul>
+&lt;li>设置同步&lt;/li>
+&lt;li>设置 Profile&lt;/li>
+&lt;li>Tunnel&lt;/li>
+&lt;li>插件市场&lt;/li>
+&lt;li>第一方闭源插件&lt;/li>
+&lt;li>IDE 仅支持 Windows 和 MacOS, 缺失 Web 和 Linux&lt;/li>
+&lt;li>Remote SSH 仅支持 linux 端, 缺失 Windows 和 MacOS&lt;/li>
+&lt;/ul>
+&lt;p>其中第一方的闭源插件属于较难啃的骨头, 目前通过使用 open-vsx.org 来解决, 一些常用插件都有, 版本未必最新, 但够用.&lt;/p>
+&lt;p>由于 Remote 的缺失, 不同系统设备较多的只能暂时放弃.&lt;/p>
+&lt;h3 id="功能对齐">功能对齐&lt;/h3>
+&lt;p>对比较早发展的 vscode/cursor, 功能上已经对齐.&lt;/p></description></item><item><title>cursor自动化调试</title><link>https://blog.jqknono.com/zh-cn/blog/2025/06/27/cursor%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B0%83%E8%AF%95/</link><pubDate>Fri, 27 Jun 2025 13:18:19 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/06/27/cursor%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B0%83%E8%AF%95/</guid><description>&lt;p>以下是使用 Cursor 进行自动化开发测试的大纲：&lt;/p>
 &lt;h3 id="1-简介">1. 简介&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>Cursor 概述&lt;/strong>：介绍 Cursor 是什么，它的主要功能和特点。&lt;/li>
