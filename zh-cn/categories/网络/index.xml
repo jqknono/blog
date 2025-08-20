@@ -245,7 +245,7 @@
 &lt;!-- `api-access.pangolin-sdk-toutiao-b.com` -->
 &lt;p>开始时以为该 IP 是攻击者, 观察流量后发现, 主要是某厂商的 App 在疯狂请求 DNS. 后端设置的&lt;code>TTL=10&lt;/code>表示接收到的 DNS 查询返回值生命周期为 10 秒, 这 10 秒内请求者都应该使用这个返回值, 而不是再次请求 DNS 服务器. 但该 App 每秒数十个相同请求, 说明该 App 没有按照 DNS 协议正确处理 TTL 值. 后台拦截请求统计里, 有 90%以上的请求都是该域名的请求.&lt;/p>
 &lt;p>可能该厂商知道有 DNS 拦截的手段, 采取了你不让我访问, 我就让用户 App 直接 DoS 攻击你的 DNS 服务器的方式. 由于后端同时设置了每秒只允许 20 次突发请求, 该莽撞行为同时会影响到用户的其它正常 DNS 查询, 影响其它 App 的正常使用.&lt;/p>
-&lt;p>运维看到这样单 IP 疯狂请求同一域名的行为, 不想放行也得放行了.&lt;/p></description></item><item><title>网络</title><link>https://blog.jqknono.com/zh-cn/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E7%BD%91%E7%BB%9C/</link><pubDate>Wed, 13 Nov 2024 13:05:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/%E7%A8%8B%E5%BA%8F%E5%91%98/%E7%BD%91%E7%BB%9C/</guid><description>&lt;ul>
+&lt;p>运维看到这样单 IP 疯狂请求同一域名的行为, 不想放行也得放行了.&lt;/p></description></item><item><title>网络</title><link>https://blog.jqknono.com/zh-cn/blog/programmer/network/</link><pubDate>Wed, 13 Nov 2024 13:05:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/programmer/network/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 网络&lt;/li>
 &lt;/ul>
 &lt;h1 id="网络">网络&lt;/h1>
@@ -257,7 +257,7 @@
 &lt;/li>
 &lt;li>网络问题定位
 &lt;ul>
-&lt;li>[&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/05/28/linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D/" title="linux网络问题定位">linux网络问题定位&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D" title="linux网络问题定位">linux网络问题定位&lt;/a>]&lt;/li>
 &lt;li>[&lt;a href="windows%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D" title="windows网络问题定位">windows网络问题定位&lt;/a>]&lt;/li>
 &lt;/ul>
 &lt;/li>

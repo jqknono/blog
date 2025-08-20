@@ -7,11 +7,11 @@
 &lt;a href="https://docs.microsoft.com/en-us/windows/win32/winsock/complete-server-code">Complete Winsock Server Code&lt;/a>&lt;/p>
 &lt;h2 id="linux">Linux&lt;/h2>
 &lt;p>&lt;a href="https://www.geeksforgeeks.org/socket-programming-cc/">Linux Socket Programming&lt;/a>
-&lt;a href="https://www.geeksforgeeks.org/simple-client-server-application-in-c/">Simple client/server application in C&lt;/a>&lt;/p></description></item><item><title>测试工具</title><link>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</link><pubDate>Fri, 28 Jun 2024 16:06:37 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/%E5%B7%A5%E5%85%B7/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/</guid><description>&lt;ul>
+&lt;a href="https://www.geeksforgeeks.org/simple-client-server-application-in-c/">Simple client/server application in C&lt;/a>&lt;/p></description></item><item><title>测试工具</title><link>https://blog.jqknono.com/zh-cn/blog/tools/testing-tools/</link><pubDate>Fri, 28 Jun 2024 16:06:37 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/tools/testing-tools/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> 测试工具&lt;/li>
 &lt;/ul>
 &lt;h1 id="测试工具">测试工具&lt;/h1>
 &lt;ul>
 &lt;li>[&lt;a href="%E7%B2%BE%E7%A1%AE%E5%8F%91%E5%8C%85-hping3" title="精确发包-hping3">精确发包-hping3&lt;/a>]&lt;/li>
-&lt;li>[&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/%E7%AE%80%E6%98%93server-client%E4%BB%A3%E7%A0%81/" title="简易server-client代码">简易server-client代码&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="%E7%AE%80%E6%98%93server-client%E4%BB%A3%E7%A0%81" title="简易server-client代码">简易server-client代码&lt;/a>]&lt;/li>
 &lt;/ul></description></item></channel></rss>

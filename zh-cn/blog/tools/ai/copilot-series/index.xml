@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Copilot系列 on Nono Blogs</title><link>https://blog.jqknono.com/zh-cn/blog/tools/ai/copilot-series/</link><description>Recent content in Copilot系列 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 04 Mar 2025 11:22:40 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/blog/tools/ai/copilot-series/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Copilot付费模型对比</title><link>https://blog.jqknono.com/zh-cn/blog/2025/03/04/github-copilot%E4%BB%98%E8%B4%B9%E6%A8%A1%E5%9E%8B%E5%AF%B9%E6%AF%94/</link><pubDate>Tue, 04 Mar 2025 11:22:40 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/03/04/github-copilot%E4%BB%98%E8%B4%B9%E6%A8%A1%E5%9E%8B%E5%AF%B9%E6%AF%94/</guid><description>&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202503041205012.png" alt="7种模型">&lt;/p>
+&lt;p>Github Copilot 目前提供了 7 种模型,&lt;/p>
+&lt;ul>
+&lt;li>Claude 3.5 Sonnet&lt;/li>
+&lt;li>Claude 3.7 Sonnet&lt;/li>
+&lt;li>Claude 3.7 Sonnet Thinking&lt;/li>
+&lt;li>Gemini 2.0 Flash&lt;/li>
+&lt;li>GPT-4o&lt;/li>
+&lt;li>o1&lt;/li>
+&lt;li>o3-mini&lt;/li>
+&lt;/ul>
+&lt;p>官方缺少对这 7 种模型的介绍, 本文简略的描述它们在各领域的评分, 以区分它们擅长的领域, 方便读者在处理特定问题时, 切换到更合适的模型.&lt;/p>
+&lt;h2 id="模型对比">模型对比&lt;/h2>
+&lt;p>基于公开评测数据（部分数据为估算与不同来源折算后得出）的多维度对比表，涵盖编码（SWE‑Bench Verified）、数学（AIME’24）和推理（GPQA Diamond）三个关键指标：&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>模型&lt;/th>
+ &lt;th>编码表现&lt;br>(SWE‑Bench Verified)&lt;/th>
+ &lt;th>数学表现&lt;br>(AIME'24)&lt;/th>
+ &lt;th>推理表现&lt;br>(GPQA Diamond)&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Claude 3.5 Sonnet&lt;/td>
+ &lt;td>70.3%&lt;/td>
+ &lt;td>49.0%&lt;/td>
+ &lt;td>77.0%&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Claude 3.7 Sonnet (标准模式)&lt;/td>
+ &lt;td>≈83.7%&lt;br>(提高 ≈19%)&lt;/td>
+ &lt;td>≈58.3%&lt;br>(提高 ≈19%)&lt;/td>
+ &lt;td>≈91.6%&lt;br>(提高 ≈19%)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Claude 3.7 Sonnet Thinking&lt;/td>
+ &lt;td>≈83.7%&lt;br>(与标准相近)&lt;/td>
+ &lt;td>≈64.0%&lt;br>(思考模式进一步提升)&lt;/td>
+ &lt;td>≈95.0%&lt;br>(更强推理能力)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Gemini 2.0 Flash&lt;/td>
+ &lt;td>≈65.0%&lt;br>(估算)&lt;/td>
+ &lt;td>≈45.0%&lt;br>(估算)&lt;/td>
+ &lt;td>≈75.0%&lt;br>(估算)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>GPT‑4o&lt;/td>
+ &lt;td>38.0%&lt;/td>
+ &lt;td>36.7%&lt;/td>
+ &lt;td>71.4%&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>o1&lt;/td>
+ &lt;td>48.9%&lt;/td>
+ &lt;td>83.3%&lt;/td>
+ &lt;td>78.0%&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>o3‑mini&lt;/td>
+ &lt;td>49.3%&lt;/td>
+ &lt;td>87.3%&lt;/td>
+ &lt;td>79.7%&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>说明：&lt;/p></description></item><item><title>Github Copilot Agent模式使用经验分享</title><link>https://blog.jqknono.com/zh-cn/blog/2025/02/28/github-copilot-agent%E6%A8%A1%E5%BC%8F%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</link><pubDate>Fri, 28 Feb 2025 17:46:31 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/02/28/github-copilot-agent%E6%A8%A1%E5%BC%8F%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</guid><description>&lt;p>本文总结了如何使用 GitHub Copilot Agent 模式，并分享实际操作经验。&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202503041211061.png" alt="">&lt;/p>
+&lt;h2 id="前置设置">前置设置&lt;/h2>
+&lt;ol>
+&lt;li>使用 VSCode Insider；&lt;/li>
+&lt;li>安装 GitHub Copilot（预览版）插件；&lt;/li>
+&lt;li>选择 Claude 3.7 Sonnet（预览版）模型，该模型在代码编写方面表现出色，同时其它模型在速度、多模态（如图像识别）及推理能力上具备优势；&lt;/li>
+&lt;li>工作模式选择 Agent。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://img1.techfetch.dev/qt/202502191622707.png" alt="前置设置">&lt;/p>
+&lt;h2 id="操作步骤">操作步骤&lt;/h2>
+&lt;ol>
+&lt;li>打开 “Copilot Edits” 选项卡；&lt;/li>
+&lt;li>添加附件，如 “Codebase”、“Get Errors”、“Terminal Last Commands” 等；&lt;/li>
+&lt;li>添加 “Working Set” 文件，默认包含当前打开的文件，也可手动选择其他文件（如 “Open Editors”）；&lt;/li>
+&lt;li>添加 “Instructions”，输入需要 Copilot Agent 特别注意的提示词；&lt;/li>
+&lt;li>点击 “Send” 按钮，开始对话，观察 Agent 的表现。&lt;/li>
+&lt;/ol>
+&lt;h2 id="其它说明">其它说明&lt;/h2>
+&lt;ul>
+&lt;li>VSCode 通过语言插件提供的 lint 功能可以产生 Error 或 Warning 提示，Agent 能自动根据这些提示修正代码。&lt;/li>
+&lt;li>随着对话的深入，Agent 生成的代码修改可能会偏离预期。建议每次会话都聚焦一个明确的主题，避免对话过长；达到短期目标后结束当前会话，再启动新任务。&lt;/li>
+&lt;li>“Working Set” 下的 “Add Files” 提供 “Related Files” 选项，可推荐相关文件。&lt;/li>
+&lt;li>注意控制单个代码文件的行数，以免 token 消耗过快。&lt;/li>
+&lt;li>建议先生成基础代码，再编写测试用例，便于 Agent 根据测试结果调试和自我校验。&lt;/li>
+&lt;li>为限制修改范围，可在 settings.json 中添加如下配置，只修改指定目录下的文件, 仅供参考：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;github.copilot.chat.codeGeneration.instructions&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;只需修改 ./script/ 目录下的文件，不修改其他目录下的文件.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;若目标代码文件行数超过 1000 行，建议将新增函数置于新文件中，通过引用调用；如产生的修改导致文件超长，可暂不严格遵守此规则.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;github.copilot.chat.testGeneration.instructions&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;在现有单元测试文件中生成测试用例.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;代码修改后务必运行测试用例验证.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">]&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="常见问题">常见问题&lt;/h2>
+&lt;h3 id="输入需求得不到想要的业务代码">输入需求得不到想要的业务代码&lt;/h3>
+&lt;p>需要将大任务拆分成较小的任务, 每次会话只处理一个小任务. 这是由于大模型的上下文太多会导致注意力分散.&lt;/p></description></item><item><title>Copilot使用入门</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</link><pubDate>Fri, 28 Jun 2024 15:56:16 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</guid><description>&lt;p>&lt;a href="https://qingteng.feishu.cn/minutes/obcnj9f86gvr3o863mb88p99">视频分享&lt;/a>&lt;/p>
+&lt;!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#copilot-labs-%e8%83%bd%e5%8a%9b">Copilot Labs 能力&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#copilot-%e6%98%af%e4%bb%80%e4%b9%88">Copilot 是什么&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e7%90%86%e8%a7%a3">理解&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e5%bb%ba%e8%ae%ae">建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e8%b0%83%e8%af%95">调试&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e6%a3%80%e8%a7%86">检视&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e9%87%8d%e6%9e%84">重构&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e6%96%87%e6%a1%a3">文档&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e4%bd%bf%e7%94%a8-custom-%e6%89%a9%e5%b1%95-copilot-%e8%be%b9%e7%95%8c">使用 Custom 扩展 Copilot 边界&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e8%8e%b7%e5%be%97%e6%9b%b4%e4%b8%93%e4%b8%9a%e7%9a%84%e5%bb%ba%e8%ae%ae">获得更专业的建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e7%ba%af%e6%96%87%e6%9c%ac%e7%9a%84%e5%bb%ba%e8%ae%ae">纯文本的建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e8%ae%be%e7%bd%ae%e9%a1%b9">设置项&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e6%95%b0%e6%8d%ae%e5%ae%89%e5%85%a8">数据安全&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98">常见问题&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /TOC -->
+&lt;p>GitHub Copilot 是一款基于机器学习的代码补全工具，能帮助你更快速地编写代码并提升编码效率。&lt;/p>
+&lt;h2 id="copilot-labs-能力">Copilot Labs 能力&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>能力&lt;/th>
+ &lt;th>说明&lt;/th>
+ &lt;th>备注&lt;/th>
+ &lt;th>example&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>Explain&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的解释说明&lt;/td>
+ &lt;td>有高级选项定制提示词, 更清晰说明自己的需求&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/BHCu27UmD19Nwit.png" alt="picture 1">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Show example code&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的示例代码&lt;/td>
+ &lt;td>有高级选项定制&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/9cCew5yvSjrX2DF.png" alt="picture 2">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Language Translation&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的翻译&lt;/td>
+ &lt;td>此翻译是基于编程语言的翻译, 比如&lt;em>C++ -&amp;gt; Python&lt;/em>&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/1SIolbdY3fCimPx.png" alt="picture 3">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Readable&lt;/code>&lt;/td>
+ &lt;td>提高一段代码的可读性&lt;/td>
+ &lt;td>不是简单的格式化, 是真正的可读性提升&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/pYxH6isGqr7Sh14.png" alt="picture 4">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Add Types&lt;/code>&lt;/td>
+ &lt;td>类型推测&lt;/td>
+ &lt;td>将自动类型的变量改为明确的类型&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/rDeh9dtjbPHl8yG.png" alt="picture 5">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Fix bug&lt;/code>&lt;/td>
+ &lt;td>修复 bug&lt;/td>
+ &lt;td>修复一些常见的 bug&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/h8AfL65qSOn9BJ7.png" alt="picture 6">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Debug&lt;/code>&lt;/td>
+ &lt;td>使代码更容易调试&lt;/td>
+ &lt;td>增加打印日志, 或增加临时变量以用于断点&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/adW8QO3yfTZpx5o.png" alt="picture 7">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Clean&lt;/code>&lt;/td>
+ &lt;td>清理代码&lt;/td>
+ &lt;td>清理代码的无用部分, 注释/打印/废弃代码等&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/kGdpSLoOtJuBvmf.png" alt="picture 8">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>List steps&lt;/code>&lt;/td>
+ &lt;td>列出代码的步骤&lt;/td>
+ &lt;td>有的代码的执行严格依赖顺序, 需要明确注释其执行顺序&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/gXM19C2NBVYpIKO.png" alt="picture 9">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Make robust&lt;/code>&lt;/td>
+ &lt;td>使代码更健壮&lt;/td>
+ &lt;td>考虑边界/多线程/重入等&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/eMawki5IySGKf4U.png" alt="picture 10">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Chunk&lt;/code>&lt;/td>
+ &lt;td>将代码分块&lt;/td>
+ &lt;td>一般希望函数有效行数&amp;lt;=50, 嵌套&amp;lt;=4, 扇出&amp;lt;=7, 圈复杂度&amp;lt;=20&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/x7LRskn52iTY8b1.png" alt="picture 11">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Document&lt;/code>&lt;/td>
+ &lt;td>生成代码的文档&lt;/td>
+ &lt;td>通过写注释生成代码, 还可以通过代码生成注释和文档&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/HPJkC7zp518w3fI.png" alt="picture 12">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Custom&lt;/code>&lt;/td>
+ &lt;td>自定义操作&lt;/td>
+ &lt;td>告诉 copilot 如何操作你的代码&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/ro3ziwAekLS7qyt.png" alt="picture 13">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="copilot-是什么">Copilot 是什么&lt;/h2>
+&lt;p>&lt;a href="https://github.com/features/copilot/">官网&lt;/a> 的介绍简单明了：&lt;strong>Your AI pair programmer&lt;/strong> —— 你的结对程序员&lt;/p></description></item><item><title>Copilot使用入门</title><link>https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</link><pubDate>Fri, 28 Jun 2024 15:56:16 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 文档已过期&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://qingteng.feishu.cn/minutes/obcnj9f86gvr3o863mb88p99">视频分享&lt;/a>&lt;/p>
+&lt;!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#copilot-labs-%e8%83%bd%e5%8a%9b">Copilot Labs 能力&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#copilot-%e6%98%af%e4%bb%80%e4%b9%88">Copilot 是什么&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e7%90%86%e8%a7%a3">理解&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e5%bb%ba%e8%ae%ae">建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e8%b0%83%e8%af%95">调试&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e6%a3%80%e8%a7%86">检视&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e9%87%8d%e6%9e%84">重构&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e6%96%87%e6%a1%a3">文档&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e4%bd%bf%e7%94%a8-custom-%e6%89%a9%e5%b1%95-copilot-%e8%be%b9%e7%95%8c">使用 Custom 扩展 Copilot 边界&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e8%8e%b7%e5%be%97%e6%9b%b4%e4%b8%93%e4%b8%9a%e7%9a%84%e5%bb%ba%e8%ae%ae">获得更专业的建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e7%ba%af%e6%96%87%e6%9c%ac%e7%9a%84%e5%bb%ba%e8%ae%ae">纯文本的建议&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e8%ae%be%e7%bd%ae%e9%a1%b9">设置项&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e6%95%b0%e6%8d%ae%e5%ae%89%e5%85%a8">数据安全&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/zh-cn/blog/2024/06/28/copilot%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98">常见问题&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /TOC -->
+&lt;p>GitHub Copilot 是一款基于机器学习的代码补全工具，能帮助你更快速地编写代码并提升编码效率。&lt;/p>
+&lt;h2 id="copilot-labs-能力">Copilot Labs 能力&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>能力&lt;/th>
+ &lt;th>说明&lt;/th>
+ &lt;th>备注&lt;/th>
+ &lt;th>example&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>Explain&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的解释说明&lt;/td>
+ &lt;td>有高级选项定制提示词, 更清晰说明自己的需求&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/BHCu27UmD19Nwit.png" alt="picture 1">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Show example code&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的示例代码&lt;/td>
+ &lt;td>有高级选项定制&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/9cCew5yvSjrX2DF.png" alt="picture 2">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Language Translation&lt;/code>&lt;/td>
+ &lt;td>生成代码片段的翻译&lt;/td>
+ &lt;td>此翻译是基于编程语言的翻译, 比如&lt;em>C++ -&amp;gt; Python&lt;/em>&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/1SIolbdY3fCimPx.png" alt="picture 3">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Readable&lt;/code>&lt;/td>
+ &lt;td>提高一段代码的可读性&lt;/td>
+ &lt;td>不是简单的格式化, 是真正的可读性提升&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/pYxH6isGqr7Sh14.png" alt="picture 4">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Add Types&lt;/code>&lt;/td>
+ &lt;td>类型推测&lt;/td>
+ &lt;td>将自动类型的变量改为明确的类型&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/rDeh9dtjbPHl8yG.png" alt="picture 5">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Fix bug&lt;/code>&lt;/td>
+ &lt;td>修复 bug&lt;/td>
+ &lt;td>修复一些常见的 bug&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/h8AfL65qSOn9BJ7.png" alt="picture 6">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Debug&lt;/code>&lt;/td>
+ &lt;td>使代码更容易调试&lt;/td>
+ &lt;td>增加打印日志, 或增加临时变量以用于断点&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/adW8QO3yfTZpx5o.png" alt="picture 7">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Clean&lt;/code>&lt;/td>
+ &lt;td>清理代码&lt;/td>
+ &lt;td>清理代码的无用部分, 注释/打印/废弃代码等&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/kGdpSLoOtJuBvmf.png" alt="picture 8">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>List steps&lt;/code>&lt;/td>
+ &lt;td>列出代码的步骤&lt;/td>
+ &lt;td>有的代码的执行严格依赖顺序, 需要明确注释其执行顺序&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/gXM19C2NBVYpIKO.png" alt="picture 9">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Make robust&lt;/code>&lt;/td>
+ &lt;td>使代码更健壮&lt;/td>
+ &lt;td>考虑边界/多线程/重入等&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/eMawki5IySGKf4U.png" alt="picture 10">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Chunk&lt;/code>&lt;/td>
+ &lt;td>将代码分块&lt;/td>
+ &lt;td>一般希望函数有效行数&amp;lt;=50, 嵌套&amp;lt;=4, 扇出&amp;lt;=7, 圈复杂度&amp;lt;=20&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/x7LRskn52iTY8b1.png" alt="picture 11">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Document&lt;/code>&lt;/td>
+ &lt;td>生成代码的文档&lt;/td>
+ &lt;td>通过写注释生成代码, 还可以通过代码生成注释和文档&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/HPJkC7zp518w3fI.png" alt="picture 12">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Custom&lt;/code>&lt;/td>
+ &lt;td>自定义操作&lt;/td>
+ &lt;td>告诉 copilot 如何操作你的代码&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/ro3ziwAekLS7qyt.png" alt="picture 13">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="copilot-是什么">Copilot 是什么&lt;/h2>
+&lt;p>&lt;a href="https://github.com/features/copilot/">官网&lt;/a> 的介绍简单明了：&lt;strong>Your AI pair programmer&lt;/strong> —— 你的结对程序员&lt;/p></description></item></channel></rss>
