@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tooling on Nono Blogs</title><link>https://blog.jqknono.com/tags/tooling/</link><description>Recent content in Tooling on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 28 Jun 2024 17:31:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/tooling/index.xml" rel="self" type="application/rss+xml"/><item><title>Meanings of brackets in man pages</title><link>https://blog.jqknono.com/blog/2024/06/28/meanings-of-brackets-in-man-pages/</link><pubDate>Fri, 28 Jun 2024 17:31:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/meanings-of-brackets-in-man-pages/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Meanings of brackets in man pages&lt;/li>
+&lt;/ul>
+&lt;h1 id="meanings-of-brackets-in-man-pages">Meanings of brackets in man pages&lt;/h1>
+&lt;p>In command-line help, different types of brackets generally carry the following meanings:&lt;/p>
+&lt;ol>
+&lt;li>Angle brackets &lt;code>&amp;lt;&amp;gt;&lt;/code>:
+&lt;ul>
+&lt;li>Angle brackets denote required arguments—values you must provide when running the command. They’re typically used to express the core syntax and parameters of a command.&lt;/li>
+&lt;li>Example: &lt;code>command &amp;lt;filename&amp;gt;&lt;/code> means you must supply a filename as a required argument, e.g., &lt;code>command file.txt&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Square brackets &lt;code>[]&lt;/code>:
+&lt;ul>
+&lt;li>Square brackets indicate optional arguments—values you may or may not provide when running the command. They’re commonly used to mark optional parameters and options.&lt;/li>
+&lt;li>Example: &lt;code>command [option]&lt;/code> means you can choose to provide an option, e.g., &lt;code>command -v&lt;/code> or simply &lt;code>command&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Curly braces &lt;code>{}&lt;/code>:
+&lt;ul>
+&lt;li>Curly braces usually represent a set of choices, indicating that you must select one. These are also called “choice parameter groups.”&lt;/li>
+&lt;li>Example: &lt;code>command {option1 | option2 | option3}&lt;/code> means you must pick one of the given options, e.g., &lt;code>command option2&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Parentheses &lt;code>()&lt;/code>:
+&lt;ul>
+&lt;li>Parentheses are generally used to group arguments, clarifying structure and precedence in a command’s syntax.&lt;/li>
+&lt;li>Example: &lt;code>command (option1 | option2) filename&lt;/code> means you must choose either &lt;code>option1&lt;/code> or &lt;code>option2&lt;/code> and supply a filename as an argument, e.g., &lt;code>command option1 file.txt&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>These bracket conventions are intended to help users understand command syntax and parameter choices so they can use command-line tools correctly. When reading man pages or help text, paying close attention to the meaning and purpose of each bracket type is crucial—it prevents incorrect commands and achieves the desired results.&lt;/p></description></item></channel></rss>

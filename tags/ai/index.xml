@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Nono Blogs</title><link>https://blog.jqknono.com/tags/ai/</link><description>Recent content in AI on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 22 Jul 2025 10:03:40 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>A brief share on using trae</title><link>https://blog.jqknono.com/blog/2025/07/22/a-brief-share-on-using-trae/</link><pubDate>Tue, 22 Jul 2025 10:03:40 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/07/22/a-brief-share-on-using-trae/</guid><description>&lt;p>This lengthy post was published on 2025-07-22; at the moment trae&amp;rsquo;s feature completeness and performance remain poor. It may improve later, so feel free to try it for yourself and trust your own experience.&lt;/p>
+&lt;p>As common sense dictates, the first employees shape a company’s culture and products, forming a deep-rooted foundation that is hard to change and also somewhat intangible; my sharing is for reference only.&lt;/p>
+&lt;h2 id="ui-design">UI Design&lt;/h2>
+&lt;p>Trae’s interface has nice aesthetics, with layout / color / font tweaks over the original version, and it looks great visually. The logic is fairly clear as well; in this area I have no suggestions to offer.&lt;/p></description></item><item><title>Automated debugging with Cursor</title><link>https://blog.jqknono.com/blog/2025/06/27/automated-debugging-with-cursor/</link><pubDate>Fri, 27 Jun 2025 13:18:19 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/06/27/automated-debugging-with-cursor/</guid><description>&lt;p>The following is an outline for automated development testing using Cursor:&lt;/p>
+&lt;h3 id="1-introduction">1. Introduction&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Overview of Cursor&lt;/strong>: Describe what Cursor is and its main features and capabilities.&lt;/li>
+&lt;li>&lt;strong>Background on automated development testing&lt;/strong>: Explain why automated development testing is needed and its importance in modern software development.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-preparation">2. Preparation&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Installation and setup&lt;/strong>:
+&lt;ul>
+&lt;li>Download and install Cursor.&lt;/li>
+&lt;li>Configure required plugins and extensions.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Environment configuration&lt;/strong>:
+&lt;ul>
+&lt;li>Set up the project structure.&lt;/li>
+&lt;li>Install dependencies (e.g., Node.js, Python, etc.).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-fundamentals-of-automation-testing">3. Fundamentals of automation testing&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Test types&lt;/strong>:
+&lt;ul>
+&lt;li>Unit tests&lt;/li>
+&lt;li>Integration tests&lt;/li>
+&lt;li>End-to-end tests&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Choosing a test framework&lt;/strong>:
+&lt;ul>
+&lt;li>Introduce common frameworks (e.g., Jest, Mocha, PyTest, etc.).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-writing-test-cases-with-cursor">4. Writing test cases with Cursor&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Creating test files&lt;/strong>:
+&lt;ul>
+&lt;li>Create new test files in Cursor.&lt;/li>
+&lt;li>Use templates to generate basic test structures.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Writing test logic&lt;/strong>:
+&lt;ul>
+&lt;li>Write unit tests.&lt;/li>
+&lt;li>Use assertion libraries for validation.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-running-and-debugging-tests">5. Running and debugging tests&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Run tests&lt;/strong>:
+&lt;ul>
+&lt;li>Execute single or multiple test cases in Cursor.&lt;/li>
+&lt;li>View test results and output.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Debug tests&lt;/strong>:
+&lt;ul>
+&lt;li>Set breakpoints.&lt;/li>
+&lt;li>Step through execution to inspect variables and program state.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="6-test-reports-and-analysis">6. Test reports and analysis&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Generate test reports&lt;/strong>:
+&lt;ul>
+&lt;li>Use frameworks to produce detailed reports.&lt;/li>
+&lt;li>Export in HTML or other formats.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Analyze results&lt;/strong>:
+&lt;ul>
+&lt;li>Identify failing tests.&lt;/li>
+&lt;li>Determine causes and repair them.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="7-continuous-integration--deployment-cicd">7. Continuous integration &amp;amp; deployment (CI/CD)&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Integrate with CI/CD tools&lt;/strong>:
+&lt;ul>
+&lt;li>Integrate Cursor with GitHub Actions, Travis CI, etc.&lt;/li>
+&lt;li>Configure automatic test triggering.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Deployment and monitoring&lt;/strong>:
+&lt;ul>
+&lt;li>Auto-deploy to test environments.&lt;/li>
+&lt;li>Monitor test coverage and quality metrics.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="8-best-practices-and-tips">8. Best practices and tips&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Refactoring and test maintenance&lt;/strong>:
+&lt;ul>
+&lt;li>Keep tests effective while refactoring code.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Performance optimization&lt;/strong>:
+&lt;ul>
+&lt;li>Tips to speed up test execution.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Troubleshooting common issues&lt;/strong>:
+&lt;ul>
+&lt;li>Address frequent causes of test failures.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="9-conclusion">9. Conclusion&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Summary&lt;/strong>: Review the advantages and key steps of automated development testing with Cursor.&lt;/li>
+&lt;li>&lt;strong>Outlook&lt;/strong>: Possible future developments and improvements.&lt;/li>
+&lt;/ul>
+&lt;p>This outline aims to help developers systematically understand how to leverage Cursor for automated development testing, thereby improving efficiency and code quality.&lt;/p></description></item><item><title>Getting Started with Copilot</title><link>https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/</link><pubDate>Fri, 28 Jun 2024 15:56:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Document is outdated&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://qingteng.feishu.cn/minutes/obcnj9f86gvr3o863mb88p99">Video share&lt;/a>&lt;/p>
+&lt;!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#copilot-labs-capabilities">Copilot Labs capabilities&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#what-is-copilot">What is Copilot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#understanding">Understanding&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#suggestions">Suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#debugging">Debugging&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#review">Review&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#refactoring">Refactoring&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#documentation">Documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#extend-copilot-boundary-with-custom">Extend Copilot boundary with Custom&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#get-more-professional-suggestions">Get more professional suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#plain-text-suggestions">Plain text suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#settings">Settings&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#data-security">Data security&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#faq">FAQ&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /TOC -->
+&lt;p>GitHub Copilot is a machine-learning–based code-completion tool that helps you write code faster and boosts coding efficiency.&lt;/p>
+&lt;h2 id="copilot-labs-capabilities">Copilot Labs capabilities&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Capability&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Notes&lt;/th>
+ &lt;th>example&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>Explain&lt;/code>&lt;/td>
+ &lt;td>Generate explanations for code&lt;/td>
+ &lt;td>Includes advanced options to customize prompts for clearer intent&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/BHCu27UmD19Nwit.png" alt="picture 1">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Show example code&lt;/code>&lt;/td>
+ &lt;td>Generate example code for snippets&lt;/td>
+ &lt;td>Includes advanced options&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/9cCew5yvSjrX2DF.png" alt="picture 2">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Language Translation&lt;/code>&lt;/td>
+ &lt;td>Translate code snippets&lt;/td>
+ &lt;td>Translation across programming languages, e.g., &lt;em>C++ → Python&lt;/em>&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/1SIolbdY3fCimPx.png" alt="picture 3">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Readable&lt;/code>&lt;/td>
+ &lt;td>Improve readability of code&lt;/td>
+ &lt;td>Not just format—truly enhance readability&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/pYxH6isGqr7Sh14.png" alt="picture 4">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Add Types&lt;/code>&lt;/td>
+ &lt;td>Type inference&lt;/td>
+ &lt;td>Turn auto-typed variables into explicit types&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/rDeh9dtjbPHl8yG.png" alt="picture 5">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Fix bug&lt;/code>&lt;/td>
+ &lt;td>Bug fixing&lt;/td>
+ &lt;td>Fix common bugs&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/h8AfL65qSOn9BJ7.png" alt="picture 6">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Debug&lt;/code>&lt;/td>
+ &lt;td>Make code easier to debug&lt;/td>
+ &lt;td>Insert logs or temporary variables for breakpoints&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/adW8QO3yfTZpx5o.png" alt="picture 7">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Clean&lt;/code>&lt;/td>
+ &lt;td>Clean code&lt;/td>
+ &lt;td>Remove unnecessary comments/prints/dead code&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/kGdpSLoOtJuBvmf.png" alt="picture 8">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>List steps&lt;/code>&lt;/td>
+ &lt;td>List execution steps&lt;/td>
+ &lt;td>Clarify strict sequential dependencies with inline comments&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/gXM19C2NBVYpIKO.png" alt="picture 9">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Make robust&lt;/code>&lt;/td>
+ &lt;td>Increase robustness&lt;/td>
+ &lt;td>Handle edge cases, concurrency, reentrancy, etc.&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/eMawki5IySGKf4U.png" alt="picture 10">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Chunk&lt;/code>&lt;/td>
+ &lt;td>Split code into chunks&lt;/td>
+ &lt;td>Guidelines: ≤50 effective LoC, nesting ≤4, fan-out ≤7, cyclomatic complexity ≤20&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/x7LRskn52iTY8b1.png" alt="picture 11">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Document&lt;/code>&lt;/td>
+ &lt;td>Generate documentation&lt;/td>
+ &lt;td>Turning comments into code or vice-versa, plus auto docs&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/HPJkC7zp518w3fI.png" alt="picture 12">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Custom&lt;/code>&lt;/td>
+ &lt;td>Custom actions&lt;/td>
+ &lt;td>Tell Copilot how to manipulate your code&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/ro3ziwAekLS7qyt.png" alt="picture 13">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="what-is-copilot">What is Copilot&lt;/h2>
+&lt;p>The &lt;a href="https://github.com/features/copilot/">official site&lt;/a> puts it succinctly: &lt;strong>Your AI pair programmer&lt;/strong>.&lt;/p></description></item><item><title>Getting Started with Copilot</title><link>https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/</link><pubDate>Fri, 28 Jun 2024 15:56:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/</guid><description>&lt;p>&lt;a href="https://qingteng.feishu.cn/minutes/obcnj9f86gvr3o863mb88p99">Video share&lt;/a>&lt;/p>
+&lt;!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#copilot-labs-%e8%83%bd%e5%8a%9b">Copilot Labs capabilities&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#copilot-%e6%98%af%e4%bb%80%e4%b9%88">What is Copilot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e7%90%86%e8%a7%a3">Understanding&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e5%bb%ba%e8%ae%ae">Suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e8%b0%83%e8%af%95">Debugging&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e6%a3%80%e8%a7%86">Code review&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e9%87%8d%e6%9e%84">Refactoring&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e6%96%87%e6%a1%a3">Documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e4%bd%bf%e7%94%a8-custom-%e6%89%a9%e5%b1%95-copilot-%e8%be%b9%e7%95%8c">Extend Copilot boundary with Custom&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e8%8e%b7%e5%be%97%e6%9b%b4%e4%b8%93%e4%b8%9a%e7%9a%84%e5%bb%ba%e8%ae%ae">Get more professional suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e7%ba%af%e6%96%87%e6%9c%ac%e7%9a%84%e5%bb%ba%e8%ae%ae">Plain-text suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e8%ae%be%e7%bd%ae%e9%a1%b9">Settings&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e6%95%b0%e6%8d%ae%e5%ae%89%e5%85%a8">Data security&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98">FAQ&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /TOC -->
+&lt;p>GitHub Copilot is a machine-learning-based code completion tool that helps you write code faster and boosts your coding efficiency.&lt;/p>
+&lt;h2 id="copilot-labs-capabilities">Copilot Labs capabilities&lt;/h2>
+&lt;p>| Capability | Description | Remarks&lt;/p></description></item></channel></rss>

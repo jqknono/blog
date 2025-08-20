@@ -4,9 +4,30 @@
 &lt;p>有了分流规则, 就不再需要在 AdguardHome 前置 SmartDNS, 一个 AdguardPrivate 就齐活.&lt;/p>
 &lt;p>当然现在分流能力仅&lt;strong>支持分 AB 两路&lt;/strong>, 即一部分走 A 上游群, 一部分走 B 上游群. 如果要做更灵活的分流支持, 开发难度会大一些, 实际的分流代码逻辑一部分在 adguardhome 中, 另外一部分在 dnsproxy 中. 两路不能满足需求的话, 可以 fork 了自己尝试做做.&lt;/p>
 &lt;p>有使用问题或建议可以提 issue, 目前主要针对特定地区的使用做一些改良.&lt;/p>
-&lt;p>&lt;img src="https://i.imgur.com/jhEZB52.png" alt="">&lt;/p></description></item><item><title>DNS</title><link>https://blog.jqknono.com/zh-cn/docs/private-service/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/docs/private-service/dns/</guid><description>&lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> _index&lt;/li>
-&lt;/ul></description></item><item><title>广告拦截新选择--AdGuardPrivate</title><link>https://blog.jqknono.com/zh-cn/blog/2025/02/20/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%96%B0%E9%80%89%E6%8B%A9--adguardprivate/</link><pubDate>Thu, 20 Feb 2025 19:10:12 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/02/20/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%96%B0%E9%80%89%E6%8B%A9--adguardprivate/</guid><description>&lt;p>&lt;a href="https://www.adguardprivate.com">AdGuardPrivate&lt;/a> 是一款专注于网络隐私保护与广告拦截的 DNS 服务工具，基于开源项目 &lt;a href="https://github.com/AdguardTeam/AdGuardHome">AdGuard Home&lt;/a> 二次开发，通过智能流量分析和过滤技术，为用户提供安全、高效的上网环境。以下是其主要功能与特点：&lt;/p>
+&lt;p>&lt;img src="https://i.imgur.com/jhEZB52.png" alt="">&lt;/p></description></item><item><title>DNS 入门：互联网的地址簿</title><link>https://blog.jqknono.com/zh-cn/docs/private-service/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/docs/private-service/dns/</guid><description>&lt;h2 id="dns-是什么">DNS 是什么？&lt;/h2>
+&lt;p>欢迎来到我们的 DNS 系列文章！在我们深入探讨技术细节之前，让我们先从一个简单的问题开始：什么是 DNS？&lt;/p>
+&lt;p>想象一下，你的手机通讯录。你不需要记住每个朋友的电话号码，只需要记住他们的名字。当你想要打电话给朋友“张三”时，你只需在通讯录里找到他的名字，然后点击拨号。你的手机会自动查找“张三”对应的电话号码并拨打出去。&lt;/p>
+&lt;p>&lt;strong>DNS（Domain Name System，域名系统）&lt;/strong> 就扮演着类似“互联网通讯录”的角色。它负责将我们容易记忆的网站域名（比如 &lt;code>www.google.com&lt;/code>）“翻译”成计算机能够理解的 IP 地址（比如 &lt;code>172.217.160.78&lt;/code>）。没有 DNS，我们就必须记住一长串毫无规律的数字才能访问网站，这几乎是不可能的。&lt;/p>
+&lt;h2 id="dns-如何工作">DNS 如何工作？&lt;/h2>
+&lt;p>这个“翻译”过程通常在幕后飞快地完成。当你-在浏览器中输入一个网址时，大致会发生以下几个步骤：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>请求&lt;/strong>：你的电脑或手机会向一个 DNS 解析器（Resolver）发送请求：“&lt;code>www.example.com&lt;/code> 的 IP 地址是什么？”&lt;/li>
+&lt;li>&lt;strong>查询&lt;/strong>：DNS 解析器会像一个侦探一样，通过层层查询（从根服务器到顶级域名服务器，再到权威域名服务器）来找到答案。&lt;/li>
+&lt;li>&lt;strong>响应&lt;/strong>：一旦找到，解析器就会将 IP 地址返回给你的电脑。&lt;/li>
+&lt;li>&lt;strong>连接&lt;/strong>：你的浏览器使用这个 IP 地址与网站的服务器建立连接，最终将网页内容呈现在你面前。&lt;/li>
+&lt;/ol>
+&lt;h2 id="本系列我们将探讨什么">本系列我们将探讨什么？&lt;/h2>
+&lt;p>DNS 的世界远比这个简单的比喻要丰富和复杂。在本系列文章中，我们将带你深入了解 DNS 的方方面面，包括：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>核心概念&lt;/strong>：深入理解域名、IP 地址、以及它们之间的关系。&lt;/li>
+&lt;li>&lt;strong>记录类型&lt;/strong>：学习 A 记录、CNAME 记录、MX 记录等不同 DNS 记录的用途。&lt;/li>
+&lt;li>&lt;strong>服务器类型&lt;/strong>：了解递归服务器和权威服务器等不同角色的 DNS 服务器。&lt;/li>
+&lt;li>&lt;strong>DNS 查询过程&lt;/strong>：详细拆解一次完整的 DNS 查询是如何进行的。&lt;/li>
+&lt;li>&lt;strong>DNS 缓存&lt;/strong>：探索 DNS 缓存如何提高网站访问速度。&lt;/li>
+&lt;li>&lt;strong>私有 DNS&lt;/strong>：如何搭建和使用私有 DNS 服务来增强网络安全和隐私。&lt;/li>
+&lt;/ul>
+&lt;p>无论你是刚刚接触网络知识的新手，还是希望巩固基础知识的开发者，本系列都将为你提供清晰、易懂的指引。&lt;/p>
+&lt;p>让我们开始 DNS 的探索之旅吧！&lt;/p></description></item><item><title>广告拦截新选择--AdGuardPrivate</title><link>https://blog.jqknono.com/zh-cn/blog/2025/02/20/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%96%B0%E9%80%89%E6%8B%A9--adguardprivate/</link><pubDate>Thu, 20 Feb 2025 19:10:12 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/02/20/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E6%96%B0%E9%80%89%E6%8B%A9--adguardprivate/</guid><description>&lt;p>&lt;a href="https://www.adguardprivate.com">AdGuardPrivate&lt;/a> 是一款专注于网络隐私保护与广告拦截的 DNS 服务工具，基于开源项目 &lt;a href="https://github.com/AdguardTeam/AdGuardHome">AdGuard Home&lt;/a> 二次开发，通过智能流量分析和过滤技术，为用户提供安全、高效的上网环境。以下是其主要功能与特点：&lt;/p>
 &lt;h2 id="核心功能广告拦截与隐私保护">核心功能：广告拦截与隐私保护&lt;/h2>
 &lt;ul>
 &lt;li>广告拦截：通过 DNS 层面拦截网页广告（如横幅、弹窗、视频广告等）及移动应用内广告，提升浏览速度和设备性能。&lt;/li>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kubernetes Cluster Series on Nono Blogs</title><link>https://blog.jqknono.com/tags/kubernetes-cluster-series/</link><description>Recent content in Kubernetes Cluster Series on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 18 Jun 2024 16:39:06 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/kubernetes-cluster-series/index.xml" rel="self" type="application/rss+xml"/><item><title>ingress-nginx is not the same as nginx ingress</title><link>https://blog.jqknono.com/blog/2024/06/18/ingress-nginx-is-not-the-same-as-nginx-ingress/</link><pubDate>Tue, 18 Jun 2024 16:39:06 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/18/ingress-nginx-is-not-the-same-as-nginx-ingress/</guid><description>&lt;p>After two weeks of reading documents, I finally realized that &lt;code>Ingress-Nginx&lt;/code> and &lt;code>Nginx Ingress&lt;/code> are not the same thing; they differ in functionality as well as implementation. There are even documents guiding the migration.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.nginx.com/nginx-ingress-controller/installation/ingress-nginx/">Migrating from the Ingress-NGINX Controller to the NGINX Ingress Controller&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.nginx.com/nginx-ingress-controller/">NGINX Ingress Controller&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubernetes.github.io/ingress-nginx/">Ingress-NGINX&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>Ingress-NGINX&lt;/code> is the community edition with more participants and a greater number of search results. &lt;code>NGINX Ingress&lt;/code> is the commercial edition, richer in features but with lower community participation.&lt;/p></description></item><item><title>Using Alibaba Cloud Distributed Storage with Self-Built K8s Clusters</title><link>https://blog.jqknono.com/blog/2024/06/14/using-alibaba-cloud-distributed-storage-with-self-built-k8s-clusters/</link><pubDate>Fri, 14 Jun 2024 12:53:46 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/14/using-alibaba-cloud-distributed-storage-with-self-built-k8s-clusters/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This article, written on 2024-06-14, explains how to use Alibaba Cloud distributed storage in a self-built cluster on Alibaba Cloud. At the end you will find document links; the official Alibaba Cloud documentation is in Chinese, while the Alibaba Cloud storage plugin repository on GitHub currently contains only English docs—readers who can do so are encouraged to consult the original texts.&lt;/p>
+&lt;h2 id="storage-plugin-installation">Storage Plugin Installation&lt;/h2>
+&lt;ol>
+&lt;li>Create a custom permission policy: &lt;a href="https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver/blob/master/docs/ram-policies/disk.json">https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver/blob/master/docs/ram-policies/disk.json&lt;/a>&lt;/li>
+&lt;li>Create a RAM role, attach the custom policy, and save the &lt;code>accesskey&lt;/code> and &lt;code>secret&lt;/code>:
+&lt;ol>
+&lt;li>&lt;code>kubectl create secret -n kube-system generic csi-access-key --from-literal=id='{id}' --from-literal=secret='{secret}'&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>Install the CSI driver—no Helm chart exists, so installation must be done locally (as of 2024-06-13).
+&lt;ol>
+&lt;li>&lt;code>git clone https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver.git&lt;/code>&lt;/li>
+&lt;li>&lt;code>cd alibaba-cloud-csi-driver/deploy&lt;/code>&lt;/li>
+&lt;li>If you are deploying to a self-built cluster on Alibaba Cloud ECS, simply run the next command; &lt;strong>otherwise, read the notes carefully&lt;/strong>: &lt;a href="https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver/blob/master/docs/install.md">https://github.com/kubernetes-sigs/alibaba-cloud-csi-driver/blob/master/docs/install.md&lt;/a>&lt;/li>
+&lt;li>&lt;code>helm upgrade --install alibaba-cloud-csi-driver ./chart --values chart/values-ecs.yaml --namespace kube-system&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>Confirm with &lt;code>watch kubectl get pods -n kube-system -l app=csi-plugin&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="storage-type-selection-guide">Storage Type Selection Guide&lt;/h2>
+&lt;ul>
+&lt;li>The minimum size for an ECS cloud disk is 20 GB with 3,000 IOPS; this is quite large and not particularly cost-effective.
+&lt;ul>
+&lt;li>Dynamic cloud-disk volumes
+&lt;ul>
+&lt;li>Official docs:
+&lt;ul>
+&lt;li>Cloud disks cannot span availability zones; they are non-shared and can be mounted by only one Pod at a time (tests show multiple Pods in the same deployment can mount the same disk).&lt;/li>
+&lt;li>Disk type must match the ECS type or mounting will fail. Refer to &lt;a href="https://help.aliyun.com/zh/ecs/user-guide/overview-of-instance-families#concept-sx4-lxv-tdb">Instance Families&lt;/a> for detailed compatibility.&lt;/li>
+&lt;li>During deployment, a StorageClass auto-provisions the PV to purchase the cloud disk. If you have already purchased the disk, use a static volume instead.&lt;/li>
+&lt;li>The requested disk size must lie within the range allowed for single disks.&lt;/li>
+&lt;li>When the Pod is recreated, it will re-attach the original cloud disk. If scheduling constraints prevent relocation to the original AZ, the Pod will stay in the Pending state.&lt;/li>
+&lt;li>Dynamically created disks are pay-as-you-go.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Extra test notes:
+&lt;ul>
+&lt;li>Although multiple Pods can mount a disk, only one can read and write; the rest are read-only. Therefore the PVC must set &lt;code>accessModes&lt;/code> to &lt;code>ReadWriteOnce&lt;/code>, and changing this has no effect.&lt;/li>
+&lt;li>If the StorageClass &lt;code>reclaimPolicy&lt;/code> is &lt;code>Delete&lt;/code>, deleting the PVC also automatically deletes the cloud disk.&lt;/li>
+&lt;li>If the StorageClass &lt;code>reclaimPolicy&lt;/code> is &lt;code>Retain&lt;/code>, the cloud disk is not deleted automatically; you must manually remove it both from the cluster and from the Alibaba Cloud console.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>A suitable scenario is hard to find.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Static cloud-disk volumes
+&lt;ul>
+&lt;li>Official docs:
+&lt;ul>
+&lt;li>Manually create the PV and PVC.&lt;/li>
+&lt;li>Cloud disks cannot span availability zones; they are non-shared and can be mounted by only one Pod at a time.&lt;/li>
+&lt;li>Disk type must match the ECS type or mounting fails.&lt;/li>
+&lt;li>You may select disks in the same region and AZ as the cluster that are in the “Available” state.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>NAS exhibits comparatively high latency; the best-case latency is ~2 ms, deep storage ~10 ms, pay-as-you-go, and offers better read/write performance than OSS object storage.&lt;/li>
+&lt;li>OSS volume: &lt;a href="https://help.aliyun.com/zh/ack/ack-managed-and-ack-dedicated/user-guide/oss-volume-overview-1?spm=a2c4g.11186623.0.0.43166a351NbtvU">https://help.aliyun.com/zh/ack/ack-managed-and-ack-dedicated/user-guide/oss-volume-overview-1?spm=a2c4g.11186623.0.0.43166a351NbtvU&lt;/a>
+&lt;ul>
+&lt;li>OSS is shared storage that can serve multiple Pods simultaneously.&lt;/li>
+&lt;li>As of 2024-06-13 supports CentOS, Alibaba Cloud Linux, ContainerOS and Anolis OS.&lt;/li>
+&lt;li>Each application uses an independent PV name when using the volume.&lt;/li>
+&lt;li>OSS volumes rely on ossfs as a FUSE file system.
+&lt;ul>
+&lt;li>Good for read-only workloads—e.g., reading config, videos, images, etc.&lt;/li>
+&lt;li>Not suitable for writing; consider the OSS SDK for writes or switch to NAS.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>ossfs can be tuned (cache, permissions, etc.) via configuration parameters.&lt;/li>
+&lt;li>ossfs limitations:
+&lt;ul>
+&lt;li>Random or append writes cause the entire file to be rewritten.&lt;/li>
+&lt;li>Listing directories and other metadata operations are slow due to remote calls.&lt;/li>
+&lt;li>File/folder rename is not atomic.&lt;/li>
+&lt;li>When multiple clients mount the same bucket, users must coordinate behavior (e.g., avoid concurrent writes to the same file).&lt;/li>
+&lt;li>No hard links.&lt;/li>
+&lt;li>For CSI plugin versions below v1.20.7, only local changes are detected; external modifications by other clients or tools are ignored.&lt;/li>
+&lt;li>Do not use in high-concurrent read/write scenarios to avoid system overload.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>In a hybrid cluster (with some nodes outside Alibaba Cloud) only NAS and OSS static volumes can be used.&lt;/li>
+&lt;li>Cloud disks, NAS, and OSS have region restrictions.&lt;/li>
+&lt;/ul>
+&lt;p>In summary: Cloud disks are provisioned and mounted as whole disks, making sharing inconvenient. OSS operates at file granularity; high-concurrent read/write suffers performance issues and supported OSes are limited.&lt;/p></description></item></channel></rss>

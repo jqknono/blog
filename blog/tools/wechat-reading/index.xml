@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WeRead Experience Sharing on Nono Blogs</title><link>https://blog.jqknono.com/blog/tools/wechat-reading/</link><description>Recent content in WeRead Experience Sharing on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 05 Dec 2024 12:36:38 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/tools/wechat-reading/index.xml" rel="self" type="application/rss+xml"/><item><title>WeChat Read Auto Check-in &amp; Read-Time Boost</title><link>https://blog.jqknono.com/blog/2024/12/05/wechat-read-auto-check-in-read-time-boost/</link><pubDate>Thu, 05 Dec 2024 12:36:38 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/12/05/wechat-read-auto-check-in-read-time-boost/</guid><description>&lt;p>Just to get a cheaper WeChat Read membership.&lt;/p>
+&lt;p>This document may be out of date; for the latest version visit the open-source repository: &lt;a href="https://github.com/jqknono/weread-challenge-selenium">https://github.com/jqknono/weread-challenge-selenium&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202412261741639.gif" alt="Cheaper WeChat Read membership">&lt;/p>
+&lt;h2 id="wechat-read-rules">WeChat Read Rules&lt;/h2>
+&lt;ul>
+&lt;li>Offline reading counts toward the total, but must sync while online.&lt;/li>
+&lt;li>Web edition, e-ink, mini-program, TTS, and audiobook listening &lt;strong>all count&lt;/strong>.&lt;/li>
+&lt;li>Sessions judged as “too long” in a single auto-read/listen will have the excess &lt;strong>excluded&lt;/strong> based on behavioral features.&lt;/li>
+&lt;li>A day counts only after &lt;strong>&amp;gt;5 minutes&lt;/strong> of reading that day.&lt;/li>
+&lt;li>Pay ¥5 to get 2 days of membership immediately; read for 29 of the next 30 days and rack up 30 hours to earn 30 more days + 30 coins.&lt;/li>
+&lt;li>Pay ¥50 to get 30 days immediately; read 360 of the next 365 days and reach 300 hours to earn 365 days + 500 coins.&lt;/li>
+&lt;/ul>
+&lt;p>Undocumented quirks observed in practice:&lt;/p></description></item></channel></rss>

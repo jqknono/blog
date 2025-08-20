@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI-Assisted Programming on Nono Blogs</title><link>https://blog.jqknono.com/tags/ai-assisted-programming/</link><description>Recent content in AI-Assisted Programming on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 28 May 2025 19:01:45 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/ai-assisted-programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Why Has GitHub Copilot Become Dumber?</title><link>https://blog.jqknono.com/blog/2025/05/28/why-has-github-copilot-become-dumber/</link><pubDate>Wed, 28 May 2025 19:01:45 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/05/28/why-has-github-copilot-become-dumber/</guid><description>&lt;style>
+.column-container {
+ display: flex;
+ gap: 2rem;
+ margin: 2rem 0;
+}
+
+.column {
+ flex: 1;
+ padding: 1rem;
+ background-color: #f8f9fa;
+ border-radius: 8px;
+ overflow-y: auto;
+ max-height: 80vh;
+}
+
+.column h2 {
+ color: #1a73e8;
+ border-bottom: 2px solid #e0e0e0;
+ padding-bottom: 0.5rem;
+ margin-top: 0;
+}
+&lt;/style>
+&lt;div class="column-container">
+ &lt;div class="column">
+ &lt;!-- Start of Article One -->
+ &lt;h2>Article Title One&lt;/h2>
+ &lt;p>Paste the full content of the first article here...&lt;/p>
+ &lt;!-- End of Article One -->
+ &lt;/div>
+ &lt;div class="column">
+ &lt;!-- Start of Article Two -->
+ &lt;h2>Article Title Two&lt;/h2>
+ &lt;p>Paste the full content of the second article here...&lt;/p></description></item><item><title>The AI Assistant Is Way Smarter Than Me</title><link>https://blog.jqknono.com/blog/2025/03/17/the-ai-assistant-is-way-smarter-than-me/</link><pubDate>Mon, 17 Mar 2025 12:17:24 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/03/17/the-ai-assistant-is-way-smarter-than-me/</guid><description>&lt;p>For a middle-aged man who has been coding for ten years, once went abroad for a gilded stint, and still cares about saving face, admitting that AI is better than me is downright embarrassing.&lt;/p>
+&lt;p>The total monthly cost of all the AI tools I use doesn’t exceed 200 RMB, yet my boss pays me far more than that.&lt;/p>
+&lt;p>I fully expect earfuls of ridicule:&lt;/p>
+&lt;blockquote>
+&lt;p>“That’s only you.”&lt;/p>&lt;/blockquote>
+&lt;blockquote>
+&lt;p>“That’s what junior devs say.”&lt;/p></description></item><item><title>AI-assisted programming</title><link>https://blog.jqknono.com/blog/programmer/ai-assisted-programming/</link><pubDate>Mon, 17 Mar 2025 12:16:33 +0800</pubDate><guid>https://blog.jqknono.com/blog/programmer/ai-assisted-programming/</guid><description>&lt;p>Embrace change.&lt;/p></description></item></channel></rss>

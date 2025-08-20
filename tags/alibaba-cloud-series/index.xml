@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alibaba Cloud Series on Nono Blogs</title><link>https://blog.jqknono.com/tags/alibaba-cloud-series/</link><description>Recent content in Alibaba Cloud Series on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 17 Mar 2025 16:56:41 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/alibaba-cloud-series/index.xml" rel="self" type="application/rss+xml"/><item><title>How to obtain a wildcard certificate in CNAME mode with ESA</title><link>https://blog.jqknono.com/blog/2025/03/17/how-to-obtain-a-wildcard-certificate-in-cname-mode-with-esa/</link><pubDate>Mon, 17 Mar 2025 16:56:41 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/03/17/how-to-obtain-a-wildcard-certificate-in-cname-mode-with-esa/</guid><description>&lt;p>Your domain is hosted on Alibaba Cloud DNS or a third-party provider, and you cannot move the domain’s NS, yet you need a wildcard certificate. Alibaba Cloud ESA provides a quota of 10 certificates, which is clearly insufficient.&lt;/p>
+&lt;p>Here is a method to obtain a wildcard certificate, followed by an explanation of the principle.&lt;/p>
+&lt;p>You’ll need to work in two separate consoles:&lt;/p>
+&lt;ol>
+&lt;li>ESA&lt;/li>
+&lt;li>DNS (Cloud Resolution or third-party DNS)&lt;/li>
+&lt;/ol>
+&lt;h3 id="steps">Steps&lt;/h3>
+&lt;!-- 1. ESA: configure wildcard CNAME: `*`, resulting in something like `all.example.com.a1.initkk.com` -->
+&lt;!-- 1. DNS: create CNAME, `*` -> `all.example.com.a1.initkk.com` -->
+&lt;ol>
+&lt;li>ESA: DNS → Settings: &lt;strong>Switch to NS mode&lt;/strong>, confirm directly—no additional action needed.&lt;/li>
+&lt;li>ESA: apply for a free edge certificate, request only &lt;code>*.example.com&lt;/code>, using your own domain.&lt;/li>
+&lt;li>ESA: expand the dropdown next to the pending certificate to obtain the TXT record: host record &lt;code>_acme-challenge.example.com&lt;/code>, value &lt;code>-PewtWrH93avbM_bScUILtcNwCHifNvjZIa2VgT9seQ&lt;/code>.&lt;/li>
+&lt;li>DNS: add a TXT record with the host record and value from the previous step.&lt;/li>
+&lt;li>Wait for the wildcard certificate to be issued; if it hasn’t been obtained within ten minutes, something went wrong—check manually.&lt;/li>
+&lt;li>ESA: DNS → Settings: &lt;strong>Switch back to CNAME mode&lt;/strong>, confirm directly—no additional action needed.&lt;/li>
+&lt;/ol>
+&lt;!-- 1. DNS: pause CNAME, `*` -> `all.example.com.a1.initkk.com` -->
+&lt;h2 id="principle">Principle&lt;/h2>
+&lt;p>Free certificates come from Let’s Encrypt, which offers two validation methods:&lt;/p></description></item><item><title>Alibaba Cloud Series</title><link>https://blog.jqknono.com/blog/cloud-service/alibaba-cloud-series/</link><pubDate>Fri, 28 Jun 2024 15:46:39 +0800</pubDate><guid>https://blog.jqknono.com/blog/cloud-service/alibaba-cloud-series/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> _index&lt;/li>
+&lt;/ul></description></item></channel></rss>

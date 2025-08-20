@@ -1,5 +1,456 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorial on Nono Blogs</title><link>https://blog.jqknono.com/tags/tutorial/</link><description>Recent content in Tutorial on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 17 Feb 2025 18:13:08 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Public Service</title><link>https://blog.jqknono.com/docs/public-service/</link><pubDate>Mon, 17 Feb 2025 18:13:08 +0800</pubDate><guid>https://blog.jqknono.com/docs/public-service/</guid><description>&lt;p>It should be noted first that household internet services in mainland China come with agreements that prohibit commercial use. In actual enforcement, whether the service is used commercially or not is not strictly monitored. However, when there are a large number of inbound HTTP/HTTPS connections (some say around 250), the service is downgraded, which causes various issues.&lt;/p>
-&lt;p>Therefore, if you intend to provide public services, it should be treated as commercial use. It is best to rent a VPS from a cloud service provider to host public services.&lt;/p></description></item><item><title>Devices</title><link>https://blog.jqknono.com/docs/private-service/devices/</link><pubDate>Thu, 05 Dec 2024 12:09:08 +0800</pubDate><guid>https://blog.jqknono.com/docs/private-service/devices/</guid><description>&lt;p>This section discusses suitable devices for hosting home services.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorial on Nono Blogs</title><link>https://blog.jqknono.com/tags/tutorial/</link><description>Recent content in Tutorial on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 25 Jun 2025 18:44:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows Subsystem Linux(WSL)</title><link>https://blog.jqknono.com/blog/programmer/environment/wsl/</link><pubDate>Wed, 25 Jun 2025 18:44:13 +0800</pubDate><guid>https://blog.jqknono.com/blog/programmer/environment/wsl/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> _index&lt;/li>
+&lt;/ul></description></item><item><title>Windows SSH Remote Login</title><link>https://blog.jqknono.com/blog/2025/05/26/windows-ssh-remote-login/</link><pubDate>Mon, 26 May 2025 11:42:26 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/05/26/windows-ssh-remote-login/</guid><description>&lt;p>Enabling SSH remote access on Windows typically requires Windows&amp;rsquo; built-in OpenSSH feature. Below are step-by-step instructions:&lt;/p>
+&lt;h2 id="check-and-install-openssh">Check and Install OpenSSH&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Check whether OpenSSH is already installed&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>Open &lt;strong>Settings&lt;/strong> &amp;gt; &lt;strong>Apps&lt;/strong> &amp;gt; &lt;strong>Apps &amp;amp; features&lt;/strong> &amp;gt; &lt;strong>Manage optional features&lt;/strong>.&lt;/li>
+&lt;li>Look for &lt;strong>OpenSSH Server&lt;/strong> in the list. If found, it is already installed.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Install OpenSSH&lt;/strong>:&lt;/p>
+&lt;ul>
+&lt;li>If &lt;strong>OpenSSH Server&lt;/strong> is not listed, click &lt;strong>Add a feature&lt;/strong>, locate &lt;strong>OpenSSH Server&lt;/strong> in the list, click it, then click &lt;strong>Install&lt;/strong>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="start-and-configure-the-openssh-service">Start and Configure the OpenSSH Service&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Start the OpenSSH service&lt;/strong>:&lt;/p></description></item><item><title>A Prompt Guide from Cline</title><link>https://blog.jqknono.com/blog/2025/03/30/a-prompt-guide-from-cline/</link><pubDate>Sun, 30 Mar 2025 22:24:30 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/03/30/a-prompt-guide-from-cline/</guid><description>&lt;h1 id="cline-memory-bank---custom-instructions">Cline Memory Bank - Custom Instructions&lt;/h1>
+&lt;h3 id="1-purpose-and-functionality">1. Purpose and Functionality&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>What is the goal of this instruction set?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>This set transforms Cline into a self-documenting development system, preserving context across sessions via a structured “memory bank.” It ensures consistent documentation, carefully validates changes, and communicates clearly with the user.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Which kinds of projects or tasks are these best suited for?&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Projects that demand extensive context tracking.&lt;/li>
+&lt;li>Any project, regardless of tech stack (tech-stack details are stored in &lt;code>techContext.md&lt;/code>).&lt;/li>
+&lt;li>Both ongoing and new projects.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-usage-guide">2. Usage Guide&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>How to add these instructions&lt;/strong>
+&lt;ol>
+&lt;li>Open VSCode&lt;/li>
+&lt;li>Click the Cline extension settings gear ⚙️&lt;/li>
+&lt;li>Locate the “Custom Instructions” field&lt;/li>
+&lt;li>Copy and paste the instructions in the section below&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;img width="345" alt="Screenshot 2024-12-26 at 11 22 20 AM" src="https://github.com/user-attachments/assets/8b4ff439-db66-48ec-be13-1ddaa37afa9a" />
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Project Setup&lt;/strong>&lt;/p></description></item><item><title>How to obtain a wildcard certificate in CNAME mode with ESA</title><link>https://blog.jqknono.com/blog/2025/03/17/how-to-obtain-a-wildcard-certificate-in-cname-mode-with-esa/</link><pubDate>Mon, 17 Mar 2025 16:56:41 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/03/17/how-to-obtain-a-wildcard-certificate-in-cname-mode-with-esa/</guid><description>&lt;p>Your domain is hosted on Alibaba Cloud DNS or a third-party provider, and you cannot move the domain’s NS, yet you need a wildcard certificate. Alibaba Cloud ESA provides a quota of 10 certificates, which is clearly insufficient.&lt;/p>
+&lt;p>Here is a method to obtain a wildcard certificate, followed by an explanation of the principle.&lt;/p>
+&lt;p>You’ll need to work in two separate consoles:&lt;/p>
+&lt;ol>
+&lt;li>ESA&lt;/li>
+&lt;li>DNS (Cloud Resolution or third-party DNS)&lt;/li>
+&lt;/ol>
+&lt;h3 id="steps">Steps&lt;/h3>
+&lt;!-- 1. ESA: configure wildcard CNAME: `*`, resulting in something like `all.example.com.a1.initkk.com` -->
+&lt;!-- 1. DNS: create CNAME, `*` -> `all.example.com.a1.initkk.com` -->
+&lt;ol>
+&lt;li>ESA: DNS → Settings: &lt;strong>Switch to NS mode&lt;/strong>, confirm directly—no additional action needed.&lt;/li>
+&lt;li>ESA: apply for a free edge certificate, request only &lt;code>*.example.com&lt;/code>, using your own domain.&lt;/li>
+&lt;li>ESA: expand the dropdown next to the pending certificate to obtain the TXT record: host record &lt;code>_acme-challenge.example.com&lt;/code>, value &lt;code>-PewtWrH93avbM_bScUILtcNwCHifNvjZIa2VgT9seQ&lt;/code>.&lt;/li>
+&lt;li>DNS: add a TXT record with the host record and value from the previous step.&lt;/li>
+&lt;li>Wait for the wildcard certificate to be issued; if it hasn’t been obtained within ten minutes, something went wrong—check manually.&lt;/li>
+&lt;li>ESA: DNS → Settings: &lt;strong>Switch back to CNAME mode&lt;/strong>, confirm directly—no additional action needed.&lt;/li>
+&lt;/ol>
+&lt;!-- 1. DNS: pause CNAME, `*` -> `all.example.com.a1.initkk.com` -->
+&lt;h2 id="principle">Principle&lt;/h2>
+&lt;p>Free certificates come from Let’s Encrypt, which offers two validation methods:&lt;/p></description></item><item><title>AI-assisted programming</title><link>https://blog.jqknono.com/blog/programmer/ai-assisted-programming/</link><pubDate>Mon, 17 Mar 2025 12:16:33 +0800</pubDate><guid>https://blog.jqknono.com/blog/programmer/ai-assisted-programming/</guid><description>&lt;p>Embrace change.&lt;/p></description></item><item><title>Public Service</title><link>https://blog.jqknono.com/docs/public-service/</link><pubDate>Mon, 17 Feb 2025 18:13:08 +0800</pubDate><guid>https://blog.jqknono.com/docs/public-service/</guid><description>&lt;p>First, it must be noted that some home networks prohibit commercial use under their service agreements. In practice, the definition of commercial use is not enforced by whether it is actually commercial. Once inbound HTTP/HTTPS connections exceed a certain number (some say 250), the service is downgraded, which significantly affects the network. Therefore, any service intended for public access must be treated as a commercial service. It is best to rent a VPS from a cloud provider to offer public services.&lt;/p></description></item><item><title>Device</title><link>https://blog.jqknono.com/docs/private-service/devices/index/</link><pubDate>Thu, 05 Dec 2024 12:09:08 +0800</pubDate><guid>https://blog.jqknono.com/docs/private-service/devices/index/</guid><description>&lt;p>Here we discuss which devices can be used to host home services.&lt;/p>
+&lt;h2 id="hardware-platforms">Hardware Platforms&lt;/h2>
+&lt;p>There are plenty of choices for home-use devices: you can repurpose a retired laptop, an idle desktop, or search online for development boards, NAS devices, soft-routers, Macs, etc.—all of them can run services.&lt;/p>
+&lt;p>When selecting hardware, don’t obsess over the &lt;strong>x86&lt;/strong> platform; the &lt;strong>ARM&lt;/strong> platform is already mature, inexpensive, adequately powerful, energy-efficient, and has a rich ecosystem, making it ideal for home use. Unless you must run legacy software, &lt;strong>ARM&lt;/strong> is a solid choice.&lt;/p></description></item><item><title>Devices</title><link>https://blog.jqknono.com/docs/private-service/devices/</link><pubDate>Thu, 05 Dec 2024 12:09:08 +0800</pubDate><guid>https://blog.jqknono.com/docs/private-service/devices/</guid><description>&lt;p>This section discusses suitable devices for hosting home services.&lt;/p>
 &lt;h2 id="hardware-platforms">Hardware Platforms&lt;/h2>
 &lt;p>There are many options for home-use devices: retired laptops,闲置 desktops, development boards, NAS devices, soft routers, Macs, etc., all of which can host services.&lt;/p>
-&lt;p>Hardware choices in 2024 no longer need to be limited to &lt;strong>x86&lt;/strong> platforms. &lt;strong>ARM&lt;/strong> platforms have matured with advantages including low cost, sufficient performance, low power consumption, and rich ecosystems suitable for home use. Unless you must run legacy software, &lt;strong>ARM&lt;/strong> platforms are excellent choices.&lt;/p></description></item></channel></rss>
+&lt;p>Hardware choices in 2024 no longer need to be limited to &lt;strong>x86&lt;/strong> platforms. &lt;strong>ARM&lt;/strong> platforms have matured with advantages including low cost, sufficient performance, low power consumption, and rich ecosystems suitable for home use. Unless you must run legacy software, &lt;strong>ARM&lt;/strong> platforms are excellent choices.&lt;/p></description></item><item><title>Google Translate API Usage Guide</title><link>https://blog.jqknono.com/blog/2024/11/15/google-translate-api-usage-guide/</link><pubDate>Fri, 15 Nov 2024 15:25:11 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/15/google-translate-api-usage-guide/</guid><description>&lt;p>If you need to automate translation tasks via API, the Google Translate API is a solid choice. Its translation quality may be slightly behind DeepL, but it offers better value—especially with 500,000 free characters every month.&lt;/p>
+&lt;h2 id="product-overview">Product Overview&lt;/h2>
+&lt;p>Everyone has used Google Translate. Here we’re talking about its API service, officially called Google Cloud Translation. With the API you can do bulk translation, build custom models, translate documents, and more.&lt;/p></description></item><item><title>Tricky Issues</title><link>https://blog.jqknono.com/blog/troubleshooting/</link><pubDate>Fri, 28 Jun 2024 18:42:21 +0800</pubDate><guid>https://blog.jqknono.com/blog/troubleshooting/</guid><description/></item><item><title>Programmers</title><link>https://blog.jqknono.com/blog/programmer/</link><pubDate>Fri, 28 Jun 2024 18:29:45 +0800</pubDate><guid>https://blog.jqknono.com/blog/programmer/</guid><description/></item><item><title>Design Specification Template</title><link>https://blog.jqknono.com/blog/2024/06/28/design-specification-template/</link><pubDate>Fri, 28 Jun 2024 17:35:07 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/design-specification-template/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Design Specification Template&lt;/li>
+&lt;/ul>
+&lt;h1 id="detailed-design-of-xxx-system--sub-system">Detailed Design of XXX System / Sub-system&lt;/h1>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>System Name&lt;/th>
+ &lt;th>XXX System&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Author&lt;/td>
+ &lt;td>XXX&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Submission Date&lt;/td>
+ &lt;td>2021-06-30&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="revision-history">Revision History&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Revised Version&lt;/th>
+ &lt;th>Change Description&lt;/th>
+ &lt;th>Date of Change&lt;/th>
+ &lt;th>Author&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>v1.0&lt;/td>
+ &lt;td>XXXXXXX&lt;/td>
+ &lt;td>2021-06-30&lt;/td>
+ &lt;td>XXX&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="technical-review-comments">Technical Review Comments&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>No.&lt;/th>
+ &lt;th>Reviewer&lt;/th>
+ &lt;th>Review Comment (Pass/Fail/Pending, comments allowed)&lt;/th>
+ &lt;th>Review Time&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>1&lt;/td>
+ &lt;td>XXX&lt;/td>
+ &lt;td>Pass&lt;/td>
+ &lt;td>2022.1.1&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="background">Background&lt;/h2>
+&lt;h2 id="glossary">Glossary&lt;/h2>
+&lt;!-- For any new or uncommon terms, concepts, or acronyms appearing in the document, provide definitions and explanations. -->
+&lt;ul>
+&lt;li>SIP: Session Initiation Protocol&lt;/li>
+&lt;li>RTP: Real-time Transport Protocol&lt;/li>
+&lt;/ul>
+&lt;h2 id="design-objectives">Design Objectives&lt;/h2>
+&lt;h3 id="functional-requirements">Functional Requirements&lt;/h3>
+&lt;!-- Summarize the functional requirements of the system itself, without describing external systems. If the project already has an MRD/PRD, list functional points and sub-points in hierarchy here. If there is no MRD/PRD, enumerate the functional points and sub-points to be implemented. -->
+&lt;h3 id="non-functional-requirements-mandatory">Non-Functional Requirements (mandatory)&lt;/h3>
+&lt;!-- Describe the non-functional requirements of the system (including performance needs). It is recommended to list quantifiable performance indicators such as response time, error rate, resource usage, and operational period. Do not be vague, ambiguous, or make unfounded assumptions. -->
+&lt;h2 id="environment">Environment&lt;/h2>
+&lt;h3 id="related-software--hardware-optional">Related Software &amp;amp; Hardware (optional)&lt;/h3>
+&lt;!-- Add required software &amp; hardware for the system, including operating systems, machine models, and configuration requirements. Tabular format is recommended; ideally also include a deployment diagram of servers and software components. This section can also be written as a separate deployment design document and referenced here. -->
+&lt;h3 id="system-constraints">System Constraints&lt;/h3>
+&lt;!-- Add known or foreseeable constraints of the system here. -->
+&lt;h3 id="estimated-data-scale-mandatory">Estimated Data Scale (mandatory)&lt;/h3>
+&lt;!-- Through research or experience, estimate the data scale, covering user volume, data volume, bandwidth consumption, and growth rate. Categorize and list them. -->
+&lt;h2 id="existing-solutions">Existing Solutions&lt;/h2>
+&lt;!-- For this design objective, enumerate all known solutions—particularly **existing solutions inside Qiteng**—and identify whether they meet the new requirements. Unless the requirements differ completely, forking should be the last resort; prefer enhancing the current solution. -->
+&lt;h2 id="design-ideas--trade-offs">Design Ideas &amp;amp; Trade-offs&lt;/h2>
+&lt;!-- Describe key or difficult problems to be solved or considered in the system design. Where alternative solutions exist, include the selected option, trade-offs, and justification; provide further details later in the “System Design” section. It is suggested to classify by concerns such as performance, scalability, security, service stability, anti-fraud, and reuse; attach research data to support the design choice. -->
+&lt;h3 id="assumptions--dependencies--relationships-with-other-systems">Assumptions &amp;amp; Dependencies / Relationships with Other Systems&lt;/h3>
+&lt;!-- State the prerequisites for the success of the system and its connections with external systems/modules. Either list them in bulleted prose or depict with a system architecture diagram. -->
+&lt;h2 id="system-design">System Design&lt;/h2>
+&lt;h3 id="overview">Overview&lt;/h3>
+&lt;!-- A brief introduction of the overall system. -->
+&lt;h3 id="architecture-diagram--explanation">Architecture Diagram &amp;amp; Explanation&lt;/h3>
+&lt;!-- Decompose the system into subsystems or modules, provide an architecture diagram, and briefly explain the main responsibility of each module (if helpful, include justification for grouping certain functions into a specific module). If the modules run in heterogeneous environments (e.g., different operating systems, servers), show the corresponding physical architecture diagram in the Related Software &amp; Hardware section. -->
+&lt;h3 id="system-flow--explanation-optional">System Flow &amp;amp; Explanation (optional)&lt;/h3>
+&lt;!-- Use flowcharts to illustrate how system modules interact to fulfill system functions. -->
+&lt;h3 id="interfaces-with-external-systems">Interfaces with External Systems&lt;/h3>
+&lt;!-- Provide detailed definitions for interfaces between this system and external systems. If interfaces are numerous or complex, create a dedicated interface design document and reference it here. If the external system has already published an interface document, simply cite it. Interfaces here include structures, function calls, interface files, databases, URL parameters, and libraries. If an external library is required, negotiate the version to be used during the design phase and clarify it here. -->
+&lt;h3 id="global-data-structure-descriptions">Global Data-Structure Descriptions&lt;/h3>
+&lt;!-- Describe global data structures (including database schemas) commonly used across modules. If this is already covered in the interface design section, simply reference the interface document. -->
+&lt;h3 id="brief-description-of-module-xxx1">Brief Description of Module XXX1&lt;/h3>
+&lt;h4 id="functionality-of-module-xxx1">Functionality of Module XXX1&lt;/h4>
+&lt;!-- Describe the functionality to be implemented by this module—first a high-level summary, then list detailed points. For any key features or techniques specific to this module, elaborate here to guide detailed designers. -->
+&lt;h4 id="interfaces-with-other-modules">Interfaces with Other Modules&lt;/h4>
+&lt;!-- Describe the interfaces between this module and other modules within the system (excluding internal interfaces of the module). If the interfaces are complex or extensive enough, create a separate interface design document and reference it here. Alternatively, add a secondary heading “Inter-module Interfaces” to define them systematically and comprehensively. -->
+&lt;h3 id="brief-description-of-module-xxx2">Brief Description of Module XXX2&lt;/h3>
+&lt;h4 id="functionality-of-module-xxx2">Functionality of Module XXX2&lt;/h4>
+&lt;h4 id="interfaces-with-other-modules-1">Interfaces with Other Modules&lt;/h4>
+&lt;h2 id="threat-modeling">Threat Modeling&lt;/h2>
+&lt;!-- Use a structured approach to systematically identify and evaluate security risks and threats to the product, and define mitigation measures for each risk or threat. -->
+&lt;h2 id="upgrade-impact-mandatory">Upgrade Impact (mandatory)&lt;/h2>
+&lt;!-- If this design needs to upgrade an existing previous version, will there be any breaking changes? Can the upgrade be performed seamlessly? What potential impacts may the upgrade bring, and how can they be mitigated? -->
+&lt;h2 id="risk-assessment--impact-on-other-systems-optional">Risk Assessment &amp;amp; Impact on Other Systems (optional)&lt;/h2>
+&lt;h3 id="known-or-foreseeable-risks">Known or Foreseeable Risks&lt;/h3>
+&lt;!-- Include already known or possible future risks, including technical and business aspects. Preferably list corresponding measures for each risk. -->
+&lt;h3 id="potential-impact-with-other-systemsmodules">Potential Impact with Other Systems/Modules&lt;/h3>
+&lt;!-- In “Assumptions &amp; Dependencies on Other Systems” we described the dependencies of this system on others. Here describe the impact these dependencies may have—both the impact this system may have on others and vice-versa. Identify potential innovations and file patents where appropriate. -->
+&lt;h2 id="innovation-points-optional">Innovation Points (optional)&lt;/h2>
+&lt;!-- Explore potential innovation points to file patents. -->
+&lt;h2 id="attachments--references">Attachments &amp;amp; References&lt;/h2>
+&lt;!-- List related attachments or reference documents. Attach infrequently changed documents (e.g., research reports) as embedded objects in this document. For frequently updated documents (e.g., interface documents), simply list the filenames or links here. --></description></item><item><title>Command Line Syntax Conventions</title><link>https://blog.jqknono.com/blog/2024/06/28/command-line-syntax-conventions/</link><pubDate>Fri, 28 Jun 2024 17:32:54 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/command-line-syntax-conventions/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Command line syntax conventions&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.ibm.com/docs/en/iotdm/11.3?topic=interface-command-line-syntax">https://www.ibm.com/docs/en/iotdm/11.3?topic=interface-command-line-syntax&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key">https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developers.google.com/style/code-syntax">https://developers.google.com/style/code-syntax&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_01">https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_01&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://ftpdocs.broadcom.com/cadocs/0/CA%20ARCserve%20%20Backup%20r16-CHS/Bookshelf_Files/HTML/cmndline/cl_cmd_line_syntax_char.htm">https://ftpdocs.broadcom.com/cadocs/0/CA%20ARCserve%20%20Backup%20r16-CHS/Bookshelf_Files/HTML/cmndline/cl_cmd_line_syntax_char.htm&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>e.g.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Notation&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Text without brackets or braces&lt;/td>
+ &lt;td>Items you must type as shown.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;lt;&lt;/code>Text inside angle brackets&lt;code>&amp;gt;&lt;/code>&lt;/td>
+ &lt;td>Placeholder for which you must supply a value.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>[&lt;/code>Text inside square brackets&lt;code>]&lt;/code>&lt;/td>
+ &lt;td>Optional items.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>{&lt;/code>Text inside braces&lt;code>}&lt;/code>&lt;/td>
+ &lt;td>Set of required items. You must choose one.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Vertical bar ( &lt;code>|&lt;/code> )&lt;/td>
+ &lt;td>Separator for mutually exclusive items. You must choose one.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Ellipsis (&lt;code>…&lt;/code>)&lt;/td>
+ &lt;td>Items that can be repeated and used multiple times.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>Huawei C++ Coding Standards</title><link>https://blog.jqknono.com/blog/2024/06/28/huawei-c-coding-standards/</link><pubDate>Fri, 28 Jun 2024 17:30:10 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/huawei-c-coding-standards/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Huawei C++ Coding Standards&lt;/li>
+&lt;/ul>
+&lt;h1 id="c-language-coding-standards">C++ Language Coding Standards&lt;/h1>
+&lt;h2 id="purpose">&lt;a name="c0-1">&lt;/a>Purpose&lt;/h2>
+&lt;p>Rules are not perfect; by prohibiting features useful in specific situations, they may impact code implementation. However, the purpose of establishing rules is “to benefit the majority of developers.” If, during team collaboration, a rule is deemed unenforceable, we hope to improve it together.&lt;/p>
+&lt;p>Before referencing this standard, it is assumed that you already possess the corresponding basic C++ language capabilities; do not rely on this document to learn the C++ language.&lt;/p></description></item><item><title>openvpn network connectivity issues</title><link>https://blog.jqknono.com/blog/2024/06/28/openvpn-network-connectivity-issues/</link><pubDate>Fri, 28 Jun 2024 17:18:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/openvpn-network-connectivity-issues/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> openvpn configuration&lt;/li>
+&lt;/ul>
+&lt;h1 id="openvpn-configuration">openvpn configuration&lt;/h1>
+&lt;h2 id="tool-script">Tool script&lt;/h2>
+&lt;p>&lt;a href="https://github.com/angristan/openvpn-install">openvpn-install&lt;/a>&lt;/p>
+&lt;h2 id="windows-firewall-configuration">Windows firewall configuration&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Inbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Outbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>window-message</title><link>https://blog.jqknono.com/blog/2024/06/28/window-message/</link><pubDate>Fri, 28 Jun 2024 17:07:51 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/window-message/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> window-message&lt;/li>
+&lt;/ul>
+&lt;h1 id="windows-message">windows-message&lt;/h1>
+&lt;ul>
+&lt;li>&lt;a href="https://gist.github.com/amgine/2395987">All windows messages as C# enum (github.com)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wiki.winehq.org/List_Of_Windows_Messages">List Of Windows Messages - WineHQ Wiki&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.pinvoke.net/default.aspx/Constants/WM.html">pinvoke.net: WM (Constants)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.pinvoke.net/default.aspx/Enums/WindowsMessages">pinvoke.net: WindowsMessages (Enums)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/winmsg/window-notifications">Window Notifications&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Docker Introduction</title><link>https://blog.jqknono.com/blog/2024/06/28/docker-introduction/</link><pubDate>Fri, 28 Jun 2024 16:00:31 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/docker-introduction/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Docker Introduction&lt;/li>
+&lt;/ul>
+&lt;h1 id="docker-introduction">Docker Introduction&lt;/h1>
+&lt;ul>
+&lt;li>Docker is an application container engine that packages an application with its dependencies into a portable container and can then run it on any popular Linux or Windows machine, achieving virtualization as well.&lt;/li>
+&lt;li>Why do we have Docker? Developers and operators often run into the same problem: an application works perfectly in the developer’s environment but is riddled with bugs in production.
+&lt;ul>
+&lt;li>A program’s execution spans several layers—from hardware architecture through the operating system down to the application itself—but developers usually focus only on the application, ignoring issues in the other layers.&lt;/li>
+&lt;li>Docker was created to solve this problem: it bundles the application and all of its dependencies into a container so that you never have to worry about the underlying environment.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>By keeping development and production environments in sync, developers can build, test, and deploy applications locally without stressing over environmental differences. Development and operations become far more efficient at the modest cost of a tiny amount of extra resource usage.&lt;/li>
+&lt;/ul>
+&lt;p>I strongly urge every developer to learn how to use containers for development and deployment. For a relatively small cost, you can provide your applications with a stable runtime environment and thus improve both development and operations efficiency.&lt;/p></description></item><item><title>Copilot Series</title><link>https://blog.jqknono.com/blog/tools/ai/copilot-series/</link><pubDate>Fri, 28 Jun 2024 15:58:17 +0800</pubDate><guid>https://blog.jqknono.com/blog/tools/ai/copilot-series/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Copilot Series&lt;/li>
+&lt;/ul></description></item><item><title>Getting Started with Copilot</title><link>https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/</link><pubDate>Fri, 28 Jun 2024 15:56:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Document is outdated&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a href="https://qingteng.feishu.cn/minutes/obcnj9f86gvr3o863mb88p99">Video share&lt;/a>&lt;/p>
+&lt;!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#copilot-labs-capabilities">Copilot Labs capabilities&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#what-is-copilot">What is Copilot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#understanding">Understanding&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#suggestions">Suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#debugging">Debugging&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#review">Review&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#refactoring">Refactoring&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#documentation">Documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#extend-copilot-boundary-with-custom">Extend Copilot boundary with Custom&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#get-more-professional-suggestions">Get more professional suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#plain-text-suggestions">Plain text suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#settings">Settings&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#data-security">Data security&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#faq">FAQ&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /TOC -->
+&lt;p>GitHub Copilot is a machine-learning–based code-completion tool that helps you write code faster and boosts coding efficiency.&lt;/p>
+&lt;h2 id="copilot-labs-capabilities">Copilot Labs capabilities&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Capability&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Notes&lt;/th>
+ &lt;th>example&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>Explain&lt;/code>&lt;/td>
+ &lt;td>Generate explanations for code&lt;/td>
+ &lt;td>Includes advanced options to customize prompts for clearer intent&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/BHCu27UmD19Nwit.png" alt="picture 1">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Show example code&lt;/code>&lt;/td>
+ &lt;td>Generate example code for snippets&lt;/td>
+ &lt;td>Includes advanced options&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/9cCew5yvSjrX2DF.png" alt="picture 2">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Language Translation&lt;/code>&lt;/td>
+ &lt;td>Translate code snippets&lt;/td>
+ &lt;td>Translation across programming languages, e.g., &lt;em>C++ → Python&lt;/em>&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/1SIolbdY3fCimPx.png" alt="picture 3">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Readable&lt;/code>&lt;/td>
+ &lt;td>Improve readability of code&lt;/td>
+ &lt;td>Not just format—truly enhance readability&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/pYxH6isGqr7Sh14.png" alt="picture 4">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Add Types&lt;/code>&lt;/td>
+ &lt;td>Type inference&lt;/td>
+ &lt;td>Turn auto-typed variables into explicit types&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/rDeh9dtjbPHl8yG.png" alt="picture 5">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Fix bug&lt;/code>&lt;/td>
+ &lt;td>Bug fixing&lt;/td>
+ &lt;td>Fix common bugs&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/h8AfL65qSOn9BJ7.png" alt="picture 6">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Debug&lt;/code>&lt;/td>
+ &lt;td>Make code easier to debug&lt;/td>
+ &lt;td>Insert logs or temporary variables for breakpoints&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/adW8QO3yfTZpx5o.png" alt="picture 7">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Clean&lt;/code>&lt;/td>
+ &lt;td>Clean code&lt;/td>
+ &lt;td>Remove unnecessary comments/prints/dead code&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/kGdpSLoOtJuBvmf.png" alt="picture 8">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>List steps&lt;/code>&lt;/td>
+ &lt;td>List execution steps&lt;/td>
+ &lt;td>Clarify strict sequential dependencies with inline comments&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/gXM19C2NBVYpIKO.png" alt="picture 9">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Make robust&lt;/code>&lt;/td>
+ &lt;td>Increase robustness&lt;/td>
+ &lt;td>Handle edge cases, concurrency, reentrancy, etc.&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/eMawki5IySGKf4U.png" alt="picture 10">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Chunk&lt;/code>&lt;/td>
+ &lt;td>Split code into chunks&lt;/td>
+ &lt;td>Guidelines: ≤50 effective LoC, nesting ≤4, fan-out ≤7, cyclomatic complexity ≤20&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/x7LRskn52iTY8b1.png" alt="picture 11">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Document&lt;/code>&lt;/td>
+ &lt;td>Generate documentation&lt;/td>
+ &lt;td>Turning comments into code or vice-versa, plus auto docs&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/HPJkC7zp518w3fI.png" alt="picture 12">&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>Custom&lt;/code>&lt;/td>
+ &lt;td>Custom actions&lt;/td>
+ &lt;td>Tell Copilot how to manipulate your code&lt;/td>
+ &lt;td>&lt;img src="https://s2.loli.net/2023/05/06/ro3ziwAekLS7qyt.png" alt="picture 13">&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="what-is-copilot">What is Copilot&lt;/h2>
+&lt;p>The &lt;a href="https://github.com/features/copilot/">official site&lt;/a> puts it succinctly: &lt;strong>Your AI pair programmer&lt;/strong>.&lt;/p></description></item><item><title>Getting Started with Copilot</title><link>https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/</link><pubDate>Fri, 28 Jun 2024 15:56:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/</guid><description>&lt;p>&lt;a href="https://qingteng.feishu.cn/minutes/obcnj9f86gvr3o863mb88p99">Video share&lt;/a>&lt;/p>
+&lt;!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#copilot-labs-%e8%83%bd%e5%8a%9b">Copilot Labs capabilities&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#copilot-%e6%98%af%e4%bb%80%e4%b9%88">What is Copilot&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e7%90%86%e8%a7%a3">Understanding&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e5%bb%ba%e8%ae%ae">Suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e8%b0%83%e8%af%95">Debugging&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e6%a3%80%e8%a7%86">Code review&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e9%87%8d%e6%9e%84">Refactoring&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e6%96%87%e6%a1%a3">Documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e4%bd%bf%e7%94%a8-custom-%e6%89%a9%e5%b1%95-copilot-%e8%be%b9%e7%95%8c">Extend Copilot boundary with Custom&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e8%8e%b7%e5%be%97%e6%9b%b4%e4%b8%93%e4%b8%9a%e7%9a%84%e5%bb%ba%e8%ae%ae">Get more professional suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e7%ba%af%e6%96%87%e6%9c%ac%e7%9a%84%e5%bb%ba%e8%ae%ae">Plain-text suggestions&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e8%ae%be%e7%bd%ae%e9%a1%b9">Settings&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e6%95%b0%e6%8d%ae%e5%ae%89%e5%85%a8">Data security&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/blog/2024/06/28/getting-started-with-copilot/#%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98">FAQ&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /TOC -->
+&lt;p>GitHub Copilot is a machine-learning-based code completion tool that helps you write code faster and boosts your coding efficiency.&lt;/p>
+&lt;h2 id="copilot-labs-capabilities">Copilot Labs capabilities&lt;/h2>
+&lt;p>| Capability | Description | Remarks&lt;/p></description></item><item><title>IPv6 Issues When Bridging on Windows</title><link>https://blog.jqknono.com/blog/2023/05/06/ipv6-issues-when-bridging-on-windows/</link><pubDate>Sat, 06 May 2023 11:47:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2023/05/06/ipv6-issues-when-bridging-on-windows/</guid><description>&lt;ul>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> IPv6 Issues When Bridging on Windows&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> IPv6 Issues When Bridging on Windows Server&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Nowadays, many soft-router machines come with good hardware specs. Running OpenWrt alone is overkill, so most tinkerers like to squeeze out more value. The difficulty with Linux lies in the command line, but those who use it daily often find that this is also what makes Linux easy.&lt;/p>
+&lt;p>Anyone who enjoys tinkering will eventually need external network access. Since Linux is usually maintained by non-professionals and security patches arrive slowly, some decide to use Windows Server instead. The software originally running on OpenWrt can be deployed via WSL plus Docker, satisfying all the same needs.&lt;/p></description></item><item><title>vs-remote-debug</title><link>https://blog.jqknono.com/blog/2022/11/13/vs-remote-debug/</link><pubDate>Sun, 13 Nov 2022 14:17:28 +0800</pubDate><guid>https://blog.jqknono.com/blog/2022/11/13/vs-remote-debug/</guid><description>&lt;h1 id="remote-debug-with-visual-studio">remote debug with visual studio&lt;/h1>
+&lt;p>Remote debugging C++:
+&lt;a href="https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-cpp?view=vs-2019">https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging-cpp?view=vs-2019&lt;/a>&lt;/p>
+&lt;p>Attach debugging:
+&lt;a href="https://docs.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2019">https://docs.microsoft.com/en-us/visualstudio/debugger/attach-to-running-processes-with-the-visual-studio-debugger?view=vs-2019&lt;/a>&lt;/p>
+&lt;p>Configure co-debugging program as a service:
+&lt;a href="https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging?view=vs-2019#bkmk_configureService">https://docs.microsoft.com/en-us/visualstudio/debugger/remote-debugging?view=vs-2019#bkmk_configureService&lt;/a>&lt;/p>
+&lt;p>How to configure launch parameters:
+&lt;a href="https://stackoverflow.com/questions/6740422/visual-studio-remote-debugging-a-service">https://stackoverflow.com/questions/6740422/visual-studio-remote-debugging-a-service&lt;/a>&lt;/p>
+&lt;p>Available parameters:
+&lt;a href="https://social.msdn.microsoft.com/Forums/vstudio/en-US/174c2039-b316-455a-800e-18c0d93b74bc/visual-studio-2010-remote-debugger-settings-dont-persist?forum=vsdebug">https://social.msdn.microsoft.com/Forums/vstudio/en-US/174c2039-b316-455a-800e-18c0d93b74bc/visual-studio-2010-remote-debugger-settings-dont-persist?forum=vsdebug&lt;/a>&lt;/p>
+&lt;p>Add your own task&lt;/p>
+&lt;p>&lt;code>&amp;quot;C:\Program Files\Microsoft Visual Studio 16.0\Common7\IDE\Remote Debugger\x64\msvsmon.exe&amp;quot;&lt;/code>&lt;/p>
+&lt;p>Launch parameters&lt;/p>
+&lt;p>&lt;code>/noauth /anyuser /port:4045 /nosecuritywarn /timeout 360000&lt;/code>&lt;/p>
+&lt;p>Dev machine connect: &lt;code>test0.example.com:4045&lt;/code>&lt;/p>
+&lt;p>Remote access (developer mode must be enabled first): &lt;code>http://test0.example.com:50080/&lt;/code>&lt;/p></description></item></channel></rss>

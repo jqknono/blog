@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on Nono Blogs</title><link>https://blog.jqknono.com/blog/tools/</link><description>Recent content in Tools on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 27 Mar 2025 17:09:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Thinking Tools</title><link>https://blog.jqknono.com/blog/2025/03/27/thinking-tools/</link><pubDate>Thu, 27 Mar 2025 17:09:13 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/03/27/thinking-tools/</guid><description>&lt;h2 id="1-basic-logical-thinking-methods">&lt;strong>1. Basic Logical Thinking Methods&lt;/strong>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Induction &amp;amp; Deduction&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Induction&lt;/strong>: Generalize universal laws from particular cases (e.g., deriving the concept of “horse” from “black horses, white horses”).&lt;/li>
+&lt;li>&lt;strong>Deduction&lt;/strong>: Derive specific conclusions from universal laws (e.g., using the definition of “horse” to infer “black horse” or “white horse”).&lt;/li>
+&lt;li>&lt;strong>Use cases&lt;/strong>: Scientific research, data analysis, rule-making.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Analysis &amp;amp; Synthesis&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Analysis&lt;/strong>: Break down the whole into parts to study it (e.g., dissecting light’s wave-particle duality).&lt;/li>
+&lt;li>&lt;strong>Synthesis&lt;/strong>: Integrate parts into a unified whole (e.g., combining wave and particle theories of light to propose a new theory).&lt;/li>
+&lt;li>&lt;strong>Use cases&lt;/strong>: Deconstructing complex problems, system design.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Causal Reasoning&lt;/strong>&lt;/p></description></item><item><title>Turning off the discrete GPU to save power</title><link>https://blog.jqknono.com/blog/2024/11/18/turning-off-the-discrete-gpu-to-save-power/</link><pubDate>Mon, 18 Nov 2024 10:22:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/18/turning-off-the-discrete-gpu-to-save-power/</guid><description>&lt;p>This post is for friends who rarely shut down their desktop and often remote into it to work.&lt;/p>
+&lt;p>My daily workstation and gaming rig are the same machine, with a 4K 144 Hz monitor. I normally leave the discrete GPU on just to make everyday interactions smoother, but power draw is noticeably higher.&lt;/p>
+&lt;p>&lt;em>The wattage in the screenshots below also covers an always-on J4125 mini-host that idles around 18 W, so take the numbers with a grain of salt.&lt;/em>&lt;/p></description></item><item><title>Let's Encrypt Certificate Issuance Limits</title><link>https://blog.jqknono.com/blog/2024/06/28/lets-encrypt-certificate-issuance-limits/</link><pubDate>Fri, 28 Jun 2024 16:12:01 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/lets-encrypt-certificate-issuance-limits/</guid><description>&lt;h2 id="tldr">TL;DR&lt;/h2>
+&lt;ul>
+&lt;li>At most 50 certificates per registered domain per week&lt;/li>
+&lt;li>At most 300 new-order requests per account per 3 hours&lt;/li>
+&lt;li>At most 100 domains per certificate&lt;/li>
+&lt;li>At most 5 duplicate certificates per week&lt;/li>
+&lt;li>&lt;strong>Renewal certificates are exempt from these limits&lt;/strong>&lt;/li>
+&lt;li>At most 10 accounts created per IP address per 3 hours&lt;/li>
+&lt;li>At most 500 accounts created per IPv6 /48 per 3 hours&lt;/li>
+&lt;/ul>
+&lt;p>If you need certificates for many sub-domains, combine “50 certificates per registered domain per week” with “100 domains per certificate” to issue up to 5,000 sub-domains per week.&lt;/p></description></item></channel></rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>裝置 on Nono Blogs</title><link>https://blog.jqknono.com/zh-tw/tags/%E8%A3%9D%E7%BD%AE/</link><description>Recent content in 裝置 on Nono Blogs</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Thu, 05 Dec 2024 12:09:08 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/tags/%E8%A3%9D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml"/><item><title>裝置</title><link>https://blog.jqknono.com/zh-tw/docs/private-service/devices/index/</link><pubDate>Thu, 05 Dec 2024 12:09:08 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/docs/private-service/devices/index/</guid><description>&lt;p>這裡討論可以使用哪些裝置承載家用服務.&lt;/p>
+&lt;h2 id="硬體平台">硬體平台&lt;/h2>
+&lt;p>家庭用裝置有很多選擇, 可以找一台退役的筆記型電腦, 或者閒置的桌上型電腦, 或者在電商搜開發板, NAS, 軟路由, Mac 等, 這些都可以承載服務.&lt;/p>
+&lt;p>硬體的選擇上, 不用太拘泥於&lt;strong>x86&lt;/strong>平台, &lt;strong>ARM&lt;/strong>平台已經成熟, 價格便宜, 效能足夠, 能耗低, 且生態豐富, 適合家庭使用, 如果沒有必須運行遠古軟體的需求, &lt;strong>ARM&lt;/strong>平台是不錯的選擇.&lt;/p>
+&lt;p>蘋果裝置上裝 Windows/Linux, 或者非蘋果裝置安裝黑蘋果系統, 黑群暉系統等, 都需要花一些時間去研究, 適合有一定技術基礎, 愛折騰的使用者. 但老實講, 沒必要.&lt;/p>
+&lt;h3 id="裝置選擇參考指標">裝置選擇參考指標&lt;/h3>
+&lt;ul>
+&lt;li>CPU: 考慮功耗/效能比&lt;/li>
+&lt;li>記憶體: 至少 4GB 起跳&lt;/li>
+&lt;li>儲存: 考慮冗餘和擴充性&lt;/li>
+&lt;li>網路: 千兆網卡基本需求&lt;/li>
+&lt;li>散熱: 24/7 執行需要可靠散熱&lt;/li>
+&lt;li>噪音: 放置位置決定噪音要求&lt;/li>
+&lt;/ul>
+&lt;h2 id="作業系統">作業系統&lt;/h2>
+&lt;p>生態最好, 工具軟體最多的是&lt;strong>Linux&lt;/strong>, 命令列對一些使用者來說是更簡單的操作方式, Linux 上很方便實現自動化, 適合有一定操作基礎的使用者.
+Linux 下可以選擇的系統有很多, 非專業使用者可以考慮 Ubuntu 桌面版. 還可以選擇黑群暉系統, 但遇到問題需要自己尋找解決辦法.&lt;/p>
+&lt;p>Windows 系統有最廣泛的使用人群, 絕大多數人的需求在 Windows 上的 IIS(Internet Information Services)中就可以滿足, 只需要動動滑鼠就可以實現足夠多的功能.&lt;br>
+Windows 的安裝參考&lt;a href="https://massgrave.dev">massgrave.dev&lt;/a>.&lt;/p></description></item></channel></rss>

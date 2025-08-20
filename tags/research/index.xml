@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Research on Nono Blogs</title><link>https://blog.jqknono.com/tags/research/</link><description>Recent content in Research on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 10 Jul 2025 15:51:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/research/index.xml" rel="self" type="application/rss+xml"/><item><title>Which Languages Are Best for Multilingual Projects</title><link>https://blog.jqknono.com/blog/2025/07/10/which-languages-are-best-for-multilingual-projects/</link><pubDate>Thu, 10 Jul 2025 15:51:13 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/07/10/which-languages-are-best-for-multilingual-projects/</guid><description>&lt;p>Below are 15 countries/regions—selected based on population size, economic output, and international influence—together with their language codes (shortcodes) and brief rationales, intended as a reference for multilingual translation:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Country / Region&lt;/th>
+ &lt;th>Shortcode&lt;/th>
+ &lt;th>Brief Rationale&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>United States&lt;/td>
+ &lt;td>en-US&lt;/td>
+ &lt;td>English is the global lingua franca; the U.S. has the world’s largest GDP (population: 333 million) and is a core market for international business and technology.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>China&lt;/td>
+ &lt;td>zh-CN&lt;/td>
+ &lt;td>Most populous country (1.41 billion); 2nd-largest GDP; Chinese is a UN official language; Chinese market consumption potential is enormous.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Japan&lt;/td>
+ &lt;td>ja-JP&lt;/td>
+ &lt;td>Japanese is the official language of the world’s 5th-largest economy; leading in technology and manufacturing; population: 125 million with strong purchasing power.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Germany&lt;/td>
+ &lt;td>de-DE&lt;/td>
+ &lt;td>Core of the Eurozone economy; largest GDP in Europe; German wields significant influence within the EU; population: 83.2 million with a robust industrial base.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>France&lt;/td>
+ &lt;td>fr-FR&lt;/td>
+ &lt;td>French is a UN official language; France has the 7th-largest GDP globally; population: 67.81 million; widely used in Africa and international organizations.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>India&lt;/td>
+ &lt;td>hi-IN&lt;/td>
+ &lt;td>Hindi is one of India’s official languages; India’s population (1.4 billion) is the world’s 2nd-largest; 6th-largest GDP and among the fastest-growing major economies.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Spain&lt;/td>
+ &lt;td>es-ES&lt;/td>
+ &lt;td>Spanish has the 2nd-largest number of native speakers worldwide (548 million); Spain’s GDP is 4th in Europe, and Spanish is common throughout Latin America.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Brazil&lt;/td>
+ &lt;td>pt-BR&lt;/td>
+ &lt;td>Portuguese is the native language of Brazil (population: 214 million); Brazil is South America’s largest economy with the 9th-largest GDP globally.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>South Korea&lt;/td>
+ &lt;td>ko-KR&lt;/td>
+ &lt;td>Korean corresponds to South Korea (population: 51.74 million); 10th-largest GDP globally; powerful in technology and cultural industries such as K-pop.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Russia&lt;/td>
+ &lt;td>ru-RU&lt;/td>
+ &lt;td>Russian is a UN official language; population: 146 million; GDP ranks 11th globally; widely spoken in Central Asia and Eastern Europe.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Italy&lt;/td>
+ &lt;td>it-IT&lt;/td>
+ &lt;td>Italy’s GDP is 3rd in Europe; population: 59.06 million; strong in tourism and luxury goods; Italian is an important EU language.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Indonesia&lt;/td>
+ &lt;td>id-ID&lt;/td>
+ &lt;td>Indonesian is the official language of the world’s largest archipelagic nation (population: 276 million) and the largest GDP in Southeast Asia, presenting a high market potential.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Turkey&lt;/td>
+ &lt;td>tr-TR&lt;/td>
+ &lt;td>Turkish is spoken by 85 million people; Turkey’s strategic position bridging Europe and Asia; GDP ranks 19th globally and exerts cultural influence in the Middle East and Central Asia.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Netherlands&lt;/td>
+ &lt;td>nl-NL&lt;/td>
+ &lt;td>Dutch is spoken in the Netherlands (population: 17.5 million); GDP ranks 17th globally; leading in trade and shipping; although English penetration is high, the local market still requires the native language.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>United Arab Emirates&lt;/td>
+ &lt;td>ar-AE&lt;/td>
+ &lt;td>Arabic is central to the Middle East; the UAE is a Gulf economic hub (population: 9.5 million, 88 % expatriates) with well-developed oil and finance sectors, radiating influence across the Arab world.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Notes:
+Language codes follow the ISO 639-1 (language) + ISO 3166-1 (country) standards, facilitating adaptation to localization tools.&lt;br>
+Priority has been given to countries with populations over 100 million, GDPs in the world’s top 20, and those with notable regional influence, balancing international applicability and market value.&lt;br>
+For particular domains (e.g., the Latin American market can add es-MX (Mexico), Southeast Asia can add vi-VN (Vietnam)), the list can be further refined as needed.&lt;/p></description></item><item><title>Why Has GitHub Copilot Become Dumber?</title><link>https://blog.jqknono.com/blog/2025/05/28/why-has-github-copilot-become-dumber/</link><pubDate>Wed, 28 May 2025 19:01:45 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/05/28/why-has-github-copilot-become-dumber/</guid><description>&lt;style>
+.column-container {
+ display: flex;
+ gap: 2rem;
+ margin: 2rem 0;
+}
+
+.column {
+ flex: 1;
+ padding: 1rem;
+ background-color: #f8f9fa;
+ border-radius: 8px;
+ overflow-y: auto;
+ max-height: 80vh;
+}
+
+.column h2 {
+ color: #1a73e8;
+ border-bottom: 2px solid #e0e0e0;
+ padding-bottom: 0.5rem;
+ margin-top: 0;
+}
+&lt;/style>
+&lt;div class="column-container">
+ &lt;div class="column">
+ &lt;!-- Start of Article One -->
+ &lt;h2>Article Title One&lt;/h2>
+ &lt;p>Paste the full content of the first article here...&lt;/p>
+ &lt;!-- End of Article One -->
+ &lt;/div>
+ &lt;div class="column">
+ &lt;!-- Start of Article Two -->
+ &lt;h2>Article Title Two&lt;/h2>
+ &lt;p>Paste the full content of the second article here...&lt;/p></description></item><item><title>Survey</title><link>https://blog.jqknono.com/blog/research/</link><pubDate>Fri, 28 Jun 2024 18:59:24 +0800</pubDate><guid>https://blog.jqknono.com/blog/research/</guid><description/></item><item><title>Amazon Store Community Guidelines</title><link>https://blog.jqknono.com/blog/2023/11/13/amazon-store-community-guidelines/</link><pubDate>Mon, 13 Nov 2023 14:15:31 +0800</pubDate><guid>https://blog.jqknono.com/blog/2023/11/13/amazon-store-community-guidelines/</guid><description>&lt;h1 id="amazon-store-community-guidelines">Amazon Store Community Guidelines&lt;/h1>
+&lt;article role="article" class="help-content" id="GUID-E6787856-0944-40BE-9C1E-CA924C4ED52D" aria-labelledby="GUID-E6787856-0944-40BE-9C1E-CA924C4ED52D__GUID-2C1DF364-8FA3-4387-BCDB-2A63B7C51B64" style="box-sizing: border-box; display: block;">
+&lt;h2 id="community-guidelines">Community Guidelines&lt;/h2>
+&lt;p>The purpose of Community Guidelines is to keep the Amazon community informative, relevant, meaningful, and appropriate.&lt;/p>
+&lt;section class="a-section" id="GUID-E6787856-0944-40BE-9C1E-CA924C4ED52D__SECTION_2824A0EEA8F64F6EB32684F72FC6E47B" style="box-sizing: border-box; display: block; margin-bottom: 22px;">
+&lt;h2 id="what-is-the-amazon-community">What is the Amazon Community?&lt;/h2>
+&lt;p>The community is a place to share your thoughts and experiences—both positive and negative—with other users. The following guidelines explain what is and is not allowed in the community.&lt;/p>
+&lt;p>By using community features, you agree to our &lt;a href="https://www.amazon.cn/gp/help/customer/display.html?ref_=hp_left_v4_sib&amp;amp;nodeId=G201909000">Conditions of Use&lt;/a> and commit to following the Community Guidelines as they may be revised from time to time. Community features include:&lt;/p></description></item><item><title>How Many Principles of Design Patterns Are There?</title><link>https://blog.jqknono.com/blog/2024/05/16/how-many-principles-of-design-patterns-are-there/</link><pubDate>Thu, 16 May 2024 13:03:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/16/how-many-principles-of-design-patterns-are-there/</guid><description>&lt;p>最早总结的设计模式只有 5 个, 即&lt;code>SOLID&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>单一职责原则 (Single Responsibility Principle, SRP)&lt;/code>：a class should have only one reason to change—i.e., only one responsibility.&lt;/li>
+&lt;li>&lt;code>开闭原则 (Open/Closed Principle, OCP)&lt;/code>：software entities (classes, modules, functions, etc.) should be open for extension but closed for modification; in other words, change should be achieved by extension rather than by modifying existing code.&lt;/li>
+&lt;li>&lt;code>里氏替换原则 (Liskov Substitution Principle, LSP)&lt;/code>：subtypes must be substitutable for their base types—i.e., derived classes must be able to replace their base classes without affecting program correctness.&lt;/li>
+&lt;li>&lt;code>接口隔离原则 (Interface Segregation Principle, ISP)&lt;/code>：clients should not be forced to depend on interfaces they do not use. Large interfaces should be split into smaller, more specific ones so clients only need to know the methods they actually use.&lt;/li>
+&lt;li>&lt;code>依赖倒置原则 (Dependency Inversion Principle, DIP)&lt;/code>：high-level modules should not depend on low-level modules; both should depend on abstractions. Abstractions should not depend on details; details should depend on abstractions.&lt;/li>
+&lt;/ul>
+&lt;p>后来增加了两个规则, 这些后加的规则相较来说更具体, 更有指导性. 我们从原则解释中可以看到&lt;code>SOLID&lt;/code>描述&lt;code>应该怎么做&lt;/code>, 后加的规则描述&lt;code>优先/最好怎么做&lt;/code>.&lt;/p></description></item></channel></rss>

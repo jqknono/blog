@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Troubleshooting on Nono Blogs</title><link>https://blog.jqknono.com/categories/troubleshooting/</link><description>Recent content in Troubleshooting on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 07 May 2024 11:48:37 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/categories/troubleshooting/index.xml" rel="self" type="application/rss+xml"/><item><title>A Fix for Windows Edge Browser Stuttering</title><link>https://blog.jqknono.com/blog/2024/05/07/a-fix-for-windows-edge-browser-stuttering/</link><pubDate>Tue, 07 May 2024 11:48:37 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/07/a-fix-for-windows-edge-browser-stuttering/</guid><description>&lt;h2 id="browser-version">Browser Version&lt;/h2>
+&lt;p>&lt;code>122.0.2365.80+&lt;/code>&lt;/p>
+&lt;h2 id="stuttering-symptoms">Stuttering Symptoms&lt;/h2>
+&lt;ul>
+&lt;li>Stuttering when opening a personal profile&lt;/li>
+&lt;li>Stuttering when accessing and searching stored passwords&lt;/li>
+&lt;li>Stuttering when creating or closing tabs&lt;/li>
+&lt;li>Stuttering when typing in a newly created tab&lt;/li>
+&lt;/ul>
+&lt;p>At present, this kind of stuttering has only been observed on Chinese-language Windows systems.&lt;/p>
+&lt;h2 id="solution">Solution&lt;/h2>
+&lt;p>Chinese UI path: &lt;code>隐私-搜索-服务 -&amp;gt; 地址栏和搜索 -&amp;gt; 搜索建议和筛选器 -&amp;gt; 搜索筛选器&lt;/code>, &lt;strong>turn off&lt;/strong> Search filters.&lt;/p>
+&lt;p>English UI path: &lt;code>Privacy search and services -&amp;gt; Address bar and search -&amp;gt; Search suggestions and filters -&amp;gt; Search filters&lt;/code>, &lt;strong>TURN OFF&lt;/strong> Search filters.&lt;/p></description></item></channel></rss>
