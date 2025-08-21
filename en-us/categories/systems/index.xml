@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Systems on Nono Blogs</title><link>https://blog.jqknono.com/en-us/categories/systems/</link><description>Recent content in Systems on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 28 Jun 2024 17:10:36 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/categories/systems/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows Firewall Management – netsh</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/windows-firewall-management-netsh/</link><pubDate>Fri, 28 Jun 2024 17:10:36 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/windows-firewall-management-netsh/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Windows Firewall Management – netsh&lt;/li>
+&lt;/ul>
+&lt;h1 id="windows-firewall-management--netsh">Windows Firewall Management – netsh&lt;/h1>
+&lt;h2 id="management-tools">Management Tools&lt;/h2>
+&lt;h2 id="netsh-advfirewall">netsh advfirewall&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Export firewall rules&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">advfirewall&lt;/span> &lt;span class="n">export&lt;/span> &lt;span class="n">advfirewallpolicy&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">wfw&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Import firewall rules&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">advfirewall&lt;/span> &lt;span class="n">import&lt;/span> &lt;span class="n">advfirewallpolicy&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">wfw&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># View firewall state&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">advfirewall&lt;/span> &lt;span class="n">show&lt;/span> &lt;span class="n">allprofiles&lt;/span> &lt;span class="n">state&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># View firewall default policy&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">advfirewall&lt;/span> &lt;span class="n">show&lt;/span> &lt;span class="n">allprofiles&lt;/span> &lt;span class="n">firewallpolicy&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># netsh advfirewall set allprofiles firewallpolicy blockinbound,allowoutbound&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># netsh advfirewall set allprofiles firewallpolicy blockinbound,blockoutbound&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># View firewall settings&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">advfirewall&lt;/span> &lt;span class="n">show&lt;/span> &lt;span class="n">allprofiles&lt;/span> &lt;span class="n">settings&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Enable firewall&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">advfirewall&lt;/span> &lt;span class="nb">set &lt;/span>&lt;span class="n">allprofiles&lt;/span> &lt;span class="n">state&lt;/span> &lt;span class="n">on&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Disable firewall&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">advfirewall&lt;/span> &lt;span class="nb">set &lt;/span>&lt;span class="n">allprofiles&lt;/span> &lt;span class="n">state&lt;/span> &lt;span class="n">off&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Display firewall rules&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">advfirewall&lt;/span> &lt;span class="n">firewall&lt;/span> &lt;span class="n">show&lt;/span> &lt;span class="n">rule&lt;/span> &lt;span class="n">name&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="n">all&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># View firewall status&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">advfirewall&lt;/span> &lt;span class="n">monitor&lt;/span> &lt;span class="n">show&lt;/span> &lt;span class="n">firewall&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="netsh-firewall-deprecated">netsh firewall (deprecated)&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Display firewall state&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">firewall&lt;/span> &lt;span class="n">show&lt;/span> &lt;span class="n">state&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="netsh-mbn-mobile-broadband-network">netsh mbn (Mobile Broadband network)&lt;/h2>
+&lt;h2 id="netsh-wfp">netsh wfp&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Display firewall state&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">wfp&lt;/span> &lt;span class="n">show&lt;/span> &lt;span class="n">state&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Display firewall filters&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">netsh&lt;/span> &lt;span class="n">wfp&lt;/span> &lt;span class="n">show&lt;/span> &lt;span class="kd">filter&lt;/span>&lt;span class="nb">s&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

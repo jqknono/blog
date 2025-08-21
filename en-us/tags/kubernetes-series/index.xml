@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kubernetes Series on Nono Blogs</title><link>https://blog.jqknono.com/en-us/tags/kubernetes-series/</link><description>Recent content in Kubernetes Series on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 05 Jun 2024 17:17:37 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/tags/kubernetes-series/index.xml" rel="self" type="application/rss+xml"/><item><title>Volume Classification and Methodology</title><link>https://blog.jqknono.com/en-us/blog/2024/06/05/volume-classification-and-methodology/</link><pubDate>Wed, 05 Jun 2024 17:17:37 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/05/volume-classification-and-methodology/</guid><description>&lt;ul>
+&lt;li>&lt;a href="https://kubernetes.io/docs/concepts/storage/volumes/">Volumes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">Persistent Volumes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubernetes.io/docs/concepts/storage/projected-volumes/">Projected Volumes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/">Ephemeral Volumes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubernetes.io/docs/concepts/storage/storage-classes/">Storage Classes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/">Dynamic Provisioning&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubernetes.io/docs/concepts/storage/volume-snapshots/">Volume Snapshots&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubernetes.io/docs/concepts/storage/volume-snapshot-classes/">Volume Snapshot Classes&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://kubernetes.io/docs/concepts/storage/volume-pvc-datasource/">Volume Cloning&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

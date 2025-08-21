@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>System on Nono Blogs</title><link>https://blog.jqknono.com/en-us/categories/system/</link><description>Recent content in System on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 31 Dec 2024 16:07:11 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/categories/system/index.xml" rel="self" type="application/rss+xml"/><item><title>Releasing Reserved Memory on a VPS</title><link>https://blog.jqknono.com/en-us/blog/2024/12/31/releasing-reserved-memory-on-a-vps/</link><pubDate>Tue, 31 Dec 2024 16:07:11 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/12/31/releasing-reserved-memory-on-a-vps/</guid><description>&lt;p>By default, the Linux kernel reserves a block of memory for &lt;code>kdump&lt;/code>, and its size is controlled by the &lt;code>crashkernel&lt;/code> parameter. Most application developers rarely trigger kernel panics, so you can recover this memory by editing &lt;code>/etc/default/grub&lt;/code>.&lt;/p>
+&lt;p>If you do &lt;strong>not&lt;/strong> need &lt;code>kdump&lt;/code>, set the &lt;code>crashkernel&lt;/code> parameter to&lt;br>
+&lt;code>0M-1G:0M,1G-4G:0M,4G-128G:0M,128G-:512M&lt;/code>; this releases the reserved memory.&lt;/p>
+&lt;p>&lt;strong>Check current value&lt;/strong>: &lt;code>cat /etc/default/grub&lt;/code>&lt;/p>
+&lt;p>Typical default:&lt;/p>
+&lt;blockquote>
+&lt;p>GRUB_CMDLINE_LINUX=&amp;quot; vga=792 console=tty0 console=ttyS0,115200n8 net.ifnames=0 noibrs nvme_core.io_timeout=4294967295 nvme_core.admin_timeout=4294967295 iommu=pt crashkernel=0M-1G:0M,1G-4G:192M,4G-128G:384M,128G-:512M crash_kexec_post_notifiers=1&amp;quot;&lt;/p></description></item><item><title>Understanding Windows Networking_WFP</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/understanding-windows-networking_wfp/</link><pubDate>Fri, 28 Jun 2024 17:16:15 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/understanding-windows-networking_wfp/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Understanding Windows Networking_WFP&lt;/li>
+&lt;/ul>
+&lt;h1 id="understanding-windows-networking">Understanding Windows Networking&lt;/h1>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Understanding Windows Networking&lt;/li>
+&lt;/ul>
+&lt;h2 id="wfp">WFP&lt;/h2>
+&lt;h3 id="terminology">Terminology&lt;/h3>
+&lt;p>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/fwp/object-model">https://learn.microsoft.com/en-us/windows/win32/fwp/object-model&lt;/a>&lt;br>
+&lt;a href="https://learn.microsoft.com/en-us/windows/win32/fwp/basic-operation">https://learn.microsoft.com/en-us/windows/win32/fwp/basic-operation&lt;/a>&lt;br>
+&lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network">https://learn.microsoft.com/en-us/windows-hardware/drivers/network&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/callout">callout&lt;/a>: A callout provides functionality that extends the capabilities of the Windows Filtering Platform. A callout consists of a set of callout functions and a GUID key that uniquely identifies the callout.&lt;br>
+&lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/callout-driver">callout driver&lt;/a>: A callout driver is a driver that registers callouts with the Windows Filtering Platform. A callout driver is a type of filter driver.&lt;br>
+&lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/callout-function">callout function&lt;/a>: A callout function is a function that is called by the Windows Filtering Platform to perform a specific task. A callout function is associated with a callout.&lt;br>
+&lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/filter">filter&lt;/a>: A filter is a set of functions that are called by the Windows Filtering Platform to perform filtering operations. A filter consists of a set of filter functions and a GUID key that uniquely identifies the filter.&lt;br>
+&lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/filter-engine">filter engine&lt;/a>: The filter engine is the component of the Windows Filtering Platform that performs filtering operations. The filter engine is responsible for calling the filter functions that are registered with the Windows Filtering Platform.&lt;br>
+&lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/network/filter-layer">filter layer&lt;/a>: A filter layer is a set of functions that are called by the Windows Filtering Platform to perform filtering operations. A filter layer consists of a set of filter layer functions and a GUID key that uniquely identifies the filter layer.&lt;/p></description></item><item><title>Understanding Windows Event Tracing (ETW)</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/understanding-windows-event-tracing-etw/</link><pubDate>Fri, 28 Jun 2024 17:12:21 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/understanding-windows-event-tracing-etw/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Understanding Windows Event Tracing (ETW)&lt;/li>
+&lt;/ul>
+&lt;h1 id="understanding-etw">Understanding ETW&lt;/h1>
+&lt;p>Some unnecessary information has been filtered out; see the complete documentation at: &lt;a href="https://docs.microsoft.com/en-us/windows/win32/etw/event-tracing-portal">https://docs.microsoft.com/en-us/windows/win32/etw/event-tracing-portal&lt;/a>&lt;/p>
+&lt;h2 id="understanding-the-basics">Understanding the Basics&lt;/h2>
+&lt;p>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/etw/about-event-tracing">https://learn.microsoft.com/en-us/windows/win32/etw/about-event-tracing&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://learn.microsoft.com/en-us/windows/win32/etw/images/etdiag2.png" alt="Architecture">&lt;/p>
+&lt;h2 id="session">Session&lt;/h2>
+&lt;p>There are four kinds of sessions:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Session Type&lt;/th>
+ &lt;th>Usage&lt;/th>
+ &lt;th>Limitations&lt;/th>
+ &lt;th>Characteristics&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/etw/configuring-and-starting-an-event-tracing-session">Event Tracing Session&lt;/a>(Standard ETW)&lt;/td>
+ &lt;td>1. &lt;a href="https://learn.microsoft.com/en-us/windows/win32/api/evntrace/ns-evntrace-event_trace_properties">EVENT_TRACE_PROPERTIES&lt;/a>&lt;br>2. &lt;a href="https://learn.microsoft.com/en-us/windows/win32/api/evntrace/nf-evntrace-starttracea">StartTrace&lt;/a>: create a session&lt;br>3. EnableTrace&lt;br> 1. &lt;a href="https://learn.microsoft.com/en-us/windows/win32/api/evntrace/nf-evntrace-enabletrace">EnableTrace&lt;/a> for classic providers&lt;br> 2. &lt;a href="https://learn.microsoft.com/en-us/windows/win32/api/evntrace/nf-evntrace-enabletraceex">EnableTraceEx&lt;/a> for manifest-based providers&lt;br>4. &lt;a href="https://learn.microsoft.com/en-us/windows/win32/api/evntrace/nf-evntrace-controltracea">ControlTrace&lt;/a> stop the session&lt;/td>
+ &lt;td>- A manifest-based provider can deliver events to at most 8 sessions.&lt;br>- A classic provider can only serve one session.&lt;br>- The last session to enable a provider supersedes any earlier sessions.&lt;/td>
+ &lt;td>Standard ETW.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/etw/configuring-and-starting-a-systemtraceprovider-session">SystemTraceProvider Session&lt;/a>&lt;/td>
+ &lt;td>1. &lt;a href="https://learn.microsoft.com/en-us/windows/win32/api/evntrace/ns-evntrace-event_trace_properties">EVENT_TRACE_PROPERTIES&lt;/a> → &lt;strong>EnableFlags&lt;/strong>&lt;br>2. &lt;a href="https://learn.microsoft.com/en-us/windows/win32/api/evntrace/nf-evntrace-starttracea">StartTrace&lt;/a>&lt;br>3. &lt;a href="https://learn.microsoft.com/en-us/windows/win32/api/evntrace/nf-evntrace-controltracea">ControlTrace&lt;/a> to stop the session&lt;/td>
+ &lt;td>- &lt;strong>SystemTraceProvider&lt;/strong> is a kernel-mode provider that supplies a set of &lt;a href="https://learn.microsoft.com/en-us/windows/win32/etw/nt-kernel-logger-constants">predefined kernel events&lt;/a>.&lt;br>- The &lt;strong>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/etw/configuring-and-starting-the-nt-kernel-logger-session">NT Kernel Logger session&lt;/a>&lt;/strong> is a predefined system session that records a specified set of kernel events.&lt;br>- &lt;strong>Windows 7/Windows Server 2008 R2&lt;/strong> only the NT Kernel Logger session may use SystemTraceProvider.&lt;br>- &lt;strong>Windows 8/Windows Server 2012&lt;/strong> SystemTraceProvider can feed &lt;strong>8 logger sessions&lt;/strong>, two of which are reserved for NT Kernel Logger and Circular Kernel Context Logger.&lt;br>- &lt;strong>Windows 10 20348 and later&lt;/strong>, individual System providers can be controlled separately.&lt;/td>
+ &lt;td>Obtain kernel predefined events.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/etw/configuring-and-starting-an-autologger-session">AutoLogger Session&lt;/a>&lt;/td>
+ &lt;td>1. Edit the registry&lt;br>2. &lt;a href="https://learn.microsoft.com/en-us/windows/win32/api/evntrace/nf-evntrace-enabletraceex">EnableTraceEx&lt;/a>&lt;br>3. &lt;a href="https://learn.microsoft.com/en-us/windows/win32/api/evntrace/nf-evntrace-controltracea">ControlTrace&lt;/a> to stop the session&lt;/td>
+ &lt;td>- The &lt;strong>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/etw/configuring-and-starting-the-global-logger-session">Global Logger Session&lt;/a>&lt;/strong> is a special, standalone session that records events during system boot.&lt;br>- Ordinary AutoLogger sessions must explicitly enable providers; Global Logger does not.&lt;br>- AutoLogger does not support NT Kernel Logger events; only Global Logger does.&lt;br>- Impacts boot time—use sparingly.&lt;/td>
+ &lt;td>Record OS boot-time events.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/etw/configuring-and-starting-a-private-logger-session">Private Logger Session&lt;/a>&lt;/td>
+ &lt;td>—&lt;/td>
+ &lt;td>- User-mode ETW&lt;br>- Used only within a process&lt;br>- Not counted toward the 64-session concurrency limit.&lt;/td>
+ &lt;td>Per-process only.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="tools">Tools&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/logman">logman&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil">wevtutil&lt;/a>
+&lt;ul>
+&lt;li>XPath query example: &lt;code>wevtutil qe Security /c:2 /q:&amp;quot;*[System[EventID=5157]]&amp;quot; /f:text&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/tracelog">tracelog&lt;/a>
+&lt;ul>
+&lt;li>To use the Visual Studio &lt;code>tracelog&lt;/code> tool, you can dynamically add and remove ETW Providers and ETW Sessions at runtime.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows/win32/wes/message-compiler--mc-exe-">mc&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/repnz/etw-providers-docs">etw-providers-docs&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Windows Blocking Network Traffic Capture</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/</link><pubDate>Fri, 28 Jun 2024 17:10:46 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Windows Blocking Network Traffic Capture&lt;/li>
+&lt;/ul>
+&lt;h1 id="windows-blocking-network-traffic-capture">Windows Blocking Network Traffic Capture&lt;/h1>
+&lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+&lt;!-- code_chunk_output -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-windows-blocking-network-traffic-capture-">Windows Blocking Network Traffic Capture&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-setting-up-a-test-project-">Setting Up a Test Project&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-capturing-block-events-via-auditing-">Capturing Block Events via Auditing&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-obtaining-provider-information-">Obtaining Provider Information&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-triggering-a-block-event-">Triggering a Block Event&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-monitoring-network-eventsnet_event-">Monitoring Network Events (NET_EVENT)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-monitoring-network-connectionsnetconnection-">Monitoring Network Connections (NetConnection)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-application-layer-enforcementale-introduction-">Application Layer Enforcement (ALE) Introduction&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-coding-">Coding&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-conclusion-">Conclusion&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-appendix-">Appendix&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-wfp-architecture-">WFP Architecture&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-data-flow-">Data Flow&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-blocking-network-traffic-capture/#-reference-links-">Reference Links&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;!-- /code_chunk_output -->
+&lt;ul>
+&lt;li>Need to identify blocked traffic, including outbound and inbound.&lt;/li>
+&lt;li>Two ways of blocking: by connection or by packet. Packet drops occur frequently and the reason must be audited; connection‐oriented blocks align better with real-world monitoring.&lt;/li>
+&lt;li>Many normally processed packets may also be dropped, so we must distinguish drops from actual blocks—we focus on blocks.&lt;/li>
+&lt;/ul>
+&lt;h2 id="setting-up-a-test-project">Setting Up a Test Project&lt;/h2>
+&lt;p>WFP mainly runs in user mode and partly in kernel mode, exposed as drivers. The test setup is complex.&lt;br>
+Recommended: run a separate physical machine for testing, compile on the dev box, then copy and remotely debug on the test machine.&lt;br>
+For those with limited resources, local debugging on the same machine is also possible.&lt;/p></description></item><item><title>Windows Resources</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/</link><pubDate>Fri, 28 Jun 2024 17:10:07 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Windows Resources&lt;/li>
+&lt;/ul>
+&lt;h1 id="windows-resources-collection">Windows Resources Collection&lt;/h1>
+&lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+&lt;!-- code_chunk_output -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#windows-resources-collection">Windows Resources Collection&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#tools">Tools&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#monitoring--analysis">Monitoring &amp;amp; Analysis&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#antirootkit-tools">AntiRootkit Tools&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#pe-tools">PE Tools&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#reverse--debug">Reverse &amp;amp; Debug&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#injection-tools">Injection Tools&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#network">Network&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#stress-testing-tools">Stress Testing Tools&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#others">Others&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#code">Code&lt;/a>
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#operating-system">Operating System&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#kernel-examples">Kernel Examples&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#vt-technology">VT Technology&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#miscellaneous">Miscellaneous&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#ctf-resources">CTF Resources&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#penetration-testing">Penetration Testing&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/windows-resources/#free-patent-search">Free Patent Search&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;!-- /code_chunk_output -->
+&lt;p>This section lists only some common Windows tools for debugging, troubleshooting, and testing. Tools for packing/unpacking, encryption/decryption, file editors, and programming tools are omitted for brevity.&lt;/p></description></item><item><title>Windows Guide</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/windows-guide/</link><pubDate>Fri, 28 Jun 2024 17:09:22 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/windows-guide/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Windows Guide&lt;/li>
+&lt;/ul>
+&lt;h1 id="windows">Windows&lt;/h1>
+&lt;ul>
+&lt;li>[&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/" title="Win-to-go">Win-to-go&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="%E7%90%86%E8%A7%A3Windows%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F" title="Understanding Windows File System">Understanding Windows File System&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="%E7%90%86%E8%A7%A3Windows%E8%BF%9B%E7%A8%8B" title="Understanding Windows Processes">Understanding Windows Processes&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="Windows%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90" title="Windows Related Resources">Windows Related Resources&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="Windows%E7%AE%A1%E7%90%86%E8%BF%9B%E9%98%B6" title="Advanced Windows Management">Advanced Windows Management&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="Windows%E9%98%B2%E7%81%AB%E5%A2%99%E7%AE%A1%E7%90%86-netsh" title="Windows Firewall Management - netsh">Windows Firewall Management - netsh&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="Windows%E9%98%BB%E6%96%AD%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E8%8E%B7%E5%8F%96" title="Blocking Windows Network Traffic Acquisition">Blocking Windows Network Traffic Acquisition&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="../../../%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/Windows%E9%BA%BB%E7%83%A6%E9%97%AE%E9%A2%98" title="Windows Troublesome Issues">Windows Troublesome Issues&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="%E7%90%86%E8%A7%A3Windows%E4%BA%8B%E4%BB%B6%E8%B7%9F%E8%B8%AA_ETW" title="Understanding Windows Event Tracing (ETW)">Understanding Windows Event Tracing (ETW)&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="%E7%90%86%E8%A7%A3Windows%E7%BD%91%E7%BB%9C_WFP" title="Understanding Windows Networking (WFP)">Understanding Windows Networking (WFP)&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="windows-ipv6%E7%AE%A1%E7%90%86" title="windows-ipv6-management">windows-ipv6-management&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="../../../%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/Windows%E6%A1%A5%E6%8E%A5%E6%97%B6%E7%9A%84IPv6%E9%97%AE%E9%A2%98" title="IPv6 Issues When Bridging Windows">IPv6 Issues When Bridging Windows&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="wireguard%E9%85%8D%E7%BD%AE" title="wireguard configuration">wireguard configuration&lt;/a>]&lt;/li>
+&lt;/ul></description></item></channel></rss>

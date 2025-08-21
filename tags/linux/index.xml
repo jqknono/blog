@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Nono Blogs</title><link>https://blog.jqknono.com/tags/linux/</link><description>Recent content in Linux on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 28 Jun 2024 18:51:39 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>linux</title><link>https://blog.jqknono.com/blog/programmer/os/linux/</link><pubDate>Fri, 28 Jun 2024 18:51:39 +0800</pubDate><guid>https://blog.jqknono.com/blog/programmer/os/linux/</guid><description>&lt;ul>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on Nono Blogs</title><link>https://blog.jqknono.com/tags/linux/</link><description>Recent content in Linux on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 18:51:39 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>linux</title><link>https://blog.jqknono.com/blog/programmer/os/linux/</link><pubDate>Fri, 28 Jun 2024 18:51:39 +0800</pubDate><guid>https://blog.jqknono.com/blog/programmer/os/linux/</guid><description>&lt;ul>
 &lt;li>&lt;input disabled="" type="checkbox"> _index&lt;/li>
-&lt;/ul></description></item><item><title>linux tour</title><link>https://blog.jqknono.com/blog/2024/06/28/linux-tour/</link><pubDate>Fri, 28 Jun 2024 18:51:21 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/linux-tour/</guid><description>&lt;ul>
+&lt;/ul></description></item><item><title>linux导览</title><link>https://blog.jqknono.com/blog/2024/06/28/linux%E5%AF%BC%E8%A7%88/</link><pubDate>Fri, 28 Jun 2024 18:51:21 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/linux%E5%AF%BC%E8%A7%88/</guid><description>&lt;ul>
 &lt;li>
-&lt;p>&lt;input disabled="" type="checkbox"> linux tour&lt;/p>
+&lt;p>&lt;input disabled="" type="checkbox"> linux导览&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>[&lt;a href="%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91" title="内核模块开发">内核模块开发&lt;/a>]&lt;/p>

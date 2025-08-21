@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chat on Nono Blogs</title><link>https://blog.jqknono.com/en-us/blog/programmer/misc/</link><description>Recent content in Chat on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 10 Jul 2025 15:51:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/blog/programmer/misc/index.xml" rel="self" type="application/rss+xml"/><item><title>Which Languages Are Best for Multilingual Projects</title><link>https://blog.jqknono.com/en-us/blog/2025/07/10/which-languages-are-best-for-multilingual-projects/</link><pubDate>Thu, 10 Jul 2025 15:51:13 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/07/10/which-languages-are-best-for-multilingual-projects/</guid><description>&lt;p>Below are 15 countries/regions—selected based on population size, economic output, and international influence—together with their language codes (shortcodes) and brief rationales, intended as a reference for multilingual translation:&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Country / Region&lt;/th>
+ &lt;th>Shortcode&lt;/th>
+ &lt;th>Brief Rationale&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>United States&lt;/td>
+ &lt;td>en-US&lt;/td>
+ &lt;td>English is the global lingua franca; the U.S. has the world’s largest GDP (population: 333 million) and is a core market for international business and technology.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>China&lt;/td>
+ &lt;td>zh-CN&lt;/td>
+ &lt;td>Most populous country (1.41 billion); 2nd-largest GDP; Chinese is a UN official language; Chinese market consumption potential is enormous.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Japan&lt;/td>
+ &lt;td>ja-JP&lt;/td>
+ &lt;td>Japanese is the official language of the world’s 5th-largest economy; leading in technology and manufacturing; population: 125 million with strong purchasing power.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Germany&lt;/td>
+ &lt;td>de-DE&lt;/td>
+ &lt;td>Core of the Eurozone economy; largest GDP in Europe; German wields significant influence within the EU; population: 83.2 million with a robust industrial base.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>France&lt;/td>
+ &lt;td>fr-FR&lt;/td>
+ &lt;td>French is a UN official language; France has the 7th-largest GDP globally; population: 67.81 million; widely used in Africa and international organizations.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>India&lt;/td>
+ &lt;td>hi-IN&lt;/td>
+ &lt;td>Hindi is one of India’s official languages; India’s population (1.4 billion) is the world’s 2nd-largest; 6th-largest GDP and among the fastest-growing major economies.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Spain&lt;/td>
+ &lt;td>es-ES&lt;/td>
+ &lt;td>Spanish has the 2nd-largest number of native speakers worldwide (548 million); Spain’s GDP is 4th in Europe, and Spanish is common throughout Latin America.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Brazil&lt;/td>
+ &lt;td>pt-BR&lt;/td>
+ &lt;td>Portuguese is the native language of Brazil (population: 214 million); Brazil is South America’s largest economy with the 9th-largest GDP globally.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>South Korea&lt;/td>
+ &lt;td>ko-KR&lt;/td>
+ &lt;td>Korean corresponds to South Korea (population: 51.74 million); 10th-largest GDP globally; powerful in technology and cultural industries such as K-pop.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Russia&lt;/td>
+ &lt;td>ru-RU&lt;/td>
+ &lt;td>Russian is a UN official language; population: 146 million; GDP ranks 11th globally; widely spoken in Central Asia and Eastern Europe.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Italy&lt;/td>
+ &lt;td>it-IT&lt;/td>
+ &lt;td>Italy’s GDP is 3rd in Europe; population: 59.06 million; strong in tourism and luxury goods; Italian is an important EU language.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Indonesia&lt;/td>
+ &lt;td>id-ID&lt;/td>
+ &lt;td>Indonesian is the official language of the world’s largest archipelagic nation (population: 276 million) and the largest GDP in Southeast Asia, presenting a high market potential.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Turkey&lt;/td>
+ &lt;td>tr-TR&lt;/td>
+ &lt;td>Turkish is spoken by 85 million people; Turkey’s strategic position bridging Europe and Asia; GDP ranks 19th globally and exerts cultural influence in the Middle East and Central Asia.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Netherlands&lt;/td>
+ &lt;td>nl-NL&lt;/td>
+ &lt;td>Dutch is spoken in the Netherlands (population: 17.5 million); GDP ranks 17th globally; leading in trade and shipping; although English penetration is high, the local market still requires the native language.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>United Arab Emirates&lt;/td>
+ &lt;td>ar-AE&lt;/td>
+ &lt;td>Arabic is central to the Middle East; the UAE is a Gulf economic hub (population: 9.5 million, 88 % expatriates) with well-developed oil and finance sectors, radiating influence across the Arab world.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Notes:
+Language codes follow the ISO 639-1 (language) + ISO 3166-1 (country) standards, facilitating adaptation to localization tools.&lt;br>
+Priority has been given to countries with populations over 100 million, GDPs in the world’s top 20, and those with notable regional influence, balancing international applicability and market value.&lt;br>
+For particular domains (e.g., the Latin American market can add es-MX (Mexico), Southeast Asia can add vi-VN (Vietnam)), the list can be further refined as needed.&lt;/p></description></item><item><title>Third-party Library Pitfalls</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/third-party-library-pitfalls/</link><pubDate>Fri, 28 Jun 2024 17:35:19 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/third-party-library-pitfalls/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Third-party library pitfalls&lt;/li>
+&lt;/ul>
+&lt;p>Today we talked about a vulnerability in a recently released third-party logging library that can be exploited with minimal effort to execute remote commands. A logging library and remote command execution seem completely unrelated, yet over-engineered third-party libraries are everywhere.&lt;/p>
+&lt;p>The more code I read, the more I feel that a lot of open-source code is of very poor quality—regardless of how many k-stars it has. Stars represent needs, not engineering skill.&lt;/p></description></item><item><title>Design Specification Template</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/design-specification-template/</link><pubDate>Fri, 28 Jun 2024 17:35:07 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/design-specification-template/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Design Specification Template&lt;/li>
+&lt;/ul>
+&lt;h1 id="detailed-design-of-xxx-system--sub-system">Detailed Design of XXX System / Sub-system&lt;/h1>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>System Name&lt;/th>
+ &lt;th>XXX System&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Author&lt;/td>
+ &lt;td>XXX&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Submission Date&lt;/td>
+ &lt;td>2021-06-30&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="revision-history">Revision History&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Revised Version&lt;/th>
+ &lt;th>Change Description&lt;/th>
+ &lt;th>Date of Change&lt;/th>
+ &lt;th>Author&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>v1.0&lt;/td>
+ &lt;td>XXXXXXX&lt;/td>
+ &lt;td>2021-06-30&lt;/td>
+ &lt;td>XXX&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;td>&amp;mdash;&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="technical-review-comments">Technical Review Comments&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>No.&lt;/th>
+ &lt;th>Reviewer&lt;/th>
+ &lt;th>Review Comment (Pass/Fail/Pending, comments allowed)&lt;/th>
+ &lt;th>Review Time&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>1&lt;/td>
+ &lt;td>XXX&lt;/td>
+ &lt;td>Pass&lt;/td>
+ &lt;td>2022.1.1&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="background">Background&lt;/h2>
+&lt;h2 id="glossary">Glossary&lt;/h2>
+&lt;!-- For any new or uncommon terms, concepts, or acronyms appearing in the document, provide definitions and explanations. -->
+&lt;ul>
+&lt;li>SIP: Session Initiation Protocol&lt;/li>
+&lt;li>RTP: Real-time Transport Protocol&lt;/li>
+&lt;/ul>
+&lt;h2 id="design-objectives">Design Objectives&lt;/h2>
+&lt;h3 id="functional-requirements">Functional Requirements&lt;/h3>
+&lt;!-- Summarize the functional requirements of the system itself, without describing external systems. If the project already has an MRD/PRD, list functional points and sub-points in hierarchy here. If there is no MRD/PRD, enumerate the functional points and sub-points to be implemented. -->
+&lt;h3 id="non-functional-requirements-mandatory">Non-Functional Requirements (mandatory)&lt;/h3>
+&lt;!-- Describe the non-functional requirements of the system (including performance needs). It is recommended to list quantifiable performance indicators such as response time, error rate, resource usage, and operational period. Do not be vague, ambiguous, or make unfounded assumptions. -->
+&lt;h2 id="environment">Environment&lt;/h2>
+&lt;h3 id="related-software--hardware-optional">Related Software &amp;amp; Hardware (optional)&lt;/h3>
+&lt;!-- Add required software &amp; hardware for the system, including operating systems, machine models, and configuration requirements. Tabular format is recommended; ideally also include a deployment diagram of servers and software components. This section can also be written as a separate deployment design document and referenced here. -->
+&lt;h3 id="system-constraints">System Constraints&lt;/h3>
+&lt;!-- Add known or foreseeable constraints of the system here. -->
+&lt;h3 id="estimated-data-scale-mandatory">Estimated Data Scale (mandatory)&lt;/h3>
+&lt;!-- Through research or experience, estimate the data scale, covering user volume, data volume, bandwidth consumption, and growth rate. Categorize and list them. -->
+&lt;h2 id="existing-solutions">Existing Solutions&lt;/h2>
+&lt;!-- For this design objective, enumerate all known solutions—particularly **existing solutions inside Qiteng**—and identify whether they meet the new requirements. Unless the requirements differ completely, forking should be the last resort; prefer enhancing the current solution. -->
+&lt;h2 id="design-ideas--trade-offs">Design Ideas &amp;amp; Trade-offs&lt;/h2>
+&lt;!-- Describe key or difficult problems to be solved or considered in the system design. Where alternative solutions exist, include the selected option, trade-offs, and justification; provide further details later in the “System Design” section. It is suggested to classify by concerns such as performance, scalability, security, service stability, anti-fraud, and reuse; attach research data to support the design choice. -->
+&lt;h3 id="assumptions--dependencies--relationships-with-other-systems">Assumptions &amp;amp; Dependencies / Relationships with Other Systems&lt;/h3>
+&lt;!-- State the prerequisites for the success of the system and its connections with external systems/modules. Either list them in bulleted prose or depict with a system architecture diagram. -->
+&lt;h2 id="system-design">System Design&lt;/h2>
+&lt;h3 id="overview">Overview&lt;/h3>
+&lt;!-- A brief introduction of the overall system. -->
+&lt;h3 id="architecture-diagram--explanation">Architecture Diagram &amp;amp; Explanation&lt;/h3>
+&lt;!-- Decompose the system into subsystems or modules, provide an architecture diagram, and briefly explain the main responsibility of each module (if helpful, include justification for grouping certain functions into a specific module). If the modules run in heterogeneous environments (e.g., different operating systems, servers), show the corresponding physical architecture diagram in the Related Software &amp; Hardware section. -->
+&lt;h3 id="system-flow--explanation-optional">System Flow &amp;amp; Explanation (optional)&lt;/h3>
+&lt;!-- Use flowcharts to illustrate how system modules interact to fulfill system functions. -->
+&lt;h3 id="interfaces-with-external-systems">Interfaces with External Systems&lt;/h3>
+&lt;!-- Provide detailed definitions for interfaces between this system and external systems. If interfaces are numerous or complex, create a dedicated interface design document and reference it here. If the external system has already published an interface document, simply cite it. Interfaces here include structures, function calls, interface files, databases, URL parameters, and libraries. If an external library is required, negotiate the version to be used during the design phase and clarify it here. -->
+&lt;h3 id="global-data-structure-descriptions">Global Data-Structure Descriptions&lt;/h3>
+&lt;!-- Describe global data structures (including database schemas) commonly used across modules. If this is already covered in the interface design section, simply reference the interface document. -->
+&lt;h3 id="brief-description-of-module-xxx1">Brief Description of Module XXX1&lt;/h3>
+&lt;h4 id="functionality-of-module-xxx1">Functionality of Module XXX1&lt;/h4>
+&lt;!-- Describe the functionality to be implemented by this module—first a high-level summary, then list detailed points. For any key features or techniques specific to this module, elaborate here to guide detailed designers. -->
+&lt;h4 id="interfaces-with-other-modules">Interfaces with Other Modules&lt;/h4>
+&lt;!-- Describe the interfaces between this module and other modules within the system (excluding internal interfaces of the module). If the interfaces are complex or extensive enough, create a separate interface design document and reference it here. Alternatively, add a secondary heading “Inter-module Interfaces” to define them systematically and comprehensively. -->
+&lt;h3 id="brief-description-of-module-xxx2">Brief Description of Module XXX2&lt;/h3>
+&lt;h4 id="functionality-of-module-xxx2">Functionality of Module XXX2&lt;/h4>
+&lt;h4 id="interfaces-with-other-modules-1">Interfaces with Other Modules&lt;/h4>
+&lt;h2 id="threat-modeling">Threat Modeling&lt;/h2>
+&lt;!-- Use a structured approach to systematically identify and evaluate security risks and threats to the product, and define mitigation measures for each risk or threat. -->
+&lt;h2 id="upgrade-impact-mandatory">Upgrade Impact (mandatory)&lt;/h2>
+&lt;!-- If this design needs to upgrade an existing previous version, will there be any breaking changes? Can the upgrade be performed seamlessly? What potential impacts may the upgrade bring, and how can they be mitigated? -->
+&lt;h2 id="risk-assessment--impact-on-other-systems-optional">Risk Assessment &amp;amp; Impact on Other Systems (optional)&lt;/h2>
+&lt;h3 id="known-or-foreseeable-risks">Known or Foreseeable Risks&lt;/h3>
+&lt;!-- Include already known or possible future risks, including technical and business aspects. Preferably list corresponding measures for each risk. -->
+&lt;h3 id="potential-impact-with-other-systemsmodules">Potential Impact with Other Systems/Modules&lt;/h3>
+&lt;!-- In “Assumptions &amp; Dependencies on Other Systems” we described the dependencies of this system on others. Here describe the impact these dependencies may have—both the impact this system may have on others and vice-versa. Identify potential innovations and file patents where appropriate. -->
+&lt;h2 id="innovation-points-optional">Innovation Points (optional)&lt;/h2>
+&lt;!-- Explore potential innovation points to file patents. -->
+&lt;h2 id="attachments--references">Attachments &amp;amp; References&lt;/h2>
+&lt;!-- List related attachments or reference documents. Attach infrequently changed documents (e.g., research reports) as embedded objects in this document. For frequently updated documents (e.g., interface documents), simply list the filenames or links here. --></description></item><item><title>Command Line Syntax Conventions</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/command-line-syntax-conventions/</link><pubDate>Fri, 28 Jun 2024 17:32:54 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/command-line-syntax-conventions/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Command line syntax conventions&lt;/li>
+&lt;/ul>
+&lt;h2 id="references">References&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.ibm.com/docs/en/iotdm/11.3?topic=interface-command-line-syntax">https://www.ibm.com/docs/en/iotdm/11.3?topic=interface-command-line-syntax&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key">https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developers.google.com/style/code-syntax">https://developers.google.com/style/code-syntax&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_01">https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_01&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://ftpdocs.broadcom.com/cadocs/0/CA%20ARCserve%20%20Backup%20r16-CHS/Bookshelf_Files/HTML/cmndline/cl_cmd_line_syntax_char.htm">https://ftpdocs.broadcom.com/cadocs/0/CA%20ARCserve%20%20Backup%20r16-CHS/Bookshelf_Files/HTML/cmndline/cl_cmd_line_syntax_char.htm&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>e.g.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Notation&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Text without brackets or braces&lt;/td>
+ &lt;td>Items you must type as shown.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>&amp;lt;&lt;/code>Text inside angle brackets&lt;code>&amp;gt;&lt;/code>&lt;/td>
+ &lt;td>Placeholder for which you must supply a value.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>[&lt;/code>Text inside square brackets&lt;code>]&lt;/code>&lt;/td>
+ &lt;td>Optional items.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>{&lt;/code>Text inside braces&lt;code>}&lt;/code>&lt;/td>
+ &lt;td>Set of required items. You must choose one.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Vertical bar ( &lt;code>|&lt;/code> )&lt;/td>
+ &lt;td>Separator for mutually exclusive items. You must choose one.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Ellipsis (&lt;code>…&lt;/code>)&lt;/td>
+ &lt;td>Items that can be repeated and used multiple times.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>Meanings of brackets in man pages</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/meanings-of-brackets-in-man-pages/</link><pubDate>Fri, 28 Jun 2024 17:31:00 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/meanings-of-brackets-in-man-pages/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Meanings of brackets in man pages&lt;/li>
+&lt;/ul>
+&lt;h1 id="meanings-of-brackets-in-man-pages">Meanings of brackets in man pages&lt;/h1>
+&lt;p>In command-line help, different types of brackets generally carry the following meanings:&lt;/p>
+&lt;ol>
+&lt;li>Angle brackets &lt;code>&amp;lt;&amp;gt;&lt;/code>:
+&lt;ul>
+&lt;li>Angle brackets denote required arguments—values you must provide when running the command. They’re typically used to express the core syntax and parameters of a command.&lt;/li>
+&lt;li>Example: &lt;code>command &amp;lt;filename&amp;gt;&lt;/code> means you must supply a filename as a required argument, e.g., &lt;code>command file.txt&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Square brackets &lt;code>[]&lt;/code>:
+&lt;ul>
+&lt;li>Square brackets indicate optional arguments—values you may or may not provide when running the command. They’re commonly used to mark optional parameters and options.&lt;/li>
+&lt;li>Example: &lt;code>command [option]&lt;/code> means you can choose to provide an option, e.g., &lt;code>command -v&lt;/code> or simply &lt;code>command&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Curly braces &lt;code>{}&lt;/code>:
+&lt;ul>
+&lt;li>Curly braces usually represent a set of choices, indicating that you must select one. These are also called “choice parameter groups.”&lt;/li>
+&lt;li>Example: &lt;code>command {option1 | option2 | option3}&lt;/code> means you must pick one of the given options, e.g., &lt;code>command option2&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Parentheses &lt;code>()&lt;/code>:
+&lt;ul>
+&lt;li>Parentheses are generally used to group arguments, clarifying structure and precedence in a command’s syntax.&lt;/li>
+&lt;li>Example: &lt;code>command (option1 | option2) filename&lt;/code> means you must choose either &lt;code>option1&lt;/code> or &lt;code>option2&lt;/code> and supply a filename as an argument, e.g., &lt;code>command option1 file.txt&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>These bracket conventions are intended to help users understand command syntax and parameter choices so they can use command-line tools correctly. When reading man pages or help text, paying close attention to the meaning and purpose of each bracket type is crucial—it prevents incorrect commands and achieves the desired results.&lt;/p></description></item><item><title>Huawei C++ Coding Standards</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/huawei-c-coding-standards/</link><pubDate>Fri, 28 Jun 2024 17:30:10 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/huawei-c-coding-standards/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Huawei C++ Coding Standards&lt;/li>
+&lt;/ul>
+&lt;h1 id="c-language-coding-standards">C++ Language Coding Standards&lt;/h1>
+&lt;h2 id="purpose">&lt;a name="c0-1">&lt;/a>Purpose&lt;/h2>
+&lt;p>Rules are not perfect; by prohibiting features useful in specific situations, they may impact code implementation. However, the purpose of establishing rules is “to benefit the majority of developers.” If, during team collaboration, a rule is deemed unenforceable, we hope to improve it together.&lt;/p>
+&lt;p>Before referencing this standard, it is assumed that you already possess the corresponding basic C++ language capabilities; do not rely on this document to learn the C++ language.&lt;/p></description></item></channel></rss>

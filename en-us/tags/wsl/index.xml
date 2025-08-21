@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wsl on Nono Blogs</title><link>https://blog.jqknono.com/en-us/tags/wsl/</link><description>Recent content in Wsl on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 25 Jun 2025 19:09:29 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/tags/wsl/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL Mirrored Network Mode Configuration Guide</title><link>https://blog.jqknono.com/en-us/blog/2025/06/25/wsl-mirrored-network-mode-configuration-guide/</link><pubDate>Wed, 25 Jun 2025 19:09:29 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/06/25/wsl-mirrored-network-mode-configuration-guide/</guid><description>&lt;h2 id="version-requirements">Version Requirements&lt;/h2>
+&lt;p>Current version status:&lt;/p>
+&lt;ul>
+&lt;li>Latest stable: 2.5.9 (known networking issues)&lt;/li>
+&lt;li>Recommended version: 2.6.0 preview (full mirrored mode support)&lt;/li>
+&lt;/ul>
+&lt;h2 id="mode-comparison-analysis">Mode Comparison Analysis&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Feature&lt;/th>
+ &lt;th>bridge mode (deprecated)&lt;/th>
+ &lt;th>mirrored mode (recommended)&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Protocol architecture&lt;/td>
+ &lt;td>Dual-stack&lt;/td>
+ &lt;td>Shared stack&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>IP address allocation&lt;/td>
+ &lt;td>Independent IP (Windows + WSL)&lt;/td>
+ &lt;td>Shared host IP&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Port resources&lt;/td>
+ &lt;td>Separate&lt;/td>
+ &lt;td>Shared ports (conflict-avoidance required)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Network performance&lt;/td>
+ &lt;td>Relatively heavy&lt;/td>
+ &lt;td>Lightweight &amp;amp; efficient&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Configuration complexity&lt;/td>
+ &lt;td>Simple&lt;/td>
+ &lt;td>Requires deep firewall policy setup&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="standard-configuration-steps">Standard Configuration Steps&lt;/h2>
+&lt;h3 id="1-network-mode-settings">1. Network Mode Settings&lt;/h3>
+&lt;p>Configure the base mode via &lt;strong>WSL Settings&lt;/strong> app:&lt;/p></description></item><item><title>Windows Subsystem Linux(WSL)</title><link>https://blog.jqknono.com/en-us/blog/programmer/environment/wsl/</link><pubDate>Wed, 25 Jun 2025 18:44:13 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/programmer/environment/wsl/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> _index&lt;/li>
+&lt;/ul></description></item></channel></rss>

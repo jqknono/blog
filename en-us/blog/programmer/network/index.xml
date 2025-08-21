@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network on Nono Blogs</title><link>https://blog.jqknono.com/en-us/blog/programmer/network/</link><description>Recent content in Network on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 28 Feb 2025 12:45:22 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/blog/programmer/network/index.xml" rel="self" type="application/rss+xml"/><item><title>A Few Ways to Safely Use Public IPv6</title><link>https://blog.jqknono.com/en-us/blog/2025/02/28/a-few-ways-to-safely-use-public-ipv6/</link><pubDate>Fri, 28 Feb 2025 12:45:22 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/02/28/a-few-ways-to-safely-use-public-ipv6/</guid><description>&lt;p>Some people need to “go home” via public IPv6. Unlike Tailscale/Zerotier et al., which rely on NAT traversal to create direct tunnels, native IPv6 offers a straight-through connection. Cellular networks almost always hand out global IPv6 addresses, so “going home” is extremely convenient.&lt;/p>
+&lt;p>I previously posted &lt;a href="https://www.v2ex.com/t/1112630">Using Common DDNS Sub-domains on Home Broadband May Downgrade Telecom Service&lt;/a> describing a pitfall with IPv6: domains get crawled. Exposing your domain is basically the same as exposing your IPv6 address. Once scanners find open services and inbound sessions pile up, the ISP may silently throttle or downgrade your line.&lt;/p></description></item><item><title>Using Common DDNS Subdomains May Cause China Telecom Broadband Service Degradation</title><link>https://blog.jqknono.com/en-us/blog/2025/02/19/using-common-ddns-subdomains-may-cause-china-telecom-broadband-service-degradation/</link><pubDate>Wed, 19 Feb 2025 13:06:08 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/02/19/using-common-ddns-subdomains-may-cause-china-telecom-broadband-service-degradation/</guid><description>&lt;p>I have been troubleshooting IPv6 disconnections and hole-punching failures for over three months. I’ve finally identified the root cause; here’s the story.&lt;/p>
+&lt;h2 id="my-first-post-asking-for-helpipv6-disconnections">My First Post Asking for Help—IPv6 Disconnections&lt;/h2>
+&lt;!-- https://www.v2ex.com/t/1088217 -->
+&lt;p>IPv6 had been working perfectly. Without touching any settings, and even though every device had its own IPv6, it suddenly lost IPv6 connectivity entirely.&lt;/p>
+&lt;p>&lt;code>curl 6.ipw.cn&lt;/code> returned nothing, and both &lt;code>ping6&lt;/code> and &lt;code>traceroute6 2400:3200::1&lt;/code> failed.&lt;/p>
+&lt;p>My ONT was bridged to the router, and I could still obtain the router’s own IPv6—one that could still reach the IPv6 Internet.&lt;/p></description></item><item><title>Compliance Discussion of Reverse Proxy in Home Networks</title><link>https://blog.jqknono.com/en-us/blog/2025/02/17/compliance-discussion-of-reverse-proxy-in-home-networks/</link><pubDate>Mon, 17 Feb 2025 15:04:23 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/02/17/compliance-discussion-of-reverse-proxy-in-home-networks/</guid><description>&lt;h1 id="background">Background&lt;/h1>
+&lt;p>About 90 days ago, I encountered an IPv6 connectivity issue with China Telecom Hubei. After long-term observation and analysis, here are the findings.&lt;/p>
+&lt;h1 id="problem-analysis">Problem Analysis&lt;/h1>
+&lt;p>Two initial suspected causes:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>PCDN usage detection&lt;/p>
+&lt;ul>
+&lt;li>No active use of PCDN&lt;/li>
+&lt;li>Only a small amount of BitTorrent downloads&lt;/li>
+&lt;li>Upload throttling has been applied, yet the problem persists&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Home server acting as blog origin&lt;/p>
+&lt;ul>
+&lt;li>Uses Cloudflare origin rules specifying a port&lt;/li>
+&lt;li>May be deemed “commercial behavior” by the ISP&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>After three months of validation, the issue is more likely triggered by exposing HTTP/HTTPS service ports to the public Internet.&lt;/p></description></item><item><title>Some Characteristics of China Telecom IPv6</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/some-characteristics-of-china-telecom-ipv6/</link><pubDate>Fri, 28 Jun 2024 17:21:06 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/some-characteristics-of-china-telecom-ipv6/</guid><description>&lt;ul>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> Some Characteristics of China Telecom IPv6&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> Some Characteristics of China Telecom IPv6&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>IPv6 has been fully rolled out nationwide; the IPv6 address pool is large enough for each of every individual’s devices to obtain its own IPv6 address.&lt;br>
+To actually use IPv6 at home, the entire stack of devices must all support IPv6. Because the rollout has been underway for many years, virtually every device bought after 2016 already supports IPv6.&lt;/p></description></item><item><title>Why we should not think of UDP in terms of TCP</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/why-we-should-not-think-of-udp-in-terms-of-tcp/</link><pubDate>Fri, 28 Jun 2024 17:20:09 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/why-we-should-not-think-of-udp-in-terms-of-tcp/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Why we should not think of UDP in terms of TCP&lt;/li>
+&lt;/ul>
+&lt;h1 id="why-we-should-not-think-of-udp-in-terms-of-tcp">Why we should not think of UDP in terms of TCP?&lt;/h1>
+&lt;h2 id="structural-differences">Structural Differences&lt;/h2>
+&lt;p>&lt;img src="https://s2.loli.net/2023/06/30/ndPGpzMRX1L4Q6D.png" alt="TCP header">&lt;br>
+&lt;img src="https://s2.loli.net/2023/06/30/ofdBYKb6iqaICA9.png" alt="UDP header">&lt;/p>
+&lt;p>TCP has many concepts: connection establishment, resource usage, data transfer, reliable delivery, retransmission based on cumulative ACK-SACK, timeout retransmission, checksum, flow control, congestion control, MSS, selective acknowledgements, TCP window scale, TCP timestamps, PSH flag, connection termination.&lt;/p>
+&lt;p>UDP has virtually none of these facilities; it is only slightly more capable than the link layer in distinguishing applications. Because UDP is extremely simple, it is extremely flexible.&lt;/p></description></item><item><title>Troubleshooting Linux Network Issues</title><link>https://blog.jqknono.com/en-us/blog/2024/05/28/troubleshooting-linux-network-issues/</link><pubDate>Tue, 28 May 2024 16:39:14 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/05/28/troubleshooting-linux-network-issues/</guid><description>&lt;h2 id="troubleshooting-tools">Troubleshooting Tools&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;th>Usage&lt;/th>
+ &lt;th>Note&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>ping&lt;/td>
+ &lt;td>Test network connectivity&lt;/td>
+ &lt;td>ping baidu.com&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>traceroute&lt;/td>
+ &lt;td>Route tracing&lt;/td>
+ &lt;td>traceroute ip&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>route&lt;/td>
+ &lt;td>Routing table&lt;/td>
+ &lt;td>route -n&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netstat&lt;/td>
+ &lt;td>Network connections&lt;/td>
+ &lt;td>netstat -ano&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>nslookup&lt;/td>
+ &lt;td>DNS resolution&lt;/td>
+ &lt;td>nslookup baidu.com&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ifconfig&lt;/td>
+ &lt;td>Network configuration&lt;/td>
+ &lt;td>ifconfig&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>arp&lt;/td>
+ &lt;td>ARP cache&lt;/td>
+ &lt;td>arp -a&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>nbtstat&lt;/td>
+ &lt;td>NetBIOS&lt;/td>
+ &lt;td>nbtstat -n&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netsh&lt;/td>
+ &lt;td>Network configuration&lt;/td>
+ &lt;td>netsh&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>net&lt;/td>
+ &lt;td>Network configuration&lt;/td>
+ &lt;td>net&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpdump&lt;/td>
+ &lt;td>Packet capture&lt;/td>
+ &lt;td>tcpdump&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>wireshark&lt;/td>
+ &lt;td>Packet capture&lt;/td>
+ &lt;td>wireshark&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ip&lt;/td>
+ &lt;td>Network configuration&lt;/td>
+ &lt;td>ip addr show&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ss&lt;/td>
+ &lt;td>Network connections&lt;/td>
+ &lt;td>ss -tunlp&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netstat&lt;/td>
+ &lt;td>View network connection state&lt;/td>
+ &lt;td>netstat -anp&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpdump&lt;/td>
+ &lt;td>Packet-capture utility&lt;/td>
+ &lt;td>tcpdump -i eth0 -nn -s 0 -c 1000 -w /tmp/tcpdump.pcap&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>iptables&lt;/td>
+ &lt;td>Firewall&lt;/td>
+ &lt;td>iptables -L -n -v -t nat -t mangle -t filter&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ss&lt;/td>
+ &lt;td>netstat replacement&lt;/td>
+ &lt;td>ss -anp&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ifconfig&lt;/td>
+ &lt;td>View NIC information&lt;/td>
+ &lt;td>ifconfig eth0&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ip&lt;/td>
+ &lt;td>View NIC information&lt;/td>
+ &lt;td>ip addr show eth0&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>route&lt;/td>
+ &lt;td>View routing table&lt;/td>
+ &lt;td>route -n&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>traceroute&lt;/td>
+ &lt;td>View routing hops&lt;/td>
+ &lt;td>traceroute &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ping&lt;/td>
+ &lt;td>Test network connectivity&lt;/td>
+ &lt;td>ping &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>telnet&lt;/td>
+ &lt;td>Test port connectivity&lt;/td>
+ &lt;td>telnet &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a> 80&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>nslookup&lt;/td>
+ &lt;td>Domain resolution&lt;/td>
+ &lt;td>nslookup &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>dig&lt;/td>
+ &lt;td>Domain resolution&lt;/td>
+ &lt;td>dig &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>arp&lt;/td>
+ &lt;td>View ARP cache&lt;/td>
+ &lt;td>arp -a&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netcat&lt;/td>
+ &lt;td>Network debugging tool&lt;/td>
+ &lt;td>nc -l 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>nmap&lt;/td>
+ &lt;td>Port-scanning tool&lt;/td>
+ &lt;td>nmap -sT -p 80 &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>mtr&lt;/td>
+ &lt;td>Network connectivity tester&lt;/td>
+ &lt;td>mtr &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>iperf&lt;/td>
+ &lt;td>Network performance tester&lt;/td>
+ &lt;td>iperf -s -p 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>iptraf&lt;/td>
+ &lt;td>Network traffic monitor&lt;/td>
+ &lt;td>iptraf -i eth0&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ipcalc&lt;/td>
+ &lt;td>IP address calculator&lt;/td>
+ &lt;td>ipcalc&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>iftop&lt;/td>
+ &lt;td>Network traffic monitor&lt;/td>
+ &lt;td>iftop -i eth0&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>iostat&lt;/td>
+ &lt;td>Disk I/O monitor&lt;/td>
+ &lt;td>iostat -x 1 10&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>vmstat&lt;/td>
+ &lt;td>Virtual memory monitor&lt;/td>
+ &lt;td>vmstat 1 10&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>sar&lt;/td>
+ &lt;td>System performance monitor&lt;/td>
+ &lt;td>sar -n DEV 1 10&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>lsof&lt;/td>
+ &lt;td>Show open file usage&lt;/td>
+ &lt;td>lsof -i:80&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>strace&lt;/td>
+ &lt;td>Trace system calls&lt;/td>
+ &lt;td>strace -p 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpflow&lt;/td>
+ &lt;td>Packet-capture tool&lt;/td>
+ &lt;td>tcpflow -i eth0 -c -C -p -o /tmp/tcpflow&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpick&lt;/td>
+ &lt;td>Packet-capture tool&lt;/td>
+ &lt;td>tcpick -i eth0 -C -p -o /tmp/tcpick&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcptrace&lt;/td>
+ &lt;td>Packet-capture tool&lt;/td>
+ &lt;td>tcptrace -i eth0 -C -p -o /tmp/tcptrace&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpslice&lt;/td>
+ &lt;td>Packet-capture tool&lt;/td>
+ &lt;td>tcpslice -i eth0 -C -p -o /tmp/tcpslice&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpstat&lt;/td>
+ &lt;td>Packet-capture tool&lt;/td>
+ &lt;td>tcpstat -i eth0 -C -p -o /tmp/tcpstat&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpdump&lt;/td>
+ &lt;td>Packet-capture tool&lt;/td>
+ &lt;td>tcpdump -i eth0 -C -p -o /tmp/tcpdump&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tshark&lt;/td>
+ &lt;td>Packet-capture tool&lt;/td>
+ &lt;td>tshark -i eth0 -C -p -o /tmp/tshark&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>wireshark&lt;/td>
+ &lt;td>Packet-capture tool&lt;/td>
+ &lt;td>wireshark -i eth0 -C -p -o /tmp/wireshark&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>socat&lt;/td>
+ &lt;td>Network debugging tool&lt;/td>
+ &lt;td>socat -d -d TCP-LISTEN:1234,fork TCP:www.baidu.com:80&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ncat&lt;/td>
+ &lt;td>Network debugging tool&lt;/td>
+ &lt;td>ncat -l 1234 -c &amp;rsquo;ncat &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a> 80'&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netperf&lt;/td>
+ &lt;td>Network performance tester&lt;/td>
+ &lt;td>netperf -H &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a> -l 60 -t TCP_STREAM&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netcat&lt;/td>
+ &lt;td>Network debugging tool&lt;/td>
+ &lt;td>netcat -l 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>nc&lt;/td>
+ &lt;td>Network debugging tool&lt;/td>
+ &lt;td>nc -l 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netpipe&lt;/td>
+ &lt;td>Network performance tester&lt;/td>
+ &lt;td>netpipe -l 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netkit&lt;/td>
+ &lt;td>Network debugging tool&lt;/td>
+ &lt;td>netkit -l 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>bridge&lt;/td>
+ &lt;td>Bridge tool&lt;/td>
+ &lt;td>bridge -s&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>How to Improve Network Experience with a Self-Hosted DNS Service</title><link>https://blog.jqknono.com/en-us/blog/2024/05/18/how-to-improve-network-experience-with-a-self-hosted-dns-service/</link><pubDate>Sat, 18 May 2024 10:46:44 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/05/18/how-to-improve-network-experience-with-a-self-hosted-dns-service/</guid><description>&lt;h2 id="network-quality-vs-network-experience">Network Quality vs. Network Experience&lt;/h2>
+&lt;blockquote>
+&lt;p>Do nothing, and you’ll already enjoy the best network experience.&lt;/p>&lt;/blockquote>
+&lt;p>First, note that “network quality” and “network experience” are two different concepts. Communication is a process involving many devices. The upload/download performance of a &lt;strong>single device&lt;/strong> can be termed &lt;strong>network quality&lt;/strong>, while the end-to-end behavior of the entire communication path is what we call &lt;strong>network experience&lt;/strong>.&lt;/p>
+&lt;h2 id="measuring-network-quality">Measuring Network Quality&lt;/h2>
+&lt;p>Evaluating network quality usually involves several metrics and methods. Common ones include:&lt;/p></description></item><item><title>Bypassing ChatGPT VPN Detection</title><link>https://blog.jqknono.com/en-us/blog/2024/05/09/bypassing-chatgpt-vpn-detection/</link><pubDate>Thu, 09 May 2024 10:30:29 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/05/09/bypassing-chatgpt-vpn-detection/</guid><description>&lt;p>How to handle the ChatGPT error messages&lt;br>
+“Unable to load site”&lt;br>
+“Please try again later; if you are using a VPN, try turning it off.”&lt;br>
+“Check the status page for information on outages.”&lt;/p>
+&lt;h2 id="foreword">Foreword&lt;/h2>
+&lt;p>&lt;img src="https://s2.loli.net/2024/05/09/dT4xi1mwFgYRKhq.png" alt="">&lt;/p>
+&lt;p>ChatGPT is still the best chatbot in terms of user experience, but in mainland China its use is restricted by the network environment, so we need a proxy (literally a “ladder”) to reach it. ChatGPT is, however, quite strict in detecting proxies, and if it finds one it will simply refuse service. This article explains a way around that detection.&lt;/p></description></item></channel></rss>

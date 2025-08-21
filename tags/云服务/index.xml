@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>云服务 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</link><description>Recent content in 云服务 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 25 Apr 2025 19:25:01 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/index.xml" rel="self" type="application/rss+xml"/><item><title>CNAME与TXT冲突导致证书申请问题</title><link>https://blog.jqknono.com/blog/2025/04/25/cname%E4%B8%8Etxt%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E9%97%AE%E9%A2%98/</link><pubDate>Fri, 25 Apr 2025 19:25:01 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/04/25/cname%E4%B8%8Etxt%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E9%97%AE%E9%A2%98/</guid><description>&lt;h2 id="相同前缀的-cname-与-txt-不能共存">相同前缀的 CNAME 与 TXT 不能共存&lt;/h2>
+&lt;p>折腾过域名的可能知道(A,AAAA)记录不能与 CNAME 共存, 但未必碰到过 TXT 与 CNAME 冲突的情况.&lt;/p>
+&lt;p>什么情况下 TXT 会与 CNAME 同时使用一个前缀?&lt;/p>
+&lt;p>有一种场景, 就是在 LetsEncrypt 证书申请, 使用 &lt;em>DNS-01&lt;/em> 挑战来验证域名所有权时.&lt;/p>
+&lt;ol>
+&lt;li>Certbot 会使用 ackey 和 acsecret 或者 token, 创建一条&lt;code>_acme-challenge.example.com&lt;/code> 的&lt;strong>TXT 记录&lt;/strong>&lt;/li>
+&lt;li>Letsencrypt 会查询 &lt;strong>TXT 记录&lt;/strong>, 确认申请方有权创建 DNS 记录, 证明有域名所有权.&lt;/li>
+&lt;li>Letsencrypt 签发证书&lt;/li>
+&lt;li>Certbot 清理&lt;code>_acme-challenge.example.com&lt;/code> 的&lt;strong>TXT 记录&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;p>倘若创建&lt;strong>TXT 记录&lt;/strong>时, 已经有一条&lt;code>_acme-challenge.example.com&lt;/code> 的&lt;strong>CNAME&lt;/strong>记录, 则&lt;strong>TXT&lt;/strong>记录可能会创建失败, 导致域名挑战验证失败.&lt;/p>
+&lt;p>为什么会出现&lt;code>_acme-challenge&lt;/code>.example.com 的&lt;strong>CNAME&lt;/strong>记录?&lt;/p>
+&lt;p>阿里云新推出的 &lt;strong>ESA&lt;/strong> 边缘安全加速, 类似 cloudflare, 是原 DCDN 全站加速的改名增强版. 在早期使用时, 不支持自助申请泛域名, 我是使用脚本周期性将自己申请的泛域名证书传上去, 管理起来稍有不便. 后来出了&lt;strong>托管 DCV&lt;/strong>, 可以自助申请更新泛域名证书, 按照说明操作, 的确可以自助管理泛域名证书. 但埋下的隐患隔了数月才发现. 这个 CNAME 记录持续存在, 会导致不能创建相同前缀的 TXT 记录, 导致我不能在别处证明域名所有权.&lt;/p></description></item><item><title>释放vps的保留内存</title><link>https://blog.jqknono.com/blog/2024/12/31/%E9%87%8A%E6%94%BEvps%E7%9A%84%E4%BF%9D%E7%95%99%E5%86%85%E5%AD%98/</link><pubDate>Tue, 31 Dec 2024 16:07:11 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/12/31/%E9%87%8A%E6%94%BEvps%E7%9A%84%E4%BF%9D%E7%95%99%E5%86%85%E5%AD%98/</guid><description>&lt;p>Linux 系统默认会保留一块内存用于&lt;code>kdump&lt;/code>，这块内存的大小可以通过&lt;code>crashkernel&lt;/code>参数来设置，许多应用开发者一般不会触发内核崩溃，可以通过修改&lt;code>/etc/default/grub&lt;/code>文件来释放出这块内存。&lt;/p>
+&lt;p>如果不需要&lt;code>kdump&lt;/code>，可以将&lt;code>crashkernel&lt;/code>参数设置为&lt;code>0M-1G:0M,1G-4G:0M,4G-128G:0M,128G-:512M&lt;/code>，这样就可以释放出一块内存。&lt;/p>
+&lt;p>&lt;strong>查看方式&lt;/strong>: &lt;code>cat /etc/default/grub&lt;/code>&lt;/p>
+&lt;p>默认值如下:&lt;/p>
+&lt;blockquote>
+&lt;p>GRUB_CMDLINE_LINUX=&amp;quot; vga=792 console=tty0 console=ttyS0,115200n8 net.ifnames=0 noibrs nvme_core.io_timeout=4294967295 nvme_core.admin_timeout=4294967295 iommu=pt crashkernel=0M-1G:0M,1G-4G:192M,4G-128G:384M,128G-:512M crash_kexec_post_notifiers=1&amp;quot;&lt;/p>&lt;/blockquote>
+&lt;p>解释下&lt;code>crashkernel&lt;/code>字段其含义是, &lt;code>0-1G&lt;/code>内存的主机保留&lt;code>0M&lt;/code>内存, &lt;code>1-4G&lt;/code>内存的主机保留&lt;code>192M&lt;/code>内存, &lt;code>4-128G&lt;/code>内存的主机保留&lt;code>384M&lt;/code>内存, &lt;code>128G&lt;/code>以上的主机保留&lt;code>512M&lt;/code>内存.&lt;/p>
+&lt;p>1G 内存的主机会向上划分到&lt;code>1-4G&lt;/code>档, 保留 &lt;code>192MB&lt;/code> 内存用于 kdump. 4G 内存的主机会向上划分到&lt;code>4-128G&lt;/code>档, 保留 &lt;code>384MB&lt;/code> 内存用于 kdump.&lt;/p>
+&lt;p>&lt;strong>修改方式&lt;/strong>: &lt;code>sudo sed -i 's/crashkernel=0M-1G:0M,1G-4G:192M,4G-128G:384M,128G-:512M/crashkernel=0M-1G:0M,1G-4G:0M,4G-128G:0M,128G-:512M/' /etc/default/grub&lt;/code>&lt;/p>
+&lt;p>重启生效: &lt;code>sudo update-grub &amp;amp;&amp;amp; sudo reboot&lt;/code>&lt;/p>
+&lt;p>以新手学习常用的 2C1G 的 vps 为例，一个干净系统修改前后的内存空间如下, 可以看到 366MB 和 562MB 的区别还是挺大的.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 修改前&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">root@iZj6c0otki9ho421eewyczZ:~# free
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> total used free shared buff/cache available
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Mem: &lt;span class="m">707180&lt;/span> &lt;span class="m">340772&lt;/span> &lt;span class="m">123400&lt;/span> &lt;span class="m">2624&lt;/span> &lt;span class="m">358872&lt;/span> &lt;span class="m">366408&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Swap: &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 修改后&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">root@iZj6c0otki9ho421eewyczZ:~# free
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> total used free shared buff/cache available
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Mem: &lt;span class="m">903788&lt;/span> &lt;span class="m">341656&lt;/span> &lt;span class="m">451380&lt;/span> &lt;span class="m">2616&lt;/span> &lt;span class="m">251032&lt;/span> &lt;span class="m">562132&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Swap: &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span> &lt;span class="m">0&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>2C4G 的 vps 修改前后的内存空间如下, 3.1GB 和 3.5GB 的区别.&lt;/p></description></item></channel></rss>

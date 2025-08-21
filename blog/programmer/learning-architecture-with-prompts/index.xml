@@ -1,5 +1,100 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Learning Architecture via Prompts on Nono Blogs</title><link>https://blog.jqknono.com/blog/programmer/learning-architecture-with-prompts/</link><description>Recent content in Learning Architecture via Prompts on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 24 May 2025 16:45:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/programmer/learning-architecture-with-prompts/index.xml" rel="self" type="application/rss+xml"/><item><title>Android Development</title><link>https://blog.jqknono.com/blog/2025/05/24/android-development/</link><pubDate>Sat, 24 May 2025 16:45:31 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/05/24/android-development/</guid><description>&lt;blockquote>
-&lt;p>Preface: You might find this prompt somewhat abstract at first, but a little patience goes a long way—knowledge must first be memorized, then understood.
-A few exceptional minds grasp concepts instantly without practice, but for most of us, hands-on experience is essential. Through concrete implementation we generalize ideas, turning knowledge into second nature.
-Try committing these prompts to memory for now; they can guide everyday work, where you’ll gradually absorb their distilled wisdom.
-Feel free to share any thoughts you have.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>跟着提示词学架构 on Nono Blogs</title><link>https://blog.jqknono.com/blog/programmer/learning-architecture-with-prompts/</link><description>Recent content in 跟着提示词学架构 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 24 May 2025 16:45:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/programmer/learning-architecture-with-prompts/index.xml" rel="self" type="application/rss+xml"/><item><title>Android开发</title><link>https://blog.jqknono.com/blog/2025/05/24/android%E5%BC%80%E5%8F%91/</link><pubDate>Sat, 24 May 2025 16:45:31 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/05/24/android%E5%BC%80%E5%8F%91/</guid><description>&lt;blockquote>
+&lt;p>前言, 您可能会觉得本提示词似乎有些抽象, 不妨备一点耐心, 知识总是需要先记忆，再理解.
+有少数人理解能力超群, 不需要实践即可理解. 但对大多数人来说, 需要一些实践, 从具体中泛化, 知识才能成为自己的血肉.
+不妨暂且先记住本提示词一二, 它同样可以指导一般性的工作, 在工作中慢慢体会其超浓缩的经验.
+如有想法, 可畅所欲言.&lt;/p>&lt;/blockquote>
+&lt;h2 id="cursor-rule">Cursor Rule&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">// Android Jetpack Compose .cursorrules
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 灵活性通知
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 注意：这是一个推荐的项目结构，但请保持灵活性，适应现有的项目结构。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 如果项目遵循不同的组织方式，请勿强制执行这些结构模式。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 在应用 Jetpack Compose 最佳实践的同时，重点保持与现有项目架构的一致性。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 项目架构和最佳实践
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const androidJetpackComposeBestPractices = [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;在保持代码整洁原则的同时适应现有项目架构&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;遵循 Material Design 3 指南和组件&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;实现包含领域层、数据层和展示层的整洁架构&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;使用 Kotlin 协程和 Flow 进行异步操作&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;使用 Hilt 实现依赖注入&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;遵循 ViewModel 和 UI State 的单向数据流&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;使用 Compose Navigation 进行屏幕管理&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;实现适当的状态提升和组合&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">];
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 文件夹结构
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 注意：这是一个参考结构。请适应项目的现有组织方式
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const projectStructure = &lt;span class="sb">`app/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> src/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> main/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> java/com/package/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> data/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> repository/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> datasource/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> models/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> domain/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> usecases/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> models/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> repository/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> presentation/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> screens/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> components/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> theme/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> viewmodels/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> di/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> utils/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> res/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> values/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> drawable/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> mipmap/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> test/
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> androidTest/`&lt;/span>;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// Compose UI 指南
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const composeGuidelines = &lt;span class="sb">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">1. 适当使用 remember 和 derivedStateOf
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">2. 实现适当的重组优化
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">3. 使用正确的 Compose 修饰符顺序
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">4. 遵循可组合函数的命名约定
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">5. 实现适当的预览注解
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">6. 使用 MutableState 进行适当的状态管理
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">7. 实现适当的错误处理和加载状态
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">8. 使用 MaterialTheme 进行适当的主题设置
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">9. 遵循无障碍指南
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">10. 实现适当的动画模式
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> `&lt;/span>;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 测试指南
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const testingGuidelines = &lt;span class="sb">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">1. 为 ViewModels 和 UseCases 编写单元测试
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">2. 使用 Compose 测试框架实现 UI 测试
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">3. 使用伪造的存储库进行测试
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">4. 实现适当的测试覆盖率
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">5. 使用适当的测试协程调度器
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> `&lt;/span>;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 性能指南
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const performanceGuidelines = &lt;span class="sb">`
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">1. 使用适当的键值最小化重组
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">2. 使用 LazyColumn 和 LazyRow 实现适当的懒加载
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">3. 实现高效的图片加载
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">4. 使用适当的状态管理防止不必要的更新
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">5. 遵循适当的生命周期感知
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">6. 实现适当的内存管理
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb">7. 使用适当的后台处理
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sb"> `&lt;/span>;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="参考">参考&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/Project-Translation/awesome-cursorrules">https://github.com/Project-Translation/awesome-cursorrules&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

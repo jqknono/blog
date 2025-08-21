@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>疑难杂症 on Nono Blogs</title><link>https://blog.jqknono.com/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</link><description>Recent content in 疑难杂症 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 07 May 2024 11:48:37 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows Edge浏览器卡顿的一种解决办法</title><link>https://blog.jqknono.com/blog/2024/05/07/windows-edge%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8D%A1%E9%A1%BF%E7%9A%84%E4%B8%80%E7%A7%8D%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link><pubDate>Tue, 07 May 2024 11:48:37 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/07/windows-edge%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8D%A1%E9%A1%BF%E7%9A%84%E4%B8%80%E7%A7%8D%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid><description>&lt;h2 id="浏览器版本">浏览器版本&lt;/h2>
+&lt;p>&lt;code>122.0.2365.80+&lt;/code>&lt;/p>
+&lt;h2 id="卡顿现象">卡顿现象&lt;/h2>
+&lt;ul>
+&lt;li>打开个人 profile 时卡顿&lt;/li>
+&lt;li>打开和搜索存储密码时卡顿&lt;/li>
+&lt;li>新建和关闭 tab 时卡顿&lt;/li>
+&lt;li>在新建的 tab 中输入字符时卡顿&lt;/li>
+&lt;/ul>
+&lt;p>目前发现仅中文版 Windows 系统会出现此类型的卡顿.&lt;/p>
+&lt;h2 id="解决办法">解决办法&lt;/h2>
+&lt;p>中文浏览器设置路径: &lt;code>隐私-搜索-服务 -&amp;gt; 地址栏和搜索 -&amp;gt; 搜索建议和筛选器 -&amp;gt; 搜索筛选器&lt;/code>, &lt;strong>关闭&lt;/strong>搜索筛选器.&lt;/p>
+&lt;p>英文浏览器设置路径: &lt;code>Privacy search and services -&amp;gt; Address bar and search -&amp;gt; Search sugesstion and filters -&amp;gt; Search filters&lt;/code>, &lt;strong>TURN OFF&lt;/strong> Search filters.&lt;/p>
+&lt;p>&lt;img src="https://s2.loli.net/2024/05/07/yhBqcLiaFAkdp3G.png" alt="设置指导">&lt;/p></description></item></channel></rss>

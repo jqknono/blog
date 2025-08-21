@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Nono Blogs</title><link>https://blog.jqknono.com/en-us/tags/docker/</link><description>Recent content in Docker on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 28 Jun 2024 19:09:08 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker</title><link>https://blog.jqknono.com/en-us/blog/tools/docker/</link><pubDate>Fri, 28 Jun 2024 19:09:08 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/tools/docker/</guid><description>&lt;h1 id="k8s-and-docker">k8s and Docker&lt;/h1>
+&lt;ul>
+&lt;li>[&lt;a href="docker%E4%BB%8B%E7%BB%8D" title="docker-intro">docker-intro&lt;/a>]
+&lt;ul>
+&lt;li>[&lt;a href="Windows%E5%AE%B9%E5%99%A8" title="windows-containers">windows-containers&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="docker%E7%BD%91%E7%BB%9C" title="docker-network">docker-network&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="docker%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90" title="docker-network-analysis">docker-network-analysis&lt;/a>]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>Docker Introduction</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/docker-introduction/</link><pubDate>Fri, 28 Jun 2024 16:00:31 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/docker-introduction/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Docker Introduction&lt;/li>
+&lt;/ul>
+&lt;h1 id="docker-introduction">Docker Introduction&lt;/h1>
+&lt;ul>
+&lt;li>Docker is an application container engine that packages an application with its dependencies into a portable container and can then run it on any popular Linux or Windows machine, achieving virtualization as well.&lt;/li>
+&lt;li>Why do we have Docker? Developers and operators often run into the same problem: an application works perfectly in the developer’s environment but is riddled with bugs in production.
+&lt;ul>
+&lt;li>A program’s execution spans several layers—from hardware architecture through the operating system down to the application itself—but developers usually focus only on the application, ignoring issues in the other layers.&lt;/li>
+&lt;li>Docker was created to solve this problem: it bundles the application and all of its dependencies into a container so that you never have to worry about the underlying environment.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>By keeping development and production environments in sync, developers can build, test, and deploy applications locally without stressing over environmental differences. Development and operations become far more efficient at the modest cost of a tiny amount of extra resource usage.&lt;/li>
+&lt;/ul>
+&lt;p>I strongly urge every developer to learn how to use containers for development and deployment. For a relatively small cost, you can provide your applications with a stable runtime environment and thus improve both development and operations efficiency.&lt;/p></description></item></channel></rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tool on Nono Blogs</title><link>https://blog.jqknono.com/en-us/categories/tool/</link><description>Recent content in Tool on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 27 Mar 2025 17:09:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/categories/tool/index.xml" rel="self" type="application/rss+xml"/><item><title>Thinking Tools</title><link>https://blog.jqknono.com/en-us/blog/2025/03/27/thinking-tools/</link><pubDate>Thu, 27 Mar 2025 17:09:13 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/03/27/thinking-tools/</guid><description>&lt;h2 id="1-basic-logical-thinking-methods">&lt;strong>1. Basic Logical Thinking Methods&lt;/strong>&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Induction &amp;amp; Deduction&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Induction&lt;/strong>: Generalize universal laws from particular cases (e.g., deriving the concept of “horse” from “black horses, white horses”).&lt;/li>
+&lt;li>&lt;strong>Deduction&lt;/strong>: Derive specific conclusions from universal laws (e.g., using the definition of “horse” to infer “black horse” or “white horse”).&lt;/li>
+&lt;li>&lt;strong>Use cases&lt;/strong>: Scientific research, data analysis, rule-making.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Analysis &amp;amp; Synthesis&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Analysis&lt;/strong>: Break down the whole into parts to study it (e.g., dissecting light’s wave-particle duality).&lt;/li>
+&lt;li>&lt;strong>Synthesis&lt;/strong>: Integrate parts into a unified whole (e.g., combining wave and particle theories of light to propose a new theory).&lt;/li>
+&lt;li>&lt;strong>Use cases&lt;/strong>: Deconstructing complex problems, system design.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Causal Reasoning&lt;/strong>&lt;/p></description></item><item><title>Win-to-go</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/</link><pubDate>Fri, 28 Jun 2024 17:07:10 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/</guid><description>&lt;p>===&lt;/p>
+&lt;p>Windows To Go is convenient for portability, but several traditional Windows features are restricted.&lt;/p>
+&lt;!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+&lt;!-- code_chunk_output -->
+&lt;ul>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/#preface">Preface&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/#windows-to-go-overview">Windows To Go Overview&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/#differences-between-windows-to-go-and-traditional-windows-installation">Differences between Windows To Go and traditional Windows installation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/#using-windows-to-go-for-mobile-work">Using Windows To Go for mobile work&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/#preparing-to-install-windows-to-go">Preparing to install Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/#hardware-requirements">Hardware requirements&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/#usb-hard-drive-or-flash-drive">USB hard drive or flash drive&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/#host-computer">Host computer&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/#checking-architecture-compatibility-between-host-pc-and-windows-to-go-drive">Checking architecture compatibility between host PC and Windows To Go drive&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://blog.jqknono.com/en-us/blog/2024/06/28/win-to-go/#common-windows-to-go-questions">Common Windows To Go questions&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;!-- /code_chunk_output -->
+&lt;h2 id="preface">Preface&lt;/h2>
+&lt;p>Windows To Go has existed for many years, yet there are so few Chinese-language resources on it—one can’t help but worry about the state of domestic IT documentation. The author has limited experience but is exposed to plenty of English development docs and hopes to lay some groundwork for future readers; any mistakes pointed out will be welcomed. For those comfortable reading English, comprehensive official documentation is available at the links below:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.microsoft.com/en-us/windows/deployment/planning/windows-to-go-overview">Windows To Go Overview&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/en-us/windows/deployment/planning/best-practice-recommendations-for-windows-to-go">Best practice recommendations for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/en-us/windows/deployment/planning/deployment-considerations-for-windows-to-go">Deployment considerations for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/en-us/windows/deployment/planning/prepare-your-organization-for-windows-to-go">Prepare your organization for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/en-us/windows/deployment/planning/security-and-data-protection-considerations-for-windows-to-go">Security and data protection considerations for Windows To Go&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.microsoft.com/en-us/windows/deployment/planning/windows-to-go-frequently-asked-questions">Windows To Go: frequently asked questions&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>This post covers the overview and some common questions—mostly translations with the occasional author note (indicated by [J] until the next full stop) to prevent misinformation.&lt;/p></description></item></channel></rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorials on Nono Blogs</title><link>https://blog.jqknono.com/en-us/tags/tutorials/</link><description>Recent content in Tutorials on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 28 Jun 2024 16:38:40 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/tags/tutorials/index.xml" rel="self" type="application/rss+xml"/><item><title>Virtual Memory Disk Setup</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/virtual-memory-disk-setup/</link><pubDate>Fri, 28 Jun 2024 16:38:40 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/virtual-memory-disk-setup/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Virtual Memory Disk Setup&lt;/li>
+&lt;/ul>
+&lt;h1 id="virtual-memory-disk-setup">Virtual Memory Disk Setup&lt;/h1>
+&lt;h2 id="redirect-browser-cache-to-virtual-disk">Redirect Browser Cache to Virtual Disk&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bat" data-lang="bat">&lt;span class="line">&lt;span class="cl"># Use ImDisk to create a virtual disk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># The following command creates a 4 GB virtual disk and mounts it as M: drive
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">imdisk -a -s 4G -m M: -p &lt;span class="s2">&amp;#34;/fs:ntfs /q /y&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">rd&lt;/span> /q /s &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Cache&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">rd&lt;/span> /q /s &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Code Cache&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">md&lt;/span> M:\Edge_Cache\
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">md&lt;/span> M:\Edge_CodeCache\
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">mklink&lt;/span> /D &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Cache&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;M:\Edge_Cache\&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">mklink&lt;/span> /D &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Code Cache&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;M:\Edge_CodeCache\&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Restore browser cache to default location
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">rd&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Cache&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">rd&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Code Cache&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">md&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Cache&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">md&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\Administrator\AppData\Local\Microsoft\Edge\User Data\Default\Code Cache&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Unmount the virtual disk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># To remove the virtual disk, use the following command
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">imdisk -D -m M:
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

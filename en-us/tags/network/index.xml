@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Network on Nono Blogs</title><link>https://blog.jqknono.com/en-us/tags/network/</link><description>Recent content in Network on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 25 Jun 2025 19:09:29 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/tags/network/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL Mirrored Network Mode Configuration Guide</title><link>https://blog.jqknono.com/en-us/blog/2025/06/25/wsl-mirrored-network-mode-configuration-guide/</link><pubDate>Wed, 25 Jun 2025 19:09:29 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/06/25/wsl-mirrored-network-mode-configuration-guide/</guid><description>&lt;h2 id="version-requirements">Version Requirements&lt;/h2>
+&lt;p>Current version status:&lt;/p>
+&lt;ul>
+&lt;li>Latest stable: 2.5.9 (known networking issues)&lt;/li>
+&lt;li>Recommended version: 2.6.0 preview (full mirrored mode support)&lt;/li>
+&lt;/ul>
+&lt;h2 id="mode-comparison-analysis">Mode Comparison Analysis&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Feature&lt;/th>
+ &lt;th>bridge mode (deprecated)&lt;/th>
+ &lt;th>mirrored mode (recommended)&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Protocol architecture&lt;/td>
+ &lt;td>Dual-stack&lt;/td>
+ &lt;td>Shared stack&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>IP address allocation&lt;/td>
+ &lt;td>Independent IP (Windows + WSL)&lt;/td>
+ &lt;td>Shared host IP&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Port resources&lt;/td>
+ &lt;td>Separate&lt;/td>
+ &lt;td>Shared ports (conflict-avoidance required)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Network performance&lt;/td>
+ &lt;td>Relatively heavy&lt;/td>
+ &lt;td>Lightweight &amp;amp; efficient&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Configuration complexity&lt;/td>
+ &lt;td>Simple&lt;/td>
+ &lt;td>Requires deep firewall policy setup&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="standard-configuration-steps">Standard Configuration Steps&lt;/h2>
+&lt;h3 id="1-network-mode-settings">1. Network Mode Settings&lt;/h3>
+&lt;p>Configure the base mode via &lt;strong>WSL Settings&lt;/strong> app:&lt;/p></description></item><item><title>Getting Started with DNS: The Internet's Address Book</title><link>https://blog.jqknono.com/en-us/docs/private-service/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/en-us/docs/private-service/dns/</guid><description>&lt;h2 id="what-is-dns">What is DNS?&lt;/h2>
+&lt;p>Welcome to our DNS series! Before diving into the technical details, let’s start with a simple question: What is DNS?&lt;/p>
+&lt;p>Imagine your phone’s contact list. You don’t need to memorize every friend’s phone number—just their names. When you want to call “Zhang San,” you find the name in your contacts and tap to dial. Your phone automatically looks up Zhang San’s phone number and places the call.&lt;/p></description></item><item><title>Using Common DDNS Subdomains May Cause China Telecom Broadband Service Degradation</title><link>https://blog.jqknono.com/en-us/blog/2025/02/19/using-common-ddns-subdomains-may-cause-china-telecom-broadband-service-degradation/</link><pubDate>Wed, 19 Feb 2025 13:06:08 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/02/19/using-common-ddns-subdomains-may-cause-china-telecom-broadband-service-degradation/</guid><description>&lt;p>I have been troubleshooting IPv6 disconnections and hole-punching failures for over three months. I’ve finally identified the root cause; here’s the story.&lt;/p>
+&lt;h2 id="my-first-post-asking-for-helpipv6-disconnections">My First Post Asking for Help—IPv6 Disconnections&lt;/h2>
+&lt;!-- https://www.v2ex.com/t/1088217 -->
+&lt;p>IPv6 had been working perfectly. Without touching any settings, and even though every device had its own IPv6, it suddenly lost IPv6 connectivity entirely.&lt;/p>
+&lt;p>&lt;code>curl 6.ipw.cn&lt;/code> returned nothing, and both &lt;code>ping6&lt;/code> and &lt;code>traceroute6 2400:3200::1&lt;/code> failed.&lt;/p>
+&lt;p>My ONT was bridged to the router, and I could still obtain the router’s own IPv6—one that could still reach the IPv6 Internet.&lt;/p></description></item><item><title>Compliance Discussion of Reverse Proxy in Home Networks</title><link>https://blog.jqknono.com/en-us/blog/2025/02/17/compliance-discussion-of-reverse-proxy-in-home-networks/</link><pubDate>Mon, 17 Feb 2025 15:04:23 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/02/17/compliance-discussion-of-reverse-proxy-in-home-networks/</guid><description>&lt;h1 id="background">Background&lt;/h1>
+&lt;p>About 90 days ago, I encountered an IPv6 connectivity issue with China Telecom Hubei. After long-term observation and analysis, here are the findings.&lt;/p>
+&lt;h1 id="problem-analysis">Problem Analysis&lt;/h1>
+&lt;p>Two initial suspected causes:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>PCDN usage detection&lt;/p>
+&lt;ul>
+&lt;li>No active use of PCDN&lt;/li>
+&lt;li>Only a small amount of BitTorrent downloads&lt;/li>
+&lt;li>Upload throttling has been applied, yet the problem persists&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Home server acting as blog origin&lt;/p>
+&lt;ul>
+&lt;li>Uses Cloudflare origin rules specifying a port&lt;/li>
+&lt;li>May be deemed “commercial behavior” by the ISP&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>After three months of validation, the issue is more likely triggered by exposing HTTP/HTTPS service ports to the public Internet.&lt;/p></description></item><item><title>How a vendor bypasses DNS blocking</title><link>https://blog.jqknono.com/en-us/blog/2024/12/13/how-a-vendor-bypasses-dns-blocking/</link><pubDate>Fri, 13 Dec 2024 17:19:36 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/12/13/how-a-vendor-bypasses-dns-blocking/</guid><description>&lt;p>Recently I noticed that the DNS public service IP is receiving abnormal traffic—tens of identical requests for the same domain every second, completely ignoring the DNS protocol and the global TTL value.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202412131719062.png" alt="Rapid repeated queries">&lt;/p>
+&lt;!-- `api-access.pangolin-sdk-toutiao-b.com` -->
+&lt;p>At first I thought the IP belonged to an attacker, but inspecting the flows revealed it was simply a certain vendor’s App frantically querying DNS. The backend sets &lt;code>TTL=10&lt;/code>, meaning any client that has just received the DNS response should cache it for ten seconds instead of re-querying the DNS server. Yet the App pounds the server with dozens of identical requests every second, proving it never honors the TTL. In our blocking statistics, more than 90 % of intercepted requests are for this single domain.&lt;/p></description></item><item><title>Network</title><link>https://blog.jqknono.com/en-us/blog/programmer/network/</link><pubDate>Wed, 13 Nov 2024 13:05:00 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/programmer/network/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Network&lt;/li>
+&lt;/ul>
+&lt;h1 id="network">Network&lt;/h1>
+&lt;ul>
+&lt;li>Bypass firewall
+&lt;ul>
+&lt;li>[&lt;a href="wireguard%E5%AF%B9%E6%8A%97%E8%BF%90%E8%90%A5%E5%95%86" title="wireguard对抗运营商">wireguard对抗运营商&lt;/a>]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Network troubleshooting
+&lt;ul>
+&lt;li>[&lt;a href="linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D" title="linux网络问题定位">linux网络问题定位&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="windows%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D" title="windows网络问题定位">windows网络问题定位&lt;/a>]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>DoT vs DoH vs DoQ</title><link>https://blog.jqknono.com/en-us/docs/private-service/dns/dot-vs-doh-vs-doq/</link><pubDate>Wed, 13 Nov 2024 11:35:36 +0800</pubDate><guid>https://blog.jqknono.com/en-us/docs/private-service/dns/dot-vs-doh-vs-doq/</guid><description>&lt;h2 id="dot">DoT&lt;/h2>
+&lt;p>DNS over TLS (DoT) is a DNS encryption protocol based on TLS. TLS 1.2 requires at least four round-trips, TLS 1.3 requires at least three round-trips, while DNS requests only need one round-trip.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Timeline
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ↓
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ┌───────────────────────────────────────────────────────────────────────┐
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client Server
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends SYN segment │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ SYN = 1, Seq = x │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server responds with SYN-ACK segment │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ SYN = 1, ACK = 1, Seq = y, Ack = x + 1 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends ACK segment │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ACK = 1, Seq = x + 1, Ack = y + 1 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ TCP connection established │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends ClientHello │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server responds with ServerHello │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server sends certificate chain │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends key exchange message │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server sends key exchange message │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends Finished │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server sends Finished │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ TLS handshake completed │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Client sends DNS query │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ Server responds with DNS query │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └───────────────────────────────────────────────────────────────────────┘
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>TLS 1.2 handshake requires at least two round-trip times (RTT): client sends ClientHello, server replies with ServerHello and certificates, then client sends ClientKeyExchange and ChangeCipherSpec, finally server sends Finished. TLS 1.3 simplifies the handshake to one round-trip (1-RTT). When sending ClientHello, client can include key share information (ClientKeyShare), server also includes key share information in ServerHello response, completing key negotiation and handshake within the first round-trip.&lt;/p></description></item><item><title>Fastest DNS</title><link>https://blog.jqknono.com/en-us/docs/private-service/dns/fastest-dns/</link><pubDate>Sun, 10 Nov 2024 19:12:42 +0800</pubDate><guid>https://blog.jqknono.com/en-us/docs/private-service/dns/fastest-dns/</guid><description>&lt;p>Ordinary users typically measure ping response speed of plaintext DNS IP addresses, but this rarely reflects actual server connection performance. Modern DNS requires encrypted DNS protocols to ensure service integrity against hijacking.&lt;/p>
+&lt;p>From client to destination, traffic usually passes through 5-8 network devices. Any of these can hijack UDP:53 requests through simple commands. Never rely on plaintext DNS, especially in enterprise environments where hijacking is nearly inevitable.&lt;/p>
+&lt;p>Example hijacking command:
+&lt;code>sudo iptables -t nat -A PREROUTING -p udp --dport 53 -j DNAT --to-destination 1.1.1.1:53&lt;/code>&lt;/p></description></item><item><title>IPv6 Disconnect Issue on Long-Running Windows Server 2019</title><link>https://blog.jqknono.com/en-us/blog/2024/11/06/ipv6-disconnect-issue-on-long-running-windows-server-2019/</link><pubDate>Wed, 06 Nov 2024 10:56:27 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/11/06/ipv6-disconnect-issue-on-long-running-windows-server-2019/</guid><description>&lt;p>My Windows Server 2019 rarely shuts down; under a China Telecom/Redmi router, every time IPv6 is renewed, the local IPv6 connection shows “No Internet access.” Rebooting the machine or toggling the IPv6 feature fixes it, while Linux doesn’t exhibit this problem.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/20241106115547.png" alt="">&lt;/p>
+&lt;p>To automate the fix, I use these two commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPInterface&lt;/span> &lt;span class="n">-AddressFamily&lt;/span> &lt;span class="n">IPv6&lt;/span> &lt;span class="n">-ifAlias&lt;/span> &lt;span class="n">Ethernet&lt;/span> &lt;span class="n">-RouterDiscovery&lt;/span> &lt;span class="n">Disabled&lt;/span>&lt;span class="p">;&lt;/span> 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPInterface&lt;/span> &lt;span class="n">-AddressFamily&lt;/span> &lt;span class="n">IPv6&lt;/span> &lt;span class="n">-ifAlias&lt;/span> &lt;span class="n">Ethernet&lt;/span> &lt;span class="n">-RouterDiscovery&lt;/span> &lt;span class="n">Enabled&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>As you can see, the commands merely force Windows to refresh its route table; it’s unclear why Windows doesn’t do this automatically.&lt;/p></description></item><item><title>openvpn network connectivity issues</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/openvpn-network-connectivity-issues/</link><pubDate>Fri, 28 Jun 2024 17:18:48 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/openvpn-network-connectivity-issues/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> openvpn configuration&lt;/li>
+&lt;/ul>
+&lt;h1 id="openvpn-configuration">openvpn configuration&lt;/h1>
+&lt;h2 id="tool-script">Tool script&lt;/h2>
+&lt;p>&lt;a href="https://github.com/angristan/openvpn-install">openvpn-install&lt;/a>&lt;/p>
+&lt;h2 id="windows-firewall-configuration">Windows firewall configuration&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Inbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Outbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Huawei Trust Concept</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/huawei-trust-concept/</link><pubDate>Fri, 28 Jun 2024 15:49:02 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/huawei-trust-concept/</guid><description>&lt;ul>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> Huawei Trust Concept&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Security: The product has strong anti-attack capabilities to safeguard the confidentiality, integrity, and availability of services and data.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Resilience: When under attack, the system maintains a defined operational state (including degraded states) and has the ability to recover quickly and evolve continuously.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Privacy: Complying with privacy protection is not only a legal and regulatory requirement but also a reflection of values. Users should be able to appropriately control how their data is used. Data usage policies should be transparent to users. Users should decide when and whether to receive information according to their needs. Privacy data must be safeguarded by robust protection capabilities and mechanisms.&lt;/p></description></item><item><title>Huawei Intranet Security Analysis</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/huawei-intranet-security-analysis/</link><pubDate>Fri, 28 Jun 2024 15:48:48 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/huawei-intranet-security-analysis/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Huawei Intranet Security Analysis&lt;/li>
+&lt;/ul>
+&lt;p>Huawei has plenty of excellent internal learning materials, and I have amassed a wealth of knowledge and experience myself; I have long wondered how to import them into my personal knowledge base. I am fully aware that these generic insights are neither confidential nor sensitive, yet the ever-present warning bells of information security make me itchy while keeping well behind the red line. After some testing, I found the company’s network-security protections hard to break. This article provides a sketchy analysis of the R&amp;amp;D yellow zone.&lt;/p></description></item><item><title>Using DNS to Gracefully Switch Network Services</title><link>https://blog.jqknono.com/en-us/blog/2024/06/12/using-dns-to-gracefully-switch-network-services/</link><pubDate>Wed, 12 Jun 2024 19:00:34 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/12/using-dns-to-gracefully-switch-network-services/</guid><description>&lt;p>Assume the service domain name is &lt;code>example.domain&lt;/code>, the original server IP is &lt;code>A&lt;/code>, and the new server IP is &lt;code>B&lt;/code> after migration or IP change. To keep users unaware, we can use DNS to gracefully switch network services.&lt;/p>
+&lt;ol>
+&lt;li>Original state: &lt;code>example.domain&lt;/code> resolves to IP &lt;code>A&lt;/code>.&lt;/li>
+&lt;li>Transition state: &lt;code>example.domain&lt;/code> resolves to both IP &lt;code>A&lt;/code> and &lt;code>B&lt;/code>.&lt;/li>
+&lt;li>New state: &lt;code>example.domain&lt;/code> resolves to IP &lt;code>B&lt;/code>; IP &lt;code>A&lt;/code> is removed.&lt;/li>
+&lt;/ol>
+&lt;p>Note: When users receive two resolved addresses, the client picks one to connect to; if that fails, it tries the others, ensuring service availability.&lt;/p></description></item><item><title>How to Improve Network Experience with a Self-Hosted DNS Service</title><link>https://blog.jqknono.com/en-us/blog/2024/05/18/how-to-improve-network-experience-with-a-self-hosted-dns-service/</link><pubDate>Sat, 18 May 2024 10:46:44 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/05/18/how-to-improve-network-experience-with-a-self-hosted-dns-service/</guid><description>&lt;h2 id="network-quality-vs-network-experience">Network Quality vs. Network Experience&lt;/h2>
+&lt;blockquote>
+&lt;p>Do nothing, and you’ll already enjoy the best network experience.&lt;/p>&lt;/blockquote>
+&lt;p>First, note that “network quality” and “network experience” are two different concepts. Communication is a process involving many devices. The upload/download performance of a &lt;strong>single device&lt;/strong> can be termed &lt;strong>network quality&lt;/strong>, while the end-to-end behavior of the entire communication path is what we call &lt;strong>network experience&lt;/strong>.&lt;/p>
+&lt;h2 id="measuring-network-quality">Measuring Network Quality&lt;/h2>
+&lt;p>Evaluating network quality usually involves several metrics and methods. Common ones include:&lt;/p></description></item><item><title>Bypassing ChatGPT VPN Detection</title><link>https://blog.jqknono.com/en-us/blog/2024/05/09/bypassing-chatgpt-vpn-detection/</link><pubDate>Thu, 09 May 2024 10:30:29 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/05/09/bypassing-chatgpt-vpn-detection/</guid><description>&lt;p>How to handle the ChatGPT error messages&lt;br>
+“Unable to load site”&lt;br>
+“Please try again later; if you are using a VPN, try turning it off.”&lt;br>
+“Check the status page for information on outages.”&lt;/p>
+&lt;h2 id="foreword">Foreword&lt;/h2>
+&lt;p>&lt;img src="https://s2.loli.net/2024/05/09/dT4xi1mwFgYRKhq.png" alt="">&lt;/p>
+&lt;p>ChatGPT is still the best chatbot in terms of user experience, but in mainland China its use is restricted by the network environment, so we need a proxy (literally a “ladder”) to reach it. ChatGPT is, however, quite strict in detecting proxies, and if it finds one it will simply refuse service. This article explains a way around that detection.&lt;/p></description></item></channel></rss>

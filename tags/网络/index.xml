@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网络 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E7%BD%91%E7%BB%9C/</link><description>Recent content in 网络 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 25 Jun 2025 19:09:29 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL mirrored网络模式配置指南</title><link>https://blog.jqknono.com/blog/2025/06/25/wsl-mirrored%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><pubDate>Wed, 25 Jun 2025 19:09:29 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/06/25/wsl-mirrored%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><description>&lt;h2 id="版本要求">版本要求&lt;/h2>
+&lt;p>当前版本状态：&lt;/p>
+&lt;ul>
+&lt;li>最新稳定版：2.5.9（存在网络配置缺陷）&lt;/li>
+&lt;li>推荐版本：2.6.0 预览版（支持完整mirrored模式）&lt;/li>
+&lt;/ul>
+&lt;h2 id="模式对比分析">模式对比分析&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>特性&lt;/th>
+ &lt;th>bridge模式（已废弃）&lt;/th>
+ &lt;th>mirrored模式（推荐）&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>协议栈架构&lt;/td>
+ &lt;td>双协议栈&lt;/td>
+ &lt;td>共享协议栈&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>IP地址分配&lt;/td>
+ &lt;td>独立IP（Windows+WSL）&lt;/td>
+ &lt;td>共享主机IP&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>端口资源&lt;/td>
+ &lt;td>独立使用&lt;/td>
+ &lt;td>共享端口（需避免冲突）&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>网络性能&lt;/td>
+ &lt;td>相对较重&lt;/td>
+ &lt;td>轻量高效&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>配置复杂度&lt;/td>
+ &lt;td>简单&lt;/td>
+ &lt;td>需深度配置防火墙策略&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="标准配置步骤">标准配置步骤&lt;/h2>
+&lt;h3 id="1-网络模式设置">1. 网络模式设置&lt;/h3>
+&lt;p>通过 &lt;strong>WSL Settings&lt;/strong> 应用设置基础模式：&lt;/p>
+&lt;ol>
+&lt;li>打开设置应用&lt;/li>
+&lt;li>选择&amp;quot;Network&amp;quot;选项卡&lt;/li>
+&lt;li>设置网络模式为&amp;quot;Mirrored&amp;quot;&lt;/li>
+&lt;li>应用配置并重启WSL&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202506261151336.png" alt="">&lt;/p>
+&lt;h3 id="2-防火墙策略配置">2. 防火墙策略配置&lt;/h3>
+&lt;p>需通过PowerShell执行完整策略配置：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 定义WSL虚拟机GUID&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">$wslGuid&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s1">&amp;#39;{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 配置防火墙策略（按顺序执行）&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span> &lt;span class="n">-Enabled&lt;/span> &lt;span class="n">True&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span> &lt;span class="n">-DefaultInboundAction&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span> &lt;span class="n">-DefaultOutboundAction&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span> &lt;span class="n">-LoopbackEnabled&lt;/span> &lt;span class="n">True&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span> &lt;span class="n">-AllowHostPolicyMerge&lt;/span> &lt;span class="n">True&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 验证配置结果&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Get-NetFirewallHyperVVMSetting&lt;/span> &lt;span class="n">-Name&lt;/span> &lt;span class="nv">$wslGuid&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="3-端口映射验证">3. 端口映射验证&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 示例：检查80端口占用情况&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Get-NetTCPConnection&lt;/span> &lt;span class="n">-LocalPort&lt;/span> &lt;span class="mf">80&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="常见问题处理">常见问题处理&lt;/h2>
+&lt;h3 id="问题1无法建立外部连接">问题1：无法建立外部连接&lt;/h3>
+&lt;ul>
+&lt;li>检查步骤：&lt;code>Get-NetFirewallHyperVVMSetting&lt;/code>输出中所有字段应为True/Allow&lt;/li>
+&lt;li>解决方案：按顺序重新执行防火墙策略配置&lt;/li>
+&lt;/ul>
+&lt;h3 id="问题2端口冲突">问题2：端口冲突&lt;/h3>
+&lt;ul>
+&lt;li>验证方法：&lt;code>netstat -ano&lt;/code>查看端口占用&lt;/li>
+&lt;li>处理建议：优先释放Windows端占用端口，或修改WSL服务监听端口&lt;/li>
+&lt;/ul>
+&lt;h2 id="验证方法">验证方法&lt;/h2>
+&lt;ol>
+&lt;li>启动WSL服务（如Nginx/Apache）&lt;/li>
+&lt;li>从Windows主机访问&lt;code>http://localhost:&amp;lt;port&amp;gt;&lt;/code>&lt;/li>
+&lt;li>从局域网设备访问&lt;code>http://&amp;lt;host-ip&amp;gt;:&amp;lt;port&amp;gt;&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;h2 id="参考资料">参考资料&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://learn.microsoft.com/en-us/windows/wsl/networking">WSL官方网络文档&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/microsoft/WSL/releases/tag/2.6.0">WSL 2.6.0发布说明&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>DNS 入门：互联网的地址簿</title><link>https://blog.jqknono.com/docs/private-service/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/docs/private-service/dns/</guid><description>&lt;h2 id="dns-是什么">DNS 是什么？&lt;/h2>
+&lt;p>欢迎来到我们的 DNS 系列文章！在我们深入探讨技术细节之前，让我们先从一个简单的问题开始：什么是 DNS？&lt;/p>
+&lt;p>想象一下，你的手机通讯录。你不需要记住每个朋友的电话号码，只需要记住他们的名字。当你想要打电话给朋友“张三”时，你只需在通讯录里找到他的名字，然后点击拨号。你的手机会自动查找“张三”对应的电话号码并拨打出去。&lt;/p>
+&lt;p>&lt;strong>DNS（Domain Name System，域名系统）&lt;/strong> 就扮演着类似“互联网通讯录”的角色。它负责将我们容易记忆的网站域名（比如 &lt;code>www.google.com&lt;/code>）“翻译”成计算机能够理解的 IP 地址（比如 &lt;code>172.217.160.78&lt;/code>）。没有 DNS，我们就必须记住一长串毫无规律的数字才能访问网站，这几乎是不可能的。&lt;/p>
+&lt;h2 id="dns-如何工作">DNS 如何工作？&lt;/h2>
+&lt;p>这个“翻译”过程通常在幕后飞快地完成。当你-在浏览器中输入一个网址时，大致会发生以下几个步骤：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>请求&lt;/strong>：你的电脑或手机会向一个 DNS 解析器（Resolver）发送请求：“&lt;code>www.example.com&lt;/code> 的 IP 地址是什么？”&lt;/li>
+&lt;li>&lt;strong>查询&lt;/strong>：DNS 解析器会像一个侦探一样，通过层层查询（从根服务器到顶级域名服务器，再到权威域名服务器）来找到答案。&lt;/li>
+&lt;li>&lt;strong>响应&lt;/strong>：一旦找到，解析器就会将 IP 地址返回给你的电脑。&lt;/li>
+&lt;li>&lt;strong>连接&lt;/strong>：你的浏览器使用这个 IP 地址与网站的服务器建立连接，最终将网页内容呈现在你面前。&lt;/li>
+&lt;/ol>
+&lt;h2 id="本系列我们将探讨什么">本系列我们将探讨什么？&lt;/h2>
+&lt;p>DNS 的世界远比这个简单的比喻要丰富和复杂。在本系列文章中，我们将带你深入了解 DNS 的方方面面，包括：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>核心概念&lt;/strong>：深入理解域名、IP 地址、以及它们之间的关系。&lt;/li>
+&lt;li>&lt;strong>记录类型&lt;/strong>：学习 A 记录、CNAME 记录、MX 记录等不同 DNS 记录的用途。&lt;/li>
+&lt;li>&lt;strong>服务器类型&lt;/strong>：了解递归服务器和权威服务器等不同角色的 DNS 服务器。&lt;/li>
+&lt;li>&lt;strong>DNS 查询过程&lt;/strong>：详细拆解一次完整的 DNS 查询是如何进行的。&lt;/li>
+&lt;li>&lt;strong>DNS 缓存&lt;/strong>：探索 DNS 缓存如何提高网站访问速度。&lt;/li>
+&lt;li>&lt;strong>私有 DNS&lt;/strong>：如何搭建和使用私有 DNS 服务来增强网络安全和隐私。&lt;/li>
+&lt;/ul>
+&lt;p>无论你是刚刚接触网络知识的新手，还是希望巩固基础知识的开发者，本系列都将为你提供清晰、易懂的指引。&lt;/p>
+&lt;p>让我们开始 DNS 的探索之旅吧！&lt;/p></description></item><item><title>几个更安全使用公网IPv6的方法</title><link>https://blog.jqknono.com/blog/2025/02/28/%E5%87%A0%E4%B8%AA%E6%9B%B4%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E5%85%AC%E7%BD%91ipv6%E7%9A%84%E6%96%B9%E6%B3%95/</link><pubDate>Fri, 28 Feb 2025 12:45:22 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/28/%E5%87%A0%E4%B8%AA%E6%9B%B4%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E5%85%AC%E7%BD%91ipv6%E7%9A%84%E6%96%B9%E6%B3%95/</guid><description>&lt;p>有些人会有使用公网 IPv6 回家的需求, 不同于 tailscale/zerotier 等 VPN 需要内网穿透打洞来建立直连的方式, IPv6 回家就是直连, 手机蜂窝网络大多数时候都是有 IPv6 的, 回家非常方便.&lt;/p>
+&lt;p>我之前分享过一篇文章&lt;a href="https://www.v2ex.com/t/1112630">家庭宽带使用常见 DDns 子域名可能会使电信宽带服务降级&lt;/a>, 描述使用 IPv6 时运营商挖的一个坑, 简短来说就是域名会被扫, 暴漏自己的域名等同于暴露 IPv6, 因此可能会被扫描, 扫到服务后入站连接一多就降级宽带服务.&lt;/p>
+&lt;p>那篇分享里只提到了域名扫描, 没有提到&lt;code>网络空间扫描&lt;/code>, 这种扫描不管什么暴露的信息, 直接遍历 IP 池开扫, 这种情况较难防.&lt;/p>
+&lt;p>&lt;code>网络空间扫描&lt;/code>通常包括以下几个方面：&lt;/p>
+&lt;ul>
+&lt;li>IP 存活性探测：利用 ARP、ICMP、TCP 等协议来识别在线主机。&lt;/li>
+&lt;li>端口/服务探测：通过端口扫描筛选出在线主机的开放端口，并获取目标主机的服务信息、版本信息以及操作系统信息。&lt;/li>
+&lt;li>操作系统探测：通过分析响应数据包来推断目标主机的操作系统类型和版本。&lt;/li>
+&lt;li>流量采集：监控网络流量以发现异常行为或攻击模式。&lt;/li>
+&lt;li>别名解析：针对拥有多个 IP 地址的路由器，建立 IP 地址与路由器之间的映射关系。&lt;/li>
+&lt;li>DNS 探测：通过 IP 地址反向解析建立 IP 地址与域名之间的对应关系。&lt;/li>
+&lt;/ul>
+&lt;p>这里分享几个避免被网络空间扫描扫到的方法:&lt;/p>
+&lt;ol>
+&lt;li>内网 DNS 服务器不返回 AAAA 记录&lt;/li>
+&lt;li>内网服务仅允许通过域名访问, 不允许直接通过 IP 访问&lt;/li>
+&lt;li>使用私有 DNS 服务&lt;a href="https://www.adguardprivate.com">AdGuardPrivate&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h2 id="内网-dns-服务器不返回-aaaa-记录">内网 DNS 服务器不返回 AAAA 记录&lt;/h2>
+&lt;p>上网时上到各式各样的网站, 这样自然的访问就可以暴露源 IPv6, 对方服务器可以获取源 IPv6, 用户侧如果没开防火墙的话, 这个 IPv6 就可以放到网络空间扫描的优先遍历池里.&lt;/p></description></item><item><title>如何使用必应国际版</title><link>https://blog.jqknono.com/blog/2025/02/20/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%BF%85%E5%BA%94%E5%9B%BD%E9%99%85%E7%89%88/</link><pubDate>Thu, 20 Feb 2025 15:03:04 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/20/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%BF%85%E5%BA%94%E5%9B%BD%E9%99%85%E7%89%88/</guid><description>&lt;p>有些搜索引擎不思进取，能搜到的有价值的内容越来越少，广告却越来越多。相信不少人都已逐渐放弃这类搜索引擎，转而使用必应（bing.com)。&lt;/p>
+&lt;p>但必应有多个版本：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://cn.bing.com">cn.bing.com&lt;/a> 是中国版，搜索结果经过审查。
+&lt;ul>
+&lt;li>国内版：主要搜索中文内容。
+&lt;img src="https://img1.techfetch.dev/blog/202502201527190.png" alt="">&lt;/li>
+&lt;li>国际版：同时支持搜索中文和英文内容。
+&lt;img src="https://img1.techfetch.dev/blog/202502201530275.png" alt="">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://www.bing.com">www.bing.com&lt;/a> 这是真正的国际版，搜索结果没有中国大陆的审查，可以搜索到更多“你懂的”内容。
+&lt;img src="https://img1.techfetch.dev/blog/202502201535693.png" alt="">&lt;/li>
+&lt;/ul>
+&lt;p>这三个版本的搜索结果会有所区别。对于具备英文阅读能力的用户，强烈推荐使用国际版，能获取到更有价值的资料。&lt;/p>
+&lt;p>我就不详细展开真国际版搜索内容的差异了，有兴趣的朋友可以自行尝试。&lt;/p>
+&lt;p>真国际版还提供 &lt;code>Microsoft Copilot&lt;/code> 的入口，类似于 &lt;code>ChatGPT&lt;/code> 的功能，可以帮你总结搜索结果。虽然有使用频次限制，但正常使用是足够的。&lt;/p>
+&lt;p>国内版和国际版的切换没有难度，这里主要介绍如何使用必应真正的国际版。&lt;/p>
+&lt;p>相信不少人在设置里折腾了很久，但还是无法使用国际版，这可能是方向错了。&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202502201533833.png" alt="">&lt;/p>
+&lt;p>真正的限制在于 DNS。DNS 可以根据请求者的所在地域，给出不同的解析结果。例如，山东和河南请求 &lt;code>qq.com&lt;/code> 的 IP 地址可能不一样。通常，DNS 会返回在地理位置上更靠近的服务器 IP。&lt;/p>
+&lt;p>因此，如果你想使用国际版，可以尝试将 DNS 更换为 Google 的 &lt;code>tls://dns.google&lt;/code> 或者 Cloudflare 的 &lt;code>tls://one.one.one.one&lt;/code>。&lt;/p>
+&lt;p>这里只提供了两个 DNS 服务商的加密 DNS 地址，没有提供纯 IP 的 DNS，因为纯 IP 的海外 DNS 很容易被劫持，分享 &lt;code>8.8.8.8&lt;/code> 和 &lt;code>1.1.1.1&lt;/code> 毫无意义。&lt;/p>
+&lt;p>DNS 的设置方法可以参考 &lt;a href="https://www.adguardprivate.com/docs/startup/free/android/">如何配置 DNS 加密&lt;/a>。&lt;/p>
+&lt;p>注意，最简单的使用国际版必应的方法是使用加密 DNS，也有其他方法，本文不展开。&lt;/p>
+&lt;p>如果一个 DNS 不可用，可以依次尝试以下几个设置：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>tls://dns.google&lt;/code>&lt;/li>
+&lt;li>&lt;code>tls://one.one.one.one&lt;/code>&lt;/li>
+&lt;li>&lt;code>tls://8.8.8.8&lt;/code>&lt;/li>
+&lt;li>&lt;code>tls://8.8.4.4&lt;/code>&lt;/li>
+&lt;li>&lt;code>tls://1.1.1.1&lt;/code>&lt;/li>
+&lt;li>&lt;code>tls://1.0.0.1&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>通常会有两个能连接成功。如果全部无法连接，那只能寻找其他方法了。&lt;/p></description></item><item><title>使用常见DDns子域名可能导致电信宽带服务降级</title><link>https://blog.jqknono.com/blog/2025/02/19/%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%81ddns%E5%AD%90%E5%9F%9F%E5%90%8D%E5%8F%AF%E8%83%BD%E5%AF%BC%E8%87%B4%E7%94%B5%E4%BF%A1%E5%AE%BD%E5%B8%A6%E6%9C%8D%E5%8A%A1%E9%99%8D%E7%BA%A7/</link><pubDate>Wed, 19 Feb 2025 13:06:08 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/19/%E4%BD%BF%E7%94%A8%E5%B8%B8%E8%A7%81ddns%E5%AD%90%E5%9F%9F%E5%90%8D%E5%8F%AF%E8%83%BD%E5%AF%BC%E8%87%B4%E7%94%B5%E4%BF%A1%E5%AE%BD%E5%B8%A6%E6%9C%8D%E5%8A%A1%E9%99%8D%E7%BA%A7/</guid><description>&lt;p>IPv6 断连和打洞失败问题折腾了三个多月, 终于确认原因, 分享给大家.&lt;/p>
+&lt;h2 id="第一次发帖求助-ipv6-断连问题">第一次发帖求助 IPv6 断连问题&lt;/h2>
+&lt;!-- https://www.v2ex.com/t/1088217 -->
+&lt;p>IPv6 一直可以正常访问, 没有修改设置的情况下, 且设备均有独立 ipv6, 但连不通 ipv6 网络.&lt;/p>
+&lt;p>&lt;code>curl 6.ipw.cn&lt;/code> 拿不到返回, &lt;code>ping6&lt;/code> 和 &lt;code>traceroute6 2400:3200::1&lt;/code> 都中断.&lt;/p>
+&lt;p>光猫桥接路由, 可以拿到路由器的 ipv6 地址, 这是可以访问 ipv6 的地址.&lt;/p>
+&lt;p>可以拿到&lt;code>/56&lt;/code> 前缀, 路由器下设备都可以拿到分配的 ipv6 地址 &lt;code>240e:36f:15c3:3200::/56&lt;/code>, 但都无法连接到 ipv6 网站.&lt;/p>
+&lt;p>怀疑是运营商没有建好 &lt;code>240e:36f:15c3:3200::&lt;/code>的路由, 但无法确认.&lt;/p>
+&lt;p>网友说可能是 PCDN 上传流量过大导致, 但上传流量很小, 也没有开启 PCDN.&lt;/p>
+&lt;p>也可能是使用了 Cloudflare 和 Aliyun ESA 反代导致.&lt;/p>
+&lt;h2 id="第二次发帖确认直接原因">第二次发帖确认直接原因&lt;/h2>
+&lt;!-- https://www.v2ex.com/t/1111168 -->
+&lt;p>确认部分地区的电信运营商会因为 IPv6 入站 http/https 链接较多而降级服务, 表现为:&lt;/p>
+&lt;ul>
+&lt;li>假 IPv6, ipv6 可以获得 &lt;code>/56&lt;/code> 前缀, 各设备 IPv6 分配正常, 但 tracert 缺路由, 导致 ipv6 实际无法联网.&lt;/li>
+&lt;li>假穿墙, tailscale 测试连接显示是直连, 但延迟超高, 实际网速极慢.&lt;/li>
+&lt;/ul>
+&lt;p>关闭 Cloudflare/Aliyun ESA 的反代, 经过多次重启路由后, 可以恢复 IPv6 和真直连.&lt;/p></description></item><item><title>家庭网络反向代理的合规性探讨</title><link>https://blog.jqknono.com/blog/2025/02/17/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%9A%84%E5%90%88%E8%A7%84%E6%80%A7%E6%8E%A2%E8%AE%A8/</link><pubDate>Mon, 17 Feb 2025 15:04:23 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/17/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%9A%84%E5%90%88%E8%A7%84%E6%80%A7%E6%8E%A2%E8%AE%A8/</guid><description>&lt;h1 id="背景">背景&lt;/h1>
+&lt;p>约 90 天前，我遇到了湖北电信 IPv6 无法连接的问题。经过长期观察和分析，现总结出以下经验。&lt;/p>
+&lt;h1 id="问题分析">问题分析&lt;/h1>
+&lt;p>最初怀疑的两个可能原因：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>PCDN 使用检测&lt;/p>
+&lt;ul>
+&lt;li>虽未主动使用 PCDN&lt;/li>
+&lt;li>仅有少量 BT 下载行为&lt;/li>
+&lt;li>已实施上传限速，但问题仍然存在&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>家庭服务器作为博客源站&lt;/p>
+&lt;ul>
+&lt;li>通过 Cloudflare 回源规则指定端口&lt;/li>
+&lt;li>可能被运营商判定为&amp;quot;商用行为&amp;quot;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>经过三个月的验证，问题更可能源于向公网开放 HTTP/HTTPS 服务端口。&lt;/p>
+&lt;h1 id="具体表现">具体表现&lt;/h1>
+&lt;ol>
+&lt;li>
+&lt;p>IPv6 状态异常：&lt;/p>
+&lt;ul>
+&lt;li>可获得 /56 前缀&lt;/li>
+&lt;li>设备能获取全局 IPv6 地址&lt;/li>
+&lt;li>但无法访问外网&lt;/li>
+&lt;li>仅光猫桥接的路由器可正常使用 IPv6&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Tailscale 连接异常：&lt;/p>
+&lt;ul>
+&lt;li>源站服务器显示直连但延迟异常（约 400ms）&lt;/li>
+&lt;li>其他设备经中继连接，反而延迟更低（约 80ms）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="运营商策略分析">运营商策略分析&lt;/h1>
+&lt;p>部分地区电信运营商对频繁入站 HTTP/HTTPS 连接采取服务降级措施：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>IPv6 服务降级&lt;/p>
+&lt;ul>
+&lt;li>分配地址正常&lt;/li>
+&lt;li>路由表缺失&lt;/li>
+&lt;li>实际无法联网&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>P2P 连接限制&lt;/p>
+&lt;ul>
+&lt;li>Tailscale 显示直连&lt;/li>
+&lt;li>实际延迟高&lt;/li>
+&lt;li>带宽受限&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="解决方案">解决方案&lt;/h1>
+&lt;ol>
+&lt;li>
+&lt;p>关闭反向代理服务：&lt;/p>
+&lt;ul>
+&lt;li>停用 Cloudflare/阿里云 ESA 反代&lt;/li>
+&lt;li>多次重启路由器后可恢复正常&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>防范域名扫描：
+避免使用以下常见子域名：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">- home.example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- ddns.example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- dev.example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- test.example.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>最佳实践：&lt;/p></description></item><item><title>某厂商防止DNS拦截的办法</title><link>https://blog.jqknono.com/blog/2024/12/13/%E6%9F%90%E5%8E%82%E5%95%86%E9%98%B2%E6%AD%A2dns%E6%8B%A6%E6%88%AA%E7%9A%84%E5%8A%9E%E6%B3%95/</link><pubDate>Fri, 13 Dec 2024 17:19:36 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/12/13/%E6%9F%90%E5%8E%82%E5%95%86%E9%98%B2%E6%AD%A2dns%E6%8B%A6%E6%88%AA%E7%9A%84%E5%8A%9E%E6%B3%95/</guid><description>&lt;p>近日发觉 DNS 公共服务有 IP 有异常访问行为, 每秒数十次重复的请求一个域名, 完全不遵循 DNS 协议, 不理会全局生存时间 (TTL)值.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202412131719062.png" alt="重复快速请求域名">&lt;/p>
+&lt;!-- `api-access.pangolin-sdk-toutiao-b.com` -->
+&lt;p>开始时以为该 IP 是攻击者, 观察流量后发现, 主要是某厂商的 App 在疯狂请求 DNS. 后端设置的&lt;code>TTL=10&lt;/code>表示接收到的 DNS 查询返回值生命周期为 10 秒, 这 10 秒内请求者都应该使用这个返回值, 而不是再次请求 DNS 服务器. 但该 App 每秒数十个相同请求, 说明该 App 没有按照 DNS 协议正确处理 TTL 值. 后台拦截请求统计里, 有 90%以上的请求都是该域名的请求.&lt;/p>
+&lt;p>可能该厂商知道有 DNS 拦截的手段, 采取了你不让我访问, 我就让用户 App 直接 DoS 攻击你的 DNS 服务器的方式. 由于后端同时设置了每秒只允许 20 次突发请求, 该莽撞行为同时会影响到用户的其它正常 DNS 查询, 影响其它 App 的正常使用.&lt;/p>
+&lt;p>运维看到这样单 IP 疯狂请求同一域名的行为, 不想放行也得放行了.&lt;/p></description></item><item><title>低风险爬虫行为分析：收益与策略</title><link>https://blog.jqknono.com/blog/2024/12/03/%E4%BD%8E%E9%A3%8E%E9%99%A9%E7%88%AC%E8%99%AB%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E6%94%B6%E7%9B%8A%E4%B8%8E%E7%AD%96%E7%95%A5/</link><pubDate>Tue, 03 Dec 2024 15:06:32 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/12/03/%E4%BD%8E%E9%A3%8E%E9%99%A9%E7%88%AC%E8%99%AB%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E6%94%B6%E7%9B%8A%E4%B8%8E%E7%AD%96%E7%95%A5/</guid><description>&lt;h2 id="引言">引言&lt;/h2>
+&lt;p>在数字化转型加速的今天，网络爬虫已成为连接数据孤岛、挖掘信息价值的重要桥梁。根据Statista数据显示，全球数据量预计将在2025年达到175ZB，其中80%的数据是非结构化的网络数据。网络爬虫作为获取和分析这些海量网络数据的关键工具，其重要性日益凸显。&lt;/p>
+&lt;p>然而，爬虫行为往往伴随着法律风险和道德争议。许多企业和开发者在追求数据价值的同时，面临着合规性挑战、道德困境和技术难题。特别是在GDPR、CCPA等隐私保护法规实施后，数据采集的合法性边界变得更加模糊。&lt;/p>
+&lt;p>本文将基于最新的法律法规和技术实践，深入分析低风险爬虫行为的策略。我们将从法律风险评估、技术实现要点、数据源选择策略、收益量化分析、道德约束框架等多个维度，为读者提供全面的指导原则。目标是帮助读者在严格遵守法律法规的前提下，实现数据的最大价值，同时维护互联网生态的健康发展。&lt;/p>
+&lt;p>通过本文的分析，你将了解到：&lt;/p>
+&lt;ul>
+&lt;li>如何评估和规避爬虫行为的法律风险&lt;/li>
+&lt;li>哪些数据源是低风险且高价值的&lt;/li>
+&lt;li>如何构建合规且高效的爬虫系统&lt;/li>
+&lt;li>爬虫行为的经济效益和风险量化模型&lt;/li>
+&lt;li>负责任的爬虫实践指南&lt;/li>
+&lt;/ul>
+&lt;p>让我们一起探索在数字时代，如何负责任地利用爬虫技术创造价值。&lt;/p>
+&lt;h2 id="法律风险分析">法律风险分析&lt;/h2>
+&lt;h3 id="国内外法律法规差异">国内外法律法规差异&lt;/h3>
+&lt;p>&lt;strong>中国&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>《网络安全法》（2021年修订）：要求网络运营者采取技术措施防止爬虫干扰，保护网络安全&lt;/li>
+&lt;li>《数据安全法》（2021年）：对个人敏感信息获取有严格限制，明确数据分类分级保护制度&lt;/li>
+&lt;li>《个人信息保护法》（2021年）：首次明确&amp;quot;个人敏感信息&amp;quot;定义，强化个人权益保护&lt;/li>
+&lt;li>《反不正当竞争法》（2019年修订）：禁止通过技术手段获取商业秘密，增加互联网领域不正当竞争行为&lt;/li>
+&lt;li>《最高人民法院关于审理侵害信息网络传播权民事纠纷案件适用法律若干问题的规定》（2020年）：明确网络爬虫行为的法律边界&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>美国&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>DMCA（数字千年版权法）：保护版权内容，网站可通过DMCA通知移除侵权内容&lt;/li>
+&lt;li>CFAA（计算机欺诈和滥用法）：禁止未授权访问计算机系统，但对公开数据有例外&lt;/li>
+&lt;li>CCPA（加州消费者隐私法）：对数据收集和处理有严格要求&lt;/li>
+&lt;li>重要判例：LinkedIn vs. HiQ Labs（2021年）：最高法院裁定，爬取公开可用数据不构成违法&lt;/li>
+&lt;li>重要判例：hiQ Labs vs. LinkedIn（2019年）：联邦法院支持数据抓取的合法性&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>欧盟&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>GDPR（通用数据保护条例）：对个人数据保护要求极高，违约最高可罚款全球营业额4%&lt;/li>
+&lt;li>ePrivacy指令：规范电子通信中的隐私保护&lt;/li>
+&lt;li>重要判例：Fashion ID GmbH &amp;amp; Co. KG vs. Verbraucherzentrale NRW e.V.（2019年）：涉及爬虫与数据库权的冲突&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>其他重要地区&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>日本：《个人信息保护法》（2020年修订版）加强了数据主体权利&lt;/li>
+&lt;li>印度：《个人信息保护法案》（2023年）即将实施，对数据处理有严格要求&lt;/li>
+&lt;li>澳大利亚：《隐私法》（1988年）及其修正案，包含严格的数据保护条款&lt;/li>
+&lt;/ul>
+&lt;h3 id="经典案例分析">经典案例分析&lt;/h3>
+&lt;ol>
+&lt;li>&lt;strong>LinkedIn vs. HiQ Labs（2021）&lt;/strong>：美国最高法院裁定，爬取公开可用数据不构成违法，强调了数据可获取性的重要性&lt;/li>
+&lt;li>&lt;strong>eBay vs. Bidder&amp;rsquo;s Edge（2000）&lt;/strong>：禁止大规模爬取影响网站正常运营，确立了&amp;quot;服务器过载&amp;quot;作为违法标准的判例&lt;/li>
+&lt;li>&lt;strong>Facebook vs. Power Ventures（2009）&lt;/strong>：涉及社交网络数据抓取的版权和隐私问题&lt;/li>
+&lt;li>&lt;strong>国内案例&lt;/strong>：淘宝等平台对爬虫软件的打击行动，涉及《反不正当竞争法》的适用&lt;/li>
+&lt;li>&lt;strong>Google vs. Equustek（2017）&lt;/strong>：涉及搜索引擎对侵权网站的链接问题，对爬虫行为有间接影响&lt;/li>
+&lt;li>&lt;strong>Ryanair Ltd vs. PR Aviation BV（2015）&lt;/strong>：欧盟法院关于数据库权的判例，对数据抓取产生影响&lt;/li>
+&lt;/ol>
+&lt;h3 id="最新发展趋势">最新发展趋势&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>隐私保护强化&lt;/strong>：各国都在加强个人数据保护，爬虫行为面临更严格的监管&lt;/li>
+&lt;li>&lt;strong>数据可携权&lt;/strong>：GDPR等法规赋予个人数据可携权，对数据采集模式产生影响&lt;/li>
+&lt;li>&lt;strong>算法透明化&lt;/strong>：越来越多的法规要求算法决策的透明度和可解释性&lt;/li>
+&lt;li>&lt;strong>国际数据流动限制&lt;/strong>：数据本地化要求对跨国爬虫行为形成约束&lt;/li>
+&lt;/ul>
+&lt;h2 id="低风险爬虫策略">低风险爬虫策略&lt;/h2>
+&lt;h3 id="技术实现要点">技术实现要点&lt;/h3>
+&lt;ol>
+&lt;li>&lt;strong>遵守robots.txt&lt;/strong>：虽然不是法律要求，但体现对网站所有者的尊重。建议使用Python的robotparser模块解析robots.txt文件&lt;/li>
+&lt;li>&lt;strong>合理请求频率&lt;/strong>：避免对网站造成过大负担。建议单个域名请求间隔不低于1秒，大型网站可适当增加间隔&lt;/li>
+&lt;li>&lt;strong>设置User-Agent&lt;/strong>：标识爬虫身份，便于网站识别和管理。建议包含联系信息，如：&lt;code>MyBot/1.0 (contact@example.com)&lt;/code>&lt;/li>
+&lt;li>&lt;strong>实现随机延迟&lt;/strong>：模拟人类访问行为，降低被识别风险。建议使用指数退避算法处理请求延迟&lt;/li>
+&lt;li>&lt;strong>IP轮换策略&lt;/strong>：使用代理IP池分散请求，避免单IP被识别和限制&lt;/li>
+&lt;li>&lt;strong>会话管理&lt;/strong>：合理使用Cookie和Session，避免频繁重新建立连接&lt;/li>
+&lt;li>&lt;strong>错误处理机制&lt;/strong>：实现完善的异常处理，避免因网络问题导致的无限重试&lt;/li>
+&lt;li>&lt;strong>数据缓存策略&lt;/strong>：避免重复抓取相同内容，减少对服务器的负担&lt;/li>
+&lt;li>&lt;strong>流量控制&lt;/strong>：实现请求队列和并发限制，防止突发流量影响网站正常运营&lt;/li>
+&lt;li>&lt;strong>自适应速率&lt;/strong>：根据服务器响应时间动态调整请求频率&lt;/li>
+&lt;/ol>
+&lt;h3 id="技术架构建议">技术架构建议&lt;/h3>
+&lt;p>&lt;strong>分布式爬虫架构&lt;/strong>：&lt;/p></description></item><item><title>网络</title><link>https://blog.jqknono.com/blog/programmer/network/</link><pubDate>Wed, 13 Nov 2024 13:05:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/programmer/network/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 网络&lt;/li>
+&lt;/ul>
+&lt;h1 id="网络">网络&lt;/h1>
+&lt;ul>
+&lt;li>绕墙
+&lt;ul>
+&lt;li>[&lt;a href="wireguard%E5%AF%B9%E6%8A%97%E8%BF%90%E8%90%A5%E5%95%86" title="wireguard对抗运营商">wireguard对抗运营商&lt;/a>]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>网络问题定位
+&lt;ul>
+&lt;li>[&lt;a href="linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D" title="linux网络问题定位">linux网络问题定位&lt;/a>]&lt;/li>
+&lt;li>[&lt;a href="windows%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D" title="windows网络问题定位">windows网络问题定位&lt;/a>]&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>DoT vs DoH vs DoQ</title><link>https://blog.jqknono.com/docs/private-service/dns/dot-vs-doh-vs-doq/</link><pubDate>Wed, 13 Nov 2024 11:35:36 +0800</pubDate><guid>https://blog.jqknono.com/docs/private-service/dns/dot-vs-doh-vs-doq/</guid><description>&lt;h2 id="dot">DoT&lt;/h2>
+&lt;p>DNS over TLS（DoT）是一种基于 TLS 的 DNS 加密协议。TLS 1.2 至少需要四次往返，TLS 1.3 则至少需要三次往返，而 DNS 请求仅需一次往返。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">时间轴
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ↓
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ┌───────────────────────────────────────────────────────────────────────┐
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端 服务器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送 SYN 段 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ SYN = 1, Seq = x │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器响应 SYN-ACK 段 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ SYN = 1, ACK = 1, Seq = y, Ack = x + 1 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送 ACK 段 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ACK = 1, Seq = x + 1, Ack = y + 1 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ TCP 连接建立 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送 ClientHello │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器响应 ServerHello │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器发送证书链 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送密钥交换消息 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器发送密钥交换消息 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送 Finished │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器发送 Finished │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ TLS 握手完成 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 客户端发送 DNS 查询 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ────────────────────────────────────────────────────────────────────▶│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ←─────────────────────────────────────────────────────────────────────│
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ 服务器响应 DNS 查询 │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └───────────────────────────────────────────────────────────────────────┘
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>TLS 1.2 的握手过程需要至少两个往返（RTT），即客户端发送 ClientHello，服务器回复 ServerHello 和证书，然后客户端发送 ClientKeyExchange 和 ChangeCipherSpec，最后服务器发送 Finished。TLS 1.3 将握手过程简化为一个往返（1-RTT）。客户端在发送 ClientHello 时可以包含密钥共享信息（ClientKeyShare），服务器在回复 ServerHello 时也包含密钥共享信息，从而在第一个往返内完成密钥协商和握手。&lt;/p></description></item><item><title>最快的DNS</title><link>https://blog.jqknono.com/docs/private-service/dns/fastest-dns/</link><pubDate>Sun, 10 Nov 2024 19:12:42 +0800</pubDate><guid>https://blog.jqknono.com/docs/private-service/dns/fastest-dns/</guid><description>&lt;p>普通用户通常测量的是明文 DNS 的 IP 的 ping 相应速度，但这很难保证是否是真正到达对应服务器的速度。现代 DNS 至少需要使用加密 DNS 才能确保服务未被劫持。&lt;/p>
+&lt;p>从客户端到终端通常会经过 5 到 8 个网络设备，在其中任意一个设备上都可以劫持 UDP:53 请求，这种劫持命令非常简单。因此，不要对明文 DNS 抱有任何侥幸的期待，特别是企业用户，基本上都会遭遇劫持。&lt;/p>
+&lt;p>以下是劫持命令示例：
+&lt;code>sudo iptables -t nat -A PREROUTING -p udp --dport 53 -j DNAT --to-destination 1.1.1.1:53&lt;/code>&lt;/p>
+&lt;p>设置劫持非常简单，许多企业内网用户的 DNS 速度都在个位数毫秒范围内，而在家庭网络中通常小于 1 毫秒。无论配置什么明文 DNS，最终都是自建的 DNS 服务在响应。&lt;/p>
+&lt;p>接下来讨论加密 DNS 的速度。在讨论之前，先介绍三种常见的加密 DNS 协议：DNS over TLS (DoT)、DNS over HTTP (DoH) 和 DNS over QUIC (DoQ)。&lt;/p>
+&lt;p>理论上，三种加密协议和未加密 DNS 的简化实现方式:&lt;/p>
+&lt;ul>
+&lt;li>最快的是 DoQ。QUIC 基于 UDP，建立连接需要一次往返，DNS 请求只需一次往返。&lt;/li>
+&lt;li>DoT 建立连接, tls1.2 需要至少四次往返, tls1.3 需要三次往返，略慢于 DoQ，DNS 请求一次往返。&lt;/li>
+&lt;li>DoH 基于 HTTPS，建立连接需要至少四次往返, 由于 HTTP 协议较重, 导致服务会略慢于 DoT。&lt;/li>
+&lt;li>传统的 UDP:53 不需要建立连接，只有一次往返。&lt;/li>
+&lt;/ul>
+&lt;p>也就是说，从零开始的 DNS 请求，加密 DNS 的耗时是未加密 DNS 的 2~4 倍左右，但在建立连接后，耗时与未加密 DNS 相同（未考虑连接强制关闭的情况）。&lt;/p></description></item><item><title>Windows Server 2019长时间运行ipv6断连问题</title><link>https://blog.jqknono.com/blog/2024/11/06/windows-server-2019%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%90%E8%A1%8Cipv6%E6%96%AD%E8%BF%9E%E9%97%AE%E9%A2%98/</link><pubDate>Wed, 06 Nov 2024 10:56:27 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/06/windows-server-2019%E9%95%BF%E6%97%B6%E9%97%B4%E8%BF%90%E8%A1%8Cipv6%E6%96%AD%E8%BF%9E%E9%97%AE%E9%A2%98/</guid><description>&lt;p>我的Windows Server 2019不怎么关机, 在电信/红米路由下, ipv6每次更新时, 本地ipv6连接都会显示无Internet访问权限, 重启设备或者开闭IPv6功能可以解决, Linux下不会出现这样问题.&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/20241106115547.png" alt="">&lt;/p>
+&lt;p>考虑自动化操作，用这两条命令解决:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPInterface&lt;/span> &lt;span class="n">-AddressFamily&lt;/span> &lt;span class="n">IPv6&lt;/span> &lt;span class="n">-ifAlias&lt;/span> &lt;span class="n">Ethernet&lt;/span> &lt;span class="n">-RouterDiscovery&lt;/span> &lt;span class="n">Disabled&lt;/span>&lt;span class="p">;&lt;/span> 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-NetIPInterface&lt;/span> &lt;span class="n">-AddressFamily&lt;/span> &lt;span class="n">IPv6&lt;/span> &lt;span class="n">-ifAlias&lt;/span> &lt;span class="n">Ethernet&lt;/span> &lt;span class="n">-RouterDiscovery&lt;/span> &lt;span class="n">Enabled&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>你可以看到命令只是让Windows更新了路由, 不知道为什么Windows没有自动更新路由.&lt;/p>
+&lt;p>如果有人碰到相同问题可以参考, 如果有更好的解决办法, 也欢迎讨论.&lt;/p></description></item><item><title>电信IPv6的一些特征</title><link>https://blog.jqknono.com/blog/2024/06/28/%E7%94%B5%E4%BF%A1ipv6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81/</link><pubDate>Fri, 28 Jun 2024 17:21:06 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E7%94%B5%E4%BF%A1ipv6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%89%B9%E5%BE%81/</guid><description>&lt;ul>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> 电信IPv6的一些特征&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> 电信 IPv6 的一些特征&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>国内已经全面铺开 ipv6 使用, ipv6 地址池足够大, 个人的每个设备都可以获取到一个 ipv6 地址.&lt;br>
+家庭用户使用时需要全栈设备都支持 ipv6 才能最终使用到 ipv6, 由于已经推了很多年, 目前来说 2016 年以后买的设备基本都支持 ipv6 了.&lt;/p>
+&lt;p>全栈设备包括: 城域设备-&amp;gt;小区路由-&amp;gt;家庭路由(光猫,路由器)-&amp;gt;终端设备(手机,电脑,电视等)&lt;/p>
+&lt;p>这里不讨论标准的 ipv6 协议, 只讨论电信的 ipv6 的一些特征.&lt;/p>
+&lt;h2 id="地址分配">地址分配&lt;/h2>
+&lt;p>首先是地址分配方式, ipv6 有三种分配方式: 静态分配, SLAAC, DHCPv6.&lt;br>
+湖北电信使用的是 SLAAC, 也就是说电信的 ipv6 地址是由设备自动分配的, 由于电信的 ipv6 地址池足够大, 所以不会出现地址冲突的问题.&lt;/p>
+&lt;p>电信 ipv6 地址是随机分配的, 24 小时后重新分配. 如果要从外部访问, 必须使用 DDNS 服务.&lt;/p>
+&lt;h2 id="防火墙">防火墙&lt;/h2>
+&lt;p>目前可以发现常见的&lt;code>80&lt;/code>, &lt;code>139&lt;/code>, &lt;code>445&lt;/code>等端口已对齐 ipv4 防火前已经都封了, 这非常容易理解, 运营商级的防火墙确实能保护到缺乏网络安全意识的普通用户. 2020 年时电信 ipv6 都是开放的, 现在已经封了一些常用端口.&lt;/p></description></item><item><title>为什么不应该把TCP思维套在UDP上</title><link>https://blog.jqknono.com/blog/2024/06/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BA%94%E8%AF%A5%E6%8A%8Atcp%E6%80%9D%E7%BB%B4%E5%A5%97%E5%9C%A8udp%E4%B8%8A/</link><pubDate>Fri, 28 Jun 2024 17:20:09 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BA%94%E8%AF%A5%E6%8A%8Atcp%E6%80%9D%E7%BB%B4%E5%A5%97%E5%9C%A8udp%E4%B8%8A/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 为什么不应该把TCP思维套在UDP上&lt;/li>
+&lt;/ul>
+&lt;h1 id="为什么不应该把-tcp-思维套在-udp-上">为什么不应该把 TCP 思维套在 UDP 上?&lt;/h1>
+&lt;h2 id="结构差异">结构差异&lt;/h2>
+&lt;p>&lt;img src="https://s2.loli.net/2023/06/30/ndPGpzMRX1L4Q6D.png" alt="TCP表头">&lt;br>
+&lt;img src="https://s2.loli.net/2023/06/30/ofdBYKb6iqaICA9.png" alt="UDP表头">&lt;/p>
+&lt;p>TCP 上的概念很多: 建立通路, 资源使用, 数据传输, 可靠传输, 基于重复累计确认的重传, 超时重传, 校验和, 流量控制, 拥塞控制, 最大分段大小, 选择确认, TCP 窗口缩放选项, TCP 时间戳, 强制数据递交, 终结通路.&lt;/p>
+&lt;p>以上这些能力, UDP 基本上都没有, 它仅比链路层多一点区分应用层目的的能力. UDP 足够简单意味着足够灵活.&lt;/p>
+&lt;h2 id="如果可能发生则一定会发生">如果可能发生,则一定会发生&lt;/h2>
+&lt;p>墨菲定律:&lt;/p>
+&lt;blockquote>
+&lt;p>如果有多过一种方式去做某事，而其中一种方式将导致灾难，则必定有人会这样选择。&lt;/p>&lt;/blockquote>
+&lt;p>通常介绍 UDP 适合应用在游戏/语音/视频等场景, 少量的错包不影响业务.
+为什么 UDP 适合这些场景? 它能用在这些场景, 不代表它是这些场景的最优方案, 必然是存在 TCP 无法解决的问题, 才让这些服务选择了功能简陋的 UDP 协议. 错包不影响业务扩展开来讲是指 TCP 协议在乎错包, UDP 不在乎错包, 更在乎实时性/连续性. UDP 的特点就是它不在乎 TCP 在乎的因素, 这些因素影响了实时性.&lt;/p>
+&lt;p>在代码实现上, UDP 只需要创建一个 socket, 绑定到一个端口上, 即可以开始收发. 通常 socket 用完时, 端口也用完了.&lt;/p></description></item><item><title>openvpn网络不通</title><link>https://blog.jqknono.com/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</link><pubDate>Fri, 28 Jun 2024 17:18:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/openvpn%E7%BD%91%E7%BB%9C%E4%B8%8D%E9%80%9A/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> openvpn配置&lt;/li>
+&lt;/ul>
+&lt;h1 id="openvpn配置">openvpn配置&lt;/h1>
+&lt;h2 id="工具脚本">工具脚本&lt;/h2>
+&lt;p>&lt;a href="https://github.com/angristan/openvpn-install">openvpn-install&lt;/a>&lt;/p>
+&lt;h2 id="windows防火墙配置">Windows防火墙配置&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Inbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">New-NetFirewallRule&lt;/span> &lt;span class="n">-DisplayName&lt;/span> &lt;span class="s2">&amp;#34;@openvpn&amp;#34;&lt;/span> &lt;span class="n">-Direction&lt;/span> &lt;span class="n">Outbound&lt;/span> &lt;span class="n">-RemoteAddress&lt;/span> &lt;span class="mf">10.8&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">0&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">1&lt;/span>&lt;span class="p">/&lt;/span>&lt;span class="mf">24&lt;/span> &lt;span class="n">-Action&lt;/span> &lt;span class="n">Allow&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>华为可信概念</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%8F%AF%E4%BF%A1%E6%A6%82%E5%BF%B5/</link><pubDate>Fri, 28 Jun 2024 15:49:02 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%8F%AF%E4%BF%A1%E6%A6%82%E5%BF%B5/</guid><description>&lt;ul>
+&lt;li>
+&lt;p>&lt;input disabled="" type="checkbox"> 华为可信概念&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>安全性（Security）：产品有良好的抗攻击能力，保护业务和数据的机密性、完整性和可用性。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>韧性（Resilience）：系统受攻击时保持有定义的运行状态（包括降级），遭遇攻击后快速恢复并持续演进的能力。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>隐私性（Privacy）：遵从隐私保护既是法律法规的要求，也是价值观的体现。用户应该能够适当地控制他们的数据的使用方式。信息的使用政策应该是对用户透明的。用户应该根据自己的需要来控制何时接收以及是否接收信息。用户的隐私数据要有完善的保护能力和机制。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>安全性（Safety）：系统失效导致的危害不存在不可接受的风险，不会伤害自然人生命或危及自然人健康，不管是直接还是通过损害环境或财产间接造成的。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>可靠性和可用性（Reliability&amp;amp; Availability）：产品能在生命周期内长期保障业务无故障运行，具备快速恢复和自我管理的能力，提供可预期的、一致的服务。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>ref:&lt;/p>
+&lt;p>&lt;a href="https://www.huawei.com/cn/trust-center/trustworthy#we-offer">华为.我们提供什么&lt;/a>&lt;/p></description></item><item><title>华为内网网络安全分析</title><link>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%86%85%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/</link><pubDate>Fri, 28 Jun 2024 15:48:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/%E5%8D%8E%E4%B8%BA%E5%86%85%E7%BD%91%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%88%86%E6%9E%90/</guid><description>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 华为内网网络安全分析&lt;/li>
+&lt;/ul>
+&lt;p>华为公司内部有很多不错的学习资料，自己也总结了很多知识经验，一直想着如何导入到自己的知识库。我清楚的明白这些通用化的知识是不涉密不敏感的，但信息安全警钟长鸣，让人心痒又不敢越雷池一步。经过一些测试，我发现公司的网络安全保护比较难突破。本文将对研发区黄区作一点粗略解析。绿区属于自由区域，默认无重要信息，一般为外围工作人员的网络。红区为超高级别的网络防护，目前尚未有长时间深入接触，简单接触到的红区位于网络设备实验室，存放各种大型交换机框架，是公司内网的枢纽，攻破红区的话就相当于攻破了区域网络，至少一栋楼的网络是可以瘫痪一段时间的。&lt;/p>
+&lt;h2 id="路由器防火墙方式">路由器防火墙方式&lt;/h2>
+&lt;p>&lt;strong>加密&lt;/strong>：加密使用公钥，什么是公钥，简单理解为钥匙，这把钥匙可以人手一把，但只能上锁，不可以开锁。以上是极为具现化的表达，下边会稍微抽象一点，公钥是一个数字 A，有一条信息 M，用 A 对 M 进行加密操作$$f(A, M)$$，得到的信息无法轻易反向解密，类似对数字求平方和求开方的难度区别，合并同类项和因式分解的难度区别。反向解密会非常困难且耗时，使用超级计算机也需要数年乃至数十年。&lt;/p>
+&lt;p>&lt;strong>解密&lt;/strong>：服务端使用私钥揭秘，四面八方汇聚来的已加密信息可以使用同一把私钥解密。&lt;/p>
+&lt;p>&lt;strong>中间人&lt;/strong>：中间人角色类似传话筒，对客户端它是服务端，在服务端看来它是一个普通用户。因为传声筒的角色，双方的信息它都一览无余。简单描述的话，华为自身扮演了一个非常强大的中间人，所有外发的网络流量都会经过其扫描，不使用 80/443 端口的流量会全部拦截。&lt;/p>
+&lt;p>&lt;strong>如何破解&lt;/strong>：由于黄区只有特定端口可以走代理服务器进出公网，对其它端口默认全封，那么严格来说网络流量就没有漏洞。我们可以手动生成密钥，在内网手动加密，再在外网手动解密，这样至少中间人看到的信息无法真正解析。加密器如何发送至内网，邮件/welink/网页都可以，但都会留下痕迹，其中通过网页直接秘密发送影响最小，痕迹最不明显。或者直接把密钥抄纸上，公司电脑保存起来，完全无法察觉，除了公司内遍布的摄像头。github 上的 ssh 贴心的支持 ssh over 443，经过测试发现也行不通，毕竟代理作为防火墙可以轻易识别这样的高风险网站。根据自身体验，公司的防火墙是基于白名单，而非黑名单，也就是即便是自建 ssh 服务器，也会被代理拦住。在浏览器中访问未知网站会有跳转页面提示“后果自负”，在终端窗口中直接就显示链接被关了。&lt;/p>
+&lt;p>华为毕竟是搞网络起家，搞网络的能人异士众多，技术上几乎无法突破，恐怕唯有社会工程能突破了。&lt;/p>
+&lt;h2 id="本地防火墙方式">本地防火墙方式&lt;/h2>
+&lt;p>Windows 系统会安装安全应用，用户无法随意更改配置，配置由管理员统一下发。应用的网络访问权限可能是黑白名单方式，部分应用无法访问网络。vscode 的新版无法走代理通道。&lt;/p></description></item><item><title>DoS防范</title><link>https://blog.jqknono.com/blog/2024/06/28/dos%E9%98%B2%E8%8C%83/</link><pubDate>Fri, 28 Jun 2024 15:47:44 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/dos%E9%98%B2%E8%8C%83/</guid><description>&lt;h1 id="ddos-防范">DDoS 防范&lt;/h1>
+&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">DDoS 定义&lt;/a>&lt;/p>
+&lt;p>两种 DoS 攻击方式:&lt;/p>
+&lt;ul>
+&lt;li>使服务崩溃&lt;/li>
+&lt;li>使网络拥塞&lt;/li>
+&lt;/ul>
+&lt;h2 id="攻击类型">攻击类型&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>攻击类型&lt;/th>
+ &lt;th>攻击方式&lt;/th>
+ &lt;th>应对方式&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Distributed DoS&lt;/td>
+ &lt;td>多台独立 IP 的机器同时开始攻击&lt;/td>
+ &lt;td>1. 降级服务 2. 黑名单 3. 关闭网络设备&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Yo-yo attack 悠悠球攻击&lt;/td>
+ &lt;td>对有自动扩展资源能力的服务, 在资源减少的间隙进行攻击&lt;/td>
+ &lt;td>黑名单&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Application layer attacks 应用层攻击&lt;/td>
+ &lt;td>针对特定的功能或特性进行攻击，&lt;a href="https://en.wikipedia.org/wiki/LAND">LAND&lt;/a> 攻击属于这种类型&lt;/td>
+ &lt;td>黑名单&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>LANS&lt;/td>
+ &lt;td>这种攻击方式采用了特别构造的 TCP SYN 数据包（通常用于开启一个新的连接），使目标机器开启一个源地址与目标地址均为自身 IP 地址的空连接，持续地自我应答，消耗系统资源直至崩溃。这种攻击方法与 SYN 洪泛攻击并不相同。&lt;/td>
+ &lt;td>黑名单&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Advanced persistent DoS 高级持续性 DoS&lt;/td>
+ &lt;td>反侦察/目标明确/逃避反制/长时间攻击/大算力/多线程攻击&lt;/td>
+ &lt;td>降级服务&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>HTTP slow POST DoS attack 慢 post 攻击&lt;/td>
+ &lt;td>创造合法连接后以极慢的速度发送大量数据, 导致服务器资源耗尽&lt;/td>
+ &lt;td>降级服务&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Challenge Collapsar (CC) attack 挑战 Collapsar (CC) 攻击&lt;/td>
+ &lt;td>将标准合法请求频繁发送，该请求会占用较多资源，比如搜索引擎会占用大量的内存&lt;/td>
+ &lt;td>降级服务，内容识别&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ICMP flood Internet 控制消息协议 (ICMP) 洪水&lt;/td>
+ &lt;td>大量 ping/错误 ping 包 /Ping of death(malformed ping packet)&lt;/td>
+ &lt;td>降级服务&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>永久拒绝服务攻击 Permanent denial-of-service attacks&lt;/td>
+ &lt;td>对硬件进行攻击&lt;/td>
+ &lt;td>内容识别&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>反射攻击 Reflected attack&lt;/td>
+ &lt;td>向第三方发送请求，通过伪造地址，将回复引导至真正受害者&lt;/td>
+ &lt;td>ddos 范畴&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Amplification 放大&lt;/td>
+ &lt;td>利用一些服务作为反射器，将流量放大&lt;/td>
+ &lt;td>ddos 范畴&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Mirai botnet 僵尸网络&lt;/td>
+ &lt;td>利用被控制的物联网设备&lt;/td>
+ &lt;td>ddos 范畴&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>SACK Panic 麻袋恐慌&lt;/td>
+ &lt;td>操作最大段大小和选择性确认，导致重传&lt;/td>
+ &lt;td>内容识别&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Shrew attack 泼妇攻击&lt;/td>
+ &lt;td>利用 TCP 重传超时机制的弱点，使用短暂的同步流量突发中断同一链路上的 TCP 连接&lt;/td>
+ &lt;td>超时丢弃&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>慢读攻击 Slow Read attack&lt;/td>
+ &lt;td>和慢 post 类似，发送合法请求，但读取非常慢， 以耗尽连接池，通过为 TCP Receive Window 大小通告一个非常小的数字来实现&lt;/td>
+ &lt;td>超时断连，降级服务，黑名单&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>SYN flood SYN 洪水&lt;/td>
+ &lt;td>发送大量 TCP/SYN 数据包， 导致服务器产生半开连接&lt;/td>
+ &lt;td>超时机制&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>泪珠攻击 Teardrop attacks&lt;/td>
+ &lt;td>向目标机器发送带有重叠、超大有效负载的损坏 IP 片段&lt;/td>
+ &lt;td>内容识别&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>TTL 过期攻击&lt;/td>
+ &lt;td>当由于 TTL 过期而丢弃数据包时，路由器 CPU 必须生成并发送 ICMP 超时响应。生成许多 ​​ 这样的响应会使路由器的 CPU 过载&lt;/td>
+ &lt;td>丢弃流量&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>UPnP 攻击&lt;/td>
+ &lt;td>基于 DNS 放大技术，但攻击机制是一个 UPnP 路由器，它将请求从一个外部源转发到另一个源，而忽略 UPnP 行为规则&lt;/td>
+ &lt;td>降级服务&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>SSDP 反射攻击&lt;/td>
+ &lt;td>许多设备，包括一些住宅路由器，都在 UPnP 软件中存在漏洞，攻击者可以利用该漏洞从端口号 1900 获取对他们选择的目标地址的回复。&lt;/td>
+ &lt;td>降级服务， 封禁端口&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ARP 欺骗&lt;/td>
+ &lt;td>将 MAC 地址与另一台计算机或网关（如路由器）的 IP 地址相关联，导致原本用于原始真实 IP 的流量重新路由到攻击者，导致拒绝服务。&lt;/td>
+ &lt;td>ddos 范畴&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="防范措施">防范措施&lt;/h2>
+&lt;ol>
+&lt;li>识别攻击流量
+&lt;ul>
+&lt;li>破坏服务
+&lt;ul>
+&lt;li>识别流量内容&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>拥塞服务
+&lt;ul>
+&lt;li>记录访问时间&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>对攻击流量进行处理
+&lt;ul>
+&lt;li>丢弃攻击流量&lt;/li>
+&lt;li>封禁攻击 ip
+&lt;ul>
+&lt;li>ipv4 ip 数量有限, 容易构造黑名单&lt;/li>
+&lt;li>ipv6 数量较多, 不容易构造黑名单. 可以使用 ipv6 的地址段, 但有错封禁的风险&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>控制访问频率&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="开源工具">开源工具&lt;/h2>
+&lt;h3 id="攻击工具">攻击工具&lt;/h3>
+&lt;ul>
+&lt;li>&lt;del>&lt;a href="https://github.com/palahsu/DDoS-Ripper">https://github.com/palahsu/DDoS-Ripper&lt;/a>&lt;/del>
+&lt;ul>
+&lt;li>162 forks, 755 stars&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://github.com/MHProDev/MHDDoS">https://github.com/MHProDev/MHDDoS&lt;/a>
+&lt;ul>
+&lt;li>539 forks, 2.2k stars&lt;/li>
+&lt;li>MHDDoS - DDoS Attack Script With 40 Methods&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://github.com/NewEraCracker/LOIC">https://github.com/NewEraCracker/LOIC&lt;/a>
+&lt;ul>
+&lt;li>539 forks, 1.9k stars&lt;/li>
+&lt;li>C#&lt;/li>
+&lt;li>network stress tool&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://github.com/PraneethKarnena/DDoS-Scripts">https://github.com/PraneethKarnena/DDoS-Scripts&lt;/a>
+&lt;ul>
+&lt;li>165 forks, 192 stars&lt;/li>
+&lt;li>C, Python&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://github.com/theodorecooper/awesome-ddos-tools">https://github.com/theodorecooper/awesome-ddos-tools&lt;/a>
+&lt;ul>
+&lt;li>46 stars&lt;/li>
+&lt;li>collection of ddos tools&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="防御工具">防御工具&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/AltraMayor/gatekeeper">https://github.com/AltraMayor/gatekeeper&lt;/a>
+&lt;ul>
+&lt;li>GPL-3.0 License&lt;/li>
+&lt;li>159 forks, 737 stars&lt;/li>
+&lt;li>C, Lua&lt;/li>
+&lt;li>Gatekeeper is the first open source DoS protection system.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;del>&lt;a href="https://github.com/Exa-Networks/exabgp">https://github.com/Exa-Networks/exabgp&lt;/a>&lt;/del>
+&lt;ul>
+&lt;li>Apache like license&lt;/li>
+&lt;li>415 forks, 1.8k stars&lt;/li>
+&lt;li>Python&lt;/li>
+&lt;li>The BGP swiss army knife of networking&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://github.com/curiefense/curiefense">https://github.com/curiefense/curiefense&lt;/a>
+&lt;ul>
+&lt;li>Apache 2.0 License&lt;/li>
+&lt;li>60 forks, 386 stars&lt;/li>
+&lt;li>Application-layer protection&lt;/li>
+&lt;li>protects sites, services, and APIs&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://github.com/qssec/Hades-lite">https://github.com/qssec/Hades-lite&lt;/a>
+&lt;ul>
+&lt;li>GPL-3.0 License&lt;/li>
+&lt;li>24 forks, 72 stars&lt;/li>
+&lt;li>C&lt;/li>
+&lt;li>内核级 Anti-ddos 的驱动程序&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://github.com/snort3/snort3">https://github.com/snort3/snort3&lt;/a>
+&lt;ul>
+&lt;li>GPL-2.0 License&lt;/li>
+&lt;li>372 forks, 1.4k stars&lt;/li>
+&lt;li>next generation Snort IPS (Intrusion Prevention System)&lt;/li>
+&lt;li>C++&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="流量监控">流量监控&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/netdata/netdata">https://github.com/netdata/netdata&lt;/a>
+&lt;ul>
+&lt;li>GPL-3.0 License&lt;/li>
+&lt;li>5.2k forks, 58.3k stars&lt;/li>
+&lt;li>C&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://github.com/giampaolo/psutil">https://github.com/giampaolo/psutil&lt;/a>
+&lt;ul>
+&lt;li>BSD-3-Clause License&lt;/li>
+&lt;li>1.2 forks, 8.2k stars&lt;/li>
+&lt;li>Python, C&lt;/li>
+&lt;li>Cross-platform lib for process and system monitoring in Python, also network monitoring&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://github.com/iptraf-ng/iptraf-ng">https://github.com/iptraf-ng/iptraf-ng&lt;/a>
+&lt;ul>
+&lt;li>GPL-2.0 License&lt;/li>
+&lt;li>22 forks, 119 stars&lt;/li>
+&lt;li>C&lt;/li>
+&lt;li>IPTraf-ng is a console-based network monitoring program for Linux that displays information about IP traffic.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>利用DNS服务平滑切换网络服务</title><link>https://blog.jqknono.com/blog/2024/06/12/%E5%88%A9%E7%94%A8dns%E6%9C%8D%E5%8A%A1%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</link><pubDate>Wed, 12 Jun 2024 19:00:34 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/12/%E5%88%A9%E7%94%A8dns%E6%9C%8D%E5%8A%A1%E5%B9%B3%E6%BB%91%E5%88%87%E6%8D%A2%E7%BD%91%E7%BB%9C%E6%9C%8D%E5%8A%A1/</guid><description>&lt;p>假设服务域名为&lt;code>example.domain&lt;/code>, 原服务器 IP 地址为&lt;code>A&lt;/code>, 由于服务器迁移或 IP 更换, 新服务器 IP 地址为&lt;code>B&lt;/code>, 为了保证用户无感知, 可以通过 DNS 服务平滑切换网络服务.&lt;/p>
+&lt;ol>
+&lt;li>原服务状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>A&lt;/code>&lt;/li>
+&lt;li>过渡状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>A&lt;/code> 和&lt;code>B&lt;/code>&lt;/li>
+&lt;li>新服务状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>B&lt;/code>, 移除 IP 地址&lt;code>A&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>说明: 当用户获得两个解析地址时, 客户端会选择其中一个地址进行连接, 当连接失败时, 会尝试其它地址, 以此保证服务的可用性.&lt;/p>
+&lt;p>由于 DNS 解析存在缓存, 为了保证平滑切换, 需要在过渡状态保持一段时间, 以确保所有缓存失效.&lt;/p>
+&lt;p>我这里需要迁移的是 dns 服务, 可以在过渡状态中设置&lt;code>DNS重写&lt;/code>, 加快迁移过程.&lt;/p>
+&lt;p>A 服务重写规则:&lt;/p>
+&lt;p>&lt;img src="https://s2.loli.net/2024/06/12/xRFMB1PTIcvUQHr.png" alt="A服务重写">&lt;/p>
+&lt;p>B 服务重写规则:&lt;/p>
+&lt;p>&lt;img src="https://s2.loli.net/2024/06/12/DILEi9jJoVYeuT2.png" alt="B服务重写">&lt;/p>
+&lt;p>原迁移过程拓展为:&lt;/p>
+&lt;ol>
+&lt;li>原服务状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>A&lt;/code>&lt;/li>
+&lt;li>过渡状态, &lt;code>example.domain&lt;/code> 在&lt;code>dns A&lt;/code>服务中重写到&lt;code>A&lt;/code>和&lt;code>B&lt;/code>, 在&lt;code>dns B&lt;/code>服务中重写到&lt;code>B&lt;/code>&lt;/li>
+&lt;li>新服务状态, &lt;code>example.domain&lt;/code> 解析到 IP 地址&lt;code>B&lt;/code>, 移除 IP 地址&lt;code>A&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>当用户仍在使用&lt;code>dns A&lt;/code>服务时, 可以获得两个地址, 有一半的概率会选择&lt;code>dns A&lt;/code>服务.&lt;br>
+另外一半的概率会切换到&lt;code>dns B&lt;/code>服务, &lt;code>dns B&lt;/code>服务故障时切换回&lt;code>dns A&lt;/code>. &lt;code>dns B&lt;/code>服务未故障时, 将只会获得一个地址, 因而用户会停留在&lt;code>dns B&lt;/code>服务中.&lt;br>
+这样我们可以逐步的减少&lt;code>dns A&lt;/code>服务的资源消耗, 而不是直接停止, 实现更平滑的迁移.&lt;/p></description></item><item><title>linux网络问题定位</title><link>https://blog.jqknono.com/blog/2024/05/28/linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D/</link><pubDate>Tue, 28 May 2024 16:39:14 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/28/linux%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D/</guid><description>&lt;h2 id="排障工具">排障工具&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>工具&lt;/th>
+ &lt;th>说明&lt;/th>
+ &lt;th>用法&lt;/th>
+ &lt;th>说明&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>ping&lt;/td>
+ &lt;td>测试网络连通性&lt;/td>
+ &lt;td>ping baidu.com&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>traceroute&lt;/td>
+ &lt;td>路由跟踪&lt;/td>
+ &lt;td>traceroute ip&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>route&lt;/td>
+ &lt;td>路由表&lt;/td>
+ &lt;td>route -n&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netstat&lt;/td>
+ &lt;td>网络连接&lt;/td>
+ &lt;td>netstat -ano&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>nslookup&lt;/td>
+ &lt;td>DNS 解析&lt;/td>
+ &lt;td>nslookup baidu.com&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ifconfig&lt;/td>
+ &lt;td>网络配置&lt;/td>
+ &lt;td>ifconfig&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>arp&lt;/td>
+ &lt;td>ARP 缓存&lt;/td>
+ &lt;td>arp -a&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>nbtstat&lt;/td>
+ &lt;td>NetBIOS&lt;/td>
+ &lt;td>nbtstat -n&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netsh&lt;/td>
+ &lt;td>网络配置&lt;/td>
+ &lt;td>netsh&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>net&lt;/td>
+ &lt;td>网络配置&lt;/td>
+ &lt;td>net&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpdump&lt;/td>
+ &lt;td>网络抓包&lt;/td>
+ &lt;td>tcpdump&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>wireshark&lt;/td>
+ &lt;td>网络抓包&lt;/td>
+ &lt;td>wireshark&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ip&lt;/td>
+ &lt;td>网络配置&lt;/td>
+ &lt;td>ip addr show&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ss&lt;/td>
+ &lt;td>网络连接&lt;/td>
+ &lt;td>ss -tunlp&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netstat&lt;/td>
+ &lt;td>查看网络连接状态&lt;/td>
+ &lt;td>netstat -anp&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpdump&lt;/td>
+ &lt;td>抓包工具&lt;/td>
+ &lt;td>tcpdump -i eth0 -nn -s 0 -c 1000 -w /tmp/tcpdump.pcap&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>iptables&lt;/td>
+ &lt;td>防火墙&lt;/td>
+ &lt;td>iptables -L -n -v -t nat -t mangle -t filter&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ss&lt;/td>
+ &lt;td>netstat 的替代品&lt;/td>
+ &lt;td>ss -anp&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ifconfig&lt;/td>
+ &lt;td>查看网卡信息&lt;/td>
+ &lt;td>ifconfig eth0&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ip&lt;/td>
+ &lt;td>查看网卡信息&lt;/td>
+ &lt;td>ip addr show eth0&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>route&lt;/td>
+ &lt;td>查看路由表&lt;/td>
+ &lt;td>route -n&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>traceroute&lt;/td>
+ &lt;td>查看路由跳数&lt;/td>
+ &lt;td>traceroute &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ping&lt;/td>
+ &lt;td>测试网络连通性&lt;/td>
+ &lt;td>ping &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>telnet&lt;/td>
+ &lt;td>测试端口连通性&lt;/td>
+ &lt;td>telnet &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a> 80&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>nslookup&lt;/td>
+ &lt;td>域名解析&lt;/td>
+ &lt;td>nslookup &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>dig&lt;/td>
+ &lt;td>域名解析&lt;/td>
+ &lt;td>dig &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>arp&lt;/td>
+ &lt;td>查看 arp 缓存&lt;/td>
+ &lt;td>arp -a&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netcat&lt;/td>
+ &lt;td>网络调试工具&lt;/td>
+ &lt;td>nc -l 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>nmap&lt;/td>
+ &lt;td>端口扫描工具&lt;/td>
+ &lt;td>nmap -sT -p 80 &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>mtr&lt;/td>
+ &lt;td>网络连通性测试工具&lt;/td>
+ &lt;td>mtr &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>iperf&lt;/td>
+ &lt;td>网络性能测试工具&lt;/td>
+ &lt;td>iperf -s -p 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>iptraf&lt;/td>
+ &lt;td>网络流量监控工具&lt;/td>
+ &lt;td>iptraf -i eth0&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ipcalc&lt;/td>
+ &lt;td>IP 地址计算工具&lt;/td>
+ &lt;td>ipcalc&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>iftop&lt;/td>
+ &lt;td>网络流量监控工具&lt;/td>
+ &lt;td>iftop -i eth0&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>iostat&lt;/td>
+ &lt;td>磁盘 IO 监控工具&lt;/td>
+ &lt;td>iostat -x 1 10&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>vmstat&lt;/td>
+ &lt;td>虚拟内存监控工具&lt;/td>
+ &lt;td>vmstat 1 10&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>sar&lt;/td>
+ &lt;td>系统性能监控工具&lt;/td>
+ &lt;td>sar -n DEV 1 10&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>lsof&lt;/td>
+ &lt;td>查看文件打开情况&lt;/td>
+ &lt;td>lsof -i:80&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>strace&lt;/td>
+ &lt;td>跟踪系统调用&lt;/td>
+ &lt;td>strace -p 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpflow&lt;/td>
+ &lt;td>抓包工具&lt;/td>
+ &lt;td>tcpflow -i eth0 -c -C -p -o /tmp/tcpflow&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpick&lt;/td>
+ &lt;td>抓包工具&lt;/td>
+ &lt;td>tcpick -i eth0 -C -p -o /tmp/tcpick&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcptrace&lt;/td>
+ &lt;td>抓包工具&lt;/td>
+ &lt;td>tcptrace -i eth0 -C -p -o /tmp/tcptrace&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpslice&lt;/td>
+ &lt;td>抓包工具&lt;/td>
+ &lt;td>tcpslice -i eth0 -C -p -o /tmp/tcpslice&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpstat&lt;/td>
+ &lt;td>抓包工具&lt;/td>
+ &lt;td>tcpstat -i eth0 -C -p -o /tmp/tcpstat&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tcpdump&lt;/td>
+ &lt;td>抓包工具&lt;/td>
+ &lt;td>tcpdump -i eth0 -C -p -o /tmp/tcpdump&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>tshark&lt;/td>
+ &lt;td>抓包工具&lt;/td>
+ &lt;td>tshark -i eth0 -C -p -o /tmp/tshark&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>wireshark&lt;/td>
+ &lt;td>抓包工具&lt;/td>
+ &lt;td>wireshark -i eth0 -C -p -o /tmp/wireshark&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>socat&lt;/td>
+ &lt;td>网络调试工具&lt;/td>
+ &lt;td>socat -d -d TCP-LISTEN:1234,fork TCP:www.baidu.com:80&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>ncat&lt;/td>
+ &lt;td>网络调试工具&lt;/td>
+ &lt;td>ncat -l 1234 -c &amp;rsquo;ncat &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a> 80'&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netperf&lt;/td>
+ &lt;td>网络性能测试工具&lt;/td>
+ &lt;td>netperf -H &lt;a href="https://www.baidu.com">www.baidu.com&lt;/a> -l 60 -t TCP_STREAM&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netcat&lt;/td>
+ &lt;td>网络调试工具&lt;/td>
+ &lt;td>netcat -l 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>nc&lt;/td>
+ &lt;td>网络调试工具&lt;/td>
+ &lt;td>nc -l 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netpipe&lt;/td>
+ &lt;td>网络性能测试工具&lt;/td>
+ &lt;td>netpipe -l 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>netkit&lt;/td>
+ &lt;td>网络调试工具&lt;/td>
+ &lt;td>netkit -l 1234&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>bridge&lt;/td>
+ &lt;td>网桥工具&lt;/td>
+ &lt;td>bridge -s&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item><item><title>K8s集群中如何保留负载均衡后的请求源IP</title><link>https://blog.jqknono.com/blog/2024/05/27/k8s%E9%9B%86%E7%BE%A4%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%9D%E7%95%99%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%90%8E%E7%9A%84%E8%AF%B7%E6%B1%82%E6%BA%90ip/</link><pubDate>Mon, 27 May 2024 11:52:22 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/27/k8s%E9%9B%86%E7%BE%A4%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BF%9D%E7%95%99%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E5%90%8E%E7%9A%84%E8%AF%B7%E6%B1%82%E6%BA%90ip/</guid><description>&lt;h2 id="引言">引言&lt;/h2>
+&lt;p>&lt;strong>应用部署&lt;/strong>不一定总是简单的&lt;strong>安装&lt;/strong>和&lt;strong>运行&lt;/strong>, 有时候还需要考虑&lt;strong>网络&lt;/strong>的问题. 本文将介绍如何在&lt;strong>k8s集群&lt;/strong>中使服务能获取到请求的&lt;strong>源IP&lt;/strong>.&lt;/p>
+&lt;p>应用提供服务一般依赖输入信息, 输入信息如果不依赖&lt;strong>五元组&lt;/strong>(源 IP, 源端口, 目的 IP, 目的端口, 协议), 那么该服务和&lt;strong>网络耦合性低&lt;/strong>, 不需要关心网络细节.&lt;/p>
+&lt;p>因此, 对多数人来说都没有阅读本文的必要, 如果你对网络感兴趣, 或者希望拓宽一点视野, 可以继续阅读下文, 了解更多的服务场景.&lt;/p>
+&lt;p>本文基于 k8s &lt;code>v1.29.4&lt;/code>, 文中部分叙述混用了 pod 和 endpoint, 本文场景下可以视为等价.&lt;/p>
+&lt;p>&lt;strong>如果有错误, 欢迎指正, 我会及时更正.&lt;/strong>&lt;/p>
+&lt;h2 id="为什么源-ip-信息会丢失">为什么源 IP 信息会丢失?&lt;/h2>
+&lt;p>我们首先明确源 IP 是什么, 当 A 向 B 发送请求, B 将请求转发给 C, 虽然 C 看到的 IP 协议的源 IP 是 B 的 IP, 但本文把&lt;strong>A的IP&lt;/strong>看作源 IP.&lt;/p>
+&lt;p>主要有两类行为会导致源信息丢失:&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>网络地址转换(NAT)&lt;/strong>, 目的是节省公网 IPv4, 负载均衡等. 将导致服务端看到的源 IP 是 &lt;strong>NAT&lt;/strong> 设备的 IP, 而不是真实的源 IP.&lt;/li>
+&lt;li>&lt;strong>代理(Proxy)&lt;/strong>, &lt;strong>反向代理&lt;/strong>(RP, Reverse Proxy)和&lt;strong>负载均衡&lt;/strong>(LB, Load Balancer)都属于这一类, 下文统称&lt;strong>代理服务器&lt;/strong>. 这类代理服务会将请求转发给后端服务, 但是会将源 IP 替换为自己的 IP.&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>NAT 简单来说是&lt;strong>以端口空间换IP空间&lt;/strong>, IPv4 地址有限, 一个 IP 地址可以映射 65535 个端口, 绝大多数时候这些端口没有用完, 因而可以多个子网 IP 共用一个公网 IP, 在端口上区分不同的服务. 其使用形式是: &lt;code>public IP:public port -&amp;gt; private IP_1:private port&lt;/code>, 更多内容请自行参阅&lt;a href="https://www.google.com/search?q=%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2">网络地址转换&lt;/a>&lt;/li>
+&lt;li>代理服务是为了&lt;strong>隐藏或暴露&lt;/strong>, 代理服务会将请求转发给后端服务, 同时将源 IP 替换为自己的 IP, 以此来隐藏后端服务的真实 IP, 保护后端服务的安全. 代理服务的使用形式是: &lt;code>client IP -&amp;gt; proxy IP -&amp;gt; server IP&lt;/code>, 更多内容请自行参阅&lt;a href="https://www.google.com/search?q=%E4%BB%A3%E7%90%86">代理&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>NAT&lt;/strong>和&lt;strong>代理服务器&lt;/strong>都非常常见, 多数服务都无法获得请求的源 IP.&lt;/p></description></item><item><title>如何提升自建DNS服务下的网络体验</title><link>https://blog.jqknono.com/blog/2024/05/18/%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87%E8%87%AA%E5%BB%BAdns%E6%9C%8D%E5%8A%A1%E4%B8%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BD%93%E9%AA%8C/</link><pubDate>Sat, 18 May 2024 10:46:44 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/18/%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87%E8%87%AA%E5%BB%BAdns%E6%9C%8D%E5%8A%A1%E4%B8%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BD%93%E9%AA%8C/</guid><description>&lt;h2 id="网络质量和网络体验">网络质量和网络体验&lt;/h2>
+&lt;blockquote>
+&lt;p>什么都不做, 即可以获得最好的网络体验&lt;/p>&lt;/blockquote>
+&lt;p>需要明确, 这里&lt;code>网络质量&lt;/code>和&lt;code>网络体验&lt;/code>是两个不同的概念. 通信是一个过程, 涉及多个设备, 我们可以称单个设备的上下行表现为&lt;code>网络质量&lt;/code>, 而整个端到端的通信表现, 我们可以称为&lt;code>网络体验&lt;/code>.&lt;/p>
+&lt;h2 id="如何衡量网络质量">如何衡量网络质量&lt;/h2>
+&lt;p>衡量网络质量通常涉及多个指标和方法。以下是一些常见的衡量网络质量的方法和指标：&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>带宽（Bandwidth）&lt;/strong>：带宽是指网络传输数据的能力，通常以每秒传输的数据量（比特/秒）来衡量。更高的带宽通常表示更好的网络质量。&lt;/li>
+&lt;li>&lt;strong>延迟（Latency）&lt;/strong>：延迟是指数据从发送端到接收端所需的时间。低延迟表示数据传输速度快，网络响应更快。&lt;/li>
+&lt;li>&lt;strong>丢包率（Packet Loss Rate）&lt;/strong>：丢包率是指在数据传输过程中丢失的数据包的比例。较低的丢包率通常意味着网络质量较好。&lt;/li>
+&lt;li>&lt;strong>抖动（Jitter）&lt;/strong>：抖动是指数据包在传输过程中的变化或波动。较小的抖动表示网络稳定性较高。&lt;/li>
+&lt;li>&lt;strong>吞吐量（Throughput）&lt;/strong>：吞吐量是指网络传输的实际数据量，通常以单位时间内的数据传输量来衡量。更高的吞吐量表示网络质量更好。&lt;/li>
+&lt;li>&lt;strong>网络拓扑（Network Topology）&lt;/strong>：网络拓扑描述了网络中节点之间的连接方式和结构。合理的网络拓扑设计可以提高网络性能和质量。&lt;/li>
+&lt;li>&lt;strong>服务质量（Quality of Service，QoS）&lt;/strong>：QoS 是一组技术和机制，用于确保在网络中的数据传输中实现可接受的服务质量。QoS 可以通过各种方式实现，包括流量控制、优先级队列等。&lt;/li>
+&lt;li>&lt;strong>网络协议分析（Protocol Analysis）&lt;/strong>：通过分析网络协议和数据包，可以了解网络中的性能指标和问题，例如使用 Wireshark 等网络分析工具。&lt;/li>
+&lt;/ol>
+&lt;p>综合利用这些指标和方法，可以全面地评估网络质量，确定网络性能的优势和改进的空间。 但这些是运营商关注的指标, 对于普通用户, 只需要购买价格合适的路由器即可, 现代路由器都有自动调整网络质量的功能.&lt;/p>
+&lt;h2 id="如何衡量网络体验">如何衡量网络体验&lt;/h2>
+&lt;p>首先是&lt;strong>可访问性&lt;/strong>, 能访问是最重要的基础. 因此, 域名解析服务需要满足基础的能力:&lt;/p>
+&lt;ul>
+&lt;li>全面, 上级 DNS 服务需要权威, 且能够解析更多的域名&lt;/li>
+&lt;li>正确, 解析结果需要正确, 不能出现解析错误. 部分 DNS 服务商会对一些域名进行劫持或污染, 解析到广告页面.&lt;/li>
+&lt;li>及时, ip 地址变更后, 需要及时更新解析结果, 而不是返回旧的 ip 地址&lt;/li>
+&lt;/ul>
+&lt;p>其次是 DNS 解析结果的 IP 所能提供服务的&lt;code>网络质量&lt;/code>.&lt;/p>
+&lt;p>互联网服务所能提供的&lt;code>网络质量&lt;/code>, 通常&lt;strong>强依赖地域&lt;/strong>, 服务器和客户端在地域上越接近, 则服务质量越好.&lt;/p>
+&lt;p>许多付费 DNS 解析服务商都支持按地域解析不同 IP, 例如这是阿里云能提供的一部分服务:&lt;/p></description></item><item><title>ChatGPT VPN识别绕过方法</title><link>https://blog.jqknono.com/blog/2024/05/09/chatgpt-vpn%E8%AF%86%E5%88%AB%E7%BB%95%E8%BF%87%E6%96%B9%E6%B3%95/</link><pubDate>Thu, 09 May 2024 10:30:29 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/09/chatgpt-vpn%E8%AF%86%E5%88%AB%E7%BB%95%E8%BF%87%E6%96%B9%E6%B3%95/</guid><description>&lt;p>如何处理 ChatGPT 报错&lt;br>
+&amp;ldquo;Unable to load site&amp;rdquo;&lt;br>
+&amp;ldquo;Please try again later, if you are using a VPN, try turning it off.&amp;rdquo;&lt;br>
+&amp;ldquo;Check the status page for information on outages.&amp;rdquo;&lt;/p>
+&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>&lt;img src="https://s2.loli.net/2024/05/09/dT4xi1mwFgYRKhq.png" alt="">&lt;/p>
+&lt;p>chatgpt 目前仍然是使用体验最好的聊天机器人，但是在国内使用时，由于网络环境的限制，我们需要使用梯子来访问 chatgpt。但是 chatgpt 对梯子的检测较为严格，如果检测到使用了梯子，会直接拒绝访问。这里介绍一种绕过 chatgpt 对梯子检测的方法。&lt;/p>
+&lt;p>有其他人提到更换 IP 来绕过封锁, 但我们一般使用 IP 的地域已经是可以提供服务的地区, 所以这种方法并不一定是实际的拒绝服务原因.&lt;/p>
+&lt;p>另外有人提到梯子使用人数较多容易被识别, 劝人购买较贵的使用人数少的梯子, 这也很难成为合理理由, 在 ipv4 短缺的今天, 即便是海外, 也存在大量的社区使用 nat 分配端口, 共用一个 ipv4 的情况. chatgpt 一封就要封一大片, 作为一个被广泛使用的服务, 这样的检测设计肯定是不合理的.&lt;/p>
+&lt;p>对大众服务来说, 检测源 IP 一致性则更为合理. 付费梯子的特征通常是限制流量或限制网速, 因此多数使用梯子的用户选择按规则绕过. 绕过自己的运营商可直接访问的地址, 以减少流量消耗, 或者获得更快的访问速度, 仅在访问被防火墙拦截的地址时导入流量到代理. 这种访问目标服务的不同方式, 可能会造成源地址不一致. 例如访问 A 服务需要同时和域名 X 和域名 Y 进行通信, 而防火墙仅拦截了域名 X, 那么在 A 服务看到的同一请求的不同阶段的访问来源 IP 不一致.&lt;/p></description></item></channel></rss>

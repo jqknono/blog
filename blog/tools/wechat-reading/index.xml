@@ -1,13 +1,68 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WeRead Experience Sharing on Nono Blogs</title><link>https://blog.jqknono.com/blog/tools/wechat-reading/</link><description>Recent content in WeRead Experience Sharing on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 05 Dec 2024 12:36:38 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/tools/wechat-reading/index.xml" rel="self" type="application/rss+xml"/><item><title>WeChat Read Auto Check-in &amp; Read-Time Boost</title><link>https://blog.jqknono.com/blog/2024/12/05/wechat-read-auto-check-in-read-time-boost/</link><pubDate>Thu, 05 Dec 2024 12:36:38 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/12/05/wechat-read-auto-check-in-read-time-boost/</guid><description>&lt;p>Just to get a cheaper WeChat Read membership.&lt;/p>
-&lt;p>This document may be out of date; for the latest version visit the open-source repository: &lt;a href="https://github.com/jqknono/weread-challenge-selenium">https://github.com/jqknono/weread-challenge-selenium&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202412261741639.gif" alt="Cheaper WeChat Read membership">&lt;/p>
-&lt;h2 id="wechat-read-rules">WeChat Read Rules&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>微信读书体验分享 on Nono Blogs</title><link>https://blog.jqknono.com/blog/tools/wechat-reading/</link><description>Recent content in 微信读书体验分享 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 05 Dec 2024 12:36:38 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/tools/wechat-reading/index.xml" rel="self" type="application/rss+xml"/><item><title>微信读书自动打卡刷时长</title><link>https://blog.jqknono.com/blog/2024/12/05/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1%E5%88%B7%E6%97%B6%E9%95%BF/</link><pubDate>Thu, 05 Dec 2024 12:36:38 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/12/05/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E8%87%AA%E5%8A%A8%E6%89%93%E5%8D%A1%E5%88%B7%E6%97%B6%E9%95%BF/</guid><description>&lt;p>只为便宜一点买微信读书会员.&lt;/p>
+&lt;p>本文档可能已过时, 最新可以访问开源地址: &lt;a href="https://github.com/jqknono/weread-challenge-selenium">https://github.com/jqknono/weread-challenge-selenium&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202412261741639.gif" alt="只为便宜一点买微信读书会员">&lt;/p>
+&lt;h2 id="微信读书规则">微信读书规则&lt;/h2>
 &lt;ul>
-&lt;li>Offline reading counts toward the total, but must sync while online.&lt;/li>
-&lt;li>Web edition, e-ink, mini-program, TTS, and audiobook listening &lt;strong>all count&lt;/strong>.&lt;/li>
-&lt;li>Sessions judged as “too long” in a single auto-read/listen will have the excess &lt;strong>excluded&lt;/strong> based on behavioral features.&lt;/li>
-&lt;li>A day counts only after &lt;strong>&amp;gt;5 minutes&lt;/strong> of reading that day.&lt;/li>
-&lt;li>Pay ¥5 to get 2 days of membership immediately; read for 29 of the next 30 days and rack up 30 hours to earn 30 more days + 30 coins.&lt;/li>
-&lt;li>Pay ¥50 to get 30 days immediately; read 360 of the next 365 days and reach 300 hours to earn 365 days + 500 coins.&lt;/li>
+&lt;li>离线阅读计入总时长, 但需要联网上报&lt;/li>
+&lt;li>网页版, 墨水屏, 小程序, 听书, 有声书收听&lt;strong>都计入总时长&lt;/strong>&lt;/li>
+&lt;li>对单次自动阅读或收听时长过长的行为, 平台将结合用户行为特征判断, &lt;strong>过长部分不计入总时长&lt;/strong>&lt;/li>
+&lt;li>当日阅读超过&lt;strong>5 分钟&lt;/strong>才算作有效阅读天数&lt;/li>
+&lt;li>付费 5 元立即获得 2 天会员, 后续 30 日内打卡 29 天, 读书时长超过 30 小时, 可获得 30 天会员和 30 书币&lt;/li>
+&lt;li>付费 50 元立即获得 30 天会员, 后续 365 日内打卡 360 天, 读书时长超过 300 小时, 可获得 365 天会员和 500 书币&lt;/li>
 &lt;/ul>
-&lt;p>Undocumented quirks observed in practice:&lt;/p></description></item></channel></rss>
+&lt;p>根据实际操作, 还有如下未明确说明的特点:&lt;/p>
+&lt;ul>
+&lt;li>第 29 日打卡后立即获得读书会员奖励, 并可立即开始下一轮挑战会员打卡, 无需等待第 31 日开始下一轮挑战, 第 29 日的打卡既算上一轮的打卡, 也算下一轮的打卡.&lt;/li>
+&lt;li>除第一轮需 29 日外, 后续每 28 日即可获得 32 日会员, 1+28*13=365, 一年可完成 13 轮, 花费 65 元, 获得 32*13=416 天会员和 390 书币.&lt;/li>
+&lt;li>更划算的仍然是年卡挑战会员, 但周期更长, 风险更大.&lt;/li>
+&lt;/ul>
+&lt;h2 id="工具特性">工具特性&lt;/h2>
+&lt;ul>
+&lt;li>使用有头浏览器&lt;/li>
+&lt;li>支持本地浏览器和远程浏览器&lt;/li>
+&lt;li>随机浏览器宽度和高度&lt;/li>
+&lt;li>支持等待登录&lt;/li>
+&lt;li>支持登录二维码刷新&lt;/li>
+&lt;li>支持保存 cookies&lt;/li>
+&lt;li>支持加载 cookies&lt;/li>
+&lt;li>支持选择最近阅读的第 X 本书开始阅读&lt;/li>
+&lt;li>默认随机选择一本书开始阅读&lt;/li>
+&lt;li>支持自动阅读&lt;/li>
+&lt;li>支持跳到下一章&lt;/li>
+&lt;li>支持读完跳回第一章继续阅读&lt;/li>
+&lt;li>支持选择阅读速度&lt;/li>
+&lt;li>随机单页阅读时间&lt;/li>
+&lt;li>随机翻页时间&lt;/li>
+&lt;li>每分钟截图当前界面&lt;/li>
+&lt;li>支持日志&lt;/li>
+&lt;li>支持定时任务&lt;/li>
+&lt;li>支持设置阅读时间&lt;/li>
+&lt;li>支持邮件通知&lt;/li>
+&lt;li>多平台支持: &lt;code>linux | windows | macos&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;!-- - 多架构支持: `amd64 | arm64` -->
+&lt;ul>
+&lt;li>支持浏览器: &lt;code>chrome | MicrosoftEdge | firefox&lt;/code>&lt;/li>
+&lt;li>支持多用户&lt;/li>
+&lt;li>异常时强制刷新&lt;/li>
+&lt;li>使用统计&lt;/li>
+&lt;/ul>
+&lt;h2 id="linux">Linux&lt;/h2>
+&lt;h3 id="直接运行">直接运行&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装nodejs&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install nodejs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 老旧版本的 nodejs 需要安装 npm&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt install npm
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 创建运行文件夹&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir -p &lt;span class="nv">$HOME&lt;/span>/Documents/weread-challenge
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> &lt;span class="nv">$HOME&lt;/span>/Documents/weread-challenge
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 安装依赖&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">npm install selenium-webdriver
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 下载脚本&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">wget https://storage1.techfetch.dev/weread-challenge/weread-challenge.js -O weread-challenge.js
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 通过环境变量设置运行参数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">WEREAD_BROWSER&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;chrome&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 运行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">WEREAD_BROWSER&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;chrome&amp;#34;&lt;/span> node weread-challenge.js
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如需邮件通知, 需安装 &lt;em>nodemailer&lt;/em>:
+&lt;code>npm install nodemailer&lt;/code>&lt;/p></description></item></channel></rss>
