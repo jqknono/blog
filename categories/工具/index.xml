@@ -1,4 +1,120 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on Nono Blogs</title><link>https://blog.jqknono.com/categories/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 10 Jul 2025 16:30:07 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>为AdguardHome增加分流能力</title><link>https://blog.jqknono.com/blog/2025/07/10/%E4%B8%BAadguardhome%E5%A2%9E%E5%8A%A0%E5%88%86%E6%B5%81%E8%83%BD%E5%8A%9B/</link><pubDate>Thu, 10 Jul 2025 16:30:07 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/07/10/%E4%B8%BAadguardhome%E5%A2%9E%E5%8A%A0%E5%88%86%E6%B5%81%E8%83%BD%E5%8A%9B/</guid><description>&lt;p>开源地址: &lt;a href="https://github.com/AdGuardPrivate/AdGuardPrivate">https://github.com/AdGuardPrivate/AdGuardPrivate&lt;/a>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>工具 on Nono Blogs</title><link>https://blog.jqknono.com/categories/%E5%B7%A5%E5%85%B7/</link><description>Recent content in 工具 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 27 Aug 2025 18:39:29 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml"/><item><title>是否必须有域名才能使用DDNS?</title><link>https://blog.jqknono.com/blog/2025/08/27/%E6%98%AF%E5%90%A6%E5%BF%85%E9%A1%BB%E6%9C%89%E5%9F%9F%E5%90%8D%E6%89%8D%E8%83%BD%E4%BD%BF%E7%94%A8ddns/</link><pubDate>Wed, 27 Aug 2025 18:39:29 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/08/27/%E6%98%AF%E5%90%A6%E5%BF%85%E9%A1%BB%E6%9C%89%E5%9F%9F%E5%90%8D%E6%89%8D%E8%83%BD%E4%BD%BF%E7%94%A8ddns/</guid><description>&lt;h2 id="引言">引言&lt;/h2>
+&lt;p>动态DNS（DDNS）通常需要购买域名，但现在有一种更简单的方法：无需域名即可实现DDNS。本文将介绍如何使用NullPrivate或AdGuardHome等服务来实现这一功能。&lt;/p>
+&lt;h2 id="核心概念">核心概念&lt;/h2>
+&lt;p>无需域名DDNS是指不购买传统公共域名，而是利用私有DNS服务来实现动态域名解析。这种方法具有以下特点：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>无需购买域名&lt;/strong>：使用私有域名或伪域名&lt;/li>
+&lt;li>&lt;strong>隐私保护&lt;/strong>：只有连接到私有DNS服务的用户才能解析&lt;/li>
+&lt;li>&lt;strong>立即生效&lt;/strong>：更改无缓存时间，无需等待DNS传播&lt;/li>
+&lt;/ul>
+&lt;h2 id="支持的服务">支持的服务&lt;/h2>
+&lt;h3 id="nullprivate">NullPrivate&lt;/h3>
+&lt;p>NullPrivate是一个私有DNS服务，提供基础的DNS重写功能。通过其DNS重写功能，可以实现DDNS。&lt;/p>
+&lt;ul>
+&lt;li>自部署或SaaS服务都可&lt;/li>
+&lt;li>直接从服务界面下载DDNS脚本运行&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://share.jqknono.com/image/blog/202508271902578.webp" alt="NullPrivate">&lt;/p>
+&lt;h3 id="adguardhome">AdGuardHome&lt;/h3>
+&lt;p>AdGuardHome是一个开源的DNS服务器，也可以实现类似功能。&lt;/p>
+&lt;ul>
+&lt;li>需要自部署AdGuardHome实例&lt;/li>
+&lt;li>支持通过脚本配置DDNS&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://share.jqknono.com/image/blog/202508271904602.webp" alt="AdGuardHome">&lt;/p>
+&lt;h2 id="设置步骤">设置步骤&lt;/h2>
+&lt;h3 id="使用nullprivate">使用NullPrivate&lt;/h3>
+&lt;ol>
+&lt;li>确保已部署并运行NullPrivate&lt;/li>
+&lt;li>导航到&lt;strong>DNS重写&lt;/strong>页面&lt;/li>
+&lt;li>下载DDNS脚本&lt;/li>
+&lt;li>运行脚本：&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Windows&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-ExecutionPolicy&lt;/span> &lt;span class="n">Bypass&lt;/span> &lt;span class="n">-Scope&lt;/span> &lt;span class="k">Process&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.\&lt;/span>&lt;span class="nb">ddns-script&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">ps1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Linux/macOS&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">chmod +x ddns-script.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./ddns-script.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="使用adguardhome">使用AdGuardHome&lt;/h3>
+&lt;ol>
+&lt;li>确保已部署并运行AdGuardHome&lt;/li>
+&lt;li>从&lt;a href="https://github.com/NullPrivate/nullprivate-ddns/releases">Release页面&lt;/a>下载脚本&lt;/li>
+&lt;li>运行脚本：&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Windows&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-powershell" data-lang="powershell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">Set-ExecutionPolicy&lt;/span> &lt;span class="n">Bypass&lt;/span> &lt;span class="n">-Scope&lt;/span> &lt;span class="k">Process&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.\&lt;/span>&lt;span class="n">ddns&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="py">ps1&lt;/span> &lt;span class="n">-BaseUrl&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">base_url&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">-Username&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">-Password&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">password&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="n">-Domain&lt;/span> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">domain&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Linux/macOS&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">chmod +x ddns.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./ddns.sh -b &amp;lt;base_url&amp;gt; -u &amp;lt;username&amp;gt; -p &amp;lt;password&amp;gt; -d &amp;lt;domain&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="优势对比">优势对比&lt;/h2>
+&lt;p>与传统DDNS相比，此方案具有以下优势：&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>特性&lt;/th>
+ &lt;th>传统DDNS&lt;/th>
+ &lt;th>无需域名DDNS&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>域名费用&lt;/td>
+ &lt;td>需要购买&lt;/td>
+ &lt;td>无需购买&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>DNS缓存&lt;/td>
+ &lt;td>有缓存时间&lt;/td>
+ &lt;td>立即生效&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>DNS传播&lt;/td>
+ &lt;td>需要等待&lt;/td>
+ &lt;td>立即可用&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>隐私保护&lt;/td>
+ &lt;td>公开解析&lt;/td>
+ &lt;td>私有解析&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>设置复杂度&lt;/td>
+ &lt;td>相对复杂&lt;/td>
+ &lt;td>简单快速&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="工作流程图">工作流程图&lt;/h2>
+&lt;pre class="mermaid">graph TD
+ A[用户拥有动态IP] --&amp;gt; B[部署NullPrivate或AdGuardHome]
+ B --&amp;gt; C[下载DDNS脚本]
+ C --&amp;gt; D[运行脚本配置DDNS]
+ D --&amp;gt; E[脚本定期更新DNS记录]
+ E --&amp;gt; F[客户端使用私有域名访问]
+ F --&amp;gt; G[DNS解析到当前IP]
+
+ style A fill:#e1f5fe
+ style B fill:#f3e5f5
+ style C fill:#e8f5e8
+ style D fill:#fff3e0
+ style E fill:#fce4ec
+ style F fill:#e0f2f1
+ style G fill:#f3e5f5&lt;/pre>
+&lt;h2 id="功能特性">功能特性&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>快速设置&lt;/strong>：利用现有服务，无需额外配置&lt;/li>
+&lt;li>&lt;strong>跨平台支持&lt;/strong>：支持Windows和Unix-like系统&lt;/li>
+&lt;li>&lt;strong>多种认证方式&lt;/strong>：支持cookies或用户名密码认证&lt;/li>
+&lt;li>&lt;strong>完全兼容&lt;/strong>：与AdGuardHome无缝集成&lt;/li>
+&lt;/ul>
+&lt;h2 id="参考链接">参考链接&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/NullPrivate/nullprivate-ddns">GitHub仓库&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.nullprivate.com">NullPrivate官网&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.nullprivate.com/blog/2025/07/21/%E5%A2%9E%E5%8A%A0%E4%BA%86ddns%E5%8A%9F%E8%83%BD/">相关博客文章&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>为AdguardHome增加分流能力</title><link>https://blog.jqknono.com/blog/2025/07/10/%E4%B8%BAadguardhome%E5%A2%9E%E5%8A%A0%E5%88%86%E6%B5%81%E8%83%BD%E5%8A%9B/</link><pubDate>Thu, 10 Jul 2025 16:30:07 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/07/10/%E4%B8%BAadguardhome%E5%A2%9E%E5%8A%A0%E5%88%86%E6%B5%81%E8%83%BD%E5%8A%9B/</guid><description>&lt;p>开源地址: &lt;a href="https://github.com/AdGuardPrivate/AdGuardPrivate">https://github.com/AdGuardPrivate/AdGuardPrivate&lt;/a>&lt;/p>
 &lt;p>AdGuardHome 不带分流规则, 只能手写, 或则配置一个 upstream-file, 算是其痛点之一.&lt;/p>
 &lt;p>开发支持分流规则这个特性花了不少时间, 也测试了比较久, 总算稳定了.&lt;/p>
 &lt;p>有了分流规则, 就不再需要在 AdguardHome 前置 SmartDNS, 一个 AdguardPrivate 就齐活.&lt;/p>
