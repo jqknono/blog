@@ -1,80 +1,80 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>反向代理 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link><description>Recent content in 反向代理 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 17 Feb 2025 15:04:23 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>家庭网络反向代理的合规性探讨</title><link>https://blog.jqknono.com/blog/2025/02/17/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%9A%84%E5%90%88%E8%A7%84%E6%80%A7%E6%8E%A2%E8%AE%A8/</link><pubDate>Mon, 17 Feb 2025 15:04:23 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/17/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%9A%84%E5%90%88%E8%A7%84%E6%80%A7%E6%8E%A2%E8%AE%A8/</guid><description>&lt;h1 id="背景">背景&lt;/h1>
-&lt;p>约 90 天前，我遇到了湖北电信 IPv6 无法连接的问题。经过长期观察和分析，现总结出以下经验。&lt;/p>
-&lt;h1 id="问题分析">问题分析&lt;/h1>
-&lt;p>最初怀疑的两个可能原因：&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>PCDN 使用检测&lt;/p>
-&lt;ul>
-&lt;li>虽未主动使用 PCDN&lt;/li>
-&lt;li>仅有少量 BT 下载行为&lt;/li>
-&lt;li>已实施上传限速，但问题仍然存在&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>家庭服务器作为博客源站&lt;/p>
-&lt;ul>
-&lt;li>通过 Cloudflare 回源规则指定端口&lt;/li>
-&lt;li>可能被运营商判定为&amp;quot;商用行为&amp;quot;&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;p>经过三个月的验证，问题更可能源于向公网开放 HTTP/HTTPS 服务端口。&lt;/p>
-&lt;h1 id="具体表现">具体表现&lt;/h1>
-&lt;ol>
-&lt;li>
-&lt;p>IPv6 状态异常：&lt;/p>
-&lt;ul>
-&lt;li>可获得 /56 前缀&lt;/li>
-&lt;li>设备能获取全局 IPv6 地址&lt;/li>
-&lt;li>但无法访问外网&lt;/li>
-&lt;li>仅光猫桥接的路由器可正常使用 IPv6&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Tailscale 连接异常：&lt;/p>
-&lt;ul>
-&lt;li>源站服务器显示直连但延迟异常（约 400ms）&lt;/li>
-&lt;li>其他设备经中继连接，反而延迟更低（约 80ms）&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;h1 id="运营商策略分析">运营商策略分析&lt;/h1>
-&lt;p>部分地区电信运营商对频繁入站 HTTP/HTTPS 连接采取服务降级措施：&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>IPv6 服务降级&lt;/p>
-&lt;ul>
-&lt;li>分配地址正常&lt;/li>
-&lt;li>路由表缺失&lt;/li>
-&lt;li>实际无法联网&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>P2P 连接限制&lt;/p>
-&lt;ul>
-&lt;li>Tailscale 显示直连&lt;/li>
-&lt;li>实际延迟高&lt;/li>
-&lt;li>带宽受限&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;h1 id="解决方案">解决方案&lt;/h1>
-&lt;ol>
-&lt;li>
-&lt;p>关闭反向代理服务：&lt;/p>
-&lt;ul>
-&lt;li>停用 Cloudflare/阿里云 ESA 反代&lt;/li>
-&lt;li>多次重启路由器后可恢复正常&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>防范域名扫描：
-避免使用以下常见子域名：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">- home.example.com
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- ddns.example.com
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- dev.example.com
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- test.example.com
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>最佳实践：&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>反向代理 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link><description>Recent content in 反向代理 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 17 Feb 2025 15:04:23 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>家庭网络反向代理的合规性探讨</title><link>https://blog.jqknono.com/blog/2025/02/17/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%9A%84%E5%90%88%E8%A7%84%E6%80%A7%E6%8E%A2%E8%AE%A8/</link><pubDate>Mon, 17 Feb 2025 15:04:23 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/02/17/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%9A%84%E5%90%88%E8%A7%84%E6%80%A7%E6%8E%A2%E8%AE%A8/</guid><description>&lt;h1 id="背景"&gt;背景&lt;/h1&gt;
+&lt;p&gt;约 90 天前，我遇到了湖北电信 IPv6 无法连接的问题。经过长期观察和分析，现总结出以下经验。&lt;/p&gt;
+&lt;h1 id="问题分析"&gt;问题分析&lt;/h1&gt;
+&lt;p&gt;最初怀疑的两个可能原因：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;PCDN 使用检测&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;虽未主动使用 PCDN&lt;/li&gt;
+&lt;li&gt;仅有少量 BT 下载行为&lt;/li&gt;
+&lt;li&gt;已实施上传限速，但问题仍然存在&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;家庭服务器作为博客源站&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 Cloudflare 回源规则指定端口&lt;/li&gt;
+&lt;li&gt;可能被运营商判定为&amp;quot;商用行为&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;经过三个月的验证，问题更可能源于向公网开放 HTTP/HTTPS 服务端口。&lt;/p&gt;
+&lt;h1 id="具体表现"&gt;具体表现&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;IPv6 状态异常：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可获得 /56 前缀&lt;/li&gt;
+&lt;li&gt;设备能获取全局 IPv6 地址&lt;/li&gt;
+&lt;li&gt;但无法访问外网&lt;/li&gt;
+&lt;li&gt;仅光猫桥接的路由器可正常使用 IPv6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tailscale 连接异常：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;源站服务器显示直连但延迟异常（约 400ms）&lt;/li&gt;
+&lt;li&gt;其他设备经中继连接，反而延迟更低（约 80ms）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="运营商策略分析"&gt;运营商策略分析&lt;/h1&gt;
+&lt;p&gt;部分地区电信运营商对频繁入站 HTTP/HTTPS 连接采取服务降级措施：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;IPv6 服务降级&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分配地址正常&lt;/li&gt;
+&lt;li&gt;路由表缺失&lt;/li&gt;
+&lt;li&gt;实际无法联网&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;P2P 连接限制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tailscale 显示直连&lt;/li&gt;
+&lt;li&gt;实际延迟高&lt;/li&gt;
+&lt;li&gt;带宽受限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id="解决方案"&gt;解决方案&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;关闭反向代理服务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;停用 Cloudflare/阿里云 ESA 反代&lt;/li&gt;
+&lt;li&gt;多次重启路由器后可恢复正常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;防范域名扫描：
+避免使用以下常见子域名：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- home.example.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- ddns.example.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- dev.example.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- test.example.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最佳实践：&lt;/p&gt;</description></item></channel></rss>

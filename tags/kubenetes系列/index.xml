@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kubenetes系列 on Nono Blogs</title><link>https://blog.jqknono.com/tags/kubenetes%E7%B3%BB%E5%88%97/</link><description>Recent content in Kubenetes系列 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 05 Jun 2024 17:17:37 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/kubenetes%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml"/><item><title>卷的分类和方法论</title><link>https://blog.jqknono.com/blog/2024/06/05/%E5%8D%B7%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E6%96%B9%E6%B3%95%E8%AE%BA/</link><pubDate>Wed, 05 Jun 2024 17:17:37 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/05/%E5%8D%B7%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E6%96%B9%E6%B3%95%E8%AE%BA/</guid><description>&lt;ul>
-&lt;li>&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/volumes/">卷&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/persistent-volumes/">持久卷&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/projected-volumes/">投射卷&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/ephemeral-volumes/">临时卷&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/storage-classes/">存储类&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/dynamic-provisioning/">动态卷制备&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/volume-snapshots/">卷快照&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/volume-snapshot-classes/">卷快照类&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/volume-pvc-datasource/">卷克隆&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kubenetes系列 on Nono Blogs</title><link>https://blog.jqknono.com/tags/kubenetes%E7%B3%BB%E5%88%97/</link><description>Recent content in Kubenetes系列 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 05 Jun 2024 17:17:37 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/kubenetes%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml"/><item><title>卷的分类和方法论</title><link>https://blog.jqknono.com/blog/2024/06/05/%E5%8D%B7%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E6%96%B9%E6%B3%95%E8%AE%BA/</link><pubDate>Wed, 05 Jun 2024 17:17:37 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/05/%E5%8D%B7%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E6%96%B9%E6%B3%95%E8%AE%BA/</guid><description>&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/volumes/"&gt;卷&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/persistent-volumes/"&gt;持久卷&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/projected-volumes/"&gt;投射卷&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/ephemeral-volumes/"&gt;临时卷&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/storage-classes/"&gt;存储类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/dynamic-provisioning/"&gt;动态卷制备&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/volume-snapshots/"&gt;卷快照&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/volume-snapshot-classes/"&gt;卷快照类&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/zh-cn/docs/concepts/storage/volume-pvc-datasource/"&gt;卷克隆&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

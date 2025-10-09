@@ -1,155 +1,155 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Nono Blogs</title><link>https://blog.jqknono.com/en-us/blog/tools/ai/</link><description>Recent content in AI on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 22 Jul 2025 10:03:40 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/blog/tools/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>A brief share on using trae</title><link>https://blog.jqknono.com/en-us/blog/2025/07/22/a-brief-share-on-using-trae/</link><pubDate>Tue, 22 Jul 2025 10:03:40 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/07/22/a-brief-share-on-using-trae/</guid><description>&lt;p>This lengthy post was published on 2025-07-22; at the moment trae&amp;rsquo;s feature completeness and performance remain poor. It may improve later, so feel free to try it for yourself and trust your own experience.&lt;/p>
-&lt;p>As common sense dictates, the first employees shape a company’s culture and products, forming a deep-rooted foundation that is hard to change and also somewhat intangible; my sharing is for reference only.&lt;/p>
-&lt;h2 id="ui-design">UI Design&lt;/h2>
-&lt;p>Trae’s interface has nice aesthetics, with layout / color / font tweaks over the original version, and it looks great visually. The logic is fairly clear as well; in this area I have no suggestions to offer.&lt;/p></description></item><item><title>Automated debugging with Cursor</title><link>https://blog.jqknono.com/en-us/blog/2025/06/27/automated-debugging-with-cursor/</link><pubDate>Fri, 27 Jun 2025 13:18:19 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/06/27/automated-debugging-with-cursor/</guid><description>&lt;p>The following is an outline for automated development testing using Cursor:&lt;/p>
-&lt;h3 id="1-introduction">1. Introduction&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Overview of Cursor&lt;/strong>: Describe what Cursor is and its main features and capabilities.&lt;/li>
-&lt;li>&lt;strong>Background on automated development testing&lt;/strong>: Explain why automated development testing is needed and its importance in modern software development.&lt;/li>
-&lt;/ul>
-&lt;h3 id="2-preparation">2. Preparation&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Installation and setup&lt;/strong>:
-&lt;ul>
-&lt;li>Download and install Cursor.&lt;/li>
-&lt;li>Configure required plugins and extensions.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Environment configuration&lt;/strong>:
-&lt;ul>
-&lt;li>Set up the project structure.&lt;/li>
-&lt;li>Install dependencies (e.g., Node.js, Python, etc.).&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="3-fundamentals-of-automation-testing">3. Fundamentals of automation testing&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Test types&lt;/strong>:
-&lt;ul>
-&lt;li>Unit tests&lt;/li>
-&lt;li>Integration tests&lt;/li>
-&lt;li>End-to-end tests&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Choosing a test framework&lt;/strong>:
-&lt;ul>
-&lt;li>Introduce common frameworks (e.g., Jest, Mocha, PyTest, etc.).&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="4-writing-test-cases-with-cursor">4. Writing test cases with Cursor&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Creating test files&lt;/strong>:
-&lt;ul>
-&lt;li>Create new test files in Cursor.&lt;/li>
-&lt;li>Use templates to generate basic test structures.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Writing test logic&lt;/strong>:
-&lt;ul>
-&lt;li>Write unit tests.&lt;/li>
-&lt;li>Use assertion libraries for validation.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="5-running-and-debugging-tests">5. Running and debugging tests&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Run tests&lt;/strong>:
-&lt;ul>
-&lt;li>Execute single or multiple test cases in Cursor.&lt;/li>
-&lt;li>View test results and output.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Debug tests&lt;/strong>:
-&lt;ul>
-&lt;li>Set breakpoints.&lt;/li>
-&lt;li>Step through execution to inspect variables and program state.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="6-test-reports-and-analysis">6. Test reports and analysis&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Generate test reports&lt;/strong>:
-&lt;ul>
-&lt;li>Use frameworks to produce detailed reports.&lt;/li>
-&lt;li>Export in HTML or other formats.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Analyze results&lt;/strong>:
-&lt;ul>
-&lt;li>Identify failing tests.&lt;/li>
-&lt;li>Determine causes and repair them.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="7-continuous-integration--deployment-cicd">7. Continuous integration &amp;amp; deployment (CI/CD)&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Integrate with CI/CD tools&lt;/strong>:
-&lt;ul>
-&lt;li>Integrate Cursor with GitHub Actions, Travis CI, etc.&lt;/li>
-&lt;li>Configure automatic test triggering.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Deployment and monitoring&lt;/strong>:
-&lt;ul>
-&lt;li>Auto-deploy to test environments.&lt;/li>
-&lt;li>Monitor test coverage and quality metrics.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="8-best-practices-and-tips">8. Best practices and tips&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Refactoring and test maintenance&lt;/strong>:
-&lt;ul>
-&lt;li>Keep tests effective while refactoring code.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Performance optimization&lt;/strong>:
-&lt;ul>
-&lt;li>Tips to speed up test execution.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Troubleshooting common issues&lt;/strong>:
-&lt;ul>
-&lt;li>Address frequent causes of test failures.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="9-conclusion">9. Conclusion&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>Summary&lt;/strong>: Review the advantages and key steps of automated development testing with Cursor.&lt;/li>
-&lt;li>&lt;strong>Outlook&lt;/strong>: Possible future developments and improvements.&lt;/li>
-&lt;/ul>
-&lt;p>This outline aims to help developers systematically understand how to leverage Cursor for automated development testing, thereby improving efficiency and code quality.&lt;/p></description></item><item><title>A Prompt Guide from Cline</title><link>https://blog.jqknono.com/en-us/blog/2025/03/30/a-prompt-guide-from-cline/</link><pubDate>Sun, 30 Mar 2025 22:24:30 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/03/30/a-prompt-guide-from-cline/</guid><description>&lt;h1 id="cline-memory-bank---custom-instructions">Cline Memory Bank - Custom Instructions&lt;/h1>
-&lt;h3 id="1-purpose-and-functionality">1. Purpose and Functionality&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>What is the goal of this instruction set?&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>This set transforms Cline into a self-documenting development system, preserving context across sessions via a structured “memory bank.” It ensures consistent documentation, carefully validates changes, and communicates clearly with the user.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Which kinds of projects or tasks are these best suited for?&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Projects that demand extensive context tracking.&lt;/li>
-&lt;li>Any project, regardless of tech stack (tech-stack details are stored in &lt;code>techContext.md&lt;/code>).&lt;/li>
-&lt;li>Both ongoing and new projects.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="2-usage-guide">2. Usage Guide&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>How to add these instructions&lt;/strong>
-&lt;ol>
-&lt;li>Open VSCode&lt;/li>
-&lt;li>Click the Cline extension settings gear ⚙️&lt;/li>
-&lt;li>Locate the “Custom Instructions” field&lt;/li>
-&lt;li>Copy and paste the instructions in the section below&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;/ul>
-&lt;img width="345" alt="Screenshot 2024-12-26 at 11 22 20 AM" src="https://github.com/user-attachments/assets/8b4ff439-db66-48ec-be13-1ddaa37afa9a" />
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>Project Setup&lt;/strong>&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Nono Blogs</title><link>https://blog.jqknono.com/en-us/blog/tools/ai/</link><description>Recent content in AI on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 22 Jul 2025 10:03:40 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/blog/tools/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>A brief share on using trae</title><link>https://blog.jqknono.com/en-us/blog/2025/07/22/a-brief-share-on-using-trae/</link><pubDate>Tue, 22 Jul 2025 10:03:40 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/07/22/a-brief-share-on-using-trae/</guid><description>&lt;p&gt;This lengthy post was published on 2025-07-22; at the moment trae&amp;rsquo;s feature completeness and performance remain poor. It may improve later, so feel free to try it for yourself and trust your own experience.&lt;/p&gt;
+&lt;p&gt;As common sense dictates, the first employees shape a company’s culture and products, forming a deep-rooted foundation that is hard to change and also somewhat intangible; my sharing is for reference only.&lt;/p&gt;
+&lt;h2 id="ui-design"&gt;UI Design&lt;/h2&gt;
+&lt;p&gt;Trae’s interface has nice aesthetics, with layout / color / font tweaks over the original version, and it looks great visually. The logic is fairly clear as well; in this area I have no suggestions to offer.&lt;/p&gt;</description></item><item><title>Automated debugging with Cursor</title><link>https://blog.jqknono.com/en-us/blog/2025/06/27/automated-debugging-with-cursor/</link><pubDate>Fri, 27 Jun 2025 13:18:19 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/06/27/automated-debugging-with-cursor/</guid><description>&lt;p&gt;The following is an outline for automated development testing using Cursor:&lt;/p&gt;
+&lt;h3 id="1-introduction"&gt;1. Introduction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Overview of Cursor&lt;/strong&gt;: Describe what Cursor is and its main features and capabilities.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Background on automated development testing&lt;/strong&gt;: Explain why automated development testing is needed and its importance in modern software development.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-preparation"&gt;2. Preparation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Installation and setup&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Download and install Cursor.&lt;/li&gt;
+&lt;li&gt;Configure required plugins and extensions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Environment configuration&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Set up the project structure.&lt;/li&gt;
+&lt;li&gt;Install dependencies (e.g., Node.js, Python, etc.).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-fundamentals-of-automation-testing"&gt;3. Fundamentals of automation testing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Test types&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Unit tests&lt;/li&gt;
+&lt;li&gt;Integration tests&lt;/li&gt;
+&lt;li&gt;End-to-end tests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Choosing a test framework&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Introduce common frameworks (e.g., Jest, Mocha, PyTest, etc.).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="4-writing-test-cases-with-cursor"&gt;4. Writing test cases with Cursor&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Creating test files&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Create new test files in Cursor.&lt;/li&gt;
+&lt;li&gt;Use templates to generate basic test structures.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Writing test logic&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Write unit tests.&lt;/li&gt;
+&lt;li&gt;Use assertion libraries for validation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="5-running-and-debugging-tests"&gt;5. Running and debugging tests&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Run tests&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Execute single or multiple test cases in Cursor.&lt;/li&gt;
+&lt;li&gt;View test results and output.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Debug tests&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Set breakpoints.&lt;/li&gt;
+&lt;li&gt;Step through execution to inspect variables and program state.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="6-test-reports-and-analysis"&gt;6. Test reports and analysis&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Generate test reports&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Use frameworks to produce detailed reports.&lt;/li&gt;
+&lt;li&gt;Export in HTML or other formats.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Analyze results&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Identify failing tests.&lt;/li&gt;
+&lt;li&gt;Determine causes and repair them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="7-continuous-integration--deployment-cicd"&gt;7. Continuous integration &amp;amp; deployment (CI/CD)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Integrate with CI/CD tools&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Integrate Cursor with GitHub Actions, Travis CI, etc.&lt;/li&gt;
+&lt;li&gt;Configure automatic test triggering.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deployment and monitoring&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Auto-deploy to test environments.&lt;/li&gt;
+&lt;li&gt;Monitor test coverage and quality metrics.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="8-best-practices-and-tips"&gt;8. Best practices and tips&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Refactoring and test maintenance&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Keep tests effective while refactoring code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Performance optimization&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Tips to speed up test execution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Troubleshooting common issues&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Address frequent causes of test failures.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="9-conclusion"&gt;9. Conclusion&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Review the advantages and key steps of automated development testing with Cursor.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Outlook&lt;/strong&gt;: Possible future developments and improvements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This outline aims to help developers systematically understand how to leverage Cursor for automated development testing, thereby improving efficiency and code quality.&lt;/p&gt;</description></item><item><title>A Prompt Guide from Cline</title><link>https://blog.jqknono.com/en-us/blog/2025/03/30/a-prompt-guide-from-cline/</link><pubDate>Sun, 30 Mar 2025 22:24:30 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/03/30/a-prompt-guide-from-cline/</guid><description>&lt;h1 id="cline-memory-bank---custom-instructions"&gt;Cline Memory Bank - Custom Instructions&lt;/h1&gt;
+&lt;h3 id="1-purpose-and-functionality"&gt;1. Purpose and Functionality&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;What is the goal of this instruction set?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This set transforms Cline into a self-documenting development system, preserving context across sessions via a structured “memory bank.” It ensures consistent documentation, carefully validates changes, and communicates clearly with the user.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Which kinds of projects or tasks are these best suited for?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Projects that demand extensive context tracking.&lt;/li&gt;
+&lt;li&gt;Any project, regardless of tech stack (tech-stack details are stored in &lt;code&gt;techContext.md&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Both ongoing and new projects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-usage-guide"&gt;2. Usage Guide&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How to add these instructions&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;Open VSCode&lt;/li&gt;
+&lt;li&gt;Click the Cline extension settings gear ⚙️&lt;/li&gt;
+&lt;li&gt;Locate the “Custom Instructions” field&lt;/li&gt;
+&lt;li&gt;Copy and paste the instructions in the section below&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img width="345" alt="Screenshot 2024-12-26 at 11 22 20 AM" src="https://github.com/user-attachments/assets/8b4ff439-db66-48ec-be13-1ddaa37afa9a" /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Project Setup&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

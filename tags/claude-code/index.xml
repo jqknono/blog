@@ -1,40 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Claude Code on Nono Blogs</title><link>https://blog.jqknono.com/tags/claude-code/</link><description>Recent content in Claude Code on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 17 Sep 2025 22:23:27 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/claude-code/index.xml" rel="self" type="application/rss+xml"/><item><title>Claude Code 第三方供应商使用指南 - 深度解析与最佳实践</title><link>https://blog.jqknono.com/blog/2025/09/17/claude-code-%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BE%9B%E5%BA%94%E5%95%86%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link><pubDate>Wed, 17 Sep 2025 22:23:27 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/09/17/claude-code-%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BE%9B%E5%BA%94%E5%95%86%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid><description>&lt;h1 id="claude-code-第三方供应商使用指南">Claude Code 第三方供应商使用指南&lt;/h1>
-&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>本文基于我长期使用 Claude Code 的经验，分享如何高效配置第三方供应商，避免常见的配置陷阱。与那些只转发官方信息的自媒体不同，这里的内容都是经过实际验证的实用技巧。&lt;/p>
-&lt;h2 id="环境变量配置">环境变量配置&lt;/h2>
-&lt;h3 id="基础配置大多数教程提到的">基础配置（大多数教程提到的）&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ANTHROPIC_BASE_URL&lt;/span>&lt;span class="o">=&lt;/span>你的供应商API地址
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ANTHROPIC_AUTH_TOKEN&lt;/span>&lt;span class="o">=&lt;/span>你的认证令牌
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ANTHROPIC_MODEL&lt;/span>&lt;span class="o">=&lt;/span>默认模型名称
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>ANTHROPIC_SMALL_FAST_MODEL&lt;/code> 已经废弃, 取而代之的是 &lt;code>ANTHROPIC_DEFAULT_HAIKU_MODEL&lt;/code>.&lt;/p>
-&lt;h3 id="高级配置较少人提到">高级配置（较少人提到）&lt;/h3>
-&lt;p>Claude Code 目前支持为不同任务选择不同的模型：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 分别配置不同系列的模型&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ANTHROPIC_DEFAULT_OPUS_MODEL&lt;/span>&lt;span class="o">=&lt;/span>opus系列模型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ANTHROPIC_DEFAULT_SONNET_MODEL&lt;/span>&lt;span class="o">=&lt;/span>sonnet系列模型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">ANTHROPIC_DEFAULT_HAIKU_MODEL&lt;/span>&lt;span class="o">=&lt;/span>haiku系列模型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 子代理使用的模型&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">CLAUDE_CODE_SUBAGENT_MODEL&lt;/span>&lt;span class="o">=&lt;/span>子代理模型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 设置超时时间&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">BASH_DEFAULT_TIMEOUT_MS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">10000&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 禁用非必要流量&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 禁用费用警告, 否则每按Claude sonnet的定价用5美元就会告警&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">DISABLE_COST_WARNINGS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 禁用非必要模型调用&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">DISABLE_NON_ESSENTIAL_MODEL_CALLS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 禁用 telemetry&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nv">DISABLE_TELEMETRY&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="m">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://share.jqknono.com/image/blog/claudecod-with-third-party-vendor-2025-09-17-22-22-43.png" alt="claudecod-with-third-party-vendor-2025-09-17-22-22-43">&lt;/p>
-&lt;p>更多配置参考: &lt;a href="https://docs.claude.com/en/docs/claude-code/settings#environment-variables">https://docs.claude.com/en/docs/claude-code/settings#environment-variables&lt;/a>&lt;/p>
-&lt;h2 id="plan-mode-的使用技巧">Plan Mode 的使用技巧&lt;/h2>
-&lt;p>Claude Code 的 Plan Mode 是一个非常有用的功能，它会让 AI 进行更多思考而不直接修改文件。这个模式特别适合与 DeepSeek 的 Reasoner 模型配合使用， 在 plan 模式下可以：&lt;/p>
-&lt;ul>
-&lt;li>减少不必要的文件修改&lt;/li>
-&lt;li>提供更详细的思考过程&lt;/li>
-&lt;li>适合复杂的代码审查和设计决策&lt;/li>
-&lt;/ul>
-&lt;h2 id="第三方供应商的快速切换">第三方供应商的快速切换&lt;/h2>
-&lt;p>有人做了 Claude Code Router 工具来将第三方模型供应商接入 Claude Code, 还有人做了环境变量切换器, 我非常不建议使用这些额外的操作.
-你真正需要的仅仅是打开 VS Code settings, 然后搜索&lt;code>terminal.integrated.env&lt;/code>, 配置前三个可配置项.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Claude Code on Nono Blogs</title><link>https://blog.jqknono.com/tags/claude-code/</link><description>Recent content in Claude Code on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 17 Sep 2025 22:23:27 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/claude-code/index.xml" rel="self" type="application/rss+xml"/><item><title>Claude Code 第三方供应商使用指南 - 深度解析与最佳实践</title><link>https://blog.jqknono.com/blog/2025/09/17/claude-code-%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BE%9B%E5%BA%94%E5%95%86%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link><pubDate>Wed, 17 Sep 2025 22:23:27 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/09/17/claude-code-%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BE%9B%E5%BA%94%E5%95%86%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90%E4%B8%8E%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid><description>&lt;h1 id="claude-code-第三方供应商使用指南"&gt;Claude Code 第三方供应商使用指南&lt;/h1&gt;
+&lt;h2 id="前言"&gt;前言&lt;/h2&gt;
+&lt;p&gt;本文基于我长期使用 Claude Code 的经验，分享如何高效配置第三方供应商，避免常见的配置陷阱。与那些只转发官方信息的自媒体不同，这里的内容都是经过实际验证的实用技巧。&lt;/p&gt;
+&lt;h2 id="环境变量配置"&gt;环境变量配置&lt;/h2&gt;
+&lt;h3 id="基础配置大多数教程提到的"&gt;基础配置（大多数教程提到的）&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ANTHROPIC_BASE_URL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;你的供应商API地址
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ANTHROPIC_AUTH_TOKEN&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;你的认证令牌
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ANTHROPIC_MODEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;默认模型名称
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;ANTHROPIC_SMALL_FAST_MODEL&lt;/code&gt; 已经废弃, 取而代之的是 &lt;code&gt;ANTHROPIC_DEFAULT_HAIKU_MODEL&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id="高级配置较少人提到"&gt;高级配置（较少人提到）&lt;/h3&gt;
+&lt;p&gt;Claude Code 目前支持为不同任务选择不同的模型：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 分别配置不同系列的模型&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ANTHROPIC_DEFAULT_OPUS_MODEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;opus系列模型
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ANTHROPIC_DEFAULT_SONNET_MODEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;sonnet系列模型
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ANTHROPIC_DEFAULT_HAIKU_MODEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;haiku系列模型
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 子代理使用的模型&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;CLAUDE_CODE_SUBAGENT_MODEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;子代理模型
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 设置超时时间&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;BASH_DEFAULT_TIMEOUT_MS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 禁用非必要流量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 禁用费用警告, 否则每按Claude sonnet的定价用5美元就会告警&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;DISABLE_COST_WARNINGS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 禁用非必要模型调用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;DISABLE_NON_ESSENTIAL_MODEL_CALLS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 禁用 telemetry&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;DISABLE_TELEMETRY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src="https://share.jqknono.com/image/blog/claudecod-with-third-party-vendor-2025-09-17-22-22-43.png" alt="claudecod-with-third-party-vendor-2025-09-17-22-22-43"&gt;&lt;/p&gt;
+&lt;p&gt;更多配置参考: &lt;a href="https://docs.claude.com/en/docs/claude-code/settings#environment-variables"&gt;https://docs.claude.com/en/docs/claude-code/settings#environment-variables&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="plan-mode-的使用技巧"&gt;Plan Mode 的使用技巧&lt;/h2&gt;
+&lt;p&gt;Claude Code 的 Plan Mode 是一个非常有用的功能，它会让 AI 进行更多思考而不直接修改文件。这个模式特别适合与 DeepSeek 的 Reasoner 模型配合使用， 在 plan 模式下可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;减少不必要的文件修改&lt;/li&gt;
+&lt;li&gt;提供更详细的思考过程&lt;/li&gt;
+&lt;li&gt;适合复杂的代码审查和设计决策&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="第三方供应商的快速切换"&gt;第三方供应商的快速切换&lt;/h2&gt;
+&lt;p&gt;有人做了 Claude Code Router 工具来将第三方模型供应商接入 Claude Code, 还有人做了环境变量切换器, 我非常不建议使用这些额外的操作.
+你真正需要的仅仅是打开 VS Code settings, 然后搜索&lt;code&gt;terminal.integrated.env&lt;/code&gt;, 配置前三个可配置项.&lt;/p&gt;</description></item></channel></rss>

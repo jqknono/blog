@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網路 on Nono Blogs</title><link>https://blog.jqknono.com/zh-tw/tags/%E7%B6%B2%E8%B7%AF/</link><description>Recent content in 網路 on Nono Blogs</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Sat, 24 May 2025 20:04:34 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/tags/%E7%B6%B2%E8%B7%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS 入門：網際網路的地址簿</title><link>https://blog.jqknono.com/zh-tw/docs/private-service/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/docs/private-service/dns/</guid><description>&lt;h2 id="dns-是什麼">DNS 是什麼？&lt;/h2>
-&lt;p>歡迎來到我們的 DNS 系列文章！在我們深入探討技術細節之前，讓我們先從一個簡單的問題開始：什麼是 DNS？&lt;/p>
-&lt;p>想像一下，你的手機通訊錄。你不需要記住每個朋友的電話號碼，只需要記住他們的名字。當你想要打電話給朋友「張三」時，你只需在通訊錄裡找到他的名字，然後點擊撥號。你的手機會自動查找「張三」對應的電話號碼並撥打出去。&lt;/p>
-&lt;p>&lt;strong>DNS（Domain Name System，網域名稱系統）&lt;/strong> 就扮演著類似「網際網路通訊錄」的角色。它負責將我們容易記憶的網站域名（比如 &lt;code>www.google.com&lt;/code>）「翻譯」成電腦能夠理解的 IP 位址（比如 &lt;code>172.217.160.78&lt;/code>）。沒有 DNS，我們就必須記住一長串毫無規律的數字才能存取網站，這幾乎是不可能的。&lt;/p>
-&lt;h2 id="dns-如何運作">DNS 如何運作？&lt;/h2>
-&lt;p>這個「翻譯」過程通常在幕後飛快地完成。當你在瀏覽器中輸入一個網址時，大致會發生以下幾個步驟：&lt;/p>
-&lt;ol>
-&lt;li>&lt;strong>請求&lt;/strong>：你的電腦或手機會向一個 DNS 解析器（Resolver）送出請求：「&lt;code>www.example.com&lt;/code> 的 IP 位址是什麼？」&lt;/li>
-&lt;li>&lt;strong>查詢&lt;/strong>：DNS 解析器會像一個偵探一樣，透過層層查詢（從根伺服器到頂級域名伺服器，再到權威域名伺服器）來找到答案。&lt;/li>
-&lt;li>&lt;strong>回應&lt;/strong>：一旦找到，解析器就會將 IP 位址回傳給你的電腦。&lt;/li>
-&lt;li>&lt;strong>連線&lt;/strong>：你的瀏覽器使用這個 IP 位址與網站的伺服器建立連線，最終將網頁內容呈現在你面前。&lt;/li>
-&lt;/ol>
-&lt;h2 id="本系列我們將探討什麼">本系列我們將探討什麼？&lt;/h2>
-&lt;p>DNS 的世界遠比這個簡單的比喻要豐富和複雜。在本系列文章中，我們將帶你深入了解 DNS 的方方面面，包括：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>核心概念&lt;/strong>：深入理解域名、IP 位址、以及它們之間的關係。&lt;/li>
-&lt;li>&lt;strong>記錄類型&lt;/strong>：學習 A 記錄、CNAME 記錄、MX 記錄等不同 DNS 記錄的用途。&lt;/li>
-&lt;li>&lt;strong>伺服器類型&lt;/strong>：了解遞迴伺服器和權威伺服器等不同角色的 DNS 伺服器。&lt;/li>
-&lt;li>&lt;strong>DNS 查詢過程&lt;/strong>：詳細拆解一次完整的 DNS 查詢是如何進行的。&lt;/li>
-&lt;li>&lt;strong>DNS 快取&lt;/strong>：探索 DNS 快取如何提高網站存取速度。&lt;/li>
-&lt;li>&lt;strong>私有 DNS&lt;/strong>：如何架設和使用私有 DNS 服務來增強網路安全和隱私。&lt;/li>
-&lt;/ul>
-&lt;p>无论你是剛剛接觸網路知識的新手，還是希望鞏固基礎知識的開發者，本系列都將為你提供清晰、易懂的指引。&lt;/p>
-&lt;p>讓我們開始 DNS 的探索之旅吧！&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網路 on Nono Blogs</title><link>https://blog.jqknono.com/zh-tw/tags/%E7%B6%B2%E8%B7%AF/</link><description>Recent content in 網路 on Nono Blogs</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Sat, 24 May 2025 20:04:34 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/tags/%E7%B6%B2%E8%B7%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS 入門：網際網路的地址簿</title><link>https://blog.jqknono.com/zh-tw/docs/private-service/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/docs/private-service/dns/</guid><description>&lt;h2 id="dns-是什麼"&gt;DNS 是什麼？&lt;/h2&gt;
+&lt;p&gt;歡迎來到我們的 DNS 系列文章！在我們深入探討技術細節之前，讓我們先從一個簡單的問題開始：什麼是 DNS？&lt;/p&gt;
+&lt;p&gt;想像一下，你的手機通訊錄。你不需要記住每個朋友的電話號碼，只需要記住他們的名字。當你想要打電話給朋友「張三」時，你只需在通訊錄裡找到他的名字，然後點擊撥號。你的手機會自動查找「張三」對應的電話號碼並撥打出去。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DNS（Domain Name System，網域名稱系統）&lt;/strong&gt; 就扮演著類似「網際網路通訊錄」的角色。它負責將我們容易記憶的網站域名（比如 &lt;code&gt;www.google.com&lt;/code&gt;）「翻譯」成電腦能夠理解的 IP 位址（比如 &lt;code&gt;172.217.160.78&lt;/code&gt;）。沒有 DNS，我們就必須記住一長串毫無規律的數字才能存取網站，這幾乎是不可能的。&lt;/p&gt;
+&lt;h2 id="dns-如何運作"&gt;DNS 如何運作？&lt;/h2&gt;
+&lt;p&gt;這個「翻譯」過程通常在幕後飛快地完成。當你在瀏覽器中輸入一個網址時，大致會發生以下幾個步驟：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;請求&lt;/strong&gt;：你的電腦或手機會向一個 DNS 解析器（Resolver）送出請求：「&lt;code&gt;www.example.com&lt;/code&gt; 的 IP 位址是什麼？」&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;查詢&lt;/strong&gt;：DNS 解析器會像一個偵探一樣，透過層層查詢（從根伺服器到頂級域名伺服器，再到權威域名伺服器）來找到答案。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;回應&lt;/strong&gt;：一旦找到，解析器就會將 IP 位址回傳給你的電腦。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;連線&lt;/strong&gt;：你的瀏覽器使用這個 IP 位址與網站的伺服器建立連線，最終將網頁內容呈現在你面前。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="本系列我們將探討什麼"&gt;本系列我們將探討什麼？&lt;/h2&gt;
+&lt;p&gt;DNS 的世界遠比這個簡單的比喻要豐富和複雜。在本系列文章中，我們將帶你深入了解 DNS 的方方面面，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;核心概念&lt;/strong&gt;：深入理解域名、IP 位址、以及它們之間的關係。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;記錄類型&lt;/strong&gt;：學習 A 記錄、CNAME 記錄、MX 記錄等不同 DNS 記錄的用途。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;伺服器類型&lt;/strong&gt;：了解遞迴伺服器和權威伺服器等不同角色的 DNS 伺服器。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DNS 查詢過程&lt;/strong&gt;：詳細拆解一次完整的 DNS 查詢是如何進行的。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DNS 快取&lt;/strong&gt;：探索 DNS 快取如何提高網站存取速度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;私有 DNS&lt;/strong&gt;：如何架設和使用私有 DNS 服務來增強網路安全和隱私。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;无论你是剛剛接觸網路知識的新手，還是希望鞏固基礎知識的開發者，本系列都將為你提供清晰、易懂的指引。&lt;/p&gt;
+&lt;p&gt;讓我們開始 DNS 的探索之旅吧！&lt;/p&gt;</description></item></channel></rss>

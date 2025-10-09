@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ネットワーク on Nono Blogs</title><link>https://blog.jqknono.com/ja-jp/categories/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/</link><description>Recent content in ネットワーク on Nono Blogs</description><generator>Hugo</generator><language>ja-jp</language><lastBuildDate>Sat, 24 May 2025 20:04:34 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/categories/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS 入門：インターネットの住所録</title><link>https://blog.jqknono.com/ja-jp/docs/private-service/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/docs/private-service/dns/</guid><description>&lt;h2 id="dns-とは">DNS とは？&lt;/h2>
-&lt;p>私たちの DNS 記事シリーズへようこそ！技術的な詳細に立ち入る前に、まずシンプルな問いから始めましょう：DNS とは何でしょうか？&lt;/p>
-&lt;p>想像してみてください。あなたのスマートフォンの連絡先。友達の電話番号をひとつひとつ覚える必要はなく、名前を思い出すだけで十分です。友達「张三」に電話したいときは、連絡先で名前を探してタップするだけ。スマートフォンが自動的に「张三」の番号を見つけて発信してくれます。&lt;/p>
-&lt;p>&lt;strong>DNS（Domain Name System、ドメインネームシステム）&lt;/strong> は、まさに「インターネットの連絡先」のような役割を果たします。覚えやすいウェブサイトのドメイン（例：&lt;code>www.google.com&lt;/code>）をコンピューターが理解できる IP アドレス（例：&lt;code>172.217.160.78&lt;/code>）へ「翻訳」するのが役目です。DNS がなければ、ウェブサイトにアクセスするために規則性のない長い数値列を覚えなければならず、それはほぼ不可能でしょう。&lt;/p>
-&lt;h2 id="dns-はどのように動くのか">DNS はどのように動くのか？&lt;/h2>
-&lt;p>この「翻訳」処理は、裏側で電光石火のうちに完了します。ブラウザに URL を入力すると、おおむね次のステップが実行されます：&lt;/p>
-&lt;ol>
-&lt;li>&lt;strong>リクエスト&lt;/strong>：パソコンやスマートフォンが DNS リゾルバー（Resolver）にリクエストを送信します：「&lt;code>www.example.com&lt;/code> の IP アドレスは？」&lt;/li>
-&lt;li>&lt;strong>クエリ&lt;/strong>：DNS リゾルバーは探偵のように、階層的な問い合わせを通じ（ルートサーバー→トップレベルドメインサーバー→権威 DNS サーバーの順で）答えを見つけます。&lt;/li>
-&lt;li>&lt;strong>レスポンス&lt;/strong>：見つかったら、リゾルバーは IP アドレスをパソコンに返します。&lt;/li>
-&lt;li>&lt;strong>接続&lt;/strong>：ブラウザはその IP アドレスを使ってウェブサイトのサーバーと接続し、最終的にページコンテンツを画面に表示します。&lt;/li>
-&lt;/ol>
-&lt;h2 id="このシリーズでは何を学ぶ">このシリーズでは何を学ぶ？&lt;/h2>
-&lt;p>DNS の世界はこの単純な比喩よりもずっと奥深く複雑です。このシリーズでは、DNS の様々な側面を詳しく掘り下げます：&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>基本概念&lt;/strong>：ドメイン、IP アドレス、およびそれらの関係を深く理解。&lt;/li>
-&lt;li>&lt;strong>レコードタイプ&lt;/strong>：A レコード、CNAME レコード、MX レコードなど、さまざまな DNS レコードの用途を学習。&lt;/li>
-&lt;li>&lt;strong>サーバータイプ&lt;/strong>：リカーシブサーバー、権威サーバーなど、異なる役割を担う DNS サーバーを理解。&lt;/li>
-&lt;li>&lt;strong>DNS クエリの流れ&lt;/strong>：完全な DNS クエリがどのように実行されるかを詳細に分解。&lt;/li>
-&lt;li>&lt;strong>DNS キャッシュ&lt;/strong>：DNS キャッシュがどのようにウェブサイトへのアクセス速度を向上させるかを探る。&lt;/li>
-&lt;li>&lt;strong>プライベート DNS&lt;/strong>：ネットワークのセキュリティとプライバシーを高めるプライベート DNS サービスの構築・活用方法。&lt;/li>
-&lt;/ul>
-&lt;p>ネットワーク知識に触れ始めたばかりの初心者でも、既存の基礎知識を整理したい開発者でも、このシリーズが明快で分かりやすい導きとなるでしょう。&lt;/p>
-&lt;p>それでは、DNS の探求の旅を始めましょう！&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ネットワーク on Nono Blogs</title><link>https://blog.jqknono.com/ja-jp/categories/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/</link><description>Recent content in ネットワーク on Nono Blogs</description><generator>Hugo</generator><language>ja-jp</language><lastBuildDate>Sat, 24 May 2025 20:04:34 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/categories/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS 入門：インターネットの住所録</title><link>https://blog.jqknono.com/ja-jp/docs/private-service/dns/</link><pubDate>Sat, 24 May 2025 20:04:34 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/docs/private-service/dns/</guid><description>&lt;h2 id="dns-とは"&gt;DNS とは？&lt;/h2&gt;
+&lt;p&gt;私たちの DNS 記事シリーズへようこそ！技術的な詳細に立ち入る前に、まずシンプルな問いから始めましょう：DNS とは何でしょうか？&lt;/p&gt;
+&lt;p&gt;想像してみてください。あなたのスマートフォンの連絡先。友達の電話番号をひとつひとつ覚える必要はなく、名前を思い出すだけで十分です。友達「张三」に電話したいときは、連絡先で名前を探してタップするだけ。スマートフォンが自動的に「张三」の番号を見つけて発信してくれます。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DNS（Domain Name System、ドメインネームシステム）&lt;/strong&gt; は、まさに「インターネットの連絡先」のような役割を果たします。覚えやすいウェブサイトのドメイン（例：&lt;code&gt;www.google.com&lt;/code&gt;）をコンピューターが理解できる IP アドレス（例：&lt;code&gt;172.217.160.78&lt;/code&gt;）へ「翻訳」するのが役目です。DNS がなければ、ウェブサイトにアクセスするために規則性のない長い数値列を覚えなければならず、それはほぼ不可能でしょう。&lt;/p&gt;
+&lt;h2 id="dns-はどのように動くのか"&gt;DNS はどのように動くのか？&lt;/h2&gt;
+&lt;p&gt;この「翻訳」処理は、裏側で電光石火のうちに完了します。ブラウザに URL を入力すると、おおむね次のステップが実行されます：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;リクエスト&lt;/strong&gt;：パソコンやスマートフォンが DNS リゾルバー（Resolver）にリクエストを送信します：「&lt;code&gt;www.example.com&lt;/code&gt; の IP アドレスは？」&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;クエリ&lt;/strong&gt;：DNS リゾルバーは探偵のように、階層的な問い合わせを通じ（ルートサーバー→トップレベルドメインサーバー→権威 DNS サーバーの順で）答えを見つけます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;レスポンス&lt;/strong&gt;：見つかったら、リゾルバーは IP アドレスをパソコンに返します。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;接続&lt;/strong&gt;：ブラウザはその IP アドレスを使ってウェブサイトのサーバーと接続し、最終的にページコンテンツを画面に表示します。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="このシリーズでは何を学ぶ"&gt;このシリーズでは何を学ぶ？&lt;/h2&gt;
+&lt;p&gt;DNS の世界はこの単純な比喩よりもずっと奥深く複雑です。このシリーズでは、DNS の様々な側面を詳しく掘り下げます：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;基本概念&lt;/strong&gt;：ドメイン、IP アドレス、およびそれらの関係を深く理解。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;レコードタイプ&lt;/strong&gt;：A レコード、CNAME レコード、MX レコードなど、さまざまな DNS レコードの用途を学習。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;サーバータイプ&lt;/strong&gt;：リカーシブサーバー、権威サーバーなど、異なる役割を担う DNS サーバーを理解。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DNS クエリの流れ&lt;/strong&gt;：完全な DNS クエリがどのように実行されるかを詳細に分解。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DNS キャッシュ&lt;/strong&gt;：DNS キャッシュがどのようにウェブサイトへのアクセス速度を向上させるかを探る。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;プライベート DNS&lt;/strong&gt;：ネットワークのセキュリティとプライバシーを高めるプライベート DNS サービスの構築・活用方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ネットワーク知識に触れ始めたばかりの初心者でも、既存の基礎知識を整理したい開発者でも、このシリーズが明快で分かりやすい導きとなるでしょう。&lt;/p&gt;
+&lt;p&gt;それでは、DNS の探求の旅を始めましょう！&lt;/p&gt;</description></item></channel></rss>

@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Nono Blogs</title><link>https://blog.jqknono.com/blog/programmer/os/linux/</link><description>Recent content in linux on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 18:51:21 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/programmer/os/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>linux导览</title><link>https://blog.jqknono.com/blog/2024/06/28/linux%E5%AF%BC%E8%A7%88/</link><pubDate>Fri, 28 Jun 2024 18:51:21 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/linux%E5%AF%BC%E8%A7%88/</guid><description>&lt;ul>
-&lt;li>
-&lt;p>&lt;input disabled="" type="checkbox"> linux导览&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>[&lt;a href="%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91" title="内核模块开发">内核模块开发&lt;/a>]&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>[&lt;a href="linux%E6%BA%90%E7%A0%81%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BC%A9%E5%86%99" title="linux源码中的一些缩写">linux源码中的一些缩写&lt;/a>]&lt;/p>
-&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>linux on Nono Blogs</title><link>https://blog.jqknono.com/blog/programmer/os/linux/</link><description>Recent content in linux on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jun 2024 18:51:21 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/programmer/os/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>linux导览</title><link>https://blog.jqknono.com/blog/2024/06/28/linux%E5%AF%BC%E8%A7%88/</link><pubDate>Fri, 28 Jun 2024 18:51:21 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/28/linux%E5%AF%BC%E8%A7%88/</guid><description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled="" type="checkbox"&gt; linux导览&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[&lt;a href="%E5%86%85%E6%A0%B8%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91" title="内核模块开发"&gt;内核模块开发&lt;/a&gt;]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;[&lt;a href="linux%E6%BA%90%E7%A0%81%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E7%BC%A9%E5%86%99" title="linux源码中的一些缩写"&gt;linux源码中的一些缩写&lt;/a&gt;]&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

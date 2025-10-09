@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>运维 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E8%BF%90%E7%BB%B4/</link><description>Recent content in 运维 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 25 Apr 2025 19:25:01 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml"/><item><title>CNAME与TXT冲突导致证书申请问题</title><link>https://blog.jqknono.com/blog/2025/04/25/cname%E4%B8%8Etxt%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E9%97%AE%E9%A2%98/</link><pubDate>Fri, 25 Apr 2025 19:25:01 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/04/25/cname%E4%B8%8Etxt%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E9%97%AE%E9%A2%98/</guid><description>&lt;h2 id="相同前缀的-cname-与-txt-不能共存">相同前缀的 CNAME 与 TXT 不能共存&lt;/h2>
-&lt;p>折腾过域名的可能知道(A,AAAA)记录不能与 CNAME 共存, 但未必碰到过 TXT 与 CNAME 冲突的情况.&lt;/p>
-&lt;p>什么情况下 TXT 会与 CNAME 同时使用一个前缀?&lt;/p>
-&lt;p>有一种场景, 就是在 LetsEncrypt 证书申请, 使用 &lt;em>DNS-01&lt;/em> 挑战来验证域名所有权时.&lt;/p>
-&lt;ol>
-&lt;li>Certbot 会使用 ackey 和 acsecret 或者 token, 创建一条&lt;code>_acme-challenge.example.com&lt;/code> 的&lt;strong>TXT 记录&lt;/strong>&lt;/li>
-&lt;li>Letsencrypt 会查询 &lt;strong>TXT 记录&lt;/strong>, 确认申请方有权创建 DNS 记录, 证明有域名所有权.&lt;/li>
-&lt;li>Letsencrypt 签发证书&lt;/li>
-&lt;li>Certbot 清理&lt;code>_acme-challenge.example.com&lt;/code> 的&lt;strong>TXT 记录&lt;/strong>&lt;/li>
-&lt;/ol>
-&lt;p>倘若创建&lt;strong>TXT 记录&lt;/strong>时, 已经有一条&lt;code>_acme-challenge.example.com&lt;/code> 的&lt;strong>CNAME&lt;/strong>记录, 则&lt;strong>TXT&lt;/strong>记录可能会创建失败, 导致域名挑战验证失败.&lt;/p>
-&lt;p>为什么会出现&lt;code>_acme-challenge&lt;/code>.example.com 的&lt;strong>CNAME&lt;/strong>记录?&lt;/p>
-&lt;p>阿里云新推出的 &lt;strong>ESA&lt;/strong> 边缘安全加速, 类似 cloudflare, 是原 DCDN 全站加速的改名增强版. 在早期使用时, 不支持自助申请泛域名, 我是使用脚本周期性将自己申请的泛域名证书传上去, 管理起来稍有不便. 后来出了&lt;strong>托管 DCV&lt;/strong>, 可以自助申请更新泛域名证书, 按照说明操作, 的确可以自助管理泛域名证书. 但埋下的隐患隔了数月才发现. 这个 CNAME 记录持续存在, 会导致不能创建相同前缀的 TXT 记录, 导致我不能在别处证明域名所有权.&lt;/p></description></item><item><title>宝塔docker源加速</title><link>https://blog.jqknono.com/blog/2024/06/03/%E5%AE%9D%E5%A1%94docker%E6%BA%90%E5%8A%A0%E9%80%9F/</link><pubDate>Mon, 03 Jun 2024 18:31:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/03/%E5%AE%9D%E5%A1%94docker%E6%BA%90%E5%8A%A0%E9%80%9F/</guid><description>&lt;p>&lt;img src="https://s2.loli.net/2024/06/03/BT8s1ldrF7wyUYP.png" alt="">&lt;/p>
-&lt;p>宝塔 8.2 及以下版本设置 docker 源加速无效, 并且界面上手动设置配置文件内容无效.&lt;/p>
-&lt;p>这是由于 docker 配置文件位于&lt;code>/etc/docker/daemon.json&lt;/code>, 该文件及其文件夹默认不存在, 直接修改文件不会保存成功.&lt;/p>
-&lt;p>只需要执行&lt;code>mkdir /etc/docker&lt;/code>, 然后再在界面上修改加速配置即可生效.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>运维 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E8%BF%90%E7%BB%B4/</link><description>Recent content in 运维 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 25 Apr 2025 19:25:01 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml"/><item><title>CNAME与TXT冲突导致证书申请问题</title><link>https://blog.jqknono.com/blog/2025/04/25/cname%E4%B8%8Etxt%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E9%97%AE%E9%A2%98/</link><pubDate>Fri, 25 Apr 2025 19:25:01 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/04/25/cname%E4%B8%8Etxt%E5%86%B2%E7%AA%81%E5%AF%BC%E8%87%B4%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E9%97%AE%E9%A2%98/</guid><description>&lt;h2 id="相同前缀的-cname-与-txt-不能共存"&gt;相同前缀的 CNAME 与 TXT 不能共存&lt;/h2&gt;
+&lt;p&gt;折腾过域名的可能知道(A,AAAA)记录不能与 CNAME 共存, 但未必碰到过 TXT 与 CNAME 冲突的情况.&lt;/p&gt;
+&lt;p&gt;什么情况下 TXT 会与 CNAME 同时使用一个前缀?&lt;/p&gt;
+&lt;p&gt;有一种场景, 就是在 LetsEncrypt 证书申请, 使用 &lt;em&gt;DNS-01&lt;/em&gt; 挑战来验证域名所有权时.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Certbot 会使用 ackey 和 acsecret 或者 token, 创建一条&lt;code&gt;_acme-challenge.example.com&lt;/code&gt; 的&lt;strong&gt;TXT 记录&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Letsencrypt 会查询 &lt;strong&gt;TXT 记录&lt;/strong&gt;, 确认申请方有权创建 DNS 记录, 证明有域名所有权.&lt;/li&gt;
+&lt;li&gt;Letsencrypt 签发证书&lt;/li&gt;
+&lt;li&gt;Certbot 清理&lt;code&gt;_acme-challenge.example.com&lt;/code&gt; 的&lt;strong&gt;TXT 记录&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;倘若创建&lt;strong&gt;TXT 记录&lt;/strong&gt;时, 已经有一条&lt;code&gt;_acme-challenge.example.com&lt;/code&gt; 的&lt;strong&gt;CNAME&lt;/strong&gt;记录, 则&lt;strong&gt;TXT&lt;/strong&gt;记录可能会创建失败, 导致域名挑战验证失败.&lt;/p&gt;
+&lt;p&gt;为什么会出现&lt;code&gt;_acme-challenge&lt;/code&gt;.example.com 的&lt;strong&gt;CNAME&lt;/strong&gt;记录?&lt;/p&gt;
+&lt;p&gt;阿里云新推出的 &lt;strong&gt;ESA&lt;/strong&gt; 边缘安全加速, 类似 cloudflare, 是原 DCDN 全站加速的改名增强版. 在早期使用时, 不支持自助申请泛域名, 我是使用脚本周期性将自己申请的泛域名证书传上去, 管理起来稍有不便. 后来出了&lt;strong&gt;托管 DCV&lt;/strong&gt;, 可以自助申请更新泛域名证书, 按照说明操作, 的确可以自助管理泛域名证书. 但埋下的隐患隔了数月才发现. 这个 CNAME 记录持续存在, 会导致不能创建相同前缀的 TXT 记录, 导致我不能在别处证明域名所有权.&lt;/p&gt;</description></item><item><title>宝塔docker源加速</title><link>https://blog.jqknono.com/blog/2024/06/03/%E5%AE%9D%E5%A1%94docker%E6%BA%90%E5%8A%A0%E9%80%9F/</link><pubDate>Mon, 03 Jun 2024 18:31:48 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/06/03/%E5%AE%9D%E5%A1%94docker%E6%BA%90%E5%8A%A0%E9%80%9F/</guid><description>&lt;p&gt;&lt;img src="https://s2.loli.net/2024/06/03/BT8s1ldrF7wyUYP.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;宝塔 8.2 及以下版本设置 docker 源加速无效, 并且界面上手动设置配置文件内容无效.&lt;/p&gt;
+&lt;p&gt;这是由于 docker 配置文件位于&lt;code&gt;/etc/docker/daemon.json&lt;/code&gt;, 该文件及其文件夹默认不存在, 直接修改文件不会保存成功.&lt;/p&gt;
+&lt;p&gt;只需要执行&lt;code&gt;mkdir /etc/docker&lt;/code&gt;, 然后再在界面上修改加速配置即可生效.&lt;/p&gt;</description></item></channel></rss>

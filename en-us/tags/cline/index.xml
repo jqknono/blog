@@ -1,33 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cline on Nono Blogs</title><link>https://blog.jqknono.com/en-us/tags/cline/</link><description>Recent content in Cline on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 30 Mar 2025 22:24:30 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/tags/cline/index.xml" rel="self" type="application/rss+xml"/><item><title>A Prompt Guide from Cline</title><link>https://blog.jqknono.com/en-us/blog/2025/03/30/a-prompt-guide-from-cline/</link><pubDate>Sun, 30 Mar 2025 22:24:30 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/03/30/a-prompt-guide-from-cline/</guid><description>&lt;h1 id="cline-memory-bank---custom-instructions">Cline Memory Bank - Custom Instructions&lt;/h1>
-&lt;h3 id="1-purpose-and-functionality">1. Purpose and Functionality&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>What is the goal of this instruction set?&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>This set transforms Cline into a self-documenting development system, preserving context across sessions via a structured “memory bank.” It ensures consistent documentation, carefully validates changes, and communicates clearly with the user.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Which kinds of projects or tasks are these best suited for?&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Projects that demand extensive context tracking.&lt;/li>
-&lt;li>Any project, regardless of tech stack (tech-stack details are stored in &lt;code>techContext.md&lt;/code>).&lt;/li>
-&lt;li>Both ongoing and new projects.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="2-usage-guide">2. Usage Guide&lt;/h3>
-&lt;ul>
-&lt;li>&lt;strong>How to add these instructions&lt;/strong>
-&lt;ol>
-&lt;li>Open VSCode&lt;/li>
-&lt;li>Click the Cline extension settings gear ⚙️&lt;/li>
-&lt;li>Locate the “Custom Instructions” field&lt;/li>
-&lt;li>Copy and paste the instructions in the section below&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;/ul>
-&lt;img width="345" alt="Screenshot 2024-12-26 at 11 22 20 AM" src="https://github.com/user-attachments/assets/8b4ff439-db66-48ec-be13-1ddaa37afa9a" />
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>Project Setup&lt;/strong>&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cline on Nono Blogs</title><link>https://blog.jqknono.com/en-us/tags/cline/</link><description>Recent content in Cline on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 30 Mar 2025 22:24:30 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/tags/cline/index.xml" rel="self" type="application/rss+xml"/><item><title>A Prompt Guide from Cline</title><link>https://blog.jqknono.com/en-us/blog/2025/03/30/a-prompt-guide-from-cline/</link><pubDate>Sun, 30 Mar 2025 22:24:30 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/03/30/a-prompt-guide-from-cline/</guid><description>&lt;h1 id="cline-memory-bank---custom-instructions"&gt;Cline Memory Bank - Custom Instructions&lt;/h1&gt;
+&lt;h3 id="1-purpose-and-functionality"&gt;1. Purpose and Functionality&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;What is the goal of this instruction set?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This set transforms Cline into a self-documenting development system, preserving context across sessions via a structured “memory bank.” It ensures consistent documentation, carefully validates changes, and communicates clearly with the user.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Which kinds of projects or tasks are these best suited for?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Projects that demand extensive context tracking.&lt;/li&gt;
+&lt;li&gt;Any project, regardless of tech stack (tech-stack details are stored in &lt;code&gt;techContext.md&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Both ongoing and new projects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="2-usage-guide"&gt;2. Usage Guide&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;How to add these instructions&lt;/strong&gt;
+&lt;ol&gt;
+&lt;li&gt;Open VSCode&lt;/li&gt;
+&lt;li&gt;Click the Cline extension settings gear ⚙️&lt;/li&gt;
+&lt;li&gt;Locate the “Custom Instructions” field&lt;/li&gt;
+&lt;li&gt;Copy and paste the instructions in the section below&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img width="345" alt="Screenshot 2024-12-26 at 11 22 20 AM" src="https://github.com/user-attachments/assets/8b4ff439-db66-48ec-be13-1ddaa37afa9a" /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Project Setup&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

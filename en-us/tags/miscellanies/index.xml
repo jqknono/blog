@@ -1,91 +1,91 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miscellanies on Nono Blogs</title><link>https://blog.jqknono.com/en-us/tags/miscellanies/</link><description>Recent content in Miscellanies on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 10 Jul 2025 15:51:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/tags/miscellanies/index.xml" rel="self" type="application/rss+xml"/><item><title>Which Languages Are Best for Multilingual Projects</title><link>https://blog.jqknono.com/en-us/blog/2025/07/10/which-languages-are-best-for-multilingual-projects/</link><pubDate>Thu, 10 Jul 2025 15:51:13 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/07/10/which-languages-are-best-for-multilingual-projects/</guid><description>&lt;p>Below are 15 countries/regions—selected based on population size, economic output, and international influence—together with their language codes (shortcodes) and brief rationales, intended as a reference for multilingual translation:&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Country / Region&lt;/th>
- &lt;th>Shortcode&lt;/th>
- &lt;th>Brief Rationale&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>United States&lt;/td>
- &lt;td>en-US&lt;/td>
- &lt;td>English is the global lingua franca; the U.S. has the world’s largest GDP (population: 333 million) and is a core market for international business and technology.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>China&lt;/td>
- &lt;td>zh-CN&lt;/td>
- &lt;td>Most populous country (1.41 billion); 2nd-largest GDP; Chinese is a UN official language; Chinese market consumption potential is enormous.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Japan&lt;/td>
- &lt;td>ja-JP&lt;/td>
- &lt;td>Japanese is the official language of the world’s 5th-largest economy; leading in technology and manufacturing; population: 125 million with strong purchasing power.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Germany&lt;/td>
- &lt;td>de-DE&lt;/td>
- &lt;td>Core of the Eurozone economy; largest GDP in Europe; German wields significant influence within the EU; population: 83.2 million with a robust industrial base.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>France&lt;/td>
- &lt;td>fr-FR&lt;/td>
- &lt;td>French is a UN official language; France has the 7th-largest GDP globally; population: 67.81 million; widely used in Africa and international organizations.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>India&lt;/td>
- &lt;td>hi-IN&lt;/td>
- &lt;td>Hindi is one of India’s official languages; India’s population (1.4 billion) is the world’s 2nd-largest; 6th-largest GDP and among the fastest-growing major economies.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Spain&lt;/td>
- &lt;td>es-ES&lt;/td>
- &lt;td>Spanish has the 2nd-largest number of native speakers worldwide (548 million); Spain’s GDP is 4th in Europe, and Spanish is common throughout Latin America.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Brazil&lt;/td>
- &lt;td>pt-BR&lt;/td>
- &lt;td>Portuguese is the native language of Brazil (population: 214 million); Brazil is South America’s largest economy with the 9th-largest GDP globally.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>South Korea&lt;/td>
- &lt;td>ko-KR&lt;/td>
- &lt;td>Korean corresponds to South Korea (population: 51.74 million); 10th-largest GDP globally; powerful in technology and cultural industries such as K-pop.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Russia&lt;/td>
- &lt;td>ru-RU&lt;/td>
- &lt;td>Russian is a UN official language; population: 146 million; GDP ranks 11th globally; widely spoken in Central Asia and Eastern Europe.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Italy&lt;/td>
- &lt;td>it-IT&lt;/td>
- &lt;td>Italy’s GDP is 3rd in Europe; population: 59.06 million; strong in tourism and luxury goods; Italian is an important EU language.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Indonesia&lt;/td>
- &lt;td>id-ID&lt;/td>
- &lt;td>Indonesian is the official language of the world’s largest archipelagic nation (population: 276 million) and the largest GDP in Southeast Asia, presenting a high market potential.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Turkey&lt;/td>
- &lt;td>tr-TR&lt;/td>
- &lt;td>Turkish is spoken by 85 million people; Turkey’s strategic position bridging Europe and Asia; GDP ranks 19th globally and exerts cultural influence in the Middle East and Central Asia.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Netherlands&lt;/td>
- &lt;td>nl-NL&lt;/td>
- &lt;td>Dutch is spoken in the Netherlands (population: 17.5 million); GDP ranks 17th globally; leading in trade and shipping; although English penetration is high, the local market still requires the native language.&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>United Arab Emirates&lt;/td>
- &lt;td>ar-AE&lt;/td>
- &lt;td>Arabic is central to the Middle East; the UAE is a Gulf economic hub (population: 9.5 million, 88 % expatriates) with well-developed oil and finance sectors, radiating influence across the Arab world.&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;p>Notes:
-Language codes follow the ISO 639-1 (language) + ISO 3166-1 (country) standards, facilitating adaptation to localization tools.&lt;br>
-Priority has been given to countries with populations over 100 million, GDPs in the world’s top 20, and those with notable regional influence, balancing international applicability and market value.&lt;br>
-For particular domains (e.g., the Latin American market can add es-MX (Mexico), Southeast Asia can add vi-VN (Vietnam)), the list can be further refined as needed.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miscellanies on Nono Blogs</title><link>https://blog.jqknono.com/en-us/tags/miscellanies/</link><description>Recent content in Miscellanies on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 10 Jul 2025 15:51:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/tags/miscellanies/index.xml" rel="self" type="application/rss+xml"/><item><title>Which Languages Are Best for Multilingual Projects</title><link>https://blog.jqknono.com/en-us/blog/2025/07/10/which-languages-are-best-for-multilingual-projects/</link><pubDate>Thu, 10 Jul 2025 15:51:13 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/07/10/which-languages-are-best-for-multilingual-projects/</guid><description>&lt;p&gt;Below are 15 countries/regions—selected based on population size, economic output, and international influence—together with their language codes (shortcodes) and brief rationales, intended as a reference for multilingual translation:&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Country / Region&lt;/th&gt;
+ &lt;th&gt;Shortcode&lt;/th&gt;
+ &lt;th&gt;Brief Rationale&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;United States&lt;/td&gt;
+ &lt;td&gt;en-US&lt;/td&gt;
+ &lt;td&gt;English is the global lingua franca; the U.S. has the world’s largest GDP (population: 333 million) and is a core market for international business and technology.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;China&lt;/td&gt;
+ &lt;td&gt;zh-CN&lt;/td&gt;
+ &lt;td&gt;Most populous country (1.41 billion); 2nd-largest GDP; Chinese is a UN official language; Chinese market consumption potential is enormous.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Japan&lt;/td&gt;
+ &lt;td&gt;ja-JP&lt;/td&gt;
+ &lt;td&gt;Japanese is the official language of the world’s 5th-largest economy; leading in technology and manufacturing; population: 125 million with strong purchasing power.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Germany&lt;/td&gt;
+ &lt;td&gt;de-DE&lt;/td&gt;
+ &lt;td&gt;Core of the Eurozone economy; largest GDP in Europe; German wields significant influence within the EU; population: 83.2 million with a robust industrial base.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;France&lt;/td&gt;
+ &lt;td&gt;fr-FR&lt;/td&gt;
+ &lt;td&gt;French is a UN official language; France has the 7th-largest GDP globally; population: 67.81 million; widely used in Africa and international organizations.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;India&lt;/td&gt;
+ &lt;td&gt;hi-IN&lt;/td&gt;
+ &lt;td&gt;Hindi is one of India’s official languages; India’s population (1.4 billion) is the world’s 2nd-largest; 6th-largest GDP and among the fastest-growing major economies.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Spain&lt;/td&gt;
+ &lt;td&gt;es-ES&lt;/td&gt;
+ &lt;td&gt;Spanish has the 2nd-largest number of native speakers worldwide (548 million); Spain’s GDP is 4th in Europe, and Spanish is common throughout Latin America.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Brazil&lt;/td&gt;
+ &lt;td&gt;pt-BR&lt;/td&gt;
+ &lt;td&gt;Portuguese is the native language of Brazil (population: 214 million); Brazil is South America’s largest economy with the 9th-largest GDP globally.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;South Korea&lt;/td&gt;
+ &lt;td&gt;ko-KR&lt;/td&gt;
+ &lt;td&gt;Korean corresponds to South Korea (population: 51.74 million); 10th-largest GDP globally; powerful in technology and cultural industries such as K-pop.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Russia&lt;/td&gt;
+ &lt;td&gt;ru-RU&lt;/td&gt;
+ &lt;td&gt;Russian is a UN official language; population: 146 million; GDP ranks 11th globally; widely spoken in Central Asia and Eastern Europe.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Italy&lt;/td&gt;
+ &lt;td&gt;it-IT&lt;/td&gt;
+ &lt;td&gt;Italy’s GDP is 3rd in Europe; population: 59.06 million; strong in tourism and luxury goods; Italian is an important EU language.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Indonesia&lt;/td&gt;
+ &lt;td&gt;id-ID&lt;/td&gt;
+ &lt;td&gt;Indonesian is the official language of the world’s largest archipelagic nation (population: 276 million) and the largest GDP in Southeast Asia, presenting a high market potential.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Turkey&lt;/td&gt;
+ &lt;td&gt;tr-TR&lt;/td&gt;
+ &lt;td&gt;Turkish is spoken by 85 million people; Turkey’s strategic position bridging Europe and Asia; GDP ranks 19th globally and exerts cultural influence in the Middle East and Central Asia.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Netherlands&lt;/td&gt;
+ &lt;td&gt;nl-NL&lt;/td&gt;
+ &lt;td&gt;Dutch is spoken in the Netherlands (population: 17.5 million); GDP ranks 17th globally; leading in trade and shipping; although English penetration is high, the local market still requires the native language.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;United Arab Emirates&lt;/td&gt;
+ &lt;td&gt;ar-AE&lt;/td&gt;
+ &lt;td&gt;Arabic is central to the Middle East; the UAE is a Gulf economic hub (population: 9.5 million, 88 % expatriates) with well-developed oil and finance sectors, radiating influence across the Arab world.&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Notes:
+Language codes follow the ISO 639-1 (language) + ISO 3166-1 (country) standards, facilitating adaptation to localization tools.&lt;br&gt;
+Priority has been given to countries with populations over 100 million, GDPs in the world’s top 20, and those with notable regional influence, balancing international applicability and market value.&lt;br&gt;
+For particular domains (e.g., the Latin American market can add es-MX (Mexico), Southeast Asia can add vi-VN (Vietnam)), the list can be further refined as needed.&lt;/p&gt;</description></item></channel></rss>

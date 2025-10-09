@@ -1,93 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>杂谈 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E6%9D%82%E8%B0%88/</link><description>Recent content in 杂谈 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 10 Jul 2025 15:51:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml"/><item><title>项目多语言适合选择哪些语言</title><link>https://blog.jqknono.com/blog/2025/07/10/%E9%A1%B9%E7%9B%AE%E5%A4%9A%E8%AF%AD%E8%A8%80%E9%80%82%E5%90%88%E9%80%89%E6%8B%A9%E5%93%AA%E4%BA%9B%E8%AF%AD%E8%A8%80/</link><pubDate>Thu, 10 Jul 2025 15:51:13 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/07/10/%E9%A1%B9%E7%9B%AE%E5%A4%9A%E8%AF%AD%E8%A8%80%E9%80%82%E5%90%88%E9%80%89%E6%8B%A9%E5%93%AA%E4%BA%9B%E8%AF%AD%E8%A8%80/</guid><description>&lt;p>以下是结合人口规模、经济总量及国际影响力推荐的 15 个国家 / 地区，包含对应的语言代码（shortcode）及推荐原因，供多语言翻译参考：&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>国家 / 地区&lt;/th>
- &lt;th>Shortcode&lt;/th>
- &lt;th>推荐原因简述&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>美国&lt;/td>
- &lt;td>en-US&lt;/td>
- &lt;td>英语为全球通用语言，美国 GDP 全球第一，人口 3.33 亿，是国际商业与科技核心市场。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>中国&lt;/td>
- &lt;td>zh-CN&lt;/td>
- &lt;td>全球人口最多（14.1 亿），GDP 第二，中文是联合国官方语言，中国市场消费潜力巨大。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>日本&lt;/td>
- &lt;td>ja-JP&lt;/td>
- &lt;td>日语为全球第五大经济体官方语言，科技与制造业领先，人口 1.25 亿，消费能力强。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>德国&lt;/td>
- &lt;td>de-DE&lt;/td>
- &lt;td>欧元区经济核心，GDP 欧洲第一，德语在欧盟影响力大，人口 8320 万，工业实力雄厚。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>法国&lt;/td>
- &lt;td>fr-FR&lt;/td>
- &lt;td>法语为联合国官方语言，法国 GDP 全球第七，人口 6781 万，在非洲及国际组织中使用广泛。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>印度&lt;/td>
- &lt;td>hi-IN&lt;/td>
- &lt;td>印地语为印度官方语言，印度人口 14 亿（全球第二），GDP 第六，是增长最快的大型经济体之一。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>西班牙&lt;/td>
- &lt;td>es-ES&lt;/td>
- &lt;td>西班牙语为全球母语人口第二多（5.48 亿），西班牙 GDP 欧洲第四，拉美多数国家通用。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>巴西&lt;/td>
- &lt;td>pt-BR&lt;/td>
- &lt;td>葡萄牙语在巴西（人口 2.14 亿）为母语，巴西是南美最大经济体，GDP 全球第九。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>韩国&lt;/td>
- &lt;td>ko-KR&lt;/td>
- &lt;td>韩语对应韩国（人口 5174 万），GDP 全球第十，科技与文化产业（如 K-pop）国际影响力强。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>俄罗斯&lt;/td>
- &lt;td>ru-RU&lt;/td>
- &lt;td>俄语为联合国官方语言，俄罗斯人口 1.46 亿，GDP 全球第十一，在中亚及东欧有广泛使用。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>意大利&lt;/td>
- &lt;td>it-IT&lt;/td>
- &lt;td>意大利 GDP 欧洲第三，人口 5906 万，旅游业与奢侈品行业发达，意大利语为欧盟重要语言。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>印度尼西亚&lt;/td>
- &lt;td>id-ID&lt;/td>
- &lt;td>印度尼西亚语为全球最大群岛国家（人口 2.76 亿）官方语言，GDP 东南亚第一，市场潜力大。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>土耳其&lt;/td>
- &lt;td>tr-TR&lt;/td>
- &lt;td>土耳其语使用人口 8500 万，土耳其是欧亚枢纽，GDP 全球第十九，中东及中亚有文化影响力。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>荷兰&lt;/td>
- &lt;td>nl-NL&lt;/td>
- &lt;td>荷兰语对应荷兰（人口 1750 万），荷兰 GDP 全球第十七，贸易与航运业领先，英语普及率高但本土市场仍需母语。&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>阿拉伯联合酋长国&lt;/td>
- &lt;td>ar-AE&lt;/td>
- &lt;td>阿拉伯语为中东核心语言，阿联酋是海湾经济枢纽，人口 950 万（外籍占 88%），石油与金融业发达，辐射阿拉伯世界。&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;p>说明：
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>杂谈 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E6%9D%82%E8%B0%88/</link><description>Recent content in 杂谈 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 10 Jul 2025 15:51:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E6%9D%82%E8%B0%88/index.xml" rel="self" type="application/rss+xml"/><item><title>项目多语言适合选择哪些语言</title><link>https://blog.jqknono.com/blog/2025/07/10/%E9%A1%B9%E7%9B%AE%E5%A4%9A%E8%AF%AD%E8%A8%80%E9%80%82%E5%90%88%E9%80%89%E6%8B%A9%E5%93%AA%E4%BA%9B%E8%AF%AD%E8%A8%80/</link><pubDate>Thu, 10 Jul 2025 15:51:13 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/07/10/%E9%A1%B9%E7%9B%AE%E5%A4%9A%E8%AF%AD%E8%A8%80%E9%80%82%E5%90%88%E9%80%89%E6%8B%A9%E5%93%AA%E4%BA%9B%E8%AF%AD%E8%A8%80/</guid><description>&lt;p&gt;以下是结合人口规模、经济总量及国际影响力推荐的 15 个国家 / 地区，包含对应的语言代码（shortcode）及推荐原因，供多语言翻译参考：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;国家 / 地区&lt;/th&gt;
+ &lt;th&gt;Shortcode&lt;/th&gt;
+ &lt;th&gt;推荐原因简述&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;美国&lt;/td&gt;
+ &lt;td&gt;en-US&lt;/td&gt;
+ &lt;td&gt;英语为全球通用语言，美国 GDP 全球第一，人口 3.33 亿，是国际商业与科技核心市场。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;中国&lt;/td&gt;
+ &lt;td&gt;zh-CN&lt;/td&gt;
+ &lt;td&gt;全球人口最多（14.1 亿），GDP 第二，中文是联合国官方语言，中国市场消费潜力巨大。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;日本&lt;/td&gt;
+ &lt;td&gt;ja-JP&lt;/td&gt;
+ &lt;td&gt;日语为全球第五大经济体官方语言，科技与制造业领先，人口 1.25 亿，消费能力强。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;德国&lt;/td&gt;
+ &lt;td&gt;de-DE&lt;/td&gt;
+ &lt;td&gt;欧元区经济核心，GDP 欧洲第一，德语在欧盟影响力大，人口 8320 万，工业实力雄厚。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;法国&lt;/td&gt;
+ &lt;td&gt;fr-FR&lt;/td&gt;
+ &lt;td&gt;法语为联合国官方语言，法国 GDP 全球第七，人口 6781 万，在非洲及国际组织中使用广泛。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;印度&lt;/td&gt;
+ &lt;td&gt;hi-IN&lt;/td&gt;
+ &lt;td&gt;印地语为印度官方语言，印度人口 14 亿（全球第二），GDP 第六，是增长最快的大型经济体之一。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;西班牙&lt;/td&gt;
+ &lt;td&gt;es-ES&lt;/td&gt;
+ &lt;td&gt;西班牙语为全球母语人口第二多（5.48 亿），西班牙 GDP 欧洲第四，拉美多数国家通用。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;巴西&lt;/td&gt;
+ &lt;td&gt;pt-BR&lt;/td&gt;
+ &lt;td&gt;葡萄牙语在巴西（人口 2.14 亿）为母语，巴西是南美最大经济体，GDP 全球第九。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;韩国&lt;/td&gt;
+ &lt;td&gt;ko-KR&lt;/td&gt;
+ &lt;td&gt;韩语对应韩国（人口 5174 万），GDP 全球第十，科技与文化产业（如 K-pop）国际影响力强。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;俄罗斯&lt;/td&gt;
+ &lt;td&gt;ru-RU&lt;/td&gt;
+ &lt;td&gt;俄语为联合国官方语言，俄罗斯人口 1.46 亿，GDP 全球第十一，在中亚及东欧有广泛使用。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;意大利&lt;/td&gt;
+ &lt;td&gt;it-IT&lt;/td&gt;
+ &lt;td&gt;意大利 GDP 欧洲第三，人口 5906 万，旅游业与奢侈品行业发达，意大利语为欧盟重要语言。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;印度尼西亚&lt;/td&gt;
+ &lt;td&gt;id-ID&lt;/td&gt;
+ &lt;td&gt;印度尼西亚语为全球最大群岛国家（人口 2.76 亿）官方语言，GDP 东南亚第一，市场潜力大。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;土耳其&lt;/td&gt;
+ &lt;td&gt;tr-TR&lt;/td&gt;
+ &lt;td&gt;土耳其语使用人口 8500 万，土耳其是欧亚枢纽，GDP 全球第十九，中东及中亚有文化影响力。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;荷兰&lt;/td&gt;
+ &lt;td&gt;nl-NL&lt;/td&gt;
+ &lt;td&gt;荷兰语对应荷兰（人口 1750 万），荷兰 GDP 全球第十七，贸易与航运业领先，英语普及率高但本土市场仍需母语。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;阿拉伯联合酋长国&lt;/td&gt;
+ &lt;td&gt;ar-AE&lt;/td&gt;
+ &lt;td&gt;阿拉伯语为中东核心语言，阿联酋是海湾经济枢纽，人口 950 万（外籍占 88%），石油与金融业发达，辐射阿拉伯世界。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;说明：
 语言代码遵循 ISO 639-1（语言）+ ISO 3166-1（国家）标准，便于本地化工具适配。
 优先覆盖了人口过亿、GDP 全球前 20 及区域影响力显著的国家，兼顾了语言的国际通用性与市场价值。
-若文档涉及特定领域（如拉美市场可补充 es-MX（墨西哥），东南亚可补充 vi-VN（越南）），可进一步细化调整。&lt;/p></description></item><item><title>杂谈</title><link>https://blog.jqknono.com/blog/programmer/misc/</link><pubDate>Fri, 28 Jun 2024 19:00:37 +0800</pubDate><guid>https://blog.jqknono.com/blog/programmer/misc/</guid><description>&lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> _index&lt;/li>
-&lt;/ul></description></item></channel></rss>
+若文档涉及特定领域（如拉美市场可补充 es-MX（墨西哥），东南亚可补充 vi-VN（越南）），可进一步细化调整。&lt;/p&gt;</description></item><item><title>杂谈</title><link>https://blog.jqknono.com/blog/programmer/misc/</link><pubDate>Fri, 28 Jun 2024 19:00:37 +0800</pubDate><guid>https://blog.jqknono.com/blog/programmer/misc/</guid><description>&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; _index&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

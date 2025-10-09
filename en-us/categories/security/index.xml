@@ -1,41 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on Nono Blogs</title><link>https://blog.jqknono.com/en-us/categories/security/</link><description>Recent content in Security on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 11 Jul 2025 11:52:10 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/categories/security/index.xml" rel="self" type="application/rss+xml"/><item><title>Attack Methods Against Model-Relay Services</title><link>https://blog.jqknono.com/en-us/blog/2025/07/11/attack-methods-against-model-relay-services/</link><pubDate>Fri, 11 Jul 2025 11:52:10 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/07/11/attack-methods-against-model-relay-services/</guid><description>&lt;p>Avoiding public routers—especially free Wi-Fi—has become common sense in recent years, yet many people still don’t understand &lt;em>why&lt;/em>, leaving them vulnerable to new variants of the same trick.&lt;/p>
-&lt;p>Due to Anthropic’s corporate policy, users in China cannot conveniently access its services; because its technology is cutting-edge, many still want to try. This created the “Claude relay” business.&lt;/p>
-&lt;p>First, we must realize this business is &lt;strong>not sustainable&lt;/strong>. Unlike other ordinary internet services, simply using a generic VPN will &lt;em>not&lt;/em> satisfy Anthropic’s blocks.&lt;/p></description></item><item><title>The Risks of AI Model-Relay Services</title><link>https://blog.jqknono.com/en-us/blog/2025/07/10/the-risks-of-ai-model-relay-services/</link><pubDate>Thu, 10 Jul 2025 20:28:04 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/07/10/the-risks-of-ai-model-relay-services/</guid><description>&lt;p>Lately, in the comment threads on AI-related posts, you’ll see a flood of low-quality ads touting “cheap Claude Code relay” services.&lt;/p>
-&lt;p>The business model is simple: Claude Code lets you supply your own API endpoint and key, including any vendor that’s OpenAI-compatible. That’s all there is to it. Pull in a bit of Claude’s traffic, mix in some Qwen tokens, and sell the blended soup—who’s going to notice?&lt;/p>
-&lt;p>Those who only want to make a quick buck are the timid ones; how much can they really earn? The truly valuable assets are where you keep your savings and your critical data.&lt;/p></description></item><item><title>How to Avoid Getting Doxxed</title><link>https://blog.jqknono.com/en-us/blog/2025/03/19/how-to-avoid-getting-doxxed/</link><pubDate>Wed, 19 Mar 2025 16:54:44 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/03/19/how-to-avoid-getting-doxxed/</guid><description>&lt;h2 id="fragmented-information-is-easily-pieced-together">Fragmented information is easily pieced together&lt;/h2>
-&lt;p>Personal information is dispersed and sensitive—easy to overlook. Yet the internet is not a safe harbor; countless people can stitch this information together using search engines and other tools.&lt;/p>
-&lt;p>Take the xhs community as an example: users there have comparatively weak network-security awareness and often share the meaning behind their passwords and the scenarios in which they are used.&lt;/p>
-&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202503191707446.png" alt="xhs search results">&lt;/p>
-&lt;p>Searching for “password meaning” reveals a flood of users openly displaying their passwords and their explanations.&lt;/p></description></item><item><title>Offense &amp; Defense</title><link>https://blog.jqknono.com/en-us/blog/attack-and-defense/</link><pubDate>Tue, 31 Dec 2024 15:57:34 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/attack-and-defense/</guid><description/></item><item><title>Trustworthy Design</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/trustworthy-design/</link><pubDate>Fri, 28 Jun 2024 15:49:18 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/trustworthy-design/</guid><description>&lt;h1 id="security-architecture-and-design-principles">Security Architecture and Design Principles&lt;/h1>
-&lt;h2 id="the-three-security-elements-and-security-design-principles">The Three Security Elements and Security Design Principles&lt;/h2>
-&lt;ul>
-&lt;li>Integrity&lt;/li>
-&lt;li>Availability&lt;/li>
-&lt;li>Confidentiality&lt;/li>
-&lt;/ul>
-&lt;h2 id="open-design-principle">Open Design Principle&lt;/h2>
-&lt;p>Open Design&lt;/p>
-&lt;ul>
-&lt;li>The design should not be secret; open designs are more secure.&lt;/li>
-&lt;li>Security does not rely on secrecy.&lt;/li>
-&lt;/ul>
-&lt;h2 id="fail-safe-defaults-principle">Fail-Safe Defaults Principle&lt;/h2>
-&lt;p>Fail-safe defaults&lt;/p>
-&lt;ul>
-&lt;li>Access decisions are based on &amp;ldquo;permit&amp;rdquo; rather than &amp;ldquo;deny&amp;rdquo;.&lt;/li>
-&lt;li>By default, access is denied; protection mechanisms merely identify the subset of allowed actions.&lt;/li>
-&lt;li>Safe failure: any complex system must have an emergency safety mechanism after functional failure; also be careful with error messages and logs to prevent information leakage.&lt;/li>
-&lt;li>Safe by default: in its initial state, the default configuration is secure by providing the least services and systems necessary for maximal safety.&lt;/li>
-&lt;/ul>
-&lt;h2 id="separation-of-privilege-principle">Separation of Privilege Principle&lt;/h2>
-&lt;p>Separation of Privilege&lt;/p></description></item><item><title>Security Best Practices for Personal Domains</title><link>https://blog.jqknono.com/en-us/blog/2025/01/17/security-best-practices-for-personal-domains/</link><pubDate>Fri, 17 Jan 2025 12:49:43 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/01/17/security-best-practices-for-personal-domains/</guid><description>&lt;h2 id="preface">Preface&lt;/h2>
-&lt;p>In the Internet era, cyber attacks have become the norm. Every day, countless automated tools scan every corner of the web looking for vulnerabilities. Many believe only large corporations become targets, but due to lower attack costs and widespread tooling, any service exposed to the Internet can be attacked.&lt;/p>
-&lt;h2 id="real-world-case-analysis">Real-World Case Analysis&lt;/h2>
-&lt;h3 id="scanning-attack-example">Scanning Attack Example&lt;/h3>
-&lt;p>A small demo site I host on Cloudflare has only two valid URLs:
-&lt;img src="https://img1.techfetch.dev/blog/202501171325208.png" alt="">&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://weread-challenge.techfetch.dev/">https://weread-challenge.techfetch.dev/&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://weread-challenge.techfetch.dev/logs-collector">https://weread-challenge.techfetch.dev/logs-collector&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Yet it is continuously scanned.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Security on Nono Blogs</title><link>https://blog.jqknono.com/en-us/categories/security/</link><description>Recent content in Security on Nono Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 11 Jul 2025 11:52:10 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/en-us/categories/security/index.xml" rel="self" type="application/rss+xml"/><item><title>Attack Methods Against Model-Relay Services</title><link>https://blog.jqknono.com/en-us/blog/2025/07/11/attack-methods-against-model-relay-services/</link><pubDate>Fri, 11 Jul 2025 11:52:10 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/07/11/attack-methods-against-model-relay-services/</guid><description>&lt;p&gt;Avoiding public routers—especially free Wi-Fi—has become common sense in recent years, yet many people still don’t understand &lt;em&gt;why&lt;/em&gt;, leaving them vulnerable to new variants of the same trick.&lt;/p&gt;
+&lt;p&gt;Due to Anthropic’s corporate policy, users in China cannot conveniently access its services; because its technology is cutting-edge, many still want to try. This created the “Claude relay” business.&lt;/p&gt;
+&lt;p&gt;First, we must realize this business is &lt;strong&gt;not sustainable&lt;/strong&gt;. Unlike other ordinary internet services, simply using a generic VPN will &lt;em&gt;not&lt;/em&gt; satisfy Anthropic’s blocks.&lt;/p&gt;</description></item><item><title>The Risks of AI Model-Relay Services</title><link>https://blog.jqknono.com/en-us/blog/2025/07/10/the-risks-of-ai-model-relay-services/</link><pubDate>Thu, 10 Jul 2025 20:28:04 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/07/10/the-risks-of-ai-model-relay-services/</guid><description>&lt;p&gt;Lately, in the comment threads on AI-related posts, you’ll see a flood of low-quality ads touting “cheap Claude Code relay” services.&lt;/p&gt;
+&lt;p&gt;The business model is simple: Claude Code lets you supply your own API endpoint and key, including any vendor that’s OpenAI-compatible. That’s all there is to it. Pull in a bit of Claude’s traffic, mix in some Qwen tokens, and sell the blended soup—who’s going to notice?&lt;/p&gt;
+&lt;p&gt;Those who only want to make a quick buck are the timid ones; how much can they really earn? The truly valuable assets are where you keep your savings and your critical data.&lt;/p&gt;</description></item><item><title>How to Avoid Getting Doxxed</title><link>https://blog.jqknono.com/en-us/blog/2025/03/19/how-to-avoid-getting-doxxed/</link><pubDate>Wed, 19 Mar 2025 16:54:44 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/03/19/how-to-avoid-getting-doxxed/</guid><description>&lt;h2 id="fragmented-information-is-easily-pieced-together"&gt;Fragmented information is easily pieced together&lt;/h2&gt;
+&lt;p&gt;Personal information is dispersed and sensitive—easy to overlook. Yet the internet is not a safe harbor; countless people can stitch this information together using search engines and other tools.&lt;/p&gt;
+&lt;p&gt;Take the xhs community as an example: users there have comparatively weak network-security awareness and often share the meaning behind their passwords and the scenarios in which they are used.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://img1.techfetch.dev/blog/202503191707446.png" alt="xhs search results"&gt;&lt;/p&gt;
+&lt;p&gt;Searching for “password meaning” reveals a flood of users openly displaying their passwords and their explanations.&lt;/p&gt;</description></item><item><title>Offense &amp; Defense</title><link>https://blog.jqknono.com/en-us/blog/attack-and-defense/</link><pubDate>Tue, 31 Dec 2024 15:57:34 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/attack-and-defense/</guid><description/></item><item><title>Trustworthy Design</title><link>https://blog.jqknono.com/en-us/blog/2024/06/28/trustworthy-design/</link><pubDate>Fri, 28 Jun 2024 15:49:18 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/06/28/trustworthy-design/</guid><description>&lt;h1 id="security-architecture-and-design-principles"&gt;Security Architecture and Design Principles&lt;/h1&gt;
+&lt;h2 id="the-three-security-elements-and-security-design-principles"&gt;The Three Security Elements and Security Design Principles&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Integrity&lt;/li&gt;
+&lt;li&gt;Availability&lt;/li&gt;
+&lt;li&gt;Confidentiality&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="open-design-principle"&gt;Open Design Principle&lt;/h2&gt;
+&lt;p&gt;Open Design&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The design should not be secret; open designs are more secure.&lt;/li&gt;
+&lt;li&gt;Security does not rely on secrecy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="fail-safe-defaults-principle"&gt;Fail-Safe Defaults Principle&lt;/h2&gt;
+&lt;p&gt;Fail-safe defaults&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Access decisions are based on &amp;ldquo;permit&amp;rdquo; rather than &amp;ldquo;deny&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;By default, access is denied; protection mechanisms merely identify the subset of allowed actions.&lt;/li&gt;
+&lt;li&gt;Safe failure: any complex system must have an emergency safety mechanism after functional failure; also be careful with error messages and logs to prevent information leakage.&lt;/li&gt;
+&lt;li&gt;Safe by default: in its initial state, the default configuration is secure by providing the least services and systems necessary for maximal safety.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="separation-of-privilege-principle"&gt;Separation of Privilege Principle&lt;/h2&gt;
+&lt;p&gt;Separation of Privilege&lt;/p&gt;</description></item><item><title>Security Best Practices for Personal Domains</title><link>https://blog.jqknono.com/en-us/blog/2025/01/17/security-best-practices-for-personal-domains/</link><pubDate>Fri, 17 Jan 2025 12:49:43 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2025/01/17/security-best-practices-for-personal-domains/</guid><description>&lt;h2 id="preface"&gt;Preface&lt;/h2&gt;
+&lt;p&gt;In the Internet era, cyber attacks have become the norm. Every day, countless automated tools scan every corner of the web looking for vulnerabilities. Many believe only large corporations become targets, but due to lower attack costs and widespread tooling, any service exposed to the Internet can be attacked.&lt;/p&gt;
+&lt;h2 id="real-world-case-analysis"&gt;Real-World Case Analysis&lt;/h2&gt;
+&lt;h3 id="scanning-attack-example"&gt;Scanning Attack Example&lt;/h3&gt;
+&lt;p&gt;A small demo site I host on Cloudflare has only two valid URLs:
+&lt;img src="https://img1.techfetch.dev/blog/202501171325208.png" alt=""&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://weread-challenge.techfetch.dev/"&gt;https://weread-challenge.techfetch.dev/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://weread-challenge.techfetch.dev/logs-collector"&gt;https://weread-challenge.techfetch.dev/logs-collector&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Yet it is continuously scanned.&lt;/p&gt;</description></item></channel></rss>

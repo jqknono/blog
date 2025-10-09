@@ -1,88 +1,88 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Google on Nono Blogs</title><link>https://blog.jqknono.com/tags/google/</link><description>Recent content in Google on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 15 Nov 2024 15:25:11 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/google/index.xml" rel="self" type="application/rss+xml"/><item><title>Google翻译API的使用教程</title><link>https://blog.jqknono.com/blog/2024/11/15/google%E7%BF%BB%E8%AF%91api%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><pubDate>Fri, 15 Nov 2024 15:25:11 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/15/google%E7%BF%BB%E8%AF%91api%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;p>如果你需要使用 API 自动化翻译工作, Google 翻译 API 是一个不错的选择. 它相较 DeepL 翻译质量可能略逊一筹, 但具有更好的性价比, 特别是每月有 50w 字符的免费额度.&lt;/p>
-&lt;h2 id="产品介绍">产品介绍&lt;/h2>
-&lt;p>Google 翻译大家都用过, 这里介绍的是它的 API 服务, 全称叫做 Google Cloud Translation. 通过 API, 可以实现批量翻译, 自定义翻译模型, 翻译文档等功能.&lt;/p>
-&lt;p>&lt;img src="https://img1.techfetch.dev/blog/20241115141603.png" alt="产品介绍">&lt;/p>
-&lt;h2 id="价格">价格&lt;/h2>
-&lt;p>每月 50w 字符免费额度, 超出部分按字符计费.&lt;/p>
-&lt;p>&lt;img src="https://img1.techfetch.dev/blog/1731653225685_d.png" alt="价格图表">&lt;/p>
-&lt;h2 id="基本版和高级版的区别">基本版和高级版的区别&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>功能&lt;/th>
- &lt;th>基本版&lt;/th>
- &lt;th>高级版&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>免费额度&lt;/td>
- &lt;td>50w 字符/月&lt;/td>
- &lt;td>50w 字符/月&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>每百万字符&lt;/td>
- &lt;td>20 美元&lt;/td>
- &lt;td>80 美元&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>文档翻译&lt;/td>
- &lt;td>0.08/页&lt;/td>
- &lt;td>0.25/页&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>自定义翻译&lt;/td>
- &lt;td>✘&lt;/td>
- &lt;td>✔&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="开始使用">开始使用&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://cloud.google.com/translate/docs/setup?hl=zh-cn">创建或选择项目&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://img1.techfetch.dev/blog/20241115142656.png" alt="创建或选择项目">&lt;/p>
-&lt;ul>
-&lt;li>启用 API, 如果没有启用结算功能, 这里会提示增加结算账户, &lt;strong>需要外币信用卡&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://img1.techfetch.dev/blog/202411151822391.png" alt="启用">&lt;/p>
-&lt;p>&lt;img src="https://img1.techfetch.dev/blog/20241115142625.png" alt="启用 API">&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://cloud.google.com/docs/authentication/rest?hl=zh-cn">使用 REST 时进行身份验证&lt;/a>
-&lt;ul>
-&lt;li>&lt;a href="https://cloud.google.com/sdk/docs/install?hl=zh-cn">安装 gcloud CLI&lt;/a>
-&lt;img src="https://img1.techfetch.dev/blog/1731653810661_d.png" alt="安装 gcloud CLI">&lt;/li>
-&lt;li>&lt;a href="https://cloud.google.com/docs/authentication/rest?hl=zh-cn#user-creds">生成 gcloud CLI 凭据&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$cred&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">gcloud&lt;/span> &lt;span class="n">auth&lt;/span> &lt;span class="nb">print-access&lt;/span>&lt;span class="n">-token&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$project_id&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;example&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$headers&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="vm">@&lt;/span>&lt;span class="p">{&lt;/span> &lt;span class="s2">&amp;#34;Authorization&amp;#34;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;Bearer &lt;/span>&lt;span class="nv">$cred&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Invoke-WebRequest&lt;/span> &lt;span class="p">`&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">-Method&lt;/span> &lt;span class="n">GET&lt;/span> &lt;span class="p">`&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">-Headers&lt;/span> &lt;span class="nv">$headers&lt;/span> &lt;span class="p">`&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">-Uri&lt;/span> &lt;span class="s2">&amp;#34;https://cloudresourcemanager.googleapis.com/v3/projects/&lt;/span>&lt;span class="nv">${project_id}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">Select-Object&lt;/span> &lt;span class="n">-Expand&lt;/span> &lt;span class="n">Content&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>试用&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-ps1" data-lang="ps1">&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$cred&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">gcloud&lt;/span> &lt;span class="n">auth&lt;/span> &lt;span class="nb">print-access&lt;/span>&lt;span class="n">-token&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$project_id&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;example&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$body&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="vm">@&lt;/span>&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;sourceLanguageCode&amp;#34;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;en&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;targetLanguageCode&amp;#34;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;zh&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;contents&amp;#34;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="vm">@&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Hello, world!&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;mimeType&amp;#34;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;text/plain&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$body&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$body&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">ConvertTo-Json&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">$headers&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="vm">@&lt;/span>&lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;Authorization&amp;#34;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;Bearer &lt;/span>&lt;span class="nv">$cred&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;Content-Type&amp;#34;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;application/json; charset=utf-8&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;x-goog-user-project&amp;#34;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nv">$project_id&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">Invoke-WebRequest&lt;/span> &lt;span class="p">`&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">-Method&lt;/span> &lt;span class="n">POST&lt;/span> &lt;span class="p">`&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">-Headers&lt;/span> &lt;span class="nv">$headers&lt;/span> &lt;span class="p">`&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">-Uri&lt;/span> &lt;span class="s2">&amp;#34;https://translation.googleapis.com/v3/projects/&lt;/span>&lt;span class="nv">${project_id}&lt;/span>&lt;span class="s2">:translateText&amp;#34;&lt;/span> &lt;span class="p">`&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">-Body&lt;/span> &lt;span class="nv">$body&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="nb">Select-Object&lt;/span> &lt;span class="n">-Expand&lt;/span> &lt;span class="n">Content&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://img1.techfetch.dev/blog/1731655074831_d.png" alt="执行成功">&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Google on Nono Blogs</title><link>https://blog.jqknono.com/tags/google/</link><description>Recent content in Google on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 15 Nov 2024 15:25:11 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/google/index.xml" rel="self" type="application/rss+xml"/><item><title>Google翻译API的使用教程</title><link>https://blog.jqknono.com/blog/2024/11/15/google%E7%BF%BB%E8%AF%91api%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><pubDate>Fri, 15 Nov 2024 15:25:11 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/11/15/google%E7%BF%BB%E8%AF%91api%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;p&gt;如果你需要使用 API 自动化翻译工作, Google 翻译 API 是一个不错的选择. 它相较 DeepL 翻译质量可能略逊一筹, 但具有更好的性价比, 特别是每月有 50w 字符的免费额度.&lt;/p&gt;
+&lt;h2 id="产品介绍"&gt;产品介绍&lt;/h2&gt;
+&lt;p&gt;Google 翻译大家都用过, 这里介绍的是它的 API 服务, 全称叫做 Google Cloud Translation. 通过 API, 可以实现批量翻译, 自定义翻译模型, 翻译文档等功能.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://img1.techfetch.dev/blog/20241115141603.png" alt="产品介绍"&gt;&lt;/p&gt;
+&lt;h2 id="价格"&gt;价格&lt;/h2&gt;
+&lt;p&gt;每月 50w 字符免费额度, 超出部分按字符计费.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://img1.techfetch.dev/blog/1731653225685_d.png" alt="价格图表"&gt;&lt;/p&gt;
+&lt;h2 id="基本版和高级版的区别"&gt;基本版和高级版的区别&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;功能&lt;/th&gt;
+ &lt;th&gt;基本版&lt;/th&gt;
+ &lt;th&gt;高级版&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;免费额度&lt;/td&gt;
+ &lt;td&gt;50w 字符/月&lt;/td&gt;
+ &lt;td&gt;50w 字符/月&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;每百万字符&lt;/td&gt;
+ &lt;td&gt;20 美元&lt;/td&gt;
+ &lt;td&gt;80 美元&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;文档翻译&lt;/td&gt;
+ &lt;td&gt;0.08/页&lt;/td&gt;
+ &lt;td&gt;0.25/页&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;自定义翻译&lt;/td&gt;
+ &lt;td&gt;✘&lt;/td&gt;
+ &lt;td&gt;✔&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="开始使用"&gt;开始使用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://cloud.google.com/translate/docs/setup?hl=zh-cn"&gt;创建或选择项目&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://img1.techfetch.dev/blog/20241115142656.png" alt="创建或选择项目"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启用 API, 如果没有启用结算功能, 这里会提示增加结算账户, &lt;strong&gt;需要外币信用卡&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://img1.techfetch.dev/blog/202411151822391.png" alt="启用"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://img1.techfetch.dev/blog/20241115142625.png" alt="启用 API"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://cloud.google.com/docs/authentication/rest?hl=zh-cn"&gt;使用 REST 时进行身份验证&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://cloud.google.com/sdk/docs/install?hl=zh-cn"&gt;安装 gcloud CLI&lt;/a&gt;
+&lt;img src="https://img1.techfetch.dev/blog/1731653810661_d.png" alt="安装 gcloud CLI"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://cloud.google.com/docs/authentication/rest?hl=zh-cn#user-creds"&gt;生成 gcloud CLI 凭据&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ps1" data-lang="ps1"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;$cred&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gcloud&lt;/span&gt; &lt;span class="n"&gt;auth&lt;/span&gt; &lt;span class="nb"&gt;print-access&lt;/span&gt;&lt;span class="n"&gt;-token&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;$project_id&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;example&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;$headers&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="vm"&gt;@&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Authorization&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Bearer &lt;/span&gt;&lt;span class="nv"&gt;$cred&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;Invoke-WebRequest&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;-Method&lt;/span&gt; &lt;span class="n"&gt;GET&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;-Headers&lt;/span&gt; &lt;span class="nv"&gt;$headers&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;-Uri&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;https://cloudresourcemanager.googleapis.com/v3/projects/&lt;/span&gt;&lt;span class="nv"&gt;${project_id}&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Select-Object&lt;/span&gt; &lt;span class="n"&gt;-Expand&lt;/span&gt; &lt;span class="n"&gt;Content&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;试用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ps1" data-lang="ps1"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;$cred&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;gcloud&lt;/span&gt; &lt;span class="n"&gt;auth&lt;/span&gt; &lt;span class="nb"&gt;print-access&lt;/span&gt;&lt;span class="n"&gt;-token&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;$project_id&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;example&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;$body&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="vm"&gt;@&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;sourceLanguageCode&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;en&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;targetLanguageCode&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;zh&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;contents&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="vm"&gt;@&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Hello, world!&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;mimeType&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;text/plain&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;$body&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$body&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;ConvertTo-Json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nv"&gt;$headers&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="vm"&gt;@&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;Authorization&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;Bearer &lt;/span&gt;&lt;span class="nv"&gt;$cred&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;application/json; charset=utf-8&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="s2"&gt;&amp;#34;x-goog-user-project&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;$project_id&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;Invoke-WebRequest&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;-Method&lt;/span&gt; &lt;span class="n"&gt;POST&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;-Headers&lt;/span&gt; &lt;span class="nv"&gt;$headers&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;-Uri&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;https://translation.googleapis.com/v3/projects/&lt;/span&gt;&lt;span class="nv"&gt;${project_id}&lt;/span&gt;&lt;span class="s2"&gt;:translateText&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;-Body&lt;/span&gt; &lt;span class="nv"&gt;$body&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="nb"&gt;Select-Object&lt;/span&gt; &lt;span class="n"&gt;-Expand&lt;/span&gt; &lt;span class="n"&gt;Content&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src="https://img1.techfetch.dev/blog/1731655074831_d.png" alt="执行成功"&gt;&lt;/p&gt;</description></item></channel></rss>
