@@ -120,4 +120,4 @@ flowchart TD
  e12@{ animation: fast }
  e13@{ animation: fast }&lt;/pre&gt;
 &lt;h3 id="核心组件"&gt;核心组件&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Specify CLI&lt;/strong&gt; 是整个系统的核心命令行工具，负责项目初始化、模板管理和工作流协调。它支持多种AI编程助手，包括Claude Code、GitHub Copilot、Gemini CLI等。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;strong&gt;Specify CLI&lt;/strong&gt; 是整个系统的核心命令行工具，负责项目初始化、模板管理和工作流协调。它支持多种AI编程助手，包括Claude Code、GitHub Copilot、Gemini CLI等。&lt;/p&gt;</description></item><item><title>遨游 GitHub</title><link>https://blog.jqknono.com/blog/information-flow/github/</link><pubDate>Mon, 17 Feb 2025 16:17:38 +0800</pubDate><guid>https://blog.jqknono.com/blog/information-flow/github/</guid><description/></item></channel></rss>

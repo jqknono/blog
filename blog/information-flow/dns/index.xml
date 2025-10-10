@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>探索 DNS on Nono Blogs</title><link>https://blog.jqknono.com/blog/information-flow/dns/</link><description>Recent content in 探索 DNS on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Oct 2025 22:00:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/information-flow/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS 隐私防护与用户画像防范策略</title><link>https://blog.jqknono.com/blog/2025/10/09/dns-%E9%9A%90%E7%A7%81%E9%98%B2%E6%8A%A4%E4%B8%8E%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F%E9%98%B2%E8%8C%83%E7%AD%96%E7%95%A5/</link><pubDate>Thu, 09 Oct 2025 22:00:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/10/09/dns-%E9%9A%90%E7%A7%81%E9%98%B2%E6%8A%A4%E4%B8%8E%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F%E9%98%B2%E8%8C%83%E7%AD%96%E7%95%A5/</guid><description>&lt;h1 id="dns-隐私防护与用户画像防范策略"&gt;DNS 隐私防护与用户画像防范策略&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;读者：关注网络隐私与数据治理的工程/运维/安全从业者
+关键词：本地解析器、递归解析、权威服务器、QNAME最小化、ECS、DNSSEC、DoT/DoH/DoQ&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id="背景与问题概述"&gt;背景与问题概述&lt;/h2&gt;
+&lt;p&gt;在数字化时代，用户的网络行为数据成为企业构建用户画像的重要来源。作为互联网基础设施的核心组件，域名系统（DNS）在日常网络活动中承担着将人类可读的域名转换为机器可读的IP地址的关键任务。然而，传统DNS查询通常以明文形式在UDP端口53上进行传输，这使得用户的浏览历史、应用使用习惯等敏感信息容易被网络运营商、互联网服务提供商以及各种中间人获取和分析。&lt;/p&gt;
+&lt;p&gt;用户画像是通过收集和分析用户的各种行为数据而构建的用户特征模型，企业利用这些模型进行精准营销、内容推荐、风险评估等商业活动。虽然这些服务在一定程度上提升了用户体验，但也带来了隐私泄露、数据滥用和潜在的歧视性定价等问题。了解如何通过DNS层面的技术手段来减少用户画像的准确性，成为保护个人隐私的重要途径。&lt;/p&gt;
+&lt;p&gt;本文将从DNS基础原理出发，分析用户画像构建过程中的数据收集点，探讨基于DNS的隐私保护策略，并阐述不同场景下的实现思路与注意事项。&lt;/p&gt;
+&lt;h2 id="基础与术语梳理"&gt;基础与术语梳理&lt;/h2&gt;
+&lt;p&gt;要理解DNS隐私保护，首先需要掌握DNS查询的基本流程和相关术语。DNS查询通常涉及多个参与者，每个环节都可能成为隐私泄露的节点。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+ A[客户端设备] e1@--&amp;gt; B[本地解析器]
+ B e2@--&amp;gt; C[递归解析器]
+ C e3@--&amp;gt; D[根服务器]
+ D e4@--&amp;gt; E[TLD服务器]
+ E e5@--&amp;gt; F[权威服务器]
+ F e6@--&amp;gt; C
+ C e7@--&amp;gt; B
+ B e8@--&amp;gt; A
+ C --&amp;gt; G[缓存存储]
+ 
+ e1@{ animation: fast }
+ e2@{ animation: slow }
+ e3@{ animation: medium }
+ e4@{ animation: fast }
+ e5@{ animation: medium }
+ e6@{ animation: fast }
+ e7@{ animation: fast }
+ e8@{ animation: slow }
+ 
+ style A fill:#e1f5fe
+ style B fill:#f3e5f5
+ style C fill:#fff3e0
+ style D fill:#f1f8e9
+ style E fill:#f1f8e9
+ style F fill:#f1f8e9
+ style G fill:#fce4ec&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://share.jqknono.com/articles/dns-user-profiling/images/dns-query-flow.gif" alt="dns-query-flow"&gt;&lt;/p&gt;</description></item><item><title>DNS 加密协议对比：DoT、DoH、DoQ</title><link>https://blog.jqknono.com/blog/2025/10/09/dns-%E5%8A%A0%E5%AF%86%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94dotdohdoq/</link><pubDate>Thu, 09 Oct 2025 13:16:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/10/09/dns-%E5%8A%A0%E5%AF%86%E5%8D%8F%E8%AE%AE%E5%AF%B9%E6%AF%94dotdohdoq/</guid><description>&lt;h2 id="名词速览"&gt;名词速览&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS：明文 DNS，默认使用 UDP/53，必要时用 TCP/53（如响应被截断、区域传送等）。&lt;/li&gt;
+&lt;li&gt;DoT：DNS over TLS，使用 TLS 之上的 TCP，默认端口 853（RFC 7858/8310）。&lt;/li&gt;
+&lt;li&gt;DoH：DNS over HTTPS，基于 HTTPS（HTTP/2 或 HTTP/3），默认端口 443（RFC 8484）。&lt;/li&gt;
+&lt;li&gt;DoQ：DNS over QUIC，基于 QUIC + TLS 1.3，默认端口 UDP/853（RFC 9250，IANA 已分配在 853/udp）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="分层关系简化-tcpip-模型"&gt;分层关系（简化 TCP/IP 模型）&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;应用层：HTTP、HTTPS、DNS（DoH 属于 HTTPS 应用层封装）&lt;/li&gt;
+&lt;li&gt;安全层：TLS（为 TCP 或 QUIC 提供加密）&lt;/li&gt;
+&lt;li&gt;传输层：TCP、UDP、QUIC&lt;/li&gt;
+&lt;li&gt;网络层：IP&lt;/li&gt;
+&lt;li&gt;链路层：以太网等&lt;/li&gt;
+&lt;li&gt;物理层：双绞线/光纤/无线等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="要点"&gt;要点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS 工作在 UDP/TCP 之上，不加密。&lt;/li&gt;
+&lt;li&gt;DoT = TCP + TLS + DNS（专用端口 853）。&lt;/li&gt;
+&lt;li&gt;DoH = TCP/QUIC + TLS + HTTP(S) + DNS（走 443，与普通 HTTPS 共端口）。&lt;/li&gt;
+&lt;li&gt;DoQ = QUIC + TLS 1.3 + DNS（专用端口 UDP/853）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TB
+ subgraph 应用层
+ A[HTTP]
+ A2[HTTPS]
+ C[DNS]
+ D[DoH DNS over HTTPS]
+ end
+
+ subgraph 安全层
+ E[TLS]
+ end
+
+ subgraph 传输层
+ F[TCP]
+ G[UDP]
+ H[QUIC]
+ end
+
+ subgraph 网络层
+ I[IP]
+ end
+
+ subgraph 链路层
+ J[Ethernet]
+ end
+
+ subgraph 物理层
+ K[双绞线/光纤/无线]
+ end
+
+ A2 --&amp;gt; F
+ A2 --&amp;gt; H
+ A --&amp;gt; F
+ C --&amp;gt; F
+ C --&amp;gt; G
+ D --&amp;gt; A2
+ E --&amp;gt; F
+ E --&amp;gt; H
+ F --&amp;gt; I
+ G --&amp;gt; I
+ H --&amp;gt; I
+ I --&amp;gt; J
+ J --&amp;gt; K
+
+ style D fill:#e1f5fe
+ style E fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="基础知识与勘误"&gt;基础知识与勘误&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS 默认走 UDP/53，遇到响应截断（TC 位）或需要可靠传输时会改用 TCP/53。&lt;/li&gt;
+&lt;li&gt;DoT 在 TCP 之上建立 TLS 隧道传输 DNS 报文，默认端口 853；可以复用长连接以降低握手开销。&lt;/li&gt;
+&lt;li&gt;DoH 把 DNS 作为 HTTPS 的一种资源（&lt;code&gt;application/dns-message&lt;/code&gt;），通常使用 HTTP/2 或 HTTP/3，端口 443，易与普通 HTTPS 混同。&lt;/li&gt;
+&lt;li&gt;DoQ 直接使用 QUIC（基于 UDP）承载 DNS，具备低时延与避免队头阻塞的优势，但当前生态覆盖仍在增长中。&lt;/li&gt;
+&lt;li&gt;“QUIC 就一定比 TCP 快 X%”这类笼统结论并不准确；实际表现与网络状况（丢包、抖动、RTT）、连接是否可复用、实现细节和服务端部署有关。&lt;/li&gt;
+&lt;li&gt;DoH 并非“把 DNS 放进 HTTP 就一定更慢/更快”，性能取决于连接复用、网络质量与实现；很多情况下 DoH/3 与 DoT 体验相近甚至更好。&lt;/li&gt;
+&lt;li&gt;DoT 可以使用 SNI 验证证书主机名；DoH 则依赖 HTTPS 的常规证书校验与主机名匹配。&lt;/li&gt;
+&lt;li&gt;加密 DNS 只能防止链路上的窃听与篡改，不等于“完全匿名”。解析器仍可能记录查询；请选可信提供商并查看隐私政策。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TD
+ subgraph DNS 家族
+ A[Plain DNS UDP/TCP &amp;#43; DNS]
+
+ subgraph 加密的 DNS
+ B[DoT TCP &amp;#43; TLS &amp;#43; DNS]
+ C[DoH HTTP/2,3 &amp;#43; TLS &amp;#43; DNS]
+ D[DoQ QUIC &amp;#43; TLS 1.3 &amp;#43; DNS]
+ end
+
+ subgraph 传输基座
+ E[TCP]
+ F[UDP]
+ G[QUIC]
+ end
+ end
+
+ A --&amp;gt; B
+ A --&amp;gt; C
+ A --&amp;gt; D
+
+ B --&amp;gt; E
+ C --&amp;gt; E
+ C --&amp;gt; G
+ D --&amp;gt; G
+ A --&amp;gt; F
+
+ style A fill:#f3e5f5
+ style B fill:#e8f5e8
+ style C fill:#e3f2fd
+ style D fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="对比总览"&gt;对比总览&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;协议&lt;/th&gt;
+ &lt;th&gt;传输层&lt;/th&gt;
+ &lt;th&gt;加密&lt;/th&gt;
+ &lt;th&gt;封装&lt;/th&gt;
+ &lt;th&gt;默认端口&lt;/th&gt;
+ &lt;th&gt;典型特点&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Plain DNS&lt;/td&gt;
+ &lt;td&gt;UDP/TCP&lt;/td&gt;
+ &lt;td&gt;无&lt;/td&gt;
+ &lt;td&gt;DNS 原生&lt;/td&gt;
+ &lt;td&gt;53&lt;/td&gt;
+ &lt;td&gt;简单高效，明文可见，易被篡改/审计&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;DoT&lt;/td&gt;
+ &lt;td&gt;TCP&lt;/td&gt;
+ &lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+ &lt;td&gt;DNS&lt;/td&gt;
+ &lt;td&gt;853&lt;/td&gt;
+ &lt;td&gt;专用端口，易被端口封锁，系统级支持较好&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;DoH&lt;/td&gt;
+ &lt;td&gt;TCP/QUIC&lt;/td&gt;
+ &lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+ &lt;td&gt;HTTP/2-3 + DNS&lt;/td&gt;
+ &lt;td&gt;443&lt;/td&gt;
+ &lt;td&gt;与 HTTPS 共端口，穿透性强，浏览器优先支持&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;DoQ&lt;/td&gt;
+ &lt;td&gt;QUIC&lt;/td&gt;
+ &lt;td&gt;TLS 1.3&lt;/td&gt;
+ &lt;td&gt;DNS&lt;/td&gt;
+ &lt;td&gt;853/UDP&lt;/td&gt;
+ &lt;td&gt;低时延、避免队头阻塞，生态在发展&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="性能与时延"&gt;性能与时延&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;连接复用：DoT/DoH/DoQ 均可复用长连接以降低握手成本；DoH/2、DoH/3 和 DoQ 还能在单连接内多路复用请求。&lt;/li&gt;
+&lt;li&gt;队头阻塞：TCP 存在应用层“队头阻塞”问题；HTTP/2 在 TCP 上通过多路复用缓解但仍受 TCP 的丢包影响，QUIC（DoH/3、DoQ）在传输层避免了队头阻塞，对高丢包/移动网络更友好。&lt;/li&gt;
+&lt;li&gt;首包时延：首连时 DoT 需要 TCP+TLS 握手；DoH/2 类似；DoH/3/DoQ 基于 QUIC，重连和迁移更快。长期负载下差异更多取决于实现与网络条件。&lt;/li&gt;
+&lt;li&gt;可达性：DoH 使用 443 端口，最不易被简单端口封锁；DoT 使用 853，常被一刀切阻断；DoQ 使用 853/UDP，现阶段也可能被阻断或未放行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="客户端与系统支持"&gt;客户端与系统支持&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览器：Chromium 家族与 Firefox 默认内置 DoH（可自动升级到支持 DoH 的解析器或使用内置名单提供商）。&lt;/li&gt;
+&lt;li&gt;Windows：Windows 11 原生支持 DoH。&lt;/li&gt;
+&lt;li&gt;Android：Android 9+ 提供“私有 DNS”（系统级 DoT）。系统级 DoH 的覆盖取决于版本/厂商。&lt;/li&gt;
+&lt;li&gt;Apple 平台：iOS 14+/macOS 11+ 通过描述文件或 NetworkExtension 支持 DoT 与 DoH。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="部署与选型建议"&gt;部署与选型建议&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;常规/受限网络（如公共 Wi‑Fi、需要穿透简单封锁）：优先 DoH（端口 443），可启用 HTTP/3。&lt;/li&gt;
+&lt;li&gt;系统级统一出口（路由器、网关、Android 私有 DNS）：优先 DoT（853），若网络允许可加配 DoH 作为回退。&lt;/li&gt;
+&lt;li&gt;高丢包/移动网络：优先具备 QUIC 的 DoH/3 或 DoQ（取决于解析器与客户端支持）。&lt;/li&gt;
+&lt;li&gt;企业/合规场景：按策略选择（DoH 可与现有 HTTPS 基础设施融合；DoT 便于与 DNS 控制面分离）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="小结"&gt;小结&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;首选 DoH（443，穿透性强），若可用则启用 HTTP/3。&lt;/li&gt;
+&lt;li&gt;如果需要系统级统一：优先 DoT（853）+ 持久连接，必要时回退 DoH（443）。&lt;/li&gt;
+&lt;li&gt;若你的解析器与客户端均支持：尝试 DoQ（移动网络体验常更佳）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="参考标准"&gt;参考标准&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RFC 7858, RFC 8310（DNS over TLS）&lt;/li&gt;
+&lt;li&gt;RFC 8484（DNS over HTTPS）&lt;/li&gt;
+&lt;li&gt;RFC 9250（DNS over QUIC）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="dns-服务推荐"&gt;DNS 服务推荐&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;宁屏 DNS: &lt;a href="https://www.nullprivate.com"&gt;https://www.nullprivate.com&lt;/a&gt; 支持 DoT, DoH(支持 HTTP3), 原生支持去广告与分流.&lt;/li&gt;
+&lt;li&gt;自部署版本: &lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;https://github.com/NullPrivate/NullPrivate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

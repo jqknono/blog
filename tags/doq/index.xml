@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DoQ on Nono Blogs</title><link>https://blog.jqknono.com/tags/doq/</link><description>Recent content in DoQ on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Oct 2025 22:00:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/doq/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS 隐私防护与用户画像防范策略</title><link>https://blog.jqknono.com/blog/2025/10/09/dns-%E9%9A%90%E7%A7%81%E9%98%B2%E6%8A%A4%E4%B8%8E%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F%E9%98%B2%E8%8C%83%E7%AD%96%E7%95%A5/</link><pubDate>Thu, 09 Oct 2025 22:00:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/10/09/dns-%E9%9A%90%E7%A7%81%E9%98%B2%E6%8A%A4%E4%B8%8E%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F%E9%98%B2%E8%8C%83%E7%AD%96%E7%95%A5/</guid><description>&lt;h1 id="dns-隐私防护与用户画像防范策略"&gt;DNS 隐私防护与用户画像防范策略&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;读者：关注网络隐私与数据治理的工程/运维/安全从业者
+关键词：本地解析器、递归解析、权威服务器、QNAME最小化、ECS、DNSSEC、DoT/DoH/DoQ&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id="背景与问题概述"&gt;背景与问题概述&lt;/h2&gt;
+&lt;p&gt;在数字化时代，用户的网络行为数据成为企业构建用户画像的重要来源。作为互联网基础设施的核心组件，域名系统（DNS）在日常网络活动中承担着将人类可读的域名转换为机器可读的IP地址的关键任务。然而，传统DNS查询通常以明文形式在UDP端口53上进行传输，这使得用户的浏览历史、应用使用习惯等敏感信息容易被网络运营商、互联网服务提供商以及各种中间人获取和分析。&lt;/p&gt;
+&lt;p&gt;用户画像是通过收集和分析用户的各种行为数据而构建的用户特征模型，企业利用这些模型进行精准营销、内容推荐、风险评估等商业活动。虽然这些服务在一定程度上提升了用户体验，但也带来了隐私泄露、数据滥用和潜在的歧视性定价等问题。了解如何通过DNS层面的技术手段来减少用户画像的准确性，成为保护个人隐私的重要途径。&lt;/p&gt;
+&lt;p&gt;本文将从DNS基础原理出发，分析用户画像构建过程中的数据收集点，探讨基于DNS的隐私保护策略，并阐述不同场景下的实现思路与注意事项。&lt;/p&gt;
+&lt;h2 id="基础与术语梳理"&gt;基础与术语梳理&lt;/h2&gt;
+&lt;p&gt;要理解DNS隐私保护，首先需要掌握DNS查询的基本流程和相关术语。DNS查询通常涉及多个参与者，每个环节都可能成为隐私泄露的节点。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+ A[客户端设备] e1@--&amp;gt; B[本地解析器]
+ B e2@--&amp;gt; C[递归解析器]
+ C e3@--&amp;gt; D[根服务器]
+ D e4@--&amp;gt; E[TLD服务器]
+ E e5@--&amp;gt; F[权威服务器]
+ F e6@--&amp;gt; C
+ C e7@--&amp;gt; B
+ B e8@--&amp;gt; A
+ C --&amp;gt; G[缓存存储]
+ 
+ e1@{ animation: fast }
+ e2@{ animation: slow }
+ e3@{ animation: medium }
+ e4@{ animation: fast }
+ e5@{ animation: medium }
+ e6@{ animation: fast }
+ e7@{ animation: fast }
+ e8@{ animation: slow }
+ 
+ style A fill:#e1f5fe
+ style B fill:#f3e5f5
+ style C fill:#fff3e0
+ style D fill:#f1f8e9
+ style E fill:#f1f8e9
+ style F fill:#f1f8e9
+ style G fill:#fce4ec&lt;/pre&gt;
+&lt;p&gt;&lt;img src="https://share.jqknono.com/articles/dns-user-profiling/images/dns-query-flow.gif" alt="dns-query-flow"&gt;&lt;/p&gt;</description></item></channel></rss>
