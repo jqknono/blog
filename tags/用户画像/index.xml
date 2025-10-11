@@ -35,4 +35,4 @@
  style E fill:#f1f8e9
  style F fill:#f1f8e9
  style G fill:#fce4ec&lt;/pre&gt;
-&lt;p&gt;&lt;img src="https://share.jqknono.com/articles/dns-user-profiling/images/dns-query-flow.gif" alt="dns-query-flow"&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;本地解析器（Stub Resolver）是操作系统或应用程序中的DNS客户端组件，负责接收应用程序的DNS查询请求并将其转发给递归解析器。递归解析器（Recursive Resolver）通常由ISP或第三方DNS服务提供，负责完成完整的域名解析过程，包括查询根服务器、顶级域（TLD）服务器和权威服务器，并将最终结果返回给客户端。&lt;/p&gt;</description></item></channel></rss>
