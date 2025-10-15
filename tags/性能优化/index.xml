@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>性能优化 on Nono Blogs</title><link>https://blog.jqknono.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</link><description>Recent content in 性能优化 on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 13 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jqknono.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS 会如何影响你的上网体验</title><link>https://blog.jqknono.com/blog/2025/10/13/dns-impact-on-browsing/</link><pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate><guid>https://blog.jqknono.com/blog/2025/10/13/dns-impact-on-browsing/</guid><description>&lt;h1 id="dns-会如何影响你的上网体验"&gt;DNS 会如何影响你的上网体验&lt;/h1&gt;
-&lt;p&gt;当我们打开一个网页、刷一条视频或点击一条应用内链接时，第一跳几乎总会落在 DNS 上。它像一份网络世界的电话簿，负责把人类友好的域名翻译成机器能理解的 IP 地址。很多人把“网页慢、打不开、时好时坏”归因于“网速差”，其实相当一部分体验波动与 DNS 的解析成功率、耗时、缓存命中与隐私策略相关。理解 DNS 如何工作、它在链路中的暴露点与可选的保护策略，能帮助我们把“慢与不稳”拆解为可控的因素。&lt;/p&gt;
+&lt;p&gt;当我们打开一个网页、刷一条视频或点击一条应用内链接时，第一跳几乎总会落在 DNS 上。它像一份网络世界的电话簿，负责把人类友好的域名翻译成机器能理解的 IP 地址。很多人把&amp;quot;网页慢、打不开、时好时坏&amp;quot;归因于&amp;quot;网速差&amp;quot;，其实相当一部分体验波动与 DNS 的解析成功率、耗时、缓存命中与隐私策略相关。理解 DNS 如何工作、它在链路中的暴露点与可选的保护策略，能帮助我们把&amp;quot;慢与不稳&amp;quot;拆解为可控的因素。&lt;/p&gt;
 &lt;h2 id="背景与问题概述"&gt;背景与问题概述&lt;/h2&gt;
 &lt;p&gt;DNS 是几乎所有联网请求的入口。解析一次域名往往只需几十毫秒，但这几十毫秒决定了后续连接将指向哪台服务器、是否命中就近的 CDN 节点、是否会被运营商劫持或被某些中间节点观察。家庭、蜂窝网络与公共 Wi‑Fi 的体验差异，也常常来自不同解析器的缓存质量、丢包率与策略差异。本文面向普通网民，用连续叙述解释 DNS 与上网体验的关系，重点放在原理与取舍，而不是具体的部署步骤或评测结论。&lt;/p&gt;
 &lt;h2 id="基础与术语梳理"&gt;基础与术语梳理&lt;/h2&gt;
@@ -16,14 +16,22 @@
  R e6@--&amp;gt; L
  L e7@--&amp;gt; C
 
+ %% 填充色设置
+ style C fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+ style L fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+ style R fill:#fff3e0,stroke:#e65100,stroke-width:2px
+ style Root fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+ style TLD fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+ style Auth fill:#e0f2f1,stroke:#004d40,stroke-width:2px
+
  %% 动画节奏设置（Mermaid v11）
  e1@{ animation: fast }
  e2@{ animation: slow }
  e3@{ animation: slow }
- e4@{ animation: slow }
- e5@{ animation: fast }
  e3r@{ animation: slow }
+ e4@{ animation: slow }
  e4r@{ animation: slow }
+ e5@{ animation: fast }
  e5r@{ animation: fast }
  e6@{ animation: slow }
  e7@{ animation: fast }&lt;/pre&gt;
