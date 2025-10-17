@@ -3,7 +3,8 @@
 &lt;p&gt;&lt;strong&gt;查看方式&lt;/strong&gt;: &lt;code&gt;cat /etc/default/grub&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;默认值如下:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;GRUB_CMDLINE_LINUX=&amp;quot; vga=792 console=tty0 console=ttyS0,115200n8 net.ifnames=0 noibrs nvme_core.io_timeout=4294967295 nvme_core.admin_timeout=4294967295 iommu=pt crashkernel=0M-1G:0M,1G-4G:192M,4G-128G:384M,128G-:512M crash_kexec_post_notifiers=1&amp;quot;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;GRUB_CMDLINE_LINUX=&amp;quot; vga=792 console=tty0 console=ttyS0,115200n8 net.ifnames=0 noibrs nvme_core.io_timeout=4294967295 nvme_core.admin_timeout=4294967295 iommu=pt crashkernel=0M-1G:0M,1G-4G:192M,4G-128G:384M,128G-:512M crash_kexec_post_notifiers=1&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;解释下&lt;code&gt;crashkernel&lt;/code&gt;字段其含义是, &lt;code&gt;0-1G&lt;/code&gt;内存的主机保留&lt;code&gt;0M&lt;/code&gt;内存, &lt;code&gt;1-4G&lt;/code&gt;内存的主机保留&lt;code&gt;192M&lt;/code&gt;内存, &lt;code&gt;4-128G&lt;/code&gt;内存的主机保留&lt;code&gt;384M&lt;/code&gt;内存, &lt;code&gt;128G&lt;/code&gt;以上的主机保留&lt;code&gt;512M&lt;/code&gt;内存.&lt;/p&gt;
 &lt;p&gt;1G 内存的主机会向上划分到&lt;code&gt;1-4G&lt;/code&gt;档, 保留 &lt;code&gt;192MB&lt;/code&gt; 内存用于 kdump. 4G 内存的主机会向上划分到&lt;code&gt;4-128G&lt;/code&gt;档, 保留 &lt;code&gt;384MB&lt;/code&gt; 内存用于 kdump.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;修改方式&lt;/strong&gt;: &lt;code&gt;sudo sed -i 's/crashkernel=0M-1G:0M,1G-4G:192M,4G-128G:384M,128G-:512M/crashkernel=0M-1G:0M,1G-4G:0M,4G-128G:0M,128G-:512M/' /etc/default/grub&lt;/code&gt;&lt;/p&gt;

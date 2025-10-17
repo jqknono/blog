@@ -167,7 +167,8 @@
 &lt;/ol&gt;
 &lt;p&gt;Note: When users receive two resolved addresses, the client picks one to connect to; if that fails, it tries the others, ensuring service availability.&lt;/p&gt;</description></item><item><title>How to Improve Network Experience with a Self-Hosted DNS Service</title><link>https://blog.jqknono.com/en-us/blog/2024/05/18/how-to-improve-network-experience-with-a-self-hosted-dns-service/</link><pubDate>Sat, 18 May 2024 10:46:44 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/05/18/how-to-improve-network-experience-with-a-self-hosted-dns-service/</guid><description>&lt;h2 id="network-quality-vs-network-experience"&gt;Network Quality vs. Network Experience&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Do nothing, and you’ll already enjoy the best network experience.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Do nothing, and you’ll already enjoy the best network experience.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;First, note that “network quality” and “network experience” are two different concepts. Communication is a process involving many devices. The upload/download performance of a &lt;strong&gt;single device&lt;/strong&gt; can be termed &lt;strong&gt;network quality&lt;/strong&gt;, while the end-to-end behavior of the entire communication path is what we call &lt;strong&gt;network experience&lt;/strong&gt;.&lt;/p&gt;
 &lt;h2 id="measuring-network-quality"&gt;Measuring Network Quality&lt;/h2&gt;
 &lt;p&gt;Evaluating network quality usually involves several metrics and methods. Common ones include:&lt;/p&gt;</description></item><item><title>Bypassing ChatGPT VPN Detection</title><link>https://blog.jqknono.com/en-us/blog/2024/05/09/bypassing-chatgpt-vpn-detection/</link><pubDate>Thu, 09 May 2024 10:30:29 +0800</pubDate><guid>https://blog.jqknono.com/en-us/blog/2024/05/09/bypassing-chatgpt-vpn-detection/</guid><description>&lt;p&gt;How to handle the ChatGPT error messages&lt;br&gt;

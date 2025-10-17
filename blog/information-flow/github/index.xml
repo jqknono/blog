@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>遨游 GitHub on Nono Blogs</title><link>https://blog.jqknono.com/blog/information-flow/github/</link><description>Recent content in 遨游 GitHub on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 30 Sep 2025 16:36:08 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/information-flow/github/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Spec Kit：官方规格驱动开发工具包深度解析</title><link>https://blog.jqknono.com/blog/2025/09/30/github-spec-kit%E5%AE%98%E6%96%B9%E8%A7%84%E6%A0%BC%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8C%85%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</link><pubDate>Tue, 30 Sep 2025 16:36:08 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/09/30/github-spec-kit%E5%AE%98%E6%96%B9%E8%A7%84%E6%A0%BC%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8C%85%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</guid><description>&lt;h1 id="github-spec-kit官方规格驱动开发工具包深度解析"&gt;GitHub Spec Kit：官方规格驱动开发工具包深度解析&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;目标读者：软件开发者、技术团队负责人、DevOps工程师、产品经理
-关键词：GitHub, Spec-Driven Development, AI, 开发工具, 软件工程&lt;/p&gt;&lt;/blockquote&gt;
+关键词：GitHub, Spec-Driven Development, AI, 开发工具, 软件工程&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id="摘要"&gt;摘要&lt;/h2&gt;
 &lt;p&gt;GitHub Spec Kit 是GitHub官方推出的规格驱动开发工具包，通过将规格文档变为可执行代码，彻底改变了传统的软件开发模式。它支持多种AI编程助手，提供了完整的项目初始化、规格制定、技术规划、任务分解和代码生成工作流。Spec Kit 让开发者专注于业务需求而非技术实现细节，显著提升开发效率和代码质量。&lt;/p&gt;
 &lt;h2 id="目录"&gt;目录&lt;/h2&gt;

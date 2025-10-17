@@ -366,7 +366,8 @@
 &lt;p&gt;我们在工作中也会遇到不少&amp;quot;卷王&amp;quot;, 很难评估他们是否带来了更多价值, 但能他们明确能做到的就是永远比别人晚下班半小时, 一旦俩卷王较上劲了, &amp;ldquo;多给一点&amp;quot;互锁, 全办公室都得笼罩在其阴影之下. 他们靠着这种低质的服务, 挤压着正常打工者的生存空间. 比的既不是创新, 也不是业绩, 主打的就是&amp;quot;卖苦力&amp;rdquo;, 却能获得老板的青睐, 这显然是一种不正常的恶行竞争.&lt;/p&gt;
 &lt;p&gt;最后再说回小龙虾市场, 有人能垄断定价自行定价, 有人能垄断货源专供高端, 而谁能通过&lt;strong&gt;垄断打工而自发打工&lt;/strong&gt;呢?&lt;/p&gt;</description></item><item><title>如何提升自建DNS服务下的网络体验</title><link>https://blog.jqknono.com/blog/2024/05/18/%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87%E8%87%AA%E5%BB%BAdns%E6%9C%8D%E5%8A%A1%E4%B8%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BD%93%E9%AA%8C/</link><pubDate>Sat, 18 May 2024 10:46:44 +0800</pubDate><guid>https://blog.jqknono.com/blog/2024/05/18/%E5%A6%82%E4%BD%95%E6%8F%90%E5%8D%87%E8%87%AA%E5%BB%BAdns%E6%9C%8D%E5%8A%A1%E4%B8%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E4%BD%93%E9%AA%8C/</guid><description>&lt;h2 id="网络质量和网络体验"&gt;网络质量和网络体验&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;什么都不做, 即可以获得最好的网络体验&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;什么都不做, 即可以获得最好的网络体验&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;需要明确, 这里&lt;code&gt;网络质量&lt;/code&gt;和&lt;code&gt;网络体验&lt;/code&gt;是两个不同的概念. 通信是一个过程, 涉及多个设备, 我们可以称单个设备的上下行表现为&lt;code&gt;网络质量&lt;/code&gt;, 而整个端到端的通信表现, 我们可以称为&lt;code&gt;网络体验&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id="如何衡量网络质量"&gt;如何衡量网络质量&lt;/h2&gt;
 &lt;p&gt;衡量网络质量通常涉及多个指标和方法。以下是一些常见的衡量网络质量的方法和指标：&lt;/p&gt;
