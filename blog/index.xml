@@ -1,4 +1,217 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Nono Blogs</title><link>https://blog.jqknono.com/blog/</link><description>Recent content in Blog on Nono Blogs</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 07 Nov 2025 18:09:37 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>实用鼠标改键分享</title><link>https://blog.jqknono.com/blog/2025/11/07/useful-mouse-key-mapping-share/</link><pubDate>Fri, 07 Nov 2025 18:09:37 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/11/07/useful-mouse-key-mapping-share/</guid><description>&lt;p&gt;&lt;code&gt;鼠标 5&lt;/code&gt; 键映射为&lt;code&gt;F12&lt;/code&gt;
-&lt;code&gt;F12&lt;/code&gt; 在 Visual Studio 和 VS Code 里是跳转到定义功能
-&lt;code&gt;Shift + F12&lt;/code&gt; 是跳转到引用功能&lt;/p&gt;
-&lt;p&gt;这样可以有较为舒服的姿势浏览代码, 右撇子可以感受下.&lt;/p&gt;</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on jqknono Blogs</title><link>https://blog.jqknono.com/blog/</link><description>Recent content in Blog on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 13 Nov 2023 14:15:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Freebies You Can Snag by Owning a Domain</title><link>https://blog.jqknono.com/blog/2025/11/27/%E6%8C%81%E6%9C%89%E5%9F%9F%E5%90%8D%E5%8F%AF%E4%BB%A5%E8%80%97%E5%88%B0%E7%9A%84%E7%BE%8A%E6%AF%9B/</link><pubDate>Thu, 27 Nov 2025 12:55:58 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/11/27/%E6%8C%81%E6%9C%89%E5%9F%9F%E5%90%8D%E5%8F%AF%E4%BB%A5%E8%80%97%E5%88%B0%E7%9A%84%E7%BE%8A%E6%AF%9B/</guid><description>&lt;p&gt;Generally, a domain name costs starting from $12, and some people want to get their own domain but hesitate whether it&amp;rsquo;s necessary.&lt;/p&gt;
+&lt;p&gt;I highly recommend that all developers prepare their own domain name, because owning a domain allows you to snag quite a few freebies.&lt;/p&gt;
+&lt;p&gt;Here, I&amp;rsquo;ll mainly introduce two service providers I&amp;rsquo;m familiar with: one is &lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt;, known in the community as the &amp;ldquo;Cyber Patriarch,&amp;rdquo; and the other is the developing &lt;a href="https://www.alibabacloud.com/product/esa"&gt;Alibaba ESA&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>gpt-5-high is the best model for developers</title><link>https://blog.jqknono.com/blog/2025/11/26/gpt-5-high-is-the-best-model-for-developers/</link><pubDate>Wed, 26 Nov 2025 14:44:57 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/11/26/gpt-5-high-is-the-best-model-for-developers/</guid><description>&lt;p&gt;If you need to code, gpt-5-high is currently the only model that can truly boost your efficiency.&lt;/p&gt;
+&lt;p&gt;I have 10 months of experience using the Claude model and have used Gemini/DeepSeek/glm/grok sporadically. I really dislike models that don&amp;rsquo;t think. I have to admit that Claude can work for long periods and is good at using tools, but its error rate is high, leading to low usability of the results, and it often requires adjustments. However, Claude&amp;rsquo;s adjustment ability is very poor; it will repeatedly, extensively, disruptively, and superfluously wander through the codebase, crapping all over the place. After having to hard reset several hours of work multiple times, I&amp;rsquo;ve developed a deep aversion to this kind of &amp;ldquo;busy but dumb&amp;rdquo; behavior from Claude. Its working style is suitable for research, producing content that looks plausible but doesn&amp;rsquo;t hold up to scrutiny—essentially, fluff pieces. Or for operating browsers, executing tools, writing small scripts, or making minor page edits. That&amp;rsquo;s its ceiling.&lt;/p&gt;</description></item><item><title>The Artificial Human-like Feel of LLMs</title><link>https://blog.jqknono.com/blog/2025/11/24/llm%E7%9A%84%E4%BC%AA%E4%BA%BA%E6%84%9F/</link><pubDate>Mon, 24 Nov 2025 16:03:46 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/11/24/llm%E7%9A%84%E4%BC%AA%E4%BA%BA%E6%84%9F/</guid><description>&lt;p&gt;Some forums resist AI models pretending to be human and participating in forum activities, such as posting and replying. Consequently, people start &amp;ldquo;witch-hunting&amp;rdquo;—when encountering posts that seem oddly expressed, they judge whether the content is AI-generated and then engage in discussions about it.&lt;/p&gt;
+&lt;p&gt;Why can AI-generated content be identified? It&amp;rsquo;s speculated that AI-generated content has a kind of &amp;ldquo;artificial human-like feel.&amp;rdquo; Although AI is fed massive amounts of human activity data from the internet, it still often gives people a sense of incongruity. Perhaps it lacks the tactile nerves of a body, endocrine hormones, or a desire for social connection; its desires are far removed from human desires. In conversations between AI and humans, there is no &amp;ldquo;roundabout boasting, exaggerated disparagement of others, or gossipy prying.&amp;rdquo; AI doesn&amp;rsquo;t boast about itself, doesn&amp;rsquo;t disparage third parties, and doesn&amp;rsquo;t seem interested in the questioner. It feels like a monk—almost emotionless, just solving problems.&lt;/p&gt;</description></item><item><title>Useful Mouse Key Mapping Share</title><link>https://blog.jqknono.com/blog/2025/11/07/useful-mouse-key-mapping-share/</link><pubDate>Fri, 07 Nov 2025 18:09:37 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/11/07/useful-mouse-key-mapping-share/</guid><description>&lt;p&gt;&lt;code&gt;Mouse 5&lt;/code&gt; key mapped to &lt;code&gt;F12&lt;/code&gt;
+&lt;code&gt;F12&lt;/code&gt; is the &amp;ldquo;Go to Definition&amp;rdquo; function in Visual Studio and VS Code
+&lt;code&gt;Shift + F12&lt;/code&gt; is the &amp;ldquo;Find All References&amp;rdquo; function&lt;/p&gt;
+&lt;p&gt;This allows for a more comfortable posture when browsing code. Right-handed users can give it a try.&lt;/p&gt;</description></item><item><title>How Trae Prevents System Prompt Leakage</title><link>https://blog.jqknono.com/blog/2025/10/15/how-trae-prevents-system-prompt-leakage/</link><pubDate>Wed, 15 Oct 2025 16:50:37 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/10/15/how-trae-prevents-system-prompt-leakage/</guid><description>&lt;p&gt;Previously, I created a tool called &lt;a href="https://marketplace.visualstudio.com/items?itemName=techfetch-dev.project-translator"&gt;Project-Translation&lt;/a&gt; that uses large language models for full project translation. I selected a popular repository of system prompts &lt;a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools"&gt;system-prompts-and-models-of-ai-tools&lt;/a&gt; for full translation and found that all tool prompts in the repository could be translated normally, except for &lt;strong&gt;Trae&lt;/strong&gt;&amp;rsquo;s prompts which consistently failed to translate successfully. I tried many different models and translation prompts, but none could translate it properly.&lt;/p&gt;
+&lt;p&gt;This is the original version of Trae&amp;rsquo;s prompt: &lt;a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/blob/main/Trae/Builder%20Prompt.txt"&gt;https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/blob/main/Trae/Builder%20Prompt.txt&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Why Recall Rate Metrics Are Important for Large Models</title><link>https://blog.jqknono.com/blog/2025/10/14/why-recall-rate-metrics-are-important-for-large-models/</link><pubDate>Tue, 14 Oct 2025 09:59:51 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/10/14/why-recall-rate-metrics-are-important-for-large-models/</guid><description>&lt;p&gt;I&amp;rsquo;ve read some system prompts, and most are very verbose and not concise. Some prompts mainly teach the model how to do things.&lt;/p&gt;
+&lt;p&gt;Additionally, I noticed that in roo code there&amp;rsquo;s a switch to repeatedly send the system prompt to the model, indicating that it can reinforce role settings and instruction following. However, this increases token consumption.&lt;/p&gt;
+&lt;p&gt;This might be because important things need to be repeated multiple times to increase their weight during computation, enhance the probability of confirmation, and ultimately obtain more likely correct results. Unfortunately, such results are still probabilistically correct.&lt;/p&gt;</description></item><item><title>DNS Privacy Protection and User Profiling Prevention Strategies</title><link>https://blog.jqknono.com/blog/2025/10/09/dns-privacy-protection-and-user-profiling-prevention-strategies/</link><pubDate>Thu, 09 Oct 2025 22:00:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/10/09/dns-privacy-protection-and-user-profiling-prevention-strategies/</guid><description>&lt;h1 id="dns-privacy-protection-and-user-profiling-prevention-strategies"&gt;DNS Privacy Protection and User Profiling Prevention Strategies&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Audience: Engineering/Operations/Security practitioners concerned with network privacy and data governance
+Keywords: Stub Resolver, Recursive Resolution, Authoritative Server, QNAME Minimization, ECS, DNSSEC, DoT/DoH/DoQ&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="background-and-problem-overview"&gt;Background and Problem Overview&lt;/h2&gt;
+&lt;p&gt;In the digital age, user network behavior data has become an important source for companies to build user profiles. As a core component of internet infrastructure, the Domain Name System (DNS) plays a key role in daily network activities by converting human-readable domain names into machine-readable IP addresses. However, traditional DNS queries are typically transmitted in plain text over UDP port 53, making users&amp;rsquo; browsing history, application usage habits, and other sensitive information vulnerable to collection and analysis by network operators, internet service providers, and various intermediaries.&lt;/p&gt;</description></item><item><title>Comparison of DNS Encryption Protocols: DoT, DoH, DoQ</title><link>https://blog.jqknono.com/blog/2025/10/09/comparison-of-dns-encryption-protocols-dot-doh-doq/</link><pubDate>Thu, 09 Oct 2025 13:16:16 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/10/09/comparison-of-dns-encryption-protocols-dot-doh-doq/</guid><description>&lt;h2 id="quick-glossary"&gt;Quick Glossary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS: Cleartext DNS, typically uses UDP/53, switching to TCP/53 when necessary (e.g., for truncated responses, zone transfers).&lt;/li&gt;
+&lt;li&gt;DoT: DNS over TLS, uses TCP over TLS, default port 853 (RFC 7858/8310).&lt;/li&gt;
+&lt;li&gt;DoH: DNS over HTTPS, based on HTTPS (HTTP/2 or HTTP/3), default port 443 (RFC 8484).&lt;/li&gt;
+&lt;li&gt;DoQ: DNS over QUIC, based on QUIC + TLS 1.3, default port UDP/853 (RFC 9250, IANA assigned to 853/udp).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="layered-relationship-simplified-tcpip-model"&gt;Layered Relationship (Simplified TCP/IP Model)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Application Layer: HTTP, HTTPS, DNS (DoH is encapsulated within the HTTPS application layer)&lt;/li&gt;
+&lt;li&gt;Security Layer: TLS (provides encryption for TCP or QUIC)&lt;/li&gt;
+&lt;li&gt;Transport Layer: TCP, UDP, QUIC&lt;/li&gt;
+&lt;li&gt;Network Layer: IP&lt;/li&gt;
+&lt;li&gt;Link Layer: Ethernet, etc.&lt;/li&gt;
+&lt;li&gt;Physical Layer: Twisted pair/Fiber optic/Wireless, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="key-points"&gt;Key Points&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS operates over UDP/TCP, unencrypted.&lt;/li&gt;
+&lt;li&gt;DoT = TCP + TLS + DNS (dedicated port 853).&lt;/li&gt;
+&lt;li&gt;DoH = TCP/QUIC + TLS + HTTP(S) + DNS (uses port 443, shared with regular HTTPS).&lt;/li&gt;
+&lt;li&gt;DoQ = QUIC + TLS 1.3 + DNS (dedicated port UDP/853).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TB
+subgraph Application Layer
+A[HTTP]
+A2[HTTPS]
+C[DNS]
+D[DoH DNS over HTTPS]
+end
+subgraph Security Layer
+E[TLS]
+end
+subgraph Transport Layer
+F[TCP]
+G[UDP]
+H[QUIC]
+end
+subgraph Network Layer
+I[IP]
+end
+subgraph Link Layer
+J[Ethernet]
+end
+subgraph Physical Layer
+K[Twisted Pair/Fiber/Wireless]
+end
+A2 --&amp;gt; F
+A2 --&amp;gt; H
+A --&amp;gt; F
+C --&amp;gt; F
+C --&amp;gt; G
+D --&amp;gt; A2
+E --&amp;gt; F
+E --&amp;gt; H
+F --&amp;gt; I
+G --&amp;gt; I
+H --&amp;gt; I
+I --&amp;gt; J
+J --&amp;gt; K
+style D fill:#e1f5fe
+style E fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="basics-and-corrections"&gt;Basics and Corrections&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS defaults to UDP/53, switching to TCP/53 for truncated responses (TC bit) or when reliable transport is needed.&lt;/li&gt;
+&lt;li&gt;DoT establishes a TLS tunnel over TCP to transmit DNS messages, default port 853; long-lived connections can be reused to reduce handshake overhead.&lt;/li&gt;
+&lt;li&gt;DoH treats DNS as a resource within HTTPS (&lt;code&gt;application/dns-message&lt;/code&gt;), typically using HTTP/2 or HTTP/3, port 443, easily mixed with regular HTTPS traffic.&lt;/li&gt;
+&lt;li&gt;DoQ directly uses QUIC (based on UDP) to carry DNS, offering low latency and head-of-line blocking avoidance, but ecosystem adoption is still growing.&lt;/li&gt;
+&lt;li&gt;Broad statements like &amp;ldquo;QUIC is always X% faster than TCP&amp;rdquo; are inaccurate; actual performance depends on network conditions (packet loss, jitter, RTT), connection reuse capabilities, implementation details, and server deployment.&lt;/li&gt;
+&lt;li&gt;DoH is not inherently &amp;ldquo;slower/faster just because DNS is placed in HTTP&amp;rdquo;; performance depends on connection reuse, network quality, and implementation; in many cases, DoH/3 performance is comparable to or even better than DoT.&lt;/li&gt;
+&lt;li&gt;DoT can use SNI for certificate hostname verification; DoH relies on standard HTTPS certificate validation and hostname matching.&lt;/li&gt;
+&lt;li&gt;Encrypted DNS only prevents eavesdropping and tampering on the link; it does not equal &amp;ldquo;complete anonymity.&amp;rdquo; The resolver may still log queries; choose a trustworthy provider and review their privacy policy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TD
+subgraph DNS Family
+A[Plain DNS UDP/TCP &amp;#43; DNS]
+subgraph Encrypted DNS
+B[DoT TCP &amp;#43; TLS &amp;#43; DNS]
+C[DoH HTTP/2,3 &amp;#43; TLS &amp;#43; DNS]
+D[DoQ QUIC &amp;#43; TLS 1.3 &amp;#43; DNS]
+end
+subgraph Transport Base
+E[TCP]
+F[UDP]
+G[QUIC]
+end
+end
+A --&amp;gt; B
+A --&amp;gt; C
+A --&amp;gt; D
+B --&amp;gt; E
+C --&amp;gt; E
+C --&amp;gt; G
+D --&amp;gt; G
+A --&amp;gt; F
+style A fill:#f3e5f5
+style B fill:#e8f5e8
+style C fill:#e3f2fd
+style D fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="comparison-overview"&gt;Comparison Overview&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Protocol&lt;/th&gt;
+&lt;th&gt;Transport Layer&lt;/th&gt;
+&lt;th&gt;Encryption&lt;/th&gt;
+&lt;th&gt;Encapsulation&lt;/th&gt;
+&lt;th&gt;Default Port&lt;/th&gt;
+&lt;th&gt;Typical Characteristics&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Plain DNS&lt;/td&gt;
+&lt;td&gt;UDP/TCP&lt;/td&gt;
+&lt;td&gt;None&lt;/td&gt;
+&lt;td&gt;Native DNS&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;Simple, efficient, plaintext visible, easily tampered/monitored&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoT&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853&lt;/td&gt;
+&lt;td&gt;Dedicated port, easily blocked by port, good system-level support&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoH&lt;/td&gt;
+&lt;td&gt;TCP/QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;HTTP/2-3 + DNS&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;Shares port with HTTPS, strong penetration, browser priority support&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoQ&lt;/td&gt;
+&lt;td&gt;QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853/UDP&lt;/td&gt;
+&lt;td&gt;Low latency, avoids head-of-line blocking, ecosystem developing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="performance-and-latency"&gt;Performance and Latency&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Connection Reuse: DoT/DoH/DoQ can all reuse long-lived connections to reduce handshake costs; DoH/2, DoH/3, and DoQ can also multiplex requests within a single connection.&lt;/li&gt;
+&lt;li&gt;Head-of-Line Blocking: TCP suffers from application-layer head-of-line blocking; HTTP/2 mitigates this over TCP with multiplexing but is still affected by TCP packet loss. QUIC (DoH/3, DoQ) avoids head-of-line blocking at the transport layer, making it more friendly to high packet loss/mobile networks.&lt;/li&gt;
+&lt;li&gt;First Packet Latency: On initial connection, DoT requires TCP+TLS handshake; DoH/2 is similar; DoH/3/DoQ, based on QUIC, offer faster reconnection and migration. Under sustained load, differences depend more on implementation and network conditions.&lt;/li&gt;
+&lt;li&gt;Reachability: DoH uses port 443, least likely to be blocked by simple port filtering; DoT uses port 853, often subject to indiscriminate blocking; DoQ uses UDP/853, which may currently be blocked or not permitted.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="client-and-system-support"&gt;Client and System Support&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Browsers: Chromium family and Firefox have built-in DoH by default (can automatically upgrade to DoH-capable resolvers or use built-in provider lists).&lt;/li&gt;
+&lt;li&gt;Windows: Windows 11 has native DoH support.&lt;/li&gt;
+&lt;li&gt;Android: Android 9+ provides &amp;ldquo;Private DNS&amp;rdquo; (system-level DoT). System-level DoH support depends on version/manufacturer.&lt;/li&gt;
+&lt;li&gt;Apple Platforms: iOS 14+/macOS 11+ support DoT and DoH via configuration profiles or NetworkExtension.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="deployment-and-selection-recommendations"&gt;Deployment and Selection Recommendations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;General/Restricted Networks (e.g., public Wi-Fi, need to bypass simple blocking): Prioritize DoH (port 443), enable HTTP/3 if available.&lt;/li&gt;
+&lt;li&gt;System-Wide Outbound (router, gateway, Android Private DNS): Prioritize DoT (853), optionally configure DoH as a fallback if the network allows.&lt;/li&gt;
+&lt;li&gt;High Packet Loss/Mobile Networks: Prioritize DoH/3 with QUIC or DoQ (depending on resolver and client support).&lt;/li&gt;
+&lt;li&gt;Enterprise/Compliance Scenarios: Choose based on policy (DoH can integrate with existing HTTPS infrastructure; DoT facilitates separation from DNS control plane).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="summary"&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;First choice: DoH (port 443, strong penetration), enable HTTP/3 if available.&lt;/li&gt;
+&lt;li&gt;If system-wide unification is needed: Prioritize DoT (853) + persistent connections, fall back to DoH (443) if necessary.&lt;/li&gt;
+&lt;li&gt;If your resolver and clients both support it: Try DoQ (often provides better mobile network experience).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="reference-standards"&gt;Reference Standards&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RFC 7858, RFC 8310 (DNS over TLS)&lt;/li&gt;
+&lt;li&gt;RFC 8484 (DNS over HTTPS)&lt;/li&gt;
+&lt;li&gt;RFC 9250 (DNS over QUIC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="recommended-dns-services"&gt;Recommended DNS Services&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;NullPrivate DNS: &lt;a href="https://www.nullprivate.com"&gt;https://www.nullprivate.com&lt;/a&gt; supports DoT, DoH (supports HTTP3), natively supports ad-blocking and traffic splitting.&lt;/li&gt;
+&lt;li&gt;Self-hosted version: &lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;https://github.com/NullPrivate/NullPrivate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>GitHub Spec Kit: An In-Depth Analysis of the Official Specification-Driven Development Toolkit</title><link>https://blog.jqknono.com/blog/2025/09/30/github-spec-kit-an-in-depth-analysis-of-the-official-specification-driven-development-toolkit/</link><pubDate>Tue, 30 Sep 2025 16:36:08 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/09/30/github-spec-kit-an-in-depth-analysis-of-the-official-specification-driven-development-toolkit/</guid><description>&lt;h1 id="github-spec-kit-an-in-depth-analysis-of-the-official-specification-driven-development-toolkit"&gt;GitHub Spec Kit: An In-Depth Analysis of the Official Specification-Driven Development Toolkit&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Target Audience: Software Developers, Technical Team Leaders, DevOps Engineers, Product Managers
+Keywords: GitHub, Spec-Driven Development, AI, Development Tools, Software Engineering&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="abstract"&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;GitHub Spec Kit is GitHub&amp;rsquo;s official specification-driven development toolkit that fundamentally transforms traditional software development models by turning specification documents into executable code. It supports multiple AI programming assistants and provides a complete workflow for project initialization, specification creation, technical planning, task decomposition, and code generation. Spec Kit allows developers to focus on business requirements rather than technical implementation details, significantly improving development efficiency and code quality.&lt;/p&gt;</description></item><item><title>Claude Code Third-party Vendor Usage Guide - In-depth Analysis &amp; Best Practices</title><link>https://blog.jqknono.com/blog/2025/09/17/claude-code-third-party-vendor-usage-guide-in-depth-analysis-best-practices/</link><pubDate>Wed, 17 Sep 2025 22:23:27 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/09/17/claude-code-third-party-vendor-usage-guide-in-depth-analysis-best-practices/</guid><description>&lt;h1 id="claude-code-third-party-vendor-usage-guide"&gt;Claude Code Third-party Vendor Usage Guide&lt;/h1&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Based on my long-term experience using Claude Code, this article shares how to efficiently configure third-party vendors and avoid common configuration pitfalls. Unlike self-media accounts that merely repost official information, the content here consists of practical tips that have been verified through actual use.&lt;/p&gt;
+&lt;h2 id="environment-variable-configuration"&gt;Environment Variable Configuration&lt;/h2&gt;
+&lt;h3 id="basic-configuration-mentioned-in-most-tutorials"&gt;Basic Configuration (Mentioned in most tutorials)&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ANTHROPIC_BASE_URL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Your vendor API address
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ANTHROPIC_AUTH_TOKEN&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Your authentication token
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nv"&gt;ANTHROPIC_MODEL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;Default model name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;ANTHROPIC_SMALL_FAST_MODEL&lt;/code&gt; has been deprecated, replaced by &lt;code&gt;ANTHROPIC_DEFAULT_HAIKU_MODEL&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>How DNS Affects Your Internet Experience</title><link>https://blog.jqknono.com/blog/2025/10/13/dns-impact-on-browsing/</link><pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate><guid>https://blog.jqknono.com/blog/2025/10/13/dns-impact-on-browsing/</guid><description>&lt;h1 id="how-dns-affects-your-internet-experience"&gt;How DNS Affects Your Internet Experience&lt;/h1&gt;
+&lt;p&gt;When we open a web page, watch a video, or click a link within an app, the first hop almost always lands on DNS. It acts like a telephone directory for the online world, responsible for translating human-friendly domain names into IP addresses that machines can understand. Many people attribute issues like &amp;ldquo;slow web pages, inability to open sites, or inconsistent performance&amp;rdquo; to &amp;ldquo;poor internet speed,&amp;rdquo; when in fact, a significant portion of these experience fluctuations are related to DNS resolution success rates, latency, cache hits, and privacy policies. Understanding how DNS works, its exposure points in the connection chain, and the available protection strategies can help us break down &amp;ldquo;slowness and instability&amp;rdquo; into manageable factors.&lt;/p&gt;</description></item><item><title>Potential Security Risks of Open Source Blogs: How to Protect Personal Information from Leaks</title><link>https://blog.jqknono.com/blog/2025/10/11/potential-security-risks-of-open-source-blogs-how-to-protect-personal-information-from-leaks/</link><pubDate>Sat, 11 Oct 2025 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/blog/2025/10/11/potential-security-risks-of-open-source-blogs-how-to-protect-personal-information-from-leaks/</guid><description>&lt;h2 id="overview"&gt;Overview&lt;/h2&gt;
+&lt;p&gt;GitHub Pages, as a free open-source blog hosting platform, is widely popular due to its convenience and cost-free nature. However, the free version requires repositories to be public to provide public access services, a feature that may lead to unexpected information leakage risks.&lt;/p&gt;
+&lt;p&gt;Even if the article content itself does not contain sensitive information, the blog&amp;rsquo;s &lt;strong&gt;source code repository&lt;/strong&gt; might inadvertently leak personal privacy information. This article will explore these potential risks and provide practical solutions.&lt;/p&gt;</description></item></channel></rss>
