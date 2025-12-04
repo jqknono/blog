@@ -1,0 +1,105 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ネットワーク on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/categories/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/</link><description>Recent content in ネットワーク on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 02 Dec 2025 08:30:50 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/categories/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflareは完全に信頼できるか</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/02/cloudflare%E3%81%AF%E5%AE%8C%E5%85%A8%E3%81%AB%E4%BF%A1%E9%A0%BC%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/</link><pubDate>Tue, 02 Dec 2025 08:30:50 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/02/cloudflare%E3%81%AF%E5%AE%8C%E5%85%A8%E3%81%AB%E4%BF%A1%E9%A0%BC%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/</guid><description>&lt;p&gt;Cloudflare、阿里雲 ESA、Tencent EdgeOne などは、ドメイン証明書を保持しており、ドメイン下のすべてのトラフィックを完全に閲覧可能。つまり、大規模な中間者である。主要機能はセキュリティで、ネットワーク上の攻撃者が多すぎるため、大規模な中間者を選ぶ利点が弊害を上回る。副次的機能として DNS、CDN、WAF などのエッジサービスを提供。&lt;/p&gt;
+&lt;p&gt;Cloudflare のようなサービスは DDOS を効果的に防御でき、少しの遅延増加で防御能力を得る、とてもお得。各站長はこうしたサービスを直接使うべき。ネットワーク攻撃はどこにでもあり、幸運を期待せず、遅かれ早かれ攻撃される。一部の攻撃は脆弱性探しで、サイト運営者のレベルに関連。他はリソース消費目的、例えば DDOS で、商用ネットワークと家庭ネットワークのコスト非対称性を悪用した攻撃。これは陽謀で、多くの場合金で対抗するか、サービスを直接停止し、全ユーザーを放棄する、いわゆるブラックホール防御しかない。&lt;/p&gt;
+&lt;p&gt;大多数の攻撃者は、サイトが Cloudflare で保護されているのを見ると攻撃を直接諦める。其实、攻撃者はオリジナルサーバーではなく Cloudflare を攻撃することを考えられる。同じくデータ入手可能、ただ難易度が高いかも。しかし、世界は草台班子だと信じ、何事も不可能ではない。実際、ネットワーク上の大多数の攻撃行為は気づかれず、大多数の攻撃者は発見されず、大多数の攻撃行為も追究されない。Cloudflare はコスト優位で DDOS を対抗可能だが、コードが銅墙鉄壁とは限らず、Cloudflare 類サービスを攻撃して原站データを入手する可能性は 0 ではない。&lt;/p&gt;</description></item><item><title>非典型的な家庭ネットワーク問題の1回のトラブルシューティング記録</title><link>https://blog.jqknono.com/ja-jp/blog/2025/11/29/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%9E%E5%85%B8%E5%9E%8B%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</link><pubDate>Sat, 29 Nov 2025 11:25:30 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/11/29/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%9E%E5%85%B8%E5%9E%8B%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</guid><description>&lt;p&gt;現象は、小新ノートパソコンを書斎から持ち出すと家族全員がネットに繋がらなくなり、書斎に戻して電源を挿すと、家内のネットワークが正常に戻るというもの。自宅構築の&lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;nullprivate DNS&lt;/a&gt;が時々中断し、主機が時々繋がらなくなり、後で交換機の問題と確認、重启交換機で解決。
+&lt;img src="https://share.jqknono.com/image/blog/44f37f2cac1dd15771546949a8d81680.jpg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;この水星の交換機は数年使っており、これまで問題が発生したことはなく、最近複数回問題が発生して重启で解決する必要が出て、私の注意を引きました。機器の老朽化か、根本原因が交換機にない可能性があります。&lt;/p&gt;
+&lt;p&gt;小新ノートパソコンを電源の倍思hub経由で交換機の有線ネットワークを使い、電源を抜くとWiFiを使い、DNSサービスは交換機に繋がったJ4215ホストにあり、小新ノートパソコンのWiFi使用が交換機やその上の機器に何の影響を与えるのか？ IP衝突？ MACアドレス衝突？&lt;/p&gt;
+&lt;p&gt;交換機の構造はシンプルですが、デバッグできません。この件は未解決のまましばらく経ち、交換機の偶発的な故障を防ぐため、主機のWiFiをオンにし、バックアップネットワーク接続とし、家内のDNSに阿里雲DNSをバックアップとして追加し、断網による家族の不満を避けました。&lt;/p&gt;
+&lt;p&gt;今日突然頭に閃きが走り、小新ノートパソコンのWiFiと交換機の衝突ではないかも、これは物理やネットワークの常識に合わない、ノートパソコンを電源抜きの瞬間で交換機に故障が発生したのではないか？&lt;/p&gt;
+&lt;p&gt;小新ノートパソコンを電源挿しで交換機上有線ネットワークを使う方法を再検討、まず倍思hubを経由、このhubは元々macbookpro用で、macにUSB-A口がないため倍思の有源hubを購入、macbookproは妻の予備機で長年使わず、電源と網線を挿して画面オフで放置。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://share.jqknono.com/image/blog/202511291152201.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;倍思hubを私が常用する16インチ小新ノートパソコンに転用、5000元で16インチ高U集顯大電池、性价比最高、私に適す。hubに電源挿し、出力は3 USB-Aと1 HDMI、日常1 type-cで小新を電源、無線マウス、無線キーボード、ディスプレイに接続。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://share.jqknono.com/image/blog/202511291155045.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;ネットワーク安定のため、時々別の緑聯USB hubを使い、3 USB-Aとギガビット網口対応、小新の反対側に挿し交換機の有線を使い、しばらく問題なし、しかしある日小新に2 hub挿すのに飽き、なぜhub套娃できないか？ 緑聯hubを倍思hubに挿す：
+&lt;img src="https://share.jqknono.com/image/blog/202511291209080.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;おいおい、意外と動く、これで小新真1 C口で全て。&lt;/p&gt;
+&lt;p&gt;最近ネットワーク問題頻発、J4125ホストと主力デスクトップ頻繁に切断。これでこの接続に問題あるか疑い、テストで以下の法則発見：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;小新-&amp;gt;倍思+電源-&amp;gt;緑聯-&amp;gt;網線-&amp;gt;交換機&lt;/code&gt; , この接続下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+电源[🔌 电源] --&amp;gt; 倍思[倍思 Hub]
+小新[💻 小新笔记本] --&amp;gt; 倍思
+倍思 --&amp;gt; 绿联[绿联 Hub]
+绿联 --&amp;gt; 网线[🔗 网线]
+网线 --&amp;gt; 交换机[🔀 交换机]
+style 小新 fill:#4a9eff,color:#fff
+style 倍思 fill:#ff6b6b,color:#fff
+style 绿联 fill:#51cf66,color:#fff
+style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;電源倍思に挿し、倍思hubノートに挿し、緑聯hub倍思に挿し、網線緑聯hubに接続、交換機へ&lt;/li&gt;
+&lt;li&gt;小新倍思挿して使用、ネットワーク正常。&lt;/li&gt;
+&lt;li&gt;小新倍思線抜き、&lt;strong&gt;数秒後、交換機上機器全て切断&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;小新倍思線再挿し、ネットワーク正常回復&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;小新+電源-&amp;gt;倍思-&amp;gt;緑聯-&amp;gt;網線-&amp;gt;交換機&lt;/code&gt; , この接続下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+电源[🔌 电源] --&amp;gt; 小新[💻 小新笔记本]
+小新 --&amp;gt; 倍思[倍思 Hub]
+倍思 --&amp;gt; 绿联[绿联 Hub]
+绿联 --&amp;gt; 网线[🔗 网线]
+网线 --&amp;gt; 交换机[🔀 交换机]
+style 小新 fill:#4a9eff,color:#fff
+style 倍思 fill:#ff6b6b,color:#fff
+style 绿联 fill:#51cf66,color:#fff
+style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;電源小新に挿し、倍思hubノートに挿し、緑聯hub倍思に挿し、網線緑聯hubに接続、交換機へ&lt;/li&gt;
+&lt;li&gt;小新電源抜き挿し、全て正常。&lt;/li&gt;
+&lt;li&gt;小新倍思線抜き挿し、全て正常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;小新-&amp;gt;倍思+電源, 小新-&amp;gt;緑聯&lt;/code&gt; , この接続下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+电源[🔌 电源] --&amp;gt; 倍思[倍思 Hub]
+小新[💻 小新笔记本] --&amp;gt; 倍思
+小新 --&amp;gt; 绿联[绿联 Hub]
+绿联 --&amp;gt; 网线[🔗 网线]
+网线 --&amp;gt; 交换机[🔀 交换机]
+style 小新 fill:#4a9eff,color:#fff
+style 倍思 fill:#ff6b6b,color:#fff
+style 绿联 fill:#51cf66,color:#fff
+style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;電源倍思に挿し、倍思hubノートに挿し、緑聯hubノートに挿し&lt;/li&gt;
+&lt;li&gt;小新倍思線抜き挿し、全て正常。&lt;/li&gt;
+&lt;li&gt;小新緑聯線抜き挿し、全て正常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;小新+電源-&amp;gt;倍思-&amp;gt;緑聯&lt;/code&gt; , この接続下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+电源[🔌 电源] --&amp;gt; 小新[💻 小新笔记本]
+小新 --&amp;gt; 倍思[倍思 Hub]
+倍思 --&amp;gt; 绿联[绿联 Hub]
+绿联 --&amp;gt; 网线[🔗 网线]
+网线 --&amp;gt; 交换机[🔀 交换机]
+style 小新 fill:#4a9eff,color:#fff
+style 倍思 fill:#ff6b6b,color:#fff
+style 绿联 fill:#51cf66,color:#fff
+style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;電源小新に挿し、倍思hub小新に挿し、緑聯hub倍思に挿し&lt;/li&gt;
+&lt;li&gt;小新電源抜き挿し、全て正常。&lt;/li&gt;
+&lt;li&gt;小新倍思線抜き挿し、全て正常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;倍思+電源-&amp;gt;緑聯-&amp;gt;網線-&amp;gt;交換機&lt;/code&gt; , この接続下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+电源[🔌 电源] --&amp;gt; 倍思[倍思 Hub]
+倍思 --&amp;gt; 绿联[绿联 Hub]
+绿联 --&amp;gt; 网线[🔗 网线]
+网线 --&amp;gt; 交换机[🔀 交换机]
+style 倍思 fill:#ff6b6b,color:#fff
+style 绿联 fill:#51cf66,color:#fff
+style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;ノートなし、電源倍思に挿し、緑聯hub倍思に挿し、網線緑聯hubに接続&lt;/li&gt;
+&lt;li&gt;倍思電源線抜き挿し、全て正常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ここまでで、問題は&lt;strong&gt;小新ノート-&amp;gt;倍思hub+電源-&amp;gt;緑聯hub-&amp;gt;網線-&amp;gt;交換機&lt;/strong&gt; この組み合わせで、倍思type-cを小新から抜くと交換機故障。判断は倍思の&lt;strong&gt;電源供給交渉&lt;/strong&gt;問題で、理由は小新倍思抜き後&lt;strong&gt;数秒経って&lt;/strong&gt;交換機切断。ノートなしで倍思電源線抜き挿しのみ、交換機影響なし。交換機に影響するには電源重要、電源2 hubと網線経由で電圧交換機に伝わり故障。倍思hubが鍵、ノートなし電源線抜き挿し影響なし。只小新から電源付き倍思hub抜くと交換機故障。緑聯hub USB-A供电正常だが、網線で電圧交換機に伝わるのはPoE対応か？ USB hub専門家でない、後知識盲区、説明不能。&lt;/p&gt;</description></item></channel></rss>

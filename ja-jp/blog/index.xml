@@ -1,1 +1,200 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/blog/</link><description>Recent content in Blogs on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Sat, 29 Nov 2025 11:25:30 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/blog/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/blog/</link><description>Recent content in Blogs on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 03 Dec 2025 19:16:52 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>アリババクラウドのESA_page機能はまだ使用しないことを推奨</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/03/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%81%AEesa_page%E6%A9%9F%E8%83%BD%E3%81%AF%E3%81%BE%E3%81%A0%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E6%8E%A8%E5%A5%A8/</link><pubDate>Wed, 03 Dec 2025 19:16:52 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/03/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%81%AEesa_page%E6%A9%9F%E8%83%BD%E3%81%AF%E3%81%BE%E3%81%A0%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E6%8E%A8%E5%A5%A8/</guid><description>&lt;p&gt;これは ESA Pages 機能の制限で、このリソース規模では小さなウェブサイトをホストするのに十分です。長期的に更新するウェブサイトをホストしたい場合、2000 個のファイルの制限は低すぎます。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;機能&lt;/th&gt;
+&lt;th&gt;制限項目&lt;/th&gt;
+&lt;th&gt;制限&lt;/th&gt;
+&lt;th&gt;説明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;関数&lt;/td&gt;
+&lt;td&gt;応答時間&lt;/td&gt;
+&lt;td&gt;120 秒&lt;/td&gt;
+&lt;td&gt;関数の単一実行の応答時間は 120 秒を超えてはなりません（I/O 待機も RT 時間に含まれます）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;待機時間&lt;/td&gt;
+&lt;td&gt;10 秒&lt;/td&gt;
+&lt;td&gt;ゲートウェイが Functions を待機する時間で、Functions が 10 秒以内にデータを返さない場合、ゲートウェイは接続を積極的に切断し、クライアントに 504 ステータスコードを返します。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;コードパッケージサイズ&lt;/td&gt;
+&lt;td&gt;4 MB&lt;/td&gt;
+&lt;td&gt;各関数の JavaScript コードファイルの上限サイズ。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;サブリクエスト数&lt;/td&gt;
+&lt;td&gt;4 個&lt;/td&gt;
+&lt;td&gt;Functions の単一実行で許可される fetch リクエスト数。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;開発言語&lt;/td&gt;
+&lt;td&gt;JavaScript（ES6 構文）&lt;/td&gt;
+&lt;td&gt;現在 JS のみサポート。JavaScript プログラミングスキルが必要です。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Pages&lt;/td&gt;
+&lt;td&gt;ファイル数&lt;/td&gt;
+&lt;td&gt;2000 個&lt;/td&gt;
+&lt;td&gt;各 Pages プロジェクトで最大 2000 個の静的ファイル（HTML、CSS、JS、画像など）をアップロード可能。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;単一ファイルサイズ&lt;/td&gt;
+&lt;td&gt;25MB&lt;/td&gt;
+&lt;td&gt;単一ファイル（動画、PDF、JS パッケージなど）の最大サイズは 25MB。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;パッケージサイズ&lt;/td&gt;
+&lt;td&gt;1024MB&lt;/td&gt;
+&lt;td&gt;プロジェクト全体のソースコード圧縮パッケージ（deploy package）の最大サイズは 1024MB。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="参考ドキュメント"&gt;参考ドキュメント&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/user-guide/what-is-functions-and-pages/?spm=a2c63.p38356.help-menu-2673927.d_2_14_0.3fc311f30eRxno"&gt;アリババクラウドドキュメント: ESA_page 機能制限&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>アリババのESAとOSSの落とし穴</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/02/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%81%AEesa%E3%81%A8oss%E3%81%AE%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4/</link><pubDate>Tue, 02 Dec 2025 18:10:45 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/02/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%81%AEesa%E3%81%A8oss%E3%81%AE%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4/</guid><description>&lt;p&gt;初期のアリババ ESA は、ESA からプライベート OSS にアクセスするトラフィックが無料と言っていましたが、後で以下のように変更されました:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ソースステーションが阿里雲 OSS の場合、OSS 側はバックツースペースのアウトバウンドトラフィックに基づいて課金します。OSS が中国本土地域以外にあり、リクエストリソースを対応地域の ESA ノードに転送する場合に限り料金はかかりません。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;これまでの任意の ESA ノードからの OSS へのバックツースペースが無料だったものが、&lt;em&gt;対応地域の ESA ノードからの非大陸 OSS へのバックツースペースが無料&lt;/em&gt; に変更されました。つまり、OSS が韓国にある場合、ESA を有効化した後、韓国からのみホストサイトへのアクセスが無料で、韓国以外からのアクセスはキャッシュ期間内に OSS のバックツースペース流量費が1回課金されます。この費用は 2025.10 およびそれ以前は無料でしたが、2025.11 から課金開始です。&lt;/p&gt;
+&lt;p&gt;私の小サイトは以前9ヶ月間料金なしで使っていましたが、10ヶ月目、つまり 2025.11 から、今月の CDN バックツースペースアウトバウンド流量 11G で 0.8 ドル課金されました。&lt;/p&gt;
+&lt;p&gt;今後、アリババの製品を無料製品として推薦できませんし、アリババは通知なし、サイト内メッセージすらありません。これは商業化が粗雑で、ユーザーを尊重していないことを示しています。私が小規模 SaaS 製品を作ってもユーザーに対してこうはしません、だからクレジットカードを急いで紐付けようとするのです。&lt;/p&gt;
+&lt;p&gt;アリババ ESA の最新料金詳細はこちら:
+&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/product-overview/basic-package-fee?spm=a2c63.p38356.help-menu-2673927.d_0_4_0.1f7e996f3LOyTd"&gt;https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/product-overview/basic-package-fee?spm=a2c63.p38356.help-menu-2673927.d_0_4_0.1f7e996f3LOyTd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;古いドキュメントはもう見つかりません。以前9ヶ月間料金なしだったため、今の料金が明確で、ESA の料金ポリシーが変更されたと確信しています。&lt;/p&gt;</description></item><item><title>windows共有デバッグChrome方法</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/02/windows%E5%85%B1%E6%9C%89%E3%83%87%E3%83%90%E3%83%83%E3%82%B0chrome%E6%96%B9%E6%B3%95/</link><pubDate>Tue, 02 Dec 2025 12:46:11 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/02/windows%E5%85%B1%E6%9C%89%E3%83%87%E3%83%90%E3%83%83%E3%82%B0chrome%E6%96%B9%E6%B3%95/</guid><description>&lt;p&gt;公共のChromeブラウザーを複数端末で共有デバッグする必要があり、繰り返しの複数箇所でのアカウントログインを避ける。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ps1" data-lang="ps1"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# chrome起動コマンド&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;C:\Program Files\Google\Chrome\Application\chrome.exe&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-remote-debugging-address&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;1&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-remote-debugging-port&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-user-data-dir&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;M:\chrome-remote&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;ここで特に注意すべきは、新版Chromeはセキュリティ上の考慮から、Chromeを0.0.0.0に公開することをサポートしなくなり、remote-debugging-addressは実際には有効になりません&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ps1" data-lang="ps1"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# ファイアウォール放行ルールを追加:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;netsh&lt;/span&gt; &lt;span class="n"&gt;advfirewall&lt;/span&gt; &lt;span class="n"&gt;firewall&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;rule&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Chrome DevTools 34037 LAN&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt; &lt;span class="n"&gt;protocol&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt; &lt;span class="n"&gt;localport&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# portproxy（システム層リバースプロキシ）を確立:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;netsh&lt;/span&gt; &lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;portproxy&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;v4tov4&lt;/span&gt; &lt;span class="n"&gt;listenport&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt; &lt;span class="n"&gt;listenaddress&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;192.168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;31&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;2&lt;/span&gt; &lt;span class="n"&gt;connectport&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt; &lt;span class="n"&gt;connectaddress&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# portproxyルールをクリア&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# netsh interface portproxy reset&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# 有効性をテスト&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;curl &lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;curl &lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;192.168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;31&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Cloudflareは完全に信頼できるか</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/02/cloudflare%E3%81%AF%E5%AE%8C%E5%85%A8%E3%81%AB%E4%BF%A1%E9%A0%BC%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/</link><pubDate>Tue, 02 Dec 2025 08:30:50 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/02/cloudflare%E3%81%AF%E5%AE%8C%E5%85%A8%E3%81%AB%E4%BF%A1%E9%A0%BC%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/</guid><description>&lt;p&gt;Cloudflare、阿里雲 ESA、Tencent EdgeOne などは、ドメイン証明書を保持しており、ドメイン下のすべてのトラフィックを完全に閲覧可能。つまり、大規模な中間者である。主要機能はセキュリティで、ネットワーク上の攻撃者が多すぎるため、大規模な中間者を選ぶ利点が弊害を上回る。副次的機能として DNS、CDN、WAF などのエッジサービスを提供。&lt;/p&gt;
+&lt;p&gt;Cloudflare のようなサービスは DDOS を効果的に防御でき、少しの遅延増加で防御能力を得る、とてもお得。各站長はこうしたサービスを直接使うべき。ネットワーク攻撃はどこにでもあり、幸運を期待せず、遅かれ早かれ攻撃される。一部の攻撃は脆弱性探しで、サイト運営者のレベルに関連。他はリソース消費目的、例えば DDOS で、商用ネットワークと家庭ネットワークのコスト非対称性を悪用した攻撃。これは陽謀で、多くの場合金で対抗するか、サービスを直接停止し、全ユーザーを放棄する、いわゆるブラックホール防御しかない。&lt;/p&gt;
+&lt;p&gt;大多数の攻撃者は、サイトが Cloudflare で保護されているのを見ると攻撃を直接諦める。其实、攻撃者はオリジナルサーバーではなく Cloudflare を攻撃することを考えられる。同じくデータ入手可能、ただ難易度が高いかも。しかし、世界は草台班子だと信じ、何事も不可能ではない。実際、ネットワーク上の大多数の攻撃行為は気づかれず、大多数の攻撃者は発見されず、大多数の攻撃行為も追究されない。Cloudflare はコスト優位で DDOS を対抗可能だが、コードが銅墙鉄壁とは限らず、Cloudflare 類サービスを攻撃して原站データを入手する可能性は 0 ではない。&lt;/p&gt;</description></item><item><title>視力改善の疑雲</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/01/%E8%A6%96%E5%8A%9B%E6%94%B9%E5%96%84%E3%81%AE%E7%96%91%E9%9B%B2/</link><pubDate>Mon, 01 Dec 2025 16:20:28 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/01/%E8%A6%96%E5%8A%9B%E6%94%B9%E5%96%84%E3%81%AE%E7%96%91%E9%9B%B2/</guid><description>&lt;p&gt;12 歳で近視になり、20年以上メガネをかけてきたが、最近仕事でパソコン画面を見るのがどんどん鮮明になってきた。メガネをかけてると目が少し疲れるし、メガネを取るともっと快適で、近くを見る時も鮮明だと思い、自分が返老還童するのかと思った。でも自分のこの悪習慣な生活、いつも夜更かしで運動もしない、体力は日々落ちていくのに、目だけが返老還童するはずがないよなと思い、ChatGPTに聞いてみたら、老眼だって。&lt;/p&gt;
+&lt;p&gt;私は近視だけでなく老眼でもある。眼球の調節能力が低下し、水晶体が硬くなり、近くを見る時のピント能力が低下する。近視で近くはクリアに見え、老眼で近くが見えにくく、両者が相殺されてちょうどメガネなしでパソコンが見える。今の視界焦点がちょうど50-70cmのところにあり、本当に絶妙で、ちょうどキーボードを叩くのにぴったりだ。でも遠くを見る時は、やはり近視メガネが必要で、変化するのは今後近くを見る時に老眼鏡が必要になるかもしれないことだ。&lt;/p&gt;</description></item><item><title>非典型的な家庭ネットワーク問題の1回のトラブルシューティング記録</title><link>https://blog.jqknono.com/ja-jp/blog/2025/11/29/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%9E%E5%85%B8%E5%9E%8B%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</link><pubDate>Sat, 29 Nov 2025 11:25:30 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/11/29/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%9E%E5%85%B8%E5%9E%8B%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</guid><description>&lt;p&gt;現象は、小新ノートパソコンを書斎から持ち出すと家族全員がネットに繋がらなくなり、書斎に戻して電源を挿すと、家内のネットワークが正常に戻るというもの。自宅構築の&lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;nullprivate DNS&lt;/a&gt;が時々中断し、主機が時々繋がらなくなり、後で交換機の問題と確認、重启交換機で解決。
+&lt;img src="https://share.jqknono.com/image/blog/44f37f2cac1dd15771546949a8d81680.jpg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;この水星の交換機は数年使っており、これまで問題が発生したことはなく、最近複数回問題が発生して重启で解決する必要が出て、私の注意を引きました。機器の老朽化か、根本原因が交換機にない可能性があります。&lt;/p&gt;
+&lt;p&gt;小新ノートパソコンを電源の倍思hub経由で交換機の有線ネットワークを使い、電源を抜くとWiFiを使い、DNSサービスは交換機に繋がったJ4215ホストにあり、小新ノートパソコンのWiFi使用が交換機やその上の機器に何の影響を与えるのか？ IP衝突？ MACアドレス衝突？&lt;/p&gt;
+&lt;p&gt;交換機の構造はシンプルですが、デバッグできません。この件は未解決のまましばらく経ち、交換機の偶発的な故障を防ぐため、主機のWiFiをオンにし、バックアップネットワーク接続とし、家内のDNSに阿里雲DNSをバックアップとして追加し、断網による家族の不満を避けました。&lt;/p&gt;
+&lt;p&gt;今日突然頭に閃きが走り、小新ノートパソコンのWiFiと交換機の衝突ではないかも、これは物理やネットワークの常識に合わない、ノートパソコンを電源抜きの瞬間で交換機に故障が発生したのではないか？&lt;/p&gt;
+&lt;p&gt;小新ノートパソコンを電源挿しで交換機上有線ネットワークを使う方法を再検討、まず倍思hubを経由、このhubは元々macbookpro用で、macにUSB-A口がないため倍思の有源hubを購入、macbookproは妻の予備機で長年使わず、電源と網線を挿して画面オフで放置。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://share.jqknono.com/image/blog/202511291152201.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;倍思hubを私が常用する16インチ小新ノートパソコンに転用、5000元で16インチ高U集顯大電池、性价比最高、私に適す。hubに電源挿し、出力は3 USB-Aと1 HDMI、日常1 type-cで小新を電源、無線マウス、無線キーボード、ディスプレイに接続。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://share.jqknono.com/image/blog/202511291155045.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;ネットワーク安定のため、時々別の緑聯USB hubを使い、3 USB-Aとギガビット網口対応、小新の反対側に挿し交換機の有線を使い、しばらく問題なし、しかしある日小新に2 hub挿すのに飽き、なぜhub套娃できないか？ 緑聯hubを倍思hubに挿す：
+&lt;img src="https://share.jqknono.com/image/blog/202511291209080.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;おいおい、意外と動く、これで小新真1 C口で全て。&lt;/p&gt;
+&lt;p&gt;最近ネットワーク問題頻発、J4125ホストと主力デスクトップ頻繁に切断。これでこの接続に問題あるか疑い、テストで以下の法則発見：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;小新-&amp;gt;倍思+電源-&amp;gt;緑聯-&amp;gt;網線-&amp;gt;交換機&lt;/code&gt; , この接続下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+电源[🔌 电源] --&amp;gt; 倍思[倍思 Hub]
+小新[💻 小新笔记本] --&amp;gt; 倍思
+倍思 --&amp;gt; 绿联[绿联 Hub]
+绿联 --&amp;gt; 网线[🔗 网线]
+网线 --&amp;gt; 交换机[🔀 交换机]
+style 小新 fill:#4a9eff,color:#fff
+style 倍思 fill:#ff6b6b,color:#fff
+style 绿联 fill:#51cf66,color:#fff
+style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;電源倍思に挿し、倍思hubノートに挿し、緑聯hub倍思に挿し、網線緑聯hubに接続、交換機へ&lt;/li&gt;
+&lt;li&gt;小新倍思挿して使用、ネットワーク正常。&lt;/li&gt;
+&lt;li&gt;小新倍思線抜き、&lt;strong&gt;数秒後、交換機上機器全て切断&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;小新倍思線再挿し、ネットワーク正常回復&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;小新+電源-&amp;gt;倍思-&amp;gt;緑聯-&amp;gt;網線-&amp;gt;交換機&lt;/code&gt; , この接続下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+电源[🔌 电源] --&amp;gt; 小新[💻 小新笔记本]
+小新 --&amp;gt; 倍思[倍思 Hub]
+倍思 --&amp;gt; 绿联[绿联 Hub]
+绿联 --&amp;gt; 网线[🔗 网线]
+网线 --&amp;gt; 交换机[🔀 交换机]
+style 小新 fill:#4a9eff,color:#fff
+style 倍思 fill:#ff6b6b,color:#fff
+style 绿联 fill:#51cf66,color:#fff
+style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;電源小新に挿し、倍思hubノートに挿し、緑聯hub倍思に挿し、網線緑聯hubに接続、交換機へ&lt;/li&gt;
+&lt;li&gt;小新電源抜き挿し、全て正常。&lt;/li&gt;
+&lt;li&gt;小新倍思線抜き挿し、全て正常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;小新-&amp;gt;倍思+電源, 小新-&amp;gt;緑聯&lt;/code&gt; , この接続下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+电源[🔌 电源] --&amp;gt; 倍思[倍思 Hub]
+小新[💻 小新笔记本] --&amp;gt; 倍思
+小新 --&amp;gt; 绿联[绿联 Hub]
+绿联 --&amp;gt; 网线[🔗 网线]
+网线 --&amp;gt; 交换机[🔀 交换机]
+style 小新 fill:#4a9eff,color:#fff
+style 倍思 fill:#ff6b6b,color:#fff
+style 绿联 fill:#51cf66,color:#fff
+style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;電源倍思に挿し、倍思hubノートに挿し、緑聯hubノートに挿し&lt;/li&gt;
+&lt;li&gt;小新倍思線抜き挿し、全て正常。&lt;/li&gt;
+&lt;li&gt;小新緑聯線抜き挿し、全て正常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;小新+電源-&amp;gt;倍思-&amp;gt;緑聯&lt;/code&gt; , この接続下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+电源[🔌 电源] --&amp;gt; 小新[💻 小新笔记本]
+小新 --&amp;gt; 倍思[倍思 Hub]
+倍思 --&amp;gt; 绿联[绿联 Hub]
+绿联 --&amp;gt; 网线[🔗 网线]
+网线 --&amp;gt; 交换机[🔀 交换机]
+style 小新 fill:#4a9eff,color:#fff
+style 倍思 fill:#ff6b6b,color:#fff
+style 绿联 fill:#51cf66,color:#fff
+style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;電源小新に挿し、倍思hub小新に挿し、緑聯hub倍思に挿し&lt;/li&gt;
+&lt;li&gt;小新電源抜き挿し、全て正常。&lt;/li&gt;
+&lt;li&gt;小新倍思線抜き挿し、全て正常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;倍思+電源-&amp;gt;緑聯-&amp;gt;網線-&amp;gt;交換機&lt;/code&gt; , この接続下：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+电源[🔌 电源] --&amp;gt; 倍思[倍思 Hub]
+倍思 --&amp;gt; 绿联[绿联 Hub]
+绿联 --&amp;gt; 网线[🔗 网线]
+网线 --&amp;gt; 交换机[🔀 交换机]
+style 倍思 fill:#ff6b6b,color:#fff
+style 绿联 fill:#51cf66,color:#fff
+style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;ノートなし、電源倍思に挿し、緑聯hub倍思に挿し、網線緑聯hubに接続&lt;/li&gt;
+&lt;li&gt;倍思電源線抜き挿し、全て正常。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ここまでで、問題は&lt;strong&gt;小新ノート-&amp;gt;倍思hub+電源-&amp;gt;緑聯hub-&amp;gt;網線-&amp;gt;交換機&lt;/strong&gt; この組み合わせで、倍思type-cを小新から抜くと交換機故障。判断は倍思の&lt;strong&gt;電源供給交渉&lt;/strong&gt;問題で、理由は小新倍思抜き後&lt;strong&gt;数秒経って&lt;/strong&gt;交換機切断。ノートなしで倍思電源線抜き挿しのみ、交換機影響なし。交換機に影響するには電源重要、電源2 hubと網線経由で電圧交換機に伝わり故障。倍思hubが鍵、ノートなし電源線抜き挿し影響なし。只小新から電源付き倍思hub抜くと交換機故障。緑聯hub USB-A供电正常だが、網線で電圧交換機に伝わるのはPoE対応か？ USB hub専門家でない、後知識盲区、説明不能。&lt;/p&gt;</description></item></channel></rss>
