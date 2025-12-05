@@ -1,0 +1,32 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/tags/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 27 Nov 2025 12:55:58 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>持有域名可以耗到的羊毛</title><link>https://blog.jqknono.com/zh-tw/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</link><pubDate>Thu, 27 Nov 2025 12:55:58 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</guid><description>&lt;p&gt;一般一個域名的價格是 12 美元起，會有人想要搞個自己的域名又猶豫有沒有必要。&lt;/p&gt;
+&lt;p&gt;我是非常推薦開發者都準備一個自己的域名的，因為持有域名可以耗到不少羊毛。&lt;/p&gt;
+&lt;p&gt;這裡主要介紹兩個我熟悉的服务商，一個是江湖號稱“賽博佛祖”的&lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt;，還有一個是正在發展的&lt;a href="https://www.alibabacloud.com/product/esa"&gt;Alibaba ESA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;這裡首先強調下能薅羊毛的 Alibaba ESA 特指國際版，阿里對大陸地區幾乎沒有羊毛，那些限時試用都被我踢出羊毛範疇，只有永久免費才是真羊毛。&lt;/p&gt;
+&lt;p&gt;另外羊毛通常有用量限制，要是域名出圈，流量大了，自己都可以靠這個域名掙錢了，還純薅羊毛，那也不太說得過去。&lt;/p&gt;
+&lt;p&gt;簡單介紹可以薅的類別：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;計算資源：CPU，記憶體&lt;/li&gt;
+&lt;li&gt;持久化存儲：文件存儲，資料庫&lt;/li&gt;
+&lt;li&gt;流量：CDN，DDoS 保護，WAF 保護，零信任組網&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="計算資源"&gt;計算資源&lt;/h2&gt;
+&lt;p&gt;Cloudflare 的計算資源羊毛主要通過&lt;a href="https://www.cloudflare.com/products/workers/"&gt;Cloudflare Workers&lt;/a&gt;實現，足夠初創企業使用。你可以理解為 Cloudflare 允許你在它的伺服器上跑一個簡單業務的進程。CPU 時間限制在 10ms，複雜業務需要使用付費 worker。像代理 DoH，承載靜態網站，都是典型的使用場景。&lt;/p&gt;
+&lt;p&gt;Alibaba 的是&lt;strong&gt;邊緣函數&lt;/strong&gt;，產品成熟度遠遠落後於 Cloudflare，我簡單試著開發過一點東西，使用起來很不方便。&lt;/p&gt;
+&lt;h2 id="持久化存儲"&gt;持久化存儲&lt;/h2&gt;
+&lt;p&gt;Cloudflare：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提供 10 GB 的 R2 的&lt;strong&gt;物件存儲&lt;/strong&gt;，可以理解為&lt;strong&gt;檔案系統&lt;/strong&gt;，但不適合處理串流數據。&lt;/li&gt;
+&lt;li&gt;提供&lt;strong&gt;KV&lt;/strong&gt;鍵值對存儲，可以理解為&lt;strong&gt;記憶體資料庫&lt;/strong&gt;，類似 redis。&lt;/li&gt;
+&lt;li&gt;D1 提供 5GB 免費存儲空間，類似 sqlite 資料庫，我在開發時發現本地資料庫文件確實可以直接用 sqlite 打開，不確定服務端具體如何實現。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Alibaba：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;免費 5GB 物件存儲&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="流量"&gt;流量&lt;/h2&gt;
+&lt;p&gt;Cloudflare 流量全免
+Alibaba 免費 100GB 流量&lt;/p&gt;
+&lt;p&gt;Cloudflare 還提供組網能力，讓多地設備互通，還可以直接從內網暴露出一個公共服務，而不必買 VPS。&lt;/p&gt;
+&lt;h2 id="結語"&gt;結語&lt;/h2&gt;
+&lt;p&gt;在寫這個分享時又看了下 Cloudflare，感覺真的是個大寶庫，有很多實用的免費服務，本篇分享僅提及冰山一角。相較起來 Alibaba ESA 乏善可陳，
+在我的有限體驗中，僅備案域名可以在大陸提供 CDN 這一個優勢，可以過兩年再考慮它。&lt;/p&gt;</description></item></channel></rss>

@@ -1,4 +1,16 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/blog/</link><description>Recent content in Blogs on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 03 Dec 2025 19:16:52 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>建議先不要使用阿里雲ESA_page功能</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/03/%E5%BB%BA%E8%AD%B0%E5%85%88%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E9%9B%B2esa_page%E5%8A%9F%E8%83%BD/</link><pubDate>Wed, 03 Dec 2025 19:16:52 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/03/%E5%BB%BA%E8%AD%B0%E5%85%88%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E9%9B%B2esa_page%E5%8A%9F%E8%83%BD/</guid><description>&lt;p&gt;這是 ESA Pages 功能的限制，這個資源規模只夠託管一個小網站。如果是想託管長期更新的網站，2000 個文件的限制太低。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/blog/</link><description>Recent content in Blogs on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 05 Dec 2025 11:51:04 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>抢占服务器是个大便宜</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/05/%E6%8A%A2%E5%8D%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%AF%E4%B8%AA%E5%A4%A7%E4%BE%BF%E5%AE%9C/</link><pubDate>Fri, 05 Dec 2025 11:51:04 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/05/%E6%8A%A2%E5%8D%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%AF%E4%B8%AA%E5%A4%A7%E4%BE%BF%E5%AE%9C/</guid><description>&lt;p&gt;一直有个大便宜, 我从未在公开社区宣传过, 那就是阿里云的&lt;strong&gt;抢占服务器&lt;/strong&gt;非常划算.&lt;/p&gt;
+&lt;h2 id="长期大折扣"&gt;长期大折扣&lt;/h2&gt;
+&lt;p&gt;其在标题栏上写的&lt;em&gt;最高节省 90%&lt;/em&gt;, 并不夸张, 热门配置的服务器通常是乘以 20%的折扣, 也就是二折, 稍冷门的配置可以到 9%的折扣, 不到一折.&lt;/p&gt;
+&lt;p&gt;热门服务器一类是小规格入门服务器, 如 2c2g,2c4g 等, 还有一类是&lt;em&gt;CPU/内存&lt;/em&gt;均衡型服务器, 如 1:2(4c8g), 1:4(4c16g,8c32g) 等, 这类服务器折扣少一点.&lt;/p&gt;
+&lt;p&gt;冷门配置一般是指&lt;em&gt;CPU/内存&lt;/em&gt;不均衡的服务器, 如 1:8(8c64g), 1:1(8c8g) 等, 这类服务器折扣最多.&lt;/p&gt;
+&lt;p&gt;今天查抢占服务器, 2c16g 的比 2c8g 的还便宜, 因为一个折扣到 9%, 一个折扣到 14%, 形成倒挂.&lt;/p&gt;
+&lt;p&gt;阿里云抢占服务器的折扣率动态刷新, 我不清楚其算法如何, 但为我的使用场景节省了 85%的成本肯定是有的.&lt;/p&gt;
+&lt;h2 id="抢占服务器使用前提"&gt;抢占服务器使用前提&lt;/h2&gt;
+&lt;p&gt;使用抢占服务器的核心是将&lt;strong&gt;CPU/内存&lt;/strong&gt;和长期存储分离, 长期存储可以使用可分离的云盘, OSS, NAS, 数据库.&lt;/p&gt;
+&lt;p&gt;其中云盘依赖于地域, 而抢占服务器的可用资源也和地域强相关, 因此尽管云盘是 IO 性能最强的稳定存储, 但并不能保证在所有地域都有抢占服务器可用, 我个人建议将其置为次选.&lt;/p&gt;
+&lt;p&gt;其它三个存储都依赖网络, 而阿里云的内网通信免费, 尽管 IO 延迟可能较高, 但 IO 速率还可以, 主要是随机读写慢于云盘.&lt;/p&gt;
+&lt;p&gt;OSS 是阿里云的对象存储, 适合存储主要用于&lt;strong&gt;读&lt;/strong&gt;的文件, 适合网络分享.&lt;/p&gt;
+&lt;p&gt;NAS 是阿里云的网络存储, 适合存储各类文件, 读写均衡, 但不太适合公共分享.&lt;/p&gt;</description></item><item><title>建議先不要使用阿里雲ESA_page功能</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/03/%E5%BB%BA%E8%AD%B0%E5%85%88%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E9%9B%B2esa_page%E5%8A%9F%E8%83%BD/</link><pubDate>Wed, 03 Dec 2025 19:16:52 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/03/%E5%BB%BA%E8%AD%B0%E5%85%88%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E9%9B%B2esa_page%E5%8A%9F%E8%83%BD/</guid><description>&lt;p&gt;這是 ESA Pages 功能的限制，這個資源規模只夠託管一個小網站。如果是想託管長期更新的網站，2000 個文件的限制太低。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -103,4 +115,35 @@
 &lt;p&gt;今天我突然腦子裡一道雷閃過, 未必要小新筆記本的 Wifi 和交換機衝突, 這根本不符合物理或網路常識, 會不會是筆記本在拔電的一瞬間導致交換機發生了故障?&lt;/p&gt;
 &lt;p&gt;重新審視小新筆記本在插電時使用交換機上有線網路的方式, 首先是經過一個倍思 hub, 這個 hub 原本是給 macbookpro 買的, 因為 mac 沒有 USB-A 口, 配的倍思的有源 hub. macbookpro 是老婆備用機, 常年不用, 所以我插了電源和網線後關屏閒置.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://share.jqknono.com/image/blog/202511291152201.png" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;倍思 hub 轉給我常用的 16 吋的小新筆記本用, 5000 塊的 16 吋高 U 集顯和大電池, 性價比之選, 適合我. hub 可以插入一個電源, 輸出主要有三個 USB-A 口和一個 hdmi 口, 這樣我日常只需要插一個 type-c 口就可以把小新接入電源,無線滑鼠,無線鍵盤, 以及顯示器.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;倍思 hub 轉給我常用的 16 吋的小新筆記本用, 5000 塊的 16 吋高 U 集顯和大電池, 性價比之選, 適合我. hub 可以插入一個電源, 輸出主要有三個 USB-A 口和一個 hdmi 口, 這樣我日常只需要插一個 type-c 口就可以把小新接入電源,無線滑鼠,無線鍵盤, 以及顯示器.&lt;/p&gt;</description></item><item><title>持有域名可以耗到的羊毛</title><link>https://blog.jqknono.com/zh-tw/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</link><pubDate>Thu, 27 Nov 2025 12:55:58 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</guid><description>&lt;p&gt;一般一個域名的價格是 12 美元起，會有人想要搞個自己的域名又猶豫有沒有必要。&lt;/p&gt;
+&lt;p&gt;我是非常推薦開發者都準備一個自己的域名的，因為持有域名可以耗到不少羊毛。&lt;/p&gt;
+&lt;p&gt;這裡主要介紹兩個我熟悉的服务商，一個是江湖號稱“賽博佛祖”的&lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt;，還有一個是正在發展的&lt;a href="https://www.alibabacloud.com/product/esa"&gt;Alibaba ESA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;這裡首先強調下能薅羊毛的 Alibaba ESA 特指國際版，阿里對大陸地區幾乎沒有羊毛，那些限時試用都被我踢出羊毛範疇，只有永久免費才是真羊毛。&lt;/p&gt;
+&lt;p&gt;另外羊毛通常有用量限制，要是域名出圈，流量大了，自己都可以靠這個域名掙錢了，還純薅羊毛，那也不太說得過去。&lt;/p&gt;
+&lt;p&gt;簡單介紹可以薅的類別：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;計算資源：CPU，記憶體&lt;/li&gt;
+&lt;li&gt;持久化存儲：文件存儲，資料庫&lt;/li&gt;
+&lt;li&gt;流量：CDN，DDoS 保護，WAF 保護，零信任組網&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="計算資源"&gt;計算資源&lt;/h2&gt;
+&lt;p&gt;Cloudflare 的計算資源羊毛主要通過&lt;a href="https://www.cloudflare.com/products/workers/"&gt;Cloudflare Workers&lt;/a&gt;實現，足夠初創企業使用。你可以理解為 Cloudflare 允許你在它的伺服器上跑一個簡單業務的進程。CPU 時間限制在 10ms，複雜業務需要使用付費 worker。像代理 DoH，承載靜態網站，都是典型的使用場景。&lt;/p&gt;
+&lt;p&gt;Alibaba 的是&lt;strong&gt;邊緣函數&lt;/strong&gt;，產品成熟度遠遠落後於 Cloudflare，我簡單試著開發過一點東西，使用起來很不方便。&lt;/p&gt;
+&lt;h2 id="持久化存儲"&gt;持久化存儲&lt;/h2&gt;
+&lt;p&gt;Cloudflare：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提供 10 GB 的 R2 的&lt;strong&gt;物件存儲&lt;/strong&gt;，可以理解為&lt;strong&gt;檔案系統&lt;/strong&gt;，但不適合處理串流數據。&lt;/li&gt;
+&lt;li&gt;提供&lt;strong&gt;KV&lt;/strong&gt;鍵值對存儲，可以理解為&lt;strong&gt;記憶體資料庫&lt;/strong&gt;，類似 redis。&lt;/li&gt;
+&lt;li&gt;D1 提供 5GB 免費存儲空間，類似 sqlite 資料庫，我在開發時發現本地資料庫文件確實可以直接用 sqlite 打開，不確定服務端具體如何實現。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Alibaba：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;免費 5GB 物件存儲&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="流量"&gt;流量&lt;/h2&gt;
+&lt;p&gt;Cloudflare 流量全免
+Alibaba 免費 100GB 流量&lt;/p&gt;
+&lt;p&gt;Cloudflare 還提供組網能力，讓多地設備互通，還可以直接從內網暴露出一個公共服務，而不必買 VPS。&lt;/p&gt;
+&lt;h2 id="結語"&gt;結語&lt;/h2&gt;
+&lt;p&gt;在寫這個分享時又看了下 Cloudflare，感覺真的是個大寶庫，有很多實用的免費服務，本篇分享僅提及冰山一角。相較起來 Alibaba ESA 乏善可陳，
+在我的有限體驗中，僅備案域名可以在大陸提供 CDN 這一個優勢，可以過兩年再考慮它。&lt;/p&gt;</description></item></channel></rss>
