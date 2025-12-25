@@ -1,0 +1,184 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DoT on jqknono Blogs</title><link>https://blog.jqknono.com/tr-tr/tags/dot/</link><description>Recent content in DoT on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>tr-tr</language><lastBuildDate>Thu, 09 Oct 2025 13:16:16 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/tr-tr/tags/dot/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS Şifreleme Protokolleri Karşılaştırması: DoT, DoH, DoQ</title><link>https://blog.jqknono.com/tr-tr/blog/2025/10/09/dns-%C5%9Fifreleme-protokolleri-kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rmas%C4%B1-dot-doh-doq/</link><pubDate>Thu, 09 Oct 2025 13:16:16 +0800</pubDate><guid>https://blog.jqknono.com/tr-tr/blog/2025/10/09/dns-%C5%9Fifreleme-protokolleri-kar%C5%9F%C4%B1la%C5%9Ft%C4%B1rmas%C4%B1-dot-doh-doq/</guid><description>&lt;h2 id="hızlı-terimler"&gt;Hızlı Terimler&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS: Açık DNS, varsayılan olarak UDP/53 kullanır, gerekli olduğunda TCP/53 kullanır (ör. yanıt kesilirse, bölge aktarımı vb.).&lt;/li&gt;
+&lt;li&gt;DoT: DNS over TLS, TLS üzerinden TCP kullanır, varsayılan port 853 (RFC 7858/8310).&lt;/li&gt;
+&lt;li&gt;DoH: DNS over HTTPS, HTTPS (HTTP/2 veya HTTP/3) üzerine kurulur, varsayılan port 443 (RFC 8484).&lt;/li&gt;
+&lt;li&gt;DoQ: DNS over QUIC, QUIC + TLS 1.3 üzerine kurulur, varsayılan port UDP/853 (RFC 9250, IANA tarafından 853/udp&amp;rsquo;ye atanmıştır).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="katman-ilişkisi-basitleştirilmiş-tcpip-modeli"&gt;Katman İlişkisi (Basitleştirilmiş TCP/IP Modeli)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Uygulama Katmanı: HTTP, HTTPS, DNS (DoH HTTPS uygulama katmanı sarmalama içinde yer alır)&lt;/li&gt;
+&lt;li&gt;Güvenlik Katmanı: TLS (TCP veya QUIC için şifreleme sağlar)&lt;/li&gt;
+&lt;li&gt;Ulaşım Katmanı: TCP, UDP, QUIC&lt;/li&gt;
+&lt;li&gt;Ağ Katmanı: IP&lt;/li&gt;
+&lt;li&gt;Bağlantı Katmanı: Ethernet vb.&lt;/li&gt;
+&lt;li&gt;Fiziksel Katman: Twisted pair/Fiber/Wireless vb.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="özet"&gt;Özet&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS, UDP/TCP üzerine kurulur, şifrelenmez.&lt;/li&gt;
+&lt;li&gt;DoT = TCP + TLS + DNS (özel port 853).&lt;/li&gt;
+&lt;li&gt;DoH = TCP/QUIC + TLS + HTTP(S) + DNS (443 üzerinden, normal HTTPS ile aynı port).&lt;/li&gt;
+&lt;li&gt;DoQ = QUIC + TLS 1.3 + DNS (özel port UDP/853).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TB
+subgraph Uygulama Katmanı
+A[HTTP]
+A2[HTTPS]
+C[DNS]
+D[DoH DNS over HTTPS]
+end
+subgraph Güvenlik Katmanı
+E[TLS]
+end
+subgraph Ulaşım Katmanı
+F[TCP]
+G[UDP]
+H[QUIC]
+end
+subgraph Ağ Katmanı
+I[IP]
+end
+subgraph Bağlantı Katmanı
+J[Ethernet]
+end
+subgraph Fiziksel Katman
+K[Çift Bükümlü/Fiber/Kablosuz]
+end
+A2 --&amp;gt; F
+A2 --&amp;gt; H
+A --&amp;gt; F
+C --&amp;gt; F
+C --&amp;gt; G
+D --&amp;gt; A2
+E --&amp;gt; F
+E --&amp;gt; H
+F --&amp;gt; I
+G --&amp;gt; I
+H --&amp;gt; I
+I --&amp;gt; J
+J --&amp;gt; K
+style D fill:#e1f5fe
+style E fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="temel-bilgiler-ve-düzeltmeler"&gt;Temel Bilgiler ve Düzeltmeler&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS varsayılan olarak UDP/53 üzerinden çalışır, yanıt kesildiğinde (TC biti) veya güvenilir iletim gerektiğinde TCP/53&amp;rsquo;e geçer.&lt;/li&gt;
+&lt;li&gt;DoT, TCP üzerine TLS tüneli kurar ve DNS mesajını iletir, varsayılan port 853; uzun bağlantıyı yeniden kullanarak el sıkışma maliyetini azaltabilir.&lt;/li&gt;
+&lt;li&gt;DoH, DNS&amp;rsquo;i bir HTTPS kaynağı (application/dns-message) olarak ele alır, genellikle HTTP/2 veya HTTP/3 kullanır, port 443, normal HTTPS ile karışabilir.&lt;/li&gt;
+&lt;li&gt;DoQ, DNS&amp;rsquo;i doğrudan QUIC (UDP tabanlı) üzerinden taşır, düşük gecikme ve başa takılma (head-of-line blocking) sorunundan kaçınma avantajına sahiptir, ancak ekosistemin kapsamı hâlâ artmaktadır.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;QUIC mutlaka TCP&amp;rsquo;den %X daha hızlıdır&amp;rdquo; gibi genellemeler doğru değildir; gerçek performans, ağ durumu (paket kaybı, gecikme, RTT), bağlantının yeniden kullanılabilirliği, uygulama detayları ve sunucu dağıtımıyla ilişkilidir.&lt;/li&gt;
+&lt;li&gt;DoH, &amp;ldquo;DNS&amp;rsquo;i HTTP içine koyarsanız kesinlikle daha yavaş/hızlı olur&amp;rdquo; anlamına gelmez; performans, bağlantı yeniden kullanımı, ağ kalitesi ve uygulamaya bağlıdır; çoğu durumda DoH/3 ile DoT deneyimi benzer veya daha iyi olabilir.&lt;/li&gt;
+&lt;li&gt;DoT, SNI ile sertifika ana makine adı doğrulaması yapabilir; DoH ise HTTPS sertifika doğrulaması ve ana makine adı eşleşmesine dayanır.&lt;/li&gt;
+&lt;li&gt;Şifreli DNS, sadece yol üzerindeki dinleme ve bozulmayı önlemez, &amp;ldquo;tamamen anonim&amp;rdquo; anlamına gelmez. Çözümleyici yine de sorguları kaydedebilir; güvenilir bir sağlayıcı seçin ve gizlilik politikasını inceleyin.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TD
+subgraph DNS Ailesi
+A[Plain DNS UDP/TCP &amp;#43; DNS]
+subgraph Şifreli DNS
+B[DoT TCP &amp;#43; TLS &amp;#43; DNS]
+C[DoH HTTP/2,3 &amp;#43; TLS &amp;#43; DNS]
+D[DoQ QUIC &amp;#43; TLS 1.3 &amp;#43; DNS]
+end
+subgraph Ulaşım Tabanı
+E[TCP]
+F[UDP]
+G[QUIC]
+end
+end
+A --&amp;gt; B
+A --&amp;gt; C
+A --&amp;gt; D
+B --&amp;gt; E
+C --&amp;gt; E
+C --&amp;gt; G
+D --&amp;gt; G
+A --&amp;gt; F
+style A fill:#f3e5f5
+style B fill:#e8f5e8
+style C fill:#e3f2fd
+style D fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="genel-karşılaştırma"&gt;Genel Karşılaştırma&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Protokol&lt;/th&gt;
+&lt;th&gt;Ulaşım Katmanı&lt;/th&gt;
+&lt;th&gt;Şifreleme&lt;/th&gt;
+&lt;th&gt;Sarmalama&lt;/th&gt;
+&lt;th&gt;Varsayılan Port&lt;/th&gt;
+&lt;th&gt;Tipik Özellikler&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Plain DNS&lt;/td&gt;
+&lt;td&gt;UDP/TCP&lt;/td&gt;
+&lt;td&gt;Yok&lt;/td&gt;
+&lt;td&gt;DNS Native&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;Basit ve verimli, açık metin, taklit/inceleme yapmaya açık&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoT&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853&lt;/td&gt;
+&lt;td&gt;Özel port, basit port engellemesine açık, sistem düzeyi desteği iyi&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoH&lt;/td&gt;
+&lt;td&gt;TCP/QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;HTTP/2-3 + DNS&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;HTTPS ile aynı port, delme gücü yüksek, tarayıcı önceliği&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoQ&lt;/td&gt;
+&lt;td&gt;QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853/UDP&lt;/td&gt;
+&lt;td&gt;Düşük gecikme, başa takılma sorunundan kaçınır, ekosistem gelişimde&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="performans-ve-gecikme"&gt;Performans ve Gecikme&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bağlantı Yeniden Kullanımı: DoT/DoH/DoQ uzun bağlantıyı yeniden kullanarak el sıkışma maliyetini azaltabilir; DoH/2, DoH/3 ve DoQ da çoklu istekleri tek bağlantı içinde çoğullayabilir.&lt;/li&gt;
+&lt;li&gt;Başa Takılma: TCP uygulama katmanı başa takılma sorununa sahiptir; HTTP/2 çoklu istekle bunu hafifletir ama hâlâ TCP paket kaybından etkilenir, QUIC (DoH/3, DoQ) ulaşım katmanında başa takılmayı önler, yüksek paket kaybı/mobil ağ için daha uygundur.&lt;/li&gt;
+&lt;li&gt;İlk Paket Gecikmesi: İlk bağlantıda DoT TCP+TLS el sıkışması gerektirir; DoH/2 benzerdir; DoH/3/DoQ QUIC tabanlıdır, yeniden bağlanma ve geçiş daha hızlıdır. Uzun vadeli yük altında fark daha çok uygulama ve ağ koşullarına bağlıdır.&lt;/li&gt;
+&lt;li&gt;Erişilebilirlik: DoH 443 portunu kullanır, basit port engellemesinden en az etkilenir; DoT 853 portunu kullanır, genellikle kesintiye uğrar; DoQ 853/UDP kullanır, şu anda engellenmiş veya izin verilmemiş olabilir.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="istemci-ve-sistem-desteği"&gt;İstemci ve Sistem Desteği&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tarayıcılar: Chromium ailesi ve Firefox varsayılan DoH (desteği olan çözümleyiciye otomatik yükseltme veya yerleşik listeler) sunar.&lt;/li&gt;
+&lt;li&gt;Windows: Windows 11 DoH için yerleşik destek sunar.&lt;/li&gt;
+&lt;li&gt;Android: Android 9+ &amp;ldquo;Özel DNS&amp;rdquo; (sistem düzeyi DoT) sunar. Sistem düzeyi DoH desteği sürüm/üreticiye göre değişir.&lt;/li&gt;
+&lt;li&gt;Apple Platformları: iOS 14+/macOS 11+ açıklama dosyaları veya NetworkExtension ile DoT ve DoH destekler.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="dağıtım-ve-seçim-önerileri"&gt;Dağıtım ve Seçim Önerileri&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Normal/Kısıtlı Ağ (ör. kamuya açık Wi‑Fi, basit engellemeyi aşma ihtiyacı): Öncelik DoH (port 443), HTTP/3 etkinleştirilebilir.&lt;/li&gt;
+&lt;li&gt;Sistem Düzeyi Ortak Çıkış (yönlendirici, ağ geçidi, Android Özel DNS): Öncelik DoT (853), ağ izin veriyorsa DoH (443) yedek olarak eklenebilir.&lt;/li&gt;
+&lt;li&gt;Yüksek Paket Kaybı/Mobil Ağ: QUIC destekli DoH/3 veya DoQ (çözümleyici ve istemci desteği varsa) tercih edilmelidir.&lt;/li&gt;
+&lt;li&gt;Kurumsal/Uyumluluk Senaryoları: Politikaya göre seçim (DoH mevcut HTTPS altyapısıyla bütünleşebilir; DoT DNS kontrol katmanı ile ayrılmasını kolaylaştırır).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="özet-1"&gt;Özet&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Öncelik DoH (443, delme gücü yüksek), kullanılabilirse HTTP/3 etkinleştirin.&lt;/li&gt;
+&lt;li&gt;Sistem düzeyi birlik için: Öncelik DoT (853) + kalıcı bağlantı, gerekirse DoH (443) yedek.&lt;/li&gt;
+&lt;li&gt;Çözümleyici ve istemciniz DoQ destekliyorsa: deneyin (mobil ağda deneyim genellikle daha iyi).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="referans-standartları"&gt;Referans Standartları&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RFC 7858, RFC 8310 (DNS over TLS)&lt;/li&gt;
+&lt;li&gt;RFC 8484 (DNS over HTTPS)&lt;/li&gt;
+&lt;li&gt;RFC 9250 (DNS over QUIC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="dns-hizmeti-önerileri"&gt;DNS Hizmeti Önerileri&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ningping DNS: &lt;a href="https://www.nullprivate.com"&gt;https://www.nullprivate.com&lt;/a&gt; DoT, DoH (HTTP3 desteği), yerel reklam engelleme ve yönlendirme destekler.&lt;/li&gt;
+&lt;li&gt;Kendi Kendine Dağıtım Sürümü: &lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;https://github.com/NullPrivate/NullPrivate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

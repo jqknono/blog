@@ -1,0 +1,36 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網路技術 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/tags/%E7%B6%B2%E8%B7%AF%E6%8A%80%E8%A1%93/</link><description>Recent content in 網路技術 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 13 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/tags/%E7%B6%B2%E8%B7%AF%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS 會如何影響你的上網體驗</title><link>https://blog.jqknono.com/zh-tw/blog/2025/10/13/dns-impact-on-browsing/</link><pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/10/13/dns-impact-on-browsing/</guid><description>&lt;h1 id="dns-會如何影響你的上網體驗"&gt;DNS 會如何影響你的上網體驗&lt;/h1&gt;
+&lt;p&gt;當我們打開一個網頁、刷一條影片或點擊一條應用內連結時，第一跳幾乎總會落在 DNS 上。它像一份網路世界的電話簿，負責把人類友好的域名翻譯成機器能理解的 IP 位址。很多人把「網頁慢、打不開、時好時壞」歸因於「網速差」，其實相當一部分體驗波動與 DNS 的解析成功率、耗時、快取命中與隱私策略相關。理解 DNS 如何工作、它在鏈路中的暴露點與可選的保護策略，能幫助我們把「慢與不穩」拆解為可控的因素。&lt;/p&gt;
+&lt;h2 id="背景與問題概述"&gt;背景與問題概述&lt;/h2&gt;
+&lt;p&gt;DNS 是幾乎所有聯網請求的入口。解析一次域名往往只需幾十毫秒，但這幾十毫秒決定了後續連接將指向哪台伺服器、是否命中就近的 CDN 節點、是否會被運營商劫持或被某些中間節點觀察。家庭、蜂窩網路與公共 Wi‑Fi 的體驗差異，也常常來自不同解析器的快取品質、丟包率與策略差異。本文面向普通網民，用連續敘述解釋 DNS 與上網體驗的關係，重點放在原理與取捨，而不是具體的部署步驟或評測結論。&lt;/p&gt;
+&lt;h2 id="基礎與術語梳理"&gt;基礎與術語梳理&lt;/h2&gt;
+&lt;p&gt;瀏覽器或應用發起解析請求後，通常先詢問系統的本地解析器，再由遞迴解析器逐層向根、頂級域與權威伺服器查詢，最終得到一條帶有 TTL 的答案。本地或網路側的快取若命中，可省去外部查詢，大幅降低延遲；若快取未命中或過期，則需要完成完整的遞迴流程。下圖用一個簡化流程呈現解析的來回路徑，動畫僅用來強調資料流動而非表示真實耗時順序。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TB
+C[客戶端] e1@--&amp;gt; L[本地解析器]
+L e2@--&amp;gt; R[遞迴解析器]
+R e3@--&amp;gt; Root[根伺服器]
+Root e3r@--&amp;gt; R
+R e4@--&amp;gt; TLD[TLD 伺服器]
+TLD e4r@--&amp;gt; R
+R e5@--&amp;gt; Auth[權威伺服器]
+Auth e5r@--&amp;gt; R
+R e6@--&amp;gt; L
+L e7@--&amp;gt; C
+%% 填充色設定
+style C fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style L fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+style R fill:#fff3e0,stroke:#e65100,stroke-width:2px
+style Root fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+style TLD fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+style Auth fill:#e0f2f1,stroke:#004d40,stroke-width:2px
+%% 動畫節奏設定（Mermaid v11）
+e1@{ animation: fast }
+e2@{ animation: slow }
+e3@{ animation: slow }
+e3r@{ animation: slow }
+e4@{ animation: slow }
+e4r@{ animation: slow }
+e5@{ animation: fast }
+e5r@{ animation: fast }
+e6@{ animation: slow }
+e7@{ animation: fast }&lt;/pre&gt;
+&lt;p&gt;TTL 是每條記錄的「保質期」。在 TTL 有效期內，遞迴解析器可以直接把快取答案返回給客戶端，這對體感「快與穩」的貢獻往往超過我們直覺的估計。另一方面，解析器如何處理 IPv4 與 IPv6 記錄的並行請求、是否啟用 ECS 擴充、是否對失敗查詢做負快取，也會間接影響你的連接指向與首包時間。&lt;/p&gt;</description></item></channel></rss>

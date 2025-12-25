@@ -1,0 +1,185 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DNS on jqknono Blogs</title><link>https://blog.jqknono.com/ru-ru/tags/dns/</link><description>Recent content in DNS on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Mon, 13 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jqknono.com/ru-ru/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>Сравнение зашифрованных DNS-протоколов: DoT, DoH, DoQ</title><link>https://blog.jqknono.com/ru-ru/blog/2025/10/09/%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D1%88%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-dns-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2-dot-doh-doq/</link><pubDate>Thu, 09 Oct 2025 13:16:16 +0800</pubDate><guid>https://blog.jqknono.com/ru-ru/blog/2025/10/09/%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D1%88%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-dns-%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE%D0%B2-dot-doh-doq/</guid><description>&lt;h2 id="справочник-терминов"&gt;Справочник терминов&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS: обычный DNS, по умолчанию использует UDP/53, при необходимости — TCP/53 (например, при обрезке ответа или передаче зон).&lt;/li&gt;
+&lt;li&gt;DoT: DNS over TLS, TLS поверх TCP, порт по умолчанию 853 (RFC 7858/8310).&lt;/li&gt;
+&lt;li&gt;DoH: DNS over HTTPS, поверх HTTPS (HTTP/2 или HTTP/3), порт по умолчанию 443 (RFC 8484).&lt;/li&gt;
+&lt;li&gt;DoQ: DNS over QUIC, поверх QUIC + TLS 1.3, порт по умолчанию UDP/853 (RFC 9250, IANA назначил 853/udp).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="уровневая-модель-упрощенная-tcpip"&gt;Уровневая модель (упрощенная TCP/IP)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Прикладной уровень: HTTP, HTTPS, DNS (DoH — это инкапсуляция DNS в HTTPS).&lt;/li&gt;
+&lt;li&gt;Уровень безопасности: TLS (предоставляет шифрование для TCP или QUIC).&lt;/li&gt;
+&lt;li&gt;Транспортный уровень: TCP, UDP, QUIC.&lt;/li&gt;
+&lt;li&gt;Сетевой уровень: IP.&lt;/li&gt;
+&lt;li&gt;Канальный уровень: Ethernet и т.п.&lt;/li&gt;
+&lt;li&gt;Физический уровень: витая пара/оптика/беспроводные.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ключевые-сведения"&gt;Ключевые сведения&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS работает поверх UDP/TCP, без шифрования.&lt;/li&gt;
+&lt;li&gt;DoT = TCP + TLS + DNS (специализированный порт 853).&lt;/li&gt;
+&lt;li&gt;DoH = TCP/QUIC + TLS + HTTP(S) + DNS (порт 443, общий с обычным HTTPS).&lt;/li&gt;
+&lt;li&gt;DoQ = QUIC + TLS 1.3 + DNS (специализированный порт UDP/853).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TB
+subgraph Прикладной уровень
+A[HTTP]
+A2[HTTPS]
+C[DNS]
+D[DoH DNS over HTTPS]
+end
+subgraph Уровень безопасности
+E[TLS]
+end
+subgraph Транспортный уровень
+F[TCP]
+G[UDP]
+H[QUIC]
+end
+subgraph Сетевой уровень
+I[IP]
+end
+subgraph Канальный уровень
+J[Ethernet]
+end
+subgraph Физический уровень
+K[Витая пара/оптика/беспроводные]
+end
+A2 --&amp;gt; F
+A2 --&amp;gt; H
+A --&amp;gt; F
+C --&amp;gt; F
+C --&amp;gt; G
+D --&amp;gt; A2
+E --&amp;gt; F
+E --&amp;gt; H
+F --&amp;gt; I
+G --&amp;gt; I
+H --&amp;gt; I
+I --&amp;gt; J
+J --&amp;gt; K
+style D fill:#e1f5fe
+style E fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="базовые-сведения-и-уточнения"&gt;Базовые сведения и уточнения&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS по умолчанию использует UDP/53, при обрезке ответа (флаг TC) или необходимости надежной передачи переключается на TCP/53.&lt;/li&gt;
+&lt;li&gt;DoT устанавливает TLS-туннель поверх TCP для DNS, порт 853 по умолчанию; можно использовать долгоживущие соединения для снижения накладных расходов на рукопожатие.&lt;/li&gt;
+&lt;li&gt;DoH передаёт DNS как ресурс HTTPS (&lt;code&gt;application/dns-message&lt;/code&gt;), обычно с HTTP/2 или HTTP/3, порт 443, легко смешивается с обычным HTTPS.&lt;/li&gt;
+&lt;li&gt;DoQ использует QUIC (на базе UDP) для DNS, обеспечивает низкую задержку и избегает блокировки очереди; экосистема развивается.&lt;/li&gt;
+&lt;li&gt;Утверждения вроде «QUIC всегда быстрее TCP на X%» не универсальны; реальные показатели зависят от сети (потери, джиттер, RTT), переиспользования соединений, реализации и развертывания сервера.&lt;/li&gt;
+&lt;li&gt;DoH не означает «DNS в HTTP всегда медленнее/быстрее»; производительность зависит от переиспользования соединений, качества сети и реализации; во многих случаях DoH/3 и DoT близки или DoH/3 даже лучше.&lt;/li&gt;
+&lt;li&gt;DoT может использовать SNI для проверки сертификата по хосту; DoH полагается на стандартную проверку сертификатов HTTPS и соответствие хоста.&lt;/li&gt;
+&lt;li&gt;Зашифрованный DNS защищает от прослушивания и подмены на линии, но не гарантирует полную анонимность. Резолвер может сохранять запросы; выбирайте доверенного провайдера и изучайте политику конфиденциальности.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TD
+subgraph Семейство DNS
+A[Plain DNS UDP/TCP &amp;#43; DNS]
+subgraph Зашифрованный DNS
+B[DoT TCP &amp;#43; TLS &amp;#43; DNS]
+C[DoH HTTP/2,3 &amp;#43; TLS &amp;#43; DNS]
+D[DoQ QUIC &amp;#43; TLS 1.3 &amp;#43; DNS]
+end
+subgraph Транспортная база
+E[TCP]
+F[UDP]
+G[QUIC]
+end
+end
+A --&amp;gt; B
+A --&amp;gt; C
+A --&amp;gt; D
+B --&amp;gt; E
+C --&amp;gt; E
+C --&amp;gt; G
+D --&amp;gt; G
+A --&amp;gt; F
+style A fill:#f3e5f5
+style B fill:#e8f5e8
+style C fill:#e3f2fd
+style D fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="сравнительная-таблица"&gt;Сравнительная таблица&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Протокол&lt;/th&gt;
+&lt;th&gt;Транспортный уровень&lt;/th&gt;
+&lt;th&gt;Шифрование&lt;/th&gt;
+&lt;th&gt;Инкапсуляция&lt;/th&gt;
+&lt;th&gt;Порт по умолчанию&lt;/th&gt;
+&lt;th&gt;Характеристики&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Plain DNS&lt;/td&gt;
+&lt;td&gt;UDP/TCP&lt;/td&gt;
+&lt;td&gt;Нет&lt;/td&gt;
+&lt;td&gt;DNS в чистом виде&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;Просто и эффективно, видимый в открытом виде, подвержен прослушиванию/подмене&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoT&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853&lt;/td&gt;
+&lt;td&gt;Специализированный порт, легко блокируется по порту, хорошая системная поддержка&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoH&lt;/td&gt;
+&lt;td&gt;TCP/QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;HTTP/2-3 + DNS&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;Общий порт с HTTPS, высокая проницаемость, приоритет в браузерах&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoQ&lt;/td&gt;
+&lt;td&gt;QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853/UDP&lt;/td&gt;
+&lt;td&gt;Низкая задержка, избегание блокировки очереди, экосистема развивается&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="производительность-и-задержка"&gt;Производительность и задержка&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Переиспользование соединений: DoT/DoH/DoQ поддерживают долгоживущие соединения для снижения накладных расходов на рукопожатие; DoH/2, DoH/3 и DoQ также поддерживают многопоточность в одном соединении.&lt;/li&gt;
+&lt;li&gt;Блокировка очереди: TCP подвержен «блокировке головы очереди» на прикладном уровне; HTTP/2 с многопоточностью частично решает проблему, но всё ещё зависит от TCP при потерях; QUIC (DoH/3, DoQ) избегает блокировки очереди на транспортном уровне, лучше работает при высоких потерях/в мобильных сетях.&lt;/li&gt;
+&lt;li&gt;Задержка первого пакета: при первом подключении DoT требует TCP+TLS; DoH/2 аналогично; DoH/3/DoQ на QUIC быстрее при переподключении и миграции. При длительной нагрузке различия зависят от реализации и условий сети.&lt;/li&gt;
+&lt;li&gt;Доступность: DoH использует порт 443, реже блокируется простым портовым фильтром; DoT использует 853, часто блокируется; DoQ использует 853/UDP, на текущем этапе может быть заблокирован или не разрешён.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="поддержка-клиентов-и-систем"&gt;Поддержка клиентов и систем&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Браузеры: Chromium и Firefox по умолчанию включают DoH (могут автоматически переключаться на поддерживающий DoH резолвер или использовать встроенные списки).&lt;/li&gt;
+&lt;li&gt;Windows: Windows 11 нативно поддерживает DoH.&lt;/li&gt;
+&lt;li&gt;Android: Android 9+ предоставляет «Приватный DNS» (системный DoT). Системный DoH зависит от версии/производителя.&lt;/li&gt;
+&lt;li&gt;Платформы Apple: iOS 14+/macOS 11+ поддерживают DoT и DoH через профили или NetworkExtension.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="рекомендации-по-развертыванию-и-выбору"&gt;Рекомендации по развертыванию и выбору&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Обычные/ограниченные сети (например, публичный Wi‑Fi, необходимость обхода простых блокировок): предпочтите DoH (порт 443), включите HTTP/3 при возможности.&lt;/li&gt;
+&lt;li&gt;Системный единый выход (роутер, шлюз, приватный DNS Android): предпочтите DoT (853), при возможности добавьте DoH как резерв.&lt;/li&gt;
+&lt;li&gt;Высокие потери/мобильные сети: предпочтите DoH/3 или DoQ с QUIC (в зависимости от поддержки резолвером и клиентом).&lt;/li&gt;
+&lt;li&gt;Корпоративные/регуляторные сценарии: выбирайте по политике (DoH интегрируется с существующей HTTPS-инфраструктурой; DoT проще отделить от DNS-контрольной плоскости).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="краткие-выводы"&gt;Краткие выводы&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Приоритет DoH (443, высокая проницаемость); при наличии — включайте HTTP/3.&lt;/li&gt;
+&lt;li&gt;Для системного уровня: DoT (853) + долгоживущие соединения, при необходимости — резерв DoH (443).&lt;/li&gt;
+&lt;li&gt;Если резолвер и клиент поддерживают: попробуйте DoQ (часто лучше в мобильных сетях).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="стандарты"&gt;Стандарты&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RFC 7858, RFC 8310 (DNS over TLS)&lt;/li&gt;
+&lt;li&gt;RFC 8484 (DNS over HTTPS)&lt;/li&gt;
+&lt;li&gt;RFC 9250 (DNS over QUIC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="рекомендуемые-dns-сервисы"&gt;Рекомендуемые DNS-сервисы&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ниньпин DNS: &lt;a href="https://www.nullprivate.com"&gt;https://www.nullprivate.com&lt;/a&gt; поддержка DoT, DoH (включая HTTP3), встроенная защита от рекламы и раздельный DNS.&lt;/li&gt;
+&lt;li&gt;Собственная версия: &lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;https://github.com/NullPrivate/NullPrivate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Как DNS влияет на ваш опыт серфинга</title><link>https://blog.jqknono.com/ru-ru/blog/2025/10/13/dns-impact-on-browsing/</link><pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate><guid>https://blog.jqknono.com/ru-ru/blog/2025/10/13/dns-impact-on-browsing/</guid><description>&lt;h1 id="как-dns-влияет-на-ваш-опыт-серфинга"&gt;Как DNS влияет на ваш опыт серфинга&lt;/h1&gt;
+&lt;p&gt;Когда мы открываем веб-страницу, листаем видео или переходим по ссылке в приложении, первый шаг почти всегда проходит через DNS. Он работает как телефонная книга интернета, преобразуя понятные человеку домены в IP-адреса, понятные машинам. Многие считают «медленную загрузку, невозможность открыть, нестабильность» следствием «плохой скорости интернета», но значительная часть колебаний качества связана с успешностью разрешения DNS, его задержками, попаданием в кэш и политикой приватности. Понимание того, как работает DNS, где он уязвим в цепочке и какие стратегии защиты доступны, помогает разложить «медленно и нестабильно» на контролируемые факторы.&lt;/p&gt;</description></item></channel></rss>

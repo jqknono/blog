@@ -1,2 +1,185 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>네트워크 on jqknono Blogs</title><link>https://blog.jqknono.com/ko-kr/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</link><description>Recent content in 네트워크 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Tue, 02 Dec 2025 08:30:50 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ko-kr/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare가 완전히 신뢰할 수 있는가</title><link>https://blog.jqknono.com/ko-kr/blog/2025/12/02/cloudflare%EA%B0%80-%EC%99%84%EC%A0%84%ED%9E%88-%EC%8B%A0%EB%A2%B0%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94%EA%B0%80/</link><pubDate>Tue, 02 Dec 2025 08:30:50 +0800</pubDate><guid>https://blog.jqknono.com/ko-kr/blog/2025/12/02/cloudflare%EA%B0%80-%EC%99%84%EC%A0%84%ED%9E%88-%EC%8B%A0%EB%A2%B0%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94%EA%B0%80/</guid><description>&lt;p&gt;Cloudflare, 알리클라우드 ESA, 텐센트 EdgeOne 등은 모두 도메인 인증서를 보유하고 있으며, 이는 도메인 아래의 모든 트래픽을 완전히 볼 수 있음을 의미합니다. 본질적으로 큰 중간자입니다. 이들의 주요 기능은 보안이며, 네트워크상의 공격자가 너무 많기 때문에 큰 중간자를 선택하는 것이 이익이 큽니다. 부수적인 기능으로는 DNS, CDN, WAF 등의 에지 서비스를 동시에 제공합니다.&lt;/p&gt;
-&lt;p&gt;Cloudflare와 같은 서비스는 DDOS를 잘 방어할 수 있으며, 약간의 지연 증가로 보호 능력을 교환하는 것이 매우 비용 효과적입니다. 모든 웹사이트 운영자는 이러한 서비스를 직접 사용해야 합니다. 네트워크 공격은 어디에나 있으며, 운에 맡길 필요가 없고, 늦어도 공격을 받게 됩니다. 일부 공격은 취약점을 찾는 것이며, 웹사이트 운영자의 수준과 관련이 있습니다. 다른 일부 공격은 자원을 소모하는 것을 목적으로 하며, 예를 들어 DDOS는 상용 네트워크와 가정 네트워크의 비용 비대칭성을 이용한 공격으로, 일종의 양공입니다. 많은 경우 돈을 들여 대응하거나 서비스를 직접 종료하여 모든 사용자를 포기하는, 즉 블랙홀 방어 밖에 없습니다.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Cloudflare와 같은 서비스는 DDOS를 잘 방어할 수 있으며, 약간의 지연 증가로 보호 능력을 교환하는 것이 매우 비용 효과적입니다. 모든 웹사이트 운영자는 이러한 서비스를 직접 사용해야 합니다. 네트워크 공격은 어디에나 있으며, 운에 맡길 필요가 없고, 늦어도 공격을 받게 됩니다. 일부 공격은 취약점을 찾는 것이며, 웹사이트 운영자의 수준과 관련이 있습니다. 다른 일부 공격은 자원을 소모하는 것을 목적으로 하며, 예를 들어 DDOS는 상용 네트워크와 가정 네트워크의 비용 비대칭성을 이용한 공격으로, 일종의 양공입니다. 많은 경우 돈을 들여 대응하거나 서비스를 직접 종료하여 모든 사용자를 포기하는, 즉 블랙홀 방어 밖에 없습니다.&lt;/p&gt;</description></item><item><title>DNS 암호화 프로토콜 비교: DoT, DoH, DoQ</title><link>https://blog.jqknono.com/ko-kr/blog/2025/10/09/dns-%EC%95%94%ED%98%B8%ED%99%94-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C-%EB%B9%84%EA%B5%90-dot-doh-doq/</link><pubDate>Thu, 09 Oct 2025 13:16:16 +0800</pubDate><guid>https://blog.jqknono.com/ko-kr/blog/2025/10/09/dns-%EC%95%94%ED%98%B8%ED%99%94-%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C-%EB%B9%84%EA%B5%90-dot-doh-doq/</guid><description>&lt;h2 id="약어-빠른-정리"&gt;약어 빠른 정리&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS: 평문 DNS, 기본 UDP/53 사용, 필요 시 TCP/53 사용(응답 절단, 영역 전송 등).&lt;/li&gt;
+&lt;li&gt;DoT: DNS over TLS, TLS 기반 TCP 사용, 기본 포트 853(RFC 7858/8310).&lt;/li&gt;
+&lt;li&gt;DoH: DNS over HTTPS, HTTPS(HTTP/2 혹은 HTTP/3) 기반, 기본 포트 443(RFC 8484).&lt;/li&gt;
+&lt;li&gt;DoQ: DNS over QUIC, QUIC + TLS 1.3 기반, 기본 포트 UDP/853(RFC 9250, IANA에서 853/udp 할당).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="레이어-관계간단-tcpip-모델"&gt;레이어 관계(간단 TCP/IP 모델)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;애플리케이션 레이어: HTTP, HTTPS, DNS(DoH는 HTTPS 애플리케이션 레이어 래핑에 포함).&lt;/li&gt;
+&lt;li&gt;보안 레이어: TLS(TCP 혹은 QUIC에 암호화 제공).&lt;/li&gt;
+&lt;li&gt;전송 레이어: TCP, UDP, QUIC.&lt;/li&gt;
+&lt;li&gt;네트워크 레이어: IP.&lt;/li&gt;
+&lt;li&gt;링크 레이어: 이더넷 등.&lt;/li&gt;
+&lt;li&gt;물리 레이어: Twisted pair/광섬유/무선 등.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="핵심-포인트"&gt;핵심 포인트&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS는 UDP/TCP 위에서 작동하며 암호화되지 않음.&lt;/li&gt;
+&lt;li&gt;DoT = TCP + TLS + DNS(전용 포트 853).&lt;/li&gt;
+&lt;li&gt;DoH = TCP/QUIC + TLS + HTTP(S) + DNS(443 포트 사용, 일반 HTTPS와 포트 공유).&lt;/li&gt;
+&lt;li&gt;DoQ = QUIC + TLS 1.3 + DNS(전용 포트 UDP/853).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TB
+subgraph 애플리케이션 레이어
+A[HTTP]
+A2[HTTPS]
+C[DNS]
+D[DoH DNS over HTTPS]
+end
+subgraph 보안 레이어
+E[TLS]
+end
+subgraph 전송 레이어
+F[TCP]
+G[UDP]
+H[QUIC]
+end
+subgraph 네트워크 레이어
+I[IP]
+end
+subgraph 링크 레이어
+J[Ethernet]
+end
+subgraph 물리 레이어
+K[Twisted pair/광섬유/무선]
+end
+A2 --&amp;gt; F
+A2 --&amp;gt; H
+A --&amp;gt; F
+C --&amp;gt; F
+C --&amp;gt; G
+D --&amp;gt; A2
+E --&amp;gt; F
+E --&amp;gt; H
+F --&amp;gt; I
+G --&amp;gt; I
+H --&amp;gt; I
+I --&amp;gt; J
+J --&amp;gt; K
+style D fill:#e1f5fe
+style E fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="기본-지식-및-오류-교정"&gt;기본 지식 및 오류 교정&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS 기본 UDP/53 사용, 응답 절단(TC 비트) 혹은 신뢰성 전송 필요 시 TCP/53로 전환.&lt;/li&gt;
+&lt;li&gt;DoT는 TCP 위에서 TLS 터널을 구축해 DNS 메시지 전송, 기본 포트 853; 긴 연결 재사용으로 핸드셰이크 오버헤드 감소 가능.&lt;/li&gt;
+&lt;li&gt;DoH는 DNS를 HTTPS의 리소스(&lt;code&gt;application/dns-message&lt;/code&gt;)로 래핑, 일반적으로 HTTP/2 혹은 HTTP/3 사용, 포트 443, 일반 HTTPS와 혼동되기 쉬움.&lt;/li&gt;
+&lt;li&gt;DoQ는 직접 QUIC(UDP 기반)로 DNS 전달, 낮은 지연과 Head-of-line blocking 방지 장점, 현재 생태계 커버리지는 성장 중.&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;QUIC이 무조건 TCP보다 X% 빠르다&amp;quot;는 일반화된 결론은 정확하지 않음; 실제 성능은 네트워크 상태(패킷 손실, 지터, RTT), 연결 재사용 여부, 구현 세부사항 및 서버 배포와 관련.&lt;/li&gt;
+&lt;li&gt;DoH가 &amp;ldquo;DNS를 HTTP에 넣으면 무조건 느리다/빠르다&amp;quot;는 주장도 정확하지 않음; 성능은 연결 재사용, 네트워크 품질, 구현에 따라 달라지며, 많은 경우 DoH/3와 DoT 체감 차이가 적거나 더 나을 수 있음.&lt;/li&gt;
+&lt;li&gt;DoT는 SNI로 인증서 호스트명 검증 가능; DoH는 HTTPS의 일반 인증서 검증과 호스트명 매칭에 의존.&lt;/li&gt;
+&lt;li&gt;암호화 DNS는 경로상의 도청·변조만 방지하며 &amp;ldquo;완전 익명&amp;quot;을 의미하지 않음. Resolver는 여전히 쿼리를 기록할 수 있음; 신뢰할 수 있는 제공업체를 선택하고 개인정보 정책을 확인하세요.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TD
+subgraph DNS 패밀리
+A[Plain DNS UDP/TCP &amp;#43; DNS]
+subgraph 암호화된 DNS
+B[DoT TCP &amp;#43; TLS &amp;#43; DNS]
+C[DoH HTTP/2,3 &amp;#43; TLS &amp;#43; DNS]
+D[DoQ QUIC &amp;#43; TLS 1.3 &amp;#43; DNS]
+end
+subgraph 전송 베이스
+E[TCP]
+F[UDP]
+G[QUIC]
+end
+end
+A --&amp;gt; B
+A --&amp;gt; C
+A --&amp;gt; D
+B --&amp;gt; E
+C --&amp;gt; E
+C --&amp;gt; G
+D --&amp;gt; G
+A --&amp;gt; F
+style A fill:#f3e5f5
+style B fill:#e8f5e8
+style C fill:#e3f2fd
+style D fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="대조-개요"&gt;대조 개요&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;프로토콜&lt;/th&gt;
+&lt;th&gt;전송 레이어&lt;/th&gt;
+&lt;th&gt;암호화&lt;/th&gt;
+&lt;th&gt;래핑&lt;/th&gt;
+&lt;th&gt;기본 포트&lt;/th&gt;
+&lt;th&gt;주요 특징&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Plain DNS&lt;/td&gt;
+&lt;td&gt;UDP/TCP&lt;/td&gt;
+&lt;td&gt;없음&lt;/td&gt;
+&lt;td&gt;DNS 원생&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;간단 효율적, 평문 노출, 변조·검열 위험&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoT&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853&lt;/td&gt;
+&lt;td&gt;전용 포트, 포트 차단 위험, 시스템 지원 우수&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoH&lt;/td&gt;
+&lt;td&gt;TCP/QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;HTTP/2-3 + DNS&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;HTTPS와 포트 공유, 우수한 통과성, 브라우저 우선 지원&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoQ&lt;/td&gt;
+&lt;td&gt;QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853/UDP&lt;/td&gt;
+&lt;td&gt;낮은 지연, Head-of-line blocking 방지, 생태계 성장 중&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="성능-및-지연"&gt;성능 및 지연&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;연결 재사용: DoT/DoH/DoQ 모두 긴 연결 재사용으로 핸드셰이크 비용 절감 가능; DoH/2, DoH/3, DoQ는 단일 연결 내 다중화 지원.&lt;/li&gt;
+&lt;li&gt;Head-of-line blocking: TCP는 애플리케이션 레벨 HOL 문제 존재; HTTP/2는 TCP 위에서 다중화로 완화하지만 여전히 TCP 패킷 손실 영향을 받음, QUIC(DoH/3, DoQ)는 전송 레벨에서 HOL 방지, 높은 패킷 손실/모바일 네트워크에 유리.&lt;/li&gt;
+&lt;li&gt;초기 패킷 지연: 첫 연결 시 DoT는 TCP+TLS 핸드셰이크 필요; DoH/2 유사; DoH/3/DoQ는 QUIC 기반이라 재연결·이동이 빠름. 장기 로드에서는 구현 및 네트워크 조건에 더 크게 좌우됨.&lt;/li&gt;
+&lt;li&gt;접근성: DoH는 포트 443 사용으로 단순 포트 차단에 가장 저항력; DoT는 853 포트 사용으로 종종 차단; DoQ는 853/UDP 사용, 현재 단계에서도 차단 혹은 허용되지 않을 수 있음.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="클라이언트-및-시스템-지원"&gt;클라이언트 및 시스템 지원&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;브라우저: Chromium 계열 및 Firefox는 기본 DoH 지원(자동으로 DoH 지원 Resolver로 업그레이드 혹은 내장 제공업체 목록 사용 가능).&lt;/li&gt;
+&lt;li&gt;Windows: Windows 11는 기본 DoH 지원.&lt;/li&gt;
+&lt;li&gt;Android: Android 9+는 &amp;ldquo;Private DNS&amp;rdquo;(시스템 레벨 DoT) 제공. 시스템 레벨 DoH 지원은 버전/제조사에 따라 다름.&lt;/li&gt;
+&lt;li&gt;Apple 플랫폼: iOS 14+/macOS 11+는 설명 파일 혹은 NetworkExtension으로 DoT/DoH 지원.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="배포-및-선택-권장"&gt;배포 및 선택 권장&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;일반/제한된 네트워크(공공 Wi‑Fi, 단순 차단 우회 필요): DoH(포트 443) 우선, HTTP/3 활성화 권장.&lt;/li&gt;
+&lt;li&gt;시스템 레벨 통합 업스트림(라우터, 게이트웨이, Android Private DNS): DoT(853) 우선, 네트워크 허용 시 DoH(443)를 대체로 추가.&lt;/li&gt;
+&lt;li&gt;높은 패킷 손실/모바일 네트워크: Resolver 및 클라이언트 지원 시 QUIC 기반 DoH/3 혹은 DoQ 우선.&lt;/li&gt;
+&lt;li&gt;기업/규제 시나리오: 정책에 따라 선택(DoH는 기존 HTTPS 인프라와 융합 가능; DoT는 DNS 제어면과 분리하기 용이).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="요약"&gt;요약&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;DoH(443, 통과성 우수)를 우선 선택하고, 가능하면 HTTP/3 활성화.&lt;/li&gt;
+&lt;li&gt;시스템 레벨 통합이 필요하면 DoT(853)+지속 연결을 우선하고, 필요 시 DoH(443)를 대체로 사용.&lt;/li&gt;
+&lt;li&gt;Resolver와 클라이언트가 모두 지원한다면 DoQ(모바일 환경에서 종종 더 좋은 체감) 시도.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="참조-표준"&gt;참조 표준&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RFC 7858, RFC 8310(DNS over TLS)&lt;/li&gt;
+&lt;li&gt;RFC 8484(DNS over HTTPS)&lt;/li&gt;
+&lt;li&gt;RFC 9250(DNS over QUIC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="dns-서비스-권장"&gt;DNS 서비스 권장&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;닝핑 DNS: &lt;a href="https://www.nullprivate.com"&gt;https://www.nullprivate.com&lt;/a&gt; DoT, DoH(지원 HTTP3), 광고 차단 및 분류 원생 지원.&lt;/li&gt;
+&lt;li&gt;자체 배포 버전: &lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;https://github.com/NullPrivate/NullPrivate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

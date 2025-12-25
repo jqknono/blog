@@ -1,0 +1,181 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DNS on jqknono Blogs</title><link>https://blog.jqknono.com/ar-ae/tags/dns/</link><description>Recent content in DNS on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ar-ae</language><lastBuildDate>Thu, 09 Oct 2025 13:16:16 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ar-ae/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>مقارنة بروتوكولات DNS المشفرة: DoT، DoH، DoQ</title><link>https://blog.jqknono.com/ar-ae/blog/2025/10/09/%D9%85%D9%82%D8%A7%D8%B1%D9%86%D8%A9-%D8%A8%D8%B1%D9%88%D8%AA%D9%88%D9%83%D9%88%D9%84%D8%A7%D8%AA-dns-%D8%A7%D9%84%D9%85%D8%B4%D9%81%D8%B1%D8%A9-dot-doh-doq/</link><pubDate>Thu, 09 Oct 2025 13:16:16 +0800</pubDate><guid>https://blog.jqknono.com/ar-ae/blog/2025/10/09/%D9%85%D9%82%D8%A7%D8%B1%D9%86%D8%A9-%D8%A8%D8%B1%D9%88%D8%AA%D9%88%D9%83%D9%88%D9%84%D8%A7%D8%AA-dns-%D8%A7%D9%84%D9%85%D8%B4%D9%81%D8%B1%D8%A9-dot-doh-doq/</guid><description>&lt;h2 id="نظرة-سريعة-على-المصطلحات"&gt;نظرة سريعة على المصطلحات&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS: DNS نصي واضح، يستخدم UDP/53 افتراضيًا، ويستخدم TCP/53 عند الحاجة (مثل قطع الاستجابة، نقل المنطقة، إلخ).&lt;/li&gt;
+&lt;li&gt;DoT: DNS over TLS، يستخدم TCP فوق TLS، منفذ افتراضي 853 (RFC 7858/8310).&lt;/li&gt;
+&lt;li&gt;DoH: DNS over HTTPS، مبني على HTTPS (HTTP/2 أو HTTP/3)، منفذ افتراضي 443 (RFC 8484).&lt;/li&gt;
+&lt;li&gt;DoQ: DNS over QUIC، مبني على QUIC + TLS 1.3، منفذ افتراضي UDP/853 (RFC 9250، IANA خصص 853/udp).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="العلاقات-الطبقية-نموذج-tcpip-مبسط"&gt;العلاقات الطبقية (نموذج TCP/IP مبسط)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;طبقة التطبيق: HTTP، HTTPS، DNS (DoH يندرج تحت تغليف HTTPS في طبقة التطبيق)&lt;/li&gt;
+&lt;li&gt;طبقة الأمان: TLS (توفر التشفير لـ TCP أو QUIC)&lt;/li&gt;
+&lt;li&gt;طبقة النقل: TCP، UDP، QUIC&lt;/li&gt;
+&lt;li&gt;الطبقة الشبكية: IP&lt;/li&gt;
+&lt;li&gt;طبقة الربط: Ethernet إلخ&lt;/li&gt;
+&lt;li&gt;الطبقة الفيزيائية: كابل مجدول/ألياف/لاسلكي إلخ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="النقاط-الأساسية"&gt;النقاط الأساسية&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS يعمل فوق UDP/TCP دون تشفير.&lt;/li&gt;
+&lt;li&gt;DoT = TCP + TLS + DNS (منفذ مخصص 853).&lt;/li&gt;
+&lt;li&gt;DoH = TCP/QUIC + TLS + HTTP(S) + DNS (يستخدم 443، مشترك مع HTTPS العادي).&lt;/li&gt;
+&lt;li&gt;DoQ = QUIC + TLS 1.3 + DNS (منفذ مخصص UDP/853).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TB
+subgraph طبقة التطبيق
+A[HTTP]
+A2[HTTPS]
+C[DNS]
+D[DoH DNS over HTTPS]
+end
+subgraph طبقة الأمان
+E[TLS]
+end
+subgraph طبقة النقل
+F[TCP]
+G[UDP]
+H[QUIC]
+end
+subgraph الطبقة الشبكية
+I[IP]
+end
+subgraph طبقة الربط
+J[Ethernet]
+end
+subgraph الطبقة الفيزيائية
+K[كابل مجدول/ألياف/لاسلكي]
+end
+A2 --&amp;gt; F
+A2 --&amp;gt; H
+A --&amp;gt; F
+C --&amp;gt; F
+C --&amp;gt; G
+D --&amp;gt; A2
+E --&amp;gt; F
+E --&amp;gt; H
+F --&amp;gt; I
+G --&amp;gt; I
+H --&amp;gt; I
+I --&amp;gt; J
+J --&amp;gt; K
+style D fill:#e1f5fe
+style E fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="المعرفة-الأساسية-والتصحيحات"&gt;المعرفة الأساسية والتصحيحات&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS يستخدم UDP/53 افتراضيًا، ويتحول إلى TCP/53 عند قطع الاستجابة (وضع TC) أو الحاجة إلى نقل موثوق.&lt;/li&gt;
+&lt;li&gt;DoT يبني نفق TLS فوق TCP لنقل رسائل DNS، منفذ افتراضي 853؛ يمكن إعادة استخدام الاتصال الطويل لتقليل تكلفة الربط.&lt;/li&gt;
+&lt;li&gt;DoH يُدخل DNS كمورد ضمن HTTPS (&lt;code&gt;application/dns-message&lt;/code&gt;)، غالبًا باستخدام HTTP/2 أو HTTP/3، منفذ 443، سهل الاختلاط مع HTTPS العادي.&lt;/li&gt;
+&lt;li&gt;DoQ يستخدم QUIC مباشرة (مبني على UDP) لحمل DNS، ويتميز بتأخير منخفض وتجنب ازدحام الطابور، لكن التغطية البيئية لا تزال في نمو.&lt;/li&gt;
+&lt;li&gt;القول &amp;ldquo;QUIC أسرع بنسبة X% مقارنة بـ TCP&amp;rdquo; ليس دقيقًا؛ الأداء الفعلي يعتمد على حالة الشبكة (فقد الحزمة، التقلب، RTT)، وإمكانية إعادة استخدام الاتصال، والتفاصيل التنفيذية، ونشر الخادم.&lt;/li&gt;
+&lt;li&gt;DoH ليس &amp;ldquo;وضع DNS داخل HTTP يجعله بالضرورة أبطأ/أسرع&amp;rdquo;؛ الأداء يعتمد على إعادة استخدام الاتصال، جودة الشبكة، والتنفيذ؛ غالبًا تكون تجربة DoH/3 مشابهة أو أفضل من DoT.&lt;/li&gt;
+&lt;li&gt;DoT يمكنه التحقق من اسم المضيف عبر SNI؛ بينما DoH يعتمد على التحقق القياسي لشهادة HTTPS ومطابقة اسم المضيف.&lt;/li&gt;
+&lt;li&gt;DNS المشفر فقط يمنع التنصت والتلاعب على الاتصال، ولا يعني &amp;ldquo;الخصوصية التامة&amp;rdquo;. لا يزال من الممكن تسجيل الاستعلامات في محلل DNS؛ يُفضل اختيار مزود موثوق والاطلاع على سياسة الخصوصية.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TD
+subgraph عائلة DNS
+A[Plain DNS UDP/TCP &amp;#43; DNS]
+subgraph DNS المشفر
+B[DoT TCP &amp;#43; TLS &amp;#43; DNS]
+C[DoH HTTP/2,3 &amp;#43; TLS &amp;#43; DNS]
+D[DoQ QUIC &amp;#43; TLS 1.3 &amp;#43; DNS]
+end
+subgraph قاعدة النقل
+E[TCP]
+F[UDP]
+G[QUIC]
+end
+end
+A --&amp;gt; B
+A --&amp;gt; C
+A --&amp;gt; D
+B --&amp;gt; E
+C --&amp;gt; E
+C --&amp;gt; G
+D --&amp;gt; G
+A --&amp;gt; F
+style A fill:#f3e5f5
+style B fill:#e8f5e8
+style C fill:#e3f2fd
+style D fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="نظرة-عامة-على-المقارنة"&gt;نظرة عامة على المقارنة&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;البروتوكول&lt;/th&gt;
+&lt;th&gt;طبقة النقل&lt;/th&gt;
+&lt;th&gt;التشفير&lt;/th&gt;
+&lt;th&gt;التغليف&lt;/th&gt;
+&lt;th&gt;المنفذ الافتراضي&lt;/th&gt;
+&lt;th&gt;السمات النموذجية&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Plain DNS&lt;/td&gt;
+&lt;td&gt;UDP/TCP&lt;/td&gt;
+&lt;td&gt;لا يوجد&lt;/td&gt;
+&lt;td&gt;DNS أصلي&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;بسيط وفعال، نصي واضح، سهل التلاعب/الرقابة&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoT&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853&lt;/td&gt;
+&lt;td&gt;منفذ مخصص، سهل الحظر عبر المنفذ، دعم جيد على مستوى النظام&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoH&lt;/td&gt;
+&lt;td&gt;TCP/QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;HTTP/2-3 + DNS&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;مشترك مع HTTPS في المنفذ، اختراق قوي، دعم أولي من المتصفح&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoQ&lt;/td&gt;
+&lt;td&gt;QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853/UDP&lt;/td&gt;
+&lt;td&gt;تأخير منخفض، تجنب ازدحام الطابور، بيئة متطورة&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="الأداء-والتأخير"&gt;الأداء والتأخير&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;إعادة استخدام الاتصال: DoT/DoH/DoQ جميعها يمكنها إعادة استخدام اتصالات طويلة لتقليل تكلفة الربط؛ DoH/2، DoH/3 و DoQ تدعم أيضًا التعددية داخل اتصال واحد.&lt;/li&gt;
+&lt;li&gt;ازدحام الطابور: TCP يعاني من مشكلة ازدحام الطابور على مستوى التطبيق؛ HTTP/2 يخفف ذلك عبر التعددية فوق TCP لكنه لا يزال عرضة لتأثير فقد الحزمة على TCP، بينما QUIC (DoH/3، DoQ) يتجنب ازدحام الطابور على مستوى النقل، وهو أفضل في الشبكات عالية الفقد/المتنقلة.&lt;/li&gt;
+&lt;li&gt;تأخير الحزمة الأولى: عند الاتصال الأول، DoT يحتاج إلى TCP+TLS؛ DoH/2 مشابه؛ DoH/3/DoQ مبني على QUIC، أسرع في إعادة الاتصال والانتقال. الفروقات على الحمل الطويل تعتمد أكثر على التنفيذ وظروف الشبكة.&lt;/li&gt;
+&lt;li&gt;إمكانية الوصول: DoH يستخدم منفذ 443، أقل عرضة للحظر البسيط عبر المنفذ؛ DoT يستخدم 853، غالبًا ما يُحظر بشكل قاطع؛ DoQ يستخدم 853/UDP، قد يُحظر أو لا يُسمح به في الوقت الحالي.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="دعم-العميل-والأنظمة"&gt;دعم العميل والأنظمة&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;المتصفحات: عائلة Chromium و Firefox تدعم DoH افتراضيًا (يمكنها الترقية تلقائيًا إلى محلل يدعم DoH أو استخدام مزود قائمة مدمج).&lt;/li&gt;
+&lt;li&gt;Windows: Windows 11 يدعم DoH أصليًا.&lt;/li&gt;
+&lt;li&gt;Android: Android 9+ يوفر &amp;ldquo;DNS خاص&amp;rdquo; (DoT على مستوى النظام). التغطية على مستوى النظام لـ DoH تعتمد على الإصدار/الشركة المصنعة.&lt;/li&gt;
+&lt;li&gt;منصات Apple: iOS 14+/macOS 11+ تدعم DoT و DoH عبر ملفات الوصف أو NetworkExtension.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="اقتراحات-النشر-والاختيار"&gt;اقتراحات النشر والاختيار&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;الشبكات العادية/المقيدة (مثل Wi‑Fi العامة، الحاجة لاختراق الحظر البسيط): الأولوية لـ DoH (منفذ 443)، يمكن تمكين HTTP/3.&lt;/li&gt;
+&lt;li&gt;مخرج موحد على مستوى النظام (الراوتر، البوابة، DNS خاص Android): الأولوية لـ DoT (853)، مع إضافة DoH كخيار احتياطي إذا سمح الشبكة.&lt;/li&gt;
+&lt;li&gt;الشبكات عالية الفقد/المتنقلة: الأولوية لـ DoH/3 أو DoQ (المبني على QUIC) حسب دعم المحلل والعميل.&lt;/li&gt;
+&lt;li&gt;المشهد المؤسسي/المتوافق: اختر حسب السياسة (DoH يمكن دمجه مع بنية HTTPS الحالية؛ DoT يسهل الفصل بين واجهة DNS وسطح التحكم).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="ملخص"&gt;ملخص&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;الأولوية لـ DoH (443، اختراق قوي)، إذا كان متاحًا فقم بتمكين HTTP/3.&lt;/li&gt;
+&lt;li&gt;إذا كنت تحتاج إلى مخرج موحد على مستوى النظام: الأولوية لـ DoT (853) + اتصال دائم، مع إضافة DoH (443) كخيار احتياطي عند الضرورة.&lt;/li&gt;
+&lt;li&gt;إذا كان المحلل والعميل يدعمان: جرب DoQ (غالبًا أفضل تجربة في الشبكات المتنقلة).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="المراجع-القياسية"&gt;المراجع القياسية&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RFC 7858، RFC 8310 (DNS over TLS)&lt;/li&gt;
+&lt;li&gt;RFC 8484 (DNS over HTTPS)&lt;/li&gt;
+&lt;li&gt;RFC 9250 (DNS over QUIC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="خدمات-dns-موصى-بها"&gt;خدمات DNS موصى بها&lt;/h2&gt;
+&lt;p&gt;-宁屏 DNS: &lt;a href="https://www.nullprivate.com"&gt;https://www.nullprivate.com&lt;/a&gt; تدعم DoT, DoH (تدعم HTTP3)، دعم أصلي للإعلانات وإعادة التوجيه.&lt;/p&gt;</description></item></channel></rss>

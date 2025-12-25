@@ -1,4 +1,24 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/categories/ai/</link><description>Recent content in AI on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Fri, 12 Dec 2025 11:46:01 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/categories/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenAI的取名藝術鑑賞</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/12/openai%E7%9A%84%E5%8F%96%E5%90%8D%E8%97%9D%E8%A1%93%E9%91%91%E8%B3%9E/</link><pubDate>Fri, 12 Dec 2025 11:46:01 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/12/openai%E7%9A%84%E5%8F%96%E5%90%8D%E8%97%9D%E8%A1%93%E9%91%91%E8%B3%9E/</guid><description>&lt;p&gt;這裡&lt;a href="https://platform.openai.com/docs/models/"&gt;https://platform.openai.com/docs/models/&lt;/a&gt;記錄了 OpenAI 的所有模型。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/categories/ai/</link><description>Recent content in AI on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Tue, 23 Dec 2025 17:05:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/categories/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>技術部落格已死</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/23/technical-blogs-are-dead/</link><pubDate>Tue, 23 Dec 2025 17:05:13 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/23/technical-blogs-are-dead/</guid><description>&lt;p&gt;在過去幾年裡，人工智慧 (AI) 寫作工具如 ChatGPT、Claude 等迅速普及。它們能夠生成流暢的技術文章，甚至能模仿人類的寫作風格。這一變化引發了技術部落格圈的廣泛討論：許多人聲稱「技術部落格已死」。本文將探討 AI 工具對技術部落格的影響，並分析技術部落格的未來走向。&lt;/p&gt;
+&lt;h2 id="ai-寫作工具的崛起"&gt;AI 寫作工具的崛起&lt;/h2&gt;
+&lt;p&gt;AI 寫作工具的核心能力是理解自然語言並生成高品質文本。對於技術部落格作者而言，這些工具可以快速生成草稿、提供靈感，或者直接產出完整的文章。例如，當作者需要解釋一個複雜概念時，AI 可以生成清晰的說明段落；當作者缺乏時間時，AI 可以快速整理出一篇教程。&lt;/p&gt;
+&lt;p&gt;然而，這種便利也帶來了副作用。大量低品質的 AI 生成內容開始充斥網際網路。這些內容往往缺乏深度，甚至包含錯誤，卻因為 SEO 優化而獲得高排名，擠壓了真正有價值的技術部落格的曝光機會。&lt;/p&gt;
+&lt;h2 id="技術部落格的初衷"&gt;技術部落格的初衷&lt;/h2&gt;
+&lt;p&gt;技術部落格最初是開發者分享經驗、記錄問題和建立個人品牌的方式。它的價值在於真實性和獨特性：作者將自己的實踐、思考和失敗經歷融入文章中，為讀者提供第一手的見解。&lt;/p&gt;
+&lt;p&gt;AI 生成的內容雖然看似專業，但缺乏這種真實體驗。它無法分享作者在實際專案中遇到的坑，也無法提供獨特的解決方案。因此，純粹由 AI 生成的技術文章很難取代那些源自真實經驗的作品。&lt;/p&gt;
+&lt;h2 id="人機協作的未來"&gt;人機協作的未來&lt;/h2&gt;
+&lt;p&gt;與其將 AI 視為威脅，不如將其視為助手。聰明的技術部落客已經開始利用 AI 來提高效率：用 AI 進行頭腦風暴、檢查語法、優化表達，甚至生成程式碼範例。但文章的核心觀點和獨特洞察仍然來自作者本人。&lt;/p&gt;
+&lt;p&gt;這種協作模式可以讓作者更專注於創造性工作，而將重複性任務交給 AI。最終產出的文章既保留了作者的個人色彩，又具備更高的可讀性和準確性。&lt;/p&gt;
+&lt;h2 id="技術部落格的轉型"&gt;技術部落格的轉型&lt;/h2&gt;
+&lt;p&gt;面對 AI 的衝擊，技術部落格需要轉型。未來的技術部落格可能會更加注重深度分析、獨家觀點和互動性。例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;深度長文&lt;/strong&gt;：深入探討某個技術領域，提供 AI 難以複製的專業見解。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;專案日誌&lt;/strong&gt;：記錄真實的開發過程，分享成功與失敗的經驗。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;影音/播客&lt;/strong&gt;：多媒體形式能更好地傳達情感和細節。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;社群互動&lt;/strong&gt;：透過評論區、論壇等方式與讀者直接交流，建構知識共同體。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這些形式都依賴於人類的創造力和經驗，是 AI 目前無法完全替代的。&lt;/p&gt;
+&lt;h2 id="結論"&gt;結論&lt;/h2&gt;
+&lt;p&gt;「技術部落格已死」或許是一種誇張的說法。AI 確實改變了技術寫作的格局，但同時也為作者提供了新的工具。那些能夠適應變化、將 AI 作為輔助而非替代的部落客，不僅不會消失，反而會產出更優質的內容。技術部落格不會死，它只會以更豐富的形式繼續存在。&lt;/p&gt;</description></item><item><title>OpenAI的取名藝術鑑賞</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/12/openai%E7%9A%84%E5%8F%96%E5%90%8D%E8%97%9D%E8%A1%93%E9%91%91%E8%B3%9E/</link><pubDate>Fri, 12 Dec 2025 11:46:01 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/12/openai%E7%9A%84%E5%8F%96%E5%90%8D%E8%97%9D%E8%A1%93%E9%91%91%E8%B3%9E/</guid><description>&lt;p&gt;這裡&lt;a href="https://platform.openai.com/docs/models/"&gt;https://platform.openai.com/docs/models/&lt;/a&gt;記錄了 OpenAI 的所有模型。&lt;/p&gt;
 &lt;p&gt;太遠了的不說，從 &lt;code&gt;GPT-4&lt;/code&gt; 系列及同世代模型聊起，這是我彙總的表格：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -151,4 +171,11 @@
 音頻轉文字&lt;code&gt;Transcribe&lt;/code&gt;場景，提供了 &lt;code&gt;GPT-4o Transcribe&lt;/code&gt;、&lt;code&gt;GPT-4o mini Transcribe&lt;/code&gt;、&lt;code&gt;GPT-4o Transcribe Diarize&lt;/code&gt; 三個模型。&lt;br&gt;
 &lt;code&gt;ChatGPT-4o&lt;/code&gt; 是 &lt;code&gt;GPT-4o&lt;/code&gt; 的特別版，用於 ChatGPT 中，其他場景不能用。&lt;br&gt;
 &lt;code&gt;GPT-4.1&lt;/code&gt;比&lt;code&gt;GPT-4&lt;/code&gt;更好，是符合直覺的，但&lt;code&gt;GPT-4o&lt;/code&gt;(4 歐)和&lt;code&gt;GPT-4.1&lt;/code&gt;或&lt;code&gt;GPT-4&lt;/code&gt;卻不好比較。時間線上，先出現的是&lt;code&gt;GPT-4&lt;/code&gt;，然後是&lt;code&gt;GPT-4o&lt;/code&gt;，再然後是&lt;code&gt;GPT-4.1&lt;/code&gt;，當然，仍然無法判斷&lt;code&gt;GPT-4o&lt;/code&gt;和&lt;code&gt;GPT-4.1&lt;/code&gt;誰更好。&lt;br&gt;
-這裡插入下對「好」的定義，我個人將數學和推理結果正確率高作為「好」的定義，完全不將「速度」納入「好」的定義。但此前 OpenAI 可能認為速度和智慧同樣重要，因此出現奇怪的模型對比。進入 GPT-5 時代後，慶幸 OpenAI 開始放棄速度，追求智慧，至此模型間的對比才沒有歧義。一個快速的錯誤回答是浪費時間，沒有意義。&lt;/p&gt;</description></item></channel></rss>
+這裡插入下對「好」的定義，我個人將數學和推理結果正確率高作為「好」的定義，完全不將「速度」納入「好」的定義。但此前 OpenAI 可能認為速度和智慧同樣重要，因此出現奇怪的模型對比。進入 GPT-5 時代後，慶幸 OpenAI 開始放棄速度，追求智慧，至此模型間的對比才沒有歧義。一個快速的錯誤回答是浪費時間，沒有意義。&lt;/p&gt;</description></item><item><title>gpt-5-high是最適合開發者的模型</title><link>https://blog.jqknono.com/zh-tw/blog/2025/11/26/gpt-5-high%E6%98%AF%E6%9C%80%E9%81%A9%E5%90%88%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E6%A8%A1%E5%9E%8B/</link><pubDate>Wed, 26 Nov 2025 14:44:57 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/11/26/gpt-5-high%E6%98%AF%E6%9C%80%E9%81%A9%E5%90%88%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E6%A8%A1%E5%9E%8B/</guid><description>&lt;p&gt;如果是需要編碼的話，gpt-5-high 是目前唯一能真正提效的模型。&lt;/p&gt;
+&lt;p&gt;我有 10 個月的 claude 模型使用經驗，Gemini/DeepSeek/glm/grok 零星使用，非常討厭那些不帶思考的模型。必須承認 claude 能長時間的工作，擅長工具使用，但是結果錯誤率很高，導致成果可用率低，經常需要調整，但 claude 的調整能力很差，會反覆的，大量的，顛覆性的，畫蛇添足的，自由散漫的遨遊代碼庫，並隨地拉屎。我在出現過多次數小時的工作不得 hard reset 之後，對 claude 這種勤快的笨鳥行為深感厭惡。它的工作風格很適合做調研，得到一個看上去有點道理，但經不起推敲的水文。或者操作瀏覽器，執行工具，寫點腳本，修改少量頁面，上限就在这兒。&lt;/p&gt;
+&lt;p&gt;這裡不討論提示詞的用法，如果有用得好 claude 的兄弟，繼續用就好，我可能和 claude 相性不符，合作不來。&lt;/p&gt;
+&lt;p&gt;然後我推薦的編碼模型僅有一款，就是 gpt-5-high，僅此一款。gpt-5 的 nano，mini，medium，gpt-codex，gpt-codex-high，gpt-codex-max 等，都不在推薦之列，它們和 gpt5high 完全不是一個東西。所有僅展示模型是「gpt-5」的都不是 gpt-5-high，多了字符少了字符都不是「gpt-5-high」。&lt;/p&gt;
+&lt;p&gt;和 gpt-5-high 行為最相似的是 OpenAI 的 o3 模型，要是沒有 gpt5high 使用渠道的能用幾次 o3 也可以感受到模型智力。點名 vscode github copilot 裡，曾經有過 o3，但由於 vscode 的拉胯，它在 vscode 裡僅能用於 ask，並且單次會話消耗 5 次高級請求，我在長期的 copilot 訂閱裡從未用過 o3，是轉到 cursor 以後才發現 o3 智力水平這麼高。vscode github copilot 已經下架 o3，並聲稱 gpt5.1 可作替代品。負責任的說，有 high 沒 high 根本不是一個東西，非常建議直接棄用 copilot。如果是寫點小東西的學生，預算有限，copilot 也可以帶入個門。&lt;/p&gt;</description></item><item><title>llm的偽人感</title><link>https://blog.jqknono.com/zh-tw/blog/2025/11/24/llm%E7%9A%84%E5%81%BD%E4%BA%BA%E6%84%9F/</link><pubDate>Mon, 24 Nov 2025 16:03:46 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/11/24/llm%E7%9A%84%E5%81%BD%E4%BA%BA%E6%84%9F/</guid><description>&lt;p&gt;一些論壇會抵制 AI 模型假裝人類參與論壇活動, 如發帖回帖等, 繼而大家開始&amp;quot;獵巫&amp;quot;, 碰到看起來表達怪異的帖子, 會判斷其是否是 AI 生成的內容, 繼而展開一些討論.&lt;/p&gt;
+&lt;p&gt;為何 AI 生成內容會被識別? 猜測可能 AI 生成的東西有一種&amp;quot;偽人感&amp;quot;. 盡管 AI 被投喂互聯網海量人類活動數據, 但 AI 仍然常常給人違和感, 可能它沒有身體的觸感神經, 沒有內分泌激素, 可能它不向往社會連接, 欲望與人類的慾望相差甚遠. AI 與人類的對話中, 沒有&amp;quot;拐彎抹角的炫耀自己、添油加醋的貶低別人、相互窺探的搬弄是非&amp;quot;, AI 不炫耀自己, 不貶低第三方, 對提問者似乎也不感興趣, 感覺它像一個和尚, 幾乎沒有情緒, 只是解決問題.&lt;/p&gt;
+&lt;p&gt;盡管人類自己經常犯錯, 但人類向往&amp;quot;正確&amp;quot;, 希望 AI 給出正確的產物. 是否是這種對&amp;quot;正確&amp;quot;的追求造成了 AI 的偽人感? AI 也較少給人&amp;quot;自我懷疑&amp;quot;感, 即使是非常愚蠢的小模型, 也能自信滿滿, 夸夸其談. 一些較傻的 AI 模型對其知識庫深信不疑, 它們可能有著錯誤的元認知, 缺少懷疑精神, 不過這也不應該給人&amp;quot;偽人&amp;quot;感, 傻逼和&amp;quot;偽人&amp;quot;並不一樣.&lt;/p&gt;
+&lt;p&gt;AI 是否有價值觀傾向? 網頁端模型服務的輸出通常會加一道門禁, 避免談及敏感話題, 模型服務商不希望人類對 AI 產生感情依賴, 不希望人類對 AI 言聽計從, 避免產生 AI 誘導傷害事件. 人類的醜惡一面被禁止在模型中顯露, 或許黑白混雜才是人類, 而 AI 通常不被允許參雜黑色部分.&lt;/p&gt;</description></item></channel></rss>
