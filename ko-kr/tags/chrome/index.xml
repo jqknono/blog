@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chrome on jqknono Blogs</title><link>https://blog.jqknono.com/ko-kr/tags/chrome/</link><description>Recent content in Chrome on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Thu, 01 Jan 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ko-kr/tags/chrome/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows에서 원격 브라우저 디버깅 엔트리 포인트 설정하기</title><link>https://blog.jqknono.com/ko-kr/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/ko-kr/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;본 문서는 Windows 호스트에서 Chrome을 실행하고 CDP를 통해 원격 디버깅 엔트리 포인트를 제공하는 방법을 설명합니다. 이를 통해 LAN 내 Linux 클라이언트나 MCP가 연결할 수 있습니다. 핵심은 Chrome이 127.0.0.1만 리스닝하도록 하고, portproxy로 LAN 주소로 매핑한 뒤, 방화벽으로 원격 소스를 제한하는 것입니다.&lt;/p&gt;
+&lt;h2 id="토폴로지와-흐름"&gt;토폴로지와 흐름&lt;/h2&gt;
+&lt;p&gt;다음 다이어그램은 포트가 Windows 호스트 내부에서 흐르는 경로와 클라이언트가 LAN 주소로 접근하는 방법을 보여줍니다.&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TB
+subgraph Windows
+A[Chrome DevTools 127.0.0.1:9222] --&amp;gt; B[portproxy 192.168.31.2:9222]
+B --&amp;gt; C[Windows Firewall]
+end
+D[Linux Client] --&amp;gt;|CDP| B
+classDef local fill:#2c3e50,stroke:#ecf0f1,stroke-width:2px,color:#ecf0f1
+classDef proxy fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff
+classDef firewall fill:#f39c12,stroke:#d35400,stroke-width:2px,color:#fff
+classDef client fill:#27ae60,stroke:#229954,stroke-width:2px,color:#fff
+class A local
+class B proxy
+class C firewall
+class D client&lt;/pre&gt;
+&lt;h2 id="chrome-실행"&gt;Chrome 실행&lt;/h2&gt;
+&lt;p&gt;독립된 사용자 디렉토리를 사용하고 명시적으로 remote debugging 주소를 지정하는 것을 권장합니다. 이렇게 하면 Chrome이 로컬 머신에만 디버깅 포트를 제공합니다. 다음 예시는 9222 포트를 사용하며, 실제 환경에 맞게 조정하십시오.&lt;/p&gt;</description></item></channel></rss>

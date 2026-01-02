@@ -1,4 +1,22 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/categories/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 27 Nov 2025 12:55:58 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>持有域名可以耗到的羊毛</title><link>https://blog.jqknono.com/zh-cn/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</link><pubDate>Thu, 27 Nov 2025 12:55:58 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</guid><description>&lt;p&gt;一般一个域名的价格是 12 美元起, 会有些人想要搞个自己的域名又犹豫有没有必要.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/categories/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 01 Jan 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Windows 上搭建远程浏览器调试入口</title><link>https://blog.jqknono.com/zh-cn/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文说明如何在 Windows 主机上运行 Chrome 并通过 CDP 提供远程调试入口, 供局域网内的 Linux 客户端或 MCP 连接使用. 方案核心是 Chrome 仅监听 127.0.0.1, 由 portproxy 映射到 LAN 地址, 再通过防火墙限制远端来源.&lt;/p&gt;
+&lt;h2 id="拓扑与流向"&gt;拓扑与流向&lt;/h2&gt;
+&lt;p&gt;下图展示了端口在 Windows 主机内部的流向, 以及客户端如何通过 LAN 地址访问.&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TB
+subgraph Windows
+A[Chrome DevTools 127.0.0.1:9222] --&amp;gt; B[portproxy 192.168.31.2:9222]
+B --&amp;gt; C[Windows Firewall]
+end
+D[Linux Client] --&amp;gt;|CDP| B
+classDef local fill:#2c3e50,stroke:#ecf0f1,stroke-width:2px,color:#ecf0f1
+classDef proxy fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff
+classDef firewall fill:#f39c12,stroke:#d35400,stroke-width:2px,color:#fff
+classDef client fill:#27ae60,stroke:#229954,stroke-width:2px,color:#fff
+class A local
+class B proxy
+class C firewall
+class D client&lt;/pre&gt;
+&lt;h2 id="启动-chrome"&gt;启动 Chrome&lt;/h2&gt;
+&lt;p&gt;建议使用独立的用户目录, 并显式指定 remote debugging 地址, 这样 Chrome 只对本机开放调试端口. 下面示例以 9222 端口为例, 请根据实际情况调整.&lt;/p&gt;</description></item><item><title>持有域名可以耗到的羊毛</title><link>https://blog.jqknono.com/zh-cn/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</link><pubDate>Thu, 27 Nov 2025 12:55:58 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</guid><description>&lt;p&gt;一般一个域名的价格是 12 美元起, 会有些人想要搞个自己的域名又犹豫有没有必要.&lt;/p&gt;
 &lt;p&gt;我是非常推荐开发者都准备一个自己的域名的, 因为持有域名可以耗到不少羊毛.&lt;/p&gt;
 &lt;p&gt;这里主要介绍两个我熟悉的服务商, 一个是江湖号称&amp;quot;赛博佛祖&amp;quot;的&lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt;, 还有一个是正在发展的&lt;a href="https://www.alibabacloud.com/product/esa"&gt;Alibaba ESA&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这里首先强调下能薅羊毛的 Alibaba ESA 特指国际版, 阿里对大陆地区几乎没有羊毛, 那些限时试用都被我踢出羊毛范畴, 只有永久免费才是真羊毛.&lt;/p&gt;

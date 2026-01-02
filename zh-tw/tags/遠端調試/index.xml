@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>遠端調試 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/tags/%E9%81%A0%E7%AB%AF%E8%AA%BF%E8%A9%A6/</link><description>Recent content in 遠端調試 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Thu, 01 Jan 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/tags/%E9%81%A0%E7%AB%AF%E8%AA%BF%E8%A9%A6/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Windows 上搭建遠端瀏覽器調試入口</title><link>https://blog.jqknono.com/zh-tw/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文說明如何在 Windows 主機上運行 Chrome 並透過 CDP 提供遠端調試入口, 供局域網內的 Linux 客戶端或 MCP 連接使用. 方案核心是 Chrome 僅監聽 127.0.0.1, 由 portproxy 映射到 LAN 地址, 再透過防火牆限制遠端來源.&lt;/p&gt;
+&lt;h2 id="拓撲與流向"&gt;拓撲與流向&lt;/h2&gt;
+&lt;p&gt;下圖展示了端口在 Windows 主機內部的流向, 以及客戶端如何透過 LAN 地址訪問.&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TB
+subgraph Windows
+A[Chrome DevTools 127.0.0.1:9222] --&amp;gt; B[portproxy 192.168.31.2:9222]
+B --&amp;gt; C[Windows Firewall]
+end
+D[Linux Client] --&amp;gt;|CDP| B
+classDef local fill:#2c3e50,stroke:#ecf0f1,stroke-width:2px,color:#ecf0f1
+classDef proxy fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff
+classDef firewall fill:#f39c12,stroke:#d35400,stroke-width:2px,color:#fff
+classDef client fill:#27ae60,stroke:#229954,stroke-width:2px,color:#fff
+class A local
+class B proxy
+class C firewall
+class D client&lt;/pre&gt;
+&lt;h2 id="啟動-chrome"&gt;啟動 Chrome&lt;/h2&gt;
+&lt;p&gt;建議使用獨立的用戶目錄, 並顯式指定 remote debugging 地址, 這樣 Chrome 只對本機開放調試端口. 下面示例以 9222 端口為例, 請根據實際情況調整.&lt;/p&gt;</description></item></channel></rss>

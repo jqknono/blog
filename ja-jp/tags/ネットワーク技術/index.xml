@@ -1,0 +1,36 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ネットワーク技術 on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E6%8A%80%E8%A1%93/</link><description>Recent content in ネットワーク技術 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 13 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml"/><item><title>DNS がどのようにあなたのインターネット体験に影響するか</title><link>https://blog.jqknono.com/ja-jp/blog/2025/10/13/dns-impact-on-browsing/</link><pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/10/13/dns-impact-on-browsing/</guid><description>&lt;h1 id="dns-がどのようにあなたのインターネット体験に影響するか"&gt;DNS がどのようにあなたのインターネット体験に影響するか&lt;/h1&gt;
+&lt;p&gt;ウェブページを開くとき、動画を再生するとき、アプリ内のリンクをクリックするとき、最初の一歩はほとんど必ず DNS に行き着きます。DNS は人間に優しいドメイン名を、機械が理解できる IP アドレスに翻訳する、ネットワーク世界の電話帳のようなものです。多くの人が「ページが遅い、開けない、時々調子が悪い」ことを「回線速度が悪い」ことのせいにしますが、実際には体験のばらつきの多くは DNS の解決成功率、遅延時間、キャッシュヒット、プライバシーポリシーに関係しています。DNS がどのように働き、そのパスにおける露出ポイントと保護戦略の選択肢を理解することで、「遅い、不安定」をコントロール可能な要素に分解できます。&lt;/p&gt;
+&lt;h2 id="背景と問題の概要"&gt;背景と問題の概要&lt;/h2&gt;
+&lt;p&gt;DNS は、ほぼすべてのネットワーク要求の入り口です。ドメイン名を 1 回解決するのに通常数十ミリ秒しかかかりませんが、この数十ミリ秒が、後続の接続がどのサーバーに向かうか、近接する CDN ノードにヒットするか、ISP にハイジャックされるか、あるいは特定の中間ノードに観測されるかを決定します。家庭、モバイルネットワーク、公共 Wi‑Fi の体験差は、しばしば異なるリゾルバのキャッシュ品質、パケット損失率、ポリシー差に由来します。本文は一般ユーザー向けに、DNS とインターネット体験の関係を連続的な叙述で説明します。重点は原理とトレードオフに置き、具体的な導入手順やベンチマーク結果ではありません。&lt;/p&gt;
+&lt;h2 id="基礎と用語の整理"&gt;基礎と用語の整理&lt;/h2&gt;
+&lt;p&gt;ブラウザやアプリが解決要求を発行すると、通常まずシステムのローカルリゾルバに問い合わせ、次に再帰リゾルバが根、トップレベルドメイン、権威サーバーへと段階的に照会し、最終的に TTL 付きの回答を得ます。ローカルまたはネットワーク側のキャッシュがヒットすれば、外部照会を省略でき、大幅に遅延を削減します。キャッシュが未ヒットまたは期限切れの場合は、完全な再帰フローを完了する必要があります。以下の図は、照会の往復パスを簡略化して示しています。アニメーションはデータの流れを強調するだけであり、実際の遅延順序を表すものではありません。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TB
+C[クライアント] e1@--&amp;gt; L[ローカルリゾルバ]
+L e2@--&amp;gt; R[再帰リゾルバ]
+R e3@--&amp;gt; Root[根サーバー]
+Root e3r@--&amp;gt; R
+R e4@--&amp;gt; TLD[TLD サーバー]
+TLD e4r@--&amp;gt; R
+R e5@--&amp;gt; Auth[権威サーバー]
+Auth e5r@--&amp;gt; R
+R e6@--&amp;gt; L
+L e7@--&amp;gt; C
+%% 塗りつぶし色の設定
+style C fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style L fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+style R fill:#fff3e0,stroke:#e65100,stroke-width:2px
+style Root fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+style TLD fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+style Auth fill:#e0f2f1,stroke:#004d40,stroke-width:2px
+%% アニメーションリズム設定（Mermaid v11）
+e1@{ animation: fast }
+e2@{ animation: slow }
+e3@{ animation: slow }
+e3r@{ animation: slow }
+e4@{ animation: slow }
+e4r@{ animation: slow }
+e5@{ animation: fast }
+e5r@{ animation: fast }
+e6@{ animation: slow }
+e7@{ animation: fast }&lt;/pre&gt;
+&lt;p&gt;TTL は各レコードの「有効期限」です。TTL が有効な間、再帰リゾルバはキャッシュされた回答をクライアントに直接返せます。これが体感上の「速さと安定性」に与える貢献は、私たちの直感をはるかに超えることがよくあります。一方で、リゾルバが IPv4 と IPv6 レコードを並列でどう扱うか、ECS 拡張を有効にするか、失敗照会に対して負キャッシュを行うかといった点も、間接的に接続先と最初のパケット時間に影響します。&lt;/p&gt;</description></item></channel></rss>

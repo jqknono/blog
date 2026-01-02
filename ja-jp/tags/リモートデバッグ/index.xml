@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>リモートデバッグ on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/tags/%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%87%E3%83%90%E3%83%83%E3%82%B0/</link><description>Recent content in リモートデバッグ on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 01 Jan 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/tags/%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%87%E3%83%90%E3%83%83%E3%82%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows 上でリモートブラウザデバッグエントリを構築する</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文は、Windows ホスト上で Chrome を実行し、CDP 経由でリモートデバッグエントリを提供して、ローカルネットワーク内の Linux クライアントや MCP からの接続を可能にする方法を説明します。この方法の核は、Chrome が 127.0.0.1 だけをリスンし、portproxy で LAN アドレスにマッピングし、ファイアウォールで遠隔側の発信元を制限することです。&lt;/p&gt;
+&lt;h2 id="トポロジとフロー"&gt;トポロジとフロー&lt;/h2&gt;
+&lt;p&gt;下図は、Windows ホスト内部でのポートのフローと、クライアントが LAN アドレスからアクセスする方法を示しています。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TB
+subgraph Windows
+A[Chrome DevTools 127.0.0.1:9222] --&amp;gt; B[portproxy 192.168.31.2:9222]
+B --&amp;gt; C[Windows Firewall]
+end
+D[Linux Client] --&amp;gt;|CDP| B
+classDef local fill:#2c3e50,stroke:#ecf0f1,stroke-width:2px,color:#ecf0f1
+classDef proxy fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff
+classDef firewall fill:#f39c12,stroke:#d35400,stroke-width:2px,color:#fff
+classDef client fill:#27ae60,stroke:#229954,stroke-width:2px,color:#fff
+class A local
+class B proxy
+class C firewall
+class D client&lt;/pre&gt;
+&lt;h2 id="chrome-の起動"&gt;Chrome の起動&lt;/h2&gt;
+&lt;p&gt;独立したユーザーディレクトリを使用し、remote debugging アドレスを明示的に指定することを推奨します。これにより、Chrome はローカルホストにのみデバッグポートを公開します。以下は 9222 ポートを例にした起動例で、実際の環境に応じて調整してください。&lt;/p&gt;</description></item></channel></rss>
