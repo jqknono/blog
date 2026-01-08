@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chrome on jqknono Blogs</title><link>https://blog.jqknono.com/ru-ru/tags/chrome/</link><description>Recent content in Chrome on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Thu, 01 Jan 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ru-ru/tags/chrome/index.xml" rel="self" type="application/rss+xml"/><item><title>Настройка удаленного интерфейса отладки браузера в Windows</title><link>https://blog.jqknono.com/ru-ru/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/ru-ru/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;В этой статье описывается, как запустить Chrome на Windows и предоставить удаленный интерфейс отладки через CDP для подключения клиентов в локальной сети или MCP. Основная идея решения: Chrome слушает только 127.0.0.1, portproxy перенаправляет его на LAN-адрес, а доступ ограничивается через брандмауэр.&lt;/p&gt;
+&lt;h2 id="топология-и-направление-трафика"&gt;Топология и направление трафика&lt;/h2&gt;
+&lt;p&gt;На схеме ниже показано направление трафика портов внутри хоста Windows и как клиенты в локальной сети подключаются.&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TB
+subgraph Windows
+A[Chrome DevTools 127.0.0.1:9222] --&amp;gt; B[portproxy 192.168.31.2:9222]
+B --&amp;gt; C[Windows Firewall]
+end
+D[Linux Client] --&amp;gt;|CDP| B
+classDef local fill:#2c3e50,stroke:#ecf0f1,stroke-width:2px,color:#ecf0f1
+classDef proxy fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff
+classDef firewall fill:#f39c12,stroke:#d35400,stroke-width:2px,color:#fff
+classDef client fill:#27ae60,stroke:#229954,stroke-width:2px,color:#fff
+class A local
+class B proxy
+class C firewall
+class D client&lt;/pre&gt;
+&lt;h2 id="запуск-chrome"&gt;Запуск Chrome&lt;/h2&gt;
+&lt;p&gt;Рекомендуется использовать отдельный каталог профиля и явно указать адрес удаленной отладки, чтобы Chrome открывал порт отладки только для локального хоста. Ниже приведен пример с портом 9222 — подставьте нужный порт.&lt;/p&gt;</description></item></channel></rss>

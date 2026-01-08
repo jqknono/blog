@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>觀點 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/categories/%E8%A7%80%E9%BB%9E/</link><description>Recent content in 觀點 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 07 Jan 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/categories/%E8%A7%80%E9%BB%9E/index.xml" rel="self" type="application/rss+xml"/><item><title>Vibe Coding 的省錢公式與臨界點</title><link>https://blog.jqknono.com/zh-tw/blog/2026/01/07/vibe-coding-cost-formulas/</link><pubDate>Wed, 07 Jan 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2026/01/07/vibe-coding-cost-formulas/</guid><description>&lt;p&gt;AI 編碼工具的計費模式可歸納為三類:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;按 token 計費&lt;/strong&gt;: 包括各類 API, Claude Code (Claude Pro), Codex Cli (ChatGPT Plus), 智譜 Lite/Pro, Cursor 新版等. 本質均為 token 計費, 部分產品提供套餐折扣.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;按 API 調用次數計費&lt;/strong&gt;: 如 OpenRouter (免費額度), ModelScope, Gemini Code Assistant (每日免費 1000 次), Chutes 等.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;按提示詞次數計費&lt;/strong&gt;: 如 Cursor 老版 (500 次), Github Copilot (300 次) 等.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;這三類模式本質上均為模型推理與上下文處理付費, 差異體現在計價粒度和限額形式.&lt;/p&gt;
+&lt;p&gt;本文建立統一的成本模型, 提供可操作的變量定義與計算公式, 確定在不同工作負載和方式下的工具選擇臨界點. 成本考量涵蓋現金支出, 時間消耗和返工風險.&lt;/p&gt;
+&lt;h2 id="統一的總成本函數"&gt;統一的總成本函數&lt;/h2&gt;
+&lt;p&gt;對任意工具 i, 在一個計費週期內的總成本可以寫成:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\mathrm{Total}_i &amp;amp;= \mathrm{Cash}_i + \mathrm{Time}_i + \mathrm{Risk}_i \
+\mathrm{Time}_i &amp;amp;= R \cdot \mathrm{Hours}_i \
+\mathrm{Risk}_i &amp;amp;= R \cdot \mathrm{ReworkHours}_i
+\end{aligned}
+$$&lt;/p&gt;</description></item></channel></rss>

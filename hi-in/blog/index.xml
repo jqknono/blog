@@ -100,7 +100,190 @@
 &lt;p&gt;इससे कोड ब्राउज़ करने के लिए आरामदायक पोज़ मिलती है, दाहिने हाथ वाले इसका अनुभव कर सकते हैं।&lt;/p&gt;</description></item><item><title>Trae कैसे सिस्टम प्रॉम्प्ट लीक से बचाता है</title><link>https://blog.jqknono.com/hi-in/blog/2025/10/15/trae-%E0%A4%95%E0%A5%88%E0%A4%B8%E0%A5%87-%E0%A4%B8%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%AE-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%89%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A5%8D%E0%A4%9F-%E0%A4%B2%E0%A5%80%E0%A4%95-%E0%A4%B8%E0%A5%87-%E0%A4%AC%E0%A4%9A%E0%A4%BE%E0%A4%A4%E0%A4%BE-%E0%A4%B9%E0%A5%88/</link><pubDate>Wed, 15 Oct 2025 16:50:37 +0800</pubDate><guid>https://blog.jqknono.com/hi-in/blog/2025/10/15/trae-%E0%A4%95%E0%A5%88%E0%A4%B8%E0%A5%87-%E0%A4%B8%E0%A4%BF%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%AE-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%89%E0%A4%AE%E0%A5%8D%E0%A4%AA%E0%A5%8D%E0%A4%9F-%E0%A4%B2%E0%A5%80%E0%A4%95-%E0%A4%B8%E0%A5%87-%E0%A4%AC%E0%A4%9A%E0%A4%BE%E0%A4%A4%E0%A4%BE-%E0%A4%B9%E0%A5%88/</guid><description>&lt;p&gt;पहले मैंने एक पूर्ण प्रोजेक्ट अनुवाद टूल &lt;a href="https://marketplace.visualstudio.com/items?itemName=techfetch-dev.project-translator"&gt;Project-Translation&lt;/a&gt; बनाया था जो बड़े मॉडल का उपयोग करता है। मैंने एक लोकप्रिय सिस्टम प्रॉम्प्ट संग्रह रिपॉजिटरी &lt;a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools"&gt;system-prompts-and-models-of-ai-tools&lt;/a&gt; का पूर्ण अनुवाद किया और पाया कि रिपॉजिटरी में सभी उपकरण प्रॉम्प्ट आसानी से अनुवादित हो गए, लेकिन &lt;strong&gt;Trae&lt;/strong&gt; के प्रॉम्प्ट कभी भी अनुवादित नहीं हुए। मैंने कई मॉडल और अनुवाद प्रॉम्प्ट के साथ प्रयास किया, लेकिन सामान्य अनुवाद संभव नहीं हुआ।&lt;/p&gt;
 &lt;p&gt;यह Trae के प्रॉम्प्ट का मूल संस्करण है: &lt;a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/blob/main/Trae/Builder%20Prompt.txt"&gt;https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools/blob/main/Trae/Builder%20Prompt.txt&lt;/a&gt;&lt;/p&gt;</description></item><item><title>बड़े मॉडल के लिए रिकॉल रेट मेट्रिक क्यों महत्वपूर्ण है</title><link>https://blog.jqknono.com/hi-in/blog/2025/10/14/%E0%A4%AC%E0%A4%A1%E0%A4%BC%E0%A5%87-%E0%A4%AE%E0%A5%89%E0%A4%A1%E0%A4%B2-%E0%A4%95%E0%A5%87-%E0%A4%B2%E0%A4%BF%E0%A4%8F-%E0%A4%B0%E0%A4%BF%E0%A4%95%E0%A5%89%E0%A4%B2-%E0%A4%B0%E0%A5%87%E0%A4%9F-%E0%A4%AE%E0%A5%87%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%95-%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%82-%E0%A4%AE%E0%A4%B9%E0%A4%A4%E0%A5%8D%E0%A4%B5%E0%A4%AA%E0%A5%82%E0%A4%B0%E0%A5%8D%E0%A4%A3-%E0%A4%B9%E0%A5%88/</link><pubDate>Tue, 14 Oct 2025 09:59:51 +0800</pubDate><guid>https://blog.jqknono.com/hi-in/blog/2025/10/14/%E0%A4%AC%E0%A4%A1%E0%A4%BC%E0%A5%87-%E0%A4%AE%E0%A5%89%E0%A4%A1%E0%A4%B2-%E0%A4%95%E0%A5%87-%E0%A4%B2%E0%A4%BF%E0%A4%8F-%E0%A4%B0%E0%A4%BF%E0%A4%95%E0%A5%89%E0%A4%B2-%E0%A4%B0%E0%A5%87%E0%A4%9F-%E0%A4%AE%E0%A5%87%E0%A4%9F%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%95-%E0%A4%95%E0%A5%8D%E0%A4%AF%E0%A5%8B%E0%A4%82-%E0%A4%AE%E0%A4%B9%E0%A4%A4%E0%A5%8D%E0%A4%B5%E0%A4%AA%E0%A5%82%E0%A4%B0%E0%A5%8D%E0%A4%A3-%E0%A4%B9%E0%A5%88/</guid><description>&lt;p&gt;कुछ सिस्टम प्रॉम्प्ट पढ़ने के बाद, अधिकांश बहुत लंबे होते हैं, और अभिव्यक्ति संक्षिप्त नहीं होती। कुछ प्रॉम्प्ट मुख्य रूप से मॉडल को काम करना सिखाते हैं।&lt;/p&gt;
 &lt;p&gt;इसके अलावा, मैंने रू कोड में एक स्विच देखा जो सिस्टम प्रॉम्प्ट को मॉडल को बार-बार भेजने की अनुमति देता है, जिससे भूमिका सेटिंग और निर्देश पालन को मजबूत किया जा सकता है। लेकिन यह टोकन खपत बढ़ाएगा।&lt;/p&gt;
-&lt;p&gt;शायद महत्वपूर्ण चीजों को वजन बढ़ाने और पुष्टि की संभावना को बढ़ाने के लिए कई बार दोहराया जाना चाहिए, जिससे अधिक संभावित सही परिणाम मिल सके। दुर्भाग्य से, ऐसे परिणाम अभी भी संभाव्यता के आधार पर सही होते हैं।&lt;/p&gt;</description></item><item><title>डीएनएस आपके ब्राउज़िंग अनुभव को कैसे प्रभावित करता है</title><link>https://blog.jqknono.com/hi-in/blog/2025/10/13/dns-impact-on-browsing/</link><pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate><guid>https://blog.jqknono.com/hi-in/blog/2025/10/13/dns-impact-on-browsing/</guid><description>&lt;h1 id="डएनएस-आपक-बरउजग-अनभव-क-कस-परभवत-करत-ह"&gt;डीएनएस आपके ब्राउज़िंग अनुभव को कैसे प्रभावित करता है&lt;/h1&gt;
+&lt;p&gt;शायद महत्वपूर्ण चीजों को वजन बढ़ाने और पुष्टि की संभावना को बढ़ाने के लिए कई बार दोहराया जाना चाहिए, जिससे अधिक संभावित सही परिणाम मिल सके। दुर्भाग्य से, ऐसे परिणाम अभी भी संभाव्यता के आधार पर सही होते हैं।&lt;/p&gt;</description></item><item><title>DNS एन्क्रिप्शन प्रोटोकॉल तुलना: DoT, DoH, DoQ</title><link>https://blog.jqknono.com/hi-in/blog/2025/10/09/dns-%E0%A4%8F%E0%A4%A8%E0%A5%8D%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A5%8D%E0%A4%B6%E0%A4%A8-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%9F%E0%A5%8B%E0%A4%95%E0%A5%89%E0%A4%B2-%E0%A4%A4%E0%A5%81%E0%A4%B2%E0%A4%A8%E0%A4%BE-dot-doh-doq/</link><pubDate>Thu, 09 Oct 2025 13:16:16 +0800</pubDate><guid>https://blog.jqknono.com/hi-in/blog/2025/10/09/dns-%E0%A4%8F%E0%A4%A8%E0%A5%8D%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A5%8D%E0%A4%B6%E0%A4%A8-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A5%8B%E0%A4%9F%E0%A5%8B%E0%A4%95%E0%A5%89%E0%A4%B2-%E0%A4%A4%E0%A5%81%E0%A4%B2%E0%A4%A8%E0%A4%BE-dot-doh-doq/</guid><description>&lt;h2 id="नमकरण-अवलकन"&gt;नामकरण अवलोकन&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS: सादा DNS, UDP/53 पर डिफ़ॉल्ट, ज़रूरत पड़ने पर TCP/53 (जैसे जवाब कट जाना, क्षेत्र स्थानांतरण आदि)।&lt;/li&gt;
+&lt;li&gt;DoT: DNS over TLS, TLS पर TCP, डिफ़ॉल्ट पोर्ट 853 (RFC 7858/8310)।&lt;/li&gt;
+&lt;li&gt;DoH: DNS over HTTPS, HTTPS (HTTP/2 या HTTP/3) पर आधारित, डिफ़ॉल्ट पोर्ट 443 (RFC 8484)।&lt;/li&gt;
+&lt;li&gt;DoQ: DNS over QUIC, QUIC + TLS 1.3 पर आधारित, डिफ़ॉल्ट पोर्ट UDP/853 (RFC 9250, IANA ने 853/udp में आवंटित किया है)।&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="परत-रशत-सरल-tcpip-मडल"&gt;परत रिश्ते (सरल TCP/IP मॉडल)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;अनुप्रयोग परत: HTTP, HTTPS, DNS (DoH HTTPS अनुप्रयोग परत एन्कैप्सूलेशन में आता है)&lt;/li&gt;
+&lt;li&gt;सुरक्षा परत: TLS (TCP या QUIC के लिए एन्क्रिप्शन प्रदान करता है)&lt;/li&gt;
+&lt;li&gt;ट्रांसपोर्ट परत: TCP, UDP, QUIC&lt;/li&gt;
+&lt;li&gt;नेटवर्क परत: IP&lt;/li&gt;
+&lt;li&gt;लिंक परत: ईथरनेट आदि&lt;/li&gt;
+&lt;li&gt;भौतिक परत: ट्विस्टेड पेयर/फाइबर/वायरलेस आदि&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="मखय-बद"&gt;मुख्य बिंदु&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS UDP/TCP पर काम करता है, एन्क्रिप्टेड नहीं।&lt;/li&gt;
+&lt;li&gt;DoT = TCP + TLS + DNS (डेडिकेटेड पोर्ट 853)।&lt;/li&gt;
+&lt;li&gt;DoH = TCP/QUIC + TLS + HTTP(S) + DNS (443 पर चलता है, सामान्य HTTPS के साथ पोर्ट साझा करता है)।&lt;/li&gt;
+&lt;li&gt;DoQ = QUIC + TLS 1.3 + DNS (डेडिकेटेड पोर्ट UDP/853)।&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TB
+subgraph अनुप्रयोग परत
+A[HTTP]
+A2[HTTPS]
+C[DNS]
+D[DoH DNS over HTTPS]
+end
+subgraph सुरक्षा परत
+E[TLS]
+end
+subgraph ट्रांसपोर्ट परत
+F[TCP]
+G[UDP]
+H[QUIC]
+end
+subgraph नेटवर्क परत
+I[IP]
+end
+subgraph लिंक परत
+J[Ethernet]
+end
+subgraph भौतिक परत
+K[ट्विस्टेड पेयर/फाइबर/वायरलेस]
+end
+A2 --&amp;gt; F
+A2 --&amp;gt; H
+A --&amp;gt; F
+C --&amp;gt; F
+C --&amp;gt; G
+D --&amp;gt; A2
+E --&amp;gt; F
+E --&amp;gt; H
+F --&amp;gt; I
+G --&amp;gt; I
+H --&amp;gt; I
+I --&amp;gt; J
+J --&amp;gt; K
+style D fill:#e1f5fe
+style E fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="आधरभत-जञन-और-सधर"&gt;आधारभूत ज्ञान और सुधार&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS डिफ़ॉल्ट UDP/53 पर चलता है, जवाब कटने (TC बिट) या विश्वसनीय ट्रांसमिशन की आवश्यकता पड़ने पर TCP/53 इस्तेमाल होता है।&lt;/li&gt;
+&lt;li&gt;DoT TCP पर TLS टनल बनाता है और DNS पैकेट भेजता है, डिफ़ॉल्ट पोर्ट 853; लंबे कनेक्शन को दोहराकर हैंडशेक लागत कम की जा सकती है।&lt;/li&gt;
+&lt;li&gt;DoH DNS को HTTPS का एक संसाधन (&lt;code&gt;application/dns-message&lt;/code&gt;) बनाता है, आमतौर पर HTTP/2 या HTTP/3 इस्तेमाल करता है, पोर्ट 443, सामान्य HTTPS के साथ मिलने में आसानी होती है।&lt;/li&gt;
+&lt;li&gt;DoQ सीधे QUIC (UDP पर आधारित) पर DNS ले जाता है, कम देरी और फ्रंट-ऑफ़-लाइन ब्लॉकिंग से बचाव के फ़ायदे होते हैं, लेकिन इकोसिस्टम कवरेज अभी बढ़ रहा है।&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;QUIC हमेशा TCP से X% तेज़ होता है&amp;rdquo; जैसे सामान्यीकृत निष्कर्ष सटीक नहीं हैं; वास्तविक प्रदर्शन नेटवर्क स्थिति (ड्रॉप, झिझक, RTT), कनेक्शन रीयूज़, और इम्प्लीमेंटेशन पर निर्भर करता है।&lt;/li&gt;
+&lt;li&gt;DoH &amp;ldquo;DNS को HTTP में डालना = ज़रूर धीमा/तेज़&amp;rdquo; नहीं है, प्रदर्शन कनेक्शन रीयूज़, नेटवर्क क्वालिटी और इम्प्लीमेंटेशन पर निर्भर करता है; कई मामलों में DoH/3 और DoT का अनुभव तुलनीय या बेहतर होता है।&lt;/li&gt;
+&lt;li&gt;DoT SNI से सर्टिफिकेट होस्टनेम वेरिफ़ाय कर सकता है; DoH HTTPS के सामान्य सर्टिफिकेट वेरिफ़िकेशन और होस्टनेम मिलान पर निर्भर करता है।&lt;/li&gt;
+&lt;li&gt;एन्क्रिप्टेड DNS केवल लिंक पर इंटरसेप्शन और टैम्परिंग रोकता है, &amp;ldquo;पूर्ण गुमनामता&amp;rdquo; नहीं है। रिज़ॉल्वर अभी भी क्वेरी लॉग कर सकता है; विश्वसनीय प्रदाता चुनें और गोपनीयता नीति देखें।&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TD
+subgraph DNS परिवार
+A[Plain DNS UDP/TCP &amp;#43; DNS]
+subgraph एन्क्रिप्टेड DNS
+B[DoT TCP &amp;#43; TLS &amp;#43; DNS]
+C[DoH HTTP/2,3 &amp;#43; TLS &amp;#43; DNS]
+D[DoQ QUIC &amp;#43; TLS 1.3 &amp;#43; DNS]
+end
+subgraph ट्रांसपोर्ट आधार
+E[TCP]
+F[UDP]
+G[QUIC]
+end
+end
+A --&amp;gt; B
+A --&amp;gt; C
+A --&amp;gt; D
+B --&amp;gt; E
+C --&amp;gt; E
+C --&amp;gt; G
+D --&amp;gt; G
+A --&amp;gt; F
+style A fill:#f3e5f5
+style B fill:#e8f5e8
+style C fill:#e3f2fd
+style D fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="तलन-सरश"&gt;तुलना सारांश&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;प्रोटोकॉल&lt;/th&gt;
+&lt;th&gt;ट्रांसपोर्ट परत&lt;/th&gt;
+&lt;th&gt;एन्क्रिप्शन&lt;/th&gt;
+&lt;th&gt;एन्कैप्सूलेशन&lt;/th&gt;
+&lt;th&gt;डिफ़ॉल्ट पोर्ट&lt;/th&gt;
+&lt;th&gt;प्रमुख विशेषताएँ&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Plain DNS&lt;/td&gt;
+&lt;td&gt;UDP/TCP&lt;/td&gt;
+&lt;td&gt;कोई नहीं&lt;/td&gt;
+&lt;td&gt;DNS नेटिव&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;सरल कुशल, सादा दिखाई, टैम्पर/निगरानी के लिए खुला&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoT&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853&lt;/td&gt;
+&lt;td&gt;डेडिकेटेड पोर्ट, पोर्ट ब्लॉकिंग का शिकार, सिस्टम-लेवल सपोर्ट अच्छा&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoH&lt;/td&gt;
+&lt;td&gt;TCP/QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;HTTP/2-3 + DNS&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;HTTPS के साथ पोर्ट साझा, अधिक पिनीट्रेशन, ब्राउज़र प्राथमिकता&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoQ&lt;/td&gt;
+&lt;td&gt;QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853/UDP&lt;/td&gt;
+&lt;td&gt;कम देरी, फ्रंट-ऑफ़-लाइन ब्लॉकिंग से बचाव, इकोसिस्टम विकासरत&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="परदरशन-और-दर"&gt;प्रदर्शन और देरी&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;कनेक्शन रीयूज़: DoT/DoH/DoQ लंबे कनेक्शन दोहराकर हैंडशेक लागत कम कर सकते हैं; DoH/2, DoH/3 और DoQ एक कनेक्शन में बहु-मार्ग क्वेरी समर्थन करते हैं।&lt;/li&gt;
+&lt;li&gt;फ्रंट-ऑफ़-लाइन ब्लॉकिंग: TCP में एप्लीकेशन लेयर पर &amp;ldquo;हेड-ऑफ़-लाइन ब्लॉकिंग&amp;rdquo; होती है; HTTP/2 TCP पर बहु-मार्ग से थोड़ा राहत देता है लेकिन TCP के ड्रॉप से प्रभावित रहता है, QUIC (DoH/3, DoQ) ट्रांसपोर्ट लेयर पर ब्लॉकिंग से बचता है, उच्च ड्रॉप/मोबाइल नेटवर्क में बेहतर।&lt;/li&gt;
+&lt;li&gt;प्रथम पैकेट देरी: पहले कनेक्शन में DoT को TCP+TLS हैंडशेक चाहिए; DoH/2 इसी तरह; DoH/3/DoQ QUIC पर आधारित, रीकनेक्शन और माइग्रेशन तेज़। लंबी अवधि के लोड में अंतर अधिकतर इम्प्लीमेंटेशन और नेटवर्क स्थिति पर निर्भर।&lt;/li&gt;
+&lt;li&gt;उपलब्धता: DoH 443 पोर्ट पर, साधारण पोर्ट ब्लॉकिंग से सबसे कम प्रभावित; DoT 853 पोर्ट पर, अक्सर काट दिया जाता है; DoQ 853/UDP पर, वर्तमान में बाधित या अनुमति नहीं हो सकता।&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="कलइट-और-ससटम-सपरट"&gt;क्लाइंट और सिस्टम सपोर्ट&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ब्राउज़र: Chromium परिवार और Firefox डिफ़ॉल्ट DoH सपोर्ट (स्वचालित उन्नयन या आंतरिक सूची प्रदाता)।&lt;/li&gt;
+&lt;li&gt;Windows: Windows 11 नेटिव DoH सपोर्ट।&lt;/li&gt;
+&lt;li&gt;Android: Android 9+ &amp;ldquo;प्राइवेट DNS&amp;rdquo; (सिस्टम-लेवल DoT)। सिस्टम-लेवल DoH कवरेज वर्जन/निर्माता पर निर्भर।&lt;/li&gt;
+&lt;li&gt;Apple प्लेटफ़ॉर्म: iOS 14+/macOS 11+ विवरण फ़ाइल या NetworkExtension के माध्यम से DoT और DoH सपोर्ट।&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="तनत-और-चयन-सझव"&gt;तैनाती और चयन सुझाव&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;सामान्य/सीमित नेटवर्क (जैसे पब्लिक Wi‑Fi, साधारण ब्लॉकिंग पार करने की आवश्यकता): प्राथमिकता DoH (पोर्ट 443), HTTP/3 सक्षम करें।&lt;/li&gt;
+&lt;li&gt;सिस्टम-लेवल एकीकृत आउटलेट (राउटर, गेटवे, Android प्राइवेट DNS): प्राथमिकता DoT (853), यदि नेटवर्क अनुमति दे तो DoH (443) बैकअप जोड़ें।&lt;/li&gt;
+&lt;li&gt;उच्च ड्रॉप/मोबाइल नेटवर्क: QUIC वाले DoH/3 या DoQ को प्राथमिकता (प्रदाता और क्लाइंट सपोर्ट पर निर्भर)।&lt;/li&gt;
+&lt;li&gt;उद्यम/अनुपालन स्थिति: नीति के अनुसार (DoH मौजूदा HTTPS बुनियादी ढांचे के साथ एकीकृत होता है; DoT DNS नियंत्रण तल से अलग करने में आसान)।&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="सरश"&gt;सारांश&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;प्राथमिकता DoH (443, पिनीट्रेशन अच्छा), यदि उपलब्ध हो तो HTTP/3 सक्षम करें।&lt;/li&gt;
+&lt;li&gt;यदि सिस्टम-लेवल एकीकृत चाहिए: प्राथमिकता DoT (853) + स्थायी कनेक्शन, आवश्यकता पड़ने पर DoH (443) बैकअप।&lt;/li&gt;
+&lt;li&gt;यदि आपका रिज़ॉल्वर और क्लाइंट दोनों समर्थन करते हैं: DoQ का प्रयास करें (मोबाइल नेटवर्क में अनुभव अक्सर बेहतर)।&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="सदरभ-मनक"&gt;संदर्भ मानक&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RFC 7858, RFC 8310 (DNS over TLS)&lt;/li&gt;
+&lt;li&gt;RFC 8484 (DNS over HTTPS)&lt;/li&gt;
+&lt;li&gt;RFC 9250 (DNS over QUIC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="dns-सव-सफरश"&gt;DNS सेवा सिफ़ारिश&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;निंग पिंग DNS: &lt;a href="https://www.nullprivate.com"&gt;https://www.nullprivate.com&lt;/a&gt; DoT, DoH(HTTP3 समर्थन), विज्ञापन हटाने और विभाजन के लिए नेटिव समर्थन।&lt;/li&gt;
+&lt;li&gt;स्व-होस्टेड संस्करण: &lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;https://github.com/NullPrivate/NullPrivate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>डीएनएस आपके ब्राउज़िंग अनुभव को कैसे प्रभावित करता है</title><link>https://blog.jqknono.com/hi-in/blog/2025/10/13/dns-impact-on-browsing/</link><pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate><guid>https://blog.jqknono.com/hi-in/blog/2025/10/13/dns-impact-on-browsing/</guid><description>&lt;h1 id="डएनएस-आपक-बरउजग-अनभव-क-कस-परभवत-करत-ह"&gt;डीएनएस आपके ब्राउज़िंग अनुभव को कैसे प्रभावित करता है&lt;/h1&gt;
 &lt;p&gt;जब हम कोई वेब पेज खोलते हैं, वीडियो देखते हैं या किसी ऐप लिंक पर क्लिक करते हैं, तो पहला कदम लगभग हमेशा डीएनएस पर जाता है। यह एक नेटवर्क दुनिया की फ़ोन डायरेक्टरी की तरह है जो मानव-अनुकूल डोमेन को मशीन द्वारा समझी जा सकने वाली आईपी पते में अनुवाद करता है। बहुत से लोग &amp;ldquo;धीमा वेबपेज, खुलने में असमर्थता, अस्थिरता&amp;rdquo; को &amp;ldquo;धीमी इंटरनेट गति&amp;rdquo; का दोष देते हैं, लेकिन अनुभव में अस्थिरता का एक बड़ा हिस्सा डीएनएस की संकलन सफलता, समय, कैश हिट, और गोपनीयता नीतियों से जुड़ा होता है। डीएनएस के कार्यप्रणाली, इसके एक्सपोज़र पॉइंट्स और संरक्षण रणनीतियों को समझना आपको &amp;ldquo;धीमेपन और अस्थिरता&amp;rdquo; को नियंत्रित कारकों में विभाजित करने में मदद करता है।&lt;/p&gt;</description></item><item><title>ओपन सोर्स ब्लॉग के संभावित सुरक्षा खतरे: व्यक्तिगत जानकारी के लीक होने से कैसे बचें</title><link>https://blog.jqknono.com/hi-in/blog/2025/10/11/%E0%A4%93%E0%A4%AA%E0%A4%A8-%E0%A4%B8%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%B8-%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A5%89%E0%A4%97-%E0%A4%95%E0%A5%87-%E0%A4%B8%E0%A4%82%E0%A4%AD%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A4-%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE-%E0%A4%96%E0%A4%A4%E0%A4%B0%E0%A5%87-%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%97%E0%A4%A4-%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80-%E0%A4%95%E0%A5%87-%E0%A4%B2%E0%A5%80%E0%A4%95-%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A5%87-%E0%A4%B8%E0%A5%87-%E0%A4%95%E0%A5%88%E0%A4%B8%E0%A5%87-%E0%A4%AC%E0%A4%9A%E0%A5%87%E0%A4%82/</link><pubDate>Sat, 11 Oct 2025 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/hi-in/blog/2025/10/11/%E0%A4%93%E0%A4%AA%E0%A4%A8-%E0%A4%B8%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%B8-%E0%A4%AC%E0%A5%8D%E0%A4%B2%E0%A5%89%E0%A4%97-%E0%A4%95%E0%A5%87-%E0%A4%B8%E0%A4%82%E0%A4%AD%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%A4-%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE-%E0%A4%96%E0%A4%A4%E0%A4%B0%E0%A5%87-%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%97%E0%A4%A4-%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80-%E0%A4%95%E0%A5%87-%E0%A4%B2%E0%A5%80%E0%A4%95-%E0%A4%B9%E0%A5%8B%E0%A4%A8%E0%A5%87-%E0%A4%B8%E0%A5%87-%E0%A4%95%E0%A5%88%E0%A4%B8%E0%A5%87-%E0%A4%AC%E0%A4%9A%E0%A5%87%E0%A4%82/</guid><description>&lt;h2 id="अवलकन"&gt;अवलोकन&lt;/h2&gt;
 &lt;p&gt;GitHub Pages मुफ्त ओपन सोर्स ब्लॉग होस्टिंग प्लेटफ़ॉर्म के रूप में, अपनी सुविधा और मुफ्त विशेषता के कारण लोकप्रिय है। हालाँकि, इसके मुफ्त संस्करण में पब्लिक एक्सेस सेवा प्रदान करने के लिए रिपॉजिटरी को पब्लिक रखने की आवश्यकता होती है, जिससे अप्रत्याशित जानकारी लीक का खतरा हो सकता है।&lt;/p&gt;
 &lt;p&gt;यहाँ तक कि लेख की सामग्री संवेदनशील जानकारी नहीं रखती है, लेकिन ब्लॉग की &lt;strong&gt;स्रोत कोड रिपॉजिटरी&lt;/strong&gt; व्यक्तिगत गोपनीय जानकारी लीक कर सकती है। इस लेख में इन संभावित जोखिमों की चर्चा की गई है और व्यावहारिक समाधान प्रदान किए गए हैं।&lt;/p&gt;</description></item></channel></rss>

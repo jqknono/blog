@@ -1,0 +1,184 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>QUIC on jqknono Blogs</title><link>https://blog.jqknono.com/pl-pl/tags/quic/</link><description>Recent content in QUIC on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>pl-pl</language><lastBuildDate>Thu, 09 Oct 2025 13:16:16 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/pl-pl/tags/quic/index.xml" rel="self" type="application/rss+xml"/><item><title>Porównanie zaszyfrowanych protokołów DNS: DoT, DoH, DoQ</title><link>https://blog.jqknono.com/pl-pl/blog/2025/10/09/por%C3%B3wnanie-zaszyfrowanych-protoko%C5%82%C3%B3w-dns-dot-doh-doq/</link><pubDate>Thu, 09 Oct 2025 13:16:16 +0800</pubDate><guid>https://blog.jqknono.com/pl-pl/blog/2025/10/09/por%C3%B3wnanie-zaszyfrowanych-protoko%C5%82%C3%B3w-dns-dot-doh-doq/</guid><description>&lt;h2 id="szybka-definicja"&gt;Szybka definicja&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS: DNS w postaci jawnej, domyślnie UDP/53, w razie potrzeby TCP/53 (np. przycięcie odpowiedzi, transfer strefy).&lt;/li&gt;
+&lt;li&gt;DoT: DNS over TLS, TLS na TCP, domyślny port 853 (RFC 7858/8310).&lt;/li&gt;
+&lt;li&gt;DoH: DNS over HTTPS, oparte na HTTPS (HTTP/2 lub HTTP/3), domyślny port 443 (RFC 8484).&lt;/li&gt;
+&lt;li&gt;DoQ: DNS over QUIC, oparte na QUIC + TLS 1.3, domyślny port UDP/853 (RFC 9250, IANA przypisało 853/udp).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="relacja-warstw-uproszczony-model-tcpip"&gt;Relacja warstw (uproszczony model TCP/IP)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Warstwa aplikacji: HTTP, HTTPS, DNS (DoH to enkapsulacja DNS w HTTPS)&lt;/li&gt;
+&lt;li&gt;Warstwa bezpieczeństwa: TLS (dla TCP lub QUIC)&lt;/li&gt;
+&lt;li&gt;Warstwa transportowa: TCP, UDP, QUIC&lt;/li&gt;
+&lt;li&gt;Warstwa sieciowa: IP&lt;/li&gt;
+&lt;li&gt;Warstwa łącza: Ethernet itp.&lt;/li&gt;
+&lt;li&gt;Warstwa fizyczna: skrętka/światłowód/bezprzewodowe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="podstawowe-punkty"&gt;Podstawowe punkty&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS działa na UDP/TCP, bez szyfrowania.&lt;/li&gt;
+&lt;li&gt;DoT = TCP + TLS + DNS (dedykowany port 853).&lt;/li&gt;
+&lt;li&gt;DoH = TCP/QUIC + TLS + HTTP(S) + DNS (port 443, współdzieli z HTTPS).&lt;/li&gt;
+&lt;li&gt;DoQ = QUIC + TLS 1.3 + DNS (dedykowany port UDP/853).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TB
+subgraph Warstwa aplikacji
+A[HTTP]
+A2[HTTPS]
+C[DNS]
+D[DoH DNS over HTTPS]
+end
+subgraph Warstwa bezpieczeństwa
+E[TLS]
+end
+subgraph Warstwa transportowa
+F[TCP]
+G[UDP]
+H[QUIC]
+end
+subgraph Warstwa sieciowa
+I[IP]
+end
+subgraph Warstwa łącza
+J[Ethernet]
+end
+subgraph Warstwa fizyczna
+K[skrętka/światłowód/bezprzewodowe]
+end
+A2 --&amp;gt; F
+A2 --&amp;gt; H
+A --&amp;gt; F
+C --&amp;gt; F
+C --&amp;gt; G
+D --&amp;gt; A2
+E --&amp;gt; F
+E --&amp;gt; H
+F --&amp;gt; I
+G --&amp;gt; I
+H --&amp;gt; I
+I --&amp;gt; J
+J --&amp;gt; K
+style D fill:#e1f5fe
+style E fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="podstawy-i-sprostowania"&gt;Podstawy i sprostowania&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plain DNS domyślnie korzysta z UDP/53, przy przycięciu odpowiedzi (bit TC) lub potrzebie niezawodności przełącza się na TCP/53.&lt;/li&gt;
+&lt;li&gt;DoT buduje tunel TLS na TCP, domyślny port 853; można wykorzystać długotrwałe połączenia, zmniejszając narzut uzgadniania.&lt;/li&gt;
+&lt;li&gt;DoH traktuje DNS jako zasób HTTPS (&lt;code&gt;application/dns-message&lt;/code&gt;), zwykle HTTP/2 lub HTTP/3, port 443, łatwe przejęcie przez zwykłe HTTPS.&lt;/li&gt;
+&lt;li&gt;DoQ bezpośrednio wykorzystuje QUIC (oparte na UDP) do DNS, niskie opóźnienia i brak blokady głowy kolejki, ale ekosystem nadal rośnie.&lt;/li&gt;
+&lt;li&gt;Ogólne stwierdzenia typu „QUIC zawsze jest o X% szybszy” nie są trafne; rzeczywista wydajność zależy od jakości sieci (utraty pakietów, jitter, RTT), możliwości ponownego użycia połączeń, implementacji i konfiguracji serwera.&lt;/li&gt;
+&lt;li&gt;DoH „nie jest automatycznie wolniejszy/szybszy tylko dlatego, że DNS jest w HTTP”; wydajność zależy od ponownego użycia połączeń, jakości sieci i implementacji; w wielu przypadkach DoH/3 i DoT są porównywalne lub DoH/3 lepszy.&lt;/li&gt;
+&lt;li&gt;DoT może używać SNI do weryfikacji nazwy hosta w certyfikacie; DoH polega na standardowej weryfikacji certyfikatu HTTPS i dopasowaniu nazwy hosta.&lt;/li&gt;
+&lt;li&gt;Szyfrowany DNS chroni przed podsłuchem i modyfikacją w trasie, nie oznacza to „pełnej anonimowości”. Rezolwer może nadal rejestrować zapytania; wybierz zaufanego dostawcę i zapoznaj się z polityką prywatności.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="mermaid"&gt;graph TD
+subgraph Rodzina DNS
+A[Plain DNS UDP/TCP &amp;#43; DNS]
+subgraph Szyfrowany DNS
+B[DoT TCP &amp;#43; TLS &amp;#43; DNS]
+C[DoH HTTP/2,3 &amp;#43; TLS &amp;#43; DNS]
+D[DoQ QUIC &amp;#43; TLS 1.3 &amp;#43; DNS]
+end
+subgraph Transport
+E[TCP]
+F[UDP]
+G[QUIC]
+end
+end
+A --&amp;gt; B
+A --&amp;gt; C
+A --&amp;gt; D
+B --&amp;gt; E
+C --&amp;gt; E
+C --&amp;gt; G
+D --&amp;gt; G
+A --&amp;gt; F
+style A fill:#f3e5f5
+style B fill:#e8f5e8
+style C fill:#e3f2fd
+style D fill:#fff3e0&lt;/pre&gt;
+&lt;h2 id="porównawcza-tabela"&gt;Porównawcza tabela&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Protokół&lt;/th&gt;
+&lt;th&gt;Warstwa transportowa&lt;/th&gt;
+&lt;th&gt;Szyfrowanie&lt;/th&gt;
+&lt;th&gt;Enkapsulacja&lt;/th&gt;
+&lt;th&gt;Domyślny port&lt;/th&gt;
+&lt;th&gt;Typowe cechy&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Plain DNS&lt;/td&gt;
+&lt;td&gt;UDP/TCP&lt;/td&gt;
+&lt;td&gt;Brak&lt;/td&gt;
+&lt;td&gt;DNS native&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;Prosty, wydajny, jawny, podatny na podsłuch/modyfikację&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoT&lt;/td&gt;
+&lt;td&gt;TCP&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853&lt;/td&gt;
+&lt;td&gt;Dedykowany port, łatwo blokowany, dobre wsparcie systemowe&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoH&lt;/td&gt;
+&lt;td&gt;TCP/QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.2/1.3&lt;/td&gt;
+&lt;td&gt;HTTP/2-3 + DNS&lt;/td&gt;
+&lt;td&gt;443&lt;/td&gt;
+&lt;td&gt;Współdzieli port z HTTPS, lepsza przebijalność, priorytet w przeglądarkach&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;DoQ&lt;/td&gt;
+&lt;td&gt;QUIC&lt;/td&gt;
+&lt;td&gt;TLS 1.3&lt;/td&gt;
+&lt;td&gt;DNS&lt;/td&gt;
+&lt;td&gt;853/UDP&lt;/td&gt;
+&lt;td&gt;Niskie opóźnienia, brak blokady głowy kolejki, ekosystem w rozwoju&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="wydajność-i-opóźnienia"&gt;Wydajność i opóźnienia&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Ponowne użycie połączeń: DoT/DoH/DoQ mogą wykorzystywać długotrwałe połączenia, zmniejszając narzut uzgadniania; DoH/2, DoH/3 i DoQ obsługują wielokrotne żądania w jednym połączeniu.&lt;/li&gt;
+&lt;li&gt;Blokada głowy kolejki: TCP ma to na poziomie aplikacji; HTTP/2 na TCP zmniejsza to, ale wciąż zależy od utraty pakietów TCP; QUIC (DoH/3, DoQ) unika blokady głowy kolejki na poziomie transportu, lepiej radzi sobie z dużą utratą pakietów/siecią mobilną.&lt;/li&gt;
+&lt;li&gt;Opóźnienie pierwszego pakietu: przy pierwszym połączeniu DoT wymaga TCP+TLS; DoH/2 podobnie; DoH/3/DoQ oparte na QUIC mają szybsze ponowne połączenie i migrację. W długim okresie różnice zależą od implementacji i warunków sieci.&lt;/li&gt;
+&lt;li&gt;Dostępność: DoH (port 443) najtrudniej zablokować; DoT (port 853) często blokowany; DoQ (853/UDP) może być blokowany lub nieotwierany.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="wsparcie-klientów-i-systemów"&gt;Wsparcie klientów i systemów&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Przeglądarki: rodzina Chromium i Firefox domyślnie wbudowane DoH (możliwość automatycznego ulepszania lub listy wbudowanych dostawców).&lt;/li&gt;
+&lt;li&gt;Windows: Windows 11 natywnie obsługuje DoH.&lt;/li&gt;
+&lt;li&gt;Android: Android 9+ oferuje „Prywatne DNS” (systemowe DoT). Systemowe DoH zależy od wersji/wytwórcy.&lt;/li&gt;
+&lt;li&gt;Platformy Apple: iOS 14+/macOS 11+ przez profile lub NetworkExtension obsługują DoT i DoH.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="wdrożenie-i-wybór"&gt;Wdrożenie i wybór&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Sieci o ograniczonym dostępie (np. Wi‑Fi publiczne, wymagające przebijania prostych blokad): DoH (port 443), włącz HTTP/3 jeśli dostępne.&lt;/li&gt;
+&lt;li&gt;Systemowy wspólny punkt wyjścia (router, brama, prywatne DNS Androida): DoT (853), w razie potrzeby DoH (443) jako fallback.&lt;/li&gt;
+&lt;li&gt;Sieci o dużych utratkach pakietów/mobilne: DoH/3 lub DoQ (jeśli obsługiwane przez rezolwer i klienta).&lt;/li&gt;
+&lt;li&gt;Środowisko korporacyjne/zgodność: wybierz zgodnie z polityką (DoH łączy się z infrastrukturą HTTPS; DoT oddziela DNS od kontroli).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="podsumowanie"&gt;Podsumowanie&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Preferowane DoH (443, przebijalność), włącz HTTP/3 jeśli dostępne.&lt;/li&gt;
+&lt;li&gt;Systemowe: DoT (853) z trwałym połączeniem, DoH (443) jako fallback.&lt;/li&gt;
+&lt;li&gt;Jeśli rezolwer i klient obsługują: DoQ (lepsze doznania w sieci mobilnej).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="standardy"&gt;Standardy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RFC 7858, RFC 8310 (DNS over TLS)&lt;/li&gt;
+&lt;li&gt;RFC 8484 (DNS over HTTPS)&lt;/li&gt;
+&lt;li&gt;RFC 9250 (DNS over QUIC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="polecane-usługi-dns"&gt;Polecane usługi DNS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Null Private DNS: &lt;a href="https://www.nullprivate.com"&gt;https://www.nullprivate.com&lt;/a&gt; obsługuje DoT, DoH (HTTP3), natywne blokowanie reklam i rozdział ruchu.&lt;/li&gt;
+&lt;li&gt;Wersja do samodzielnego wdrożenia: &lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;https://github.com/NullPrivate/NullPrivate&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

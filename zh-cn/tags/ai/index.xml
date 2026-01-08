@@ -1,4 +1,20 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/tags/ai/</link><description>Recent content in AI on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 23 Dec 2025 17:05:13 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>技术博客已死</title><link>https://blog.jqknono.com/zh-cn/blog/2025/12/23/technical-blogs-are-dead/</link><pubDate>Tue, 23 Dec 2025 17:05:13 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/12/23/technical-blogs-are-dead/</guid><description>&lt;p&gt;在过去的几年里, 人工智能 (AI) 写作工具如 ChatGPT, Claude 等迅速普及. 它们能够生成流畅的技术文章, 甚至能模仿人类的写作风格. 这一变化引发了技术博客圈的广泛讨论: 许多人声称&amp;quot;技术博客已死&amp;quot;. 本文将探讨 AI 工具对技术博客的影响, 并分析技术博客的未来走向.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/tags/ai/</link><description>Recent content in AI on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 07 Jan 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>Vibe Coding 的省钱公式与临界点</title><link>https://blog.jqknono.com/zh-cn/blog/2026/01/07/vibe-coding-cost-formulas/</link><pubDate>Wed, 07 Jan 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2026/01/07/vibe-coding-cost-formulas/</guid><description>&lt;p&gt;AI 编码工具的计费模式可归纳为三类:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;按 token 计费&lt;/strong&gt;: 包括各类 API, Claude Code (Claude Pro), Codex Cli (ChatGPT Plus), 智谱 Lite/Pro, Cursor 新版等. 本质均为 token 计费, 部分产品提供套餐折扣.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;按 API 调用次数计费&lt;/strong&gt;: 如 OpenRouter (免费额度), ModelScope, Gemini Code Assistant (每日免费 1000 次), Chutes 等.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;按提示词次数计费&lt;/strong&gt;: 如 Cursor 老版 (500 次), Github Copilot (300 次) 等.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这三类模式本质上均为模型推理与上下文处理付费, 差异体现在计价粒度和限额形式.&lt;/p&gt;
+&lt;p&gt;本文建立统一的成本模型, 提供可操作的变量定义与计算公式, 确定在不同工作负载和方式下的工具选择临界点. 成本考量涵盖现金支出, 时间消耗和返工风险.&lt;/p&gt;
+&lt;h2 id="统一的总成本函数"&gt;统一的总成本函数&lt;/h2&gt;
+&lt;p&gt;对任意工具 i, 在一个计费周期内的总成本可以写成:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\mathrm{Total}_i &amp;amp;= \mathrm{Cash}_i + \mathrm{Time}_i + \mathrm{Risk}_i \
+\mathrm{Time}_i &amp;amp;= R \cdot \mathrm{Hours}_i \
+\mathrm{Risk}_i &amp;amp;= R \cdot \mathrm{ReworkHours}_i
+\end{aligned}
+$$&lt;/p&gt;</description></item><item><title>技术博客已死</title><link>https://blog.jqknono.com/zh-cn/blog/2025/12/23/technical-blogs-are-dead/</link><pubDate>Tue, 23 Dec 2025 17:05:13 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/12/23/technical-blogs-are-dead/</guid><description>&lt;p&gt;在过去的几年里, 人工智能 (AI) 写作工具如 ChatGPT, Claude 等迅速普及. 它们能够生成流畅的技术文章, 甚至能模仿人类的写作风格. 这一变化引发了技术博客圈的广泛讨论: 许多人声称&amp;quot;技术博客已死&amp;quot;. 本文将探讨 AI 工具对技术博客的影响, 并分析技术博客的未来走向.&lt;/p&gt;
 &lt;h2 id="ai-写作工具的崛起"&gt;AI 写作工具的崛起&lt;/h2&gt;
 &lt;p&gt;AI 写作工具的核心能力是理解自然语言并生成高质量文本. 对于技术博客作者而言, 这些工具可以快速生成草稿, 提供灵感, 或者直接产出完整的文章. 例如, 当作者需要解释一个复杂概念时, AI 可以生成清晰的说明段落; 当作者缺乏时间时, AI 可以快速整理出一篇教程.&lt;/p&gt;
 &lt;p&gt;然而, 这种便利也带来了副作用. 大量低质量的 AI 生成内容开始充斥互联网. 这些内容往往缺乏深度, 甚至包含错误, 却因为 SEO 优化而获得高排名, 挤占了真正有价值的技术博客的曝光机会.&lt;/p&gt;

@@ -1,0 +1,7 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Codex on jqknono Blogs</title><link>https://blog.jqknono.com/ko-kr/tags/codex/</link><description>Recent content in Codex on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><lastBuildDate>Wed, 07 Jan 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ko-kr/tags/codex/index.xml" rel="self" type="application/rss+xml"/><item><title>Vibe Coding 절약 비용 공식 및 임계점</title><link>https://blog.jqknono.com/ko-kr/blog/2026/01/07/vibe-coding-cost-formulas/</link><pubDate>Wed, 07 Jan 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ko-kr/blog/2026/01/07/vibe-coding-cost-formulas/</guid><description>&lt;p&gt;AI 코딩 도구의 요금제는 크게 3가지로 구분할 수 있습니다:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;토큰 기준 요금제&lt;/strong&gt;: 각종 API, Claude Code(Claude Pro), Codex Cli(ChatGPT Plus), Zhipu Lite/Pro, Cursor 신버전 등. 기본적으로 모두 토큰 기준 요금제이며, 일부 제품은 패키지 할인을 제공합니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API 호출 수 기준 요금제&lt;/strong&gt;: OpenRouter(무료 할당량), ModelScope, Gemini Code Assistant(일일 무료 1000회), Chutes 등.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;프롬프트 수 기준 요금제&lt;/strong&gt;: Cursor 구버전(500회), Github Copilot(300회) 등.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이 3가지 모델은 기본적으로 모두 모델 추론 및 컨텍스트 처리 비용을 의미하며, 차이는 요금 책정 세부 수준과 한도 형태에 있습니다.&lt;/p&gt;</description></item></channel></rss>
