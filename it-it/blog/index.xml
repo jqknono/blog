@@ -232,45 +232,4 @@ Per la trascrizione audio &lt;code&gt;Transcribe&lt;/code&gt;, sono disponibili 
 &lt;p&gt;Perché il contenuto generato dall&amp;rsquo;AI viene riconosciuto? Si sospetta che ciò sia dovuto a una &amp;ldquo;sensazione di falsità&amp;rdquo; che l&amp;rsquo;AI trasmette. Nonostante venga alimentato con enormi quantità di dati provenienti dalle attività umane su Internet, l&amp;rsquo;AI spesso suscita un senso di estraneità. Forse perché non possiede sensazioni tattili corporee, né ormoni endocrini, forse perché non desidera connessioni sociali, e i suoi desideri sono molto diversi da quelli umani. Nelle conversazioni con gli umani, l&amp;rsquo;AI non &amp;ldquo;sfoggia in modo indiretto&amp;rdquo;, non &amp;ldquo;denigra terzi in modo esagerato&amp;rdquo;, non &amp;ldquo;spettegola curiosando&amp;rdquo;. L&amp;rsquo;AI non si vanta, non denigra terzi e sembra non interessarsi al richiedente. Sembra un monaco, quasi privo di emozioni, focalizzato solo sulla risoluzione dei problemi.&lt;/p&gt;</description></item><item><title>Condivisione di utili mappature dei tasti del mouse</title><link>https://blog.jqknono.com/it-it/blog/2025/11/07/useful-mouse-key-mapping-share/</link><pubDate>Fri, 07 Nov 2025 18:09:37 +0800</pubDate><guid>https://blog.jqknono.com/it-it/blog/2025/11/07/useful-mouse-key-mapping-share/</guid><description>&lt;p&gt;Mappa il tasto 5 del mouse a &lt;code&gt;F12&lt;/code&gt;
 &lt;code&gt;F12&lt;/code&gt; in Visual Studio e VS Code è la funzione di salto alla definizione
 &lt;code&gt;Shift + F12&lt;/code&gt; è la funzione di salto ai riferimenti&lt;/p&gt;
-&lt;p&gt;Questo permette di navigare il codice in modo più confortevole, provatelo se siete destri.&lt;/p&gt;</description></item><item><title>Come Trae impedisce la fuga dei prompt di sistema</title><link>https://blog.jqknono.com/it-it/blog/2025/10/15/come-trae-impedisce-la-fuga-dei-prompt-di-sistema/</link><pubDate>Wed, 15 Oct 2025 16:50:37 +0800</pubDate><guid>https://blog.jqknono.com/it-it/blog/2025/10/15/come-trae-impedisce-la-fuga-dei-prompt-di-sistema/</guid><description>&lt;p&gt;In precedenza ho realizzato uno strumento per la traduzione completa di progetti basato su grandi modelli &lt;a href="https://marketplace.visualstudio.com/items?itemName=techfetch-dev.project-translator"&gt;Project-Translation&lt;/a&gt;. Ho scelto un popolare repository di raccolta di prompt di sistema &lt;a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools"&gt;system-prompts-and-models-of-ai-tools&lt;/a&gt; per la traduzione completa e ho scoperto che tutti i prompt degli strumenti in questo repository possono essere tradotti normalmente, tranne quelli di &lt;strong&gt;Trae&lt;/strong&gt;, che non riescono mai a essere tradotti. Ho provato molti modelli e diversi prompt di traduzione, ma nessuno è riuscito a tradurre correttamente.&lt;/p&gt;</description></item><item><title>Perché l'indicatore di richiamo dei grandi modelli è importante</title><link>https://blog.jqknono.com/it-it/blog/2025/10/14/perch%C3%A9-lindicatore-di-richiamo-dei-grandi-modelli-%C3%A8-importante/</link><pubDate>Tue, 14 Oct 2025 09:59:51 +0800</pubDate><guid>https://blog.jqknono.com/it-it/blog/2025/10/14/perch%C3%A9-lindicatore-di-richiamo-dei-grandi-modelli-%C3%A8-importante/</guid><description>&lt;p&gt;Leggendo alcuni prompt di sistema, sono sostanzialmente molto prolissi e non espressi in modo conciso. Alcuni prompt insegnano principalmente al modello come svolgere compiti.&lt;/p&gt;
-&lt;p&gt;Inoltre, ho notato che in roo code c&amp;rsquo;è un&amp;rsquo;opzione per inviare ripetutamente il prompt di sistema al modello, indicando che è possibile rafforzare l&amp;rsquo;impostazione del ruolo e il seguimento delle istruzioni. Tuttavia, ciò aumenta il consumo di token.&lt;/p&gt;
-&lt;p&gt;Forse perché le cose importanti hanno bisogno di essere ripetute più volte per aumentare il loro peso durante il calcolo e migliorare la probabilità di conferma, ottenendo infine risultati più corretti. Sfortunatamente, questi risultati sono comunque corretti in modo probabilistico.&lt;/p&gt;</description></item><item><title>DNS 隐私防护与用户画像防范策略</title><link>https://blog.jqknono.com/it-it/blog/2025/10/09/dns-%E9%9A%90%E7%A7%81%E9%98%B2%E6%8A%A4%E4%B8%8E%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F%E9%98%B2%E8%8C%83%E7%AD%96%E7%95%A5/</link><pubDate>Thu, 09 Oct 2025 22:00:00 +0800</pubDate><guid>https://blog.jqknono.com/it-it/blog/2025/10/09/dns-%E9%9A%90%E7%A7%81%E9%98%B2%E6%8A%A4%E4%B8%8E%E7%94%A8%E6%88%B7%E7%94%BB%E5%83%8F%E9%98%B2%E8%8C%83%E7%AD%96%E7%95%A5/</guid><description>&lt;h1 id="dns-隐私防护与用户画像防范策略"&gt;DNS 隐私防护与用户画像防范策略&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;读者：关注网络隐私与数据治理的工程/运维/安全从业者
-关键词：本地解析器、递归解析、权威服务器、QNAME最小化、ECS、DNSSEC、DoT/DoH/DoQ&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id="背景与问题概述"&gt;背景与问题概述&lt;/h2&gt;
-&lt;p&gt;在数字化时代，用户的网络行为数据成为企业构建用户画像的重要来源。作为互联网基础设施的核心组件，域名系统（DNS）在日常网络活动中承担着将人类可读的域名转换为机器可读的IP地址的关键任务。然而，传统DNS查询通常以明文形式在UDP端口53上进行传输，这使得用户的浏览历史、应用使用习惯等敏感信息容易被网络运营商、互联网服务提供商以及各种中间人获取和分析。&lt;/p&gt;
-&lt;p&gt;用户画像是通过收集和分析用户的各种行为数据而构建的用户特征模型，企业利用这些模型进行精准营销、内容推荐、风险评估等商业活动。虽然这些服务在一定程度上提升了用户体验，但也带来了隐私泄露、数据滥用和潜在的歧视性定价等问题。了解如何通过DNS层面的技术手段来减少用户画像的准确性，成为保护个人隐私的重要途径。&lt;/p&gt;
-&lt;p&gt;本文将从DNS基础原理出发，分析用户画像构建过程中的数据收集点，探讨基于DNS的隐私保护策略，并阐述不同场景下的实现思路与注意事项。&lt;/p&gt;
-&lt;h2 id="基础与术语梳理"&gt;基础与术语梳理&lt;/h2&gt;
-&lt;p&gt;要理解DNS隐私保护，首先需要掌握DNS查询的基本流程和相关术语。DNS查询通常涉及多个参与者，每个环节都可能成为隐私泄露的节点。&lt;/p&gt;
-&lt;pre class="mermaid"&gt;flowchart LR
-A[客户端设备] e1@--&amp;gt; B[本地解析器]
-B e2@--&amp;gt; C[递归解析器]
-C e3@--&amp;gt; D[根服务器]
-D e4@--&amp;gt; E[TLD服务器]
-E e5@--&amp;gt; F[权威服务器]
-F e6@--&amp;gt; C
-C e7@--&amp;gt; B
-B e8@--&amp;gt; A
-C --&amp;gt; G[缓存存储]
-e1@{ animation: fast }
-e2@{ animation: slow }
-e3@{ animation: medium }
-e4@{ animation: fast }
-e5@{ animation: medium }
-e6@{ animation: fast }
-e7@{ animation: fast }
-e8@{ animation: slow }
-style A fill:#e1f5fe
-style B fill:#f3e5f5
-style C fill:#fff3e0
-style D fill:#f1f8e9
-style E fill:#f1f8e9
-style F fill:#f1f8e9
-style G fill:#fce4ec&lt;/pre&gt;
-&lt;p&gt;本地解析器（Stub Resolver）是操作系统或应用程序中的DNS客户端组件，负责接收应用程序的DNS查询请求并将其转发给递归解析器。递归解析器（Recursive Resolver）通常由ISP或第三方DNS服务提供，负责完成完整的域名解析过程，包括查询根服务器、顶级域（TLD）服务器和权威服务器，并将最终结果返回给客户端。&lt;/p&gt;</description></item><item><title>Come il DNS influenza la tua esperienza di navigazione</title><link>https://blog.jqknono.com/it-it/blog/2025/10/13/dns-impact-on-browsing/</link><pubDate>Mon, 13 Oct 2025 00:00:00 +0000</pubDate><guid>https://blog.jqknono.com/it-it/blog/2025/10/13/dns-impact-on-browsing/</guid><description>&lt;h1 id="come-il-dns-influenza-la-tua-esperienza-di-navigazione"&gt;Come il DNS influenza la tua esperienza di navigazione&lt;/h1&gt;
-&lt;p&gt;Quando apri una pagina web, scorri un video o clicchi su un link all&amp;rsquo;interno di un&amp;rsquo;app, il primo passo cade quasi sempre sul DNS. È come un elenco telefonico del mondo online, responsabile della traduzione dei nomi di dominio in indirizzi IP comprensibili alle macchine. Molte persone attribuiscono &amp;ldquo;lentezza, impossibilità di apertura e comportamenti irregolari&amp;rdquo; a una &amp;ldquo;cattiva velocità di rete&amp;rdquo;, ma una buona parte di queste fluttuazioni di esperienza è legata al tasso di successo della risoluzione DNS, al tempo impiegato, al hit della cache e alle politiche di privacy. Comprendere come funziona il DNS, i suoi punti di esposizione nella catena e le strategie di protezione disponibili può aiutare a trasformare &amp;ldquo;lentezza e instabilità&amp;rdquo; in fattori controllabili.&lt;/p&gt;</description></item><item><title>Potenziali rischi per la sicurezza dei blog open source: come proteggere le informazioni personali dalle fughe</title><link>https://blog.jqknono.com/it-it/blog/2025/10/11/potenziali-rischi-per-la-sicurezza-dei-blog-open-source-come-proteggere-le-informazioni-personali-dalle-fughe/</link><pubDate>Sat, 11 Oct 2025 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/it-it/blog/2025/10/11/potenziali-rischi-per-la-sicurezza-dei-blog-open-source-come-proteggere-le-informazioni-personali-dalle-fughe/</guid><description>&lt;h2 id="panoramica"&gt;Panoramica&lt;/h2&gt;
-&lt;p&gt;GitHub Pages, come piattaforma di hosting gratuita per blog open source, è ampiamente utilizzata grazie alla sua praticità e gratuità. Tuttavia, la versione gratuita richiede che il repository sia pubblico per fornire servizi di accesso pubblico, una caratteristica che può portare a rischi inaspettati di fuga di informazioni.&lt;/p&gt;
-&lt;p&gt;Anche se il contenuto degli articoli non contiene informazioni sensibili, il &lt;strong&gt;repository del codice sorgente&lt;/strong&gt; del blog potrebbe involontariamente rivelare informazioni personali. Questo articolo esplorerà questi potenziali rischi e fornirà soluzioni pratiche.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Questo permette di navigare il codice in modo più confortevole, provatelo se siete destri.&lt;/p&gt;</description></item></channel></rss>
