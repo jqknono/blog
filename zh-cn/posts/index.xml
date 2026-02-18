@@ -1,0 +1,26 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/posts/</link><description>Recent content in Posts on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 17 Feb 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>GPT-5.3-Codex 初体验：从惊喜到理性评估</title><link>https://blog.jqknono.com/zh-cn/posts/ai/gpt-53-codex-experience/</link><pubDate>Tue, 17 Feb 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/posts/ai/gpt-53-codex-experience/</guid><description>&lt;p&gt;OpenAI 在 GPT-5.3 正式版尚未发布之际，率先推出了 GPT-5.3-Codex 这一特化模型。从商业逻辑来看，这一决策不难理解。GPT-5.3-Codex 与标准版 GPT-5.3 定价相同，但其输出更为积极，执行时间更短，内存占用更少，这意味着更高的利润空间。对于 OpenAI 而言，GPT-5.3-Codex 显然是一个更具成本效益的选择。&lt;/p&gt;
+&lt;p&gt;在 GPT-5.3-Codex 发布的第一周，我的使用体验确实令人惊喜。模型响应速度明显优于之前的版本，代码生成的反馈非常及时。对于需要快速迭代、频繁交互的开发场景，这种效率提升带来了直观的生产力改善。当需要在短时间内获得多个实现方案或快速验证想法时，Codex 的积极输出特性显得尤为有用。&lt;/p&gt;
+&lt;p&gt;然而进入第二周后，情况发生了明显变化。模型的响应速度出现显著下降，原本流畅的交互体验开始变得卡顿。这种性能波动让人联想到云服务中常见的资源调度问题，可能是在用户量增长后，服务器负载分配策略导致的降级服务。&lt;/p&gt;
+&lt;p&gt;除了性能波动，更值得关注的是 Codex 在思维缜密程度上的不足。与非 Codex 系列相比，它在处理复杂逻辑、边缘情况处理和代码健壮性方面表现较弱。当面对需要深度推理、多步骤规划或抽象理解的任务时，Codex 更倾向于给出表面可行的方案，而缺乏对潜在问题的预判。&lt;/p&gt;
+&lt;p&gt;这种差异背后反映了两个模型在设计目标上的不同。Codex 似乎更注重生成速度和输出活跃度，适合快速原型开发、代码补全和简单任务的自动化。而非 Codex 系列则保留了更强的泛化能力，更注重方案的正确性和可靠性。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+subgraph A[&amp;#34;GPT-5.3-Codex&amp;#34;]
+direction LR
+A1[&amp;#34;生成速度: 快&amp;#34;]
+A2[&amp;#34;输出活跃度: 高&amp;#34;]
+A3[&amp;#34;思维缜密度: 中等&amp;#34;]
+A4[&amp;#34;适合场景: 快速原型、代码补全、探索阶段&amp;#34;]
+end
+subgraph B[&amp;#34;GPT-5.3 非Codex&amp;#34;]
+direction LR
+B1[&amp;#34;生成速度: 中等&amp;#34;]
+B2[&amp;#34;输出活跃度: 稳定&amp;#34;]
+B3[&amp;#34;思维缜密度: 高&amp;#34;]
+B4[&amp;#34;适合场景: 生产环境、关键项目、稳定期&amp;#34;]
+end
+A &amp;lt;--&amp;gt;|选择权衡| B
+classDef codex fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+classDef standard fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+class A,A1,A2,A3,A4 codex;
+class B,B1,B2,B3,B4 standard;&lt;/pre&gt;
+&lt;p&gt;从实际开发场景来看，如果你的需求是快速获得代码片段、实现已知明确的功能，或者需要在短时间内尝试多种方案，Codex 的积极输出和快速响应会带来明显优势。但当项目进入稳定期，对代码质量、可维护性和长期稳定性有更高要求时，非 Codex 系列仍然是更可靠的选择。&lt;/p&gt;</description></item></channel></rss>

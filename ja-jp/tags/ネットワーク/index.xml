@@ -1,4 +1,58 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ネットワーク on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/</link><description>Recent content in ネットワーク on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Tue, 02 Dec 2025 08:30:50 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflareは完全に信頼できるか</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/02/cloudflare%E3%81%AF%E5%AE%8C%E5%85%A8%E3%81%AB%E4%BF%A1%E9%A0%BC%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/</link><pubDate>Tue, 02 Dec 2025 08:30:50 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/02/cloudflare%E3%81%AF%E5%AE%8C%E5%85%A8%E3%81%AB%E4%BF%A1%E9%A0%BC%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/</guid><description>&lt;p&gt;Cloudflare、阿里雲 ESA、Tencent EdgeOne などは、ドメイン証明書を保持しており、ドメイン下のすべてのトラフィックを完全に閲覧可能。つまり、大規模な中間者である。主要機能はセキュリティで、ネットワーク上の攻撃者が多すぎるため、大規模な中間者を選ぶ利点が弊害を上回る。副次的機能として DNS、CDN、WAF などのエッジサービスを提供。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ネットワーク on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/</link><description>Recent content in ネットワーク on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 11 Feb 2026 00:00:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/tags/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>DoHとDoTの技術比較分析</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/11/doh-vs-dot-comparison/</link><pubDate>Wed, 11 Feb 2026 00:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/11/doh-vs-dot-comparison/</guid><description>&lt;p&gt;DNS over HTTPS (DoH) と DNS over TLS (DoT) は、一般的な2つの暗号化DNS伝送方式です。それらは異なるプロトコルスタックを通じてDNSクエリの安全な伝送を実現します。DoTの標準は &lt;a href="https://datatracker.ietf.org/doc/html/rfc7858"&gt;RFC 7858&lt;/a&gt; によって定義されており、DoHは &lt;a href="https://datatracker.ietf.org/doc/html/rfc8484"&gt;DNS Queries over HTTPS (DoH)&lt;/a&gt; によって標準化されています。これら2つの技術の本質的な違いを理解するには、ネットワークプロトコルの階層構造から分析する必要があります。&lt;/p&gt;
+&lt;h2 id="ネットワークプロトコルの階層構造"&gt;ネットワークプロトコルの階層構造&lt;/h2&gt;
+&lt;p&gt;最新のネットワークプロトコルスタックは階層化設計を採用しており、各層は異なる機能を提供します。DNSはアプリケーション層プロトコルとして、特定の伝送方式にバインドされるわけではなく、複数の搬送プロトコル上で動作可能です。&lt;/p&gt;
+&lt;p&gt;アプリケーション層 (L7) には、HTTP/1.1、HTTP/2、HTTP/3、FTP、DNSなどのプロトコルが含まれます。注目すべきは、HTTP/3のセマンティクスは依然としてアプリケーション層にありますが、QUICが伝送の担い手となる点です。セキュリティ層はアプリケーション層とトランスポート層の間に位置し、主にTLSとその変種を含みます。TLSは通常TCP上で動作します（例：HTTPSやDoT）。DTLSはTLSのデータグラム版で、UDP上で動作可能です。QUICプロトコルは特殊で、プロトコル内部にTLS 1.3のハンドシェイクと鍵派生を直接統合しています。&lt;/p&gt;
+&lt;p&gt;QUICはL4.5層プロトコルと見なすことができ、UDPをベースに拡張され、従来のトランスポート層の機能を提供します。トランスポート層 (L4) には、TCP、UDP、QUICが含まれます。エンジニアリングの実装観点からはQUICはUDPに基づいていますが、信頼性、輻輳制御、多重化、暗号化ハンドシェイクなどの機能を備えているため、エンジニアリング的には独立したトランスポート層プロトコルとして扱われます。ネットワーク層 (L3) はIPプロトコル (IPv4/IPv6) を使用してパケットのルーティングと転送を担当します。データリンク層 (L2) には、イーサネットやWi-Fi (802.11) などの技術が含まれます。&lt;/p&gt;
+&lt;p&gt;TLSは暗号化手段として、アプリケーション層とトランスポート層の間で機能します。DoTからTLS暗号化を取り除くと、DoTは本質的にDNS over TCPになります。この階層化設計により、暗号化はオプションとなり、プロトコル自体の強制的な制約ではなくなります。&lt;/p&gt;
+&lt;h2 id="plain-dnsの特徴"&gt;Plain DNSの特徴&lt;/h2&gt;
+&lt;p&gt;最も一般的なDNSはPlain DNSと呼ばれ、UDPまたはTCP上で動作します。UDPは接続確立が簡単で、初回クエリ速度が速いため、最も一般的な搬送方式です。しかし、UDPの弱点は信頼性が低く、パケットがネットワーク内で消失しやすいことです。TCPはハンドシェイク回数が多く、初回接続速度はUDPより約30%遅いですが、長時間接続を確立した後は、応答速度はUDPと同じになります。&lt;/p&gt;
+&lt;p&gt;通信キャリアはネットワークが混雑すると、機器の負荷を軽減するためにUDPパケットを破棄することを選択することがあります。UDPパケットロスが深刻な地域のキャリアの場合、DNSクエリにTCPを使用するよう指定する方が有利な場合があります。TCPには再送メカニズムがあり、パケットロスが発生してもデータの確実な到着を保証できます。一方、UDPパケットを破棄しても小規模なキャリア設備の負荷圧は軽減されず、再試行により不確実性が増すだけです。&lt;/p&gt;
+&lt;h2 id="アプリケーション層のネスト"&gt;アプリケーション層のネスト&lt;/h2&gt;
+&lt;p&gt;DNSとHTTPはどちらもアプリケーション層プロトコルであり、DoHは本質的にあるアプリケーション層プロトコルが別のアプリケーション層プロトコルをネストしたものです。DoHが必ずしもDNS over HTTPSである必要はなく、通常のHTTPを使用することも可能ですが、暗号化されていないDoHは平文リクエストであり、Plain DNSよりも利点がないため、ごく限られた特殊なニーズがある場合にのみ使用されます。&lt;/p&gt;
+&lt;p&gt;理論上は、DNS over FTPなど、任意のアプリケーション層プロトコル上でDNSを伝送できます。これは、対応するサーバーとクライアントを開発するだけです。この柔軟性は、アプリケーション層プロトコルの組み合わせの可能性を示しています。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TD
+subgraph L7[&amp;#34;アプリケーション層&amp;#34;]
+A[DNS]
+B[HTTP]
+C[FTP]
+end
+subgraph Security[&amp;#34;セキュリティ層&amp;#34;]
+D[TLS]
+E[DTLS]
+end
+subgraph Transport[&amp;#34;トランスポート層&amp;#34;]
+F[TCP]
+G[UDP]
+H[QUIC]
+end
+subgraph L3[&amp;#34;ネットワーク層&amp;#34;]
+I[IP]
+end
+subgraph L2[&amp;#34;データリンク層&amp;#34;]
+J[Ethernet]
+K[WiFi]
+end
+A --&amp;gt; D
+B --&amp;gt; D
+C --&amp;gt; D
+D --&amp;gt; F
+E --&amp;gt; G
+H --&amp;gt; G
+F --&amp;gt; I
+G --&amp;gt; I
+H --&amp;gt; I
+I --&amp;gt; J
+I --&amp;gt; K
+style A fill:#e1f5ff
+style B fill:#e1f5ff
+style C fill:#e1f5ff
+style D fill:#fff4e1
+style E fill:#fff4e1
+style F fill:#ffe1e1
+style G fill:#ffe1e1
+style H fill:#e1ffe1&lt;/pre&gt;
+&lt;h2 id="トランスポート層のネスト"&gt;トランスポート層のネスト&lt;/h2&gt;
+&lt;p&gt;QUICプロトコルはUDPに基づき、同時にトランスポート層でコネクション型のサービスを提供します。QUICは、TCPが持つコネクション型、輻輳制御、再送、フロー制御、フラグメンテーションと再構成などのトランスポート層機能を実装しています。TCPに比べてQUICはレイテンシが低く、UDPに比べてQUICはより高度で信頼性があります。&lt;/p&gt;</description></item><item><title>Cloudflareは完全に信頼できるか</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/02/cloudflare%E3%81%AF%E5%AE%8C%E5%85%A8%E3%81%AB%E4%BF%A1%E9%A0%BC%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/</link><pubDate>Tue, 02 Dec 2025 08:30:50 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/02/cloudflare%E3%81%AF%E5%AE%8C%E5%85%A8%E3%81%AB%E4%BF%A1%E9%A0%BC%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/</guid><description>&lt;p&gt;Cloudflare、阿里雲 ESA、Tencent EdgeOne などは、ドメイン証明書を保持しており、ドメイン下のすべてのトラフィックを完全に閲覧可能。つまり、大規模な中間者である。主要機能はセキュリティで、ネットワーク上の攻撃者が多すぎるため、大規模な中間者を選ぶ利点が弊害を上回る。副次的機能として DNS、CDN、WAF などのエッジサービスを提供。&lt;/p&gt;
 &lt;p&gt;Cloudflare のようなサービスは DDOS を効果的に防御でき、少しの遅延増加で防御能力を得る、とてもお得。各站長はこうしたサービスを直接使うべき。ネットワーク攻撃はどこにでもあり、幸運を期待せず、遅かれ早かれ攻撃される。一部の攻撃は脆弱性探しで、サイト運営者のレベルに関連。他はリソース消費目的、例えば DDOS で、商用ネットワークと家庭ネットワークのコスト非対称性を悪用した攻撃。これは陽謀で、多くの場合金で対抗するか、サービスを直接停止し、全ユーザーを放棄する、いわゆるブラックホール防御しかない。&lt;/p&gt;
 &lt;p&gt;大多数の攻撃者は、サイトが Cloudflare で保護されているのを見ると攻撃を直接諦める。其实、攻撃者はオリジナルサーバーではなく Cloudflare を攻撃することを考えられる。同じくデータ入手可能、ただ難易度が高いかも。しかし、世界は草台班子だと信じ、何事も不可能ではない。実際、ネットワーク上の大多数の攻撃行為は気づかれず、大多数の攻撃者は発見されず、大多数の攻撃行為も追究されない。Cloudflare はコスト優位で DDOS を対抗可能だが、コードが銅墙鉄壁とは限らず、Cloudflare 類サービスを攻撃して原站データを入手する可能性は 0 ではない。&lt;/p&gt;</description></item><item><title>非典型的な家庭ネットワーク問題の1回のトラブルシューティング記録</title><link>https://blog.jqknono.com/ja-jp/blog/2025/11/29/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%9E%E5%85%B8%E5%9E%8B%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</link><pubDate>Sat, 29 Nov 2025 11:25:30 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/11/29/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%9E%E5%85%B8%E5%9E%8B%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</guid><description>&lt;p&gt;現象は、小新ノートパソコンを書斎から持ち出すと家族全員がネットに繋がらなくなり、書斎に戻して電源を挿すと、家内のネットワークが正常に戻るというもの。自宅構築の&lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;nullprivate DNS&lt;/a&gt;が時々中断し、主機が時々繋がらなくなり、後で交換機の問題と確認、重启交換機で解決。
 &lt;img src="https://share.jqknono.com/image/blog/44f37f2cac1dd15771546949a8d81680.jpg" alt=""&gt;&lt;/p&gt;

@@ -1,0 +1,32 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>コスト on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/tags/%E3%82%B3%E3%82%B9%E3%83%88/</link><description>Recent content in コスト on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Wed, 07 Jan 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/tags/%E3%82%B3%E3%82%B9%E3%83%88/index.xml" rel="self" type="application/rss+xml"/><item><title>Vibe Coding のコスト削減公式と臨界点</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/07/vibe-coding-cost-formulas/</link><pubDate>Wed, 07 Jan 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/07/vibe-coding-cost-formulas/</guid><description>&lt;p&gt;AIコーディングツールの課金モデルは、主に以下の3種類に分類できます:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Token課金&lt;/strong&gt;: 各種API、Claude Code (Claude Pro)、Codex Cli (ChatGPT Plus)、智譜 Lite/Pro、Cursor新版などが含まれます。本質的にはすべてToken課金であり、一部の製品はパッケージ割引を提供しています。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API呼び出し回数課金&lt;/strong&gt;: OpenRouter (無料枠)、ModelScope、Gemini Code Assistant (毎日1000回無料)、Chutesなど。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;プロンプト回数課金&lt;/strong&gt;: Cursor旧版 (500回)、Github Copilot (300回) など。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;これら3つのモデルは本質的にすべて、モデル推論とコンテキスト処理に対して支払うものであり、違いは課金の粒度と上限の形式に現れます。&lt;/p&gt;
+&lt;p&gt;本文では、統一されたコストモデルを構築し、実用的な変数定義と計算式を提供して、異なるワークロードや方法におけるツール選択の臨界点を特定します。コストの検討には、現金支出、時間の消費、やり直しのリスクが含まれます。&lt;/p&gt;
+&lt;h2 id="統一された総コスト関数"&gt;統一された総コスト関数&lt;/h2&gt;
+&lt;p&gt;任意のツール $i$ について、1つの課金サイクル内の総コストは次のように記述できます:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\mathrm{Total}_i &amp;amp;= \mathrm{Cash}_i + \mathrm{Time}_i + \mathrm{Risk}_i \
+\mathrm{Time}_i &amp;amp;= R \cdot \mathrm{Hours}_i \
+\mathrm{Risk}_i &amp;amp;= R \cdot \mathrm{ReworkHours}_i
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;ここで $R$ はあなたの時間単価（元/時間）です。時間を考慮したくない場合は $R$ を 0 に設定すると、式は純粋な現金コストの比較に簡略化されます。&lt;/p&gt;
+&lt;h2 id="変数の定義"&gt;変数の定義&lt;/h2&gt;
+&lt;p&gt;3種類の課金モデルを統一するため、ワークロードを「セッション（session）」と「イテレーション（iteration）」の2つの階層に分割します。新しいプロジェクトに入る際のスキャンとインデックス作成は1回限りの操作であり、同じコンテキスト内での継続的な対話とコード修正は反復可能な操作です。&lt;/p&gt;
+&lt;p&gt;変数を定義します:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S_i$: ツール $i$ の固定費用（サブスクリプション料または月額最低利用料金）&lt;/li&gt;
+&lt;li&gt;$N_s$: 本サイクル内の新しいセッション数（プロジェクト切り替え、コンテキストクリア、新規セッション開始をすべて含む）&lt;/li&gt;
+&lt;li&gt;$N_{it}$: 本サイクル内の有効なイテレーション回数（要件明確化、コード修正、エラー修正など）&lt;/li&gt;
+&lt;li&gt;$R$: 時間単価（元/時間）&lt;/li&gt;
+&lt;li&gt;$h0_i$: 新しいセッションごとのコールドスタート所要時間（時間）&lt;/li&gt;
+&lt;li&gt;$h1_i$: イテレーションごとの平均所要時間（時間）&lt;/li&gt;
+&lt;li&gt;$p_{\mathrm{fail},i}$: イテレーションごとの失敗によりやり直しが必要となる確率（0 から 1）&lt;/li&gt;
+&lt;li&gt;$h_{\mathrm{re},i}$: やり直し1回あたりの平均所要時間（時間）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;したがって、時間とリスクの項は次のように記述できます:&lt;/p&gt;</description></item></channel></rss>

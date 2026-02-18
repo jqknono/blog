@@ -1,4 +1,57 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/tags/ai/</link><description>Recent content in AI on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 02 Feb 2026 10:00:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>免费AI图标生成工具汇总</title><link>https://blog.jqknono.com/zh-cn/blog/2026/02/02/free-ai-icon-generators/</link><pubDate>Mon, 02 Feb 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2026/02/02/free-ai-icon-generators/</guid><description>&lt;p&gt;随着人工智能技术的发展，设计师和开发者现在可以通过简单的文字提示快速生成各类图标。这些免费AI图标生成工具大大降低了设计门槛，让不具备专业设计技能的用户也能创建出高质量的视觉元素。以下这些工具都支持通过文字描述生成图像，输出格式通常为PNG或SVG，部分工具还提供风格和配色调整功能。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/tags/ai/</link><description>Recent content in AI on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 17 Feb 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>GPT-5.3-Codex 初体验：从惊喜到理性评估</title><link>https://blog.jqknono.com/zh-cn/posts/ai/gpt-53-codex-experience/</link><pubDate>Tue, 17 Feb 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/posts/ai/gpt-53-codex-experience/</guid><description>&lt;p&gt;OpenAI 在 GPT-5.3 正式版尚未发布之际，率先推出了 GPT-5.3-Codex 这一特化模型。从商业逻辑来看，这一决策不难理解。GPT-5.3-Codex 与标准版 GPT-5.3 定价相同，但其输出更为积极，执行时间更短，内存占用更少，这意味着更高的利润空间。对于 OpenAI 而言，GPT-5.3-Codex 显然是一个更具成本效益的选择。&lt;/p&gt;
+&lt;p&gt;在 GPT-5.3-Codex 发布的第一周，我的使用体验确实令人惊喜。模型响应速度明显优于之前的版本，代码生成的反馈非常及时。对于需要快速迭代、频繁交互的开发场景，这种效率提升带来了直观的生产力改善。当需要在短时间内获得多个实现方案或快速验证想法时，Codex 的积极输出特性显得尤为有用。&lt;/p&gt;
+&lt;p&gt;然而进入第二周后，情况发生了明显变化。模型的响应速度出现显著下降，原本流畅的交互体验开始变得卡顿。这种性能波动让人联想到云服务中常见的资源调度问题，可能是在用户量增长后，服务器负载分配策略导致的降级服务。&lt;/p&gt;
+&lt;p&gt;除了性能波动，更值得关注的是 Codex 在思维缜密程度上的不足。与非 Codex 系列相比，它在处理复杂逻辑、边缘情况处理和代码健壮性方面表现较弱。当面对需要深度推理、多步骤规划或抽象理解的任务时，Codex 更倾向于给出表面可行的方案，而缺乏对潜在问题的预判。&lt;/p&gt;
+&lt;p&gt;这种差异背后反映了两个模型在设计目标上的不同。Codex 似乎更注重生成速度和输出活跃度，适合快速原型开发、代码补全和简单任务的自动化。而非 Codex 系列则保留了更强的泛化能力，更注重方案的正确性和可靠性。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+subgraph A[&amp;#34;GPT-5.3-Codex&amp;#34;]
+direction LR
+A1[&amp;#34;生成速度: 快&amp;#34;]
+A2[&amp;#34;输出活跃度: 高&amp;#34;]
+A3[&amp;#34;思维缜密度: 中等&amp;#34;]
+A4[&amp;#34;适合场景: 快速原型、代码补全、探索阶段&amp;#34;]
+end
+subgraph B[&amp;#34;GPT-5.3 非Codex&amp;#34;]
+direction LR
+B1[&amp;#34;生成速度: 中等&amp;#34;]
+B2[&amp;#34;输出活跃度: 稳定&amp;#34;]
+B3[&amp;#34;思维缜密度: 高&amp;#34;]
+B4[&amp;#34;适合场景: 生产环境、关键项目、稳定期&amp;#34;]
+end
+A &amp;lt;--&amp;gt;|选择权衡| B
+classDef codex fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+classDef standard fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+class A,A1,A2,A3,A4 codex;
+class B,B1,B2,B3,B4 standard;&lt;/pre&gt;
+&lt;p&gt;从实际开发场景来看，如果你的需求是快速获得代码片段、实现已知明确的功能，或者需要在短时间内尝试多种方案，Codex 的积极输出和快速响应会带来明显优势。但当项目进入稳定期，对代码质量、可维护性和长期稳定性有更高要求时，非 Codex 系列仍然是更可靠的选择。&lt;/p&gt;</description></item><item><title>OpenRouter gpt-oss-120b 模型不支持中文请求的调试记录</title><link>https://blog.jqknono.com/zh-cn/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</link><pubDate>Mon, 09 Feb 2026 22:00:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</guid><description>&lt;p&gt;在使用 &lt;a href="https://openrouter.ai/"&gt;OpenRouter&lt;/a&gt; 提供的免费模型 API 时, 我遇到了一个令人困惑的问题. 同样的请求结构, 仅仅修改了提示词的语言, 就会出现完全不同的结果.&lt;/p&gt;
+&lt;h2 id="问题复现"&gt;问题复现&lt;/h2&gt;
+&lt;p&gt;我使用 &lt;code&gt;openai/gpt-oss-120b:free&lt;/code&gt; 模型进行测试, 两个请求的唯一区别在于提示词语言. 第一个请求使用中文提示:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://openrouter.ai/api/v1/chat/completions &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Authorization: Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -d &lt;span class="s1"&gt;&amp;#39;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;model&amp;#34;: &amp;#34;openai/gpt-oss-120b:free&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;messages&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;content&amp;#34;: &amp;#34;你是一个专业的本地化翻译专家&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个请求总是返回 429 状态码, 表示请求过于频繁或超出了配额限制. 然而当我使用英文提示时:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://openrouter.ai/api/v1/chat/completions &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Authorization: Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -d &lt;span class="s1"&gt;&amp;#39;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;model&amp;#34;: &amp;#34;openai/gpt-oss-120b:free&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;messages&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;content&amp;#34;: &amp;#34;You are a professional localization translation expert&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;请求能够正常响应, 返回预期的模型输出.&lt;/p&gt;</description></item><item><title>免费AI图标生成工具汇总</title><link>https://blog.jqknono.com/zh-cn/blog/2026/02/02/free-ai-icon-generators/</link><pubDate>Mon, 02 Feb 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2026/02/02/free-ai-icon-generators/</guid><description>&lt;p&gt;随着人工智能技术的发展，设计师和开发者现在可以通过简单的文字提示快速生成各类图标。这些免费AI图标生成工具大大降低了设计门槛，让不具备专业设计技能的用户也能创建出高质量的视觉元素。以下这些工具都支持通过文字描述生成图像，输出格式通常为PNG或SVG，部分工具还提供风格和配色调整功能。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.freepik.com/ai/icon-generator"&gt;Freepik AI图示生成器&lt;/a&gt;是一款在线AI图示生成工具，能够根据文字描述生成SVG或PNG格式的图标。这款工具非常适合网页设计和UI设计场景，免费用户可以使用但存在每日生成数量的限制。对于需要快速获取图标素材的设计工作来说，Freepik提供了一个便捷的解决方案。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.pixelcut.ai/create/icon-generator"&gt;Pixelcut AI图标生成器&lt;/a&gt;专注于提供简单直观的图标生成体验。用户只需输入文字提示，即可生成自定义图标。该工具的操作流程简洁明了，适合不熟悉复杂设计软件的用户快速上手。生成的图标可以直接下载使用，为个人项目或小型网站提供视觉支持。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://iconscout.com/ai/icon-generator"&gt;IconScout AI图标生成器&lt;/a&gt;支持通过简单文本生成图标，并提供多种风格选择。这款工具特别适合设计项目、博客文章和展示用途。多样化的风格选项让用户可以根据项目需求选择合适的视觉风格，从而保持整体设计的一致性。&lt;/p&gt;

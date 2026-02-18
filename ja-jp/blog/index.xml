@@ -1,4 +1,148 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ブログ on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/blog/</link><description>Recent content in ブログ on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 13 Nov 2023 14:15:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows 上でリモートブラウザデバッグエントリを構築する</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文は、Windows ホスト上で Chrome を実行し、CDP 経由でリモートデバッグエントリを提供して、ローカルネットワーク内の Linux クライアントや MCP からの接続を可能にする方法を説明します。この方法の核は、Chrome が 127.0.0.1 だけをリスンし、portproxy で LAN アドレスにマッピングし、ファイアウォールで遠隔側の発信元を制限することです。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ブログ on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/blog/</link><description>Recent content in ブログ on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 13 Nov 2023 14:15:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>GPT非Codexへの回帰</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/11/return-to-gpt-non-codex/</link><pubDate>Wed, 11 Feb 2026 10:55:39 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/11/return-to-gpt-non-codex/</guid><description>&lt;p&gt;OpenAIはCodexモデルを強く推進したいようで、GPT-5.3が出る前に先にGPT-5.3-Codexをリリースしました。価格は同じですが、Codexの方が出力がより積極的で、実行時間が短く、メモリ使用時間も少なく、より大きな利益空間があります。&lt;/p&gt;
+&lt;p&gt;GPT-5.3-Codexが出た最初の週、私が使ってみたところ体験はとても良く、主に速度が速く、フィードバックが迅速でした。しかし2週目に入ると速度低下が顕著になり、同時にその思考の綿密さはGPT非Codexシリーズには及びませんでした。そのため、私はやはり非Codexシリーズをお勧めします。一度で正解を出す確率が依然として最も高く、記述された範囲を超えたことはしませんが、記述されたことはバグなくこなします。&lt;/p&gt;</description></item><item><title>DoHとDoTの技術比較分析</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/11/doh-vs-dot-comparison/</link><pubDate>Wed, 11 Feb 2026 00:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/11/doh-vs-dot-comparison/</guid><description>&lt;p&gt;DNS over HTTPS (DoH) と DNS over TLS (DoT) は、一般的な2つの暗号化DNS伝送方式です。それらは異なるプロトコルスタックを通じてDNSクエリの安全な伝送を実現します。DoTの標準は &lt;a href="https://datatracker.ietf.org/doc/html/rfc7858"&gt;RFC 7858&lt;/a&gt; によって定義されており、DoHは &lt;a href="https://datatracker.ietf.org/doc/html/rfc8484"&gt;DNS Queries over HTTPS (DoH)&lt;/a&gt; によって標準化されています。これら2つの技術の本質的な違いを理解するには、ネットワークプロトコルの階層構造から分析する必要があります。&lt;/p&gt;
+&lt;h2 id="ネットワークプロトコルの階層構造"&gt;ネットワークプロトコルの階層構造&lt;/h2&gt;
+&lt;p&gt;最新のネットワークプロトコルスタックは階層化設計を採用しており、各層は異なる機能を提供します。DNSはアプリケーション層プロトコルとして、特定の伝送方式にバインドされるわけではなく、複数の搬送プロトコル上で動作可能です。&lt;/p&gt;
+&lt;p&gt;アプリケーション層 (L7) には、HTTP/1.1、HTTP/2、HTTP/3、FTP、DNSなどのプロトコルが含まれます。注目すべきは、HTTP/3のセマンティクスは依然としてアプリケーション層にありますが、QUICが伝送の担い手となる点です。セキュリティ層はアプリケーション層とトランスポート層の間に位置し、主にTLSとその変種を含みます。TLSは通常TCP上で動作します（例：HTTPSやDoT）。DTLSはTLSのデータグラム版で、UDP上で動作可能です。QUICプロトコルは特殊で、プロトコル内部にTLS 1.3のハンドシェイクと鍵派生を直接統合しています。&lt;/p&gt;
+&lt;p&gt;QUICはL4.5層プロトコルと見なすことができ、UDPをベースに拡張され、従来のトランスポート層の機能を提供します。トランスポート層 (L4) には、TCP、UDP、QUICが含まれます。エンジニアリングの実装観点からはQUICはUDPに基づいていますが、信頼性、輻輳制御、多重化、暗号化ハンドシェイクなどの機能を備えているため、エンジニアリング的には独立したトランスポート層プロトコルとして扱われます。ネットワーク層 (L3) はIPプロトコル (IPv4/IPv6) を使用してパケットのルーティングと転送を担当します。データリンク層 (L2) には、イーサネットやWi-Fi (802.11) などの技術が含まれます。&lt;/p&gt;
+&lt;p&gt;TLSは暗号化手段として、アプリケーション層とトランスポート層の間で機能します。DoTからTLS暗号化を取り除くと、DoTは本質的にDNS over TCPになります。この階層化設計により、暗号化はオプションとなり、プロトコル自体の強制的な制約ではなくなります。&lt;/p&gt;
+&lt;h2 id="plain-dnsの特徴"&gt;Plain DNSの特徴&lt;/h2&gt;
+&lt;p&gt;最も一般的なDNSはPlain DNSと呼ばれ、UDPまたはTCP上で動作します。UDPは接続確立が簡単で、初回クエリ速度が速いため、最も一般的な搬送方式です。しかし、UDPの弱点は信頼性が低く、パケットがネットワーク内で消失しやすいことです。TCPはハンドシェイク回数が多く、初回接続速度はUDPより約30%遅いですが、長時間接続を確立した後は、応答速度はUDPと同じになります。&lt;/p&gt;
+&lt;p&gt;通信キャリアはネットワークが混雑すると、機器の負荷を軽減するためにUDPパケットを破棄することを選択することがあります。UDPパケットロスが深刻な地域のキャリアの場合、DNSクエリにTCPを使用するよう指定する方が有利な場合があります。TCPには再送メカニズムがあり、パケットロスが発生してもデータの確実な到着を保証できます。一方、UDPパケットを破棄しても小規模なキャリア設備の負荷圧は軽減されず、再試行により不確実性が増すだけです。&lt;/p&gt;
+&lt;h2 id="アプリケーション層のネスト"&gt;アプリケーション層のネスト&lt;/h2&gt;
+&lt;p&gt;DNSとHTTPはどちらもアプリケーション層プロトコルであり、DoHは本質的にあるアプリケーション層プロトコルが別のアプリケーション層プロトコルをネストしたものです。DoHが必ずしもDNS over HTTPSである必要はなく、通常のHTTPを使用することも可能ですが、暗号化されていないDoHは平文リクエストであり、Plain DNSよりも利点がないため、ごく限られた特殊なニーズがある場合にのみ使用されます。&lt;/p&gt;
+&lt;p&gt;理論上は、DNS over FTPなど、任意のアプリケーション層プロトコル上でDNSを伝送できます。これは、対応するサーバーとクライアントを開発するだけです。この柔軟性は、アプリケーション層プロトコルの組み合わせの可能性を示しています。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TD
+subgraph L7[&amp;#34;アプリケーション層&amp;#34;]
+A[DNS]
+B[HTTP]
+C[FTP]
+end
+subgraph Security[&amp;#34;セキュリティ層&amp;#34;]
+D[TLS]
+E[DTLS]
+end
+subgraph Transport[&amp;#34;トランスポート層&amp;#34;]
+F[TCP]
+G[UDP]
+H[QUIC]
+end
+subgraph L3[&amp;#34;ネットワーク層&amp;#34;]
+I[IP]
+end
+subgraph L2[&amp;#34;データリンク層&amp;#34;]
+J[Ethernet]
+K[WiFi]
+end
+A --&amp;gt; D
+B --&amp;gt; D
+C --&amp;gt; D
+D --&amp;gt; F
+E --&amp;gt; G
+H --&amp;gt; G
+F --&amp;gt; I
+G --&amp;gt; I
+H --&amp;gt; I
+I --&amp;gt; J
+I --&amp;gt; K
+style A fill:#e1f5ff
+style B fill:#e1f5ff
+style C fill:#e1f5ff
+style D fill:#fff4e1
+style E fill:#fff4e1
+style F fill:#ffe1e1
+style G fill:#ffe1e1
+style H fill:#e1ffe1&lt;/pre&gt;
+&lt;h2 id="トランスポート層のネスト"&gt;トランスポート層のネスト&lt;/h2&gt;
+&lt;p&gt;QUICプロトコルはUDPに基づき、同時にトランスポート層でコネクション型のサービスを提供します。QUICは、TCPが持つコネクション型、輻輳制御、再送、フロー制御、フラグメンテーションと再構成などのトランスポート層機能を実装しています。TCPに比べてQUICはレイテンシが低く、UDPに比べてQUICはより高度で信頼性があります。&lt;/p&gt;</description></item><item><title>OpenRouter gpt-oss-120b モデルが中国語リクエストをサポートしていないデバッグ記録</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</link><pubDate>Mon, 09 Feb 2026 22:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</guid><description>&lt;p&gt;&lt;a href="https://openrouter.ai/"&gt;OpenRouter&lt;/a&gt; が提供する無料モデル API を使用している際、戸惑う問題に遭遇しました。全く同じリクエスト構造で、プロンプトの言語を変更しただけなのに、全く異なる結果が出力されたのです。&lt;/p&gt;
+&lt;h2 id="問題の再現"&gt;問題の再現&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;openai/gpt-oss-120b:free&lt;/code&gt; モデルを使用してテストを行いました。2つのリクエストの唯一の違いは、プロンプトの言語だけです。1つ目のリクエストでは中国語のプロンプトを使用しました：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://openrouter.ai/api/v1/chat/completions &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Authorization: Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -d &lt;span class="s1"&gt;&amp;#39;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;model&amp;#34;: &amp;#34;openai/gpt-oss-120b:free&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;messages&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;content&amp;#34;: &amp;#34;你是一个专业的本地化翻译专家&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このリクエストは常に 429 ステータスコードを返し、リクエストが頻繁すぎるか、クォータ制限を超えていることを示します。しかし、英語のプロンプトを使用した場合：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://openrouter.ai/api/v1/chat/completions &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Authorization: Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -d &lt;span class="s1"&gt;&amp;#39;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;model&amp;#34;: &amp;#34;openai/gpt-oss-120b:free&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;messages&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;content&amp;#34;: &amp;#34;You are a professional localization translation expert&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;リクエストは正常に応答し、期待されるモデル出力が返されました。&lt;/p&gt;</description></item><item><title>無料AIアイコン生成ツールまとめ</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/02/free-ai-icon-generators/</link><pubDate>Mon, 02 Feb 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/02/free-ai-icon-generators/</guid><description>&lt;p&gt;AI技術の進歩に伴い、デザイナーや開発者は現在、シンプルなテキストプロンプトを通じて素早く様々な種類のアイコンを生成できるようになりました。これらの無料AIアイコン生成ツールはデザインのハードルを大幅に下げ、専門的なデザインスキルを持たないユーザーでも高品質な視覚要素を作成できるようにします。以下のツールはすべてテキストによる画像生成をサポートしており、出力形式は通常PNGまたはSVGで、一部のツールではスタイルや配色の調整機能も提供されています。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.freepik.com/ai/icon-generator"&gt;Freepik AI アイコンジェネレーター&lt;/a&gt;は、テキストの説明に基づいてSVGまたはPNG形式のアイコンを生成できるオンラインAIアイコン生成ツールです。このツールはWebデザインやUIデザインのシーンに非常に適しており、無料ユーザーも利用可能ですが、1日の生成数に制限があります。アイコン素材を迅速に入手する必要があるデザイン作業において、Freepikは便利なソリューションを提供します。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.pixelcut.ai/create/icon-generator"&gt;Pixelcut AI アイコンジェネレーター&lt;/a&gt;は、シンプルで直感的なアイコン生成体験の提供に特化しています。ユーザーはテキストプロンプトを入力するだけで、カスタムアイコンを生成できます。このツールの操作フローはシンプルで明確であり、複雑なデザインソフトに不慣れなユーザーでも素早く使いこなせます。生成されたアイコンはそのままダウンロードして使用でき、個人のプロジェクトや小規模なWebサイトにビジュアルサポートを提供します。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://iconscout.com/ai/icon-generator"&gt;IconScout AI アイコンジェネレーター&lt;/a&gt;は、シンプルなテキストによるアイコン生成をサポートし、多彩なスタイル選択を提供します。このツールは特にデザインプロジェクト、ブログ記事、プレゼンテーション用途に適しています。多様なスタイルオプションにより、ユーザーはプロジェクトのニーズに応じて適切なビジュアルスタイルを選択でき、全体的なデザインの一貫性を保つことができます。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://quillbot.com/image-tools/ai-icon-generator"&gt;QuillBot AI アイコンジェネレーター&lt;/a&gt;は無料のオンラインツールとして、ユーザーがテキストの説明を通じて素早くアイコンを生成できるようにします。このツールの大きな利点は、生成後に追加の変換手順なしで直接ダウンロードできる点です。この即利用可能な特性により、アイコン素材を迅速に入手する必要があるユーザーにとって理想的な選択肢となっています。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.recraft.ai/generate/icons"&gt;Recraft AI アイコンジェネレーター&lt;/a&gt;は、より高度なカスタマイズオプションを提供します。ユーザーはプリセットのスタイルを選択したり、既存のブランドイメージから一貫性のあるスタイルのアイコンを生成したりできます。また、カラーパラメータのカスタマイズもサポートしており、ブランドの視覚的アイデンティティを維持する必要のある企業にとって特に重要です。Recraftで生成したアイコンは、既存のブランド要素と視覚的な一貫性を保つことができます。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.miricanvas.com/features/ja/ai-icon"&gt;MiriCanvas AI アイコンツール&lt;/a&gt;は、無料のAIアイコンおよびロゴ生成ツールです。スタイルの選択とテキスト入力をサポートしており、シンプルな操作フローでアイコンを生成できます。このツールはユーザーエクスペリエンスを重視して設計されており、デザイン背景がないユーザーでも満足のいくアイコンを簡単に作成できます。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://perchance.org/ai-icon-generator"&gt;Perchance AI Icon Generator&lt;/a&gt;は、登録不要、透かし（ウォーターマーク）なしの無料AIアイコン生成実験ツールです。その開放性と利便性により、一時的なプロジェクトやテスト用途には良い選択肢となります。アカウント作成やログインの手順がないため、ユーザーはすぐに使い始めることができ、この簡略化された使用フローは効率性を重視するユーザーに適しています。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://openart.ai/generator/icon"&gt;OpenArt AI アイコンジェネレーター&lt;/a&gt;は、無料のAIアイコン生成機能を提供し、アプリのアイコンやその他の視覚要素をカスタマイズするために使用できます。このツールの生成能力は比較的包括的であり、完全なアイコンセットを作成する必要があるユーザーに適しています。テキストプロンプトで生成結果を制御することで、ユーザーは具体的なニーズに合わせてアイコンの詳細を調整できます。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart TD
+A[AI アイコンジェネレーターの選択] --&amp;gt; B{使用ニーズの種類}
+B --&amp;gt;|迅速かつシンプル| C[Pixelcut&amp;lt;br/&amp;gt;QuillBot]
+B --&amp;gt;|プロ仕様のデザイン| D[Freepik&amp;lt;br/&amp;gt;IconScout]
+B --&amp;gt;|ブランドの一貫性| E[Recraft]
+B --&amp;gt;|登録不要| F[Perchance]
+B --&amp;gt;|完全なアイコンセット| G[OpenArt]
+B --&amp;gt;|スタイルの選択| H[MiriCanvas]
+C --&amp;gt; I{出力形式}
+D --&amp;gt; I
+E --&amp;gt; I
+F --&amp;gt; I
+G --&amp;gt; I
+H --&amp;gt; I
+I --&amp;gt;|PNG/JPG| J[Web用途]
+I --&amp;gt;|SVG| K[ベクターデザイン]
+I --&amp;gt;|両方| L[マルチシーン対応]
+J --&amp;gt; M[著作権条項に注意]
+K --&amp;gt; M
+L --&amp;gt; M
+M --&amp;gt; N[商業利用ライセンスの確認]&lt;/pre&gt;
+&lt;p&gt;これらのツールは無料利用オプションを提供していますが、ユーザーは無料の利用枠や生成回数の制限に注意する必要があります。使用前には各プラットフォームの利用規約を、特に出力画像の著作権に関する説明をよく読む必要があります。一部のツールの無料版では商用利用が禁止されていたり、使用時に出典の明記が求められたりすることがあります。これらの制限条件を明確にすることで、将来的な法的リスクを回避できます。&lt;/p&gt;</description></item><item><title>Vibe Coding のコスト削減公式と臨界点</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/07/vibe-coding-cost-formulas/</link><pubDate>Wed, 07 Jan 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/07/vibe-coding-cost-formulas/</guid><description>&lt;p&gt;AIコーディングツールの課金モデルは、主に以下の3種類に分類できます:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Token課金&lt;/strong&gt;: 各種API、Claude Code (Claude Pro)、Codex Cli (ChatGPT Plus)、智譜 Lite/Pro、Cursor新版などが含まれます。本質的にはすべてToken課金であり、一部の製品はパッケージ割引を提供しています。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API呼び出し回数課金&lt;/strong&gt;: OpenRouter (無料枠)、ModelScope、Gemini Code Assistant (毎日1000回無料)、Chutesなど。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;プロンプト回数課金&lt;/strong&gt;: Cursor旧版 (500回)、Github Copilot (300回) など。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;これら3つのモデルは本質的にすべて、モデル推論とコンテキスト処理に対して支払うものであり、違いは課金の粒度と上限の形式に現れます。&lt;/p&gt;
+&lt;p&gt;本文では、統一されたコストモデルを構築し、実用的な変数定義と計算式を提供して、異なるワークロードや方法におけるツール選択の臨界点を特定します。コストの検討には、現金支出、時間の消費、やり直しのリスクが含まれます。&lt;/p&gt;
+&lt;h2 id="統一された総コスト関数"&gt;統一された総コスト関数&lt;/h2&gt;
+&lt;p&gt;任意のツール $i$ について、1つの課金サイクル内の総コストは次のように記述できます:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{aligned}
+\mathrm{Total}_i &amp;amp;= \mathrm{Cash}_i + \mathrm{Time}_i + \mathrm{Risk}_i \
+\mathrm{Time}_i &amp;amp;= R \cdot \mathrm{Hours}_i \
+\mathrm{Risk}_i &amp;amp;= R \cdot \mathrm{ReworkHours}_i
+\end{aligned}
+$$&lt;/p&gt;
+&lt;p&gt;ここで $R$ はあなたの時間単価（元/時間）です。時間を考慮したくない場合は $R$ を 0 に設定すると、式は純粋な現金コストの比較に簡略化されます。&lt;/p&gt;
+&lt;h2 id="変数の定義"&gt;変数の定義&lt;/h2&gt;
+&lt;p&gt;3種類の課金モデルを統一するため、ワークロードを「セッション（session）」と「イテレーション（iteration）」の2つの階層に分割します。新しいプロジェクトに入る際のスキャンとインデックス作成は1回限りの操作であり、同じコンテキスト内での継続的な対話とコード修正は反復可能な操作です。&lt;/p&gt;
+&lt;p&gt;変数を定義します:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S_i$: ツール $i$ の固定費用（サブスクリプション料または月額最低利用料金）&lt;/li&gt;
+&lt;li&gt;$N_s$: 本サイクル内の新しいセッション数（プロジェクト切り替え、コンテキストクリア、新規セッション開始をすべて含む）&lt;/li&gt;
+&lt;li&gt;$N_{it}$: 本サイクル内の有効なイテレーション回数（要件明確化、コード修正、エラー修正など）&lt;/li&gt;
+&lt;li&gt;$R$: 時間単価（元/時間）&lt;/li&gt;
+&lt;li&gt;$h0_i$: 新しいセッションごとのコールドスタート所要時間（時間）&lt;/li&gt;
+&lt;li&gt;$h1_i$: イテレーションごとの平均所要時間（時間）&lt;/li&gt;
+&lt;li&gt;$p_{\mathrm{fail},i}$: イテレーションごとの失敗によりやり直しが必要となる確率（0 から 1）&lt;/li&gt;
+&lt;li&gt;$h_{\mathrm{re},i}$: やり直し1回あたりの平均所要時間（時間）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;したがって、時間とリスクの項は次のように記述できます:&lt;/p&gt;</description></item><item><title>Windows 上でリモートブラウザデバッグエントリを構築する</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文は、Windows ホスト上で Chrome を実行し、CDP 経由でリモートデバッグエントリを提供して、ローカルネットワーク内の Linux クライアントや MCP からの接続を可能にする方法を説明します。この方法の核は、Chrome が 127.0.0.1 だけをリスンし、portproxy で LAN アドレスにマッピングし、ファイアウォールで遠隔側の発信元を制限することです。&lt;/p&gt;
 &lt;h2 id="トポロジとフロー"&gt;トポロジとフロー&lt;/h2&gt;
 &lt;p&gt;下図は、Windows ホスト内部でのポートのフローと、クライアントが LAN アドレスからアクセスする方法を示しています。&lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart TB
@@ -320,7 +464,4 @@ Alibabaは無料で100GBのトラフィック&lt;/p&gt;
 &lt;p&gt;なぜ AI 生成のコンテンツは識別されてしまうのでしょうか？推測ですが、AI 生成のものには一種の「偽人感」があるのかもしれません。AI はインターネット上の膨大な人間活動データで学習させられているにもかかわらず、AI が生成するものには違和感を感じることがよくあります。おそらく AI には身体の触覚神経がなく、内分泌ホルモンもありません。社会的つながりを渇望せず、AI の欲求は人間の欲求と大きく異なります。AI と人間の対話では、「遠回しに自分を自慢する」「取り上げて他人を貶める」「相互に覗き見ながら噂話をする」ようなことがありません。AI は自分を自慢せず、第三者を貶めず、質問者に対してもあまり興味を示さず、まるで坊主のようにほとんど感情がなく、問題を解決することだけに集中しているように感じます。&lt;/p&gt;
 &lt;p&gt;人間自身がよく間違えるにもかかわらず、人間は「正しさ」を求めており、AI に正しい結果を出してもらいたいと思っています。この「正しさ」への追求が AI の偽人感を生んでいるのでしょうか？AI は「自己疑念」の感覚もほとんど与えません。非常に愚かな小さなモデルでさえも自信に満ち、堂々と語ります。いくつかの愚かな AI モデルはその知識ベースを疑いなく信じており、間違ったメタ認知を持っている可能性があり、疑う精神に欠けているかもしれませんが、それでも「偽人」感を与えるべきではありません。愚か者と「偽人」は同じではありません。&lt;/p&gt;
 &lt;p&gt;AI には価値観の傾向があるでしょうか？ウェブ端末のモデルサービスの出力は通常、センシティブな話題を避けるためのゲートが追加され、モデルサービスプロバイダーは人間が AI に感情的依存をしたり、AI の言うことに盲目的に従ったりすることを望んでいません。AI が人間を誘導して傷つける事件を避けるためです。人間の醜悪な側面はモデル内で露呈することを禁止されており、おそらく白黒混在こそが人間であり、AI は通常黒色の部分を混ぜることが許可されていないのかもしれません。&lt;/p&gt;
-&lt;p&gt;現在、一部の AI モデルは年齢制限を追加しており、一般大衆はそれが黄色コンテンツを可能にするものだと考えていますが、AI が使用者に合わせた価値観を持つモデルに調教されることを許可されるのかもしれません。価値観は何かを捨てるかどうかに関わるものです。将来、AI は使用者に何を捨てられるかを伝えるようになり、人間と共生し、感情的つながりを築き、個別化されたモデルになるかもしれません。そして、常に道具の役割だけではなくなるでしょう。そのときの AI はより人間らしさを感じさせるかもしれません。&lt;/p&gt;</description></item><item><title>実用的なマウスキー割り当て共有</title><link>https://blog.jqknono.com/ja-jp/blog/2025/11/07/useful-mouse-key-mapping-share/</link><pubDate>Fri, 07 Nov 2025 18:09:37 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/11/07/useful-mouse-key-mapping-share/</guid><description>&lt;p&gt;マウスの&lt;code&gt;ボタン 5&lt;/code&gt;を&lt;code&gt;F12&lt;/code&gt;に割り当て
-Visual Studio と VS Code で&lt;code&gt;F12&lt;/code&gt;は定義に移動する機能
-&lt;code&gt;Shift + F12&lt;/code&gt;は参照先に移動する機能&lt;/p&gt;
-&lt;p&gt;これにより、コードを快適に閲覧できる姿勢が得られます。右利きの人はぜひお試しください。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;現在、一部の AI モデルは年齢制限を追加しており、一般大衆はそれが黄色コンテンツを可能にするものだと考えていますが、AI が使用者に合わせた価値観を持つモデルに調教されることを許可されるのかもしれません。価値観は何かを捨てるかどうかに関わるものです。将来、AI は使用者に何を捨てられるかを伝えるようになり、人間と共生し、感情的つながりを築き、個別化されたモデルになるかもしれません。そして、常に道具の役割だけではなくなるでしょう。そのときの AI はより人間らしさを感じさせるかもしれません。&lt;/p&gt;</description></item></channel></rss>

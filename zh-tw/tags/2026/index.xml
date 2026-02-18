@@ -1,0 +1,30 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2026 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/tags/2026/</link><description>Recent content in 2026 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Wed, 11 Feb 2026 10:55:39 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/tags/2026/index.xml" rel="self" type="application/rss+xml"/><item><title>return-to-gpt-non-codex</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/11/return-to-gpt-non-codex/</link><pubDate>Wed, 11 Feb 2026 10:55:39 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/11/return-to-gpt-non-codex/</guid><description>&lt;p&gt;OpenAI似乎很想推Codex模型，GPT-5.3還沒出，先出GPT-5.3-Codex.一樣的價格，Codex輸出更積極，執行時間更短，記憶體佔用時間更少，有更大利潤空間.&lt;/p&gt;
+&lt;p&gt;GPT-5.3-Codex出來第一週我用了體驗很好，主要是速度快，反饋及時. 但進入第二週其降速明顯，同時其思維縝密程度不如GPT非Codex系列，因此我還是推薦非Codex系列，其一次做對的概率仍然是最高的，它不會做超出描述的事，但能描述出的事做的沒有bug.&lt;/p&gt;</description></item><item><title>OpenRouter gpt-oss-120b 模型不支援中文請求的除錯記錄</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</link><pubDate>Mon, 09 Feb 2026 22:00:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</guid><description>&lt;p&gt;在使用 &lt;a href="https://openrouter.ai/"&gt;OpenRouter&lt;/a&gt; 提供的免費模型 API 時，我遇到了一個令人困惑的問題。同樣的請求結構，僅僅修改了提示詞的語言，就會出現完全不同的結果。&lt;/p&gt;
+&lt;h2 id="問題復現"&gt;問題復現&lt;/h2&gt;
+&lt;p&gt;我使用 &lt;code&gt;openai/gpt-oss-120b:free&lt;/code&gt; 模型進行測試，兩個請求的唯一區別在於提示詞語言。第一個請求使用中文提示：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://openrouter.ai/api/v1/chat/completions &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Authorization: Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -d &lt;span class="s1"&gt;&amp;#39;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;model&amp;#34;: &amp;#34;openai/gpt-oss-120b:free&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;messages&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;content&amp;#34;: &amp;#34;你是一個專業的本地化翻譯專家&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;這個請求總是返回 429 狀態碼，表示請求過於頻繁或超出了配額限制。然而當我使用英文提示時：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://openrouter.ai/api/v1/chat/completions &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Authorization: Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -d &lt;span class="s1"&gt;&amp;#39;{
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;model&amp;#34;: &amp;#34;openai/gpt-oss-120b:free&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;messages&amp;#34;: [
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;,
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;content&amp;#34;: &amp;#34;You are a professional localization translation expert&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; ]
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;請求能夠正常回應，返回預期的模型輸出。&lt;/p&gt;</description></item></channel></rss>
