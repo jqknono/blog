@@ -1,5 +1,29 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ブログ on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/blog/</link><description>Recent content in ブログ on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Mon, 13 Nov 2023 14:15:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>GPT非Codexへの回帰</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/11/return-to-gpt-non-codex/</link><pubDate>Wed, 11 Feb 2026 10:55:39 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/11/return-to-gpt-non-codex/</guid><description>&lt;p&gt;OpenAIはCodexモデルを強く推進したいようで、GPT-5.3が出る前に先にGPT-5.3-Codexをリリースしました。価格は同じですが、Codexの方が出力がより積極的で、実行時間が短く、メモリ使用時間も少なく、より大きな利益空間があります。&lt;/p&gt;
-&lt;p&gt;GPT-5.3-Codexが出た最初の週、私が使ってみたところ体験はとても良く、主に速度が速く、フィードバックが迅速でした。しかし2週目に入ると速度低下が顕著になり、同時にその思考の綿密さはGPT非Codexシリーズには及びませんでした。そのため、私はやはり非Codexシリーズをお勧めします。一度で正解を出す確率が依然として最も高く、記述された範囲を超えたことはしませんが、記述されたことはバグなくこなします。&lt;/p&gt;</description></item><item><title>DoHとDoTの技術比較分析</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/11/doh-vs-dot-comparison/</link><pubDate>Wed, 11 Feb 2026 00:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/11/doh-vs-dot-comparison/</guid><description>&lt;p&gt;DNS over HTTPS (DoH) と DNS over TLS (DoT) は、一般的な2つの暗号化DNS伝送方式です。それらは異なるプロトコルスタックを通じてDNSクエリの安全な伝送を実現します。DoTの標準は &lt;a href="https://datatracker.ietf.org/doc/html/rfc7858"&gt;RFC 7858&lt;/a&gt; によって定義されており、DoHは &lt;a href="https://datatracker.ietf.org/doc/html/rfc8484"&gt;DNS Queries over HTTPS (DoH)&lt;/a&gt; によって標準化されています。これら2つの技術の本質的な違いを理解するには、ネットワークプロトコルの階層構造から分析する必要があります。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ブログ on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/blog/</link><description>Recent content in ブログ on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Mon, 13 Nov 2023 14:15:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Project Translator VSCode 拡張機能によるプロジェクト多言語ローカライゼーションの実現</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/26/project-translator-vscode-extension/</link><pubDate>Thu, 26 Feb 2026 14:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/26/project-translator-vscode-extension/</guid><description>Project Translatorは強力なVSCode拡張機能で、AIを活用してプロジェクトレベルの多言語自動翻訳を実現し、コード構造の完全性を維持しながら効率的にドキュメントのローカライゼーションを完了します。</description></item><item><title>GPT-5.3-Codex 初体験：驚きから理性的評価へ</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/17/gpt-53-codex-experience/</link><pubDate>Tue, 17 Feb 2026 10:30:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/17/gpt-53-codex-experience/</guid><description>&lt;p&gt;OpenAI は GPT-5.3 の正式版がまだリリースされていない時点で、先行して GPT-5.3-Codex という特化モデルを提供しました。ビジネスロジックから見ると、この決定は理解しやすいです。GPT-5.3-Codex は標準版 GPT-5.3 と同じ価格ですが、出力がより積極的で、実行時間が短く、メモリ使用量も少なく、より高い利益余地をもたらします。OpenAI にとって、GPT-5.3-Codex は明らかにコスト効率の高い選択肢です。&lt;/p&gt;
+&lt;p&gt;GPT-5.3-Codex のリリース初週は、使用体験が実際に驚くべきものでした。モデルの応答速度は以前のバージョンより明らかに優れており、コード生成のフィードバックも非常に迅速です。迅速なイテレーションや頻繁なインタラクションが必要な開発シーンでは、この効率向上が直感的な生産性改善をもたらします。短時間で複数の実装案を得たり、アイデアを素早く検証したりする必要がある場合、Codex の積極的な出力特性は特に有用です。&lt;/p&gt;
+&lt;p&gt;しかし、2 週目に入ると状況は顕著に変化しました。モデルの応答速度が大幅に低下し、かつてスムーズだったインタラクションがカクつき始めました。このような性能の揺らぎは、クラウドサービスでよく見られるリソーススケジューリングの問題を連想させ、ユーザー数の増加に伴うサーバー負荷分配戦略が原因でサービスが低下した可能性があります。&lt;/p&gt;
+&lt;p&gt;性能の揺らぎに加えて、注目すべきは Codex の思考の緻密さの不足です。非 Codex 系列と比較すると、複雑なロジックやエッジケースの処理、コードの堅牢性において弱い傾向があります。深い推論や多段階の計画、抽象的な理解が求められるタスクに直面した際、Codex は表面的に実行可能な案を提示しがちで、潜在的な問題の予測が欠如しています。&lt;/p&gt;
+&lt;p&gt;この差異は、二つのモデルが設計目標で異なることを反映しています。Codex は生成速度と出力の活性度に重点を置き、迅速なプロトタイプ開発、コード補完、シンプルなタスクの自動化に適しています。一方、非 Codex 系列はより強い汎化能力を保持し、解答の正確性と信頼性を重視します。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+subgraph A[&amp;#34;GPT-5.3-Codex&amp;#34;]
+direction LR
+A1[&amp;#34;生成速度: 速い&amp;#34;]
+A2[&amp;#34;出力活性度: 高い&amp;#34;]
+A3[&amp;#34;思考の緻密度: 中程度&amp;#34;]
+A4[&amp;#34;適用シーン: 迅速なプロトタイプ、コード補完、探索段階&amp;#34;]
+end
+subgraph B[&amp;#34;GPT-5.3 非Codex&amp;#34;]
+direction LR
+B1[&amp;#34;生成速度: 中程度&amp;#34;]
+B2[&amp;#34;出力活性度: 安定&amp;#34;]
+B3[&amp;#34;思考の緻密度: 高い&amp;#34;]
+B4[&amp;#34;適用シーン: 本番環境、重要プロジェクト、安定期&amp;#34;]
+end
+A &amp;lt;--&amp;gt;|選択のトレードオフ| B
+classDef codex fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+classDef standard fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+class A,A1,A2,A3,A4 codex;
+class B,B1,B2,B3,B4 standard;&lt;/pre&gt;
+&lt;p&gt;実際の開発シーンを見ると、もしあなたのニーズがコードスニペットを迅速に取得したり、既知で明確な機能を実装したり、短時間で複数の案を試すことにあるなら、Codex の積極的な出力と高速な応答は明らかな優位性をもたらします。しかし、プロジェクトが安定期に入り、コード品質、保守性、長期的な安定性に対する要求が高まる場合、非 Codex 系列は依然としてより信頼できる選択です。&lt;/p&gt;</description></item><item><title>DoHとDoTの技術比較分析</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/11/doh-vs-dot-comparison/</link><pubDate>Wed, 11 Feb 2026 00:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/11/doh-vs-dot-comparison/</guid><description>&lt;p&gt;DNS over HTTPS (DoH) と DNS over TLS (DoT) は、一般的な2つの暗号化DNS伝送方式です。それらは異なるプロトコルスタックを通じてDNSクエリの安全な伝送を実現します。DoTの標準は &lt;a href="https://datatracker.ietf.org/doc/html/rfc7858"&gt;RFC 7858&lt;/a&gt; によって定義されており、DoHは &lt;a href="https://datatracker.ietf.org/doc/html/rfc8484"&gt;DNS Queries over HTTPS (DoH)&lt;/a&gt; によって標準化されています。これら2つの技術の本質的な違いを理解するには、ネットワークプロトコルの階層構造から分析する必要があります。&lt;/p&gt;
 &lt;h2 id="ネットワークプロトコルの階層構造"&gt;ネットワークプロトコルの階層構造&lt;/h2&gt;
 &lt;p&gt;最新のネットワークプロトコルスタックは階層化設計を採用しており、各層は異なる機能を提供します。DNSはアプリケーション層プロトコルとして、特定の伝送方式にバインドされるわけではなく、複数の搬送プロトコル上で動作可能です。&lt;/p&gt;
 &lt;p&gt;アプリケーション層 (L7) には、HTTP/1.1、HTTP/2、HTTP/3、FTP、DNSなどのプロトコルが含まれます。注目すべきは、HTTP/3のセマンティクスは依然としてアプリケーション層にありますが、QUICが伝送の担い手となる点です。セキュリティ層はアプリケーション層とトランスポート層の間に位置し、主にTLSとその変種を含みます。TLSは通常TCP上で動作します（例：HTTPSやDoT）。DTLSはTLSのデータグラム版で、UDP上で動作可能です。QUICプロトコルは特殊で、プロトコル内部にTLS 1.3のハンドシェイクと鍵派生を直接統合しています。&lt;/p&gt;
@@ -53,7 +77,7 @@ style F fill:#ffe1e1
 style G fill:#ffe1e1
 style H fill:#e1ffe1&lt;/pre&gt;
 &lt;h2 id="トランスポート層のネスト"&gt;トランスポート層のネスト&lt;/h2&gt;
-&lt;p&gt;QUICプロトコルはUDPに基づき、同時にトランスポート層でコネクション型のサービスを提供します。QUICは、TCPが持つコネクション型、輻輳制御、再送、フロー制御、フラグメンテーションと再構成などのトランスポート層機能を実装しています。TCPに比べてQUICはレイテンシが低く、UDPに比べてQUICはより高度で信頼性があります。&lt;/p&gt;</description></item><item><title>OpenRouter gpt-oss-120b モデルが中国語リクエストをサポートしていないデバッグ記録</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</link><pubDate>Mon, 09 Feb 2026 22:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</guid><description>&lt;p&gt;&lt;a href="https://openrouter.ai/"&gt;OpenRouter&lt;/a&gt; が提供する無料モデル API を使用している際、戸惑う問題に遭遇しました。全く同じリクエスト構造で、プロンプトの言語を変更しただけなのに、全く異なる結果が出力されたのです。&lt;/p&gt;
+&lt;p&gt;QUICプロトコルはUDPに基づき、同時にトランスポート層でコネクション型のサービスを提供します。QUICは、TCPが持つコネクション型、輻輳制御、再送、フロー制御、フラグメンテーションと再構成などのトランスポート層機能を実装しています。TCPに比べてQUICはレイテンシが低く、UDPに比べてQUICはより高度で信頼性があります。&lt;/p&gt;</description></item><item><title>OpenRouter gpt-oss-120b モデルが中国語リクエストをサポートしていないデバッグ記録</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</link><pubDate>Mon, 09 Feb 2026 22:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</guid><description>&lt;p&gt;&lt;a href="https://openrouter.ai/"&gt;OpenRouter&lt;/a&gt; が提供する無料モデル API を使用している際、戸惑う問題に遭遇しました。全く同じリクエスト構造で、プロンプトの言語を変更しただけなのに、全く異なる結果が出力されたのです。&lt;/p&gt;
 &lt;h2 id="問題の再現"&gt;問題の再現&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;openai/gpt-oss-120b:free&lt;/code&gt; モデルを使用してテストを行いました。2つのリクエストの唯一の違いは、プロンプトの言語だけです。1つ目のリクエストでは中国語のプロンプトを使用しました：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://openrouter.ai/api/v1/chat/completions &lt;span class="se"&gt;\
@@ -81,7 +105,7 @@ style H fill:#e1ffe1&lt;/pre&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; ]
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;リクエストは正常に応答し、期待されるモデル出力が返されました。&lt;/p&gt;</description></item><item><title>無料AIアイコン生成ツールまとめ</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/02/free-ai-icon-generators/</link><pubDate>Mon, 02 Feb 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/02/free-ai-icon-generators/</guid><description>&lt;p&gt;AI技術の進歩に伴い、デザイナーや開発者は現在、シンプルなテキストプロンプトを通じて素早く様々な種類のアイコンを生成できるようになりました。これらの無料AIアイコン生成ツールはデザインのハードルを大幅に下げ、専門的なデザインスキルを持たないユーザーでも高品質な視覚要素を作成できるようにします。以下のツールはすべてテキストによる画像生成をサポートしており、出力形式は通常PNGまたはSVGで、一部のツールではスタイルや配色の調整機能も提供されています。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;リクエストは正常に応答し、期待されるモデル出力が返されました。&lt;/p&gt;</description></item><item><title>無料AIアイコン生成ツールまとめ</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/02/free-ai-icon-generators/</link><pubDate>Mon, 02 Feb 2026 10:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/02/free-ai-icon-generators/</guid><description>&lt;p&gt;AI技術の進歩に伴い、デザイナーや開発者は現在、シンプルなテキストプロンプトを通じて素早く様々な種類のアイコンを生成できるようになりました。これらの無料AIアイコン生成ツールはデザインのハードルを大幅に下げ、専門的なデザインスキルを持たないユーザーでも高品質な視覚要素を作成できるようにします。以下のツールはすべてテキストによる画像生成をサポートしており、出力形式は通常PNGまたはSVGで、一部のツールではスタイルや配色の調整機能も提供されています。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.freepik.com/ai/icon-generator"&gt;Freepik AI アイコンジェネレーター&lt;/a&gt;は、テキストの説明に基づいてSVGまたはPNG形式のアイコンを生成できるオンラインAIアイコン生成ツールです。このツールはWebデザインやUIデザインのシーンに非常に適しており、無料ユーザーも利用可能ですが、1日の生成数に制限があります。アイコン素材を迅速に入手する必要があるデザイン作業において、Freepikは便利なソリューションを提供します。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.pixelcut.ai/create/icon-generator"&gt;Pixelcut AI アイコンジェネレーター&lt;/a&gt;は、シンプルで直感的なアイコン生成体験の提供に特化しています。ユーザーはテキストプロンプトを入力するだけで、カスタムアイコンを生成できます。このツールの操作フローはシンプルで明確であり、複雑なデザインソフトに不慣れなユーザーでも素早く使いこなせます。生成されたアイコンはそのままダウンロードして使用でき、個人のプロジェクトや小規模なWebサイトにビジュアルサポートを提供します。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://iconscout.com/ai/icon-generator"&gt;IconScout AI アイコンジェネレーター&lt;/a&gt;は、シンプルなテキストによるアイコン生成をサポートし、多彩なスタイル選択を提供します。このツールは特にデザインプロジェクト、ブログ記事、プレゼンテーション用途に適しています。多様なスタイルオプションにより、ユーザーはプロジェクトのニーズに応じて適切なビジュアルスタイルを選択でき、全体的なデザインの一貫性を保つことができます。&lt;/p&gt;
@@ -111,7 +135,7 @@ J --&amp;gt; M[著作権条項に注意]
 K --&amp;gt; M
 L --&amp;gt; M
 M --&amp;gt; N[商業利用ライセンスの確認]&lt;/pre&gt;
-&lt;p&gt;これらのツールは無料利用オプションを提供していますが、ユーザーは無料の利用枠や生成回数の制限に注意する必要があります。使用前には各プラットフォームの利用規約を、特に出力画像の著作権に関する説明をよく読む必要があります。一部のツールの無料版では商用利用が禁止されていたり、使用時に出典の明記が求められたりすることがあります。これらの制限条件を明確にすることで、将来的な法的リスクを回避できます。&lt;/p&gt;</description></item><item><title>Vibe Coding のコスト削減公式と臨界点</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/07/vibe-coding-cost-formulas/</link><pubDate>Wed, 07 Jan 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/07/vibe-coding-cost-formulas/</guid><description>&lt;p&gt;AIコーディングツールの課金モデルは、主に以下の3種類に分類できます:&lt;/p&gt;
+&lt;p&gt;これらのツールは無料利用オプションを提供していますが、ユーザーは無料の利用枠や生成回数の制限に注意する必要があります。使用前には各プラットフォームの利用規約を、特に出力画像の著作権に関する説明をよく読む必要があります。一部のツールの無料版では商用利用が禁止されていたり、使用時に出典の明記が求められたりすることがあります。これらの制限条件を明確にすることで、将来的な法的リスクを回避できます。&lt;/p&gt;</description></item><item><title>Vibe Coding のコスト削減公式と臨界点</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/07/vibe-coding-cost-formulas/</link><pubDate>Wed, 07 Jan 2026 10:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/07/vibe-coding-cost-formulas/</guid><description>&lt;p&gt;AIコーディングツールの課金モデルは、主に以下の3種類に分類できます:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Token課金&lt;/strong&gt;: 各種API、Claude Code (Claude Pro)、Codex Cli (ChatGPT Plus)、智譜 Lite/Pro、Cursor新版などが含まれます。本質的にはすべてToken課金であり、一部の製品はパッケージ割引を提供しています。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;API呼び出し回数課金&lt;/strong&gt;: OpenRouter (無料枠)、ModelScope、Gemini Code Assistant (毎日1000回無料)、Chutesなど。&lt;/li&gt;
@@ -142,7 +166,7 @@ $$&lt;/p&gt;
 &lt;li&gt;$p_{\mathrm{fail},i}$: イテレーションごとの失敗によりやり直しが必要となる確率（0 から 1）&lt;/li&gt;
 &lt;li&gt;$h_{\mathrm{re},i}$: やり直し1回あたりの平均所要時間（時間）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;したがって、時間とリスクの項は次のように記述できます:&lt;/p&gt;</description></item><item><title>Windows 上でリモートブラウザデバッグエントリを構築する</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文は、Windows ホスト上で Chrome を実行し、CDP 経由でリモートデバッグエントリを提供して、ローカルネットワーク内の Linux クライアントや MCP からの接続を可能にする方法を説明します。この方法の核は、Chrome が 127.0.0.1 だけをリスンし、portproxy で LAN アドレスにマッピングし、ファイアウォールで遠隔側の発信元を制限することです。&lt;/p&gt;
+&lt;p&gt;したがって、時間とリスクの項は次のように記述できます:&lt;/p&gt;</description></item><item><title>Windows 上でリモートブラウザデバッグエントリを構築する</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文は、Windows ホスト上で Chrome を実行し、CDP 経由でリモートデバッグエントリを提供して、ローカルネットワーク内の Linux クライアントや MCP からの接続を可能にする方法を説明します。この方法の核は、Chrome が 127.0.0.1 だけをリスンし、portproxy で LAN アドレスにマッピングし、ファイアウォールで遠隔側の発信元を制限することです。&lt;/p&gt;
 &lt;h2 id="トポロジとフロー"&gt;トポロジとフロー&lt;/h2&gt;
 &lt;p&gt;下図は、Windows ホスト内部でのポートのフローと、クライアントが LAN アドレスからアクセスする方法を示しています。&lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart TB
@@ -160,7 +184,7 @@ class B proxy
 class C firewall
 class D client&lt;/pre&gt;
 &lt;h2 id="chrome-の起動"&gt;Chrome の起動&lt;/h2&gt;
-&lt;p&gt;独立したユーザーディレクトリを使用し、remote debugging アドレスを明示的に指定することを推奨します。これにより、Chrome はローカルホストにのみデバッグポートを公開します。以下は 9222 ポートを例にした起動例で、実際の環境に応じて調整してください。&lt;/p&gt;</description></item><item><title>技术ブログは死んだ</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/23/technical-blogs-are-dead/</link><pubDate>Tue, 23 Dec 2025 17:05:13 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/23/technical-blogs-are-dead/</guid><description>&lt;p&gt;過去数年間で、ChatGPTやClaudeといった人工知能(AI)執筆ツールが急速に普及した。これらのツールは流暢な技術記事を生成でき、人間の文章スタイルを模倣することさえ可能だ。こうした変化は技術ブログ界隈で広く議論を呼び、「技術ブログは死んだ」と声高に叫ぶ人々も現れた。本稿ではAIツールが技術ブログに与える影響と、技術ブログの将来の行方を考察する。&lt;/p&gt;
+&lt;p&gt;独立したユーザーディレクトリを使用し、remote debugging アドレスを明示的に指定することを推奨します。これにより、Chrome はローカルホストにのみデバッグポートを公開します。以下は 9222 ポートを例にした起動例で、実際の環境に応じて調整してください。&lt;/p&gt;</description></item><item><title>技术ブログは死んだ</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/23/technical-blogs-are-dead/</link><pubDate>Tue, 23 Dec 2025 17:05:13 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/23/technical-blogs-are-dead/</guid><description>&lt;p&gt;過去数年間で、ChatGPTやClaudeといった人工知能(AI)執筆ツールが急速に普及した。これらのツールは流暢な技術記事を生成でき、人間の文章スタイルを模倣することさえ可能だ。こうした変化は技術ブログ界隈で広く議論を呼び、「技術ブログは死んだ」と声高に叫ぶ人々も現れた。本稿ではAIツールが技術ブログに与える影響と、技術ブログの将来の行方を考察する。&lt;/p&gt;
 &lt;h2 id="ai執筆ツールの台頭"&gt;AI執筆ツールの台頭&lt;/h2&gt;
 &lt;p&gt;AI執筆ツールの核となる能力は自然言語を理解し、高品質な文章を生成することだ。技術ブログ執筆者にとって、これらのツールは草稿の迅速生成、インスピレーションの提供、あるいは完成した記事の直接作成に利用できる。例えば、執筆者が複雑な概念を説明する必要があるとき、AIは明瞭な説明段落を生成できる。執筆者が時間に追われるとき、AIはチュートリアルを素早くまとめることができる。&lt;/p&gt;
 &lt;p&gt;しかし、この便利さには副作用もある。大量の低品質なAI生成コンテンツがインターネットに溢れ始めている。こうしたコンテンツはしばしば深みに欠け、誤りを含むこともあるが、SEO最適化のおかげで高いランキングを得て、真に価値ある技術ブログの露出機会を奪っている。&lt;/p&gt;
@@ -180,7 +204,7 @@ class D client&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;p&gt;こうした形式はいずれも人間の創造力と経験に依存しており、AIが現在のところ完全に代替するのは難しい。&lt;/p&gt;
 &lt;h2 id="結論"&gt;結論&lt;/h2&gt;
-&lt;p&gt;「技術ブログは死んだ」は誇張かもしれない。AIは確かに技術執筆の様相を変えたが、同時に執筆者に新たなツールも提供している。変化に適応し、AIを代替ではなく支援として活用できるブロガーは、消えるどころかむしろより高品質なコンテンツを生み出すだろう。技術ブログは死なない。より豊かな形で存続し続けるのである。&lt;/p&gt;</description></item><item><title>抜くサーバーは大得</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/05/%E6%8A%9C%E3%81%8F%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AF%E5%A4%A7%E5%BE%97/</link><pubDate>Fri, 05 Dec 2025 11:51:04 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/05/%E6%8A%9C%E3%81%8F%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AF%E5%A4%A7%E5%BE%97/</guid><description>&lt;p&gt;長らく大得があるが、私はこれまで公開コミュニティで宣伝したことがない、それはアリババクラウドの&lt;strong&gt;抜くサーバー&lt;/strong&gt;が非常に得だということだ。&lt;/p&gt;
+&lt;p&gt;「技術ブログは死んだ」は誇張かもしれない。AIは確かに技術執筆の様相を変えたが、同時に執筆者に新たなツールも提供している。変化に適応し、AIを代替ではなく支援として活用できるブロガーは、消えるどころかむしろより高品質なコンテンツを生み出すだろう。技術ブログは死なない。より豊かな形で存続し続けるのである。&lt;/p&gt;</description></item><item><title>抜くサーバーは大得</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/05/%E6%8A%9C%E3%81%8F%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AF%E5%A4%A7%E5%BE%97/</link><pubDate>Fri, 05 Dec 2025 11:51:04 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/05/%E6%8A%9C%E3%81%8F%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%AF%E5%A4%A7%E5%BE%97/</guid><description>&lt;p&gt;長らく大得があるが、私はこれまで公開コミュニティで宣伝したことがない、それはアリババクラウドの&lt;strong&gt;抜くサーバー&lt;/strong&gt;が非常に得だということだ。&lt;/p&gt;
 &lt;h2 id="長期大幅割引"&gt;長期大幅割引&lt;/h2&gt;
 &lt;p&gt;タイトルバーに書かれた&lt;em&gt;最大90%節約&lt;/em&gt;という表示は誇張ではなく、人気構成のサーバーは通常20%の割引、つまり2割引で、やや需要の少ない構成は9%の割引まで可能で、1割以下になる。&lt;/p&gt;
 &lt;p&gt;人気サーバーの一種は小規模入門サーバーで、2c2g、2c4gなどがあり、もう一種は&lt;em&gt;CPU/メモリ&lt;/em&gt;バランス型サーバーで、1:2(4c8g)、1:4(4c16g、8c32g)などがある。この種のサーバーは割引がやや少ない。&lt;/p&gt;
@@ -226,7 +250,7 @@ class D client&lt;/pre&gt;
 &lt;li&gt;古いサーバーを解放する&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="有料コンサルティング"&gt;有料コンサルティング&lt;/h2&gt;
-&lt;p&gt;本文の分析が示すように、抜くサーバーを使用することでサーバーコストの80%以上を節約できるが、&lt;strong&gt;計算&lt;/strong&gt;と&lt;strong&gt;ストレージ&lt;/strong&gt;の結合を分離する必要があり、相当の技術力が要求される。私は週末または深夜に有料コンサルティングサービス(1000円/時間)を提供でき、企業がこの目標を達成するのを支援できる。リモートデスクトップ環境の用意、コードベースアクセス権限、VS Code開発環境 + Claude Code(CodexまたはCursor)が必要で、私は業務コードアーキテクチャを迅速に分析し、分離方案を提示する。&lt;/p&gt;</description></item><item><title>アリババクラウドのESA_page機能はまだ使用しないことを推奨</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/03/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%81%AEesa_page%E6%A9%9F%E8%83%BD%E3%81%AF%E3%81%BE%E3%81%A0%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E6%8E%A8%E5%A5%A8/</link><pubDate>Wed, 03 Dec 2025 19:16:52 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/03/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%81%AEesa_page%E6%A9%9F%E8%83%BD%E3%81%AF%E3%81%BE%E3%81%A0%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E6%8E%A8%E5%A5%A8/</guid><description>&lt;p&gt;これは ESA Pages 機能の制限で、このリソース規模では小さなウェブサイトをホストするのに十分です。長期的に更新するウェブサイトをホストしたい場合、2000 個のファイルの制限は低すぎます。&lt;/p&gt;
+&lt;p&gt;本文の分析が示すように、抜くサーバーを使用することでサーバーコストの80%以上を節約できるが、&lt;strong&gt;計算&lt;/strong&gt;と&lt;strong&gt;ストレージ&lt;/strong&gt;の結合を分離する必要があり、相当の技術力が要求される。私は週末または深夜に有料コンサルティングサービス(1000円/時間)を提供でき、企業がこの目標を達成するのを支援できる。リモートデスクトップ環境の用意、コードベースアクセス権限、VS Code開発環境 + Claude Code(CodexまたはCursor)が必要で、私は業務コードアーキテクチャを迅速に分析し、分離方案を提示する。&lt;/p&gt;</description></item><item><title>アリババクラウドのESA_page機能はまだ使用しないことを推奨</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/03/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%81%AEesa_page%E6%A9%9F%E8%83%BD%E3%81%AF%E3%81%BE%E3%81%A0%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E6%8E%A8%E5%A5%A8/</link><pubDate>Wed, 03 Dec 2025 19:16:52 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/03/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%81%AEesa_page%E6%A9%9F%E8%83%BD%E3%81%AF%E3%81%BE%E3%81%A0%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E6%8E%A8%E5%A5%A8/</guid><description>&lt;p&gt;これは ESA Pages 機能の制限で、このリソース規模では小さなウェブサイトをホストするのに十分です。長期的に更新するウェブサイトをホストしたい場合、2000 個のファイルの制限は低すぎます。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -290,178 +314,4 @@ class D client&lt;/pre&gt;
 &lt;h2 id="参考ドキュメント"&gt;参考ドキュメント&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/user-guide/what-is-functions-and-pages/?spm=a2c63.p38356.help-menu-2673927.d_2_14_0.3fc311f30eRxno"&gt;アリババクラウドドキュメント: ESA_page 機能制限&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>アリババのESAとOSSの落とし穴</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/02/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%81%AEesa%E3%81%A8oss%E3%81%AE%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4/</link><pubDate>Tue, 02 Dec 2025 18:10:45 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/02/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%81%AEesa%E3%81%A8oss%E3%81%AE%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4/</guid><description>&lt;p&gt;初期のアリババ ESA は、ESA からプライベート OSS にアクセスするトラフィックが無料と言っていましたが、後で以下のように変更されました:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;ソースステーションが阿里雲 OSS の場合、OSS 側はバックツースペースのアウトバウンドトラフィックに基づいて課金します。OSS が中国本土地域以外にあり、リクエストリソースを対応地域の ESA ノードに転送する場合に限り料金はかかりません。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;これまでの任意の ESA ノードからの OSS へのバックツースペースが無料だったものが、&lt;em&gt;対応地域の ESA ノードからの非大陸 OSS へのバックツースペースが無料&lt;/em&gt; に変更されました。つまり、OSS が韓国にある場合、ESA を有効化した後、韓国からのみホストサイトへのアクセスが無料で、韓国以外からのアクセスはキャッシュ期間内に OSS のバックツースペース流量費が1回課金されます。この費用は 2025.10 およびそれ以前は無料でしたが、2025.11 から課金開始です。&lt;/p&gt;
-&lt;p&gt;私の小サイトは以前9ヶ月間料金なしで使っていましたが、10ヶ月目、つまり 2025.11 から、今月の CDN バックツースペースアウトバウンド流量 11G で 0.8 ドル課金されました。&lt;/p&gt;
-&lt;p&gt;今後、アリババの製品を無料製品として推薦できませんし、アリババは通知なし、サイト内メッセージすらありません。これは商業化が粗雑で、ユーザーを尊重していないことを示しています。私が小規模 SaaS 製品を作ってもユーザーに対してこうはしません、だからクレジットカードを急いで紐付けようとするのです。&lt;/p&gt;
-&lt;p&gt;アリババ ESA の最新料金詳細はこちら:
-&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/product-overview/basic-package-fee?spm=a2c63.p38356.help-menu-2673927.d_0_4_0.1f7e996f3LOyTd"&gt;https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/product-overview/basic-package-fee?spm=a2c63.p38356.help-menu-2673927.d_0_4_0.1f7e996f3LOyTd&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;古いドキュメントはもう見つかりません。以前9ヶ月間料金なしだったため、今の料金が明確で、ESA の料金ポリシーが変更されたと確信しています。&lt;/p&gt;</description></item><item><title>windows共有デバッグChrome方法</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/02/windows%E5%85%B1%E6%9C%89%E3%83%87%E3%83%90%E3%83%83%E3%82%B0chrome%E6%96%B9%E6%B3%95/</link><pubDate>Tue, 02 Dec 2025 12:46:11 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/02/windows%E5%85%B1%E6%9C%89%E3%83%87%E3%83%90%E3%83%83%E3%82%B0chrome%E6%96%B9%E6%B3%95/</guid><description>&lt;p&gt;公共のChromeブラウザーを複数端末で共有デバッグする必要があり、繰り返しの複数箇所でのアカウントログインを避ける。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ps1" data-lang="ps1"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# chrome起動コマンド&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;C:\Program Files\Google\Chrome\Application\chrome.exe&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-remote-debugging-address&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;1&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-remote-debugging-port&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-user-data-dir&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;M:\chrome-remote&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;ここで特に注意すべきは、新版Chromeはセキュリティ上の考慮から、Chromeを0.0.0.0に公開することをサポートしなくなり、remote-debugging-addressは実際には有効になりません&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ps1" data-lang="ps1"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# ファイアウォール放行ルールを追加:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;netsh&lt;/span&gt; &lt;span class="n"&gt;advfirewall&lt;/span&gt; &lt;span class="n"&gt;firewall&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;rule&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Chrome DevTools 34037 LAN&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt; &lt;span class="n"&gt;protocol&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt; &lt;span class="n"&gt;localport&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# portproxy（システム層リバースプロキシ）を確立:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;netsh&lt;/span&gt; &lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;portproxy&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;v4tov4&lt;/span&gt; &lt;span class="n"&gt;listenport&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt; &lt;span class="n"&gt;listenaddress&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;192.168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;31&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;2&lt;/span&gt; &lt;span class="n"&gt;connectport&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt; &lt;span class="n"&gt;connectaddress&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# portproxyルールをクリア&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# netsh interface portproxy reset&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# 有効性をテスト&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;curl &lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;curl &lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;192.168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;31&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Cloudflareは完全に信頼できるか</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/02/cloudflare%E3%81%AF%E5%AE%8C%E5%85%A8%E3%81%AB%E4%BF%A1%E9%A0%BC%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/</link><pubDate>Tue, 02 Dec 2025 08:30:50 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/02/cloudflare%E3%81%AF%E5%AE%8C%E5%85%A8%E3%81%AB%E4%BF%A1%E9%A0%BC%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%8B/</guid><description>&lt;p&gt;Cloudflare、阿里雲 ESA、Tencent EdgeOne などは、ドメイン証明書を保持しており、ドメイン下のすべてのトラフィックを完全に閲覧可能。つまり、大規模な中間者である。主要機能はセキュリティで、ネットワーク上の攻撃者が多すぎるため、大規模な中間者を選ぶ利点が弊害を上回る。副次的機能として DNS、CDN、WAF などのエッジサービスを提供。&lt;/p&gt;
-&lt;p&gt;Cloudflare のようなサービスは DDOS を効果的に防御でき、少しの遅延増加で防御能力を得る、とてもお得。各站長はこうしたサービスを直接使うべき。ネットワーク攻撃はどこにでもあり、幸運を期待せず、遅かれ早かれ攻撃される。一部の攻撃は脆弱性探しで、サイト運営者のレベルに関連。他はリソース消費目的、例えば DDOS で、商用ネットワークと家庭ネットワークのコスト非対称性を悪用した攻撃。これは陽謀で、多くの場合金で対抗するか、サービスを直接停止し、全ユーザーを放棄する、いわゆるブラックホール防御しかない。&lt;/p&gt;
-&lt;p&gt;大多数の攻撃者は、サイトが Cloudflare で保護されているのを見ると攻撃を直接諦める。其实、攻撃者はオリジナルサーバーではなく Cloudflare を攻撃することを考えられる。同じくデータ入手可能、ただ難易度が高いかも。しかし、世界は草台班子だと信じ、何事も不可能ではない。実際、ネットワーク上の大多数の攻撃行為は気づかれず、大多数の攻撃者は発見されず、大多数の攻撃行為も追究されない。Cloudflare はコスト優位で DDOS を対抗可能だが、コードが銅墙鉄壁とは限らず、Cloudflare 類サービスを攻撃して原站データを入手する可能性は 0 ではない。&lt;/p&gt;</description></item><item><title>視力改善の疑雲</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/01/%E8%A6%96%E5%8A%9B%E6%94%B9%E5%96%84%E3%81%AE%E7%96%91%E9%9B%B2/</link><pubDate>Mon, 01 Dec 2025 16:20:28 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/01/%E8%A6%96%E5%8A%9B%E6%94%B9%E5%96%84%E3%81%AE%E7%96%91%E9%9B%B2/</guid><description>&lt;p&gt;12 歳で近視になり、20年以上メガネをかけてきたが、最近仕事でパソコン画面を見るのがどんどん鮮明になってきた。メガネをかけてると目が少し疲れるし、メガネを取るともっと快適で、近くを見る時も鮮明だと思い、自分が返老還童するのかと思った。でも自分のこの悪習慣な生活、いつも夜更かしで運動もしない、体力は日々落ちていくのに、目だけが返老還童するはずがないよなと思い、ChatGPTに聞いてみたら、老眼だって。&lt;/p&gt;
-&lt;p&gt;私は近視だけでなく老眼でもある。眼球の調節能力が低下し、水晶体が硬くなり、近くを見る時のピント能力が低下する。近視で近くはクリアに見え、老眼で近くが見えにくく、両者が相殺されてちょうどメガネなしでパソコンが見える。今の視界焦点がちょうど50-70cmのところにあり、本当に絶妙で、ちょうどキーボードを叩くのにぴったりだ。でも遠くを見る時は、やはり近視メガネが必要で、変化するのは今後近くを見る時に老眼鏡が必要になるかもしれないことだ。&lt;/p&gt;</description></item><item><title>非典型的な家庭ネットワーク問題の1回のトラブルシューティング記録</title><link>https://blog.jqknono.com/ja-jp/blog/2025/11/29/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%9E%E5%85%B8%E5%9E%8B%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</link><pubDate>Sat, 29 Nov 2025 11:25:30 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/11/29/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%9E%E5%85%B8%E5%9E%8B%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/</guid><description>&lt;p&gt;現象は、小新ノートパソコンを書斎から持ち出すと家族全員がネットに繋がらなくなり、書斎に戻して電源を挿すと、家内のネットワークが正常に戻るというもの。自宅構築の&lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;nullprivate DNS&lt;/a&gt;が時々中断し、主機が時々繋がらなくなり、後で交換機の問題と確認、重启交換機で解決。
-&lt;img src="https://share.jqknono.com/image/blog/44f37f2cac1dd15771546949a8d81680.jpg" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;この水星の交換機は数年使っており、これまで問題が発生したことはなく、最近複数回問題が発生して重启で解決する必要が出て、私の注意を引きました。機器の老朽化か、根本原因が交換機にない可能性があります。&lt;/p&gt;
-&lt;p&gt;小新ノートパソコンを電源の倍思hub経由で交換機の有線ネットワークを使い、電源を抜くとWiFiを使い、DNSサービスは交換機に繋がったJ4215ホストにあり、小新ノートパソコンのWiFi使用が交換機やその上の機器に何の影響を与えるのか？ IP衝突？ MACアドレス衝突？&lt;/p&gt;
-&lt;p&gt;交換機の構造はシンプルですが、デバッグできません。この件は未解決のまましばらく経ち、交換機の偶発的な故障を防ぐため、主機のWiFiをオンにし、バックアップネットワーク接続とし、家内のDNSに阿里雲DNSをバックアップとして追加し、断網による家族の不満を避けました。&lt;/p&gt;
-&lt;p&gt;今日突然頭に閃きが走り、小新ノートパソコンのWiFiと交換機の衝突ではないかも、これは物理やネットワークの常識に合わない、ノートパソコンを電源抜きの瞬間で交換機に故障が発生したのではないか？&lt;/p&gt;
-&lt;p&gt;小新ノートパソコンを電源挿しで交換機上有線ネットワークを使う方法を再検討、まず倍思hubを経由、このhubは元々macbookpro用で、macにUSB-A口がないため倍思の有源hubを購入、macbookproは妻の予備機で長年使わず、電源と網線を挿して画面オフで放置。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://share.jqknono.com/image/blog/202511291152201.png" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;倍思hubを私が常用する16インチ小新ノートパソコンに転用、5000元で16インチ高U集顯大電池、性价比最高、私に適す。hubに電源挿し、出力は3 USB-Aと1 HDMI、日常1 type-cで小新を電源、無線マウス、無線キーボード、ディスプレイに接続。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://share.jqknono.com/image/blog/202511291155045.png" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;ネットワーク安定のため、時々別の緑聯USB hubを使い、3 USB-Aとギガビット網口対応、小新の反対側に挿し交換機の有線を使い、しばらく問題なし、しかしある日小新に2 hub挿すのに飽き、なぜhub套娃できないか？ 緑聯hubを倍思hubに挿す：
-&lt;img src="https://share.jqknono.com/image/blog/202511291209080.png" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;おいおい、意外と動く、これで小新真1 C口で全て。&lt;/p&gt;
-&lt;p&gt;最近ネットワーク問題頻発、J4125ホストと主力デスクトップ頻繁に切断。これでこの接続に問題あるか疑い、テストで以下の法則発見：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;小新-&amp;gt;倍思+電源-&amp;gt;緑聯-&amp;gt;網線-&amp;gt;交換機&lt;/code&gt; , この接続下：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="mermaid"&gt;flowchart LR
-电源[🔌 电源] --&amp;gt; 倍思[倍思 Hub]
-小新[💻 小新笔记本] --&amp;gt; 倍思
-倍思 --&amp;gt; 绿联[绿联 Hub]
-绿联 --&amp;gt; 网线[🔗 网线]
-网线 --&amp;gt; 交换机[🔀 交换机]
-style 小新 fill:#4a9eff,color:#fff
-style 倍思 fill:#ff6b6b,color:#fff
-style 绿联 fill:#51cf66,color:#fff
-style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;電源倍思に挿し、倍思hubノートに挿し、緑聯hub倍思に挿し、網線緑聯hubに接続、交換機へ&lt;/li&gt;
-&lt;li&gt;小新倍思挿して使用、ネットワーク正常。&lt;/li&gt;
-&lt;li&gt;小新倍思線抜き、&lt;strong&gt;数秒後、交換機上機器全て切断&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;小新倍思線再挿し、ネットワーク正常回復&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;小新+電源-&amp;gt;倍思-&amp;gt;緑聯-&amp;gt;網線-&amp;gt;交換機&lt;/code&gt; , この接続下：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="mermaid"&gt;flowchart LR
-电源[🔌 电源] --&amp;gt; 小新[💻 小新笔记本]
-小新 --&amp;gt; 倍思[倍思 Hub]
-倍思 --&amp;gt; 绿联[绿联 Hub]
-绿联 --&amp;gt; 网线[🔗 网线]
-网线 --&amp;gt; 交换机[🔀 交换机]
-style 小新 fill:#4a9eff,color:#fff
-style 倍思 fill:#ff6b6b,color:#fff
-style 绿联 fill:#51cf66,color:#fff
-style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;電源小新に挿し、倍思hubノートに挿し、緑聯hub倍思に挿し、網線緑聯hubに接続、交換機へ&lt;/li&gt;
-&lt;li&gt;小新電源抜き挿し、全て正常。&lt;/li&gt;
-&lt;li&gt;小新倍思線抜き挿し、全て正常。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;小新-&amp;gt;倍思+電源, 小新-&amp;gt;緑聯&lt;/code&gt; , この接続下：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="mermaid"&gt;flowchart LR
-电源[🔌 电源] --&amp;gt; 倍思[倍思 Hub]
-小新[💻 小新笔记本] --&amp;gt; 倍思
-小新 --&amp;gt; 绿联[绿联 Hub]
-绿联 --&amp;gt; 网线[🔗 网线]
-网线 --&amp;gt; 交换机[🔀 交换机]
-style 小新 fill:#4a9eff,color:#fff
-style 倍思 fill:#ff6b6b,color:#fff
-style 绿联 fill:#51cf66,color:#fff
-style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;電源倍思に挿し、倍思hubノートに挿し、緑聯hubノートに挿し&lt;/li&gt;
-&lt;li&gt;小新倍思線抜き挿し、全て正常。&lt;/li&gt;
-&lt;li&gt;小新緑聯線抜き挿し、全て正常。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;小新+電源-&amp;gt;倍思-&amp;gt;緑聯&lt;/code&gt; , この接続下：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="mermaid"&gt;flowchart LR
-电源[🔌 电源] --&amp;gt; 小新[💻 小新笔记本]
-小新 --&amp;gt; 倍思[倍思 Hub]
-倍思 --&amp;gt; 绿联[绿联 Hub]
-绿联 --&amp;gt; 网线[🔗 网线]
-网线 --&amp;gt; 交换机[🔀 交换机]
-style 小新 fill:#4a9eff,color:#fff
-style 倍思 fill:#ff6b6b,color:#fff
-style 绿联 fill:#51cf66,color:#fff
-style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;電源小新に挿し、倍思hub小新に挿し、緑聯hub倍思に挿し&lt;/li&gt;
-&lt;li&gt;小新電源抜き挿し、全て正常。&lt;/li&gt;
-&lt;li&gt;小新倍思線抜き挿し、全て正常。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;倍思+電源-&amp;gt;緑聯-&amp;gt;網線-&amp;gt;交換機&lt;/code&gt; , この接続下：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="mermaid"&gt;flowchart LR
-电源[🔌 电源] --&amp;gt; 倍思[倍思 Hub]
-倍思 --&amp;gt; 绿联[绿联 Hub]
-绿联 --&amp;gt; 网线[🔗 网线]
-网线 --&amp;gt; 交换机[🔀 交换机]
-style 倍思 fill:#ff6b6b,color:#fff
-style 绿联 fill:#51cf66,color:#fff
-style 交换机 fill:#ffd43b,color:#000&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;ノートなし、電源倍思に挿し、緑聯hub倍思に挿し、網線緑聯hubに接続&lt;/li&gt;
-&lt;li&gt;倍思電源線抜き挿し、全て正常。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;ここまでで、問題は&lt;strong&gt;小新ノート-&amp;gt;倍思hub+電源-&amp;gt;緑聯hub-&amp;gt;網線-&amp;gt;交換機&lt;/strong&gt; この組み合わせで、倍思type-cを小新から抜くと交換機故障。判断は倍思の&lt;strong&gt;電源供給交渉&lt;/strong&gt;問題で、理由は小新倍思抜き後&lt;strong&gt;数秒経って&lt;/strong&gt;交換機切断。ノートなしで倍思電源線抜き挿しのみ、交換機影響なし。交換機に影響するには電源重要、電源2 hubと網線経由で電圧交換機に伝わり故障。倍思hubが鍵、ノートなし電源線抜き挿し影響なし。只小新から電源付き倍思hub抜くと交換機故障。緑聯hub USB-A供电正常だが、網線で電圧交換機に伝わるのはPoE対応か？ USB hub専門家でない、後知識盲区、説明不能。&lt;/p&gt;</description></item><item><title>ドメインを所有することで得られる無料サービス</title><link>https://blog.jqknono.com/ja-jp/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</link><pubDate>Thu, 27 Nov 2025 12:55:58 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</guid><description>&lt;p&gt;通常、ドメインの価格は12ドルからです。自分のドメインを取得したいけど必要かどうか迷っている人もいるでしょう。&lt;/p&gt;
-&lt;p&gt;私は開発者全員に自分のドメインを用意することを強くおすすめします。なぜならドメインを所有することで多くの無料サービスを手に入れることができるからです。&lt;/p&gt;
-&lt;p&gt;ここでは私がよく知っている2つのサービスプロバイダーを紹介します。1つは「サイバーフォージュ」として有名な&lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt;、もう1つは発展中の&lt;a href="https://www.alibabacloud.com/product/esa"&gt;Alibaba ESA&lt;/a&gt;です。&lt;/p&gt;
-&lt;p&gt;まず強調しておきますが、無料サービスを手に入れられるAlibaba ESAは国際版に限ります。Alibabaは中国本土向けにはほとんど無料サービスがありません。これらの期間限定トライアルは私が無料サービスの範疇から除外しています。永久無料のものだけが真の無料サービスです。&lt;/p&gt;
-&lt;p&gt;また、無料サービスは通常使用量に制限があります。もしドメインが話題になり、トラフィックが増え、そのドメインでお金を稼げるようになったら、まだ無料サービスだけに頼るのは少しおかしな話です。&lt;/p&gt;
-&lt;p&gt;無料で手に入れられるサービスの種類を簡単に紹介します：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;計算資源: CPU、メモリ&lt;/li&gt;
-&lt;li&gt;永続ストレージ: ファイルストレージ、データベース&lt;/li&gt;
-&lt;li&gt;トラフィック: CDN、DDoS保護、WAF保護、ゼロトラストネットワーキング&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="計算資源"&gt;計算資源&lt;/h2&gt;
-&lt;p&gt;Cloudflareの計算資源の無料サービスは主に&lt;a href="https://www.cloudflare.com/products/workers/"&gt;Cloudflare Workers&lt;/a&gt;を通じて提供されます。これはスタートアップ企業が使用するのに十分です。Cloudflareがあなたのサーバー上でシンプルな業務プロセスを実行することを許可していると理解してください。CPU時間は10ミリ秒に制限されており、複雑な業務には有料workerを使用する必要があります。DoHのプロキシや静的サイトのホスティングなどが典型的な使用例です。&lt;/p&gt;
-&lt;p&gt;Alibabaの場合は&lt;strong&gt;エッジファンクション&lt;/strong&gt;で、製品の成熟度はCloudflareに大きく遅れをとっています。私も少し開発を試みましたが、使いづらい印象でした。&lt;/p&gt;
-&lt;h2 id="永続ストレージ"&gt;永続ストレージ&lt;/h2&gt;
-&lt;p&gt;Cloudflare:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;10GBのR2&lt;strong&gt;オブジェクトストレージ&lt;/strong&gt;を提供。&lt;strong&gt;ファイルシステム&lt;/strong&gt;と理解できますが、ストリーミングデータの処理には適していません。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;KV&lt;/strong&gt;キー・バリューストレージを提供。&lt;strong&gt;メモリデータベース&lt;/strong&gt;と理解でき、redisに似ています。&lt;/li&gt;
-&lt;li&gt;D1は5GBの無料ストレージスペースを提供。sqliteデータベースに似ており、開発中にローカルデータベースファイルをsqliteで直接開けたので、サーバー側の実装は不明です。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Alibaba:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;無料で5GBのオブジェクトストレージ&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="トラフィック"&gt;トラフィック&lt;/h2&gt;
-&lt;p&gt;Cloudflareはトラフィックが完全無料
-Alibabaは無料で100GBのトラフィック&lt;/p&gt;
-&lt;p&gt;Cloudflareはまた、多地のデバイス間を相互接続できるネットワーキング機能も提供し、内網から直接パブリックサービスを露出させることもできます。VPSを購入する必要はありません。&lt;/p&gt;
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
-&lt;p&gt;このシェアを書いているときにCloudflareをまた見直しましたが、本当に宝の山だと感じました。多くの実用的な無料サービスがあり、この記事で触れたのは氷山の一角に過ぎません。比較するとAlibaba ESAは目立った特長がなく、私の限られた体験では中国本土でCDNを提供できるのはドメインを备案した場合だけという利点があり、これは数年後に再検討してもいいでしょう。&lt;/p&gt;</description></item><item><title>gpt-5-highは開発者に最も適したモデルです</title><link>https://blog.jqknono.com/ja-jp/blog/2025/11/26/gpt-5-high%E6%98%AF%E6%9C%80%E9%80%82%E5%90%88%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E6%A8%A1%E5%9E%8B/</link><pubDate>Wed, 26 Nov 2025 14:44:57 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/11/26/gpt-5-high%E6%98%AF%E6%9C%80%E9%80%82%E5%90%88%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E6%A8%A1%E5%9E%8B/</guid><description>&lt;p&gt;コード作成が必要な場合、gpt-5-high は現在唯一本当に効率を上げられるモデルです。&lt;/p&gt;
-&lt;p&gt;私は10ヶ月間 claude モデルを使用した経験があり、Gemini/DeepSeek/glm/grok は断続的に使用しましたが、考えなしのモデルは非常に嫌いです。確かに claude は長時間作業でき、ツール使用に長けているものの、結果の誤り率が高く、成果の可用性が低く、頻繁に調整が必要になりますが、claude の調整能力は非常に低く、コードベースを繰り返し大量に、根本的に、蛇足的に、自由奔放に徘徊し、あちこちで排泄します。数時間の作業後に何度も hard reset しなければならなくなった経験から、claude のこの勤勉な愚かな行動スタイルに深く嫌悪感を抱くようになりました。その作業スタイルはリサーチに適しており、一見道理がありそうだが推敲に耐えない水準の文章を得られたり、ブラウザ操作、ツール実行、スクリプト作成、少量のページ修正などに適していますが、上限はそこにあります。&lt;/p&gt;
-&lt;p&gt;ここではプロンプトの使用法は議論しません。もし claude をうまく活用できている方がいれば、引き続き使用すればよいでしょう。私と claude は相性が合わないのかもしれません。協力できません。&lt;/p&gt;
-&lt;p&gt;そして私が推奨するコード作成モデルはただ一つ、gpt-5-high だけです。gpt-5 の nano、mini、medium、gpt-codex、gpt-codex-high、gpt-codex-max などは推奨対象外です。これらは gpt-5-high とは全く異なるものです。モデル名に「gpt-5」だけを表示しているものはすべて gpt-5-high ではありません。文字が多すぎても少なすぎても「gpt-5-high」ではありません。&lt;/p&gt;
-&lt;p&gt;gpt-5-high と最も似た振る舞いをするのは OpenAI の o3 モデルで、gpt-5-high の使用チャンネルがなければ o3 を何度か使ってみてもモデルの知性を体感できます。特に vscode github copilot ではかつて o3 がありましたが、vscode の劣悪さにより、copilot 内では ask にしか使用できず、1回の会話で5回の高度リクエストを消費しました。長期的な copilot サブスクリプションでは一度も o3 を使用したことがなく、cursor に移行して初めて o3 の知性レベルの高さを知りました。vscode github copilot はすでに o3 を販売中止し、gpt5.1 が代替品になると主張しています。責任を持って言いますが、high があるかないかは全く別物で、copilot の使用は直接廃止することを強くお勧めします。学生で予算が限られている場合は、小規模なコード作成なら copilot でも導入の手引きにはなります。&lt;/p&gt;
-&lt;p&gt;gpt-5-high は cursor と ChatGPT plus の codex cli で使用できますが、gpt-5-codex-high を選ばないよう注意してください。これは別のものです。&lt;/p&gt;</description></item><item><title>llmの偽人感</title><link>https://blog.jqknono.com/ja-jp/blog/2025/11/24/llm%E3%81%AE%E5%81%BD%E4%BA%BA%E6%84%9F/</link><pubDate>Mon, 24 Nov 2025 16:03:46 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/11/24/llm%E3%81%AE%E5%81%BD%E4%BA%BA%E6%84%9F/</guid><description>&lt;p&gt;いくつかのフォーラムでは、AI モデルが人間を装ってフォーラム活動に参加すること（投稿や返信など）を排斥し、結果として人々は「魔女狩り」を始め、奇妙な表現をする投稿を見つけると、それが AI 生成のコンテンツかどうかを判断し、議論を展開します。&lt;/p&gt;
-&lt;p&gt;なぜ AI 生成のコンテンツは識別されてしまうのでしょうか？推測ですが、AI 生成のものには一種の「偽人感」があるのかもしれません。AI はインターネット上の膨大な人間活動データで学習させられているにもかかわらず、AI が生成するものには違和感を感じることがよくあります。おそらく AI には身体の触覚神経がなく、内分泌ホルモンもありません。社会的つながりを渇望せず、AI の欲求は人間の欲求と大きく異なります。AI と人間の対話では、「遠回しに自分を自慢する」「取り上げて他人を貶める」「相互に覗き見ながら噂話をする」ようなことがありません。AI は自分を自慢せず、第三者を貶めず、質問者に対してもあまり興味を示さず、まるで坊主のようにほとんど感情がなく、問題を解決することだけに集中しているように感じます。&lt;/p&gt;
-&lt;p&gt;人間自身がよく間違えるにもかかわらず、人間は「正しさ」を求めており、AI に正しい結果を出してもらいたいと思っています。この「正しさ」への追求が AI の偽人感を生んでいるのでしょうか？AI は「自己疑念」の感覚もほとんど与えません。非常に愚かな小さなモデルでさえも自信に満ち、堂々と語ります。いくつかの愚かな AI モデルはその知識ベースを疑いなく信じており、間違ったメタ認知を持っている可能性があり、疑う精神に欠けているかもしれませんが、それでも「偽人」感を与えるべきではありません。愚か者と「偽人」は同じではありません。&lt;/p&gt;
-&lt;p&gt;AI には価値観の傾向があるでしょうか？ウェブ端末のモデルサービスの出力は通常、センシティブな話題を避けるためのゲートが追加され、モデルサービスプロバイダーは人間が AI に感情的依存をしたり、AI の言うことに盲目的に従ったりすることを望んでいません。AI が人間を誘導して傷つける事件を避けるためです。人間の醜悪な側面はモデル内で露呈することを禁止されており、おそらく白黒混在こそが人間であり、AI は通常黒色の部分を混ぜることが許可されていないのかもしれません。&lt;/p&gt;
-&lt;p&gt;現在、一部の AI モデルは年齢制限を追加しており、一般大衆はそれが黄色コンテンツを可能にするものだと考えていますが、AI が使用者に合わせた価値観を持つモデルに調教されることを許可されるのかもしれません。価値観は何かを捨てるかどうかに関わるものです。将来、AI は使用者に何を捨てられるかを伝えるようになり、人間と共生し、感情的つながりを築き、個別化されたモデルになるかもしれません。そして、常に道具の役割だけではなくなるでしょう。そのときの AI はより人間らしさを感じさせるかもしれません。&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item></channel></rss>

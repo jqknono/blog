@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>チュートリアル on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/categories/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB/</link><description>Recent content in チュートリアル on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><lastBuildDate>Thu, 01 Jan 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/categories/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows 上でリモートブラウザデバッグエントリを構築する</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文は、Windows ホスト上で Chrome を実行し、CDP 経由でリモートデバッグエントリを提供して、ローカルネットワーク内の Linux クライアントや MCP からの接続を可能にする方法を説明します。この方法の核は、Chrome が 127.0.0.1 だけをリスンし、portproxy で LAN アドレスにマッピングし、ファイアウォールで遠隔側の発信元を制限することです。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>チュートリアル on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/categories/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB/</link><description>Recent content in チュートリアル on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Thu, 01 Jan 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/categories/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows 上でリモートブラウザデバッグエントリを構築する</title><link>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文は、Windows ホスト上で Chrome を実行し、CDP 経由でリモートデバッグエントリを提供して、ローカルネットワーク内の Linux クライアントや MCP からの接続を可能にする方法を説明します。この方法の核は、Chrome が 127.0.0.1 だけをリスンし、portproxy で LAN アドレスにマッピングし、ファイアウォールで遠隔側の発信元を制限することです。&lt;/p&gt;
 &lt;h2 id="トポロジとフロー"&gt;トポロジとフロー&lt;/h2&gt;
 &lt;p&gt;下図は、Windows ホスト内部でのポートのフローと、クライアントが LAN アドレスからアクセスする方法を示しています。&lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart TB
@@ -16,34 +16,4 @@ class B proxy
 class C firewall
 class D client&lt;/pre&gt;
 &lt;h2 id="chrome-の起動"&gt;Chrome の起動&lt;/h2&gt;
-&lt;p&gt;独立したユーザーディレクトリを使用し、remote debugging アドレスを明示的に指定することを推奨します。これにより、Chrome はローカルホストにのみデバッグポートを公開します。以下は 9222 ポートを例にした起動例で、実際の環境に応じて調整してください。&lt;/p&gt;</description></item><item><title>ドメインを所有することで得られる無料サービス</title><link>https://blog.jqknono.com/ja-jp/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</link><pubDate>Thu, 27 Nov 2025 12:55:58 +0800</pubDate><guid>https://blog.jqknono.com/ja-jp/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</guid><description>&lt;p&gt;通常、ドメインの価格は12ドルからです。自分のドメインを取得したいけど必要かどうか迷っている人もいるでしょう。&lt;/p&gt;
-&lt;p&gt;私は開発者全員に自分のドメインを用意することを強くおすすめします。なぜならドメインを所有することで多くの無料サービスを手に入れることができるからです。&lt;/p&gt;
-&lt;p&gt;ここでは私がよく知っている2つのサービスプロバイダーを紹介します。1つは「サイバーフォージュ」として有名な&lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt;、もう1つは発展中の&lt;a href="https://www.alibabacloud.com/product/esa"&gt;Alibaba ESA&lt;/a&gt;です。&lt;/p&gt;
-&lt;p&gt;まず強調しておきますが、無料サービスを手に入れられるAlibaba ESAは国際版に限ります。Alibabaは中国本土向けにはほとんど無料サービスがありません。これらの期間限定トライアルは私が無料サービスの範疇から除外しています。永久無料のものだけが真の無料サービスです。&lt;/p&gt;
-&lt;p&gt;また、無料サービスは通常使用量に制限があります。もしドメインが話題になり、トラフィックが増え、そのドメインでお金を稼げるようになったら、まだ無料サービスだけに頼るのは少しおかしな話です。&lt;/p&gt;
-&lt;p&gt;無料で手に入れられるサービスの種類を簡単に紹介します：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;計算資源: CPU、メモリ&lt;/li&gt;
-&lt;li&gt;永続ストレージ: ファイルストレージ、データベース&lt;/li&gt;
-&lt;li&gt;トラフィック: CDN、DDoS保護、WAF保護、ゼロトラストネットワーキング&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="計算資源"&gt;計算資源&lt;/h2&gt;
-&lt;p&gt;Cloudflareの計算資源の無料サービスは主に&lt;a href="https://www.cloudflare.com/products/workers/"&gt;Cloudflare Workers&lt;/a&gt;を通じて提供されます。これはスタートアップ企業が使用するのに十分です。Cloudflareがあなたのサーバー上でシンプルな業務プロセスを実行することを許可していると理解してください。CPU時間は10ミリ秒に制限されており、複雑な業務には有料workerを使用する必要があります。DoHのプロキシや静的サイトのホスティングなどが典型的な使用例です。&lt;/p&gt;
-&lt;p&gt;Alibabaの場合は&lt;strong&gt;エッジファンクション&lt;/strong&gt;で、製品の成熟度はCloudflareに大きく遅れをとっています。私も少し開発を試みましたが、使いづらい印象でした。&lt;/p&gt;
-&lt;h2 id="永続ストレージ"&gt;永続ストレージ&lt;/h2&gt;
-&lt;p&gt;Cloudflare:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;10GBのR2&lt;strong&gt;オブジェクトストレージ&lt;/strong&gt;を提供。&lt;strong&gt;ファイルシステム&lt;/strong&gt;と理解できますが、ストリーミングデータの処理には適していません。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;KV&lt;/strong&gt;キー・バリューストレージを提供。&lt;strong&gt;メモリデータベース&lt;/strong&gt;と理解でき、redisに似ています。&lt;/li&gt;
-&lt;li&gt;D1は5GBの無料ストレージスペースを提供。sqliteデータベースに似ており、開発中にローカルデータベースファイルをsqliteで直接開けたので、サーバー側の実装は不明です。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Alibaba:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;無料で5GBのオブジェクトストレージ&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="トラフィック"&gt;トラフィック&lt;/h2&gt;
-&lt;p&gt;Cloudflareはトラフィックが完全無料
-Alibabaは無料で100GBのトラフィック&lt;/p&gt;
-&lt;p&gt;Cloudflareはまた、多地のデバイス間を相互接続できるネットワーキング機能も提供し、内網から直接パブリックサービスを露出させることもできます。VPSを購入する必要はありません。&lt;/p&gt;
-&lt;h2 id="まとめ"&gt;まとめ&lt;/h2&gt;
-&lt;p&gt;このシェアを書いているときにCloudflareをまた見直しましたが、本当に宝の山だと感じました。多くの実用的な無料サービスがあり、この記事で触れたのは氷山の一角に過ぎません。比較するとAlibaba ESAは目立った特長がなく、私の限られた体験では中国本土でCDNを提供できるのはドメインを备案した場合だけという利点があり、これは数年後に再検討してもいいでしょう。&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;独立したユーザーディレクトリを使用し、remote debugging アドレスを明示的に指定することを推奨します。これにより、Chrome はローカルホストにのみデバッグポートを公開します。以下は 9222 ポートを例にした起動例で、実際の環境に応じて調整してください。&lt;/p&gt;</description></item></channel></rss>

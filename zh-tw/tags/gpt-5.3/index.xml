@@ -1,0 +1,26 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GPT-5.3 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/tags/gpt-5.3/</link><description>Recent content in GPT-5.3 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Tue, 17 Feb 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/tags/gpt-5.3/index.xml" rel="self" type="application/rss+xml"/><item><title>GPT-5.3-Codex 初體驗：從驚喜到理性評估</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/17/gpt-53-codex-experience/</link><pubDate>Tue, 17 Feb 2026 10:30:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/17/gpt-53-codex-experience/</guid><description>&lt;p&gt;OpenAI 在 GPT-5.3 正式版尚未發布之際，率先推出了 GPT-5.3-Codex 這一特化模型。從商業邏輯來看，這一決策不難理解。GPT-5.3-Codex 與標準版 GPT-5.3 定價相同，但其輸出更為積極，執行時間更短，記憶體佔用更少，這意味著更高的利潤空間。對於 OpenAI 而言，GPT-5.3-Codex 顯然是一個更具成本效益的選擇。&lt;/p&gt;
+&lt;p&gt;在 GPT-5.3-Codex 發布的第一週，其使用體驗確實令人驚喜。模型回應速度明顯優於之前的版本，程式碼生成的回饋非常即時。對於需要快速迭代、頻繁互動的開發場景，這種效率提升帶來了直觀的生產力改善。當需要在短時間內獲得多個實現方案或快速驗證想法時，Codex 的積極輸出特性顯得尤為有用。&lt;/p&gt;
+&lt;p&gt;然而進入第二週後，情況發生了明顯變化。模型的回應速度出現顯著下降，原本流暢的互動體驗開始變得卡頓。這種性能波動讓人聯想到雲服務中常見的資源調度問題，可能是在使用者量增長後，伺服器負載分配策略導致的降級服務。&lt;/p&gt;
+&lt;p&gt;除了性能波動，更值得關注的是 Codex 在思維縝密程度上的不足。與非 Codex 系列相比，它在處理複雜邏輯、邊緣情況處理和程式碼健壯性方面表現較弱。當面對需要深度推理、多步驟規劃或抽象理解的任務時，Codex 更傾向於給出表面可行的方案，而缺乏對潛在問題的預判。&lt;/p&gt;
+&lt;p&gt;這種差異背後反映了兩個模型在設計目標上的不同。Codex 似乎更注重生成速度和輸出活躍度，適合快速原型開發、程式碼補全和簡單任務的自動化。而非 Codex 系列則保留了更強的泛化能力，更注重方案的正確性和可靠性。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+subgraph A[&amp;#34;GPT-5.3-Codex&amp;#34;]
+direction LR
+A1[&amp;#34;生成速度: 快&amp;#34;]
+A2[&amp;#34;輸出活躍度: 高&amp;#34;]
+A3[&amp;#34;思維縝密度: 中等&amp;#34;]
+A4[&amp;#34;適合場景: 快速原型、程式碼補全、探索階段&amp;#34;]
+end
+subgraph B[&amp;#34;GPT-5.3 非Codex&amp;#34;]
+direction LR
+B1[&amp;#34;生成速度: 中等&amp;#34;]
+B2[&amp;#34;輸出活躍度: 穩定&amp;#34;]
+B3[&amp;#34;思維縝密度: 高&amp;#34;]
+B4[&amp;#34;適合場景: 生產環境、關鍵專案、穩定期&amp;#34;]
+end
+A &amp;lt;--&amp;gt;|選擇權衡| B
+classDef codex fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+classDef standard fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+class A,A1,A2,A3,A4 codex;
+class B,B1,B2,B3,B4 standard;&lt;/pre&gt;
+&lt;p&gt;從實際開發場景來看，如果你的需求是快速獲得程式碼片段、實現已知明確的功能，或者需要在短時間內嘗試多種方案，Codex 的積極輸出和快速回應會帶來明顯優勢。但當專案進入穩定期，對程式碼品質、可維護性和長期穩定性有更高要求時，非 Codex 系列仍然是更可靠的選擇。&lt;/p&gt;</description></item></channel></rss>

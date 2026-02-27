@@ -1,0 +1,26 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OpenAI on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/tags/openai/</link><description>Recent content in OpenAI on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Tue, 17 Feb 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/tags/openai/index.xml" rel="self" type="application/rss+xml"/><item><title>GPT-5.3-Codex 初体験：驚きから理性的評価へ</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/17/gpt-53-codex-experience/</link><pubDate>Tue, 17 Feb 2026 10:30:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/17/gpt-53-codex-experience/</guid><description>&lt;p&gt;OpenAI は GPT-5.3 の正式版がまだリリースされていない時点で、先行して GPT-5.3-Codex という特化モデルを提供しました。ビジネスロジックから見ると、この決定は理解しやすいです。GPT-5.3-Codex は標準版 GPT-5.3 と同じ価格ですが、出力がより積極的で、実行時間が短く、メモリ使用量も少なく、より高い利益余地をもたらします。OpenAI にとって、GPT-5.3-Codex は明らかにコスト効率の高い選択肢です。&lt;/p&gt;
+&lt;p&gt;GPT-5.3-Codex のリリース初週は、使用体験が実際に驚くべきものでした。モデルの応答速度は以前のバージョンより明らかに優れており、コード生成のフィードバックも非常に迅速です。迅速なイテレーションや頻繁なインタラクションが必要な開発シーンでは、この効率向上が直感的な生産性改善をもたらします。短時間で複数の実装案を得たり、アイデアを素早く検証したりする必要がある場合、Codex の積極的な出力特性は特に有用です。&lt;/p&gt;
+&lt;p&gt;しかし、2 週目に入ると状況は顕著に変化しました。モデルの応答速度が大幅に低下し、かつてスムーズだったインタラクションがカクつき始めました。このような性能の揺らぎは、クラウドサービスでよく見られるリソーススケジューリングの問題を連想させ、ユーザー数の増加に伴うサーバー負荷分配戦略が原因でサービスが低下した可能性があります。&lt;/p&gt;
+&lt;p&gt;性能の揺らぎに加えて、注目すべきは Codex の思考の緻密さの不足です。非 Codex 系列と比較すると、複雑なロジックやエッジケースの処理、コードの堅牢性において弱い傾向があります。深い推論や多段階の計画、抽象的な理解が求められるタスクに直面した際、Codex は表面的に実行可能な案を提示しがちで、潜在的な問題の予測が欠如しています。&lt;/p&gt;
+&lt;p&gt;この差異は、二つのモデルが設計目標で異なることを反映しています。Codex は生成速度と出力の活性度に重点を置き、迅速なプロトタイプ開発、コード補完、シンプルなタスクの自動化に適しています。一方、非 Codex 系列はより強い汎化能力を保持し、解答の正確性と信頼性を重視します。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+subgraph A[&amp;#34;GPT-5.3-Codex&amp;#34;]
+direction LR
+A1[&amp;#34;生成速度: 速い&amp;#34;]
+A2[&amp;#34;出力活性度: 高い&amp;#34;]
+A3[&amp;#34;思考の緻密度: 中程度&amp;#34;]
+A4[&amp;#34;適用シーン: 迅速なプロトタイプ、コード補完、探索段階&amp;#34;]
+end
+subgraph B[&amp;#34;GPT-5.3 非Codex&amp;#34;]
+direction LR
+B1[&amp;#34;生成速度: 中程度&amp;#34;]
+B2[&amp;#34;出力活性度: 安定&amp;#34;]
+B3[&amp;#34;思考の緻密度: 高い&amp;#34;]
+B4[&amp;#34;適用シーン: 本番環境、重要プロジェクト、安定期&amp;#34;]
+end
+A &amp;lt;--&amp;gt;|選択のトレードオフ| B
+classDef codex fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+classDef standard fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+class A,A1,A2,A3,A4 codex;
+class B,B1,B2,B3,B4 standard;&lt;/pre&gt;
+&lt;p&gt;実際の開発シーンを見ると、もしあなたのニーズがコードスニペットを迅速に取得したり、既知で明確な機能を実装したり、短時間で複数の案を試すことにあるなら、Codex の積極的な出力と高速な応答は明らかな優位性をもたらします。しかし、プロジェクトが安定期に入り、コード品質、保守性、長期的な安定性に対する要求が高まる場合、非 Codex 系列は依然としてより信頼できる選択です。&lt;/p&gt;</description></item></channel></rss>

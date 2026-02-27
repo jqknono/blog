@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/categories/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 01 Jan 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Windows 上搭建远程浏览器调试入口</title><link>https://blog.jqknono.com/zh-cn/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文说明如何在 Windows 主机上运行 Chrome 并通过 CDP 提供远程调试入口, 供局域网内的 Linux 客户端或 MCP 连接使用. 方案核心是 Chrome 仅监听 127.0.0.1, 由 portproxy 映射到 LAN 地址, 再通过防火墙限制远端来源.&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/categories/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Thu, 01 Jan 2026 10:30:00 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>在 Windows 上搭建远程浏览器调试入口</title><link>https://blog.jqknono.com/zh-cn/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-cn/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文说明如何在 Windows 主机上运行 Chrome 并通过 CDP 提供远程调试入口, 供局域网内的 Linux 客户端或 MCP 连接使用. 方案核心是 Chrome 仅监听 127.0.0.1, 由 portproxy 映射到 LAN 地址, 再通过防火墙限制远端来源.&lt;/p&gt;
 &lt;h2 id="拓扑与流向"&gt;拓扑与流向&lt;/h2&gt;
 &lt;p&gt;下图展示了端口在 Windows 主机内部的流向, 以及客户端如何通过 LAN 地址访问.&lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart TB
@@ -16,25 +16,4 @@ class B proxy
 class C firewall
 class D client&lt;/pre&gt;
 &lt;h2 id="启动-chrome"&gt;启动 Chrome&lt;/h2&gt;
-&lt;p&gt;建议使用独立的用户目录, 并显式指定 remote debugging 地址, 这样 Chrome 只对本机开放调试端口. 下面示例以 9222 端口为例, 请根据实际情况调整.&lt;/p&gt;</description></item><item><title>持有域名可以耗到的羊毛</title><link>https://blog.jqknono.com/zh-cn/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</link><pubDate>Thu, 27 Nov 2025 12:55:58 +0800</pubDate><guid>https://blog.jqknono.com/zh-cn/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</guid><description>&lt;p&gt;一般一个域名的价格是 12 美元起, 会有些人想要搞个自己的域名又犹豫有没有必要.&lt;/p&gt;
-&lt;p&gt;我是非常推荐开发者都准备一个自己的域名的, 因为持有域名可以耗到不少羊毛.&lt;/p&gt;
-&lt;p&gt;这里主要介绍两个我熟悉的服务商, 一个是江湖号称&amp;quot;赛博佛祖&amp;quot;的&lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt;, 还有一个是正在发展的&lt;a href="https://www.alibabacloud.com/product/esa"&gt;Alibaba ESA&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;这里首先强调下能薅羊毛的 Alibaba ESA 特指国际版, 阿里对大陆地区几乎没有羊毛, 那些限时试用都被我踢出羊毛范畴, 只有永久免费才是真羊毛.&lt;/p&gt;
-&lt;p&gt;另外羊毛通常有用量限制, 要是域名出圈, 流量大了, 自己都可以靠这个域名挣钱了, 还纯薅羊毛, 那也不太说的过去.&lt;/p&gt;
-&lt;p&gt;简单介绍可以薅的类别:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;计算资源: CPU, 内存&lt;/li&gt;
-&lt;li&gt;持久化存储: 文件存储, 数据库&lt;/li&gt;
-&lt;li&gt;流量: CDN, DDoS 保护, WAF 保护, 零信任组网&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="计算资源"&gt;计算资源&lt;/h2&gt;
-&lt;p&gt;Cloudflare 的计算资源羊毛主要通过&lt;a href="https://www.cloudflare.com/products/workers/"&gt;Cloudflare Workers&lt;/a&gt;实现, 足够初创企业使用. 你可以理解为 Cloudflare 允许你在它的服务器上跑一个简单业务的进程. CPU 时间限制在 10ms, 复杂业务需要使用付费 worker. 像代理 DoH, 承载静态网站, 都是典型的使用场景.&lt;/p&gt;
-&lt;p&gt;Alibaba 的是&lt;strong&gt;边缘函数&lt;/strong&gt;, 产品成熟度远远落后于 Cloudflare, 我简单试着开发过一点东西, 使用起来很不方便.&lt;/p&gt;
-&lt;h2 id="持久化存储"&gt;持久化存储&lt;/h2&gt;
-&lt;p&gt;Cloudflare:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;提供 10 GB 的 R2 的&lt;strong&gt;对象存储&lt;/strong&gt;, 可以理解为&lt;strong&gt;文件系统&lt;/strong&gt;, 但不适合处理流式数据.&lt;/li&gt;
-&lt;li&gt;提供&lt;strong&gt;KV&lt;/strong&gt;键值对存储, 可以理解为&lt;strong&gt;内存数据库&lt;/strong&gt;, 类似 redis.&lt;/li&gt;
-&lt;li&gt;D1 提供 5GB 免费存储空间, 类似 sqlite 数据库, 我在开发时发现本地数据库文件确实可以直接用 sqlite 打开, 不确定服务端具体如何实现.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Alibaba:&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;建议使用独立的用户目录, 并显式指定 remote debugging 地址, 这样 Chrome 只对本机开放调试端口. 下面示例以 9222 端口为例, 请根据实际情况调整.&lt;/p&gt;</description></item></channel></rss>

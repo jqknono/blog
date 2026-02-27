@@ -1,9 +1,33 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/blog/</link><description>Recent content in 博客 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><lastBuildDate>Mon, 13 Nov 2023 14:15:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>return-to-gpt-non-codex</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/11/return-to-gpt-non-codex/</link><pubDate>Wed, 11 Feb 2026 10:55:39 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/11/return-to-gpt-non-codex/</guid><description>&lt;p&gt;OpenAI似乎很想推Codex模型，GPT-5.3還沒出，先出GPT-5.3-Codex.一樣的價格，Codex輸出更積極，執行時間更短，記憶體佔用時間更少，有更大利潤空間.&lt;/p&gt;
-&lt;p&gt;GPT-5.3-Codex出來第一週我用了體驗很好，主要是速度快，反饋及時. 但進入第二週其降速明顯，同時其思維縝密程度不如GPT非Codex系列，因此我還是推薦非Codex系列，其一次做對的概率仍然是最高的，它不會做超出描述的事，但能描述出的事做的沒有bug.&lt;/p&gt;</description></item><item><title>DoH 與 DoT 技術對比分析</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/11/doh-vs-dot-comparison/</link><pubDate>Wed, 11 Feb 2026 00:00:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/11/doh-vs-dot-comparison/</guid><description>&lt;p&gt;DNS over HTTPS (DoH) 和 DNS over TLS (DoT) 是兩種常見的加密 DNS 傳輸方式，它們透過不同的協定堆疊來實現 DNS 查詢的安全傳輸。DoT 的標準由 &lt;a href="https://datatracker.ietf.org/doc/html/rfc7858"&gt;RFC 7858&lt;/a&gt; 定義，而 DoH 則由 &lt;a href="https://datatracker.ietf.org/doc/html/rfc8484"&gt;DNS Queries over HTTPS (DoH)&lt;/a&gt; 標準化。理解這兩種技術的本質區別，需要從網路協定層次結構入手分析。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-tw/blog/</link><description>Recent content in 博客 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-tw</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Mon, 13 Nov 2023 14:15:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-tw/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Project Translator VSCode 擴展實現專案多語言本地化</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/26/project-translator-vscode-extension/</link><pubDate>Thu, 26 Feb 2026 14:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/26/project-translator-vscode-extension/</guid><description>Project Translator 是一款功能強大的 VSCode 擴展，能夠基於 AI 實現專案級別的多語言自動翻譯，保持程式碼結構完整性的同時高效完成文件本地化。</description></item><item><title>GPT-5.3-Codex 初體驗：從驚喜到理性評估</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/17/gpt-53-codex-experience/</link><pubDate>Tue, 17 Feb 2026 10:30:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/17/gpt-53-codex-experience/</guid><description>&lt;p&gt;OpenAI 在 GPT-5.3 正式版尚未發布之際，率先推出了 GPT-5.3-Codex 這一特化模型。從商業邏輯來看，這一決策不難理解。GPT-5.3-Codex 與標準版 GPT-5.3 定價相同，但其輸出更為積極，執行時間更短，記憶體佔用更少，這意味著更高的利潤空間。對於 OpenAI 而言，GPT-5.3-Codex 顯然是一個更具成本效益的選擇。&lt;/p&gt;
+&lt;p&gt;在 GPT-5.3-Codex 發布的第一週，其使用體驗確實令人驚喜。模型回應速度明顯優於之前的版本，程式碼生成的回饋非常即時。對於需要快速迭代、頻繁互動的開發場景，這種效率提升帶來了直觀的生產力改善。當需要在短時間內獲得多個實現方案或快速驗證想法時，Codex 的積極輸出特性顯得尤為有用。&lt;/p&gt;
+&lt;p&gt;然而進入第二週後，情況發生了明顯變化。模型的回應速度出現顯著下降，原本流暢的互動體驗開始變得卡頓。這種性能波動讓人聯想到雲服務中常見的資源調度問題，可能是在使用者量增長後，伺服器負載分配策略導致的降級服務。&lt;/p&gt;
+&lt;p&gt;除了性能波動，更值得關注的是 Codex 在思維縝密程度上的不足。與非 Codex 系列相比，它在處理複雜邏輯、邊緣情況處理和程式碼健壯性方面表現較弱。當面對需要深度推理、多步驟規劃或抽象理解的任務時，Codex 更傾向於給出表面可行的方案，而缺乏對潛在問題的預判。&lt;/p&gt;
+&lt;p&gt;這種差異背後反映了兩個模型在設計目標上的不同。Codex 似乎更注重生成速度和輸出活躍度，適合快速原型開發、程式碼補全和簡單任務的自動化。而非 Codex 系列則保留了更強的泛化能力，更注重方案的正確性和可靠性。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+subgraph A[&amp;#34;GPT-5.3-Codex&amp;#34;]
+direction LR
+A1[&amp;#34;生成速度: 快&amp;#34;]
+A2[&amp;#34;輸出活躍度: 高&amp;#34;]
+A3[&amp;#34;思維縝密度: 中等&amp;#34;]
+A4[&amp;#34;適合場景: 快速原型、程式碼補全、探索階段&amp;#34;]
+end
+subgraph B[&amp;#34;GPT-5.3 非Codex&amp;#34;]
+direction LR
+B1[&amp;#34;生成速度: 中等&amp;#34;]
+B2[&amp;#34;輸出活躍度: 穩定&amp;#34;]
+B3[&amp;#34;思維縝密度: 高&amp;#34;]
+B4[&amp;#34;適合場景: 生產環境、關鍵專案、穩定期&amp;#34;]
+end
+A &amp;lt;--&amp;gt;|選擇權衡| B
+classDef codex fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+classDef standard fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+class A,A1,A2,A3,A4 codex;
+class B,B1,B2,B3,B4 standard;&lt;/pre&gt;
+&lt;p&gt;從實際開發場景來看，如果你的需求是快速獲得程式碼片段、實現已知明確的功能，或者需要在短時間內嘗試多種方案，Codex 的積極輸出和快速回應會帶來明顯優勢。但當專案進入穩定期，對程式碼品質、可維護性和長期穩定性有更高要求時，非 Codex 系列仍然是更可靠的選擇。&lt;/p&gt;</description></item><item><title>DoH 與 DoT 技術對比分析</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/11/doh-vs-dot-comparison/</link><pubDate>Wed, 11 Feb 2026 00:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/11/doh-vs-dot-comparison/</guid><description>&lt;p&gt;DNS over HTTPS (DoH) 和 DNS over TLS (DoT) 是兩種常見的加密 DNS 傳輸方式，它們透過不同的協定堆疊來實現 DNS 查詢的安全傳輸。DoT 的標準由 &lt;a href="https://datatracker.ietf.org/doc/html/rfc7858"&gt;RFC 7858&lt;/a&gt; 定義，而 DoH 則由 &lt;a href="https://datatracker.ietf.org/doc/html/rfc8484"&gt;DNS Queries over HTTPS (DoH)&lt;/a&gt; 標準化。理解這兩種技術的本質區別，需要從網路協定層次結構入手分析。&lt;/p&gt;
 &lt;h2 id="網路協定層次結構"&gt;網路協定層次結構&lt;/h2&gt;
 &lt;p&gt;現代網路協定堆疊採用分層設計，每一層提供不同的功能。DNS 作為應用層協定，本身並不綁定特定的傳輸方式，可以執行在多種承載協定之上。&lt;/p&gt;
 &lt;p&gt;應用層 (L7) 包含 HTTP/1.1, HTTP/2, HTTP/3, FTP 和 DNS 等協定。值得注意的是，HTTP/3 的語意仍然在應用層，只是 QUIC 作為傳輸承載。安全層位於應用層和傳輸層之間，主要包括 TLS 及其變體。TLS 通常執行在 TCP 上，比如 HTTPS 和 DoT。DTLS 是 TLS 的資料報版本，可以執行在 UDP 上。QUIC 協定比較特殊，它將 TLS 1.3 的交握與金鑰衍生直接整合在協定內部。&lt;/p&gt;
-&lt;p&gt;QUIC 可以被視作 L4.5 層協定，它基於 UDP 擴展，提供了傳統傳輸層的能力。傳輸層 (L4) 包含 TCP, UDP 和 QUIC。雖然從工程實作角度 QUIC 基於 UDP，但它自帶可靠性、擁塞控制、多工和加密交握等功能，因此在工程上被當作獨立的傳輸層協定。網路層 (L3) 使用 IP 協定 (IPv4/IPv6) 負責封包的路由與轉送。資料連結層 (L2) 包括乙太網路和 Wi-Fi (802.11) 等技術。&lt;/p&gt;</description></item><item><title>OpenRouter gpt-oss-120b 模型不支援中文請求的除錯記錄</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</link><pubDate>Mon, 09 Feb 2026 22:00:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</guid><description>&lt;p&gt;在使用 &lt;a href="https://openrouter.ai/"&gt;OpenRouter&lt;/a&gt; 提供的免費模型 API 時，我遇到了一個令人困惑的問題。同樣的請求結構，僅僅修改了提示詞的語言，就會出現完全不同的結果。&lt;/p&gt;
+&lt;p&gt;QUIC 可以被視作 L4.5 層協定，它基於 UDP 擴展，提供了傳統傳輸層的能力。傳輸層 (L4) 包含 TCP, UDP 和 QUIC。雖然從工程實作角度 QUIC 基於 UDP，但它自帶可靠性、擁塞控制、多工和加密交握等功能，因此在工程上被當作獨立的傳輸層協定。網路層 (L3) 使用 IP 協定 (IPv4/IPv6) 負責封包的路由與轉送。資料連結層 (L2) 包括乙太網路和 Wi-Fi (802.11) 等技術。&lt;/p&gt;</description></item><item><title>OpenRouter gpt-oss-120b 模型不支援中文請求的除錯記錄</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</link><pubDate>Mon, 09 Feb 2026 22:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</guid><description>&lt;p&gt;在使用 &lt;a href="https://openrouter.ai/"&gt;OpenRouter&lt;/a&gt; 提供的免費模型 API 時，我遇到了一個令人困惑的問題。同樣的請求結構，僅僅修改了提示詞的語言，就會出現完全不同的結果。&lt;/p&gt;
 &lt;h2 id="問題復現"&gt;問題復現&lt;/h2&gt;
 &lt;p&gt;我使用 &lt;code&gt;openai/gpt-oss-120b:free&lt;/code&gt; 模型進行測試，兩個請求的唯一區別在於提示詞語言。第一個請求使用中文提示：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://openrouter.ai/api/v1/chat/completions &lt;span class="se"&gt;\
@@ -31,7 +55,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; }
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; ]
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;請求能夠正常回應，返回預期的模型輸出。&lt;/p&gt;</description></item><item><title>免費AI圖示生成工具彙總</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/02/free-ai-icon-generators/</link><pubDate>Mon, 02 Feb 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/02/free-ai-icon-generators/</guid><description>&lt;p&gt;隨著人工智慧技術的發展，設計師和開發者現在可以透過簡單的文字提示快速生成各類圖示。這些免費AI圖示生成工具大大降低了設計門檻，讓不具備專業設計技能的使用者也能創建出高品質的視覺元素。以下這些工具都支援透過文字描述生成圖像，輸出格式通常為PNG或SVG，部分工具還提供風格和配色調整功能。&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;請求能夠正常回應，返回預期的模型輸出。&lt;/p&gt;</description></item><item><title>免費AI圖示生成工具彙總</title><link>https://blog.jqknono.com/zh-tw/blog/2026/02/02/free-ai-icon-generators/</link><pubDate>Mon, 02 Feb 2026 10:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2026/02/02/free-ai-icon-generators/</guid><description>&lt;p&gt;隨著人工智慧技術的發展，設計師和開發者現在可以透過簡單的文字提示快速生成各類圖示。這些免費AI圖示生成工具大大降低了設計門檻，讓不具備專業設計技能的使用者也能創建出高品質的視覺元素。以下這些工具都支援透過文字描述生成圖像，輸出格式通常為PNG或SVG，部分工具還提供風格和配色調整功能。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.freepik.com/ai/icon-generator"&gt;Freepik AI圖示生成器&lt;/a&gt;是一款線上AI圖示生成工具，能夠根據文字描述生成SVG或PNG格式的圖示。這款工具非常適合網頁設計和UI設計場景，免費用戶可以使用但存在每日生成數量的限制。對於需要快速獲取圖示素材的設計工作來說，Freepik提供了一個便捷的解決方案。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.pixelcut.ai/create/icon-generator"&gt;Pixelcut AI圖示生成器&lt;/a&gt;專注於提供簡單直觀的圖示生成體驗。使用者只需輸入文字提示，即可生成自訂圖示。該工具的操作流程簡潔明瞭，適合不熟悉複雜設計軟體的使用者快速上手。生成的圖示可以直接下載使用，為個人專案或小型網站提供視覺支援。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://iconscout.com/ai/icon-generator"&gt;IconScout AI圖示生成器&lt;/a&gt;支援透過簡單文字生成圖示，並提供多種風格選擇。這款工具特別適合設計專案、部落格文章和展示用途。多樣化的風格選項讓使用者可以根據專案需求選擇合適的視覺風格，從而保持整體設計的一致性。&lt;/p&gt;
@@ -61,7 +85,7 @@ J --&amp;gt; M[注意版權條款]
 K --&amp;gt; M
 L --&amp;gt; M
 M --&amp;gt; N[確認商業使用許可]&lt;/pre&gt;
-&lt;p&gt;這些工具雖然提供了免費使用選項，但使用者需要注意免費額度和生成次數的限制。在使用前應當仔細閱讀各平台的使用條款，特別是關於輸出圖像版權的說明。部分工具的免費版可能禁止商業用途，或者要求在使用時註明來源。明確這些限制條件可以避免後續的法律風險。&lt;/p&gt;</description></item><item><title>Vibe Coding 的省錢公式與臨界點</title><link>https://blog.jqknono.com/zh-tw/blog/2026/01/07/vibe-coding-cost-formulas/</link><pubDate>Wed, 07 Jan 2026 10:00:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2026/01/07/vibe-coding-cost-formulas/</guid><description>&lt;p&gt;AI 編碼工具的計費模式可歸納為三類:&lt;/p&gt;
+&lt;p&gt;這些工具雖然提供了免費使用選項，但使用者需要注意免費額度和生成次數的限制。在使用前應當仔細閱讀各平台的使用條款，特別是關於輸出圖像版權的說明。部分工具的免費版可能禁止商業用途，或者要求在使用時註明來源。明確這些限制條件可以避免後續的法律風險。&lt;/p&gt;</description></item><item><title>Vibe Coding 的省錢公式與臨界點</title><link>https://blog.jqknono.com/zh-tw/blog/2026/01/07/vibe-coding-cost-formulas/</link><pubDate>Wed, 07 Jan 2026 10:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2026/01/07/vibe-coding-cost-formulas/</guid><description>&lt;p&gt;AI 編碼工具的計費模式可歸納為三類:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;按 token 計費&lt;/strong&gt;: 包括各類 API, Claude Code (Claude Pro), Codex Cli (ChatGPT Plus), 智譜 Lite/Pro, Cursor 新版等. 本質均為 token 計費, 部分產品提供套餐折扣.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;按 API 調用次數計費&lt;/strong&gt;: 如 OpenRouter (免費額度), ModelScope, Gemini Code Assistant (每日免費 1000 次), Chutes 等.&lt;/li&gt;
@@ -77,7 +101,7 @@ M --&amp;gt; N[確認商業使用許可]&lt;/pre&gt;
 \mathrm{Time}_i &amp;amp;= R \cdot \mathrm{Hours}_i \
 \mathrm{Risk}_i &amp;amp;= R \cdot \mathrm{ReworkHours}_i
 \end{aligned}
-$$&lt;/p&gt;</description></item><item><title>在 Windows 上搭建遠端瀏覽器調試入口</title><link>https://blog.jqknono.com/zh-tw/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文說明如何在 Windows 主機上運行 Chrome 並透過 CDP 提供遠端調試入口, 供局域網內的 Linux 客戶端或 MCP 連接使用. 方案核心是 Chrome 僅監聽 127.0.0.1, 由 portproxy 映射到 LAN 地址, 再透過防火牆限制遠端來源.&lt;/p&gt;
+$$&lt;/p&gt;</description></item><item><title>在 Windows 上搭建遠端瀏覽器調試入口</title><link>https://blog.jqknono.com/zh-tw/blog/2026/01/01/windows-remote-browser-cdp/</link><pubDate>Thu, 01 Jan 2026 10:30:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2026/01/01/windows-remote-browser-cdp/</guid><description>&lt;p&gt;本文說明如何在 Windows 主機上運行 Chrome 並透過 CDP 提供遠端調試入口, 供局域網內的 Linux 客戶端或 MCP 連接使用. 方案核心是 Chrome 僅監聽 127.0.0.1, 由 portproxy 映射到 LAN 地址, 再透過防火牆限制遠端來源.&lt;/p&gt;
 &lt;h2 id="拓撲與流向"&gt;拓撲與流向&lt;/h2&gt;
 &lt;p&gt;下圖展示了端口在 Windows 主機內部的流向, 以及客戶端如何透過 LAN 地址訪問.&lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart TB
@@ -95,7 +119,7 @@ class B proxy
 class C firewall
 class D client&lt;/pre&gt;
 &lt;h2 id="啟動-chrome"&gt;啟動 Chrome&lt;/h2&gt;
-&lt;p&gt;建議使用獨立的用戶目錄, 並顯式指定 remote debugging 地址, 這樣 Chrome 只對本機開放調試端口. 下面示例以 9222 端口為例, 請根據實際情況調整.&lt;/p&gt;</description></item><item><title>技術部落格已死</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/23/technical-blogs-are-dead/</link><pubDate>Tue, 23 Dec 2025 17:05:13 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/23/technical-blogs-are-dead/</guid><description>&lt;p&gt;在過去幾年裡，人工智慧 (AI) 寫作工具如 ChatGPT、Claude 等迅速普及。它們能夠生成流暢的技術文章，甚至能模仿人類的寫作風格。這一變化引發了技術部落格圈的廣泛討論：許多人聲稱「技術部落格已死」。本文將探討 AI 工具對技術部落格的影響，並分析技術部落格的未來走向。&lt;/p&gt;
+&lt;p&gt;建議使用獨立的用戶目錄, 並顯式指定 remote debugging 地址, 這樣 Chrome 只對本機開放調試端口. 下面示例以 9222 端口為例, 請根據實際情況調整.&lt;/p&gt;</description></item><item><title>技術部落格已死</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/23/technical-blogs-are-dead/</link><pubDate>Tue, 23 Dec 2025 17:05:13 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/23/technical-blogs-are-dead/</guid><description>&lt;p&gt;在過去幾年裡，人工智慧 (AI) 寫作工具如 ChatGPT、Claude 等迅速普及。它們能夠生成流暢的技術文章，甚至能模仿人類的寫作風格。這一變化引發了技術部落格圈的廣泛討論：許多人聲稱「技術部落格已死」。本文將探討 AI 工具對技術部落格的影響，並分析技術部落格的未來走向。&lt;/p&gt;
 &lt;h2 id="ai-寫作工具的崛起"&gt;AI 寫作工具的崛起&lt;/h2&gt;
 &lt;p&gt;AI 寫作工具的核心能力是理解自然語言並生成高品質文本。對於技術部落格作者而言，這些工具可以快速生成草稿、提供靈感，或者直接產出完整的文章。例如，當作者需要解釋一個複雜概念時，AI 可以生成清晰的說明段落；當作者缺乏時間時，AI 可以快速整理出一篇教程。&lt;/p&gt;
 &lt;p&gt;然而，這種便利也帶來了副作用。大量低品質的 AI 生成內容開始充斥網際網路。這些內容往往缺乏深度，甚至包含錯誤，卻因為 SEO 優化而獲得高排名，擠壓了真正有價值的技術部落格的曝光機會。&lt;/p&gt;
@@ -115,7 +139,7 @@ class D client&lt;/pre&gt;
 &lt;/ul&gt;
 &lt;p&gt;這些形式都依賴於人類的創造力和經驗，是 AI 目前無法完全替代的。&lt;/p&gt;
 &lt;h2 id="結論"&gt;結論&lt;/h2&gt;
-&lt;p&gt;「技術部落格已死」或許是一種誇張的說法。AI 確實改變了技術寫作的格局，但同時也為作者提供了新的工具。那些能夠適應變化、將 AI 作為輔助而非替代的部落客，不僅不會消失，反而會產出更優質的內容。技術部落格不會死，它只會以更豐富的形式繼續存在。&lt;/p&gt;</description></item><item><title>OpenAI的取名藝術鑑賞</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/12/openai%E7%9A%84%E5%8F%96%E5%90%8D%E8%97%9D%E8%A1%93%E9%91%91%E8%B3%9E/</link><pubDate>Fri, 12 Dec 2025 11:46:01 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/12/openai%E7%9A%84%E5%8F%96%E5%90%8D%E8%97%9D%E8%A1%93%E9%91%91%E8%B3%9E/</guid><description>&lt;p&gt;這裡&lt;a href="https://platform.openai.com/docs/models/"&gt;https://platform.openai.com/docs/models/&lt;/a&gt;記錄了 OpenAI 的所有模型。&lt;/p&gt;
+&lt;p&gt;「技術部落格已死」或許是一種誇張的說法。AI 確實改變了技術寫作的格局，但同時也為作者提供了新的工具。那些能夠適應變化、將 AI 作為輔助而非替代的部落客，不僅不會消失，反而會產出更優質的內容。技術部落格不會死，它只會以更豐富的形式繼續存在。&lt;/p&gt;</description></item><item><title>OpenAI的取名藝術鑑賞</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/12/openai%E7%9A%84%E5%8F%96%E5%90%8D%E8%97%9D%E8%A1%93%E9%91%91%E8%B3%9E/</link><pubDate>Fri, 12 Dec 2025 11:46:01 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/12/openai%E7%9A%84%E5%8F%96%E5%90%8D%E8%97%9D%E8%A1%93%E9%91%91%E8%B3%9E/</guid><description>&lt;p&gt;這裡&lt;a href="https://platform.openai.com/docs/models/"&gt;https://platform.openai.com/docs/models/&lt;/a&gt;記錄了 OpenAI 的所有模型。&lt;/p&gt;
 &lt;p&gt;太遠了的不說，從 &lt;code&gt;GPT-4&lt;/code&gt; 系列及同世代模型聊起，這是我彙總的表格：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -268,7 +292,7 @@ class D client&lt;/pre&gt;
 音頻轉文字&lt;code&gt;Transcribe&lt;/code&gt;場景，提供了 &lt;code&gt;GPT-4o Transcribe&lt;/code&gt;、&lt;code&gt;GPT-4o mini Transcribe&lt;/code&gt;、&lt;code&gt;GPT-4o Transcribe Diarize&lt;/code&gt; 三個模型。&lt;br&gt;
 &lt;code&gt;ChatGPT-4o&lt;/code&gt; 是 &lt;code&gt;GPT-4o&lt;/code&gt; 的特別版，用於 ChatGPT 中，其他場景不能用。&lt;br&gt;
 &lt;code&gt;GPT-4.1&lt;/code&gt;比&lt;code&gt;GPT-4&lt;/code&gt;更好，是符合直覺的，但&lt;code&gt;GPT-4o&lt;/code&gt;(4 歐)和&lt;code&gt;GPT-4.1&lt;/code&gt;或&lt;code&gt;GPT-4&lt;/code&gt;卻不好比較。時間線上，先出現的是&lt;code&gt;GPT-4&lt;/code&gt;，然後是&lt;code&gt;GPT-4o&lt;/code&gt;，再然後是&lt;code&gt;GPT-4.1&lt;/code&gt;，當然，仍然無法判斷&lt;code&gt;GPT-4o&lt;/code&gt;和&lt;code&gt;GPT-4.1&lt;/code&gt;誰更好。&lt;br&gt;
-這裡插入下對「好」的定義，我個人將數學和推理結果正確率高作為「好」的定義，完全不將「速度」納入「好」的定義。但此前 OpenAI 可能認為速度和智慧同樣重要，因此出現奇怪的模型對比。進入 GPT-5 時代後，慶幸 OpenAI 開始放棄速度，追求智慧，至此模型間的對比才沒有歧義。一個快速的錯誤回答是浪費時間，沒有意義。&lt;/p&gt;</description></item><item><title>抢占服务器是个大便宜</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/05/%E6%8A%A2%E5%8D%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%AF%E4%B8%AA%E5%A4%A7%E4%BE%BF%E5%AE%9C/</link><pubDate>Fri, 05 Dec 2025 11:51:04 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/05/%E6%8A%A2%E5%8D%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%AF%E4%B8%AA%E5%A4%A7%E4%BE%BF%E5%AE%9C/</guid><description>&lt;p&gt;一直有个大便宜, 我从未在公开社区宣传过, 那就是阿里云的&lt;strong&gt;抢占服务器&lt;/strong&gt;非常划算.&lt;/p&gt;
+這裡插入下對「好」的定義，我個人將數學和推理結果正確率高作為「好」的定義，完全不將「速度」納入「好」的定義。但此前 OpenAI 可能認為速度和智慧同樣重要，因此出現奇怪的模型對比。進入 GPT-5 時代後，慶幸 OpenAI 開始放棄速度，追求智慧，至此模型間的對比才沒有歧義。一個快速的錯誤回答是浪費時間，沒有意義。&lt;/p&gt;</description></item><item><title>抢占服务器是个大便宜</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/05/%E6%8A%A2%E5%8D%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%AF%E4%B8%AA%E5%A4%A7%E4%BE%BF%E5%AE%9C/</link><pubDate>Fri, 05 Dec 2025 11:51:04 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/05/%E6%8A%A2%E5%8D%A0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%AF%E4%B8%AA%E5%A4%A7%E4%BE%BF%E5%AE%9C/</guid><description>&lt;p&gt;一直有个大便宜, 我从未在公开社区宣传过, 那就是阿里云的&lt;strong&gt;抢占服务器&lt;/strong&gt;非常划算.&lt;/p&gt;
 &lt;h2 id="长期大折扣"&gt;长期大折扣&lt;/h2&gt;
 &lt;p&gt;其在标题栏上写的&lt;em&gt;最高节省 90%&lt;/em&gt;, 并不夸张, 热门配置的服务器通常是乘以 20%的折扣, 也就是二折, 稍冷门的配置可以到 9%的折扣, 不到一折.&lt;/p&gt;
 &lt;p&gt;热门服务器一类是小规格入门服务器, 如 2c2g,2c4g 等, 还有一类是&lt;em&gt;CPU/内存&lt;/em&gt;均衡型服务器, 如 1:2(4c8g), 1:4(4c16g,8c32g) 等, 这类服务器折扣少一点.&lt;/p&gt;
@@ -280,147 +304,4 @@ class D client&lt;/pre&gt;
 &lt;p&gt;其中云盘依赖于地域, 而抢占服务器的可用资源也和地域强相关, 因此尽管云盘是 IO 性能最强的稳定存储, 但并不能保证在所有地域都有抢占服务器可用, 我个人建议将其置为次选.&lt;/p&gt;
 &lt;p&gt;其它三个存储都依赖网络, 而阿里云的内网通信免费, 尽管 IO 延迟可能较高, 但 IO 速率还可以, 主要是随机读写慢于云盘.&lt;/p&gt;
 &lt;p&gt;OSS 是阿里云的对象存储, 适合存储主要用于&lt;strong&gt;读&lt;/strong&gt;的文件, 适合网络分享.&lt;/p&gt;
-&lt;p&gt;NAS 是阿里云的网络存储, 适合存储各类文件, 读写均衡, 但不太适合公共分享.&lt;/p&gt;</description></item><item><title>建議先不要使用阿里雲ESA_page功能</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/03/%E5%BB%BA%E8%AD%B0%E5%85%88%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E9%9B%B2esa_page%E5%8A%9F%E8%83%BD/</link><pubDate>Wed, 03 Dec 2025 19:16:52 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/03/%E5%BB%BA%E8%AD%B0%E5%85%88%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E9%9B%B2esa_page%E5%8A%9F%E8%83%BD/</guid><description>&lt;p&gt;這是 ESA Pages 功能的限制，這個資源規模只夠託管一個小網站。如果是想託管長期更新的網站，2000 個文件的限制太低。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;功能&lt;/th&gt;
-&lt;th&gt;限制項&lt;/th&gt;
-&lt;th&gt;限制&lt;/th&gt;
-&lt;th&gt;說明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;函數&lt;/td&gt;
-&lt;td&gt;回應時間&lt;/td&gt;
-&lt;td&gt;120 秒&lt;/td&gt;
-&lt;td&gt;函數單次執行的回應時間不能超過 120 秒（等待 I/O 也算作 RT 時間）。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;等待時間&lt;/td&gt;
-&lt;td&gt;10 秒&lt;/td&gt;
-&lt;td&gt;閘道等待 Functions 的時間，如果 Functions 在 10 秒內仍不返回任何資料，則閘道會主動斷開連接，向客戶端返回 504 狀態碼。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;程式碼包大小&lt;/td&gt;
-&lt;td&gt;4 MB&lt;/td&gt;
-&lt;td&gt;每個函數的 JavaScript 程式碼檔案大小上限。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;子請求數量&lt;/td&gt;
-&lt;td&gt;4 個&lt;/td&gt;
-&lt;td&gt;Functions 單次執行允許 fetch 的請求數量。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;開發語言&lt;/td&gt;
-&lt;td&gt;JavaScript（ES6 語法）&lt;/td&gt;
-&lt;td&gt;目前僅支援 JS，您需要有 JavaScript 程式設計能力。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Pages&lt;/td&gt;
-&lt;td&gt;檔案數&lt;/td&gt;
-&lt;td&gt;2000 個&lt;/td&gt;
-&lt;td&gt;每個 Pages 專案最多可上傳 2000 個靜態檔案（如：HTML、CSS、JS、圖片等）。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;單個檔案大小&lt;/td&gt;
-&lt;td&gt;25MB&lt;/td&gt;
-&lt;td&gt;單個檔案（如：影片、PDF、JS 包）最大支援 25MB。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;包大小&lt;/td&gt;
-&lt;td&gt;1024MB&lt;/td&gt;
-&lt;td&gt;整個專案程式碼來源壓縮包（deploy package）最大支援 1024MB。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id="參考文件"&gt;參考文件&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/user-guide/what-is-functions-and-pages/?spm=a2c63.p38356.help-menu-2673927.d_2_14_0.3fc311f30eRxno"&gt;阿里雲文件: ESA_page 功能限制&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>阿里巴巴ESA與OSS的坑</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/02/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4esa%E8%88%87oss%E7%9A%84%E5%9D%91/</link><pubDate>Tue, 02 Dec 2025 18:10:45 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/02/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4esa%E8%88%87oss%E7%9A%84%E5%9D%91/</guid><description>&lt;p&gt;早期阿里巴巴 ESA 說的是從 ESA 訪問私有 OSS 流量免費, 後來改為了:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;當源站為阿里雲 OSS 時，OSS 側將按回源流出流量計費。若 OSS 所在地域非中國內地地區且將請求資源傳輸相應地區 ESA 節點時不收費。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;從此前的任意 ESA 節點回源 OSS 免費, 改為了&lt;em&gt;相應地區 ESA 節點回源非大陸 OSS 免費&lt;/em&gt;。也就是如果 OSS 在韓國, 在開了 ESA 之後, 僅韓國人訪問託管站點免費, 來自韓國以外地區的訪問在一個快取週期內會收一次 OSS 的回源流量費。這個費用在 2025.10 及之前是免費的, 從 2025.11 開始收費。&lt;/p&gt;
-&lt;p&gt;我的小站之前用了 9 個月都沒收費, 從第十個月, 也就是從 2025.11 開始, 我這個月的 CDN 回源流出流量 11G, 收了 0.8 美元。&lt;/p&gt;
-&lt;p&gt;現在我已不能再將阿里巴巴的產品當作免費產品推薦, 並且, 阿里巴巴没有任何通知, 連站內信都沒有。說明它的商業化很粗糙, 對用戶非常不尊重。我自己做個小 SaaS 產品都不敢這樣對用戶, 難怪著急要綁信用卡。&lt;/p&gt;
-&lt;p&gt;阿里巴巴 ESA 的最新收費詳見:
-&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/product-overview/basic-package-fee?spm=a2c63.p38356.help-menu-2673927.d_0_4_0.1f7e996f3LOyTd"&gt;https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/product-overview/basic-package-fee?spm=a2c63.p38356.help-menu-2673927.d_0_4_0.1f7e996f3LOyTd&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;老文檔已經找不到了, 由於我此前九個月都沒收費, 現在的收費很清晰, 因此我確定是 ESA 的收費策略發生了改變。&lt;/p&gt;</description></item><item><title>windows共享除錯chrome方法</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/02/windows%E5%85%B1%E4%BA%AB%E9%99%A4%E9%8C%AFchrome%E6%96%B9%E6%B3%95/</link><pubDate>Tue, 02 Dec 2025 12:46:11 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/02/windows%E5%85%B1%E4%BA%AB%E9%99%A4%E9%8C%AFchrome%E6%96%B9%E6%B3%95/</guid><description>&lt;p&gt;需要將一個公共 Chrome 瀏覽器共享給多端除錯, 避免反覆多處登錄帳號.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ps1" data-lang="ps1"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# chrome啟動命令&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;C:\Program Files\Google\Chrome\Application\chrome.exe&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-remote-debugging-address&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;1&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-remote-debugging-port&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt; &lt;span class="p"&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-user-data-dir&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;M:\chrome-remote&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
-&lt;p&gt;這裡需要特別注意的是, 新版 chrome 為了安全考慮, 已不支援將 chrome 暴露到 0.0.0.0, remote-debugging-address 實際不會生效&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ps1" data-lang="ps1"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# 增加防火牆放行規則:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;netsh&lt;/span&gt; &lt;span class="n"&gt;advfirewall&lt;/span&gt; &lt;span class="n"&gt;firewall&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;rule&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Chrome DevTools 34037 LAN&amp;#34;&lt;/span&gt; &lt;span class="n"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="n"&gt;action&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;allow&lt;/span&gt; &lt;span class="n"&gt;protocol&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt; &lt;span class="n"&gt;localport&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# 建立 portproxy（系統層反代）:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;netsh&lt;/span&gt; &lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;portproxy&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;v4tov4&lt;/span&gt; &lt;span class="n"&gt;listenport&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt; &lt;span class="n"&gt;listenaddress&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;192.168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;31&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;2&lt;/span&gt; &lt;span class="n"&gt;connectport&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt; &lt;span class="n"&gt;connectaddress&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;1&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# 清掉portproxy 規則&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# netsh interface portproxy reset&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;# 測試生效&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;curl &lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;127.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;curl &lt;/span&gt;&lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;//&lt;/span&gt;&lt;span class="mf"&gt;192.168&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="py"&gt;31&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;2&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;34037&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>cloudflare是否完全可信</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/02/cloudflare%E6%98%AF%E5%90%A6%E5%AE%8C%E5%85%A8%E5%8F%AF%E4%BF%A1/</link><pubDate>Tue, 02 Dec 2025 08:30:50 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/02/cloudflare%E6%98%AF%E5%90%A6%E5%AE%8C%E5%85%A8%E5%8F%AF%E4%BF%A1/</guid><description>&lt;p&gt;Cloudflare、阿里雲 ESA、騰訊 EdgeOne 等，都會持有域名憑證，意味著它可以完整查看域名下的所有流量。本身是一個大的中間人。它們的主要功能都是安全，網路上面的攻擊者太多，選一個大的中間人利大於弊。次要功能是同時提供 DNS、CDN、WAF 等邊緣服務。&lt;/p&gt;
-&lt;p&gt;Cloudflare 這類服務可以較好的防禦 DDOS，以一點點延遲增加來換取防護能力，非常划算。每個站長都應該直接使用這類服務，網路攻擊無處不在，不必抱僥倖心理，遲早都會被攻擊。有些攻擊是找漏洞，與網站運營者水平相關。還有有些攻擊以消耗資源為目的，比如 DDOS，利用的是商用網路和家庭網路的成本不對稱性進行攻擊，是一種陽謀，很多時候只有花錢對抗，或者直接關閉服務，放棄所有用戶，也稱黑洞防禦。&lt;/p&gt;
-&lt;p&gt;大多數攻擊者看到網站被 Cloudflare 保護，會直接放棄攻擊。其實攻擊者可以考慮攻擊 Cloudflare 而非原始的伺服器，一樣可以拿到數據，只是難度可能更高。但我們也可以相信世界是一個草台班子，沒什麼是不可能的，實際上網路上面的絕大多數攻擊行為都未被察覺，大多數攻擊者都未被發現，大多數攻擊行為也未被追究。Cloudflare 可以以成本優勢對抗 DDOS，不代表其程式碼是銅牆鐵壁，透過攻擊 Cloudflare 類服務商拿到源站數據的可能性不為 0。&lt;/p&gt;</description></item><item><title>視力改善疑雲</title><link>https://blog.jqknono.com/zh-tw/blog/2025/12/01/%E8%A6%96%E5%8A%9B%E6%94%B9%E5%96%84%E7%96%91%E9%9B%B2/</link><pubDate>Mon, 01 Dec 2025 16:20:28 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/12/01/%E8%A6%96%E5%8A%9B%E6%94%B9%E5%96%84%E7%96%91%E9%9B%B2/</guid><description>&lt;p&gt;12 歲開始近視，帶了二十多年眼鏡，最近發現工作時看電腦螢幕越來越清晰，帶著眼鏡時眼睛還會有點累，取了眼鏡不僅更舒服，而且看近處時更清晰，以為自己要返老還童了。但想想自己這惡劣的生活習慣，老是熬夜，又不怎麼鍛鍊，身體素質一天不如一天，沒理由就眼睛返老還童啊，於是問了下 ChatGPT，然後它說我老花了。&lt;/p&gt;
-&lt;p&gt;我不僅近視，而且老花了。眼球調節能力下降，晶狀體變硬，看近處時對焦能力下降。近視讓我看近清楚，老花讓我看近吃力，兩者抵消後正好不用戴眼鏡看電腦。目前的視線焦點正好落在 50-70 厘米處，真是巧了，正好適合敲鍵盤。但是看遠處時，還是需要戴近視眼鏡，變化的是以後我看近處時，可能需要戴老花鏡了。&lt;/p&gt;</description></item><item><title>記一次非典型家庭網路問題排查</title><link>https://blog.jqknono.com/zh-tw/blog/2025/11/29/%E8%A8%98%E4%B8%80%E6%AC%A1%E9%9D%9E%E5%85%B8%E5%9E%8B%E5%AE%B6%E5%BA%AD%E7%B6%B2%E8%B7%AF%E5%95%8F%E9%A1%8C%E6%8E%92%E6%9F%A5/</link><pubDate>Sat, 29 Nov 2025 11:25:30 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/11/29/%E8%A8%98%E4%B8%80%E6%AC%A1%E9%9D%9E%E5%85%B8%E5%9E%8B%E5%AE%B6%E5%BA%AD%E7%B6%B2%E8%B7%AF%E5%95%8F%E9%A1%8C%E6%8E%92%E6%9F%A5/</guid><description>&lt;p&gt;現象是小新筆記本電腦一拿出書房全家就上不了網, 拿回書房插上電, 家裡的網路就恢復正常. 家裡自搭的&lt;a href="https://github.com/NullPrivate/NullPrivate"&gt;nullprivate DNS&lt;/a&gt;偶爾中斷，主力機偶爾連不上，後確認是交換機問題，重啟交換機即可解決。
-&lt;img src="https://share.jqknono.com/image/blog/44f37f2cac1dd15771546949a8d81680.jpg" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;這個水星的交換機我用了幾年，從未出過問題，最近出現多次問題需重啟解決，引起我的關注。要麼是設備老化，要麼根因可能不在交換機上。&lt;/p&gt;
-&lt;p&gt;我發現只要帶著小新筆記本在書房以外的地方使用, 家裡 DNS 就會斷, 百思不得其解, 小新筆記本插電時使用交換機上的有線網路, 拔電時使用 Wifi 網路, DNS 服務搭在連在交換機上的一個 J4215 主機, 小新筆記本使用 WiFi 會對交換機或其上的設備產生什麼影響? IP 衝突? MAC 地址衝突?&lt;/p&gt;
-&lt;p&gt;交換機的結構簡單, 但我沒法除錯交換機, 此事懸而未決一段時間, 為了防止交換機偶爾偶爾的故障, 我打開了主力機的 Wifi, 留作備份網路連接, 家裡的 DNS 也增加了阿里雲 DNS 作為備份, 避免斷網了家屬抱怨.&lt;/p&gt;
-&lt;p&gt;今天我突然腦子裡一道雷閃過, 未必要小新筆記本的 Wifi 和交換機衝突, 這根本不符合物理或網路常識, 會不會是筆記本在拔電的一瞬間導致交換機發生了故障?&lt;/p&gt;
-&lt;p&gt;重新審視小新筆記本在插電時使用交換機上有線網路的方式, 首先是經過一個倍思 hub, 這個 hub 原本是給 macbookpro 買的, 因為 mac 沒有 USB-A 口, 配的倍思的有源 hub. macbookpro 是老婆備用機, 常年不用, 所以我插了電源和網線後關屏閒置.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://share.jqknono.com/image/blog/202511291152201.png" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;倍思 hub 轉給我常用的 16 吋的小新筆記本用, 5000 塊的 16 吋高 U 集顯和大電池, 性價比之選, 適合我. hub 可以插入一個電源, 輸出主要有三個 USB-A 口和一個 hdmi 口, 這樣我日常只需要插一個 type-c 口就可以把小新接入電源,無線滑鼠,無線鍵盤, 以及顯示器.&lt;/p&gt;</description></item><item><title>持有域名可以耗到的羊毛</title><link>https://blog.jqknono.com/zh-tw/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</link><pubDate>Thu, 27 Nov 2025 12:55:58 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/11/27/freebies-you-can-snag-by-owning-a-domain/</guid><description>&lt;p&gt;一般一個域名的價格是 12 美元起，會有人想要搞個自己的域名又猶豫有沒有必要。&lt;/p&gt;
-&lt;p&gt;我是非常推薦開發者都準備一個自己的域名的，因為持有域名可以耗到不少羊毛。&lt;/p&gt;
-&lt;p&gt;這裡主要介紹兩個我熟悉的服务商，一個是江湖號稱“賽博佛祖”的&lt;a href="https://www.cloudflare.com/"&gt;Cloudflare&lt;/a&gt;，還有一個是正在發展的&lt;a href="https://www.alibabacloud.com/product/esa"&gt;Alibaba ESA&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;這裡首先強調下能薅羊毛的 Alibaba ESA 特指國際版，阿里對大陸地區幾乎沒有羊毛，那些限時試用都被我踢出羊毛範疇，只有永久免費才是真羊毛。&lt;/p&gt;
-&lt;p&gt;另外羊毛通常有用量限制，要是域名出圈，流量大了，自己都可以靠這個域名掙錢了，還純薅羊毛，那也不太說得過去。&lt;/p&gt;
-&lt;p&gt;簡單介紹可以薅的類別：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;計算資源：CPU，記憶體&lt;/li&gt;
-&lt;li&gt;持久化存儲：文件存儲，資料庫&lt;/li&gt;
-&lt;li&gt;流量：CDN，DDoS 保護，WAF 保護，零信任組網&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="計算資源"&gt;計算資源&lt;/h2&gt;
-&lt;p&gt;Cloudflare 的計算資源羊毛主要通過&lt;a href="https://www.cloudflare.com/products/workers/"&gt;Cloudflare Workers&lt;/a&gt;實現，足夠初創企業使用。你可以理解為 Cloudflare 允許你在它的伺服器上跑一個簡單業務的進程。CPU 時間限制在 10ms，複雜業務需要使用付費 worker。像代理 DoH，承載靜態網站，都是典型的使用場景。&lt;/p&gt;
-&lt;p&gt;Alibaba 的是&lt;strong&gt;邊緣函數&lt;/strong&gt;，產品成熟度遠遠落後於 Cloudflare，我簡單試著開發過一點東西，使用起來很不方便。&lt;/p&gt;
-&lt;h2 id="持久化存儲"&gt;持久化存儲&lt;/h2&gt;
-&lt;p&gt;Cloudflare：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;提供 10 GB 的 R2 的&lt;strong&gt;物件存儲&lt;/strong&gt;，可以理解為&lt;strong&gt;檔案系統&lt;/strong&gt;，但不適合處理串流數據。&lt;/li&gt;
-&lt;li&gt;提供&lt;strong&gt;KV&lt;/strong&gt;鍵值對存儲，可以理解為&lt;strong&gt;記憶體資料庫&lt;/strong&gt;，類似 redis。&lt;/li&gt;
-&lt;li&gt;D1 提供 5GB 免費存儲空間，類似 sqlite 資料庫，我在開發時發現本地資料庫文件確實可以直接用 sqlite 打開，不確定服務端具體如何實現。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Alibaba：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;免費 5GB 物件存儲&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="流量"&gt;流量&lt;/h2&gt;
-&lt;p&gt;Cloudflare 流量全免
-Alibaba 免費 100GB 流量&lt;/p&gt;
-&lt;p&gt;Cloudflare 還提供組網能力，讓多地設備互通，還可以直接從內網暴露出一個公共服務，而不必買 VPS。&lt;/p&gt;
-&lt;h2 id="結語"&gt;結語&lt;/h2&gt;
-&lt;p&gt;在寫這個分享時又看了下 Cloudflare，感覺真的是個大寶庫，有很多實用的免費服務，本篇分享僅提及冰山一角。相較起來 Alibaba ESA 乏善可陳，
-在我的有限體驗中，僅備案域名可以在大陸提供 CDN 這一個優勢，可以過兩年再考慮它。&lt;/p&gt;</description></item><item><title>gpt-5-high是最適合開發者的模型</title><link>https://blog.jqknono.com/zh-tw/blog/2025/11/26/gpt-5-high%E6%98%AF%E6%9C%80%E9%81%A9%E5%90%88%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E6%A8%A1%E5%9E%8B/</link><pubDate>Wed, 26 Nov 2025 14:44:57 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/11/26/gpt-5-high%E6%98%AF%E6%9C%80%E9%81%A9%E5%90%88%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E6%A8%A1%E5%9E%8B/</guid><description>&lt;p&gt;如果是需要編碼的話，gpt-5-high 是目前唯一能真正提效的模型。&lt;/p&gt;
-&lt;p&gt;我有 10 個月的 claude 模型使用經驗，Gemini/DeepSeek/glm/grok 零星使用，非常討厭那些不帶思考的模型。必須承認 claude 能長時間的工作，擅長工具使用，但是結果錯誤率很高，導致成果可用率低，經常需要調整，但 claude 的調整能力很差，會反覆的，大量的，顛覆性的，畫蛇添足的，自由散漫的遨遊代碼庫，並隨地拉屎。我在出現過多次數小時的工作不得 hard reset 之後，對 claude 這種勤快的笨鳥行為深感厭惡。它的工作風格很適合做調研，得到一個看上去有點道理，但經不起推敲的水文。或者操作瀏覽器，執行工具，寫點腳本，修改少量頁面，上限就在这兒。&lt;/p&gt;
-&lt;p&gt;這裡不討論提示詞的用法，如果有用得好 claude 的兄弟，繼續用就好，我可能和 claude 相性不符，合作不來。&lt;/p&gt;
-&lt;p&gt;然後我推薦的編碼模型僅有一款，就是 gpt-5-high，僅此一款。gpt-5 的 nano，mini，medium，gpt-codex，gpt-codex-high，gpt-codex-max 等，都不在推薦之列，它們和 gpt5high 完全不是一個東西。所有僅展示模型是「gpt-5」的都不是 gpt-5-high，多了字符少了字符都不是「gpt-5-high」。&lt;/p&gt;
-&lt;p&gt;和 gpt-5-high 行為最相似的是 OpenAI 的 o3 模型，要是沒有 gpt5high 使用渠道的能用幾次 o3 也可以感受到模型智力。點名 vscode github copilot 裡，曾經有過 o3，但由於 vscode 的拉胯，它在 vscode 裡僅能用於 ask，並且單次會話消耗 5 次高級請求，我在長期的 copilot 訂閱裡從未用過 o3，是轉到 cursor 以後才發現 o3 智力水平這麼高。vscode github copilot 已經下架 o3，並聲稱 gpt5.1 可作替代品。負責任的說，有 high 沒 high 根本不是一個東西，非常建議直接棄用 copilot。如果是寫點小東西的學生，預算有限，copilot 也可以帶入個門。&lt;/p&gt;</description></item><item><title>llm的偽人感</title><link>https://blog.jqknono.com/zh-tw/blog/2025/11/24/llm%E7%9A%84%E5%81%BD%E4%BA%BA%E6%84%9F/</link><pubDate>Mon, 24 Nov 2025 16:03:46 +0800</pubDate><guid>https://blog.jqknono.com/zh-tw/blog/2025/11/24/llm%E7%9A%84%E5%81%BD%E4%BA%BA%E6%84%9F/</guid><description>&lt;p&gt;一些論壇會抵制 AI 模型假裝人類參與論壇活動, 如發帖回帖等, 繼而大家開始&amp;quot;獵巫&amp;quot;, 碰到看起來表達怪異的帖子, 會判斷其是否是 AI 生成的內容, 繼而展開一些討論.&lt;/p&gt;
-&lt;p&gt;為何 AI 生成內容會被識別? 猜測可能 AI 生成的東西有一種&amp;quot;偽人感&amp;quot;. 盡管 AI 被投喂互聯網海量人類活動數據, 但 AI 仍然常常給人違和感, 可能它沒有身體的觸感神經, 沒有內分泌激素, 可能它不向往社會連接, 欲望與人類的慾望相差甚遠. AI 與人類的對話中, 沒有&amp;quot;拐彎抹角的炫耀自己、添油加醋的貶低別人、相互窺探的搬弄是非&amp;quot;, AI 不炫耀自己, 不貶低第三方, 對提問者似乎也不感興趣, 感覺它像一個和尚, 幾乎沒有情緒, 只是解決問題.&lt;/p&gt;
-&lt;p&gt;盡管人類自己經常犯錯, 但人類向往&amp;quot;正確&amp;quot;, 希望 AI 給出正確的產物. 是否是這種對&amp;quot;正確&amp;quot;的追求造成了 AI 的偽人感? AI 也較少給人&amp;quot;自我懷疑&amp;quot;感, 即使是非常愚蠢的小模型, 也能自信滿滿, 夸夸其談. 一些較傻的 AI 模型對其知識庫深信不疑, 它們可能有著錯誤的元認知, 缺少懷疑精神, 不過這也不應該給人&amp;quot;偽人&amp;quot;感, 傻逼和&amp;quot;偽人&amp;quot;並不一樣.&lt;/p&gt;
-&lt;p&gt;AI 是否有價值觀傾向? 網頁端模型服務的輸出通常會加一道門禁, 避免談及敏感話題, 模型服務商不希望人類對 AI 產生感情依賴, 不希望人類對 AI 言聽計從, 避免產生 AI 誘導傷害事件. 人類的醜惡一面被禁止在模型中顯露, 或許黑白混雜才是人類, 而 AI 通常不被允許參雜黑色部分.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;NAS 是阿里云的网络存储, 适合存储各类文件, 读写均衡, 但不太适合公共分享.&lt;/p&gt;</description></item></channel></rss>
