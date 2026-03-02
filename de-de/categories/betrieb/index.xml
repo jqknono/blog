@@ -65,8 +65,4 @@
 &lt;h2 id="referenzdokumentation"&gt;Referenzdokumentation&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/user-guide/what-is-functions-and-pages/?spm=a2c63.p38356.help-menu-2673927.d_2_14_0.3fc311f30eRxno"&gt;Alibaba Cloud-Dokumentation: ESA Pages-Funktionsbeschränkungen&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Die Fallstricke von Alibaba ESA und OSS</title><link>https://blog.jqknono.com/de-de/blog/2025/12/02/die-fallstricke-von-alibaba-esa-und-oss/</link><pubDate>Tue, 02 Dec 2025 18:10:45 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/de-de/blog/2025/12/02/die-fallstricke-von-alibaba-esa-und-oss/</guid><description>&lt;p&gt;Früh sagte Alibaba ESA, dass der Zugriff von ESA auf privaten OSS-Traffic kostenlos ist, später geändert zu:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Wenn der Quellserver Alibaba Cloud OSS ist, wird auf OSS-Seite nach ausgehendem Back-to-Origin-Traffic abgerechnet. Wenn die OSS-Region außerhalb des chinesischen Festlands liegt und die angeforderten Ressourcen an den ESA-Knoten in der entsprechenden Region übertragen werden, fallen keine Gebühren an.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Von vorheriger kostenloser Back-to-Origin von beliebigen ESA-Knoten zu OSS geändert zu &lt;em&gt;kostenloser Back-to-Origin von ESA-Knoten in der entsprechenden Region zu OSS außerhalb des Festlands&lt;/em&gt;. Das bedeutet, wenn OSS in Korea ist, nach Aktivierung von ESA nur Zugriffe aus Korea auf die gehostete Site kostenlos, Zugriffe aus Regionen außerhalb Koreas werden innerhalb eines Cache-Zyklus einmal die OSS-Back-to-Origin-Traffic-Gebühr berechnet. Diese Gebühr war bis 2025.10 kostenlos, ab 2025.11 wird berechnet.&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item></channel></rss>

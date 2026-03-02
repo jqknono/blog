@@ -64,6 +64,4 @@
 &lt;h2 id="documentación-de-referencia"&gt;Documentación de referencia&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/user-guide/what-is-functions-and-pages/?spm=a2c63.p38356.help-menu-2673927.d_2_14_0.3fc311f30eRxno"&gt;Documentación de Alibaba Cloud: Limitaciones de la función ESA_page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Los problemas de Alibaba ESA y OSS</title><link>https://blog.jqknono.com/es-es/blog/2025/12/02/los-problemas-de-alibaba-esa-y-oss/</link><pubDate>Tue, 02 Dec 2025 18:10:45 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/es-es/blog/2025/12/02/los-problemas-de-alibaba-esa-y-oss/</guid><description>&lt;p&gt;En los primeros tiempos, Alibaba ESA afirmaba que el tráfico desde ESA para acceder a OSS privado era gratuito; luego se modificó a:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Cuando la estación de origen es Alibaba Cloud OSS, el lado OSS cobrará según el tráfico de salida de retroalimentación a origen. Si la región donde se encuentra OSS no es China continental y se transmite el recurso solicitado al nodo ESA de la región correspondiente, no se cobrará.&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item></channel></rss>

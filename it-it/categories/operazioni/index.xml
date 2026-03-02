@@ -64,8 +64,4 @@
 &lt;h2 id="documentazione-di-riferimento"&gt;Documentazione di riferimento&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/user-guide/what-is-functions-and-pages/?spm=a2c63.p38356.help-menu-2673927.d_2_14_0.3fc311f30eRxno"&gt;Documentazione Alibaba Cloud: Limitazioni della funzione ESA_page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Le trappole di Alibaba ESA e OSS</title><link>https://blog.jqknono.com/it-it/blog/2025/12/02/le-trappole-di-alibaba-esa-e-oss/</link><pubDate>Tue, 02 Dec 2025 18:10:45 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/it-it/blog/2025/12/02/le-trappole-di-alibaba-esa-e-oss/</guid><description>&lt;p&gt;Inizialmente, Alibaba ESA affermava che il traffico da ESA verso OSS privato fosse gratuito, ma successivamente è stato modificato in:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Quando la stazione sorgente è Alibaba Cloud OSS, il lato OSS addebiterà in base al traffico in uscita di back-to-origin. Se la regione in cui si trova OSS non è nella Cina continentale e le risorse richieste vengono trasmesse ai nodi ESA della regione corrispondente, non verrà addebitato.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Rispetto al precedente modello in cui il back-to-origin da qualsiasi nodo ESA verso OSS era gratuito, ora è &lt;em&gt;gratuito solo il back-to-origin dai nodi ESA della regione corrispondente verso OSS non continentale&lt;/em&gt;. Cioè, se OSS si trova in Corea, dopo aver attivato ESA, solo gli accessi dalla Corea al sito ospitato sono gratuiti; gli accessi da regioni esterne alla Corea incorreranno in una tariffa per il traffico di back-to-origin OSS una volta per ciclo di cache. Questa tariffa era gratuita fino al 2025.10 e inclusi, e ha iniziato a essere addebitata dal 2025.11.&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item></channel></rss>

@@ -62,8 +62,4 @@
 &lt;h2 id="documentation-de-référence"&gt;Documentation de référence&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/user-guide/what-is-functions-and-pages/?spm=a2c63.p38356.help-menu-2673927.d_2_14_0.3fc311f30eRxno"&gt;Documentation Alibaba Cloud : Limitations de la fonctionnalité ESA_page&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Les pièges d'ESA et OSS d'Alibaba</title><link>https://blog.jqknono.com/fr-fr/blog/2025/12/02/les-pi%C3%A8ges-desa-et-oss-dalibaba/</link><pubDate>Tue, 02 Dec 2025 18:10:45 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/fr-fr/blog/2025/12/02/les-pi%C3%A8ges-desa-et-oss-dalibaba/</guid><description>&lt;p&gt;Au début, Alibaba ESA indiquait que le trafic d&amp;rsquo;accès à OSS privé depuis ESA était gratuit, puis cela a été modifié en :&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Lorsque la station source est Aliyun OSS, le côté OSS facturera selon le trafic de sortie de back-to-origin. Si la région de l&amp;rsquo;OSS n&amp;rsquo;est pas en Chine continentale et que les ressources de requête sont transmises aux nœuds ESA de la région correspondante, aucun frais.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;De l&amp;rsquo;ancien gratuit pour tout nœud ESA en back-to-origin vers OSS, changé en &lt;em&gt;gratuit seulement pour les nœuds ESA de la région correspondante en back-to-origin vers OSS non continental&lt;/em&gt;. C&amp;rsquo;est-à-dire si l&amp;rsquo;OSS est en Corée, après activation d&amp;rsquo;ESA, seuls les accès coréens au site hébergé sont gratuits, les accès provenant d&amp;rsquo;autres régions paieront une fois le trafic de back-to-origin OSS par cycle de cache. Ce frais était gratuit jusqu&amp;rsquo;en 2025.10 et avant, facturé à partir de 2025.11.&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item></channel></rss>

@@ -65,8 +65,4 @@
 &lt;h2 id="참조-문서"&gt;참조 문서&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/user-guide/what-is-functions-and-pages/?spm=a2c63.p38356.help-menu-2673927.d_2_14_0.3fc311f30eRxno"&gt;알리바바 클라우드 문서: ESA_pages 기능 제한&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>알리바바 ESA와 OSS의 함정</title><link>https://blog.jqknono.com/ko-kr/blog/2025/12/02/%EC%95%8C%EB%A6%AC%EB%B0%94%EB%B0%94-esa%EC%99%80-oss%EC%9D%98-%ED%95%A8%EC%A0%95/</link><pubDate>Tue, 02 Dec 2025 18:10:45 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ko-kr/blog/2025/12/02/%EC%95%8C%EB%A6%AC%EB%B0%94%EB%B0%94-esa%EC%99%80-oss%EC%9D%98-%ED%95%A8%EC%A0%95/</guid><description>&lt;p&gt;초기 알리바바 ESA는 ESA에서 개인 OSS로의 액세스 트래픽이 무료라고 했으나, 나중에 다음과 같이 변경되었습니다:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;소스 스테이션이 알리클라우드 OSS일 때, OSS 측에서 백소스 유출 트래픽에 따라 요금을 부과합니다. OSS가 중국 본토 지역이 아닌 지역에 있고 해당 지역 ESA 노드로 요청 리소스를 전송할 때는 요금이 부과되지 않습니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;이전의 임의 ESA 노드에서 OSS로의 백소스가 무료에서 &lt;em&gt;해당 지역 ESA 노드에서 비대륙 OSS로의 백소스가 무료&lt;/em&gt;로 변경되었습니다. 즉, OSS가 한국에 있으면 ESA를 활성화한 후 한국 사람들의 사이트 액세스만 무료이고, 한국 외 지역에서의 액세스는 하나의 캐시 주기 내에서 OSS의 백소스 트래픽 요금을 한 번 부과합니다. 이 비용은 2025.10 및 그 이전에는 무료였고, 2025.11부터 요금을 부과합니다.&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item></channel></rss>

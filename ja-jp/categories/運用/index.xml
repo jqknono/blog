@@ -108,13 +108,4 @@
 &lt;h2 id="参考ドキュメント"&gt;参考ドキュメント&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/user-guide/what-is-functions-and-pages/?spm=a2c63.p38356.help-menu-2673927.d_2_14_0.3fc311f30eRxno"&gt;アリババクラウドドキュメント: ESA_page 機能制限&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>アリババのESAとOSSの落とし穴</title><link>https://blog.jqknono.com/ja-jp/blog/2025/12/02/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%81%AEesa%E3%81%A8oss%E3%81%AE%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4/</link><pubDate>Tue, 02 Dec 2025 18:10:45 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2025/12/02/%E3%82%A2%E3%83%AA%E3%83%90%E3%83%90%E3%81%AEesa%E3%81%A8oss%E3%81%AE%E8%90%BD%E3%81%A8%E3%81%97%E7%A9%B4/</guid><description>&lt;p&gt;初期のアリババ ESA は、ESA からプライベート OSS にアクセスするトラフィックが無料と言っていましたが、後で以下のように変更されました:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;ソースステーションが阿里雲 OSS の場合、OSS 側はバックツースペースのアウトバウンドトラフィックに基づいて課金します。OSS が中国本土地域以外にあり、リクエストリソースを対応地域の ESA ノードに転送する場合に限り料金はかかりません。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;これまでの任意の ESA ノードからの OSS へのバックツースペースが無料だったものが、&lt;em&gt;対応地域の ESA ノードからの非大陸 OSS へのバックツースペースが無料&lt;/em&gt; に変更されました。つまり、OSS が韓国にある場合、ESA を有効化した後、韓国からのみホストサイトへのアクセスが無料で、韓国以外からのアクセスはキャッシュ期間内に OSS のバックツースペース流量費が1回課金されます。この費用は 2025.10 およびそれ以前は無料でしたが、2025.11 から課金開始です。&lt;/p&gt;
-&lt;p&gt;私の小サイトは以前9ヶ月間料金なしで使っていましたが、10ヶ月目、つまり 2025.11 から、今月の CDN バックツースペースアウトバウンド流量 11G で 0.8 ドル課金されました。&lt;/p&gt;
-&lt;p&gt;今後、アリババの製品を無料製品として推薦できませんし、アリババは通知なし、サイト内メッセージすらありません。これは商業化が粗雑で、ユーザーを尊重していないことを示しています。私が小規模 SaaS 製品を作ってもユーザーに対してこうはしません、だからクレジットカードを急いで紐付けようとするのです。&lt;/p&gt;
-&lt;p&gt;アリババ ESA の最新料金詳細はこちら:
-&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/product-overview/basic-package-fee?spm=a2c63.p38356.help-menu-2673927.d_0_4_0.1f7e996f3LOyTd"&gt;https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/product-overview/basic-package-fee?spm=a2c63.p38356.help-menu-2673927.d_0_4_0.1f7e996f3LOyTd&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;古いドキュメントはもう見つかりません。以前9ヶ月間料金なしだったため、今の料金が明確で、ESA の料金ポリシーが変更されたと確信しています。&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item></channel></rss>

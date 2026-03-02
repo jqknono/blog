@@ -62,8 +62,4 @@
 &lt;h2 id="referans-belgeler"&gt;Referans Belgeler&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.alibabacloud.com/help/zh/edge-security-acceleration/esa/user-guide/what-is-functions-and-pages/?spm=a2c63.p38356.help-menu-2673927.d_2_14_0.3fc311f30eRxno"&gt;Alibaba Cloud Dokümantasyonu: ESA_page işlev sınırlamaları&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Alibaba ESA ve OSS Tuzakları</title><link>https://blog.jqknono.com/tr-tr/blog/2025/12/02/alibaba-esa-ve-oss-tuzaklar%C4%B1/</link><pubDate>Tue, 02 Dec 2025 18:10:45 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/tr-tr/blog/2025/12/02/alibaba-esa-ve-oss-tuzaklar%C4%B1/</guid><description>&lt;p&gt;Erken dönemlerde Alibaba ESA, ESA&amp;rsquo;dan özel OSS&amp;rsquo;e erişim trafiğinin ücretsiz olduğunu söylüyordu, daha sonra değiştirildi:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Kaynak istasyon Alibaba Cloud OSS olduğunda, OSS tarafı geri kaynak çıkış trafiğine göre ücretlendirme yapacaktır. OSS&amp;rsquo;un bulunduğu bölge Çin anakara bölgesi değilse ve istek kaynaklarını ilgili bölge ESA düğümüne aktarırken ücret alınmaz.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Önceki herhangi bir ESA düğümünden OSS&amp;rsquo;e geri kaynak ücretsizdi, &lt;em&gt;ilgili bölge ESA düğümünden anakara dışı OSS&amp;rsquo;e geri kaynak ücretsiz&lt;/em&gt; olarak değiştirildi. Yani OSS Kore&amp;rsquo;deyse, ESA etkinleştirildikten sonra yalnızca Koreliler barındırılan siteyi ücretsiz ziyaret eder, Kore dışından gelen ziyaretler bir önbellek döngüsü içinde OSS geri kaynak trafik ücretini bir kez öder. Bu ücret 2025.10 ve öncesinde ücretsizdi, 2025.11&amp;rsquo;den itibaren ücretli.&lt;/p&gt;</description></item></channel></rss>
+&lt;/ul&gt;</description></item></channel></rss>
