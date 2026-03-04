@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-label="cover">
+  <defs>
+<linearGradient id="dm-gradient-a" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3"><animate attributeName="stop-color" values="#38bdf8;#6366f1;#10b981;#facc15;#38bdf8" dur="3s" repeatCount="indefinite" /></stop>
+  <stop offset="33%" stop-color="#6366f1" stop-opacity="0.26"><animate attributeName="stop-color" values="#6366f1;#10b981;#facc15;#38bdf8;#6366f1" dur="3s" repeatCount="indefinite" /></stop>
+  <stop offset="66%" stop-color="#10b981" stop-opacity="0.24"><animate attributeName="stop-color" values="#10b981;#facc15;#38bdf8;#6366f1;#10b981" dur="3s" repeatCount="indefinite" /></stop>
+  <stop offset="100%" stop-color="#facc15" stop-opacity="0.2"><animate attributeName="stop-color" values="#facc15;#38bdf8;#6366f1;#10b981;#facc15" dur="3s" repeatCount="indefinite" /></stop>
+</linearGradient>
+<linearGradient id="dm-gradient-b" x1="100%" y1="0%" x2="0%" y2="100%">
+  <stop offset="0%" stop-color="#facc15" stop-opacity="0.2"><animate attributeName="stop-color" values="#facc15;#10b981;#6366f1;#38bdf8;#facc15" dur="4.35s" repeatCount="indefinite" /></stop>
+  <stop offset="50%" stop-color="#6366f1" stop-opacity="0.26"><animate attributeName="stop-color" values="#6366f1;#38bdf8;#facc15;#10b981;#6366f1" dur="4.35s" repeatCount="indefinite" /></stop>
+  <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3"><animate attributeName="stop-color" values="#38bdf8;#facc15;#10b981;#6366f1;#38bdf8" dur="4.35s" repeatCount="indefinite" /></stop>
+</linearGradient>
+</defs>
+  <style>
+.cover-root { font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace; }
+.bg-motion-layer { pointer-events: none; }
+.bg-motion-layer-a { opacity: 0.5; }
+.bg-motion-layer-b { opacity: 0.28; }
+</style>
+  
+<g class="cover-root">
+  <rect x="0.5" y="0.5" width="1919" height="1079" rx="16" ry="16" fill="#0d0f12" stroke="#1f2937" stroke-width="1" />
+  
+<g class="bg-motion-wrap bg-motion-gradient">
+  <rect x="0" y="0" width="1920" height="1080" rx="16" ry="16" class="bg-motion-layer bg-motion-layer-a bg-motion-gradient" fill="url(#dm-gradient-a)" />
+  <rect x="0" y="0" width="1920" height="1080" rx="16" ry="16" class="bg-motion-layer bg-motion-layer-b bg-motion-gradient" fill="url(#dm-gradient-b)" />
+</g>
+  
+</g>
+</svg>
