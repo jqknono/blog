@@ -1,1 +1,44 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>セキュリティ on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/</link><description>Recent content in セキュリティ on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Wed, 15 Oct 2025 16:50:37 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>セキュリティ on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/</link><description>Recent content in セキュリティ on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Sun, 28 Jun 2026 15:53:27 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/index.xml" rel="self" type="application/rss+xml"/><item><title>サイバー暴力から身を守る方法</title><link>https://blog.jqknono.com/ja-jp/blog/2026/06/28/avoid-cyberbullying/</link><pubDate>Sun, 28 Jun 2026 15:53:27 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/06/28/avoid-cyberbullying/</guid><description>&lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;デジタル時代において、インターネットはすでに私たちの日常生活の重要な構成要素となっています。しかし、サイバー空間の拡大に伴い、サイバー暴力という社会問題も日々深刻化しています。サイバー暴力とは、インターネットプラットフォームを通じて他者に対して悪意ある攻撃、侮辱、中傷、または嫌がらせを行う行為を指します。これは個人の合法的な権益を侵害するだけでなく、被害者の精神的健康に深刻な被害をもたらす可能性があります。本文は、サイバー暴力の主な形態を検討し、その危害を分析し、実用的な防止策を提供することで、ユーザーがインターネットの利便性を享受しながら、自分自身の安全を効果的に保護できるようにすることを目的としています。&lt;/p&gt;
+&lt;h2 id="サイバー暴力の類型と特徴"&gt;サイバー暴力の類型と特徴&lt;/h2&gt;
+&lt;p&gt;サイバー暴力は多様な形態を示し、それぞれの形態には独自の特徴と危害があります。最も一般的なタイプには、ネットいじめ、ネット中傷、ネットハラスメント、人肉検索が含まれます。&lt;/p&gt;
+&lt;h3 id="サイバー暴力の主なタイプ"&gt;サイバー暴力の主なタイプ&lt;/h3&gt;
+&lt;pre class="mermaid"&gt;flowchart TD
+A[サイバー暴力の種類] --&amp;gt; B[ネットいじめ]
+A --&amp;gt; C[ネット中傷]
+A --&amp;gt; D[ネットハラスメント]
+A --&amp;gt; E[人肉検索]
+B --&amp;gt; B1[ソーシャルメディアでの悪質なコメント]
+B --&amp;gt; B2[デマ拡散]
+B --&amp;gt; B3[人格攻撃]
+C --&amp;gt; C1[虚偽情報の拡散]
+C --&amp;gt; C2[名誉毀損]
+C --&amp;gt; C3[評判への攻撃]
+D --&amp;gt; D1[執拗な連絡]
+D --&amp;gt; D2[歓迎されないメッセージ]
+D --&amp;gt; D3[ネット上の脅迫]
+E --&amp;gt; E1[情報の不正取得]
+E --&amp;gt; E2[個人情報の公開]
+E --&amp;gt; E3[プライバシーの侵害]
+classDef mainType fill:#2c3e50,stroke:#ecf0f1,stroke-width:3px,color:#ecf0f1
+classDef bullying fill:#e74c3c,stroke:#c0392b,stroke-width:2px,color:#fff
+classDef defamation fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff
+classDef harassment fill:#e67e22,stroke:#d35400,stroke-width:2px,color:#fff
+classDef doxing fill:#f1c40f,stroke:#f39c12,stroke-width:2px,color:#333
+class A mainType
+class B bullying
+class C defamation
+class D harassment
+class E doxing
+class B1,B2,B3,C1,C2,C3,D1,D2,D3,E1,E2,E3 bullying&lt;/pre&gt;
+&lt;h4 id="サイバー暴力の共通特徴"&gt;サイバー暴力の共通特徴&lt;/h4&gt;
+&lt;pre class="mermaid"&gt;flowchart TD
+F[共通特徴] --&amp;gt; F1[匿名性の利用]
+F --&amp;gt; F2[拡散速度の速さ]
+F --&amp;gt; F3[影響の持続性]
+F --&amp;gt; F4[範囲の広さ]
+classDef featureRoot fill:#95a5a6,stroke:#7f8c8d,stroke-width:3px,color:#fff
+classDef feature fill:#bdc3c7,stroke:#95a5a6,stroke-width:2px,color:#333
+class F featureRoot
+class F1,F2,F3,F4 feature&lt;/pre&gt;
+&lt;p&gt;ネットいじめは通常、ソーシャルメディアプラットフォームで発生し、加害者が悪意あるコメントを投稿し、デマを流布したり、人格攻撃を行ったりすることで他人を傷つけます。ネット中傷は、虚偽の情報を拡散し、他人の名誉や評判を損なうことを伴います。ネットハラスメントは、執拗で歓迎されない連絡や脅迫として現れ、人肉検索は違法な手段で他人の個人情報を取得し、公開することです。&lt;/p&gt;</description></item></channel></rss>

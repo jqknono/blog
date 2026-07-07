@@ -1,138 +1,44 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ブログ on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/blog/</link><description>Recent content in ブログ on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Mon, 13 Nov 2023 14:15:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Claude Code のリソースブラックホール: 11.3MB の単一ファイルから 1.2TB のディスク消費へ</title><link>https://blog.jqknono.com/ja-jp/blog/2026/04/07/claude-code-resource-nightmare/</link><pubDate>Tue, 07 Apr 2026 20:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/04/07/claude-code-resource-nightmare/</guid><description>GitHub Issues の実際のユーザー報告とコミュニティのリバース分析に基づき、Claude Code のメモリ、CPU、ディスクの3つの側面でのリソース管理欠陥を体系的に整理し、パッケージングアーキテクチャ、ストレージ設計、プロセスライフサイクル管理における構造的問題を明らかにする。</description></item><item><title>VS Code Dev Container IO 過高: executeInWSL 設定の詳細と根本原因分析</title><link>https://blog.jqknono.com/ja-jp/blog/2026/04/03/vscode-dev-container-io-performance/</link><pubDate>Fri, 03 Apr 2026 10:30:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/04/03/vscode-dev-container-io-performance/</guid><description>Windows 上で VS Code Dev Container 拡張が引き起こす IO 過高問題の完全な調査プロセスを記録し、現象の特定から根本原因分析、最終的に dev.containers.executeInWSL を中心とした Docker CLI の境界横断通信ボトルネック解決策を提示します。</description></item><item><title>Project Translator VSCode 拡張機能によるプロジェクト多言語ローカライゼーションの実現</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/26/project-translator-vscode-extension/</link><pubDate>Thu, 26 Feb 2026 14:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/26/project-translator-vscode-extension/</guid><description>Project Translator は強力な VSCode 拡張機能で、AI を活用してプロジェクトレベルの多言語自動翻訳を実現し、コード構造の完全性を維持しながら効率的にドキュメントのローカライゼーションを完了できます。</description></item><item><title>GPT-5.3-Codex 初体験：驚きから理性的評価へ</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/17/gpt-53-codex-experience/</link><pubDate>Tue, 17 Feb 2026 10:30:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/17/gpt-53-codex-experience/</guid><description>&lt;p&gt;OpenAI は GPT-5.3 の正式版がまだリリースされていない時点で、先行して GPT-5.3-Codex という特化モデルを提供しました。ビジネスロジックから見ると、この決定は理解しやすいです。GPT-5.3-Codex は標準版 GPT-5.3 と同じ価格ですが、出力がより積極的で、実行時間が短く、メモリ使用量も少なく、より高い利益余地をもたらします。OpenAI にとって、GPT-5.3-Codex は明らかにコスト効率の高い選択肢です。&lt;/p&gt;
-&lt;p&gt;GPT-5.3-Codex のリリース初週は、使用体験が実際に驚くべきものでした。モデルの応答速度は以前のバージョンより明らかに優れており、コード生成のフィードバックも非常に迅速です。迅速なイテレーションや頻繁なインタラクションが必要な開発シーンでは、この効率向上が直感的な生産性改善をもたらします。短時間で複数の実装案を得たり、アイデアを素早く検証したりする必要がある場合、Codex の積極的な出力特性は特に有用です。&lt;/p&gt;
-&lt;p&gt;しかし、2 週目に入ると状況は顕著に変化しました。モデルの応答速度が大幅に低下し、かつてスムーズだったインタラクションがカクつき始めました。このような性能の揺らぎは、クラウドサービスでよく見られるリソーススケジューリングの問題を連想させ、ユーザー数の増加に伴うサーバー負荷分配戦略が原因でサービスが低下した可能性があります。&lt;/p&gt;
-&lt;p&gt;性能の揺らぎに加えて、注目すべきは Codex の思考の緻密さの不足です。非 Codex 系列と比較すると、複雑なロジックやエッジケースの処理、コードの堅牢性において弱い傾向があります。深い推論や多段階の計画、抽象的な理解が求められるタスクに直面した際、Codex は表面的に実行可能な案を提示しがちで、潜在的な問題の予測が欠如しています。&lt;/p&gt;
-&lt;p&gt;この差異は、二つのモデルが設計目標で異なることを反映しています。Codex は生成速度と出力の活性度に重点を置き、迅速なプロトタイプ開発、コード補完、シンプルなタスクの自動化に適しています。一方、非 Codex 系列はより強い汎化能力を保持し、解答の正確性と信頼性を重視します。&lt;/p&gt;
-&lt;pre class="mermaid"&gt;flowchart LR
-subgraph A[&amp;#34;GPT-5.3-Codex&amp;#34;]
-direction LR
-A1[&amp;#34;生成速度: 速い&amp;#34;]
-A2[&amp;#34;出力活性度: 高い&amp;#34;]
-A3[&amp;#34;思考の緻密度: 中程度&amp;#34;]
-A4[&amp;#34;適用シーン: 迅速なプロトタイプ、コード補完、探索段階&amp;#34;]
-end
-subgraph B[&amp;#34;GPT-5.3 非Codex&amp;#34;]
-direction LR
-B1[&amp;#34;生成速度: 中程度&amp;#34;]
-B2[&amp;#34;出力活性度: 安定&amp;#34;]
-B3[&amp;#34;思考の緻密度: 高い&amp;#34;]
-B4[&amp;#34;適用シーン: 本番環境、重要プロジェクト、安定期&amp;#34;]
-end
-A &amp;lt;--&amp;gt;|選択のトレードオフ| B
-classDef codex fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
-classDef standard fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
-class A,A1,A2,A3,A4 codex;
-class B,B1,B2,B3,B4 standard;&lt;/pre&gt;
-&lt;p&gt;実際の開発シーンを見ると、もしあなたのニーズがコードスニペットを迅速に取得したり、既知で明確な機能を実装したり、短時間で複数の案を試すことにあるなら、Codex の積極的な出力と高速な応答は明らかな優位性をもたらします。しかし、プロジェクトが安定期に入り、コード品質、保守性、長期的な安定性に対する要求が高まる場合、非 Codex 系列は依然としてより信頼できる選択です。&lt;/p&gt;</description></item><item><title>DoHとDoTの技術比較分析</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/11/doh-vs-dot-comparison/</link><pubDate>Wed, 11 Feb 2026 00:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/11/doh-vs-dot-comparison/</guid><description>&lt;p&gt;DNS over HTTPS (DoH) と DNS over TLS (DoT) は、一般的な2つの暗号化DNS伝送方式です。それらは異なるプロトコルスタックを通じてDNSクエリの安全な伝送を実現します。DoTの標準は &lt;a href="https://datatracker.ietf.org/doc/html/rfc7858"&gt;RFC 7858&lt;/a&gt; によって定義されており、DoHは &lt;a href="https://datatracker.ietf.org/doc/html/rfc8484"&gt;DNS Queries over HTTPS (DoH)&lt;/a&gt; によって標準化されています。これら2つの技術の本質的な違いを理解するには、ネットワークプロトコルの階層構造から分析する必要があります。&lt;/p&gt;
-&lt;h2 id="ネットワークプロトコルの階層構造"&gt;ネットワークプロトコルの階層構造&lt;/h2&gt;
-&lt;p&gt;最新のネットワークプロトコルスタックは階層化設計を採用しており、各層は異なる機能を提供します。DNSはアプリケーション層プロトコルとして、特定の伝送方式にバインドされるわけではなく、複数の搬送プロトコル上で動作可能です。&lt;/p&gt;
-&lt;p&gt;アプリケーション層 (L7) には、HTTP/1.1、HTTP/2、HTTP/3、FTP、DNSなどのプロトコルが含まれます。注目すべきは、HTTP/3のセマンティクスは依然としてアプリケーション層にありますが、QUICが伝送の担い手となる点です。セキュリティ層はアプリケーション層とトランスポート層の間に位置し、主にTLSとその変種を含みます。TLSは通常TCP上で動作します（例：HTTPSやDoT）。DTLSはTLSのデータグラム版で、UDP上で動作可能です。QUICプロトコルは特殊で、プロトコル内部にTLS 1.3のハンドシェイクと鍵派生を直接統合しています。&lt;/p&gt;
-&lt;p&gt;QUICはL4.5層プロトコルと見なすことができ、UDPをベースに拡張され、従来のトランスポート層の機能を提供します。トランスポート層 (L4) には、TCP、UDP、QUICが含まれます。エンジニアリングの実装観点からはQUICはUDPに基づいていますが、信頼性、輻輳制御、多重化、暗号化ハンドシェイクなどの機能を備えているため、エンジニアリング的には独立したトランスポート層プロトコルとして扱われます。ネットワーク層 (L3) はIPプロトコル (IPv4/IPv6) を使用してパケットのルーティングと転送を担当します。データリンク層 (L2) には、イーサネットやWi-Fi (802.11) などの技術が含まれます。&lt;/p&gt;
-&lt;p&gt;TLSは暗号化手段として、アプリケーション層とトランスポート層の間で機能します。DoTからTLS暗号化を取り除くと、DoTは本質的にDNS over TCPになります。この階層化設計により、暗号化はオプションとなり、プロトコル自体の強制的な制約ではなくなります。&lt;/p&gt;
-&lt;h2 id="plain-dnsの特徴"&gt;Plain DNSの特徴&lt;/h2&gt;
-&lt;p&gt;最も一般的なDNSはPlain DNSと呼ばれ、UDPまたはTCP上で動作します。UDPは接続確立が簡単で、初回クエリ速度が速いため、最も一般的な搬送方式です。しかし、UDPの弱点は信頼性が低く、パケットがネットワーク内で消失しやすいことです。TCPはハンドシェイク回数が多く、初回接続速度はUDPより約30%遅いですが、長時間接続を確立した後は、応答速度はUDPと同じになります。&lt;/p&gt;
-&lt;p&gt;通信キャリアはネットワークが混雑すると、機器の負荷を軽減するためにUDPパケットを破棄することを選択することがあります。UDPパケットロスが深刻な地域のキャリアの場合、DNSクエリにTCPを使用するよう指定する方が有利な場合があります。TCPには再送メカニズムがあり、パケットロスが発生してもデータの確実な到着を保証できます。一方、UDPパケットを破棄しても小規模なキャリア設備の負荷圧は軽減されず、再試行により不確実性が増すだけです。&lt;/p&gt;
-&lt;h2 id="アプリケーション層のネスト"&gt;アプリケーション層のネスト&lt;/h2&gt;
-&lt;p&gt;DNSとHTTPはどちらもアプリケーション層プロトコルであり、DoHは本質的にあるアプリケーション層プロトコルが別のアプリケーション層プロトコルをネストしたものです。DoHが必ずしもDNS over HTTPSである必要はなく、通常のHTTPを使用することも可能ですが、暗号化されていないDoHは平文リクエストであり、Plain DNSよりも利点がないため、ごく限られた特殊なニーズがある場合にのみ使用されます。&lt;/p&gt;
-&lt;p&gt;理論上は、DNS over FTPなど、任意のアプリケーション層プロトコル上でDNSを伝送できます。これは、対応するサーバーとクライアントを開発するだけです。この柔軟性は、アプリケーション層プロトコルの組み合わせの可能性を示しています。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ブログ on jqknono Blogs</title><link>https://blog.jqknono.com/ja-jp/blog/</link><description>Recent content in ブログ on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>ja-jp</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Mon, 13 Nov 2023 14:15:31 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/ja-jp/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>サイバー暴力から身を守る方法</title><link>https://blog.jqknono.com/ja-jp/blog/2026/06/28/avoid-cyberbullying/</link><pubDate>Sun, 28 Jun 2026 15:53:27 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/06/28/avoid-cyberbullying/</guid><description>&lt;h2 id="はじめに"&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;デジタル時代において、インターネットはすでに私たちの日常生活の重要な構成要素となっています。しかし、サイバー空間の拡大に伴い、サイバー暴力という社会問題も日々深刻化しています。サイバー暴力とは、インターネットプラットフォームを通じて他者に対して悪意ある攻撃、侮辱、中傷、または嫌がらせを行う行為を指します。これは個人の合法的な権益を侵害するだけでなく、被害者の精神的健康に深刻な被害をもたらす可能性があります。本文は、サイバー暴力の主な形態を検討し、その危害を分析し、実用的な防止策を提供することで、ユーザーがインターネットの利便性を享受しながら、自分自身の安全を効果的に保護できるようにすることを目的としています。&lt;/p&gt;
+&lt;h2 id="サイバー暴力の類型と特徴"&gt;サイバー暴力の類型と特徴&lt;/h2&gt;
+&lt;p&gt;サイバー暴力は多様な形態を示し、それぞれの形態には独自の特徴と危害があります。最も一般的なタイプには、ネットいじめ、ネット中傷、ネットハラスメント、人肉検索が含まれます。&lt;/p&gt;
+&lt;h3 id="サイバー暴力の主なタイプ"&gt;サイバー暴力の主なタイプ&lt;/h3&gt;
 &lt;pre class="mermaid"&gt;flowchart TD
-subgraph L7[&amp;#34;アプリケーション層&amp;#34;]
-A[DNS]
-B[HTTP]
-C[FTP]
-end
-subgraph Security[&amp;#34;セキュリティ層&amp;#34;]
-D[TLS]
-E[DTLS]
-end
-subgraph Transport[&amp;#34;トランスポート層&amp;#34;]
-F[TCP]
-G[UDP]
-H[QUIC]
-end
-subgraph L3[&amp;#34;ネットワーク層&amp;#34;]
-I[IP]
-end
-subgraph L2[&amp;#34;データリンク層&amp;#34;]
-J[Ethernet]
-K[WiFi]
-end
-A --&amp;gt; D
-B --&amp;gt; D
-C --&amp;gt; D
-D --&amp;gt; F
-E --&amp;gt; G
-H --&amp;gt; G
-F --&amp;gt; I
-G --&amp;gt; I
-H --&amp;gt; I
-I --&amp;gt; J
-I --&amp;gt; K
-style A fill:#e1f5ff
-style B fill:#e1f5ff
-style C fill:#e1f5ff
-style D fill:#fff4e1
-style E fill:#fff4e1
-style F fill:#ffe1e1
-style G fill:#ffe1e1
-style H fill:#e1ffe1&lt;/pre&gt;
-&lt;h2 id="トランスポート層のネスト"&gt;トランスポート層のネスト&lt;/h2&gt;
-&lt;p&gt;QUICプロトコルはUDPに基づき、同時にトランスポート層でコネクション型のサービスを提供します。QUICは、TCPが持つコネクション型、輻輳制御、再送、フロー制御、フラグメンテーションと再構成などのトランスポート層機能を実装しています。TCPに比べてQUICはレイテンシが低く、UDPに比べてQUICはより高度で信頼性があります。&lt;/p&gt;</description></item><item><title>OpenRouter gpt-oss-120b モデルが中国語リクエストをサポートしていないデバッグ記録</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</link><pubDate>Mon, 09 Feb 2026 22:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/09/openrouter-gpt-oss-120b-chinese-bug/</guid><description>&lt;p&gt;&lt;a href="https://openrouter.ai/"&gt;OpenRouter&lt;/a&gt; が提供する無料モデル API を使用している際、戸惑う問題に遭遇しました。全く同じリクエスト構造で、プロンプトの言語を変更しただけなのに、全く異なる結果が出力されたのです。&lt;/p&gt;
-&lt;h2 id="問題の再現"&gt;問題の再現&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;openai/gpt-oss-120b:free&lt;/code&gt; モデルを使用してテストを行いました。2つのリクエストの唯一の違いは、プロンプトの言語だけです。1つ目のリクエストでは中国語のプロンプトを使用しました：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://openrouter.ai/api/v1/chat/completions &lt;span class="se"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Authorization: Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -d &lt;span class="s1"&gt;&amp;#39;{
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;model&amp;#34;: &amp;#34;openai/gpt-oss-120b:free&amp;#34;,
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;messages&amp;#34;: [
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;,
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;content&amp;#34;: &amp;#34;你是一个专业的本地化翻译专家&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; ]
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このリクエストは常に 429 ステータスコードを返し、リクエストが頻繁すぎるか、クォータ制限を超えていることを示します。しかし、英語のプロンプトを使用した場合：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl https://openrouter.ai/api/v1/chat/completions &lt;span class="se"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H &lt;span class="s2"&gt;&amp;#34;Authorization: Bearer sk-or-v1-xxxxxxxxxxxxxxxxxxxxxx&amp;#34;&lt;/span&gt; &lt;span class="se"&gt;\
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -d &lt;span class="s1"&gt;&amp;#39;{
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;model&amp;#34;: &amp;#34;openai/gpt-oss-120b:free&amp;#34;,
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;messages&amp;#34;: [
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;role&amp;#34;: &amp;#34;user&amp;#34;,
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; &amp;#34;content&amp;#34;: &amp;#34;You are a professional localization translation expert&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; }
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt; ]
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;リクエストは正常に応答し、期待されるモデル出力が返されました。&lt;/p&gt;</description></item><item><title>無料AIアイコン生成ツールまとめ</title><link>https://blog.jqknono.com/ja-jp/blog/2026/02/02/free-ai-icon-generators/</link><pubDate>Mon, 02 Feb 2026 10:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/02/02/free-ai-icon-generators/</guid><description>&lt;p&gt;AI技術の進歩に伴い、デザイナーや開発者は現在、シンプルなテキストプロンプトを通じて素早く様々な種類のアイコンを生成できるようになりました。これらの無料AIアイコン生成ツールはデザインのハードルを大幅に下げ、専門的なデザインスキルを持たないユーザーでも高品質な視覚要素を作成できるようにします。以下のツールはすべてテキストによる画像生成をサポートしており、出力形式は通常PNGまたはSVGで、一部のツールではスタイルや配色の調整機能も提供されています。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.freepik.com/ai/icon-generator"&gt;Freepik AI アイコンジェネレーター&lt;/a&gt;は、テキストの説明に基づいてSVGまたはPNG形式のアイコンを生成できるオンラインAIアイコン生成ツールです。このツールはWebデザインやUIデザインのシーンに非常に適しており、無料ユーザーも利用可能ですが、1日の生成数に制限があります。アイコン素材を迅速に入手する必要があるデザイン作業において、Freepikは便利なソリューションを提供します。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.pixelcut.ai/create/icon-generator"&gt;Pixelcut AI アイコンジェネレーター&lt;/a&gt;は、シンプルで直感的なアイコン生成体験の提供に特化しています。ユーザーはテキストプロンプトを入力するだけで、カスタムアイコンを生成できます。このツールの操作フローはシンプルで明確であり、複雑なデザインソフトに不慣れなユーザーでも素早く使いこなせます。生成されたアイコンはそのままダウンロードして使用でき、個人のプロジェクトや小規模なWebサイトにビジュアルサポートを提供します。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://iconscout.com/ai/icon-generator"&gt;IconScout AI アイコンジェネレーター&lt;/a&gt;は、シンプルなテキストによるアイコン生成をサポートし、多彩なスタイル選択を提供します。このツールは特にデザインプロジェクト、ブログ記事、プレゼンテーション用途に適しています。多様なスタイルオプションにより、ユーザーはプロジェクトのニーズに応じて適切なビジュアルスタイルを選択でき、全体的なデザインの一貫性を保つことができます。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://quillbot.com/image-tools/ai-icon-generator"&gt;QuillBot AI アイコンジェネレーター&lt;/a&gt;は無料のオンラインツールとして、ユーザーがテキストの説明を通じて素早くアイコンを生成できるようにします。このツールの大きな利点は、生成後に追加の変換手順なしで直接ダウンロードできる点です。この即利用可能な特性により、アイコン素材を迅速に入手する必要があるユーザーにとって理想的な選択肢となっています。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.recraft.ai/generate/icons"&gt;Recraft AI アイコンジェネレーター&lt;/a&gt;は、より高度なカスタマイズオプションを提供します。ユーザーはプリセットのスタイルを選択したり、既存のブランドイメージから一貫性のあるスタイルのアイコンを生成したりできます。また、カラーパラメータのカスタマイズもサポートしており、ブランドの視覚的アイデンティティを維持する必要のある企業にとって特に重要です。Recraftで生成したアイコンは、既存のブランド要素と視覚的な一貫性を保つことができます。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.miricanvas.com/features/ja/ai-icon"&gt;MiriCanvas AI アイコンツール&lt;/a&gt;は、無料のAIアイコンおよびロゴ生成ツールです。スタイルの選択とテキスト入力をサポートしており、シンプルな操作フローでアイコンを生成できます。このツールはユーザーエクスペリエンスを重視して設計されており、デザイン背景がないユーザーでも満足のいくアイコンを簡単に作成できます。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://perchance.org/ai-icon-generator"&gt;Perchance AI Icon Generator&lt;/a&gt;は、登録不要、透かし（ウォーターマーク）なしの無料AIアイコン生成実験ツールです。その開放性と利便性により、一時的なプロジェクトやテスト用途には良い選択肢となります。アカウント作成やログインの手順がないため、ユーザーはすぐに使い始めることができ、この簡略化された使用フローは効率性を重視するユーザーに適しています。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://openart.ai/generator/icon"&gt;OpenArt AI アイコンジェネレーター&lt;/a&gt;は、無料のAIアイコン生成機能を提供し、アプリのアイコンやその他の視覚要素をカスタマイズするために使用できます。このツールの生成能力は比較的包括的であり、完全なアイコンセットを作成する必要があるユーザーに適しています。テキストプロンプトで生成結果を制御することで、ユーザーは具体的なニーズに合わせてアイコンの詳細を調整できます。&lt;/p&gt;
+A[サイバー暴力の種類] --&amp;gt; B[ネットいじめ]
+A --&amp;gt; C[ネット中傷]
+A --&amp;gt; D[ネットハラスメント]
+A --&amp;gt; E[人肉検索]
+B --&amp;gt; B1[ソーシャルメディアでの悪質なコメント]
+B --&amp;gt; B2[デマ拡散]
+B --&amp;gt; B3[人格攻撃]
+C --&amp;gt; C1[虚偽情報の拡散]
+C --&amp;gt; C2[名誉毀損]
+C --&amp;gt; C3[評判への攻撃]
+D --&amp;gt; D1[執拗な連絡]
+D --&amp;gt; D2[歓迎されないメッセージ]
+D --&amp;gt; D3[ネット上の脅迫]
+E --&amp;gt; E1[情報の不正取得]
+E --&amp;gt; E2[個人情報の公開]
+E --&amp;gt; E3[プライバシーの侵害]
+classDef mainType fill:#2c3e50,stroke:#ecf0f1,stroke-width:3px,color:#ecf0f1
+classDef bullying fill:#e74c3c,stroke:#c0392b,stroke-width:2px,color:#fff
+classDef defamation fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff
+classDef harassment fill:#e67e22,stroke:#d35400,stroke-width:2px,color:#fff
+classDef doxing fill:#f1c40f,stroke:#f39c12,stroke-width:2px,color:#333
+class A mainType
+class B bullying
+class C defamation
+class D harassment
+class E doxing
+class B1,B2,B3,C1,C2,C3,D1,D2,D3,E1,E2,E3 bullying&lt;/pre&gt;
+&lt;h4 id="サイバー暴力の共通特徴"&gt;サイバー暴力の共通特徴&lt;/h4&gt;
 &lt;pre class="mermaid"&gt;flowchart TD
-A[AI アイコンジェネレーターの選択] --&amp;gt; B{使用ニーズの種類}
-B --&amp;gt;|迅速かつシンプル| C[Pixelcut&amp;lt;br/&amp;gt;QuillBot]
-B --&amp;gt;|プロ仕様のデザイン| D[Freepik&amp;lt;br/&amp;gt;IconScout]
-B --&amp;gt;|ブランドの一貫性| E[Recraft]
-B --&amp;gt;|登録不要| F[Perchance]
-B --&amp;gt;|完全なアイコンセット| G[OpenArt]
-B --&amp;gt;|スタイルの選択| H[MiriCanvas]
-C --&amp;gt; I{出力形式}
-D --&amp;gt; I
-E --&amp;gt; I
-F --&amp;gt; I
-G --&amp;gt; I
-H --&amp;gt; I
-I --&amp;gt;|PNG/JPG| J[Web用途]
-I --&amp;gt;|SVG| K[ベクターデザイン]
-I --&amp;gt;|両方| L[マルチシーン対応]
-J --&amp;gt; M[著作権条項に注意]
-K --&amp;gt; M
-L --&amp;gt; M
-M --&amp;gt; N[商業利用ライセンスの確認]&lt;/pre&gt;
-&lt;p&gt;これらのツールは無料利用オプションを提供していますが、ユーザーは無料の利用枠や生成回数の制限に注意する必要があります。使用前には各プラットフォームの利用規約を、特に出力画像の著作権に関する説明をよく読む必要があります。一部のツールの無料版では商用利用が禁止されていたり、使用時に出典の明記が求められたりすることがあります。これらの制限条件を明確にすることで、将来的な法的リスクを回避できます。&lt;/p&gt;</description></item></channel></rss>
+F[共通特徴] --&amp;gt; F1[匿名性の利用]
+F --&amp;gt; F2[拡散速度の速さ]
+F --&amp;gt; F3[影響の持続性]
+F --&amp;gt; F4[範囲の広さ]
+classDef featureRoot fill:#95a5a6,stroke:#7f8c8d,stroke-width:3px,color:#fff
+classDef feature fill:#bdc3c7,stroke:#95a5a6,stroke-width:2px,color:#333
+class F featureRoot
+class F1,F2,F3,F4 feature&lt;/pre&gt;
+&lt;p&gt;ネットいじめは通常、ソーシャルメディアプラットフォームで発生し、加害者が悪意あるコメントを投稿し、デマを流布したり、人格攻撃を行ったりすることで他人を傷つけます。ネット中傷は、虚偽の情報を拡散し、他人の名誉や評判を損なうことを伴います。ネットハラスメントは、執拗で歓迎されない連絡や脅迫として現れ、人肉検索は違法な手段で他人の個人情報を取得し、公開することです。&lt;/p&gt;</description></item><item><title>Claude Code のリソースブラックホール: 11.3MB の単一ファイルから 1.2TB のディスク消費へ</title><link>https://blog.jqknono.com/ja-jp/blog/2026/04/07/claude-code-resource-nightmare/</link><pubDate>Tue, 07 Apr 2026 20:00:00 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/ja-jp/blog/2026/04/07/claude-code-resource-nightmare/</guid><description>GitHub Issues の実際のユーザー報告とコミュニティのリバース分析に基づき、Claude Code のメモリ、CPU、ディスクの3つの側面でのリソース管理欠陥を体系的に整理し、パッケージングアーキテクチャ、ストレージ設計、プロセスライフサイクル管理における構造的問題を明らかにする。</description></item></channel></rss>

@@ -1,1 +1,44 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/categories/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Wed, 15 Oct 2025 16:50:37 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/categories/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全 on jqknono Blogs</title><link>https://blog.jqknono.com/zh-cn/categories/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on jqknono Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>https://blog.jqknono.com (jqknono)</managingEditor><webMaster>https://blog.jqknono.com (jqknono)</webMaster><lastBuildDate>Sun, 28 Jun 2026 15:53:27 +0800</lastBuildDate><atom:link href="https://blog.jqknono.com/zh-cn/categories/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>如何避免被网络暴力</title><link>https://blog.jqknono.com/zh-cn/blog/2026/06/28/avoid-cyberbullying/</link><pubDate>Sun, 28 Jun 2026 15:53:27 +0800</pubDate><author>https://blog.jqknono.com (jqknono)</author><guid>https://blog.jqknono.com/zh-cn/blog/2026/06/28/avoid-cyberbullying/</guid><description>&lt;h2 id="引言"&gt;引言&lt;/h2&gt;
+&lt;p&gt;在数字化时代，互联网已经成为我们日常生活的重要组成部分。然而，随着网络空间的扩展，网络暴力这一社会问题也日益突出。网络暴力是指通过互联网平台对他人进行恶意攻击、侮辱、诽谤或骚扰的行为，它不仅侵犯了个人的合法权益，还可能对受害者的心理健康造成严重伤害。本文旨在探讨网络暴力的主要形式，分析其危害，并提供实用的防范策略，帮助用户在享受网络便利的同时，有效保护自身安全。&lt;/p&gt;
+&lt;h2 id="网络暴力的类型与特征"&gt;网络暴力的类型与特征&lt;/h2&gt;
+&lt;p&gt;网络暴力呈现出多样化的表现形式，每种形式都有其独特的特征和危害。最常见的类型包括网络欺凌、网络诽谤、网络骚扰和网络人肉搜索。&lt;/p&gt;
+&lt;h3 id="网络暴力的主要类型"&gt;网络暴力的主要类型&lt;/h3&gt;
+&lt;pre class="mermaid"&gt;flowchart TD
+A[网络暴力类型] --&amp;gt; B[网络欺凌]
+A --&amp;gt; C[网络诽谤]
+A --&amp;gt; D[网络骚扰]
+A --&amp;gt; E[网络人肉搜索]
+B --&amp;gt; B1[社交媒体恶意评论]
+B --&amp;gt; B2[散布谣言]
+B --&amp;gt; B3[人身攻击]
+C --&amp;gt; C1[传播虚假信息]
+C --&amp;gt; C2[损害名誉]
+C --&amp;gt; C3[声誉攻击]
+D --&amp;gt; D1[持续联系]
+D --&amp;gt; D2[不受欢迎信息]
+D --&amp;gt; D3[网络威胁]
+E --&amp;gt; E1[非法获取信息]
+E --&amp;gt; E2[公开个人信息]
+E --&amp;gt; E3[隐私侵犯]
+classDef mainType fill:#2c3e50,stroke:#ecf0f1,stroke-width:3px,color:#ecf0f1
+classDef bullying fill:#e74c3c,stroke:#c0392b,stroke-width:2px,color:#fff
+classDef defamation fill:#3498db,stroke:#2980b9,stroke-width:2px,color:#fff
+classDef harassment fill:#e67e22,stroke:#d35400,stroke-width:2px,color:#fff
+classDef doxing fill:#f1c40f,stroke:#f39c12,stroke-width:2px,color:#333
+class A mainType
+class B bullying
+class C defamation
+class D harassment
+class E doxing
+class B1,B2,B3,C1,C2,C3,D1,D2,D3,E1,E2,E3 bullying&lt;/pre&gt;
+&lt;h4 id="网络暴力的共同特征"&gt;网络暴力的共同特征&lt;/h4&gt;
+&lt;pre class="mermaid"&gt;flowchart TD
+F[共同特征] --&amp;gt; F1[利用匿名性]
+F --&amp;gt; F2[传播速度快]
+F --&amp;gt; F3[影响持久性]
+F --&amp;gt; F4[范围广泛性]
+classDef featureRoot fill:#95a5a6,stroke:#7f8c8d,stroke-width:3px,color:#fff
+classDef feature fill:#bdc3c7,stroke:#95a5a6,stroke-width:2px,color:#333
+class F featureRoot
+class F1,F2,F3,F4 feature&lt;/pre&gt;
+&lt;p&gt;网络欺凌通常发生在社交媒体平台，施暴者通过发布恶意评论、散布谣言或进行人身攻击来伤害他人。网络诽谤则涉及传播虚假信息，损害他人的名誉和声誉。网络骚扰表现为持续的、不受欢迎的联系或威胁，而网络人肉搜索则是通过非法手段获取并公开他人的个人信息。&lt;/p&gt;</description></item></channel></rss>
